@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Version 5.1"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Release_Notes-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_6_0-ref.html#Version_6_0"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_5_0-ref.html#Version_5_0"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Version_5_1"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Version 5.1</title>
+</head>
+<body id="Version_5_1"><a name="Version_5_1"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Version 5.1</h5></span>
+	<div>
+		<div class="section" id="Version_5_1__section_FCED4813984E47C99D0FBFEA26A574FD"><a name="Version_5_1__section_FCED4813984E47C99D0FBFEA26A574FD"><!-- --></a>
+			<p>Release Notes for ASAP 5.1 Kernel as of April 9, 1997</p>
+
+		</div>
+
+		<div class="section" id="Version_5_1__section_C65646370FB94DD383F91C80D50FF861"><a name="Version_5_1__section_C65646370FB94DD383F91C80D50FF861"><!-- --></a><span style="color: #2b6eb5"><h5>Mandatory Changes (NO BACKWARDS COMPATABILITY!) </h5></span>
+			
+			<pre class="codeblock">
+  DISPLAY
+    IMAGE command has been renamed PICTURE (see new IMAGE transform commands).
+    TABLE command has been renamed SECTION (see new TABLE command).
+  USERAPOD BOTH default may change in future (switch to new USERAPOD ANGLES).</pre>
+
+		</div>
+
+		<div class="section" id="Version_5_1__section_98EF2AD93ED64803B774C895291E2349"><a name="Version_5_1__section_98EF2AD93ED64803B774C895291E2349"><!-- --></a><span style="color: #2b6eb5"><h5>New Commands </h5></span>
+			
+			<pre class="codeblock">
+  MODEL
+    BINOMIAL/TRINOMIAL variants of POLYNOMIAL help enforce reciprocity.
+    BSDFDATA indirectly interpolates from entered values.  EMITTING ...
+    ENTITY randomly distributes rays over the surface(s) of SURF, LENS or EDGE.
+    OBJECT randomly distributes rays over the surface(s) of an object.
+  IMAGE the current ray positions through a specified LENS entity.
+  LENS
+    IMAGE a given global point through all or part of the current lens.
+  CURVE/EDGE
+    IMAGE the current curve/edge through a specified LENS entity.
+    SAWTOOTH edge given shape and number of teeth.
+    HELIX creates a general helical curve including an elliptical spiral.
+  DISPLAY
+    TEXTFILE can write data to a file in a completely user-definable format.
+    TABLE numeric display of current data for arbitrary number of rows/columns.
+  SPECTRUM simplifies flux weighting of rays as a function of wavelength.
+  OBJECT
+    FRESNEL/SPLIT/LEVEL settings can now be different for every object.
+  IMMERSE allows creation of rays in MEDIA other than number 0.
+  SURFACE/FUNCTION
+    ALTER allows editing of polynomial coefficients.
+  USERAPOD ANGLES replaces default USERAPOD BOTH definition.
+  APODIZE is like USERAPOD but immediately alters fluxes in current ray set.</pre>
+
+		</div>
+
+		<div class="section" id="Version_5_1__section_D24FA98B67344C86BEAD60BC9C5520ED"><a name="Version_5_1__section_D24FA98B67344C86BEAD60BC9C5520ED"><!-- --></a><span style="color: #2b6eb5"><h5>Enhanced Commands </h5></span>
+			
+			<pre class="codeblock">
+  SUBSET ...
+    Will actually produce a smaller VIRTUAL.PGS file on PC platform.
+    Can also optionally RESET to just "created" rays.
+  PATH output can now handle larger ray and object numbers.
+  SCATTER;TOWARDS large subtense areas handled more accurately.
+  EMITTING ...
+    HELIX has an optional longer but more flexible format.
+    IES can optionally rotate angular pattern about polar axis.
+  USERAPOD
+    DIR/POS profile interpolation can be product instead of sum (and plotted).
+    Comment string is now passed to routines (can be data file name).
+    Function definitions can now be passed up to 50 user coefficients.
+  AXIS now affects output from STATS, EXTREME, HISTORY, and LIST RAYS.
+  SELECT ...
+    EVERY nth ray has been added.
+    F(lux)
+ and, optical path L(ength), and (W)avelength thresholds have been added.
+  DISPLAY
+    CONTOUR options
+      ...VECTOR now puts color of contours into 3D file.
+      ...GRID draws complete lines instead of short TICS.
+    IESFILE can be optionally PADded in those regions of sphere not covered.
+  RAY can create LENS entity from trace information (e.g. for IMAGE transform).
+  HALT can now turn OFF coordinate direction check.
+  RADIANT can MAP the radiant intensity or true radiance over an AREA.
+  SURFACE
+    CARTOVAL can now take ELLIPSE/RECTANG aperture option.
+    USERFUNC $FCN definition can now be passed up to 63 user coefficients.
+    FITTED
+      Can optionally put input data points into current 3D VECTOR file.
+      Added direct fitting to a PLANE, PARABOLOID, SPHERE or ELLIPSOID.
+  LENS
+    IDEAL Jones matrix behavior for non-normal incidence has been improved.
+  GROUP
+    0 option does not redefine group, uses last (current) group definition.
+    SOURCES can now be moved along with any objects.
+  REPLOT automatically GROUPs all objects interrogated for their numbers (#).
+  CONSIDER by default uses last GROUP of objects.
+  WAVELENGTHS maximum number for interpolation increased from 15 to 25 in Plus.
+  COATING maximum number of unique LAYERS increased from 60 to 100 in Plus.
+  SPREAD/FIELD
+    Doubled internal complex precision to avoid roundoff positivity violations.
+    Severe paraxial invariant departures (&gt;1 wave) now abort calculation.
+  DECOMPOSE DIR number of beams can be entered as fraction of maximum possible.
+  UNITS can now take optional flux label (e.g. Lumens or Watts).
+  MEDIA;...GRIN function can now be ARRAYed.
+  PLACE can also locate something at a given parametric value on a CURVE/EDGE.
+  MODEL
+    USERBSDF $FCN definition can now be passed up to 63 user coefficients.
+  TRACE ...
+    New KEEP option allows definition of additional rays after tracing.
+    STATS also displays BSDF statistics for each scatter model.
+  OBJECT
+    BOUNDS has new option to force a given POINT to be valid.
+  CURVE/EDGE
+    SAG option can now take a vertex position different from reference point.
+  OBJECT maximum name length has been increased from 24 to 128 characters.
+  GROUP/CONSIDER can now use wildcard "?" in object names.
+  LIGHT can define multiple collimated or point sources for the RENDER command.
+  CAD IGES attaches OBJECT name to surface using a NAME Property (406.15).
+  WARNINGS limit number can be ignored or non-fatal when exceeded.</pre>
+
+		</div>
+
+		<div class="section" id="Version_5_1__section_91150D3ACB4D4FF5B0968F61A9CE270D"><a name="Version_5_1__section_91150D3ACB4D4FF5B0968F61A9CE270D"><!-- --></a><span style="color: #2b6eb5"><h5>Other Improvements or Changes </h5></span>
+			
+			<pre class="codeblock">
+  SEARCH on object 0 or other affects creation of EMITTING or child rays.
+  Entity geometry storage doubled in Plus version.
+  TRACE no longer STEPs generated child rays.
+  A parent ray that dies at an interface can still generate children.
+  A ray can now consecutively hit the same LENS conicoid many times.
+  Each MEDIA and COATING can now have different interpolation WAVELENGTHS.
+  Length and flux UNITS have been added to most plot labels.
+  "a,b,c" direction triplet can be the TANGENT to a CURVE at given parameter.
+  DIS file format has changed slightly but previous version can still be read.
+  EMIT IES and DISPLAY;IESFILE now follow LM-63-1995 standard.
+  Explicit surface functions can now have either 0 or -1 implied Z coefficient.
+  Material CATalogs can contain data in wavelength/index PAIRS format.
+  More robust intersection algorithm for parametric (CURVE-based) surfaces.
+  As usual, *.SYS files are incompatible with previous versions.</pre>
+
+		</div>
+
+		<div class="section" id="Version_5_1__section_1FC1D2E4182A48E9B713D71629E99C60"><a name="Version_5_1__section_1FC1D2E4182A48E9B713D71629E99C60"><!-- --></a><span style="color: #2b6eb5"><h5>Macro Language </h5></span>
+			
+			<pre class="codeblock">
+  $WAIT pauses program execution for a specified number of seconds.
+  Nesting of Macros, $DO/$ITER, $IF..THEN increased to 99 levels.
+  $NEXT branches to top of a $DO/$ITER loop.
+  New intrinsic functions
+    LPW returns Lumens per Watt for blackbody of given temperature.
+    EYE returns normalized photopic or scotopic eye response given wavelength.
+    FILE returns next available file (logical unit) number.
+  $SHOW also displays number of registers/variables used and storage left.
+  Maximum number of registers/variables increased from 858 to 1768.
+  Maximum number of $FCN definitions increased from 10 to 20.
+  $IO OUTPUT redirection can suppress console echo and write ONLY to given file.
+  $SCR
+    Can now have optional on-line help text.
+    Boolean (toggles,checkboxes) fields have been added.
+    GUI cancel button controlled/processed with SCR_CANCEL variable.
+  $LOC makes given registers/variable names local to the current macro.</pre>
+
+		</div>
+
+		<div class="section" id="Version_5_1__section_537A51FBF2434FB4816214E8C5BAA1DC"><a name="Version_5_1__section_537A51FBF2434FB4816214E8C5BAA1DC"><!-- --></a><span style="color: #2b6eb5"><h5>Utilities </h5></span>
+			
+			<pre class="codeblock">
+  IGES to ASAP translator
+    Now filters out unnecessary COMPOSITES and BOUNDS.
+    Added partial support for 141 Boundary and 143 Bounded Surface entities.
+    Limit on number of trimming curves per object has been removed.
+    Name Property (406.15) attached to surface entity now used as OBJECT name.
+  APART 9.7 translators also pass equivalent imaging LENS to ASAP.
+  APARTDAT.LIB contains BSDF data for all static APART models.
+  DXF translator now creates only those BLOCK macros that reference surfaces.</pre>
+
+		</div>
+
+	</div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Release_Notes-ref.html" title="Topics in this section include all known release notes for ASAP up to the last version. Release notes for the current version can be viewed in the ASAP Command Output window, or opened from your ASAP installation root folder.">Release Notes</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a href="../Reference/Version_6_0-ref.html#Version_6_0">Version 6.0</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a href="../Reference/Version_5_0-ref.html#Version_5_0">Version 5.0</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

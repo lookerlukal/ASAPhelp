@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="EMITTING DATA (ASAP Command)"/>
+<meta name="abstract" content="Creates rays from data in given binary distribution file."/>
+<meta name="description" content="Creates rays from data in given binary distribution file."/>
+<meta name="DC.subject" content="EMITTING DATA (ASAP Command), data, emitting, binary distribution file, create rays from, ray set, emitting"/>
+<meta name="keywords" content="EMITTING DATA (ASAP Command), data, emitting, binary distribution file, create rays from, ray set, emitting"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_E-ref.html#Commands_and_Macros_E"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ABEL_ASAP-cmdref.html#ABEL_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DUMP_ASAP-cmdref.html#DUMP_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_BOX_SPHEROID_ASAP-cmdref.html#EMITTING_BOX_SPHEROID_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_CONE_PYRAMID_ASAP-cmdref.html#EMITTING_CONE_PYRAMID_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_DISK_RECTANGLE_ASAP-cmdref.html#EMITTING_DISK_RECTANGLE_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_ENTITY_or_OBJECT_ASAP-cmdref.html#EMITTING_ENTITY_or_OBJECT_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_FILAMENT_ASAP-cmdref.html#EMITTING_FILAMENT_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_HELIX_ASAP-cmdref.html#EMITTING_HELIX_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_IES_ASAP-cmdref.html#EMITTING_IES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_RAYS_ASAP-cmdref.html#EMITTING_RAYS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MOVE_ASAP-cmdref.html#MOVE_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Importing_CCD_Images-ref.html#Importing_CCD_Images"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Radiant_Sources-ref.html#Radiant_Sources"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="EMITTING_DATA_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>EMITTING DATA (ASAP Command)</title>
+</head>
+<body id="EMITTING_DATA_ASAP_Command"><a name="EMITTING_DATA_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>EMITTING DATA (ASAP Command)</h5></span>
+	
+	
+	<div><p>Creates rays from data in given binary distribution file. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+EMITTING DATA [ file ] [ n ] [ a [ a' ] [ RECT] ] [ ISO ]
+        -DATA    u
+        +DATA  name.BMP
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>file</span></td><td><span>name of the distribution data file (default extension is DIS)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>u</span></td><td><span>FORTRAN unit number (default 9) of distribution data file (default .DAT
+					extension)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span>number of rays created</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a a'</span></td><td><span>half-angles (in degrees) for the elliptical or RECTangular cone of emitted
+					radiation centered on the axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RECT</span></td><td><span>emit as a rectangular cone</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ISO</span></td><td><span>specifies isotropic emission</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="EMITTING_DATA_ASAP_Command__ul_4228E0C0F7334A47B625E3D07192B289"><!-- --></a><ol id="EMITTING_DATA_ASAP_Command__ul_4228E0C0F7334A47B625E3D07192B289">
+			<li id="EMITTING_DATA_ASAP_Command__li_A8BE5E7C50B54C6A8F69AAA15DFE49D2"><a name="EMITTING_DATA_ASAP_Command__li_A8BE5E7C50B54C6A8F69AAA15DFE49D2"><!-- --></a>Creates <b>n</b> rays at the
+				current <b>WAVELENGTH</b> (or 3 <b>WAVELENGTHS</b> if a
+				polychromatic bitmap) based on the distribution stored in the distribution data file
+				(default file.dis), unit number <b>u</b> (default 9), or standard bitmap
+					<b>name.BMP.</b> The default for <b>n</b> is the total
+				number of samples in the file. </li>
+
+			<li id="EMITTING_DATA_ASAP_Command__li_B34D8077C4414EAD8FBC7AD0493B9F02"><a name="EMITTING_DATA_ASAP_Command__li_B34D8077C4414EAD8FBC7AD0493B9F02"><!-- --></a> The <b>EMITTING DATA</b>
+				command currently supports the following distributions: <br/><a name="EMITTING_DATA_ASAP_Command__ol_8B077510CD574B369E38496CA8BF1503"><!-- --></a><ol type="a" id="EMITTING_DATA_ASAP_Command__ol_8B077510CD574B369E38496CA8BF1503">
+					<li id="EMITTING_DATA_ASAP_Command__li_274FBE1419EE46DC9DC5E68ACCC30E29"><a name="EMITTING_DATA_ASAP_Command__li_274FBE1419EE46DC9DC5E68ACCC30E29"><!-- --></a>General list of rays in full
+						(.*dis) or compressed (*.dmp) DUMP command format. If the current <b>WAVELENGTH</b> is zero, it is reset to the shortest one stored in
+						the DUMP file header. </li>
+
+					<li id="EMITTING_DATA_ASAP_Command__li_C258CFA3CAA64936801A05BF879AB4E2"><a name="EMITTING_DATA_ASAP_Command__li_C258CFA3CAA64936801A05BF879AB4E2"><!-- --></a>Two-dimensional planar spatial
+						distributions (for example, <b>SPOTS POS</b>, <b>SPREAD</b>). Optional half-angles in degrees for the elliptical or
+							<b>RECT</b>angular cone of emitted radiation centered on the
+						positive normal axis are defined by <b>a a'.</b> The default for
+							<b>a'</b> is <b>a,</b> that is, circular or
+						square light cone. The default for a is 90 degrees, that is, a full
+						hemisphere. The sign on the <b>DATA</b> literal determines into
+						which By default, the surface emits directionally in a Lambertian fashion or
+							<b>ISOtropically</b> (the sign on the <b>DATA</b> literal determines into which hemisphere). This pattern can
+						be further apodized in direction by the current <b>USERAPOD
+						DIR</b> settings. </li>
+
+					<li id="EMITTING_DATA_ASAP_Command__li_B6AB0B340362448E91BC757058112F3A"><a name="EMITTING_DATA_ASAP_Command__li_B6AB0B340362448E91BC757058112F3A"><!-- --></a>General 3D volume distributions
+						that emit isotropically in direction (unless <b>USERAPOD
+						ANGLES</b> is set). </li>
+
+					<li id="EMITTING_DATA_ASAP_Command__li_D6A6EA814285487EBF043142439EDE9D"><a name="EMITTING_DATA_ASAP_Command__li_D6A6EA814285487EBF043142439EDE9D"><!-- --></a>Volumes with cylindrical symmetry
+						(for example, <b>ABEL INVERSE</b>). Normally, the far-field
+						radiation pattern is a donut, that is, it varies as the sine of the angle
+						from the axis. The <b>ISO</b> option yields an isotropic
+						radiation pattern. </li>
+
+				</ol>
+</li>
+
+			<li id="EMITTING_DATA_ASAP_Command__li_3AE057B95E8C4FD4A21B12836498478E"><a name="EMITTING_DATA_ASAP_Command__li_3AE057B95E8C4FD4A21B12836498478E"><!-- --></a>Except for the first distribution, the rays
+				are distributed spatially in a random fashion, using the given data as the
+				probability density function. </li>
+
+			<li id="EMITTING_DATA_ASAP_Command__li_4D08D3D092AE4BE1A9E9089DD400AC8E"><a name="EMITTING_DATA_ASAP_Command__li_4D08D3D092AE4BE1A9E9089DD400AC8E"><!-- --></a>Use the <b>MOVE BY</b> command
+				to move the rays just off the geometry before tracing the rays. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#EMITTING">EMITTING Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_E-ref.html#Commands_and_Macros_E" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “E”.">Commands and Macros (E)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Importing_CCD_Images-ref.html#Importing_CCD_Images" title="The BMP2DIS.exe utility is for importing CCD images into ASAP, and is stored in your ASAP installation area under \bin. It reads a Windows BMP (bitmap) file and creates an ASAP DIS file. In the following syntax, the width option specifies system units length in ASAP.">Importing CCD Images</a></div>
+<div><a href="../Reference/Radiant_Sources-ref.html#Radiant_Sources" title="Radiant sources are 3D source characterization files created by Radiant Imaging, Inc. Radiant sources are generally obtained for one-of-a-kind sources, specialty bulbs, or other sources, which are not in the BRO Light Source Library.">Radiant Sources</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/ABEL_ASAP-cmdref.html#ABEL_ASAP_Command" title="Performs an Abel or inverse Abel transform on each line of data about the horizontal axis.">ABEL (ASAP Command)</a></div>
+<div><a href="../Commands/DUMP_ASAP-cmdref.html#DUMP_ASAP_Command" title="Dumps the currently selected rays to a data distribution file. If only one argument is specified (non-polarized syntax), the ray polarization data is not dumped, even if the rays include polarization data.">DUMP (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_ASAP-cmdref.html" title="Creates a composite single-source emitter from several EMITTING volume commands.">EMITTING (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_BOX_SPHEROID_ASAP-cmdref.html#EMITTING_BOX_SPHEROID_ASAP_Command" title="Creates a ray set uniformly distributed within a box or spheroid of an emitting volume.">EMITTING BOX/SPHEROID (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_CONE_PYRAMID_ASAP-cmdref.html#EMITTING_CONE_PYRAMID_ASAP_Command" title="Creates a rayset uniformly distributed within a cone or pyramid.">EMITTING CONE/PYRAMID (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_DISK_RECTANGLE_ASAP-cmdref.html#EMITTING_DISK_RECTANGLE_ASAP_Command" title="Creates random emitting surfaces.">EMITTING DISK/RECTANGLE (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_ENTITY_or_OBJECT_ASAP-cmdref.html#EMITTING_ENTITY_or_OBJECT_ASAP_Command" title="Randomly distributes rays over the faceted surface(s) of SURFACE/EDGE entities or SURFACE/EDGE OBJECTS (entity number k or object k (number or name)).">EMITTING ENTITY or OBJECT (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_FILAMENT_ASAP-cmdref.html#EMITTING_FILAMENT_ASAP_Command" title="Creates a randomly generated ray set that is uniformly distributed along a predefined or arbitrary curve.">EMITTING FILAMENT (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_HELIX_ASAP-cmdref.html#EMITTING_HELIX_ASAP_Command" title="Creates a volume emitter with randomly generated rays, uniformly distributed along a helical curve.">EMITTING HELIX (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_IES_ASAP-cmdref.html#EMITTING_IES_ASAP_Command" title="Creates a ray set that emits according to Illuminating Engineering Society (IES) data.">EMITTING IES (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_RAYS_ASAP-cmdref.html#EMITTING_RAYS_ASAP_Command" title="Creates an arbitrary set of rays.">EMITTING RAYS (ASAP Command)</a></div>
+<div><a href="../Commands/MOVE_ASAP-cmdref.html#MOVE_ASAP_Command" title="Moves rays along their propagation direction to a new location.">MOVE (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Using VOXELS in ASAP</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

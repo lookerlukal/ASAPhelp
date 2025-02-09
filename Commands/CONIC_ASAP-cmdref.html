@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="CONIC (ASAP Command)"/>
+<meta name="abstract" content="Creates a quadratic Bezier edge/curve in the plane given at the 2nd and 3rd entries."/>
+<meta name="description" content="Creates a quadratic Bezier edge/curve in the plane given at the 2nd and 3rd entries."/>
+<meta name="DC.subject" content="CONIC (ASAP Command), Bezier edge/curve"/>
+<meta name="keywords" content="CONIC (ASAP Command), Bezier edge/curve"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_C-ref.html#Commands_and_Macros_C"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/BEZIER_ASAP-cmdref.html#BEZIER_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Edge_Curve_Modifiers-conc.html#Edge_Curve_Modifiers"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=29"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="CONIC_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>CONIC (ASAP Command)</title>
+</head>
+<body id="CONIC_ASAP_Command"><a name="CONIC_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>CONIC (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Creates a quadratic Bezier edge/curve in the plane given at the
+	 2nd and 3rd entries.
+  </p>
+ 
+	 <p><b>Syntax</b>
+	 </p>
+ 
+	 <pre class="codeblock">
+CONIC X x  c y z y2 yz z2   y' z'  y"  z"
+                            Y  y' y" [ p ]
+                            Z  z' z"
+        y  c z x z2 zx x2   z' x' z"  x"
+                            Z  z' z" [ p ]
+                            X  x' x"
+        z  c x y x2 xy y2   x' y' x"  y"
+                            X  x' x" [ p ]
+                            Y  y' y"
+</pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Using the first form as an example:</span></td><td><span/></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X</span></td><td><span>coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x</span></td><td><span>location along coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>c y z y2 yz z2</span></td><td><span>implicit coefficients of this conic curve</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>y' z'</span></td><td><span>coordinates of start point of the curve</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>y" z"</span></td><td><span>coordinates of end point of the curve</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Y y' y"</span></td><td><span>specifies 
+			 <b>y</b> coordinates of start and stop points, solve for 
+			 <b>z' z"</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Z z' z"</span></td><td><span>specifies 
+			 <b>z</b> coordinates of start and stop points, solve for 
+			 <b>y' y"</b></span></td></tr></tbody></table> 
+	 <p><b>Remarks</b>
+	 </p>
+ 
+	 <br/><a name="CONIC_ASAP_Command__ul_03F0666174DD44BCA05708E1DEB6C920"><!-- --></a><ol id="CONIC_ASAP_Command__ul_03F0666174DD44BCA05708E1DEB6C920"> 
+		<li id="CONIC_ASAP_Command__li_B686588709764A98A184A5E35E271F07"><a name="CONIC_ASAP_Command__li_B686588709764A98A184A5E35E271F07"><!-- --></a>Entries 4 through 9 are the
+		  implicit coefficients of this conic curve. 
+		</li>
+ 
+		<li id="CONIC_ASAP_Command__li_61CCD1A4D9644490AC74C10FE7E69451"><a name="CONIC_ASAP_Command__li_61CCD1A4D9644490AC74C10FE7E69451"><!-- --></a>Entries 10 and 11 are the
+		  coordinates in this plane of the start point of the segment, and 12 and 13 the
+		  stop point. 
+		</li>
+
+		<li id="CONIC_ASAP_Command__li_116038E018AF473EB3E78BDC00E70429"><a name="CONIC_ASAP_Command__li_116038E018AF473EB3E78BDC00E70429"><!-- --></a>Instead of giving a pair of
+		  coordinates for each point, only one coordinate value for each point can be
+		  given and ASAP solves for the others (smallest root) using the Y y' y", or Z z'
+		  z", or X x' x" syntaxes.
+		</li>
+ 
+		<li id="CONIC_ASAP_Command__li_46B476983B074BC78D829B30E46FB1E9"><a name="CONIC_ASAP_Command__li_46B476983B074BC78D829B30E46FB1E9"><!-- --></a>This edge is a single and
+		  quadratic curved segment.
+		</li>
+ 
+		<li id="CONIC_ASAP_Command__li_9496B62D89EE47D3A39D148D5419EE6F"><a name="CONIC_ASAP_Command__li_9496B62D89EE47D3A39D148D5419EE6F"><!-- --></a>If this is the case, 
+		  <b>p</b> is an optional vertex radius of curvature of a
+		  parabola to subtract from the curve.
+		</li>
+ 
+	 </ol>
+ 
+	 <p><b>Example</b>
+	 </p>
+ 
+	 <p>To define the equivalent of a classical optical conicoid:
+	 </p>
+ 
+	 <pre class="codeblock">
+CURVE
+  R=1  !vertex radius of curvature
+  K=-1 !conic constant
+  H=1  !outer aperture height
+  O=0  !inner obscuration height
+  CONIC X 0, 0 0 -2*R 1 0 K+1, Y (O) (H)
+   SWEEP AXIS 360 Z
+  OBJECT
+   INTERFACE . . .</pre>
+ 
+	 <p> 
+		<a href="../example_scripts.html#CONIC">CONIC
+		  Examples</a>
+	 </p>
+
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_C-ref.html#Commands_and_Macros_C" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “C”.">Commands and Macros (C)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Edge_Curve_Modifiers-conc.html#Edge_Curve_Modifiers" title="Edge/curve modifiers fall into four categories, which are listed in this topic.">Edge and Curve Modifiers</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/BEZIER_ASAP-cmdref.html#BEZIER_ASAP_Command" title="Creates a Bezier edge/curve in the plane.">BEZIER (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=29" target="_blank">See the Knowledge Base for the technical publication, Edges in ASAP</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

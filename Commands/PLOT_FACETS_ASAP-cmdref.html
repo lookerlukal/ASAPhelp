@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="PLOT FACETS (ASAP Command)"/>
+<meta name="abstract" content="Plots parametric mesh representation of objects in the currently specified graphics window."/>
+<meta name="description" content="Plots parametric mesh representation of objects in the currently specified graphics window."/>
+<meta name="DC.subject" content="PLOT FACETS (ASAP Command), objects, plotting parametric mesh, parametric mesh, plotting, graphics, plotting facets"/>
+<meta name="keywords" content="PLOT FACETS (ASAP Command), objects, plotting parametric mesh, parametric mesh, plotting, graphics, plotting facets"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_P-ref.html#Commands_and_Macros_P"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/BOUNDS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FACETS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LIMITS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT3D_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_BEAMS_ASAP-cmdref.html#PLOT_BEAMS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_CURVES_ASAP-cmdref.html#PLOT_CURVES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_EDGES_ASAP-cmdref.html#PLOT_EDGES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_ENTITIES_ASAP-cmdref.html#PLOT_ENTITIES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_LENSES_ASAP-cmdref.html#PLOT_LENSES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_LIMITS_ASAP-cmdref.html#PLOT_LIMITS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_LOCAL_ASAP-cmdref.html#PLOT_LOCAL_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_MESHES_ASAP-cmdref.html#PLOT_MESHES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_POLARIZATION_ASAP-cmdref.html#PLOT_POLARIZATION_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_RAYS_ASAP-cmdref.html#PLOT_RAYS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_SURFACES_ASAP-cmdref.html#PLOT_SURFACES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OBLIQUE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OVERLAY_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Plotting_Commands-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PROFILES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REPLOT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/XYZ_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WINDOW_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="PLOT_FACETS_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>PLOT FACETS (ASAP Command)</title>
+</head>
+<body id="PLOT_FACETS_ASAP_Command"><a name="PLOT_FACETS_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>PLOT FACETS (ASAP Command)</h5></span>
+	
+	
+	<div><p>Plots parametric mesh representation of objects in the currently specified graphics
+		window. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+PLOT FACETS  [ n n' [ m ] ] [ REMOVE    ] [ 'title' ]
+                        HIDE [ d ]
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n n' </span></td><td><span>minimum or maximum number of subdivisions in the two parametric directions
+					for each patch of an object</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m</span></td><td><span>maximum number of facets per object</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>REMOVE</span></td><td><span>removes nonessential facet edges</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>HIDE</span></td><td><span>produces hidden-line perspective view</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>d</span></td><td><span>viewing distance relative to the maximum lateral size (default:
+				d=2)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>'title'</span></td><td><span>optional title for plot (up to 64 characters)</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="PLOT_FACETS_ASAP_Command__ul_04A47478F7014479A2A440AF8FC25484"><!-- --></a><ol id="PLOT_FACETS_ASAP_Command__ul_04A47478F7014479A2A440AF8FC25484">
+			<li id="PLOT_FACETS_ASAP_Command__li_42FF88E780F24B498F241E011BB4A7AB"><a name="PLOT_FACETS_ASAP_Command__li_42FF88E780F24B498F241E011BB4A7AB"><!-- --></a>Produces a parametric mesh representation
+				of all currently defined objects in the current plot window. </li>
+
+			<li id="PLOT_FACETS_ASAP_Command__li_179ACAE27D1D4A59B5B9C1BB8C2AF3DA"><a name="PLOT_FACETS_ASAP_Command__li_179ACAE27D1D4A59B5B9C1BB8C2AF3DA"><!-- --></a>For <b>n n',</b> also see the
+					<b>FACETS</b> command. </li>
+
+			<li id="PLOT_FACETS_ASAP_Command__li_8708E2CD00A14A9284C51FFE966BA82D"><a name="PLOT_FACETS_ASAP_Command__li_8708E2CD00A14A9284C51FFE966BA82D"><!-- --></a>If possible, the maximum number of total
+				facets on any object is kept below m (the default is 4096; use 0 to turn off). </li>
+
+			<li id="PLOT_FACETS_ASAP_Command__li_F216AC39DBD94A048EDC7EA1717A48FD"><a name="PLOT_FACETS_ASAP_Command__li_F216AC39DBD94A048EDC7EA1717A48FD"><!-- --></a>Each facet is trimmed by any <b>BOUNDS</b> and/or <b>LIMITS</b> command into, at most, an
+				eight-sided convex polygon. Therefore, it may be necessary to increase the facet
+				density to see the effects of fine-scale trimming. </li>
+
+			<li id="PLOT_FACETS_ASAP_Command__li_3695134687694D70AADC180346388B2E"><a name="PLOT_FACETS_ASAP_Command__li_3695134687694D70AADC180346388B2E"><!-- --></a><b>REMOVE</b> can be used to
+				remove all facet edges from the plot except for the main patch edges and any
+				trimming edges. The plot this option produces is just as accurate but is less
+				crowded. </li>
+
+			<li id="PLOT_FACETS_ASAP_Command__li_FFB0C8C6F7A2461BA8B0B166B882A5E5"><a name="PLOT_FACETS_ASAP_Command__li_FFB0C8C6F7A2461BA8B0B166B882A5E5"><!-- --></a>For <b>d</b> the default is <b>d</b>=2, which simulates a typical 35 mm camera lens. Use a <b>d</b> of 1000 to produce a nearly parallel projection. </li>
+
+			<li id="PLOT_FACETS_ASAP_Command__li_6DEB84C33D1A4879AFDAD4F43B8EEA12"><a name="PLOT_FACETS_ASAP_Command__li_6DEB84C33D1A4879AFDAD4F43B8EEA12"><!-- --></a> Currently, the following restrictions
+				apply to the <b>HIDE</b> option: <br/><a name="PLOT_FACETS_ASAP_Command__ol_CD9C9B57717345E9956B91104C10BD2D"><!-- --></a><ul id="PLOT_FACETS_ASAP_Command__ol_CD9C9B57717345E9956B91104C10BD2D">
+					<li id="PLOT_FACETS_ASAP_Command__li_FEB1C0AC79204717917BB6052538F9B7"><a name="PLOT_FACETS_ASAP_Command__li_FEB1C0AC79204717917BB6052538F9B7"><!-- --></a>There is a limit to the total
+						number of facets that can be processed, so you may only get a partial plot. </li>
+
+					<li id="PLOT_FACETS_ASAP_Command__li_861FB4BE97384819B887D8158D449434"><a name="PLOT_FACETS_ASAP_Command__li_861FB4BE97384819B887D8158D449434"><!-- --></a>All objects are plotted in the same
+						color. </li>
+
+					<li id="PLOT_FACETS_ASAP_Command__li_4DD84B6FB2764955B5E4E1FAB934A0BA"><a name="PLOT_FACETS_ASAP_Command__li_4DD84B6FB2764955B5E4E1FAB934A0BA"><!-- --></a>The plot is always autoscaled to
+						fill the window (or scaled window, that is, <b>WINDOW 1.1</b>
+						command before <b>PLOT</b> command). </li>
+
+					<li id="PLOT_FACETS_ASAP_Command__li_AA093ECBB0D04C91B3A24DBEA3ED025F"><a name="PLOT_FACETS_ASAP_Command__li_AA093ECBB0D04C91B3A24DBEA3ED025F"><!-- --></a>The <b>VECTOR</b> unit
+						is restarted so previous 3D plot data is lost. </li>
+
+					<li id="PLOT_FACETS_ASAP_Command__li_025C076944114D4A9653264E827E9C12"><a name="PLOT_FACETS_ASAP_Command__li_025C076944114D4A9653264E827E9C12"><!-- --></a>Unlike other plots, an oblique view
+						is always true (right-handed). Therefore, <b>OBLIQUE</b> may not
+						produce the expected view. </li>
+
+				</ul>
+</li>
+
+			<li id="PLOT_FACETS_ASAP_Command__li_9124CC9A37494C90BCD7FBAFEB032068"><a name="PLOT_FACETS_ASAP_Command__li_9124CC9A37494C90BCD7FBAFEB032068"><!-- --></a><b>WINDOW</b>, <b>WINDOW
+					X Z,</b>
+				<b>WINDOW Y X</b>, and <b>WINDOW Z Y</b> display the system
+				in a left-handed coordinate system. Use <b>WINDOW X -Z</b>, <b>WINDOW Y -X</b>, or <b>WINDOW Z -Y</b> to display the system
+				in a right-handed coordinate system. </li>
+
+			<li id="PLOT_FACETS_ASAP_Command__li_C2E24E81B75B4193A540A653A283979B"><a name="PLOT_FACETS_ASAP_Command__li_C2E24E81B75B4193A540A653A283979B"><!-- --></a>In addition to the 2D plot that is
+				generated, the full 3-D data is written to the VECTOR file (default logical unit
+				30). </li>
+
+			<li id="PLOT_FACETS_ASAP_Command__li_6212EA5E59764240A4564E8965472F41"><a name="PLOT_FACETS_ASAP_Command__li_6212EA5E59764240A4564E8965472F41"><!-- --></a>The title is delimited by a single quote <b>'</b> , as shown. </li>
+
+			<li id="PLOT_FACETS_ASAP_Command__li_24B4520E48C648AE8351F874931246A5"><a name="PLOT_FACETS_ASAP_Command__li_24B4520E48C648AE8351F874931246A5"><!-- --></a>The <b>OVERLAY</b> command
+				argument tells ASAP not to issue an end of plot so that the next plot created is
+				overlaid with the current plot. This is useful for combining system plots with ray
+				trace plots (assuming that the <b>WINDOW</b> is the same for all plots),
+				multiple spot diagrams, and so on. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#PLOT">PLOT Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_P-ref.html#Commands_and_Macros_P" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “P”.">Commands and Macros (P)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Plotting_Commands-ref.html" title="The PLOT command is a general command for plotting virtually any aspect of system geometry and selected ray data.">Plotting Commands</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/BOUNDS_ASAP-cmdref.html" title="Assigns surfaces and edges as boundaries to objects.">BOUNDS (ASAP Command)</a></div>
+<div><a href="../Commands/FACETS_ASAP-cmdref.html" title="Controls the subdivision of mesh patches.">FACETS (ASAP Command)</a></div>
+<div><a href="../Commands/LIMITS_ASAP-cmdref.html" title="Assigns a global bounding box to the object.">LIMITS (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT3D_ASAP-cmdref.html" title="Creates a 3D representation of the current distribution data file with 1D cross-sections.">PLOT3D (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_BEAMS_ASAP-cmdref.html#PLOT_BEAMS_ASAP_Command" title="Plots extent of each Gaussian beam within the currently specified graphics window.">PLOT BEAMS (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_CURVES_ASAP-cmdref.html#PLOT_CURVES_ASAP_Command" title="Plots a wire-frame outline of curves, with the control points displayed, in the currently specified graphics window.">PLOT CURVES (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_EDGES_ASAP-cmdref.html#PLOT_EDGES_ASAP_Command" title="Plots a wireframe outline of edges in the currently specified graphics window.">PLOT EDGES (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_ENTITIES_ASAP-cmdref.html#PLOT_ENTITIES_ASAP_Command" title="Plots surface, edge, and lens entities in the currently specified graphics window.">PLOT ENTITIES (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_LENSES_ASAP-cmdref.html#PLOT_LENSES_ASAP_Command" title="Plots lenses in the currently specified graphics window.">PLOT LENSES (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_LIMITS_ASAP-cmdref.html#PLOT_LIMITS_ASAP_Command" title="Plots a wireframe box denoting the extent of the specified objects limits box in the currently specified graphics window.">PLOT LIMITS (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_LOCAL_ASAP-cmdref.html#PLOT_LOCAL_ASAP_Command" title="Plots local boxes of surface entities.">PLOT LOCAL (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_MESHES_ASAP-cmdref.html#PLOT_MESHES_ASAP_Command" title="Plots all currently specified objects using a wireframe mesh.">PLOT MESHES (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_POLARIZATION_ASAP-cmdref.html#PLOT_POLARIZATION_ASAP_Command" title="Plots polarization state ellipses.">PLOT POLARIZATION (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_RAYS_ASAP-cmdref.html#PLOT_RAYS_ASAP_Command" title="Plots vectors along the direction of each ray contained within the currently specified graphics window.">PLOT RAYS (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_SURFACES_ASAP-cmdref.html#PLOT_SURFACES_ASAP_Command" title="Plots surfaces in the currently specified graphics window.">PLOT SURFACES (ASAP Command)</a></div>
+<div><a href="../Commands/OBLIQUE_ASAP-cmdref.html" title="Switches future graphical output between normal (orthogonal) projection and oblique (non-orthogonal) projection.">OBLIQUE (ASAP Command)</a></div>
+<div><a href="../Commands/OVERLAY_arg_ASAP-cmdref.html" title="Overlays plots (that is, places them on top of each other).">OVERLAY (ASAP Command Argument)</a></div>
+<div><a href="../Commands/PIXELS_ASAP-cmdref.html" title="Sets the resolution for graphics and calculations.">PIXELS (ASAP Command)</a></div>
+<div><a href="../Commands/PROFILES_ASAP-cmdref.html" title="Plots slices through objects contained within the specified graphics window.">PROFILES (ASAP Command)</a></div>
+<div><a href="../Commands/REPLOT_ASAP-cmdref.html" title="Plots data stored in the 3D vector file within the currently defined graphics window.">REPLOT (ASAP Command)</a></div>
+<div><a href="../Commands/XYZ_arg_ASAP-cmdref.html" title="Sets the window to the given directions and size for only the currently active plot.">XY[Z] and Other Plot Window Overrides (ASAP Command Argument)</a></div>
+<div><a href="../Commands/WINDOW_ASAP-cmdref.html" title="Sets the plotting window for graphical output.">WINDOW (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

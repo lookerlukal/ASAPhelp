@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="DISPLAY (ASAP Command)"/>
+<meta name="abstract" content="Reads previously created distribution data files so that they can be modified."/>
+<meta name="description" content="Reads previously created distribution data files so that they can be modified."/>
+<meta name="DC.subject" content="DISPLAY (ASAP Command), distribution data file, read"/>
+<meta name="keywords" content="DISPLAY (ASAP Command), distribution data file, read"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_D-ref.html#Commands_and_Macros_D"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FIELD_ASAP-cmdref.html#FIELD_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/HEADER_ASAP-cmdref.html#HEADER_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MAP_ASAP-cmdref.html#MAP_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OFFSET_ASAP-cmdref.html#OFFSET_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REPLICATE_ASAP-cmdref.html#REPLICATE_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Calculating_Modulation_Transfer_Functions-ref.html#Calculating_Modulation_Transfer_Functions"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Coherent_Incoherent_Analysis-conc.html#Coherent_Incoherent_Analysis"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/DISPLAY_Inputting_an_Arbitrary_Data_Distribution-ref.html#DISPLAY_Inputting_an_Arbitrary_Data_Distribution"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Distribution_Data_Files_Overview-conc.html#Distribution_Data_Files_Overview"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Distribution_Data_Files_Data_Manipulation-conc.html#Distribution_Data_Files_Data_Manipulation"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Importing_CCD_Images-ref.html#Importing_CCD_Images"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=26"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="DISPLAY_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>DISPLAY (ASAP Command)</title>
+</head>
+<body id="DISPLAY_ASAP_Command"><a name="DISPLAY_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>DISPLAY (ASAP Command)</h5></span>
+	
+	
+	<div><p>Reads previously created distribution data files so that they can be modified. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+DISPLAY [  u       [ MODULUS ] [ s ] ]
+           name      PHASE
+                     AMPLITUDE
+                     WAVEFRONT
+                     REAL
+                     IMAGINARY
+                     ENERGY
+                     1ST
+                     2ND
+                     3RD
+                     4TH
+                     :
+          name.BMP   RED
+                     GREEN
+                     BLUE
+                     MONO
+       </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>u</span></td><td><span>logical unit number of distribution data file</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>name</span></td><td><span>name of distribution data file, or use <b>DISPLAY</b> to prompt
+					for file name from Open File dialog box</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>
+					<p>MODULUS, PHASE, </p>
+
+					<p>AMPLITUDE, WAVEFRONT, </p>
+
+					<p>REAL, IMAGINARY, </p>
+
+					<p>ENERGY </p>
+
+				</span></td><td><span>field characteristic of interest</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="DISPLAY_ASAP_Command__ul_78E58B1990A54EF3A4E8088819ABD686"><!-- --></a><ol id="DISPLAY_ASAP_Command__ul_78E58B1990A54EF3A4E8088819ABD686">
+			<li id="DISPLAY_ASAP_Command__li_9716E9B5C16342CB853183D0A691B2A8"><a name="DISPLAY_ASAP_Command__li_9716E9B5C16342CB853183D0A691B2A8"><!-- --></a>Reads a previously created distribution
+				data file into ASAP where it may be modified and/or examined by <b>DISPLAY</b> subcommands. </li>
+
+			<li id="DISPLAY_ASAP_Command__li_8EB96048C4604BE594D0A5F2E5BD13C6"><a name="DISPLAY_ASAP_Command__li_8EB96048C4604BE594D0A5F2E5BD13C6"><!-- --></a> The distribution data on logical unit
+					<b>u</b> (default=9) or file name.DIS is read into memory and can be
+				modified and/or displayed with the following sets of commands:
+				<pre class="codeblock">
+     DISPLAY "*"
+or   DISPLAY _
+     DISPLAY "*.bmp"
+or   DISPLAY _.BMP
+         </pre>
+</li>
+
+			<li id="DISPLAY_ASAP_Command__li_702141893CDB4F819BD3BE75AB9A98A9"><a name="DISPLAY_ASAP_Command__li_702141893CDB4F819BD3BE75AB9A98A9"><!-- --></a>If a bitmap file is given, it is first
+				translated to distribution file format (see description of BMP2DIS utility in the
+				topic, Importing CCD Images). </li>
+
+			<li id="DISPLAY_ASAP_Command__li_132C8B716FFC49FC82F960E499D062FF"><a name="DISPLAY_ASAP_Command__li_132C8B716FFC49FC82F960E499D062FF"><!-- --></a>The bitmap translation is intended for use
+				with only color Windows bitmaps (24 bits per pixel), and explicitly not for
+				black-and-white bitmaps (1 bit per pixel). </li>
+
+			<li id="DISPLAY_ASAP_Command__li_5FB6ABDCBCCD4A0FB053201D2A137E6D"><a name="DISPLAY_ASAP_Command__li_5FB6ABDCBCCD4A0FB053201D2A137E6D"><!-- --></a> A <b>DISPLAY</b> distribution
+				file can be multi-valued or multi-dimensional. <p>If the distribution is
+					multi-valued (for example, the six-component complex vector that can be created
+					by a <b>FIELD</b> command), the first value is extracted by default.
+					Otherwise, a specific component given by the third entry can be extracted for
+					processing. </p>
+<p>If the distribution in 3D <b>s</b> is either an
+					absolute (integer) or fractional slice number (the default is the last 2D
+					slice). </p>
+</li>
+
+			<li id="DISPLAY_ASAP_Command__li_C3AE4B05981349489C68FD76D990150D"><a name="DISPLAY_ASAP_Command__li_C3AE4B05981349489C68FD76D990150D"><!-- --></a>If more than one set of values is generated
+				in this file, additional parameters are in the <b>DISPLAY</b> command to
+				pick out this particular set of values. These are 1st, 2nd, and so on. Without these
+				parameters, only the first matrix of values is seen (therefore, 1st is actually not
+				necessary). </li>
+
+			<li id="DISPLAY_ASAP_Command__li_EC1F9640FACC4C5FBF90F5A2B0063269"><a name="DISPLAY_ASAP_Command__li_EC1F9640FACC4C5FBF90F5A2B0063269"><!-- --></a> Commands that modify the distribution data
+				file include: <p><b>NORMALIZE, FORM, FFT, AVERAGE, RADIAL, TRANSPOSE, MODIFY,
+						COMBINE, REDUCE, SECTION, ANGLES, VALUES, OFFSET, FOLD , ABEL,</b> and
+						<b>THRESHOLD</b>. </p>
+</li>
+
+			<li id="DISPLAY_ASAP_Command__li_791A3886BE284C2D8DE3D6CBB96C5E2D"><a name="DISPLAY_ASAP_Command__li_791A3886BE284C2D8DE3D6CBB96C5E2D"><!-- --></a>Commands that display the distribution data
+				file include: <b>TABLE, RANGE, PLOT3D, ISOMETRIC, DMAP, GRAPH, CONTOUR,
+					DIRECTIONAL, ENCLOSED, MESH,</b> and <b>PICTURE</b>. </li>
+
+			<li id="DISPLAY_ASAP_Command__li_8D27DA625E5944DD9A4741F2EF21D8DE"><a name="DISPLAY_ASAP_Command__li_8D27DA625E5944DD9A4741F2EF21D8DE"><!-- --></a>Many analysis commands such as <b>SPREAD, SPOTS, RADIANT, OPDMAP</b> produce scalar distribution data
+				files. These files are stored by default in BRO009.DAT (logical unit number 9). </li>
+
+			<li id="DISPLAY_ASAP_Command__li_094B7CDC557E4B359B3EF49017EDE283"><a name="DISPLAY_ASAP_Command__li_094B7CDC557E4B359B3EF49017EDE283"><!-- --></a>For examples of how to use the <b>DISPLAY</b> command for reading in data, see the <b>MAP</b>
+				command. Other examples are shown below. </li>
+
+		</ol>
+
+		<br/><a name="DISPLAY_ASAP_Command__ol_75F13255391148338C63527B99FFFD9A"><!-- --></a><ul id="DISPLAY_ASAP_Command__ol_75F13255391148338C63527B99FFFD9A">
+			<li id="DISPLAY_ASAP_Command__li_D1ECFF714DE94919A6EB6944A9783A1D"><a name="DISPLAY_ASAP_Command__li_D1ECFF714DE94919A6EB6944A9783A1D"><!-- --></a>
+				<p><b>Header or Output</b>
+				</p>
+
+				<pre class="codeblock">
+--- DISPLAY
+Opening OLD distribution file 9: C:\ASAPWork\MoreAboutSources\bro009.dat
+
+ File header:
+  Geometrical Ray SPOTS              1
+  C direct  0.7341523      Milliwatts / sr
+  A direction      -0.9992853      0.9993443              39
+  B direction      -0.9985530      0.9982522              39
+
+Statistics on 39 by 39 data set:
+                   Milliwatts / sr         Location       B direction           A direction
+ Minimum     0.000000             1       1      -0.9729529         -0.9736619
+ Maximum  11.95395             20      21     -0.1503881E-03    0.5127642E-01
+ Average      2.061445           20      20     -0.1503881E-03    0.2950244E-04
+ RMS var      2.003785             9       9        0.4380579            0.4378794
+ TOTAL Milliwatts  =  8.226968
+         </pre>
+
+			</li>
+
+			<li id="DISPLAY_ASAP_Command__li_5207CBB447DE441B9E82CAAE19030928"><a name="DISPLAY_ASAP_Command__li_5207CBB447DE441B9E82CAAE19030928"><!-- --></a>
+				<p><b>Entering Files into DISPLAY</b>
+				</p>
+
+				<pre class="codeblock">
+...(other ASAP commands)...
+DISPLAY
+         </pre>
+
+				<p>Reads BRO009.DAT into ASAP for further examination and/or analysis. </p>
+
+				<pre class="codeblock">
+...(other ASAP commands)...
+DISPLAY 25</pre>
+
+				<p>Reads FOR025.DAT into ASAP for further examination and/or analysis. </p>
+
+				<pre class="codeblock">
+...(other ASAP commands)...n
+DISPLAY JOE
+         </pre>
+
+				<p>Reads JOE.DIS into ASAP for further examination and/or analysis. </p>
+
+				<pre class="codeblock">
+
+FIELD AMPLITUDE 0
+DISPLAY
+...(other DISPLAY commands)...
+RETURN
+DISPLAY 29 PHASE
+...(other DISPLAY commands)...
+         </pre>
+
+				<p>Calculates the amplitude of the field and saves it in BRO009.DAT. (The complex
+					field is saved by default in BRO029.DAT.) The first time <b>DISPLAY</b> is called, it reads the BRO009.DAT file containing the
+					amplitude. The user can then examine the data as desired. When finished, the
+					user issues a <b>RETURN</b> to return to ASAP, and then calls
+						<b>DISPLAY</b> again, this time specifying that the phase of the
+					complex field is desired. <b>DISPLAY</b> reads the complex field
+					data from BRO029.DAT and extracts the phase information. You can then examine
+					the phase data as desired. </p>
+
+			</li>
+
+		</ul>
+
+		<p>
+			<a href="../example_scripts.html#DISPLAY">DISPLAY Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_D-ref.html#Commands_and_Macros_D" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “D”.">Commands and Macros (D)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Coherent_Incoherent_Analysis-conc.html#Coherent_Incoherent_Analysis">Coherent - Incoherent Analysis</a></div>
+<div><a href="../Concept/Distribution_Data_Files_Overview-conc.html#Distribution_Data_Files_Overview" title="ASAP has several commands for calculating the irradiance, intensity, radiance etc., for a set of files, some of which produce immediate results of these calculations in the form of plots directly on the screen.">Distribution Data Files Overview</a></div>
+<div><a href="../Concept/Distribution_Data_Files_Data_Manipulation-conc.html#Distribution_Data_Files_Data_Manipulation" title="ASAP supports a rich set of data processing commands that act on the distribution data files.">Distribution Data Files - Data Manipulation</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Calculating_Modulation_Transfer_Functions-ref.html#Calculating_Modulation_Transfer_Functions" title="The Modulation Transfer Function (MTF) characterizes the contrast performance of an optical system as a function of spatial frequencies. It is the modulus of the Optical Transfer Function (OTF).">Calculating Modulation Transfer Functions</a></div>
+<div><a href="../Reference/DISPLAY_Inputting_an_Arbitrary_Data_Distribution-ref.html#DISPLAY_Inputting_an_Arbitrary_Data_Distribution" title="Creating a user-defined distribution of data for plotting.">DISPLAY - Inputting an Arbitrary Data Distribution</a></div>
+<div><a href="../Reference/Importing_CCD_Images-ref.html#Importing_CCD_Images" title="The BMP2DIS.exe utility is for importing CCD images into ASAP, and is stored in your ASAP installation area under \bin. It reads a Windows BMP (bitmap) file and creates an ASAP DIS file. In the following syntax, the width option specifies system units length in ASAP.">Importing CCD Images</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/FIELD_ASAP-cmdref.html#FIELD_ASAP_Command" title="Calculates the exact complex field distribution.">FIELD (ASAP Command)</a></div>
+<div><a href="../Commands/HEADER_ASAP-cmdref.html#HEADER_ASAP_Command" title="Redefines the file header for the current data in the display file.">HEADER (ASAP Command)</a></div>
+<div><a href="../Commands/MAP_ASAP-cmdref.html#MAP_ASAP_Command" title="Produces a depth map of the currently defined object surfaces.">MAP (ASAP Command)</a></div>
+<div><a href="../Commands/OFFSET_ASAP-cmdref.html#OFFSET_ASAP_Command" title="Shifts the origin of the current distribution data.">OFFSET (ASAP Command)</a></div>
+<div><a href="../Commands/REPLICATE_ASAP-cmdref.html#REPLICATE_ASAP_Command" title="Replicates (copies) a distribution.">REPLICATE (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=26" target="_blank">See the Knowledge Base for the technical publication, Coupling Other Software Programs to ASAP for Modeling Nonlinear Optical Components</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

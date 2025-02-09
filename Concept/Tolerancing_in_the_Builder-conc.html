@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Tolerancing in the Builder"/>
+<meta name="abstract" content="The Builder in ASAP allows for tolerance data entry and automatic Monte Carlo analysis."/>
+<meta name="description" content="The Builder in ASAP allows for tolerance data entry and automatic Monte Carlo analysis."/>
+<meta name="DC.subject" content="Tolerancing in the Builder, Builder, tolerancing, Monte Carlo analysis, using the Builder, uniform distribution, tolerancing, normal distribution, tolerancing"/>
+<meta name="keywords" content="Tolerancing in the Builder, Builder, tolerancing, Monte Carlo analysis, using the Builder, uniform distribution, tolerancing, normal distribution, tolerancing"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Features_in_ASAP-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Tolerancing_Dialog_for_Builder-task.html#Tolerancing_Dialog_for_Builder"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Tolerance_Data_Dialog_for_Builder-task.html#Tolerance_Data_Dialog_for_Builder"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Perturb_Options_Dialog_for_Builder_Tolerancing-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ITER_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Builder_Window_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ITER_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Builder_Window_Overview-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Tolerancing_in_the_Builder"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Tolerancing in the Builder</title>
+</head>
+<body id="Tolerancing_in_the_Builder"><a name="Tolerancing_in_the_Builder"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Tolerancing in the Builder</h5></span>
+	
+	
+	<div><p> The Builder in ASAP allows for tolerance data entry and automatic Monte Carlo
+		analysis. </p>
+
+		<p>
+		</p>
+
+		<p>Tolerancing specifies how much each component, assembly, and material in a design can
+			depart from its ideal characteristics, without jeopardizing the design's performance. </p>
+
+		<div class="section" id="Tolerancing_in_the_Builder__section_CA87DFE5E38841AF9506EC78B2B418A0"><a name="Tolerancing_in_the_Builder__section_CA87DFE5E38841AF9506EC78B2B418A0"><!-- --></a><span style="color: #2b6eb5"><h5>Tolerance Data Entry</h5></span>
+			
+			<p>For each object (or group of objects) that is entered in the Builder, a dialog box
+				for entering tolerance values is available by right-clicking a Builder cell in any
+				column with a numeric field and selecting Tolerance Range from the list. The
+				Tolerancing dialog displays the current tolerance values for the existing parameter.
+				You can enter lower and upper bounds for the desired variables, or select a
+				distribution type. </p>
+
+		</div>
+
+		<div class="section" id="Tolerancing_in_the_Builder__section_6DBF7779E18B446C8EF0CB040DBC19B3"><a name="Tolerancing_in_the_Builder__section_6DBF7779E18B446C8EF0CB040DBC19B3"><!-- --></a><span style="color: #2b6eb5"><h5>Monte Carlo Analysis</h5></span>
+			
+			<p>An automatic Monte Carlo analysis generates random perturbations (uniform or normal
+				distribution) to an existing geometry from the information entered in the Builder
+				spreadsheet. After you define the source, ASAP performs ray traces, and analyses in
+				the usual way. A new set of random perturbations is generated and the ray traces and
+				analyses are repeated This feature eliminates the need to define variable names for
+				each parameter or place random variables in your geometry. A double-pass system is
+				used to avoid double-counting iterations. </p>
+
+			<p>You can also perform a merit function (much as you can with the <b>$ITER</b> macro command) from the Perturb Options dialog box. ASAP then
+				repetitively runs the procedure to produce a plot of merit function versus trial
+				number. </p>
+
+			<p>Builder files may be saved with an XML format file extension (.enx is the default),
+				which retains the tolerancing information. </p>
+
+		</div>
+
+	</div>
+
+<div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="../Task/Tolerancing_Dialog_for_Builder-task.html#Tolerancing_Dialog_for_Builder">Tolerancing Dialog for Builder</a></strong><br/>
+The Tolerancing dialog box sets up the tolerancing values and distribution types for the tolerancing analysis. This feature is available from the Builder toolbar.</li>
+<li class="ulchildlink"><strong><a href="../Task/Tolerance_Data_Dialog_for_Builder-task.html#Tolerance_Data_Dialog_for_Builder">Tolerance Data Dialog for Builder</a></strong><br/>
+The Tolerance Data dialog box displays all the fields in the current Builder spreadsheet that have tolerance parameters.</li>
+<li class="ulchildlink"><strong><a href="../Task/Perturb_Options_Dialog_for_Builder_Tolerancing-task.html">Perturb Options Dialog for Builder Tolerancing</a></strong><br/>
+The Perturb Options dialog box designates the number of random perturbations you want to perform for the automatic Monte Carlo analysis.</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Features_in_ASAP-ref.html" title="Topics in this section of the Contents tab include new and existing features in the ASAP user interface.">Features in ASAP</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Builder_Window_Overview-conc.html" title="The Builder offers a simple approach to building your system. Designed for both new and experienced ASAP users, the Builder introduces you to the concepts of using ASAP to create your geometry, including sources. The entire system’s geometry is created in one window, using most standard spreadsheet navigation features, and saved with the file extension, .enx (an XML file), or .enz (a compressed XML file). You can also use the Builder for tracing rays and analyzing your system.">Builder Window Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/ITER_macro_ASAP-cmdref.html" title="Iterates input records and a set of variables.">$ITER (ASAP Macro)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

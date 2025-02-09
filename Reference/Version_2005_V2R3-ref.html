@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Version 2005 V2R3"/>
+<meta name="abstract" content="ASAP 2005 V2R3 (June 2006) Release Notes File"/>
+<meta name="description" content="ASAP 2005 V2R3 (June 2006) Release Notes File"/>
+<meta name="DC.subject" content="release notes, 2006 V2R3"/>
+<meta name="keywords" content="release notes, 2006 V2R3"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Release_Notes-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_2006_V1R1-ref.html#Version_2006_V1R1"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_2005_V2R2-ref.html#Version_2005_V2R2"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Version_2005_V2R3"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Version 2005 V2R3</title>
+</head>
+<body id="Version_2005_V2R3"><a name="Version_2005_V2R3"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Version 2005 V2R3</h5></span> 
+  
+  
+  <div><p>ASAP 2005 V2R3 (June 2006) Release Notes File 
+  </p>
+ 
+	 <div class="section" id="Version_2005_V2R3__section_F65E3A2204B94781BE515A7345196D70"><a name="Version_2005_V2R3__section_F65E3A2204B94781BE515A7345196D70"><!-- --></a> 
+		<p>(c) 1982-2006 Breault Research Organization, Inc. All rights reserved.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>Late-breaking information about this release of ASAP™.
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Version_2005_V2R3__section_2EB5FE102E484DA4AFFE0D7E123D8703"><a name="Version_2005_V2R3__section_2EB5FE102E484DA4AFFE0D7E123D8703"><!-- --></a><span style="color: #2b6eb5"><h5>KERNEL</h5></span> 
+		 
+		<p>06PRD00000091 &amp; 06PRD00000215
+		</p>
+ 
+		<p>Enhancement
+		</p>
+ 
+		<p>The behavior of 'SPOTS ... ATTRIBUTE n' has been changed to reduce the
+		  likelihood of user error affecting the interpretation of distribution files.
+		  The affected distribution file is updated for all allowed values of the
+		  ATTRIBUTE option n. The overhead associated with this redundancy is typically
+		  negligible on modern systems and is justified by the reduced probability of
+		  misinterpretation. The new behavior reinforces the importance of making a $COPY
+		  of the BRO009.DAT file, if the results will be required later, as subsequent
+		  commands may overwrite the BRO009.DAT file. See for example the topic,
+		  “Distribution Data Files Overview” in the online help.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>06PRD00000116
+		</p>
+ 
+		<p>Enhancement
+		</p>
+ 
+		<p>Three options have been added to the SELECT command. SELECT ADD … adds
+		  rays to the currently selected set. SELECT REMOVE … removes rays from the
+		  currently selected set. SELECT NONE unselects all rays and may occasionally be
+		  a convenient logical complement to SELECT ALL. For more information, please see
+		  USER DOCUMENTATION addenda below.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>06PRD00000396
+		</p>
+ 
+		<p>Fix
+		</p>
+ 
+		<p>The EDGE… POINTS… OBJECT construct produced an object which would not
+		  reliably raytrace with ACCURACY HIGH (the default). The most typical symptom
+		  was rays passing through the object. Sometimes rays would intersect properly
+		  from one side but not from the other. This defect was introduced in ASAP 8.0.5
+		  with improved BPM accuracy. The defect affected all raytracing with ACCURACY
+		  HIGH and not just BPM.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>06PRD00000425 &amp; 06PRD00000450
+		</p>
+ 
+		<p>Fix
+		</p>
+ 
+		<p>Total internal reflection (TIR) for all media was not completely
+		  reliable, as the result of a change made in ASAP 2005 V2R2 related to
+		  birefringent materials. Symptoms included premature ray-cessations and low-flux
+		  warnings. Correct TIR behavior has been restored for isotropic materials.
+		  Accurate TIR for birefringent materials, which has never been supported by
+		  ASAP, remains unsupported.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>06PRD00000449
+		</p>
+ 
+		<p>Enhancement
+		</p>
+ 
+		<p>A large number of informational messages (which are neither errors nor
+		  warnings) could clutter the output console, particularly when reading IGES
+		  files or working with the Light Source Library. Duplicate informational
+		  messages are now suppressed. Additionally, informational messages can be
+		  suppressed entirely with $MSGS OFF.
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Version_2005_V2R3__section_25FED9FE0EDD49698F52EB12C976F966"><a name="Version_2005_V2R3__section_25FED9FE0EDD49698F52EB12C976F966"><!-- --></a><span style="color: #2b6eb5"><h5>USER INTERFACE</h5></span> 
+		 
+		<p>06PRD00000320
+		</p>
+ 
+		<p>Fix – Light Source Library Wizard
+		</p>
+ 
+		<p>Corrections have been made in the Light Source Library Wizard allowing
+		  correct rayset wavelength values when the underscore character (‘_’) is
+		  included in the rayset pathname.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>06PRD00000446
+		</p>
+ 
+		<p>Fix – Builder
+		</p>
+ 
+		<p>Corrections have been made in the Builder allowing Perturb to run to
+		  completion when setting tolerance ranges.
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Version_2005_V2R3__section_0E7BBFFE738E4D11B5912782141C922E"><a name="Version_2005_V2R3__section_0E7BBFFE738E4D11B5912782141C922E"><!-- --></a><span style="color: #2b6eb5"><h5>USER DOCUMENTATION</h5></span> 
+		 
+		<p>Errata &amp; Addenda – ASAP On Line Help Topic SPOTS
+		</p>
+ 
+		<p>The following remark:
+		</p>
+ 
+		<p>Normally, ASAP produces a distribution file of accumulated ray fluxes
+		  at each pixel location. The ATTRIBUTE option (other than SPOTS ATTRIBUTE 0)
+		  instructs ASAP not to create a distribution file and to print only a symbol
+		  where each ray strikes, as shown by the following:
+		</p>
+ 
+		<p>is superseded by:
+		</p>
+ 
+		<p>ASAP produces a distribution file of accumulated ray fluxes at each
+		  pixel location. The ATTRIBUTE option instructs ASAP to plot a symbol where each
+		  ray strikes, as shown by the following:
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>The following remark:
+		</p>
+ 
+		<p>The spot diagram data also is placed into the BRO030.DAT (or
+		  filename.vcr) file, but only if the ATTRIBUTE i is less than one.
+		</p>
+ 
+		<p>has been removed from this topic.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>Addenda – ASAP On Line Help Topic SELECT
+		</p>
+ 
+		<p>The following expanded syntax is now incorporated into this topic:
+		</p>
+ 
+		<pre class="codeblock">
+SELECT [ ALL ]
+         ADD          [ entry entry' [ AND entry entry' ...
+                                                   OR
+         REMOVE  [ entry entry' [ AND entry entry' ...
+                                                   OR
+         ONLY        [ entry entry' [ AND entry entry' ...
+                                                   OR
+
+         EXCEPT    [ entry entry' [ AND entry entry' ...                  
+         NONE</pre>
+ 
+		<p> To support the expanded syntax, the following remarks were
+		  incorporated into this topic:
+		</p>
+ 
+		<p>ADD and REMOVE add or remove rays matching a subsequent Boolean
+		  condition to or from, respectively, the set of currently selected rays.
+		</p>
+ 
+		<p>NONE takes no Boolean conditional and makes the set of currently
+		  selected rays equivalent to the empty set. It is included for convenience.
+		</p>
+ 
+		<p>Boolean conditions are specified by entering pairs of entries
+		  separated by a logical operator (AND/OR) according to the following table...
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Release_Notes-ref.html" title="Topics in this section include all known release notes for ASAP up to the last version. Release notes for the current version can be viewed in the ASAP Command Output window, or opened from your ASAP installation root folder.">Release Notes</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a href="../Reference/Version_2006_V1R1-ref.html#Version_2006_V1R1" title="ASAP 2006 V1R1 (October 17, 2006) Release Notes File">Version 2006 V1R1</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a href="../Reference/Version_2005_V2R2-ref.html#Version_2005_V2R2" title="ASAP 2005 V2R2 (January 2006) Release Notes File">Version 2005 V2R2</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

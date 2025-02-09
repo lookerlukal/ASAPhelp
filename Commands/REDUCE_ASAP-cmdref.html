@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="REDUCE (ASAP Command)"/>
+<meta name="abstract" content="Selects a subset of the current distribution data and rejects remaining data."/>
+<meta name="description" content="Selects a subset of the current distribution data and rejects remaining data."/>
+<meta name="DC.subject" content="REDUCE (ASAP Command), distribution data, creating subset"/>
+<meta name="keywords" content="REDUCE (ASAP Command), distribution data, creating subset"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_R-ref.html#Commands_and_Macos_R"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DISPLAY_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="REDUCE_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>REDUCE (ASAP Command)</title>
+</head>
+<body id="REDUCE_ASAP_Command"><a name="REDUCE_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>REDUCE (ASAP Command)</h5></span>
+	
+	
+	<div><p>Selects a subset of the current distribution data and rejects remaining data. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+REDUCE [ s  [ s' ]  ]
+        -s
+        +s
+         m"  [ n" ]
+         m  m'  m" [ n n' n" ]
+</pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>s</span></td><td><span>select out a square region of points (fractional) at the center</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>-s</span></td><td><span>select out a square region of points (fractional) at the lower
+				corner</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>+s</span></td><td><span>select out a square region of points (fractional) at the upper
+				corner</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m m'</span></td><td><span>integer pixel ranges in the across direction</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n n'</span></td><td><span>integer pixel ranges in the down direction</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m"</span></td><td><span>increments in the across direction</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n"</span></td><td><span>increments in the down direction</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="REDUCE_ASAP_Command__ul_067449A3E70048EEB8A78D591D29F930"><!-- --></a><ol id="REDUCE_ASAP_Command__ul_067449A3E70048EEB8A78D591D29F930">
+			<li id="REDUCE_ASAP_Command__li_694D5D87A77043838E19770CE3BD2126"><a name="REDUCE_ASAP_Command__li_694D5D87A77043838E19770CE3BD2126"><!-- --></a>
+				Reduces the number of data points by selecting out a subset of the current data,
+				that is, the new data points are given by: <br/><img src="../Equations/REDUCE_equation1.gif"/><br/>
+			</li>
+
+			<li id="REDUCE_ASAP_Command__li_9796B21CC4664CC69D3EDA579E333418"><a name="REDUCE_ASAP_Command__li_9796B21CC4664CC69D3EDA579E333418"><!-- --></a>The defaults for the increments <b>m"</b> and <b>n"</b> are 1. </li>
+
+			<li id="REDUCE_ASAP_Command__li_BF1E7419E68F4917B49F7C1A2728B7BA"><a name="REDUCE_ASAP_Command__li_BF1E7419E68F4917B49F7C1A2728B7BA"><!-- --></a>The default for <b>n</b> is
+					<b>m</b> and <b>n'</b> is <b>m'.</b>
+			</li>
+
+			<li id="REDUCE_ASAP_Command__li_E6ADEDB3DCE640C2913309EE637EB479"><a name="REDUCE_ASAP_Command__li_E6ADEDB3DCE640C2913309EE637EB479"><!-- --></a>A single entry <b>s</b> selects
+				out a square region of points (either absolute number or fractional) at the center,
+				lower corner <b>(-s),</b> or upper corner <b>(+s).</b>
+			</li>
+
+			<li id="REDUCE_ASAP_Command__li_15042D5536464FD1BEBD93E6F6FC3AD7"><a name="REDUCE_ASAP_Command__li_15042D5536464FD1BEBD93E6F6FC3AD7"><!-- --></a>If no entries are given, the outer minimum
+				value is cropped off. </li>
+
+		</ol>
+
+		<p>
+			<a href="/example_scripts.html#REDUCE">REDUCE Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_R-ref.html#Commands_and_Macos_R" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “R”.">Commands and Macros (R)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DISPLAY_ASAP-cmdref.html" title="Reads previously created distribution data files so that they can be modified.">DISPLAY (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

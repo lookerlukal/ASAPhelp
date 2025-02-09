@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="PATHS (ASAP Command)"/>
+<meta name="abstract" content="Produces a table of summarizing propagation paths of currently defined rays."/>
+<meta name="description" content="Produces a table of summarizing propagation paths of currently defined rays."/>
+<meta name="DC.subject" content="PATHS (ASAP Command), ray, summary of propagation path, propagation paths of rays"/>
+<meta name="keywords" content="PATHS (ASAP Command), ray, summary of propagation path, propagation paths of rays"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_P-ref.html#Commands_and_Macros_P"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SCATTER_RANDOM_MODEL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SCATTER_RMS_BSDF_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPLIT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Ghost_Image_Analysis-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="PATHS_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>PATHS (ASAP Command)</title>
+</head>
+<body id="PATHS_ASAP_Command"><a name="PATHS_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>PATHS (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Produces a table of summarizing propagation paths of currently
+	 defined rays. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+PATHS [ p ] [ n ] [ TOTAL ] [ m ] [ SHORT ]
+                    PEAK            MEDIUM
+                    AVERAGE         LONG
+                    OBJECT
+    </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>p</span></td><td><span>flux sorting threshold</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span>flag to not print paths containing less than n rays</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>AVERAGE</span></td><td><span>sorts paths by AVERAGE irradiance</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>PEAK</span></td><td><span>sorts paths by PEAK irradiance</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>TOTAL</span></td><td><span>sorts paths by TOTAL flux (default)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>OBJECT</span></td><td><span>sorts paths by OBJECT flux</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m</span></td><td><span>path contribution</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SHORT</span></td><td><span>specifies that the length of the printed output is SHORT (all
+			 integer object numbers)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MEDIUM</span></td><td><span>specifies that the length of the printed output is MEDIUM
+			 (current and previous objects integer) (default)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>LONG</span></td><td><span>specifies that the length of the printed output is LONG (all
+			 decimal object numbers)</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="PATHS_ASAP_Command__ul_F63A052F3DBC4A96A672CE35C5F0A2A7"><!-- --></a><ol id="PATHS_ASAP_Command__ul_F63A052F3DBC4A96A672CE35C5F0A2A7"> 
+		<li id="PATHS_ASAP_Command__li_405415AFFBDE44F3A021BAABB6004488"><a name="PATHS_ASAP_Command__li_405415AFFBDE44F3A021BAABB6004488"><!-- --></a>Prints out a table of ray
+		  paths according to current, previous, and initial objects. 
+		</li>
+ 
+		<li id="PATHS_ASAP_Command__li_21C2FB53C0D34C109F77F74B3A0360E8"><a name="PATHS_ASAP_Command__li_21C2FB53C0D34C109F77F74B3A0360E8"><!-- --></a>If 
+		  <b>p</b> is greater than zero, ASAP sorts the paths by 
+		  <b>AVERAGE</b> irradiance, 
+		  <b>PEAK</b> irradiance, 
+		  <b>TOTAL</b> flux (default), or 
+		  <b>OBJECT</b> flux and prints out only those paths whose
+		  percentage contribution is greater than the decimal number 
+		  <b>p.</b> 
+		</li>
+ 
+		<li id="PATHS_ASAP_Command__li_EEEA359425DC48BEBE4C8ABF4DD9FEB6"><a name="PATHS_ASAP_Command__li_EEEA359425DC48BEBE4C8ABF4DD9FEB6"><!-- --></a>Any paths containing less
+		  than 
+		  <b>n</b> rays are also not printed. 
+		</li>
+ 
+		<li id="PATHS_ASAP_Command__li_BEB7796DA0D9493A86E73E9FBF728563"><a name="PATHS_ASAP_Command__li_BEB7796DA0D9493A86E73E9FBF728563"><!-- --></a>The value of the integer 
+		  <b>m</b> determines whether the above flux-related quantity
+		  for each distinct path is the minimum (m = -1), sum (m = 0, default), or
+		  maximum (m = +1) of the individual contributions. 
+		</li>
+ 
+		<li id="PATHS_ASAP_Command__li_6060F4073F184C609E9D50BAB2F8C0BE"><a name="PATHS_ASAP_Command__li_6060F4073F184C609E9D50BAB2F8C0BE"><!-- --></a>The length of the printed
+		  output can be 
+		  <b>SHORT</b> (all integer object numbers), the default 
+		  <b>MEDIUM</b> (current and previous objects integer) or 
+		  <b>LONG</b> (all decimal object numbers). 
+		</li>
+ 
+		<li id="PATHS_ASAP_Command__li_21BFAB9287534F43B98E928300B1E212"><a name="PATHS_ASAP_Command__li_21BFAB9287534F43B98E928300B1E212"><!-- --></a>In the list of 
+		  <b>split/scatter</b> objects, a negative number indicates scattered ray
+		  generation. Except for 
+		  <b>SHORT</b> output, the three digits following the decimal
+		  point can be used to determine more precisely the mechanism that generated that
+		  ray at that object. The code numbers and their meanings are listed in the table
+		  below. 
+		  <div class="note"><span class="notetitle">Note:</span> The Diffract Number refers to the order in which the diffraction
+			 orders are given on the command line, starting with 0 representing the first
+			 number. For example, in
+			 <pre class="codeblock">
+INTERFACE COATING DOE AIR AIR DIFFRACT 0.2 -1 0.25 0 0.5 1 0.25
+
+</pre>
+ the possible Diffract Numbers are 0, 1, and 2, representing -1, 0,
+			 and 1 respectively.
+		  </div>
+ 
+		</li>
+ 
+	 </ol>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>1st Digit</span></th><th><span>Definition</span></th><th><span>2nd/3rd Digits</span></th><th><span>Definition</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>0</span></td><td><span>Random Scatter</span></td><td><span>0 0</span></td><td><span>Hemispherical</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>0</span></td><td><span>Random Scatter</span></td><td><span># #</span></td><td><span>TOWARDS number</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>1</span></td><td><span>Ordinary Reflection</span></td><td><span># #</span></td><td><span>DIFFRACT number</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>2</span></td><td><span>Ordinary Transmission</span></td><td><span># #</span></td><td><span>DIFFRACT number</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>3</span></td><td><span>Deterministic Scatter</span></td><td><span>0 0</span></td><td><span>Retro-reflected</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>3</span></td><td><span>Deterministic Scatter</span></td><td><span>0 1</span></td><td><span>Near Reflected</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>3</span></td><td><span>Deterministic Scatter</span></td><td><span>0 2</span></td><td><span>Near Transmitted</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>4</span></td><td><span>Extraordinary Reflection</span></td><td><span># #</span></td><td><span>DIFFRACT number</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>5</span></td><td><span>Extraordinary Transmission</span></td><td><span># #</span></td><td><span>DIFFRACT number</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>6</span></td><td><span>Volume Scatter</span></td><td><span># #</span></td><td><span>MEDIA number</span></td></tr></tbody></table> 
+	 <p> 
+		<a href="../example_scripts.html#PATHS">PATH
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_P-ref.html#Commands_and_Macros_P" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “P”.">Commands and Macros (P)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Ghost_Image_Analysis-conc.html" title="Ghost images are produced by inter-reflections of light from optical element surfaces that have nonzero reflection and transmission coefficients. Some of the incident light is transmitted at a surface of the element while some is reflected at the same surface. The reflected light propagates back to another element surface, is reflected there, and eventually propagates to the image plane or detector. The culmination of these reflections results in a ghost image.">Ghost Image Analysis</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/SCATTER_RANDOM_MODEL_ASAP-cmdref.html" title="Assigns a scattering interface to an object.">SCATTER RANDOM/MODEL (ASAP Command)</a></div>
+<div><a href="../Commands/SCATTER_RMS_BSDF_ASAP-cmdref.html" title="Assigns a near-specular scattering interface to an object.">SCATTER RMS/BSDF (ASAP Command)</a></div>
+<div><a href="../Commands/SPLIT_ASAP-cmdref.html" title="Controls the number of times a ray may be split into specular components.">SPLIT (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

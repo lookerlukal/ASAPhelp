@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="ROUNDED (ASAP Command)"/>
+<meta name="abstract" content="Creates a rounded-corner, rectangular edge/curve."/>
+<meta name="description" content="Creates a rounded-corner, rectangular edge/curve."/>
+<meta name="DC.subject" content="ROUNDED (ASAP Command), edge/curve, creating rounded-corner, rectangular"/>
+<meta name="keywords" content="ROUNDED (ASAP Command), edge/curve, creating rounded-corner, rectangular"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_R-ref.html#Commands_and_Macos_R"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ELLIPSE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Edges_and_Curves_Overview-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="ROUNDED_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>ROUNDED (ASAP Command)</title>
+</head>
+<body id="ROUNDED_ASAP_Command"><a name="ROUNDED_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>ROUNDED (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Creates a rounded-corner, rectangular edge/curve. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+ROUNDED X x y z r [ n a a' ]
+        Y y z x
+        Z z x y
+      </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X, Y or Z</span></td><td><span>specifies the axis of symmetry</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x, y or z</span></td><td><span>location along coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>y z, z x, or x y</span></td><td><span>semimajor widths of the oval</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>r</span></td><td><span>radius of the rounded corners</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span>number of points (or segments) on the oval (default
+			 16)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a a'</span></td><td><span>angular range (in degrees from first semimajor axis) over
+			 which the oval is defined (default is 0 to 360 degrees)</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="ROUNDED_ASAP_Command__ul_7E6039D67C444DE6AEB894AFB4C1EAB9"><!-- --></a><ol id="ROUNDED_ASAP_Command__ul_7E6039D67C444DE6AEB894AFB4C1EAB9"> 
+		<li id="ROUNDED_ASAP_Command__li_8FD8D2FCF3444561BB8E085904E573C1"><a name="ROUNDED_ASAP_Command__li_8FD8D2FCF3444561BB8E085904E573C1"><!-- --></a>The default number of points
+		  along the edges/curves of the rectangle is 16. 
+		</li>
+ 
+		<li id="ROUNDED_ASAP_Command__li_7B3E01781191463C97A1903F9D1314B9"><a name="ROUNDED_ASAP_Command__li_7B3E01781191463C97A1903F9D1314B9"><!-- --></a>The default angular range
+		  over which the rectangle is defined is 0 to 360 degrees. 
+		</li>
+ 
+		<li id="ROUNDED_ASAP_Command__li_CE19A2D7865F441F92CCDB62B9E7601F"><a name="ROUNDED_ASAP_Command__li_CE19A2D7865F441F92CCDB62B9E7601F"><!-- --></a>If 
+		  <b>n, a and a'</b> are specified, they become the default
+		  settings for most future 
+		  <b>EDGE</b> commands. 
+		</li>
+ 
+		<li id="ROUNDED_ASAP_Command__li_F0B1AE62309C426191FE3BACD48B7BDF"><a name="ROUNDED_ASAP_Command__li_F0B1AE62309C426191FE3BACD48B7BDF"><!-- --></a>This edge is made up of
+		  coplanar straight line segments, that is, convex polygons whose vertices lie on
+		  a particular curve. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#ROUNDED">ROUNDED
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_R-ref.html#Commands_and_Macos_R" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “R”.">Commands and Macros (R)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Edges_and_Curves_Overview-ref.html" title="Edges and curves are made up of a series of connected points in space that form a parametric representation of an entity.">Edges and Curves Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/ELLIPSE_ASAP-cmdref.html" title="Creates an elliptical edge/curve.">ELLIPSE (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="COATINGS MODELS (ASAP Command)"/>
+<meta name="abstract" content="Specify angular properties for reflection and transmission."/>
+<meta name="description" content="Specify angular properties for reflection and transmission."/>
+<meta name="DC.subject" content="COATINGS MODELS (ASAP Command), models, coatings"/>
+<meta name="keywords" content="COATINGS MODELS (ASAP Command), models, coatings"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_C-ref.html#Commands_and_Macros_C"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/COATINGS_LAYERS_ASAP-cmdref.html#COATINGS_LAYERS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/COATINGS_PROPERTIES_ASAP-cmdref.html#COATINGS_PROPERTIES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MODELS_ASAP-cmdref.html#MODELS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/RAWDATA_ASAP-cmdref.html#RAWDATA_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WAVELENGTHS_ASAP-cmdref.html#WAVELENGTHS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Coatings_Overview-conc.html#Coatings_Overview"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Glass_Catalogs_for_Refractive_Media-task.html#Glass_Catalogs_for_Refractive_Media"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=235"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="COATINGS_MODELS_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>COATINGS MODELS (ASAP Command)</title>
+</head>
+<body id="COATINGS_MODELS_ASAP_Command"><a name="COATINGS_MODELS_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>COATINGS MODELS (ASAP Command)</h5></span>
+	
+	
+	<div><p>Specify angular properties for reflection and transmission. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+COATINGS [ k ] MODELS i j m n 
+r t  r' t' r" t" ... [ 'name' ]
+    :
+COATINGS [ k ] MODELS
+r i j t m n  r' i' j' t' m' n'  r" ... [ 'name' ]
+    :
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>k</span></td><td><span>starting coating number</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>r r' r" ...</span></td><td><span>real energy (or complex amplitude) reflectances</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>t t' t" ...</span></td><td><span>real energy (or complex amplitude) transmittances</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="COATINGS_MODELS_ASAP_Command__ul_32DFEADA27AB4E9AA33C091FF49215AB"><!-- --></a><ol id="COATINGS_MODELS_ASAP_Command__ul_32DFEADA27AB4E9AA33C091FF49215AB">
+			<li id="COATINGS_MODELS_ASAP_Command__li_B9F8046EC0624C6D91632134E01D8952"><a name="COATINGS_MODELS_ASAP_Command__li_B9F8046EC0624C6D91632134E01D8952"><!-- --></a>Starting with coating <b>k</b>
+				coatings with real energy (or complex amplitude) reflectances <b>r</b>
+				and transmittances <b>t</b> are entered. </li>
+
+			<li id="COATINGS_MODELS_ASAP_Command__li_936706562C5D440BB89BECBD0DF151AC"><a name="COATINGS_MODELS_ASAP_Command__li_936706562C5D440BB89BECBD0DF151AC"><!-- --></a>The default value for <b>k</b>
+				is one more than the largest coating number defined and is set to one at the start
+				of program processing. </li>
+
+			<li id="COATINGS_MODELS_ASAP_Command__li_4333A660B65047AAA05811D1457628C6"><a name="COATINGS_MODELS_ASAP_Command__li_4333A660B65047AAA05811D1457628C6"><!-- --></a> Separate angular properties can be
+				specified by using previously defined (usually <b>RAWDATA</b>) <b>MODELS</b> where: <br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>i</b></span></td><td><span>Model for reflected S polarization</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>j</b></span></td><td><span>Model for reflected P polarization</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>m</b></span></td><td><span>Model for transmitted S polarization</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>n</b></span></td><td><span>Model for transmitted P polarization</span></td></tr></tbody></table></li>
+
+			<li id="COATINGS_MODELS_ASAP_Command__li_F331055446A54689A95028058558C9EE"><a name="COATINGS_MODELS_ASAP_Command__li_F331055446A54689A95028058558C9EE"><!-- --></a>Anisotropic surface models are allowed in
+				this context. </li>
+
+			<li id="COATINGS_MODELS_ASAP_Command__li_E94F65D617754960A6B8EF20DAE3A910"><a name="COATINGS_MODELS_ASAP_Command__li_E94F65D617754960A6B8EF20DAE3A910"><!-- --></a> Optionally, groups of six numbers can be
+				entered so that each group corresponds to a wavelength entered on the last multiple
+					<b>WAVELENGTH(S)</b> command. For example, the actual reflectivities
+				and transmissions at an incidence angle <b>ν</b> and a wavelength
+					<b>b</b> between the first two <b>WAVELENGTH(S)</b>
+				<b>w w'</b> would be: <p>
+					<br/><a name="COATINGS_MODELS_ASAP_Command__image_6A1839C1B6D444C2A96EF798937B009E"><!-- --></a><img id="COATINGS_MODELS_ASAP_Command__image_6A1839C1B6D444C2A96EF798937B009E" src="../Equations/COATING_MODELS_equation1.gif" width="408" height="281"/><br/>
+				</p>
+</li>
+
+			<li id="COATINGS_MODELS_ASAP_Command__li_24E34300922249A29C2D275DC8642D0D"><a name="COATINGS_MODELS_ASAP_Command__li_24E34300922249A29C2D275DC8642D0D"><!-- --></a> In the above equations, <b>r,
+				r'</b> and <b>t, t'</b> are the entered complex amplitudes or the
+				square roots of the real energy coefficients. The <b>f</b> is a
+				normalized angular amplitude: <p>
+					<br/><a name="COATINGS_MODELS_ASAP_Command__image_6D8E5003D48147709376E353E2CEA4F6"><!-- --></a><img id="COATINGS_MODELS_ASAP_Command__image_6D8E5003D48147709376E353E2CEA4F6" src="../Equations/COATING_MODELS_equation2.gif" width="250" height="85"/><br/>
+				</p>
+</li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#COATINGS">COATINGS Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_C-ref.html#Commands_and_Macros_C" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “C”.">Commands and Macros (C)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Coatings_Overview-conc.html#Coatings_Overview" title="Coatings are used in ASAP to define the specular properties (reflection and transmission) of an interface; as such, they are related to the MEDIA database. The index information from the MEDIA database is used to construct optical coatings. Optical INTERFACE COATings can be specified (and optionally assigned 'name' of up to 16 characters), either in terms of their wavelength PROPERTIES, angular MODELS, or their actual LAYER structure.">Coatings Overview</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Glass_Catalogs_for_Refractive_Media-task.html#Glass_Catalogs_for_Refractive_Media" title="The glass databases accessible in ASAP include: French, Hikari, Hoya, Hoya New, Ohara, Schott, Schott New, Sumita, and Unusual. The catalogs are in text files named *.CAT. The data for a specific glass consists of the glass name and six interpolation constants. No transmission, absorption, cost, staining data are contained in this database.">Glass Catalogs for Refractive Media</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/COATINGS_LAYERS_ASAP-cmdref.html#COATINGS_LAYERS_ASAP_Command" title="Creates a coating specified by its multilayer prescription.">COATINGS LAYERS (ASAP Command)</a></div>
+<div><a href="../Commands/COATINGS_PROPERTIES_ASAP-cmdref.html#COATINGS_PROPERTIES_ASAP_Command" title="Creates a coating specified by its transmissive and reflective properties.">COATINGS PROPERTIES (ASAP Command)</a></div>
+<div><a href="../Commands/MODELS_ASAP-cmdref.html#MODELS_ASAP_Command" title="Creates a scattering model.">MODELS (ASAP Command)</a></div>
+<div><a href="../Commands/RAWDATA_ASAP-cmdref.html#RAWDATA_ASAP_Command" title="See the command BSDFDATA.">RAWDATA (ASAP Command)</a></div>
+<div><a href="../Commands/WAVELENGTHS_ASAP-cmdref.html#WAVELENGTHS_ASAP_Command" title="Defines the wavelength(s) for different MEDIA and COATING definitions.">WAVELENGTH(S) (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=235" target="_blank">See the Knowledge Base for the technical publication, Polarization</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

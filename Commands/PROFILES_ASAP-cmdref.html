@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="PROFILES (ASAP Command)"/>
+<meta name="abstract" content="Plots slices through objects contained within the specified graphics window."/>
+<meta name="description" content="Plots slices through objects contained within the specified graphics window."/>
+<meta name="DC.subject" content="PROFILES (ASAP Command), objects, plotting slices, graphics, plotting slices"/>
+<meta name="keywords" content="PROFILES (ASAP Command), objects, plotting slices, graphics, plotting slices"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_P-ref.html#Commands_and_Macros_P"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LIMITS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LOCAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OBLIQUE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OVERLAY_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WINDOW_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/XYZ_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Plotting_Commands-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=36"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="PROFILES_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>PROFILES (ASAP Command)</title>
+</head>
+<body id="PROFILES_ASAP_Command"><a name="PROFILES_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>PROFILES (ASAP Command)</h5></span>
+	
+	
+	<div><p>Plots slices through objects contained within the specified graphics window. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">PROFILES [ f f' n ] [ NOOPTIMIZE ] [ QUICK ] [ 'title' ]</pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>f f'</span></td><td><span> range of the third depth coordinate</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span>number of the third depth coordinate</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>NOOPTIMIZE</span></td><td><span>generates the original raw plot commands</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>QUICK</span></td><td><span>turns off exact boundary clipping to speed up the plot</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>'title'</span></td><td><span>optional title for plot (up to 64 characters)</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="PROFILES_ASAP_Command__ul_80E4FA66DD0E4E6684E793D71D004650"><!-- --></a><ol id="PROFILES_ASAP_Command__ul_80E4FA66DD0E4E6684E793D71D004650">
+			<li id="PROFILES_ASAP_Command__li_7C2F83743B724B1B93AF733B6A63C154"><a name="PROFILES_ASAP_Command__li_7C2F83743B724B1B93AF733B6A63C154"><!-- --></a>Basic system plot command for ASAP that is
+				valid for all types of objects. </li>
+
+			<li id="PROFILES_ASAP_Command__li_2599B2475ECC4C31970C82D44474C24F"><a name="PROFILES_ASAP_Command__li_2599B2475ECC4C31970C82D44474C24F"><!-- --></a><b>PROFILES</b> draws the
+				system by tracing grids of rays through the plotting volume. The number of rays
+				(and, hence, the spatial resolution) is determined from the <b>PIXELS</b> command. At the intersection of a ray and an object, a tick mark
+				is drawn at an angle that corresponds to the slope of the object at that point. A
+				complete system plot is therefore built up from these tick marks. All objects are
+				considered to be transparent during the generation of a profile(s). </li>
+
+			<li id="PROFILES_ASAP_Command__li_D69CF10516F148009EF2E01F0C15C4C5"><a name="PROFILES_ASAP_Command__li_D69CF10516F148009EF2E01F0C15C4C5"><!-- --></a> Two common commands for producing pictures
+				are: <p><b>PROFILE d d' n</b> for plotting slices of each object by
+					planes parallel to the window and between the depth coordinates <b>d</b> and <b>d'</b> (best resolution with the <b>PIXELS</b> command and number of slices <b>n).</b>
+				</p>
+<p><b>PLOT FACETS n n'</b> for plotting a 3D mesh (set resolution by
+					entering values for <b>n</b> and <b>n').</b>
+				</p>
+</li>
+
+			<li id="PROFILES_ASAP_Command__li_488C3E82B32E423480D977B4949F3E98"><a name="PROFILES_ASAP_Command__li_488C3E82B32E423480D977B4949F3E98"><!-- --></a>The <b>n</b> is the number, and
+					<b>f</b> to <b>f'</b> is the range of the third depth
+				coordinate (the one different from the other two specified on the last <b>WINDOW</b> command) values for which slices through the current set of
+				objects are plotted. </li>
+
+			<li id="PROFILES_ASAP_Command__li_9F4BFE636F6D4C4AA7BBA2C8E4782920"><a name="PROFILES_ASAP_Command__li_9F4BFE636F6D4C4AA7BBA2C8E4782920"><!-- --></a>If <b>n</b> is negative, then
+					<b>f f'</b> are ignored on objects with <b>LOCAL/LIMITS</b>, and <b>n</b> equally spaced slices are made
+				across the individual local/limits ranges of those objects. If <b>n</b>
+				is positive, then <b>n</b> equally spaced slices are made across the
+				plotting volume. An object appears on the plot <i>only</i> if a slice intersects the
+				object. In most cases, it is best to use a negative value for <b>n.</b>
+			</li>
+
+			<li id="PROFILES_ASAP_Command__li_769B866CBE574E61AE8BF79586A18088"><a name="PROFILES_ASAP_Command__li_769B866CBE574E61AE8BF79586A18088"><!-- --></a>The default for <b>n</b> is -1
+				when <b>OBLIQUE</b> is off and -5 when it is on. </li>
+
+			<li id="PROFILES_ASAP_Command__li_8B1F8DF0901C4D7E92BFD3EEDE20E7BB"><a name="PROFILES_ASAP_Command__li_8B1F8DF0901C4D7E92BFD3EEDE20E7BB"><!-- --></a><b>WINDOW X Z</b>, <b>WINDOW Y X</b>, and <b>WINDOW Z Y</b> display the system in a
+				left-handed coordinate system. Use <b>WINDOW X -Z</b>, <b>WINDOW Y
+					-X</b>, or <b>WINDOW Z -Y</b> to display the system in a
+				right-handed coordinate system. </li>
+
+			<li id="PROFILES_ASAP_Command__li_719B9FE43D9D495EB829DEE1BFDCB8F1"><a name="PROFILES_ASAP_Command__li_719B9FE43D9D495EB829DEE1BFDCB8F1"><!-- --></a>Normally, ASAP tries to connect any short
+				vectors generated by a <b>PROFILE</b> command. This slows down the
+				immediate generation of the graphics, but produces a cleaner plot file that does not
+				overwork a pen plotter. Use the <b>NOOPTIMIZE</b> option to generate the
+				original raw plot commands. </li>
+
+			<li id="PROFILES_ASAP_Command__li_A4DF54155DCD41F1AD22C47447F1C991"><a name="PROFILES_ASAP_Command__li_A4DF54155DCD41F1AD22C47447F1C991"><!-- --></a> Use the command argument, <b>XY[Z]</b> to explicitly set the window limits without affecting a previously
+				declared <b>WINDOW</b> definition. For example:
+				<pre class="codeblock">SPOTS DIRECTION YX -4@1, or
+SPOTS POSITION YZ -2@1 -2@2</pre>
+</li>
+
+			<li id="PROFILES_ASAP_Command__li_788D2988386D4B86AB6A5E6BBB6B4880"><a name="PROFILES_ASAP_Command__li_788D2988386D4B86AB6A5E6BBB6B4880"><!-- --></a>The title is delimited by a single quote <b>'</b> , as shown. </li>
+
+			<li id="PROFILES_ASAP_Command__li_24113F0FD7094262BA05294048E0D3C8"><a name="PROFILES_ASAP_Command__li_24113F0FD7094262BA05294048E0D3C8"><!-- --></a>The command argument, <b>OVERLAY</b> tells ASAP not to issue an end of plot so that the next plot
+				created is overlaid with the current plot. This is useful for combining system plots
+				with ray trace plots (assuming that the <b>WINDOW</b> is the same for
+				all plots), multiple spot diagrams, and so on. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#PROFILES">PROFILES Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_P-ref.html#Commands_and_Macros_P" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “P”.">Commands and Macros (P)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Plotting_Commands-ref.html" title="The PLOT command is a general command for plotting virtually any aspect of system geometry and selected ray data.">Plotting Commands</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/LIMITS_ASAP-cmdref.html" title="Assigns a global bounding box to the object.">LIMITS (ASAP Command)</a></div>
+<div><a href="../Commands/LOCAL_ASAP-cmdref.html" title="Assigns a local bounding box to the surface/function.">LOCAL (ASAP Command)</a></div>
+<div><a href="../Commands/OBLIQUE_ASAP-cmdref.html" title="Switches future graphical output between normal (orthogonal) projection and oblique (non-orthogonal) projection.">OBLIQUE (ASAP Command)</a></div>
+<div><a href="../Commands/OVERLAY_arg_ASAP-cmdref.html" title="Overlays plots (that is, places them on top of each other).">OVERLAY (ASAP Command Argument)</a></div>
+<div><a href="../Commands/PIXELS_ASAP-cmdref.html" title="Sets the resolution for graphics and calculations.">PIXELS (ASAP Command)</a></div>
+<div><a href="../Commands/WINDOW_ASAP-cmdref.html" title="Sets the plotting window for graphical output.">WINDOW (ASAP Command)</a></div>
+<div><a href="../Commands/XYZ_arg_ASAP-cmdref.html" title="Sets the window to the given directions and size for only the currently active plot.">XY[Z] and Other Plot Window Overrides (ASAP Command Argument)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=36" target="_blank">See the Knowledge Base for the technical publication, IGES Import</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

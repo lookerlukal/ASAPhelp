@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Controlling Ray Splitting at an Interface"/>
+<meta name="abstract" content="Reflected and transmitted ray propagation at an interface is primarily controlled by the COATING database and the sign of the literal (or coating number) on the object's INTERFACE command. This sign convention gives you additional control over what happens at an interface with both nonzero reflection and transmission coefficients."/>
+<meta name="description" content="Reflected and transmitted ray propagation at an interface is primarily controlled by the COATING database and the sign of the literal (or coating number) on the object's INTERFACE command. This sign convention gives you additional control over what happens at an interface with both nonzero reflection and transmission coefficients."/>
+<meta name="DC.Relation" scheme="URI" content="INTERFACE_Command_Overview-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Controlling_Ray_Splitting_at_an_Interface"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Controlling Ray Splitting at an Interface</title>
+</head>
+<body id="Controlling_Ray_Splitting_at_an_Interface"><a name="Controlling_Ray_Splitting_at_an_Interface"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Controlling Ray Splitting at an Interface</h5></span>
+	
+	<div><p>Reflected and transmitted ray propagation at an interface is primarily controlled by the <b>COATING</b> database and the sign of the literal (or coating number) on the object's INTERFACE command. This sign convention gives you additional control over what happens at an interface with both nonzero reflection and transmission coefficients.</p>
+
+		<p>Assuming for example that you have created a coating (properties) called PARTIAL with both nonzero reflection and transmission coefficients, the following syntaxes are possible.</p>
+
+		<br/><ul>
+			<li>If the coating identifier has a plus sign, only the transmitted rays will be propagated, that is, INTERFACE COATING +PARTIAL. . .</li>
+
+			<li>If the coating identifier has a minus sign, only the reflected rays will be propagated, that is, INTERFACE COATING -PARTIAL. . .</li>
+
+			<li>If the coating identifier is unsigned, ray splitting may occur, and both transmitted and reflected rays will be propagated, that is, INTERFACE COATING PARTIAL. . .</li>
+
+		</ul>
+
+	</div>
+ 
+	<div><div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="INTERFACE_Command_Overview-conc.html">INTERFACE Command Overview</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Tolerancing in the Editor"/>
+<meta name="abstract" content="Tolerancing in the ASAP Editor is a two-step process: First, you create a tolerance data file, and then perform the Monte Carlo or Sensitivity analysis."/>
+<meta name="description" content="Tolerancing in the ASAP Editor is a two-step process: First, you create a tolerance data file, and then perform the Monte Carlo or Sensitivity analysis."/>
+<meta name="DC.subject" content="Tolerancing in the Editor, Editor, tolerancing, Monte Carlo analysis, tolerancing in Editor, sensitivity analysis, tolerancing in the Editor"/>
+<meta name="keywords" content="Tolerancing in the Editor, Editor, tolerancing, Monte Carlo analysis, tolerancing in Editor, sensitivity analysis, tolerancing in the Editor"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Features_in_ASAP-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Tolerance_Analysis_Options_Dialog-task.html#Tolerance_Analysis_Options_Dialog"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Tolerance_Data_Table-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Define_Tolerance_Parameter-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Define_Compensator_Parameter-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Delete_FOM_Function-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Modify_INR_file_for_Tolerancing-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Syntax_Rules_for_Tolerancing_in_the_Editor-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRAB_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Workspace-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Editor_Window_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRAB_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Workspace-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Editor_Window_Overview-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Tolerancing_in_the_Editor"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Tolerancing in the Editor</title>
+</head>
+<body id="Tolerancing_in_the_Editor"><a name="Tolerancing_in_the_Editor"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Tolerancing in the Editor</h5></span>
+	
+	
+	<div><p>Tolerancing in the ASAP Editor is a two-step process: First, you create a tolerance
+		data file, and then perform the Monte Carlo or Sensitivity analysis. </p>
+
+		<div class="p" id="Tolerancing_in_the_Editor__prereq_C6594A406062432590B2D378EBF72A0A"><a name="Tolerancing_in_the_Editor__prereq_C6594A406062432590B2D378EBF72A0A"><!-- --></a> Before you begin using either step,
+			review the Syntax Rules for Tolerancing in the Editor to assure that your script is
+			properly constructed. </div>
+
+		<div class="section" id="Tolerancing_in_the_Editor__context_8EF8464BBBF64386AA624C6F14D99AD0"><a name="Tolerancing_in_the_Editor__context_8EF8464BBBF64386AA624C6F14D99AD0"><!-- --></a>
+			<p><b>Step 1: Creating a tolerance data file</b>
+			</p>
+
+			<br/><a name="Tolerancing_in_the_Editor__ol_B4F3A795DF954A67A39F44F3E5905A24"><!-- --></a><ol id="Tolerancing_in_the_Editor__ol_B4F3A795DF954A67A39F44F3E5905A24">
+				<li id="Tolerancing_in_the_Editor__li_478124E21DD24606AECD2097BCF6584E"><a name="Tolerancing_in_the_Editor__li_478124E21DD24606AECD2097BCF6584E"><!-- --></a>Create a new *.inx file, right-click
+						<kbd class="userinput">INX Input</kbd> in ASAP Workspace and select <kbd class="userinput">New</kbd>. A tolerance editor window labeled “ASAP Inx” is displayed with
+					empty content. </li>
+
+				<li id="Tolerancing_in_the_Editor__li_50FA76E2D32E4956ABF33DE393196CA2"><a name="Tolerancing_in_the_Editor__li_50FA76E2D32E4956ABF33DE393196CA2"><!-- --></a>Enter ASAP commands in the tolerance
+					editor window to define tolerance parameters or compensator parameters. </li>
+
+				<li id="Tolerancing_in_the_Editor__li_E2540C1B3C2F48E1AD57FB8886661B74"><a name="Tolerancing_in_the_Editor__li_E2540C1B3C2F48E1AD57FB8886661B74"><!-- --></a>Define tolerance parameter and define a
+					compensator parameter. You may define any number of tolerance parameters, but
+					only one compensator parameter can be defined. </li>
+
+				<li id="Tolerancing_in_the_Editor__li_762829B014094C13B497A2BDD3F98996"><a name="Tolerancing_in_the_Editor__li_762829B014094C13B497A2BDD3F98996"><!-- --></a>Define Figure of Merit (FOM). Note that
+					all FOMs must be placed at the beginning of the *.inx file using the format: FOM
+					‘GrabString’ (similar to the <b>$GRAB</b> macro). “FOM” cannot be
+					used as the name of a FOM function (that is, ‘GrabString’ cannot have the name,
+					“FOM”). </li>
+
+				<li id="Tolerancing_in_the_Editor__li_6322FCC669984851B1F6F6C0256369C1"><a name="Tolerancing_in_the_Editor__li_6322FCC669984851B1F6F6C0256369C1"><!-- --></a>Click the <b>Tolerance Data
+						Table</b> button <a name="Tolerancing_in_the_Editor__image"><!-- --></a><img id="Tolerancing_in_the_Editor__image" src="../Graphics/Tolerance_button.jpg" width="25" height="22" longdesc="Editor tolerancing - tolerance data table button;  reuse: Tolerance Data Table topic, Builder Window Toolbar" alt="Tolerance Data Table button "/> on the Tolerance Editor toolbar. ASAP opens the Tolerance Data Table at
+					the bottom of the window. </li>
+
+				<li id="Tolerancing_in_the_Editor__li_67007922CE9D44749FB525D7DB9B4A67"><a name="Tolerancing_in_the_Editor__li_67007922CE9D44749FB525D7DB9B4A67"><!-- --></a>Enter tolerance data values for the
+					applicable columns into the tolerance data table. Tolerance parameter limits are
+					displayed for applicable columns. When you make script changes in the Editor,
+					you must update the Tolerance Data Table by clicking the  Update Tolerance
+					Editor <a name="Tolerancing_in_the_Editor__image"><!-- --></a><img id="Tolerancing_in_the_Editor__image" src="../Graphics/Tolerance_Update_button.jpg" width="23" height="23" longdesc="Editor tolerancing - Update button reuse: Tolerancing Data Table, Modify INR file for Tolerancing"/> button on the Editor toolbar. </li>
+
+				<li id="Tolerancing_in_the_Editor__li_28E797F38C734DF3B2B282FB2A15E8D4"><a name="Tolerancing_in_the_Editor__li_28E797F38C734DF3B2B282FB2A15E8D4"><!-- --></a>Save the tolerance data table and ASAP
+					script. </li>
+
+			</ol>
+
+			<p><b>Step 2: Performing Monte Carlo Analysis</b>
+			</p>
+
+			<br/><a name="Tolerancing_in_the_Editor__ol_726DE0236C0C4D6F872978B80E23749A"><!-- --></a><ol id="Tolerancing_in_the_Editor__ol_726DE0236C0C4D6F872978B80E23749A">
+				<li id="Tolerancing_in_the_Editor__li_4514A4FE01F04CBA972CD7F641CBBAAD"><a name="Tolerancing_in_the_Editor__li_4514A4FE01F04CBA972CD7F641CBBAAD"><!-- --></a>Select the Tolerance Options <a name="Tolerancing_in_the_Editor__image"><!-- --></a><img id="Tolerancing_in_the_Editor__image" src="../Graphics/Perturb_button.jpg" width="22" height="22" longdesc="Editor tolerancing - Tolerance Options button;  reuse: Tolerancing Dialog for Builder as Perturb, Tolerance Analysis Options dialog" alt="Tolerance Options button "/> button on the Editor toolbar. The Tolerance Analysis Options dialog box
+					is displayed. The names displayed are the Figure(s) of Merits that are defined
+					at the top of the *.inx file. </li>
+
+				<li id="Tolerancing_in_the_Editor__li_7BA3BB6F9D7243BAA028C6A7AD2766A1"><a name="Tolerancing_in_the_Editor__li_7BA3BB6F9D7243BAA028C6A7AD2766A1"><!-- --></a>Click the Monte Carlo Analysis button
+					or the Sensitivity Analysis button on the Tolerance Analysis Options dialog box,
+					and click <b>OK</b>. </li>
+
+			</ol>
+
+			<div class="note"><span class="notetitle">Note:</span> Before performing a Monte Carlo or sensitivity analysis, a nominal Figure of Merit
+				value may be obtained by selecting the <b>Nominal Only</b> option in
+				the Tolerance Analysis Options dialog box. </div>
+
+		</div>
+
+	</div>
+
+<div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="../Task/Tolerance_Analysis_Options_Dialog-task.html#Tolerance_Analysis_Options_Dialog">Tolerance Analysis Options Dialog</a></strong><br/>
+The Tolerance Analysis Options dialog box designates the number of random perturbations you want to perform for the automatic Monte Carlo analysis.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Tolerance_Data_Table-ref.html">Tolerance Data Table</a></strong><br/>
+The Tolerance Data Table contains editable and non-editable cells. The first five columns (Parameter Name, Nominal, Minus, Plus, and Distribution Type) are non-editable, and the remaining cells are editable. You cannot manually add or delete rows from the table.</li>
+<li class="ulchildlink"><strong><a href="../Task/Define_Tolerance_Parameter-task.html">Define Tolerance Parameter</a></strong><br/>
+This topic describes how to define a tolerance parameter in the Editor using one of three methods.</li>
+<li class="ulchildlink"><strong><a href="../Task/Define_Compensator_Parameter-task.html">Define Compensator Parameter</a></strong><br/>
+This topic describes how to define a compensator parameter in the Editor using one of two methods.</li>
+<li class="ulchildlink"><strong><a href="../Task/Delete_FOM_Function-task.html">Delete FOM Function</a></strong><br/>
+This topic describes how to delete Figures of Merit from the tolerance data file.</li>
+<li class="ulchildlink"><strong><a href="../Task/Modify_INR_file_for_Tolerancing-task.html">Modify INR file for Tolerancing</a></strong><br/>
+This topic describes how to open an INR file for tolerancing purposes.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Syntax_Rules_for_Tolerancing_in_the_Editor-ref.html">Syntax Rules for Tolerancing in the Editor</a></strong><br/>
+This topic describes syntax rules for tolerancing analysis in the Editor.</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Features_in_ASAP-ref.html" title="Topics in this section of the Contents tab include new and existing features in the ASAP user interface.">Features in ASAP</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/ASAP_Workspace-conc.html" title="ASAP Workspace includes a list of all available document windows in ASAP. ASAP Workspace reflects whichever window you have in focus. Right-click any of the listed windows to open a pop-up menu (Open, New, and Close All).">ASAP Workspace</a></div>
+<div><a href="../Concept/Editor_Window_Overview-conc.html" title="The ASAP Editor supports basic text operations, such as editing script (*.inr, *.txt) files, cutting and pasting, as well as a broad set of features to support creation of command scripts. When an Editor file is run, the commands are sent to the ASAP kernel.">Editor Window Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/GRAB_macro_ASAP-cmdref.html" title="Grabs isolated numbers or literals from the output buffer.">$GRAB (ASAP Macro)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

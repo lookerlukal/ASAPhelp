@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="$EXP (ASAP Macro)"/>
+<meta name="abstract" content="Switches the expression precedence."/>
+<meta name="description" content="Switches the expression precedence."/>
+<meta name="DC.subject" content="$EXP (ASAP Macro), macros, expression precedence"/>
+<meta name="keywords" content="$EXP (ASAP Macro), macros, expression precedence"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_E-ref.html#Commands_and_Macros_E"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Macro_Language-conc.html#ASAP_Macro_Language"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/User_Interface_Preferences_General_Tab-task.html#User_Interface_Preferences_General_Tab"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="EXP_ASAP_Macro"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>$EXP (ASAP Macro)</title>
+</head>
+<body id="EXP_ASAP_Macro"><a name="EXP_ASAP_Macro"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>$EXP (ASAP Macro)</h5></span>
+	
+	
+	<div><p>Switches the expression precedence. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+$EXP [ OLD ]
+       NEW
+      </pre>
+
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="EXP_ASAP_Macro__ul_7A2B25C695D645D7A1BEA3C5EA524245"><!-- --></a><ol id="EXP_ASAP_Macro__ul_7A2B25C695D645D7A1BEA3C5EA524245">
+			<li id="EXP_ASAP_Macro__li_98BB5BBC7B03441E9623F7299B36F1C2"><a name="EXP_ASAP_Macro__li_98BB5BBC7B03441E9623F7299B36F1C2"><!-- --></a>Instructs the parser to recognize the
+					<b>OLD</b> left-to-right or the <b>NEW</b> operator
+				precedence expression syntax; the default is <b>NEW.</b>
+			</li>
+
+			<li id="EXP_ASAP_Macro__li_D7467BA29BE44DF090364994AEF4E0DA"><a name="EXP_ASAP_Macro__li_D7467BA29BE44DF090364994AEF4E0DA"><!-- --></a>When <b>$EXP</b> is set to
+					<b>OLD</b>, consecutive operations are always evaluated from left to
+				right with no operator precedence until a delimiter terminates the expression.
+				Nested parentheses or brackets can be used when necessary. </li>
+
+			<li id="EXP_ASAP_Macro__li_CD8818520CBB4CCD9A307E1BDBDDA5BD"><a name="EXP_ASAP_Macro__li_CD8818520CBB4CCD9A307E1BDBDDA5BD"><!-- --></a>The <b>$EXP</b>
+				<b>OLD</b> should precede any arithmetic operations or variable
+				designations defined using the <b>OLD</b> left-to-right precedence
+				expression syntax. Users with .INR files and macros created prior to version 4.0 who
+				do not want to update the file syntax should include this macro in their .INR files. </li>
+
+			<li id="EXP_ASAP_Macro__li_A780E0CE5A404F86AC59F9532047B734"><a name="EXP_ASAP_Macro__li_A780E0CE5A404F86AC59F9532047B734"><!-- --></a>To reset ASAP to the default, BRO
+				recommends you also include a <b>$EXP</b>
+				<b>NEW</b> command at the end of a file, immediately before the <b>END</b> command. </li>
+
+			<li id="EXP_ASAP_Macro__li_7A82E40DDA2E4A7E94B07E753D8B1A61"><a name="EXP_ASAP_Macro__li_7A82E40DDA2E4A7E94B07E753D8B1A61"><!-- --></a>If you have an INR file created prior to
+				version 4.0, BRO recommends you include <b>$EXP</b>
+				<b>NEW</b> in your defsetup.inr file so that all new files run properly.
+				The defsetup.inr file runs at startup. </li>
+
+			<li id="EXP_ASAP_Macro__li_206287589CD5455AA21EA5DF420C08E4"><a name="EXP_ASAP_Macro__li_206287589CD5455AA21EA5DF420C08E4"><!-- --></a><b>$EXP</b> may be used at any
+				time to switch between expression syntax parsers. </li>
+
+			<li id="EXP_ASAP_Macro__li_0289D08E43184D66AFC1FB57EF63FD13"><a name="EXP_ASAP_Macro__li_0289D08E43184D66AFC1FB57EF63FD13"><!-- --></a>If no argument is given, the state before
+				the last <b>$EXP</b> command is restored. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#$EXP">$EXP Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_E-ref.html#Commands_and_Macros_E" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “E”.">Commands and Macros (E)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/ASAP_Macro_Language-conc.html#ASAP_Macro_Language">ASAP Macro Language</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/User_Interface_Preferences_General_Tab-task.html#User_Interface_Preferences_General_Tab" title="The user preferences described in this topic apply globally to the within ASAP.">User Interface Preferences - General Tab</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Predefined ASAP Macros</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

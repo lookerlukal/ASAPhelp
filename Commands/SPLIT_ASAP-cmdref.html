@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="SPLIT (ASAP Command)"/>
+<meta name="abstract" content="Controls the number of times a ray may be split into specular components."/>
+<meta name="description" content="Controls the number of times a ray may be split into specular components."/>
+<meta name="DC.subject" content="SPLIT (ASAP Command), ray, splitting, specular components, splitting rays into"/>
+<meta name="keywords" content="SPLIT (ASAP Command), ray, splitting, specular components, splitting rays into"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_S-ref.html#Commands_and_Macros_S"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_DATA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/INTERFACE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LEVEL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OBJECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/RAYSET_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="SPLIT_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>SPLIT (ASAP Command)</title>
+</head>
+<body id="SPLIT_ASAP_Command"><a name="SPLIT_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>SPLIT (ASAP Command)</h5></span>
+	
+	
+	<div><p>Controls the number of times a ray may be split into specular components. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+SPLIT [ n ] [ MONTECARLO ] [ 'c' ]
+              TRAN
+              REFL
+              NORM
+              OFF
+              </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MONTECARLO</span></td><td><span>no additional specular and/or scatter rays are created</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span>maximum number of times a ray can be split into specular
+				components</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>OFF</span></td><td><span>resets n to zero</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>TRAN, REFL, or NORM</span></td><td><span>split trace operation selection; <b>NORM</b> is the
+				default</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>c</span></td><td><span>fractional energy cutoff for ray splitting</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="SPLIT_ASAP_Command__ul_18D107D452164FA7A04C60ED499B5FB5"><!-- --></a><ol id="SPLIT_ASAP_Command__ul_18D107D452164FA7A04C60ED499B5FB5">
+			<li id="SPLIT_ASAP_Command__li_56088AF1C6774748B5B46B86570F2A72"><a name="SPLIT_ASAP_Command__li_56088AF1C6774748B5B46B86570F2A72"><!-- --></a>This command can be used either as a local
+				command to override defaults for the current object, or as a global command. In the
+				latter case, the command acts as an interface control and becomes the default used
+				by any object for which it is not explicitly set. Since the global command is
+				identical to the <b>OBJECT</b> subcommand, make sure you are not at the
+					<b>OBJ&gt;</b> prompt when you use it as a global command. If
+				you are, issue a <b>RETURN</b> command first. </li>
+
+			<li id="SPLIT_ASAP_Command__li_2ECA56A312684567933AF43AD8CB6868"><a name="SPLIT_ASAP_Command__li_2ECA56A312684567933AF43AD8CB6868"><!-- --></a><b>SPLIT</b> can be applied on
+				an <b>OBJECT</b> by <b>OBJECT</b> basis. In effect, this is
+				now an <b>OBJECT</b> modifier, similar to the <b>INTERFACE
+				</b>command. </li>
+
+			<li id="SPLIT_ASAP_Command__li_473D8AA035494C05A6283D3AB339AF8B"><a name="SPLIT_ASAP_Command__li_473D8AA035494C05A6283D3AB339AF8B"><!-- --></a>Controls the splitting of the children
+				rays, which are rays that have been split off a parent ray. Therefore, <b>SPLIT 1</b> tells ASAP to split the parent rays, but the children rays
+				are not allowed to split. <b>SPLIT 2</b> allows the parent rays and the
+				children rays to split as often as necessary, but the grandchildren rays are not
+				allowed to split, and so on. The parent ray is a ray originally created by the
+					<b>GRID</b> or <b>RAYSET</b> commands. </li>
+
+			<li id="SPLIT_ASAP_Command__li_E2D28324800D47F5B1D329D959813B3B"><a name="SPLIT_ASAP_Command__li_E2D28324800D47F5B1D329D959813B3B"><!-- --></a>Since the total number of rays to be traced
+				can become quite large, <b>SPLIT</b> should be used with some attention
+				to the possible consequences of generating a large number of split rays. For a
+				typical application such as ghost image analysis, <b>n</b>=2 is
+				sufficient. </li>
+
+			<li id="SPLIT_ASAP_Command__li_BBE71A19494E4E8FAF70DF23741B82AB"><a name="SPLIT_ASAP_Command__li_BBE71A19494E4E8FAF70DF23741B82AB"><!-- --></a>Even though ASAP has virtual ray storage,
+				you are practically limited by your total free disk storage and long run times.
+				Therefore, the default deterministic splitting should be used with these
+				restrictions in mind. </li>
+
+			<li id="SPLIT_ASAP_Command__li_1A756F2985B04E88AFBCDE27BCE56E14"><a name="SPLIT_ASAP_Command__li_1A756F2985B04E88AFBCDE27BCE56E14"><!-- --></a>Splitting may occur at interfaces with
+				nonzero reflection and transmission coefficients as well as on diffraction gratings
+				with multiple orders. When ASAP encounters a nonzero reflection and transmission
+				coefficient on an <b>INTERFACE</b> command, it automatically sets
+					<b>SPLIT</b> to 1. </li>
+
+			<li id="SPLIT_ASAP_Command__li_7399B52DEFD640D4B0AB96806817D2E6"><a name="SPLIT_ASAP_Command__li_7399B52DEFD640D4B0AB96806817D2E6"><!-- --></a>Normally, if the transmission coefficient
+				is equal to or greater than the reflection coefficient, the transmitted ray is the
+				first ray propagated. If the reflection coefficient is greater than the transmission
+				coefficient, the reflected ray is the first ray propagated. The split trace option
+				selection allows the most energetic ray at <b>NORM</b>al incidence (the
+				default), the <b>TRAN,</b>smitted or <b>REFL</b>ected
+				component to be traced first, while the other component is traced later. </li>
+
+			<li id="SPLIT_ASAP_Command__li_86326565FB4C4778A87E3D8B29789103"><a name="SPLIT_ASAP_Command__li_86326565FB4C4778A87E3D8B29789103"><!-- --></a>Total internal reflection is considered a
+				ray error unless <b>SPLIT</b> is turned on. </li>
+
+			<li id="SPLIT_ASAP_Command__li_A139DDD72C3841F09AB8C941BF33A047"><a name="SPLIT_ASAP_Command__li_A139DDD72C3841F09AB8C941BF33A047"><!-- --></a> With the <b>MONTECARLO</b>
+				option, no additional specular and/or scattered rays are created. Both the total
+				number of rays and the total power summed over all rays are conserved. The direction
+				of each ray after intersecting an object is selected randomly from among the
+				assigned reflection, refraction, diffraction, or scatter properties. The probability
+				that a given direction is selected is proportional to the flux that would actually
+				reflect, refract, or scatter into that direction. If the total power from
+				reflection, refraction, diffraction, and scatter is less than 1 on an object, the
+				ray may stop on that object. This represents absorption by that object. When the
+					<b>MONTECARLO</b> option is selected, you must arrange the interface
+				and scatter commands so the total power from reflection, refraction, diffraction,
+				and scatter never exceeds 1 for any angle of incidence. </li>
+
+			<li id="SPLIT_ASAP_Command__li_86586FE9A44441FF89BF3543A9ACA846"><a name="SPLIT_ASAP_Command__li_86586FE9A44441FF89BF3543A9ACA846"><!-- --></a>When the <b>TOWARDS</b> command
+				is used to simulate scatter from an object, the following rules should be carefully
+				followed: <br/><a name="SPLIT_ASAP_Command__ol_99852892E1C94D438EE1E5A205D7CDCF"><!-- --></a><ul id="SPLIT_ASAP_Command__ol_99852892E1C94D438EE1E5A205D7CDCF">
+					<li id="SPLIT_ASAP_Command__li_50304A86B92F4F98BC801B5C8FF8309D"><a name="SPLIT_ASAP_Command__li_50304A86B92F4F98BC801B5C8FF8309D"><!-- --></a>If a surface has a Lambertian
+						scatter model attached to it, the entry on the <b>TOWARDS</b>
+						command for the number of scattered rays should be 1. Entering a larger
+						value slows the ray trace and does not improve the accuracy of the
+						calculation. </li>
+
+					<li id="SPLIT_ASAP_Command__li_584885DE23E5402F93AEC33621E0FBAE"><a name="SPLIT_ASAP_Command__li_584885DE23E5402F93AEC33621E0FBAE"><!-- --></a>For surfaces that have a
+						non-Lambertian scatter model, the accuracy of the calculation improves as
+						the entry for the number of scattered rays gets larger. </li>
+
+					<li id="SPLIT_ASAP_Command__li_0959FB00DF464231B7489D96BE709A01"><a name="SPLIT_ASAP_Command__li_0959FB00DF464231B7489D96BE709A01"><!-- --></a>For non-Lambertian BRDFs, if the
+						maximum BRDF over all relevant angles of incidence and scatter is <a name="SPLIT_ASAP_Command__image_742CAB157E494B4EB44DFFF3B1979A95"><!-- --></a><img id="SPLIT_ASAP_Command__image_742CAB157E494B4EB44DFFF3B1979A95" src="../Equations/SPLIT_equation1.gif" width="38" height="30"/>, the number of scattered rays <i>N</i> on the
+							<b>TOWARDS</b> command should be greater than <a name="SPLIT_ASAP_Command__image_59A3892390044900A3FDFF90A38098CA"><!-- --></a><img id="SPLIT_ASAP_Command__image_59A3892390044900A3FDFF90A38098CA" src="../Equations/SPLIT_equation2.gif" width="48" height="30"/>. </li>
+
+					<li id="SPLIT_ASAP_Command__li_DB4AF393783246059DC72802D065F992"><a name="SPLIT_ASAP_Command__li_DB4AF393783246059DC72802D065F992"><!-- --></a>
+						<p>In most cases, the <b>TOWARDS SPEC</b> option should be used
+							with scatter into the hemisphere above the surface: <b>TOWARDS
+								SPEC (N) 3.14/2 0</b> where <b>N</b> is the entry
+							for the number of scattered rays. </p>
+
+					</li>
+
+				</ul>
+</li>
+
+			<li id="SPLIT_ASAP_Command__li_37549A15830F40C0B7040A41B632B486"><a name="SPLIT_ASAP_Command__li_37549A15830F40C0B7040A41B632B486"><!-- --></a>For a typical application such as ghost
+				image analysis, a value of 2 for <b>n</b> is sufficient. </li>
+
+			<li id="SPLIT_ASAP_Command__li_6B6D7865904F4CF7985D2BD01673F3FD"><a name="SPLIT_ASAP_Command__li_6B6D7865904F4CF7985D2BD01673F3FD"><!-- --></a>If the fractional energy in the split-off
+				ray/beam is below <b>c</b> (default 1.E-6), splitting does not occur,
+				that is, only the main component is propagated. </li>
+
+			<li id="SPLIT_ASAP_Command__li_1416772D001549C3BE04E3325AEB76F0"><a name="SPLIT_ASAP_Command__li_1416772D001549C3BE04E3325AEB76F0"><!-- --></a>To control the level of scattered component
+				splitting, use the parallel command <b>LEVEL</b>. Sets the default
+				refraction/reflection controls for all objects or may be applied only to a specific
+				object. </li>
+
+			<li id="SPLIT_ASAP_Command__li_BE5548AD22684875A82A2F0F13607039"><a name="SPLIT_ASAP_Command__li_BE5548AD22684875A82A2F0F13607039"><!-- --></a>
+				Assuming the presence of the Fresnel equations, the global <b>SPLIT</b> cannot be 0 if there are any <b>COATING PROPERTY
+						BARE</b> commands. The global value will be reset to 1. If the initial
+				global <b>SPLIT</b> is greater than 0, encountering a <b>COATING PROPERTY BARE</b> command does not alter the <b>SPLIT</b> value.
+				<p><b>Example: </b>
+				</p>
+
+				<pre class="codeblock">
+SYSTEM NEW
+RESET
+
+MEDIA
+  1.5 'GLASS'
+
+FRESNEL AVE
+SPLIT 0    !!GLOBAL SPLIT IS 0
+
+SURFACE 
+PLANE Z 1 RECT 1 1
+OBJECT 'PLANE1'
+INTERFACE COATING BARE AIR GLASS
+SPLIT 4    !!GLOBAL SPLIT IS 1; LOCAL ON PLANE1 IS 4
+RETURN
+
+SPLIT 0    !!GLOBAL SPLIT IS 0
+
+SURFACE 
+PLANE Z 2 RECT 1 1
+OBJECT 'PLANE2'
+INTERFACE COATING BARE AIR GLASS
+           !!GLOBAL SPLIT IS 1; LOCAL ON PLANE2 IS 1
+RETURN
+SPLIT 3    !!GLOBAL SPLIT IS 3
+
+SURFACE 
+PLANE Z 3 RECT 1 1
+OBJECT 'PLANE3'
+INTERFACE COATING BARE AIR GLASS                                                     
+SPLIT 0    !!GLOBAL SPLIT IS 3; LOCAL ON PLANE3 IS 0
+RETURN
+</pre>
+
+			</li>
+
+		</ol>
+
+		<p>
+			<a href="/example_scripts.html#SPLIT">SPLIT Examples</a>
+		</p>
+
+	</div>
+
+	<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_S-ref.html#Commands_and_Macros_S" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “S”.">Commands and Macros (S)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/GRID_DATA_ASAP-cmdref.html" title="Creates a rectangular grid of rays.">GRID DATA (ASAP Command)</a></div>
+<div><a href="../Commands/INTERFACE_ASAP-cmdref.html" title="Assigns a reflective, refractive or diffractive interface to objects.">INTERFACE (ASAP Command)</a></div>
+<div><a href="../Commands/LEVEL_ASAP-cmdref.html" title="Controls the number of times a scattered ray may be rescattered.">LEVEL (ASAP Command)</a></div>
+<div><a href="../Commands/OBJECT_ASAP-cmdref.html" title="Defines an object based upon previously defined entities.">OBJECT (ASAP Command)</a></div>
+<div><a href="../Commands/RAYSET_ASAP-cmdref.html" title="Specifies an arbitrary set of rays.">RAYSET (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Scattering in ASAP</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Scattering in ASAP,
+				http://www.breault.com/k-base.php </a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

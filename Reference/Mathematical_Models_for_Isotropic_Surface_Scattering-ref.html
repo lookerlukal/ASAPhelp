@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Mathematical Models for Isotropic-Surface Scattering"/>
+<meta name="abstract" content="Scattering from an isotropic surface must be symmetric with regard to the plane of incidence and surface normal; that is, that scatter pattern does not change when the surface element is rotated about its normal. If the BSDF is only a function of the following variables, these symmetry properties are guaranteed."/>
+<meta name="description" content="Scattering from an isotropic surface must be symmetric with regard to the plane of incidence and surface normal; that is, that scatter pattern does not change when the surface element is rotated about its normal. If the BSDF is only a function of the following variables, these symmetry properties are guaranteed."/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_GM-ref.html#Reference_G_M"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/BSDFDATA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Scatter_Analysis-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Mathematical_Models_for_Isotropic_Surface_Scattering"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Mathematical Models for Isotropic-Surface Scattering</title>
+</head>
+<body id="Mathematical_Models_for_Isotropic_Surface_Scattering"><a name="Mathematical_Models_for_Isotropic_Surface_Scattering"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Mathematical Models for Isotropic-Surface Scattering</h5></span>
+	
+	<div><p>Scattering from an isotropic surface must be symmetric with regard to the plane of
+		incidence and surface normal; that is, that scatter pattern does not change when the surface
+		element is rotated about its normal. If the BSDF is only a function of the following
+		variables, these symmetry properties are guaranteed. </p>
+
+		<div class="section" id="Mathematical_Models_for_Isotropic_Surface_Scattering__section_A32D71B2BEFB4D7D99D851ED88038B3B"><a name="Mathematical_Models_for_Isotropic_Surface_Scattering__section_A32D71B2BEFB4D7D99D851ED88038B3B"><!-- --></a>
+			<p>
+				<br/><a name="Mathematical_Models_for_Isotropic_Surface_Scattering__image"><!-- --></a><div class="imageleft"><img id="Mathematical_Models_for_Isotropic_Surface_Scattering__image" src="../Equations/Mathematical_Models_equation1.gif" width="305" height="31"/></div><br/>
+			</p>
+
+			<p>where (A,B)=(sinR sinF , cosR sinF) are the direction cosine coordinates of the
+				scatter direction, and (0,Bo)=0, sinFo) is the specular direction (R,F are the
+				scatter angles around and from normal respectively, and Fo is the specular angle
+				from normal. Note that the "distance" squared (in direction cosines) from specular
+				is given by: </p>
+
+			<p>
+				<br/><a name="Mathematical_Models_for_Isotropic_Surface_Scattering__image"><!-- --></a><div class="imageleft"><img id="Mathematical_Models_for_Isotropic_Surface_Scattering__image" src="../Equations/Mathematical_Models_equation2.gif" width="293" height="33"/></div><br/>
+			</p>
+
+			<p>Any physical BSDF must obey reciprocity; that is, it must be the same when the
+				scatter (U) and specular (W) directions are interchanged. Therefore, the BSDFs
+				dependence on U should be identical to its dependence on W. Unfortunately due to
+				errors, there are a lot of models and even measured data that violate reciprocity.
+			</p>
+
+		</div>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_GM-ref.html#Reference_G_M" title="Reference topics in this section begin with the letters &#34;G&#34; to &#34;M&#34;.">Reference (G-M)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Scatter_Analysis-conc.html" title="Performing a scatter analysis is a complex task. In addition to basic scatter theory, there are many ASAP parameters to consider. Each analysis should be evaluated on an individual basis to determine which ASAP tools to use to simulate the problem.">Scatter Analysis</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/BSDFDATA_ASAP-cmdref.html" title="Indirectly or directly interpolates from entered BSDF values.">BSDFDATA (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

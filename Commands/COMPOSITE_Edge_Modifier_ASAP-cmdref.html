@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="COMPOSITE (Edge Modifier) (ASAP Command)"/>
+<meta name="abstract" content="Combines several edge entities into a single edge entity."/>
+<meta name="description" content="Combines several edge entities into a single edge entity."/>
+<meta name="DC.subject" content="COMPOSITE (Edge Modifier) (ASAP Command), entities, edge"/>
+<meta name="keywords" content="COMPOSITE (Edge Modifier) (ASAP Command), entities, edge"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_C-ref.html#Commands_and_Macros_C"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/COMPOSITE_Lens_Modifier_ASAP-cmdref.html#COMPOSITE_Lens_Modifier_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Edge_Curve_Modifiers-conc.html#Edge_Curve_Modifiers"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=29"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="COMPOSITE_Edge_Modifier_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>COMPOSITE (Edge Modifier) (ASAP Command)</title>
+</head>
+<body id="COMPOSITE_Edge_Modifier_ASAP_Command"><a name="COMPOSITE_Edge_Modifier_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>COMPOSITE (Edge Modifier) (ASAP Command)</h5></span>
+	
+	
+	<div><p>Combines several edge entities into a single edge entity. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+COMPOSITE [   -n    ] [ GAPS q [ q' ] ]
+           i [ i']
+</pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>-n</span></td><td><span>last n edges</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>i i'</span></td><td><span>edges i through i'</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>GAPS q q'</span></td><td><span>connection factors</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="COMPOSITE_Edge_Modifier_ASAP_Command__ul_A8738F114CBB4D5EBC02171145548213"><!-- --></a><ol id="COMPOSITE_Edge_Modifier_ASAP_Command__ul_A8738F114CBB4D5EBC02171145548213">
+			<li id="COMPOSITE_Edge_Modifier_ASAP_Command__li_2AF3C02A2CD24024977837B99308A1AB"><a name="COMPOSITE_Edge_Modifier_ASAP_Command__li_2AF3C02A2CD24024977837B99308A1AB"><!-- --></a><b>COMPOSITE</b> combines the
+				last <b>n</b> edges, edges <b>i</b> through <b>i',</b> or all edges defined since the last <b>EDGE</b> command
+				into one edge. </li>
+
+			<li id="COMPOSITE_Edge_Modifier_ASAP_Command__li_DD9BB76CBB244EB888E207C760970A40"><a name="COMPOSITE_Edge_Modifier_ASAP_Command__li_DD9BB76CBB244EB888E207C760970A40"><!-- --></a>
+				<b>GAPS</b> between the endpoints of one edge and the start of the next
+				can be handled as follows. <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>q</span></th><th><span>ACTION</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>-1</span></td><td><span>merge gap points into one</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>0</span></td><td><span>leave gaps open (default)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>1</span></td><td><span>linearly connect gaps</span></td></tr></tbody></table></li>
+
+			<li id="COMPOSITE_Edge_Modifier_ASAP_Command__li_7E3E1A5D8A774595AF1548003BF48F4A"><a name="COMPOSITE_Edge_Modifier_ASAP_Command__li_7E3E1A5D8A774595AF1548003BF48F4A"><!-- --></a>Specify <b>q'</b> for the
+				last-to-first point gap to make a single edge object from a set of discontinuous
+				edges. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#COMPOSITE">COMPOSITE Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_C-ref.html#Commands_and_Macros_C" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “C”.">Commands and Macros (C)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Edge_Curve_Modifiers-conc.html#Edge_Curve_Modifiers" title="Edge/curve modifiers fall into four categories, which are listed in this topic.">Edge and Curve Modifiers</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/COMPOSITE_Lens_Modifier_ASAP-cmdref.html#COMPOSITE_Lens_Modifier_ASAP_Command" title="Combines several lens entities into a single lens entity.">COMPOSITE (Lens Modifier) (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=29" target="_blank">See the Knowledge Base for the technical publication, Edges in ASAP</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

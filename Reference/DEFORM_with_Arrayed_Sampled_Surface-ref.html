@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="DEFORM with Arrayed Sampled Surface"/>
+<meta name="abstract" content="The example, Deforming to an Arrayed Sampled Surface, demonstrates not only the DEFORM command, but also several other commands and useful techniques for modeling complicated objects."/>
+<meta name="description" content="The example, Deforming to an Arrayed Sampled Surface, demonstrates not only the DEFORM command, but also several other commands and useful techniques for modeling complicated objects."/>
+<meta name="DC.subject" content="DEFORM with Arrayed Sampled Surface, arrayed sampled surface, using DEFORM with"/>
+<meta name="keywords" content="DEFORM with Arrayed Sampled Surface, arrayed sampled surface, using DEFORM with"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_DEF-ref.html#Reference_DEF"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DEFORM_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MAP_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SAMPLED_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WINDOW_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="DEFORM_with_Arrayed_Sampled_Surface"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>DEFORM with Arrayed Sampled Surface</title>
+</head>
+<body id="DEFORM_with_Arrayed_Sampled_Surface"><a name="DEFORM_with_Arrayed_Sampled_Surface"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>DEFORM with Arrayed Sampled Surface</h5></span>
+	
+	
+	<div><p>The example, Deforming to an Arrayed Sampled Surface, demonstrates not only the
+		DEFORM command, but also several other commands and useful techniques for modeling
+		complicated objects. </p>
+
+		<div class="section" id="DEFORM_with_Arrayed_Sampled_Surface__section_371B031CEEE24FF2A995131E9B19F8D6"><a name="DEFORM_with_Arrayed_Sampled_Surface__section_371B031CEEE24FF2A995131E9B19F8D6"><!-- --></a>
+			<p>This example shows a base object that has perturbations on top of it in the form of a
+				bumpy structure. The bumpy structure is part planar with a hemisphere on top of the
+				plane and a smaller shell on top of the hemisphere. The entire structure may be
+				considered as a unit cell. The unit cell is regularly repeated over the base object. </p>
+
+			<p>The basic technique is to model the unit cell as a single entity, replicate the unit
+				cell with the <b>ARRAY </b> entity modifier, and then deform this to the
+				base object. The key is the <b>MAP</b> command. </p>
+
+			<p>The <b>MAP </b> command produces a depth map, in the form of a
+				distribution data file, of the current objects using the last <b>WINDOW</b> and <b>PIXEL</b> settings. The <b>MAP </b>
+				command not only maps out the depths of the objects, but also two orthogonal slopes
+				at each scan point. The <b>MAP</b> command syntax is: </p>
+
+			<pre class="codeblock">MAP [ name ] [ DEPTH [ d' [ d" ] ] ] [ SLOPES ]</pre>
+
+			<p>where <b>name </b> is the name of the distribution data file, <b>d'</b> and <b>d"</b> are the depth coordinates, and <b>SLOPES</b> is the optional specification for calculating slopes. </p>
+
+		</div>
+
+		<div class="section" id="DEFORM_with_Arrayed_Sampled_Surface__section_59768DF5F9724EE099C8DD0E6B704816"><a name="DEFORM_with_Arrayed_Sampled_Surface__section_59768DF5F9724EE099C8DD0E6B704816"><!-- --></a><span style="color: #2b6eb5"><h5>Tips</h5></span>
+			
+			<br/><a name="DEFORM_with_Arrayed_Sampled_Surface__ul_0F9CF11BE9FF41A28D9148FDB94E29CE"><!-- --></a><ul id="DEFORM_with_Arrayed_Sampled_Surface__ul_0F9CF11BE9FF41A28D9148FDB94E29CE">
+				<li id="DEFORM_with_Arrayed_Sampled_Surface__li_AEC3CAA3966F48ED97FA0774F4049BE8"><a name="DEFORM_with_Arrayed_Sampled_Surface__li_AEC3CAA3966F48ED97FA0774F4049BE8"><!-- --></a>The <b>MAP</b> command is
+					different from <b>FMAP </b> in that the <b>MAP </b>
+					command maps objects where FMAP maps surfaces. Now that a distribution data file
+					describing the unit cell exists, you may use the <b>SAMPLED</b>
+					command to model it as a surface. </li>
+
+				<li id="DEFORM_with_Arrayed_Sampled_Surface__li_258C51F26840423E9B030BB30892A03D"><a name="DEFORM_with_Arrayed_Sampled_Surface__li_258C51F26840423E9B030BB30892A03D"><!-- --></a>When modeling your particular optical
+					system, remember that objects created in this manner are in a sense discrete
+					because of the method of construction (the depth and slopes of <b>SAMPLED
+					</b> are linearly interpolated between points). </li>
+
+			</ul>
+
+		</div>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_DEF-ref.html#Reference_DEF" title="Reference topics in this section begin with the letters &#34;D-E-F&#34;.">Reference (D-F)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DEFORM_ASAP-cmdref.html" title="Adds small deformations to an object.">DEFORM (ASAP Command)</a></div>
+<div><a href="../Commands/MAP_ASAP-cmdref.html" title="Produces a depth map of the currently defined object surfaces.">MAP (ASAP Command)</a></div>
+<div><a href="../Commands/PIXELS_ASAP-cmdref.html" title="Sets the resolution for graphics and calculations.">PIXELS (ASAP Command)</a></div>
+<div><a href="../Commands/SAMPLED_ASAP-cmdref.html" title="Creates an explicit surface interpolated from sampled data.">SAMPLED (ASAP Command)</a></div>
+<div><a href="../Commands/WINDOW_ASAP-cmdref.html" title="Sets the plotting window for graphical output.">WINDOW (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

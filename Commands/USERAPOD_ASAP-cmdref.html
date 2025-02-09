@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="USERAPOD (ASAP Command)"/>
+<meta name="abstract" content="Specifies a beam irradiance or intensity apodization."/>
+<meta name="description" content="Specifies a beam irradiance or intensity apodization."/>
+<meta name="DC.subject" content="USERAPOD (ASAP Command), beam irradiance, specying, intensity apodization, specifying"/>
+<meta name="keywords" content="USERAPOD (ASAP Command), beam irradiance, specying, intensity apodization, specifying"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_U-ref.html#Commands_and_Macros_U"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DISPLAY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FCN_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_DATA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SOURCE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TRACE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/USERAPOD_ANGLES_ASAP-cmdref.html#USERAPOD_ANGLES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/USERAPOD_BOTH_ASAP-cmdref.html#USERAPOD_BOTH_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Defining_a_Positional_Directional_Apodization-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=28"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=19"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="USERAPOD_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>USERAPOD (ASAP Command)</title>
+</head>
+<body id="USERAPOD_ASAP_Command"><a name="USERAPOD_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>USERAPOD (ASAP Command)</h5></span>
+	
+	
+	<div><p>Specifies a beam irradiance or intensity apodization. </p>
+
+		<p><b>Syntax 1</b>
+		</p>
+
+		<pre class="codeblock">
+USERAPOD  POS [ fcn ] [ c c' c" ... ] [ 'string' ]
+APODIZE   DIR   OFF
+          OFF
+</pre>
+
+		<p><b>Syntax 2</b>
+		</p>
+
+		<pre class="codeblock">
+USERAPOD POS c c'
+APODIZE  DIR
+[ e  p  [ f  ] [ PLOT ] ]
+                 PROD
+[ e' p' [ f' ] ]
+    :
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>POS or DIR</span></td><td><span>type of apodization</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>fcn</span></td><td><span>name of the apodization function to be applied to the set of rays</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>c c' c". . .</span></td><td><span>up to 50 coefficients used to define apodization function</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>OFF</span></td><td><span>turn the currently defined apodization function off</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>e f</span></td><td><span>measured energy flux</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>p</span></td><td><span>spatial or direction cosine coordinate</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>PLOT</span></td><td><span>stentry&gt;creates a default distribution file (BRO009.DAT)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>PROD</span></td><td><span>flag to use the product of the two orthogonal profiles instead of the
+					weighted sum</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="USERAPOD_ASAP_Command__ul_435B542B30774AF2B057F2828E5A3C35"><!-- --></a><ol id="USERAPOD_ASAP_Command__ul_435B542B30774AF2B057F2828E5A3C35">
+			<li id="USERAPOD_ASAP_Command__li_2C64F53DEF6A4CE4BB64774B6B8B76B6"><a name="USERAPOD_ASAP_Command__li_2C64F53DEF6A4CE4BB64774B6B8B76B6"><!-- --></a>Users can define their own <b>POSitional</b> and/or <b>DIRectional</b> apodization function
+				to be applied to a set of rays or beams created in a <b>GRID</b> or
+					<b>EMITTING</b> surface command. This is done by either using the
+				given <b>$FCN</b> function, <b>fcn</b> or rewriting the
+				Fortran function, <b>USERAPOD</b> and relinking the program. </li>
+
+			<li id="USERAPOD_ASAP_Command__li_FAA331DC6C0F4A1E92CC1F0D710239CE"><a name="USERAPOD_ASAP_Command__li_FAA331DC6C0F4A1E92CC1F0D710239CE"><!-- --></a>Turns on or <b>OFF</b> the use
+				of the currently defined apodization function by the program. </li>
+
+			<li id="USERAPOD_ASAP_Command__li_56ADF957DCFE4F1795E15F50947B152A"><a name="USERAPOD_ASAP_Command__li_56ADF957DCFE4F1795E15F50947B152A"><!-- --></a><b>APODIZE</b> operates
+				immediately on all the currently selected or considered rays and therefore, can be
+				used before or after a <b>TRACE</b>. </li>
+
+			<li id="USERAPOD_ASAP_Command__li_6212CE6F61494D98AB846E66908A34DB"><a name="USERAPOD_ASAP_Command__li_6212CE6F61494D98AB846E66908A34DB"><!-- --></a><b>APODIZE</b> is a ray
+				modifier that apodizes ray distributions of all currently selected and/or considered
+				rays before or after a ray trace. It is less constrictive than the <b>USERAPOD</b> command. It may be used to angularly apodize rays through a
+				filter or at a detector. </li>
+
+			<li id="USERAPOD_ASAP_Command__li_377D0C177F524EF290F26E67C03B088B"><a name="USERAPOD_ASAP_Command__li_377D0C177F524EF290F26E67C03B088B"><!-- --></a><b>USERAPOD</b> is only applied
+				to rays when they are created. Therefore, it should be placed prior to the ray
+				definition commands for which it is applicable. Once entered, however, it modifies
+				all subsequent ray data until turned <b>OFF.</b>
+			</li>
+
+			<li id="USERAPOD_ASAP_Command__li_A9B37B05723D456584CA5134981C581F"><a name="USERAPOD_ASAP_Command__li_A9B37B05723D456584CA5134981C581F"><!-- --></a><b>USERAPOD POS</b> only
+				applies to the following ray creation commands: <b>GRID ELLIPTIC, GRID HEX,
+					GRID POLAR, GRID RECT, GRID WINDOW, SOURCE POS GRID, SOURCE DIR GRID, and
+					EMITTING DISK/RECTANGLE</b>
+			</li>
+
+			<li id="USERAPOD_ASAP_Command__li_8FD751C9298745FAA788159FBA8710B9"><a name="USERAPOD_ASAP_Command__li_8FD751C9298745FAA788159FBA8710B9"><!-- --></a><b>USERAPOD DIR</b> only
+				applies to the following ray creation commands: <b>SOURCE DIR GRID, EMITTING
+					DISK/RECTANGLE, EMITTING ENTITY</b> or <b>OBJECT</b>, and
+					<b>EMITTING DATA</b> plane. </li>
+
+			<li id="USERAPOD_ASAP_Command__li_404156D2210B45C7B73B46CE3E48E7A4"><a name="USERAPOD_ASAP_Command__li_404156D2210B45C7B73B46CE3E48E7A4"><!-- --></a>
+				<p>If <b>fcn</b> is specified, the in-plane, 2D <b>POSitional</b> or <b>DIRectional</b> coordinates are passed
+					in the _1 and _2 variables. The 50 coefficients <b>c c'...</b> are
+					passed in the _3 _4 ... _52 variables. The last entry in the <b>$FCN</b> definition of <b>fcn</b> is used as the apodization
+					flux scaling factor. For example, to define and use a Gaussian apodization
+					(identical to the default one discussed below): </p>
+
+				<pre class="codeblock">     
+$FCN APOD _5*GAUS[_1/_3]*GAUS[_2/_4]/(_3*_4)
+  :
+USERAPOD POS APOD ...
+  :
+GRID ...
+SOURCE ...
+         </pre>
+
+			</li>
+
+			<li id="USERAPOD_ASAP_Command__li_8D8750AE8F3144A9A4412939FEBCF84D"><a name="USERAPOD_ASAP_Command__li_8D8750AE8F3144A9A4412939FEBCF84D"><!-- --></a> Otherwise, up to 50 coefficients <b>(c c' ...)</b> and the <b>'string'</b> can be passed to the
+					<b>USERAPOD/APODIZE</b> command where the default apodizing function
+				is a Gaussian apodization of the form (using the Z axis as the direction of
+				propagation): <p><br/><img src="../Equations/USERAPOD_equation1.gif"/><br/>Therefore, <b>co</b> and <b>c1</b> are
+					the semi-major widths of the Gaussian envelope. The <b>c2</b> is the
+					total flux in the beam, assuming it is not appreciably truncated by the finite
+					size of the grid or emitting surface and that the default <b>POS</b>
+					irradiance or <b>DIR</b> radiance distribution is unity. </p>
+</li>
+
+			<li id="USERAPOD_ASAP_Command__li_BC64CD6370E64449884DE3ABA936F15F"><a name="USERAPOD_ASAP_Command__li_BC64CD6370E64449884DE3ABA936F15F"><!-- --></a>Only a rotationally symmetric apodization
+				may be used with the <b>GRID POLAR</b>. </li>
+
+			<li id="USERAPOD_ASAP_Command__li_DD9CF801237C45EFB05C0F97DBB1848E"><a name="USERAPOD_ASAP_Command__li_DD9CF801237C45EFB05C0F97DBB1848E"><!-- --></a>The <b>x</b> and <b>y</b> in the <b>T(x,y)</b> equation become direction cosines if the <b>DIR</b> option
+				is used. </li>
+
+			<li id="USERAPOD_ASAP_Command__li_F1E763BF57BD45E789A1718FF878A1C7"><a name="USERAPOD_ASAP_Command__li_F1E763BF57BD45E789A1718FF878A1C7"><!-- --></a>With the second syntax, a table of measured
+				energy flux in the two orthogonal grid directions <b>e,f</b> versus
+					<b>POSition</b> or <b>DIRection</b> cosine <b>p</b> can be entered to apodize the grid. </li>
+
+			<li id="USERAPOD_ASAP_Command__li_33F1EAB9C6F3444A83E4D61656E208A7"><a name="USERAPOD_ASAP_Command__li_33F1EAB9C6F3444A83E4D61656E208A7"><!-- --></a>The values of <b>p</b> are
+				entered in ascending order (0 &lt; p &lt; 1, the first quadrant in direction cosine
+				space). ASAP linearly interpolates to obtain intermediate flux values. The remaining
+				three quadrants are mapped by reflection across the coordinate axes. </li>
+
+			<li id="USERAPOD_ASAP_Command__li_9FF7A4FB8FF74E299C07EA73A951E12C"><a name="USERAPOD_ASAP_Command__li_9FF7A4FB8FF74E299C07EA73A951E12C"><!-- --></a>The <b>c0</b> and <b>c1</b> values are used to scale <b>p</b> into the two coordinate
+				values at the <b>GRID</b> or <b>EMITTER</b> plane. If no
+				scaling is desired, enter 1 1 for <b>c0</b> and <b>c1.</b>
+			</li>
+
+			<li id="USERAPOD_ASAP_Command__li_3E47DD37F25A42E197DDB65303AA74FF"><a name="USERAPOD_ASAP_Command__li_3E47DD37F25A42E197DDB65303AA74FF"><!-- --></a>Using the <b>PLOT</b> option
+				with the second syntax creates a default distribution file (BRO009.DAT) for future
+				plotting by the <b>DISPLAY</b> command (the current <b>PIXELS</b> setting controls the resolution). </li>
+
+		</ol>
+
+		<p>
+			<a href="/example_scripts.html#USERAPOD">USERAPOD Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_U-ref.html#Commands_and_Macros_U" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “U”.">Commands and Macros (U)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Defining_a_Positional_Directional_Apodization-ref.html" title="This topic lists the input arguments and return for defining an positional or directional apodization.">Defining a Positional or Directional Apodization</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DISPLAY_ASAP-cmdref.html" title="Reads previously created distribution data files so that they can be modified.">DISPLAY (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_ASAP-cmdref.html" title="Creates a composite single-source emitter from several EMITTING volume commands.">EMITTING (ASAP Command)</a></div>
+<div><a href="../Commands/FCN_macro_ASAP-cmdref.html" title="Defines new in-line math functions.">$FCN (ASAP Macro)</a></div>
+<div><a href="../Commands/GRID_DATA_ASAP-cmdref.html" title="Creates a rectangular grid of rays.">GRID DATA (ASAP Command)</a></div>
+<div><a href="../Commands/PIXELS_ASAP-cmdref.html" title="Sets the resolution for graphics and calculations.">PIXELS (ASAP Command)</a></div>
+<div><a href="../Commands/SOURCE_ASAP-cmdref.html" title="Specifies sources for the rays/beams.">SOURCE (ASAP Command)</a></div>
+<div><a href="../Commands/TRACE_ASAP-cmdref.html" title="Traces all currently selected rays in storage.">TRACE (ASAP Command)</a></div>
+<div><a href="../Commands/USERAPOD_ANGLES_ASAP-cmdref.html#USERAPOD_ANGLES_ASAP_Command" title="Specifies 3D angular apodization of volume emitters.">USERAPOD ANGLES (ASAP Command)</a></div>
+<div><a href="../Commands/USERAPOD_BOTH_ASAP-cmdref.html#USERAPOD_BOTH_ASAP_Command" title="Apodize in position and/or direction the full 3D radiation patterns of volume emitters.">USERAPOD BOTH (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=28" target="_blank">See the Knowledge Base for the technical publication, Sources in ASAP</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=19" target="_blank">See the Knowledge Base for the technical publication, Telecommunications Component Modeling</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Properties of Scattered Rays/Beams"/>
+<meta name="DC.subject" content="Properties of Scattered Rays/Beams, rays/beams, properties of scattered, LEVEL, with ray/beam"/>
+<meta name="keywords" content="Properties of Scattered Rays/Beams, rays/beams, properties of scattered, LEVEL, with ray/beam"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_OR-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FIELD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LEVEL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SCATTER_RMS_BSDF_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPREAD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WIDTHS_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Properties_of_Scattered_Rays_Beams"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Properties of Scattered Rays/Beams</title>
+</head>
+<body id="Properties_of_Scattered_Rays_Beams"><a name="Properties_of_Scattered_Rays_Beams"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Properties of Scattered Rays/Beams</h5></span> 
+  
+  <div> 
+	 <p>When the LEVEL command is turned on and a ray/beam hits an object with a
+		SCATTER RMS/BSDF interface, a near-specular, forward-scattered ray/beam may be
+		generated (subject to flux thresholds) with the following properties:
+	 </p>
+ 
+	 <br/><a name="Properties_of_Scattered_Rays_Beams__ul_888029101669464F9BF69D82BD8D622C"><!-- --></a><ul id="Properties_of_Scattered_Rays_Beams__ul_888029101669464F9BF69D82BD8D622C"> 
+		<li id="Properties_of_Scattered_Rays_Beams__li_E63C6A714F25446295C357C91C8FAC3E"><a name="Properties_of_Scattered_Rays_Beams__li_E63C6A714F25446295C357C91C8FAC3E"><!-- --></a>The scattered ray/beam has
+		  the same number of parabasal rays as the parent ray/beam.
+		</li>
+ 
+		<li id="Properties_of_Scattered_Rays_Beams__li_1B2D9E8060834860837F59F47E27829F"><a name="Properties_of_Scattered_Rays_Beams__li_1B2D9E8060834860837F59F47E27829F"><!-- --></a>The trajectory of the
+		  scattered base ray is identical to that of the specular base ray.
+		</li>
+ 
+		<li id="Properties_of_Scattered_Rays_Beams__li_29283A277A01466E915E804CAAC9F63E"><a name="Properties_of_Scattered_Rays_Beams__li_29283A277A01466E915E804CAAC9F63E"><!-- --></a>Only one forward-scattered
+		  ray/beam is generated for each parent ray/beam incident on the surface.
+		</li>
+ 
+		<li id="Properties_of_Scattered_Rays_Beams__li_FA4A1DB5B07C4DE8841E552F55C0C175"><a name="Properties_of_Scattered_Rays_Beams__li_FA4A1DB5B07C4DE8841E552F55C0C175"><!-- --></a>The scattered ray/beam is
+		  always incoherent; therefore the signal ray/beam generating the scattered
+		  component should be incoherent in order to conserve energy. Generating a
+		  scattered ray/beam from a coherent source can lead to energy conservation
+		  violations.
+		</li>
+ 
+		<li id="Properties_of_Scattered_Rays_Beams__li_6655CF6B77814A23BC929ED5525DBA9F"><a name="Properties_of_Scattered_Rays_Beams__li_6655CF6B77814A23BC929ED5525DBA9F"><!-- --></a>The scattered ray is
+		  considered unpolarized by ASAP analysis commands.
+		</li>
+ 
+		<li id="Properties_of_Scattered_Rays_Beams__li_4C603FC7385C49A3B5461A3463BA6DD9"><a name="Properties_of_Scattered_Rays_Beams__li_4C603FC7385C49A3B5461A3463BA6DD9"><!-- --></a>The beam shape is a
+		  Lorentzian rather than Gaussian.
+		</li>
+ 
+		<li id="Properties_of_Scattered_Rays_Beams__li_E12E477E2CE64B15A5654C91BD357675"><a name="Properties_of_Scattered_Rays_Beams__li_E12E477E2CE64B15A5654C91BD357675"><!-- --></a>The flux contained in the
+		  incident parent ray/beam is apportioned between the specular and scattered
+		  outgoing ray/beams according to the transmission, reflectivity, and the BSDF of
+		  the interface. Recall the difference in ray flux weighting between coherent and
+		  incoherent rays. The flux apportioned to the scattered ray is based upon the
+		  incident ray flux (ASAP apportions the TIS among the scattered rays). Coherent
+		  beams will therefore apportion a different flux to the scattered rays than
+		  incoherent rays. It is recommended that you create an equivalent incoherent
+		  beam (equivalent to the coherent beam but with a RECT shape factor and WIDTH 1)
+		  and scatter rays from this source in order to maintain energy conservation.
+		</li>
+ 
+		<li id="Properties_of_Scattered_Rays_Beams__li_CFFBD9B03B6E4D199EE27D8D14B91621"><a name="Properties_of_Scattered_Rays_Beams__li_CFFBD9B03B6E4D199EE27D8D14B91621"><!-- --></a>The coordinates of the waist
+		  rays are unchanged, but the divergence rays are altered so that they appear to
+		  originate at the intersection coordinates of the base ray.
+		</li>
+ 
+		<li id="Properties_of_Scattered_Rays_Beams__li_92BC664EE6BF4063AECA546C67C0AA8E"><a name="Properties_of_Scattered_Rays_Beams__li_92BC664EE6BF4063AECA546C67C0AA8E"><!-- --></a>Near-specular scattered rays
+		  are not allowed to rescatter at another object with a SCATTER RMS/BSDF
+		  interface.
+		</li>
+ 
+		<li id="Properties_of_Scattered_Rays_Beams__li_3BBC0B04F13746F5A670EDB8B98A294C"><a name="Properties_of_Scattered_Rays_Beams__li_3BBC0B04F13746F5A670EDB8B98A294C"><!-- --></a>
+		  <p>If a back-scattered ray/beam is generated, it has the same
+			 properties as the forward-scattered ray/beam with the following exceptions:
+		  </p>
+ 
+		  <p>- The trajectory of the scattered base ray is back along the
+			 incoming direction of the specular base ray.
+		  </p>
+ 
+		  <p>- Only one back-scattered ray/beam is generated for each parent
+			 ray/beam incident on the surface.
+		  </p>
+ 
+		  <p>- The beam shape is a top-hat function rather than Gaussian.
+		  </p>
+ 
+		  <p>- The FIELD command ignores scattered rays; any mixed
+			 specular/scattered ray calculations must be done with SPREAD NORMAL.
+		  </p>
+
+		</li>
+ 
+	 </ul>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_OR-ref.html" title="Reference topics in this section begin with the letters &#34;O&#34; to &#34;R&#34;.">Reference (O-R)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/FIELD_ASAP-cmdref.html" title="Calculates the exact complex field distribution.">FIELD (ASAP Command)</a></div>
+<div><a href="../Commands/LEVEL_ASAP-cmdref.html" title="Controls the number of times a scattered ray may be rescattered.">LEVEL (ASAP Command)</a></div>
+<div><a href="../Commands/SCATTER_RMS_BSDF_ASAP-cmdref.html" title="Assigns a near-specular scattering interface to an object.">SCATTER RMS/BSDF (ASAP Command)</a></div>
+<div><a href="../Commands/SPREAD_ASAP-cmdref.html" title="Calculates the exact coherent/incoherent energy distribution.">SPREAD (ASAP Command)</a></div>
+<div><a href="../Commands/WIDTHS_ASAP-cmdref.html" title="Modifies the default parabasal ray settings, scaling the width of the parabasal rays.">WIDTHS (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

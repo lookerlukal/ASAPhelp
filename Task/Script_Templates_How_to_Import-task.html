@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Script Templates: How to Import"/>
+<meta name="abstract" content="You can import a pre-defined script template into your script (*.inr) file in the Editor window."/>
+<meta name="description" content="You can import a pre-defined script template into your script (*.inr) file in the Editor window."/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Script_Templates_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Import_Template_Dialog-task.html#Import_Template_Dialog"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Script_Templates_How_to_Import"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Script Templates: How to Import</title>
+</head>
+<body id="Script_Templates_How_to_Import"><a name="Script_Templates_How_to_Import"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Script Templates: How to Import</h5></span> 
+   
+  <div><p>You can import a pre-defined script template into your script
+	 (*.inr) file in the Editor window.
+  </p>
+
+	 <div class="p">
+		<p>You must have an Editor window open to access the script template
+		  command.
+		</p>
+
+	 </div>
+ 
+	 <div class="section">
+		<p>The pre-defined scripting templates contains high-level examples of
+		  ASAP commands used for creating scripts (*.inr files). These examples include
+		  system definitions, material property definitions, geometry definitions, source
+		  definitions, trace ray operations, and analysis results.
+		</p>
+
+	 </div>
+ 
+	  
+		<div class="p">
+		  <span>To import a template, select a template listed on the Import
+			 Template dialog box.
+		  </span> 
+		   The content of the pre-defined template is inserted into
+			 your INR file.
+		   
+		</div>
+ 
+	  
+	 <div class="section">
+		<p>The following script is an example of an ASAP pre-defined template. 
+		</p>
+
+	 </div>
+ 
+	 <div class="example"><span style="color: #2b6eb5"><h5>BASIC Template.INT</h5></span>
+		 
+		<pre class="codeblock">
+SYSTEM NEW
+RESET
+
+!! Define system units and wavelengths
+
+UNITS MILLIMETERS 'Watts'
+WAVELENGTH 550 NM
+
+!! Define coatings
+
+COATING PROPERTIES
+  0 1 'TRANSMIT'
+  1 0 'REFLECT'
+  0 0 'ABSORB'
+
+!! Define Media
+
+MEDIA  
+  1.5 'GLASS'
+
+!! GEOMETRY DEFINITIONS BEGIN HERE
+
+
+!! SOURCE DEFINITIONS BEGIN HERE
+
+
+!! TRACE RAYS WITH OPTIONAL PLOT
+
+!!WINDOW Y X
+!!PLOT FACETS 0 0 -1 OVERLAY
+TRACE !!PLOT 
+
+!! ANALYSIS BLOCK BEGINS HERE
+</pre>
+
+	 </div>
+ 
+  </div>
+ 
+<div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="../Task/Import_Template_Dialog-task.html#Import_Template_Dialog">Import Template Dialog</a></strong><br/>
+</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Script_Templates_Overview-conc.html" title="Script templates assist in the definition and description of user-specified optical systems in ASAP. ASAP provides a collection of pre-defined script templates, and users may create custom script templates.">Script Templates Overview</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

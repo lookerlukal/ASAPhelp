@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Exporting a Windows Bitmap File"/>
+<meta name="abstract" content="The DIS2BMP.exe utility reads an ASAP DIS (display) file and creates a Windows BMP (bitmap) graphic file. It is stored in the ASAP installation folder, \bin. You can use this utility to create and export bitmap files for presentations or reports."/>
+<meta name="description" content="The DIS2BMP.exe utility reads an ASAP DIS (display) file and creates a Windows BMP (bitmap) graphic file. It is stored in the ASAP installation folder, \bin. You can use this utility to create and export bitmap files for presentations or reports."/>
+<meta name="DC.subject" content="Exporting a Windows Bitmap File, DIS2BMP.exe utility, reading display files with, bitmap files, exporting"/>
+<meta name="keywords" content="Exporting a Windows Bitmap File, DIS2BMP.exe utility, reading display files with, bitmap files, exporting"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Converting_BMP_Bitmap_Files_to_from_Distribution_Data-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Importing_CCD_Images-ref.html#Importing_CCD_Images"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WRITE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WRITE_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Exporting_a_Windows_Bitmap_File"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Exporting a Windows Bitmap File</title>
+</head>
+<body id="Exporting_a_Windows_Bitmap_File"><a name="Exporting_a_Windows_Bitmap_File"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Exporting a Windows Bitmap File</h5></span>
+	
+	
+	<div><p>The DIS2BMP.exe utility reads an ASAP DIS (display) file and creates a Windows BMP
+		(bitmap) graphic file. It is stored in the ASAP installation folder, \bin. You can use this
+		utility to create and export bitmap files for presentations or reports. </p>
+
+		<div class="section" id="Exporting_a_Windows_Bitmap_File__section_688AF6879E2D44EA971BC2CBA6EEC696"><a name="Exporting_a_Windows_Bitmap_File__section_688AF6879E2D44EA971BC2CBA6EEC696"><!-- --></a>
+			<p>The resolution (pixels) are the same as the <b>PIXELS</b> (ASAP command)
+				resolution from within ASAP. For example, if the user has specified a <b>PIXEL</b> of 200, the BMP should be 200 pixels wide. </p>
+
+			<p>DIS2BMP converts one or three DIStribution data files to a monochrome or color BMP
+				file respectively: </p>
+
+			<pre class="codeblock">DIS2BMP disfile [ bmpfile ]
+DIS2BMP redfile greenfile bluefile [bmpfile ]</pre>
+
+			<p>RGB component files should be of the same <b>PIXEL</b> size. The <b>DIS</b>tribution files may have been saved previously with a <b>WRITE</b> command. </p>
+
+		</div>
+
+		<div class="section" id="Exporting_a_Windows_Bitmap_File__section_89C5416A2B6A4CA4BBE72A6B7D848A1A"><a name="Exporting_a_Windows_Bitmap_File__section_89C5416A2B6A4CA4BBE72A6B7D848A1A"><!-- --></a>
+			<div class="note"><span class="notetitle">Note:</span> Run the Project example, "BMPSourceTrace" in your ASAP installation area in the
+				folder, <i>projects\samples</i>
+			</div>
+
+		</div>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Converting_BMP_Bitmap_Files_to_from_Distribution_Data-ref.html" title="Two utilities are available in ASAP for converting bitmap files.">Converting BMP Bitmap Files to/from Distribution Data</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Importing_CCD_Images-ref.html#Importing_CCD_Images" title="The BMP2DIS.exe utility is for importing CCD images into ASAP, and is stored in your ASAP installation area under \bin. It reads a Windows BMP (bitmap) file and creates an ASAP DIS file. In the following syntax, the width option specifies system units length in ASAP.">Importing CCD Images</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/PIXELS_ASAP-cmdref.html" title="Sets the resolution for graphics and calculations.">PIXELS (ASAP Command)</a></div>
+<div><a href="../Commands/WRITE_ASAP-cmdref.html" title="Writes the current distribution data file to disk file.">WRITE (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

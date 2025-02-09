@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Optimization - Overview"/>
+<meta name="abstract" content="The Optimization feature in ASAP addresses your need to optimize optical systems under evaluation that were designed or analyzed with ASAP. This topic gives a frame of reference, focusing on criteria you need to satisfy, and the process of designating an optimization method before you can initiate an optimization run in ASAP via the user interface. Related topics are listed at the end of this and other topics for this feature."/>
+<meta name="description" content="The Optimization feature in ASAP addresses your need to optimize optical systems under evaluation that were designed or analyzed with ASAP. This topic gives a frame of reference, focusing on criteria you need to satisfy, and the process of designating an optimization method before you can initiate an optimization run in ASAP via the user interface. Related topics are listed at the end of this and other topics for this feature."/>
+<meta name="DC.subject" content="Optimization Overview, optimization, preparing for, optimization, purpose, optimization, user interface, optimization, confirming method, optimization, starting and stopping, optimize feature, optimization, penalty function"/>
+<meta name="keywords" content="Optimization Overview, optimization, preparing for, optimization, purpose, optimization, user interface, optimization, confirming method, optimization, starting and stopping, optimize feature, optimization, penalty function"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Features_in_ASAP-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Getting_Started_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Optimization_Setup_Summary_Window-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Design_Variables_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Design_Variable_Dialog-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Design_Objectives_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Design_Objectives_Dialog-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Define_Objective_Constraint_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimize_Objective_Constraints_ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Define_Exit_Criteria_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Exit_Criteria_Dialog-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Set_Method_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Method_Dialog-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Optimization_Results-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Grid_Display_Options_dialog-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Glossary-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Design_Variable_Messages-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Optimization_Overview"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Optimization - Overview</title>
+</head>
+<body id="Optimization_Overview"><a name="Optimization_Overview"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Optimization - Overview</h5></span> 
+   
+   
+  <div><p> The Optimization feature in ASAP addresses your need to optimize
+	 optical systems under evaluation that were designed or analyzed with ASAP. This
+	 topic gives a frame of reference, focusing on criteria you need to satisfy, and the process of designating
+	 an optimization method 
+	 <i>before</i> you can initiate an optimization run in ASAP via the user
+	 interface. 
+  Related topics are listed at the end of this and other topics for this feature.</p>
+ 
+	 <div class="section" id="Optimization_Overview__section_559F8B2399A1476D9BE6009133880872"><a name="Optimization_Overview__section_559F8B2399A1476D9BE6009133880872"><!-- --></a><span style="color: #2b6eb5"><h5>Purpose</h5></span> 
+		 
+		<p>Optimization is the automated adjustment of user-specified optical
+		  system parameters to improve your specified figure of merit, based on one or
+		  several objective functions. You can apply one or more prescribed strategies
+		  under your specified constraints. 
+		</p>
+ 
+		<p>In ASAP, optimization is a continuous, nonlinear, non-convex
+		  optimization on simply connected domains. You can use it as a tool to expedite
+		  product development or to explore design space. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Optimization_Overview__section_0DC2ED8195CD416B8C7F588CB3737C24"><a name="Optimization_Overview__section_0DC2ED8195CD416B8C7F588CB3737C24"><!-- --></a><span style="color: #2b6eb5"><h5>Using the Optimization Interface</h5></span> 
+		 
+		<p> The optimization user interface in ASAP, named the Optimization Setup
+		  Summary window, is where you specify design variables, design objectives,
+		  objective constraints and penalty functions, exit criteria, and a method to optimize your system
+		  under evaluation (SUE). 
+		This interface is described in related topics.</p>
+ 
+		<p> The assumption in using the Optimization Setup Summary window is that
+		  you are working in a non-linear way to set up your criteria for optimization,
+		  moving among the tabs as you decide which values to change or set. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Optimization_Overview__section_B82D3F139E9D46C9B8A72BC2F430C765"><a name="Optimization_Overview__section_B82D3F139E9D46C9B8A72BC2F430C765"><!-- --></a><span style="color: #2b6eb5"><h5>Preparing for Optimization</h5></span> 
+		 Ultimately, before optimization
+		can begin in ASAP, there are two tasks you must accomplish. 
+		<br/><a name="Optimization_Overview__ol_327557B21F184D69A789D7487745CBC2"><!-- --></a><ol id="Optimization_Overview__ol_327557B21F184D69A789D7487745CBC2"> 
+		  <li id="Optimization_Overview__li_6F7A1255CA384AAC81F4478CF9125ABB"><a name="Optimization_Overview__li_6F7A1255CA384AAC81F4478CF9125ABB"><!-- --></a> Define at least one design variable and confirm that it is
+			 enabled. 
+		  </li>
+ 
+		  <li id="Optimization_Overview__li_188D2CA5943C4A12887CD27835889EEF"><a name="Optimization_Overview__li_188D2CA5943C4A12887CD27835889EEF"><!-- --></a> Define at least one design objective and confirm that it is
+			 enabled. 
+		  </li>
+ 
+		</ol>
+<p>Optionally, you can define objective constraints and penalty functions. When a penalty function is assigned to an enabled objective constraint, ASAP applies the penalty function to the Figure of Merit during any iteration of the script in which the constraint is violated.</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Optimization_Overview__section_7F0391166CB045EC91BCDC81E2935D3E"><a name="Optimization_Overview__section_7F0391166CB045EC91BCDC81E2935D3E"><!-- --></a><span style="color: #2b6eb5"><h5>Confirming the Optimization Method</h5></span> 
+		 
+		<p>Depending on the number of variables you selected and the name of the
+		  INR file you are using for optimization, ASAP assigns a default for the method
+		  of optimization. Confirm that the selected optimization method and title are
+		  the one you want before selecting the Start Optimization button. 
+		</p>
+ 
+		<p>If you select one design variable, ASAP assigns the Brent's method as
+		  the default method. 
+		</p>
+ 
+		<p>If you select more than one variable, ASAP assigns Downhill Simplex as
+		  the default method, which you can change to Simulated Annealing. 
+		</p>
+ 
+		 
+		<p> As you continue to enable or disable design variables, ASAP
+		  automatically changes the optimization method to Brent's Method for exactly one
+		  variable or, for more than one variable, to whichever method was last
+		  selected—either Downhill Simplex or Simulated Annealing. If Downhill Simplex is
+		  selected, any associated fields must be completed. If Simulated Annealing is
+		  selected, any associated fields must contain valid data. 
+		</p>
+ 
+		<p>ASAP enters the name of the optimized INR file as the Optimization
+		  Session Title on the Optimization Method tab. You can change the title. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Optimization_Overview__section_3D17CB5479D34E7C8029D285A575F68E"><a name="Optimization_Overview__section_3D17CB5479D34E7C8029D285A575F68E"><!-- --></a><span style="color: #2b6eb5"><h5>Validating Data</h5></span> 
+		 
+		<p>As you enter data, ASAP attempts to validate it, and either enables
+		  the Start Optimization button or issues informational messages about invalid
+		  data. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Optimization_Overview__section_430CDC06FCC94784A324327375B2DE60"><a name="Optimization_Overview__section_430CDC06FCC94784A324327375B2DE60"><!-- --></a><span style="color: #2b6eb5"><h5>Starting Optimization</h5></span> 
+		 
+		<p> After validating selections and defaults for your design variables,
+		  design objectives, optimization method and title, ASAP enables the 
+		  <a name="Optimization_Overview__image_43764C7E20DE4DC387C1568906D05D3C"><!-- --></a><img id="Optimization_Overview__image_43764C7E20DE4DC387C1568906D05D3C" longdesc="Optimization - Start button (reuse)" src="../Graphics/Optimization_StartButton.jpg" width="126" height="22"/> on the Optimization Method tab. When the button is
+		  enabled, you can select it to begin optimization. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Optimization_Overview__section_50EAD8D90CA14A0C9AC9DCEC488C1313"><a name="Optimization_Overview__section_50EAD8D90CA14A0C9AC9DCEC488C1313"><!-- --></a><span style="color: #2b6eb5"><h5>Stopping Optimization</h5></span> 
+		 
+		<p>Once optimization is in process, you can stop it by selecting 
+		  <a name="Optimization_Overview__image_DE0F69E85D374E5DA366F8D828F0557B"><!-- --></a><img id="Optimization_Overview__image_DE0F69E85D374E5DA366F8D828F0557B" longdesc="Stop button, ASAP toolbar, reuse" src="../Graphics/Stop_button.jpg" width="24" height="22"/> on the ASAP
+		  toolbar to stop the current run. You can then open the Optimization Setup
+		  Summary window and make changes. To close the window, click 
+		  <a name="Optimization_Overview__image_18C2E8676F6C4BF48A915A324F180924"><!-- --></a><img id="Optimization_Overview__image_18C2E8676F6C4BF48A915A324F180924" longdesc="Optimization - Close button (reuse)" src="../Graphics/Optimization_Close_button.jpg" width="74" height="24"/>.
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="../Task/Optimization_Getting_Started_Use_Case-task.html">Optimization - Setting Up ASAP</a></strong><br/>
+This topic describes how to set up ASAP before you can initiate an optimization in the optimization user interface. It describes the connection between the script (INR) and the optimization user interface, which is the Optimization Setup Summary window.</li>
+<li class="ulchildlink"><strong><a href="../Concept/Optimization_Setup_Summary_Window-conc.html">Optimization - Setup Summary Window</a></strong><br/>
+The Optimization Setup Summary window presents a multi-tabbed user interface for viewing and entering information that ASAP will use to optimize a system under evaluation (SUE).</li>
+<li class="ulchildlink"><strong><a href="../Task/Optimization_Design_Variables_Use_Case-task.html">Optimization - Defining Design Variables</a></strong><br/>
+This topic describes how to define and enable a design variable for optimization.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Optimization_Design_Variable_Dialog-ref.html">Optimization Design Variable Tab</a></strong><br/>
+The Design Variable tab on the Optimization Setup Summary window lists currently defined design variables for the optimization session. At least one variable must be defined to begin optimization.</li>
+<li class="ulchildlink"><strong><a href="../Task/Optimization_Design_Objectives_Use_Case-task.html">Optimization - Defining Design Objectives</a></strong><br/>
+This topic describes how to define and enable a design objective for optimization.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Optimization_Design_Objectives_Dialog-ref.html">Optimization Design Objectives Tab</a></strong><br/>
+The Design Objectives tab on the Optimization Setup Summary window lists currently defined design objectives for the optimization session. At least one item in the list must be enabled to run optimization.</li>
+<li class="ulchildlink"><strong><a href="../Task/Optimization_Define_Objective_Constraint_Use_Case-task.html">Optimization - Defining Objective Constraints</a></strong><br/>
+This topic describes how to define and enable objective constraints for optimization. It also describes how to define and assign penalty functions. Objective constraints and penalty functions are optional.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Optimize_Objective_Constraints_ref.html">Optimization Objective Constraints Tab</a></strong><br/>
+The Objective Constraints tab on the Optimization Setup Summary window displays the list of currently defined objective constraints and penalty functions for the current optimization session. Objective constraints and penalty functions are optional.</li>
+<li class="ulchildlink"><strong><a href="../Task/Optimization_Define_Exit_Criteria_Use_Case-task.html">Optimization - Defining Exit Criteria</a></strong><br/>
+This topic describes how to define exit criteria to use to determine completion of optimization.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Optimization_Exit_Criteria_Dialog-ref.html">Optimization Exit Criteria Tab</a></strong><br/>
+The Exit Criteria tab on the Optimization Setup Summary window lets you select the exit criteria that determines completion of optimization.</li>
+<li class="ulchildlink"><strong><a href="../Task/Optimization_Set_Method_Use_Case-task.html">Optimization - Defining a Method</a></strong><br/>
+This topic describes how to set a predefined optimization method.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Optimization_Method_Dialog-ref.html">Optimization Method Tab</a></strong><br/>
+The Optimization Method tab on the Optimization Setup Summary window lets you select the method.</li>
+<li class="ulchildlink"><strong><a href="../Concept/Optimization_Results-conc.html">Optimization - Viewing Results</a></strong><br/>
+This topic describes the Optimization Results interface, which displays the progress of the optimization process both graphically and as tabular data.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Optimization_Grid_Display_Options_dialog-ref.html">Optimization Results - Grid Display Options Dialog</a></strong><br/>
+The Grid Display Options dialog is displayed when you right-click the table in the Optimization Results window.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Optimization_Glossary-ref.html">Optimization - Glossary</a></strong><br/>
+This topic provides a glossary of terms for the optimization feature in ASAP.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Optimization_Design_Variable_Messages-ref.html">Optimization Informational Messages</a></strong><br/>
+This topic describes informational messages issued by ASAP when you are defining design variables, design objectives, and objective constrains for optimization. It recommends corrective action.</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Features_in_ASAP-ref.html" title="Topics in this section of the Contents tab include new and existing features in the ASAP user interface.">Features in ASAP</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Script Templates Overview"/>
+<meta name="abstract" content="Script templates assist in the definition and description of user-specified optical systems in ASAP. ASAP provides a collection of pre-defined script templates, and users may create custom script templates."/>
+<meta name="description" content="Script templates assist in the definition and description of user-specified optical systems in ASAP. ASAP provides a collection of pre-defined script templates, and users may create custom script templates."/>
+<meta name="DC.subject" content="Script Templates, templates, script"/>
+<meta name="keywords" content="Script Templates, templates, script"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Features_in_ASAP-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Script_Templates_How_to_Export-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Script_Templates_How_to_Import-task.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Script_Templates_Overview"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Script Templates Overview</title>
+</head>
+<body id="Script_Templates_Overview"><a name="Script_Templates_Overview"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Script Templates Overview</h5></span>
+	
+	
+	<div><p>Script templates assist in the definition and description of user-specified optical
+		systems in ASAP. ASAP provides a collection of pre-defined script templates, and users may
+		create custom script templates. </p>
+
+		<div class="section" id="Script_Templates_Overview__section_3AC823EE41004D8BB9420F4E07079049"><a name="Script_Templates_Overview__section_3AC823EE41004D8BB9420F4E07079049"><!-- --></a>
+			<p>The pre-defined scripting templates contains high-level examples of ASAP commands
+				used for creating scripts (*.inr files). These examples include system definitions,
+				material property definitions, geometry definitions, source definitions, trace ray
+				operations, and analysis results. </p>
+
+		</div>
+
+		<div class="section" id="Script_Templates_Overview__section_BAFA3B26129345CE9E7FB27E6FC107B8"><a name="Script_Templates_Overview__section_BAFA3B26129345CE9E7FB27E6FC107B8"><!-- --></a><span style="color: #2b6eb5"><h5>Import Templates</h5></span>
+			
+			<div class="p">You can choose a pre-defined script template to import in your Editor file (*.inr).
+				From the File menu, select <b>Import Template</b>. <div class="note"><span class="notetitle">Note:</span> You must
+					have an Editor window open to access this command. </div>
+ Select a template
+				listed on the Import Template dialog box. </div>
+
+		</div>
+
+		<div class="section" id="Script_Templates_Overview__section_14946B60A57242D49E9B754354E3D9F7"><a name="Script_Templates_Overview__section_14946B60A57242D49E9B754354E3D9F7"><!-- --></a><span style="color: #2b6eb5"><h5>Export Templates</h5></span>
+			
+			<p>You can create your own template to add to the pre-defined script templates and
+				export (add) it to the list of templates. From an Editor window that includes
+				command script, select the script and, from the File menu select <b>Export
+					Template</b>. Assign a name to the new script and click to save the
+				template as an *.inr file. The name of the script will appear in the Import Template
+				dialog box. </p>
+
+		</div>
+
+		<div class="section" id="Script_Templates_Overview__section_0275C73886014217B98F65908FFB0F5F"><a name="Script_Templates_Overview__section_0275C73886014217B98F65908FFB0F5F"><!-- --></a><span style="color: #2b6eb5"><h5>Example</h5></span>
+			
+			<p>The following script is an example of an ASAP pre-defined template, <b>BASIC
+					Template.INT</b>. </p>
+
+			<pre class="codeblock">
+SYSTEM NEW
+RESET
+
+!! Define system units and wavelengths
+
+UNITS MILLIMETERS 'Watts'
+WAVELENGTH 550 NM
+
+!! Define coatings
+
+COATING PROPERTIES
+  0 1 'TRANSMIT'
+  1 0 'REFLECT'
+  0 0 'ABSORB'
+
+!! Define Media
+
+MEDIA  
+  1.5 'GLASS'
+
+!! GEOMETRY DEFINITIONS BEGIN HERE
+
+
+!! SOURCE DEFINITIONS BEGIN HERE
+
+
+!! TRACE RAYS WITH OPTIONAL PLOT
+
+!!WINDOW Y X
+!!PLOT FACETS 0 0 -1 OVERLAY
+TRACE !!PLOT 
+
+!! ANALYSIS BLOCK BEGINS HERE
+			</pre>
+
+		</div>
+
+	</div>
+
+<div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="../Task/Script_Templates_How_to_Export-task.html">Script Templates: How to Export</a></strong><br/>
+You can create and save a script template (*.int) from script in an existing INR file.</li>
+<li class="ulchildlink"><strong><a href="../Task/Script_Templates_How_to_Import-task.html">Script Templates: How to Import</a></strong><br/>
+You can import a pre-defined script template into your script (*.inr) file in the Editor window.</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Features_in_ASAP-ref.html" title="Topics in this section of the Contents tab include new and existing features in the ASAP user interface.">Features in ASAP</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

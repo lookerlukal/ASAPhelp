@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="HALT (ASAP Command)"/>
+<meta name="abstract" content="Sets the conditions controlling ray termination."/>
+<meta name="description" content="Sets the conditions controlling ray termination."/>
+<meta name="DC.subject" content="HALT (ASAP Command), rays, termination"/>
+<meta name="keywords" content="HALT (ASAP Command), rays, termination"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_H-ref.html#Commands_and_Macros_H"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CUTOFF_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DECOMPOSE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GAUSSIAN_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OBJECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Refraction_Reflection_Controls-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="HALT_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>HALT (ASAP Command)</title>
+</head>
+<body id="HALT_ASAP_Command"><a name="HALT_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>HALT (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Sets the conditions controlling ray termination. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+HALT [ n ] [ OFF ] [ c ]
+             -X
+             -Y
+             -Z
+              X
+              Y
+              Z
+              -
+              +
+      </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span>maximum number of times a ray can consecutively intersect the
+			 same non-LENS object</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>OFF</span></td><td><span>turns off the global coordinate or surface normal
+			 direction</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>+X,-X, +Y,-Y, or +Z,-Z</span></td><td><span>undesirable propagation direction (literal entries)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>c</span></td><td><span>current flux/initial flux threshold ratio</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="HALT_ASAP_Command__ul_D685163475024789A5BB335CF6350EF8"><!-- --></a><ol id="HALT_ASAP_Command__ul_D685163475024789A5BB335CF6350EF8"> 
+		<li id="HALT_ASAP_Command__li_00AA03FE47CD476180BF819DCADD4153"><a name="HALT_ASAP_Command__li_00AA03FE47CD476180BF819DCADD4153"><!-- --></a>Used either as a local
+		  command to override defaults for the current object, or as a global command. In
+		  the latter case, the command acts as an interface control and becomes the
+		  default used by any object for which it is not explicitly set. Since the global
+		  command is identical to the 
+		  <b>OBJECT</b> subcommand, make sure you are not at the
+		  OBJ&gt; prompt when you use it as a global command. If you are, issue a 
+		  <b>RETURN</b> command first. 
+		</li>
+ 
+		<li id="HALT_ASAP_Command__li_DA7953B3842A4AA49A5EDCBC1505FD1D"><a name="HALT_ASAP_Command__li_DA7953B3842A4AA49A5EDCBC1505FD1D"><!-- --></a><b>HALT</b>
+		  forces the tracing of certain rays to be halted; that is, stopped. A ray that
+		  is 
+		  <b>HALT</b>ed (stopped) still exists and appropriately
+		  appears in the STATS output. Tracing of 
+		  <b>HALT</b>ed rays can be resumed. 
+		</li>
+ 
+		<li id="HALT_ASAP_Command__li_839BB00582F84B6C96146FDF06FFF46C"><a name="HALT_ASAP_Command__li_839BB00582F84B6C96146FDF06FFF46C"><!-- --></a>The 
+		  <b>n</b> must be entered as an integer. 
+		</li>
+ 
+		<li id="HALT_ASAP_Command__li_2028933423F7481E9238DAE9BD192EEF"><a name="HALT_ASAP_Command__li_2028933423F7481E9238DAE9BD192EEF"><!-- --></a>The literal entry picks out
+		  a certain global coordinate or surface normal direction or turns it 
+		  <b>OFF 
+		  </b>. If a ray attains a component in this direction after
+		  reflection or refraction or the number of consecutive interactions with the
+		  same object reaches the integer n (default 12), tracing halts for that
+		  particular ray. There is no default for the undesirable propagation direction. 
+		</li>
+ 
+		<li id="HALT_ASAP_Command__li_43B98C7817C84A72BF17878B6C085060"><a name="HALT_ASAP_Command__li_43B98C7817C84A72BF17878B6C085060"><!-- --></a>The default for 
+		  <b>c</b> is 1.E-6 (that is, a ray is stopped when the ratio
+		  of current flux to initial flux drops below 1.E-6). 
+		</li>
+ 
+		<li id="HALT_ASAP_Command__li_CC15BAC561534B12825DDFE97804116B"><a name="HALT_ASAP_Command__li_CC15BAC561534B12825DDFE97804116B"><!-- --></a>The 
+		  <b>c</b> must be entered as a decimal number. 
+		</li>
+ 
+		<li id="HALT_ASAP_Command__li_8762544283B84C398AA34A9F3B2939A7"><a name="HALT_ASAP_Command__li_8762544283B84C398AA34A9F3B2939A7"><!-- --></a>If you run this command
+		  without any options, the defaults are restored. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#HALT">HALT
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_H-ref.html#Commands_and_Macros_H" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “H”.">Commands and Macros (H)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Refraction_Reflection_Controls-ref.html" title="The HALT command and the following interface controls become the defaults used by any object for which they are not explicitly set.">Refraction/Reflection Controls</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/CUTOFF_ASAP-cmdref.html" title="Sets the conditions controlling ray termination.">CUTOFF (ASAP Command)</a></div>
+<div><a href="../Commands/DECOMPOSE_ASAP-cmdref.html" title="Decomposes an existing field into a new set of Gaussian beams.">DECOMPOSE (ASAP Command)</a></div>
+<div><a href="../Commands/GAUSSIAN_ASAP-cmdref.html" title="Creates a beam set simulating a coherent astigmatic Gaussian mode.">GAUSSIAN (ASAP Command)</a></div>
+<div><a href="../Commands/OBJECT_ASAP-cmdref.html" title="Defines an object based upon previously defined entities.">OBJECT (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="ALTER (Lens Modifier) (ASAP Command)"/>
+<meta name="abstract" content="Alters lens conicoid database."/>
+<meta name="description" content="Alters lens conicoid database."/>
+<meta name="DC.subject" content="ALTER (Lens Modifier) (ASAP Command), lens modifier, lens conicoid database, conicoid, alter, conicoid, modify"/>
+<meta name="keywords" content="ALTER (Lens Modifier) (ASAP Command), lens modifier, lens conicoid database, conicoid, alter, conicoid, modify"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ALTER_Edge_Modifier_ASAP-cmdref.html#ALTER_Edge_Modifier_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ALTER_Surface_Modifier_ASAP-cmdref.html#ALTER_Surface_Modifier_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REPEAT_ASAP-cmdref.html#REPEAT_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Lens_Modifiers-conc.html#Lens_Modifiers"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_A-ref.html#Commands_and_Macros_A"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="ALTER_Lens_Modifier_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>ALTER (Lens Modifier) (ASAP Command)</title>
+</head>
+<body id="ALTER_Lens_Modifier_ASAP_Command"><a name="ALTER_Lens_Modifier_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>ALTER (Lens Modifier) (ASAP Command)</h5></span>
+	
+	
+	<div><p>Alters lens conicoid database. </p>
+
+		<p><b>Syntax 1</b>
+		</p>
+
+		<pre class="codeblock">
+ALTER n [ n' [ n"  ] ] ... AX a [ b [ j ] ] ...
+                           AY
+                           AZ
+      </pre>
+
+		<p><b>Syntax 2</b>
+		</p>
+
+		<pre class="codeblock">
+ALTER n [ n' [ n"  ] ] data a [ b [ j ] ] data' a' [ b' [ j' ] ] ...
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n n'</span></td><td><span>conicoid range (n' is defaulted to n)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a, b, j</span></td><td><span>arbitrary input parameters</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>AX, AY, AZ</span></td><td><span>axis of rotation of conicoid</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<p><b>Syntax 1:</b>
+		</p>
+
+		<br/><a name="ALTER_Lens_Modifier_ASAP_Command__ul_E0FF3483C1794F93BA1AE6561FCB181D"><!-- --></a><ol id="ALTER_Lens_Modifier_ASAP_Command__ul_E0FF3483C1794F93BA1AE6561FCB181D">
+			<li id="ALTER_Lens_Modifier_ASAP_Command__li_B1396ED15E194B86B1CB430A9F56E0FD"><a name="ALTER_Lens_Modifier_ASAP_Command__li_B1396ED15E194B86B1CB430A9F56E0FD"><!-- --></a>Rotates the given conicoids about the X, Y
+				or Z axis, respectively, through an angle <b>a</b> degrees relative to
+				the position that is a distance <b>b</b> (default 0) center of the
+					<b>j</b>th conicoid (default itself). </li>
+
+		</ol>
+
+		<p><b>Syntax 2:</b>
+		</p>
+
+		<br/><a name="ALTER_Lens_Modifier_ASAP_Command__ul_4E71030A9C034D0B9762E123B56BF0C5"><!-- --></a><ol id="ALTER_Lens_Modifier_ASAP_Command__ul_4E71030A9C034D0B9762E123B56BF0C5">
+			<li id="ALTER_Lens_Modifier_ASAP_Command__li_AA24BF133D024A4AAF8762954A608485"><a name="ALTER_Lens_Modifier_ASAP_Command__li_AA24BF133D024A4AAF8762954A608485"><!-- --></a>Alters data on a set of conicoids allowing,
+				for example, pickups on other conicoids. </li>
+
+			<li id="ALTER_Lens_Modifier_ASAP_Command__li_26CE0DC4B1E145CB8841EC55C9313060"><a name="ALTER_Lens_Modifier_ASAP_Command__li_26CE0DC4B1E145CB8841EC55C9313060"><!-- --></a>
+				Conicoids <b>n</b> through <b>n'</b> (default <b>n</b>) for the current lens are altered as follows for i=n to <b>n'</b> by <b>n"</b> (with defaults <b>b</b>=0,
+				<b>j</b>=i):
+				<pre class="codeblock">  data  (I) = a +  b  data  (j)
+  data' (I) = a' + b' data' (j')</pre>
+
+			</li>
+
+		</ol>
+
+		<p>The <b>data</b> parameters are as shown: </p>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Data</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X</span></td><td><span>x coordinate of vertex position</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Y</span></td><td><span>y coordinate of vertex position</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Z</span></td><td><span>z coordinate of vertex position</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>U</span></td><td><span>x component of vertex normal</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>V</span></td><td><span>y component of vertex normal</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>W</span></td><td><span>z component of vertex normal</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>H</span></td><td><span>Aperture height</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>C R</span></td><td><span>Vertex curvature or radius</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>K</span></td><td><span> Conic constant (4th-order aspheric if curvature = 0)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>O</span></td><td><span>Obscuration (hole) ratio</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>M</span></td><td><span>Medium number</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>C0 R0</span></td><td><span>Curvature or radius of subtracted parabola</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>S</span></td><td><span>Aspheric scale factor</span></td></tr></tbody></table>
+		<p>
+			<a href="../example_scripts.html#ALTER">ALTER Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_A-ref.html#Commands_and_Macros_A" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “A”.">Commands and Macros (A)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Lens_Modifiers-conc.html#Lens_Modifiers" title="Unlike surfaces and edges that have numerous modifiers, only two types of modifiers are supported for lens entities: linear transformations and alteration of specific lens construction information (using the ALTER (Lens Modifier) (ASAP Command).">Lens Modifiers</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/ALTER_Edge_Modifier_ASAP-cmdref.html#ALTER_Edge_Modifier_ASAP_Command" title="Alters specific edge-points data. Modifies the shape of an edge-based entity.">ALTER (Edge Modifier) (ASAP Command)</a></div>
+<div><a href="../Commands/ALTER_Surface_Modifier_ASAP-cmdref.html#ALTER_Surface_Modifier_ASAP_Command" title="Edits specific polynomial coefficients to form a differently shaped or oriented surface.">ALTER (Surface Modifier) (ASAP Command)</a></div>
+<div><a href="../Commands/REPEAT_ASAP-cmdref.html#REPEAT_ASAP_Command" title="Repeats previously defined entity data.">REPEAT (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

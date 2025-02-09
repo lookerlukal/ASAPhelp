@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="EMITTING Source Overview"/>
+<meta name="abstract" content="The following commands randomly create rays within a specified volume. The flux of each ray can be modified via an &#34;apodization&#34; function programmed by the user USERAPOD ANGLES/BOTH commands, EMITTING CONE/PYRAMID and EMITTING BOX/SPHEROID."/>
+<meta name="description" content="The following commands randomly create rays within a specified volume. The flux of each ray can be modified via an &#34;apodization&#34; function programmed by the user USERAPOD ANGLES/BOTH commands, EMITTING CONE/PYRAMID and EMITTING BOX/SPHEROID."/>
+<meta name="DC.subject" content="EMITTING Source Overview, source, EMITTING overview"/>
+<meta name="keywords" content="EMITTING Source Overview, source, EMITTING overview"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_DEF-ref.html#Reference_DEF"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ACCURACY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/RAYSET_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SEED_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SOURCE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SOURCE_WAVEFUNC_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/XMEMORY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/GRID_Command_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/SOURCE_Command_Overview-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="EMITTING_Source_Overview"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>EMITTING Source Overview</title>
+</head>
+<body id="EMITTING_Source_Overview"><a name="EMITTING_Source_Overview"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>EMITTING Source Overview</h5></span> 
+   
+   
+  <div><p>The following commands randomly create rays within a specified
+	 volume. The flux of each ray can be modified via an "apodization" function
+	 programmed by the user 
+	 <b>USERAPOD ANGLES/BOTH</b> commands, 
+	 <b>EMITTING CONE/PYRAMID</b> and 
+	 <b>EMITTING BOX/SPHEROID</b>. 
+  </p>
+ 
+	 <div class="section" id="EMITTING_Source_Overview__section_C60677ECBDDD4B819C648110F2679CE7"><a name="EMITTING_Source_Overview__section_C60677ECBDDD4B819C648110F2679CE7"><!-- --></a> 
+		<p>Extended sources are natural emitters radiating randomly in position
+		  and direction, with far-field patterns that are not always isotropic. These
+		  kinds of emitters are difficult to simulate using the 
+		  <b>GRID</b> and 
+		  <b>RAYSET</b> commands. 
+		</p>
+ 
+		<p>The fundamental command is the 
+		  <b>EMITTING</b> command and its accompanying forms. Since
+		  it sets up both ray position and ray direction data (in a random manner to
+		  simulate natural emitters such as blackbody radiators), it effectively replaces
+		  the usual 
+		  <b>GRID</b> and 
+		  <b>SOURCE</b> commands. However, the definition of extended
+		  sources basically follows the same prescription, in terms of property
+		  definition, as point sources. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="EMITTING_Source_Overview__section_E28637BE9365426F97554317717AB183"><a name="EMITTING_Source_Overview__section_E28637BE9365426F97554317717AB183"><!-- --></a><span style="color: #2b6eb5"><h5>Simulating Random Emission</h5></span> 
+		 
+		<p>The definition is best accomplished with many rays. Most applications
+		  probably require in excess of 50,000 rays. (Optionally, you can use 
+		  <b>XMEMORY MIN</b> and 
+		  <b>ACCURACY LOW</b> to speed up ray trace times.) A large
+		  number of rays is required to reduce the finite sampling error of the
+		  calculation. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="EMITTING_Source_Overview__section_A3A2962FEFAB48FF91D375C110A55FB1"><a name="EMITTING_Source_Overview__section_A3A2962FEFAB48FF91D375C110A55FB1"><!-- --></a><span style="color: #2b6eb5"><h5>Signal-to-Noise Ratio</h5></span> 
+		 
+		<p>As an estimate of the error based entirely on ray statistics, the
+		  signal-to-noise ratio is traceable to a Bernoulli trial sequence. The
+		  signal-to-noise ratio is statistically defined as the ratio of the distribution
+		  mean to the square root of the distribution variance within an energy counting
+		  bucket. For a Bernoulli trial sequence, the signal to noise ratio is: 
+		</p>
+ 
+		<p><br/><a name="EMITTING_Source_Overview__image_53FBD10A19A84EC7AB223578DF91D72E"><!-- --></a><img id="EMITTING_Source_Overview__image_53FBD10A19A84EC7AB223578DF91D72E" src="../Equations/EMITTING_Source_equation1all.gif" width="487" height="318"/><br/> 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="EMITTING_Source_Overview__section_37BA3436A4AC453985914F1A5AA3A8FA"><a name="EMITTING_Source_Overview__section_37BA3436A4AC453985914F1A5AA3A8FA"><!-- --></a><span style="color: #2b6eb5"><h5>Poisson Distribution</h5></span> 
+		 
+		<p>In the case of a small probability of a ray getting to the detector,
+		  that is, p&lt;&lt;1, the statistical error reduces to the mean and variances of
+		  a Poisson distribution. The Poisson distribution is the limiting case of the
+		  Bernoulli trial sequence under this condition. The noise-to-signal ratio
+		  becomes: 
+		  <br/><a name="EMITTING_Source_Overview__image_7078A1D1FF664127AB65CEE171FF8169"><!-- --></a><img id="EMITTING_Source_Overview__image_7078A1D1FF664127AB65CEE171FF8169" src="../Equations/EMITTING_Source_equation2.gif" width="131" height="68"/><br/> 
+		</p>
+ 
+		<p>When other cascading effects such as source apodization and system
+		  transmission are accounted for, the noise-to- signal ratio in an
+		  energy-counting bucket becomes: 
+		  <br/><a name="EMITTING_Source_Overview__image_78FD5BB371534122856FC6A964727DAE"><!-- --></a><img id="EMITTING_Source_Overview__image_78FD5BB371534122856FC6A964727DAE" src="../Equations/EMITTING_Source_equation3definitions.gif" width="477" height="156"/><br/>
+		</p>
+ 
+		<p> 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="EMITTING_Source_Overview__section_644952D6BCE84CF9B60ACB599245E04E"><a name="EMITTING_Source_Overview__section_644952D6BCE84CF9B60ACB599245E04E"><!-- --></a><span style="color: #2b6eb5"><h5>Random Number Generator</h5></span> 
+		 
+		<p>The rays created in an 
+		  <b>EMITTING</b> volume have positions and directions
+		  determined by a uniform random number generator. As with all uniform random
+		  number generators, number clumping may occur; that is, many numbers are
+		  generated close to one another. This closeness leads to ray clumping in both
+		  positional and directional coordinates. To help alleviate this problem,
+		  instruct ASAP to generate a quasi-random number sequence. This option does a
+		  better job of filling in ray coordinates. Access this feature by typing 
+		  <kbd class="userinput">SEED i QUASI 
+		  </kbd>where i is up to 40 different sequences. However, the 
+		  <b>QUASI 
+		  </b>option can cause the distributions to acquire a regular
+		  pattern appearance. See the 
+		  <b>SEED</b> command for further details. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="EMITTING_Source_Overview__section_DC77D187677B4AD6A9BAAC7704371CEF"><a name="EMITTING_Source_Overview__section_DC77D187677B4AD6A9BAAC7704371CEF"><!-- --></a><span style="color: #2b6eb5"><h5>Tip</h5></span> 
+		 
+		<p>A 
+		  <b>BEAMS</b> command is not required for definition of
+		  incoherent geometric extended sources. These ASAP sources, by their nature, are
+		  strictly incoherent. 
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_DEF-ref.html#Reference_DEF" title="Reference topics in this section begin with the letters &#34;D-E-F&#34;.">Reference (D-F)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/GRID_Command_Overview-conc.html" title="The GRID command generates a planar distribution of rays, which, in conjunction with the SOURCE command, creates ray data that can be traced in ASAP.">GRID Command Overview</a></div>
+<div><a href="../Concept/SOURCE_Command_Overview-conc.html" title="The SOURCE command establishes the ray propagation direction and its initial optical path length. Use it in conjunction with GRID commands, which establish the initial ray coordinates. You can also use this command to create grids of sources.">SOURCE Command Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/ACCURACY_ASAP-cmdref.html" title="Controls the accuracy of the ray trace algorithm.">ACCURACY (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_ASAP-cmdref.html" title="Creates a composite single-source emitter from several EMITTING volume commands.">EMITTING (ASAP Command)</a></div>
+<div><a href="../Commands/RAYSET_ASAP-cmdref.html" title="Specifies an arbitrary set of rays.">RAYSET (ASAP Command)</a></div>
+<div><a href="../Commands/SEED_ASAP-cmdref.html" title="Initializes the seed for the random number generator.">SEED (ASAP Command)</a></div>
+<div><a href="../Commands/SOURCE_ASAP-cmdref.html" title="Specifies sources for the rays/beams.">SOURCE (ASAP Command)</a></div>
+<div><a href="../Commands/SOURCE_WAVEFUNC_ASAP-cmdref.html" title="Specifies the ray propagation direction using a wavefront function.">SOURCE WAVEFUNC (ASAP Command)</a></div>
+<div><a href="../Commands/XMEMORY_ASAP-cmdref.html" title="Specifies the type and amount of ray data to store, subject to available hardware and operating system limits.">XMEMORY (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

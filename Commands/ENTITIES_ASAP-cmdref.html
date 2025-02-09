@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="ENTITIES (ASAP Command)"/>
+<meta name="abstract" content="Defines mixed geometrical entities without using the EDGE, LENS, or SURFACE commands."/>
+<meta name="description" content="Defines mixed geometrical entities without using the EDGE, LENS, or SURFACE commands."/>
+<meta name="DC.subject" content="ENTITIES (ASAP Command), geometrical entities, mixed, mixed geometrical entities"/>
+<meta name="keywords" content="ENTITIES (ASAP Command), geometrical entities, mixed, mixed geometrical entities"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_E-ref.html#Commands_and_Macros_E"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/BOUNDS_ASAP-cmdref.html#BOUNDS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EDGES_CURVES_ENTITIES_ASAP-cmdref.html#EDGES_CURVES_ENTITIES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/INTERFACE_ASAP-cmdref.html#INTERFACE_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LENSES_ENTITIES_ASAP-cmdref.html#LENSES_ENTITIES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LOCAL_ASAP-cmdref.html#LOCAL_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OBJECT_ASAP-cmdref.html#OBJECT_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SURFACES_FUNCTIONS_ENTITIES_ASAP-cmdref.html#SURFACES_FUNCTIONS_ENTITIES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SWEEP_ASAP-cmdref.html#SWEEP_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Geometric_Entities-conc.html#Geometric_Entities"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Linear_Transformations_for_Edges_Curves-ref.html#Linear_Transformations_for_Edges_Curves"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Linear_Transformations_for_Lenses-ref.html#Linear_Transformations_for_Lenses"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Linear_Transformations_for_Surfaces_Functions-ref.html#Linear_Transformations_for_Surfaces_Functions"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="ENTITIES_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>ENTITIES (ASAP Command)</title>
+</head>
+<body id="ENTITIES_ASAP_Command"><a name="ENTITIES_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>ENTITIES (ASAP Command)</h5></span>
+	
+	
+	<div><p>Defines mixed geometrical entities without using the EDGE, LENS, or SURFACE commands. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+ENTITIES [  OBJECTS  ]
+    lens  …  [ 'name'  ]
+    edge
+    surf
+      entity modifiers (for example, LOCAL, SWEEP)
+    [ object modifiers (for example, INTERFACE, BOUNDS) ]
+    lens' …
+    edge'
+    surf'
+     :
+     </pre>
+
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="ENTITIES_ASAP_Command__ul_1BC96C5479A2412FABB0F6BB78A44DAB"><!-- --></a><ol id="ENTITIES_ASAP_Command__ul_1BC96C5479A2412FABB0F6BB78A44DAB">
+			<li id="ENTITIES_ASAP_Command__li_D310AF240D4344B6BCE596F3E26A74CC"><a name="ENTITIES_ASAP_Command__li_D310AF240D4344B6BCE596F3E26A74CC"><!-- --></a>Begin defining mixed geometrical entities
+				without using the <b>EDGE/CURVE</b>, <b>LENS</b>, or
+					<b>SURFACE/FUNCTION</b> commands. </li>
+
+			<li id="ENTITIES_ASAP_Command__li_FF9D4E2F46BC44F592EFBC99F6AAF25D"><a name="ENTITIES_ASAP_Command__li_FF9D4E2F46BC44F592EFBC99F6AAF25D"><!-- --></a>Optionally, make each subsequently defined
+				entity an object automatically, without using the <b>OBJECT</b> command.
+				This means that only single entity objects can be defined in this manner (although
+					<b>BOUNDS</b> can still be applied if the bounding entities are
+				defined in the normal manner before the <b>ENTITIES OBJECTS</b>
+				command). </li>
+
+			<li id="ENTITIES_ASAP_Command__li_B5FFBD4EDBFE475DB7ECA0685D52AB8A"><a name="ENTITIES_ASAP_Command__li_B5FFBD4EDBFE475DB7ECA0685D52AB8A"><!-- --></a>All entity modifiers (for example, <b>LOCAL</b>, <b>SWEEP</b>) must precede any object modifiers
+				(for example, <b>INTERFACE</b>, <b>BOUNDS</b>). </li>
+
+		</ol>
+
+		<p><b>Example</b>
+		</p>
+
+		<p>The following valid syntax creates objects automatically as entities are given: </p>
+
+		<pre class="codeblock">
+ENT OBJECT 
+PLANE ........... 'BASE'   !! These are just examples of some entities
+TUBE ............ 'WIRE1'  !! that automatically become objects.
+TUBE............. 'WIRE2'
+  REDEFINE COLOR 5         !! This is a modifier for the above object, "WIRE2"
+RETURN                     !! This ends the ENT OBJECT list.
+     </pre>
+
+		<div class="note"><span class="notetitle">Note:</span> 
+			<p>Do not enter <b>ENTITY OBJECT</b>. The correct syntax is: <b>ENT
+					OBJECT</b>. </p>
+
+		</div>
+
+		<p>
+			<a href="../example_scripts.html#ENTITIES">ENTITIES Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_E-ref.html#Commands_and_Macros_E" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “E”.">Commands and Macros (E)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Geometric_Entities-conc.html#Geometric_Entities">Geometric Entities</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Linear_Transformations_for_Edges_Curves-ref.html#Linear_Transformations_for_Edges_Curves" title="Linear transformations change the shape, scaling, or orientation of a geometrical entity (surface, edge, lens, object, group, or rays) by applying a general 4x4 transformation matrix (linear transformations change only the orientation of lenses). Linear transformations that change the location of a geometrical entity are applied to the reference point (see table) of the entity.">Linear Transformations for Edges and Curves</a></div>
+<div><a href="../Reference/Linear_Transformations_for_Lenses-ref.html#Linear_Transformations_for_Lenses" title="Linear transformations change the shape, scaling, or orientation of a geometrical entity (surface, edge, lens, object, group, or rays) by applying a general 4x4 transformation matrix (linear transformations change only the orientation of LENSES). Linear transformations that change the location of a geometrical entity are applied to the reference point (see table) of the entity.">Linear Transformations for Lenses</a></div>
+<div><a href="../Reference/Linear_Transformations_for_Surfaces_Functions-ref.html#Linear_Transformations_for_Surfaces_Functions" title="Linear transformations change the shape, scaling, or orientation of a geometrical entity (surface, edge, lens, object, group, or rays) by applying a general 4x4 transformation matrix (linear transformations change only the orientation of LENSES). Linear transformations that change the location of a geometrical entity are applied to the reference point of the entity (see table below).">Linear Transformations for Surfaces/Functions</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/BOUNDS_ASAP-cmdref.html#BOUNDS_ASAP_Command" title="Assigns surfaces and edges as boundaries to objects.">BOUNDS (ASAP Command)</a></div>
+<div><a href="../Commands/EDGES_CURVES_ENTITIES_ASAP-cmdref.html#EDGES_CURVES_ENTITIES_ASAP_Command" title="Signals ASAP that edge definition commands follow.">EDGES/CURVES/ENTITIES (ASAP Command)</a></div>
+<div><a href="../Commands/INTERFACE_ASAP-cmdref.html#INTERFACE_ASAP_Command" title="Assigns a reflective, refractive or diffractive interface to objects.">INTERFACE (ASAP Command)</a></div>
+<div><a href="../Commands/LENSES_ENTITIES_ASAP-cmdref.html#LENSES_ENTITIES_ASAP_Command" title="Signals ASAP that lens definition commands follow.">LENSES ENTITIES (ASAP Command)</a></div>
+<div><a href="../Commands/LOCAL_ASAP-cmdref.html#LOCAL_ASAP_Command" title="Assigns a local bounding box to the surface/function.">LOCAL (ASAP Command)</a></div>
+<div><a href="../Commands/OBJECT_ASAP-cmdref.html#OBJECT_ASAP_Command" title="Defines an object based upon previously defined entities.">OBJECT (ASAP Command)</a></div>
+<div><a href="../Commands/SURFACES_FUNCTIONS_ENTITIES_ASAP-cmdref.html#SURFACES_FUNCTIONS_ENTITIES_ASAP_Command" title="Signals ASAP that surface definition commands follow.">SURFACES/FUNCTIONS/ENTITIES (ASAP Command)</a></div>
+<div><a href="../Commands/SWEEP_ASAP-cmdref.html#SWEEP_ASAP_Command" title="Specifies the optional sweeping of a curve into a surface.">SWEEP (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Lens Entities in ASAP Macros</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

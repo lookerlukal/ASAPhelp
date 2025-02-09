@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="SPREAD and FIELD Command Differences"/>
+<meta name="abstract" content="The two field/energy distribution commands, SPREAD and FIELD, appear to perform similar calculations (and in fact can perform many of the same calculations), but there are differences described in this topic."/>
+<meta name="description" content="The two field/energy distribution commands, SPREAD and FIELD, appear to perform similar calculations (and in fact can perform many of the same calculations), but there are differences described in this topic."/>
+<meta name="DC.subject" content="SPREAD and FIELD Command Differences, FIELD, command differences with SPREAD, field/energy distribution"/>
+<meta name="keywords" content="SPREAD and FIELD Command Differences, FIELD, command differences with SPREAD, field/energy distribution"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_SZ-ref.html#Reference_SZ"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Slicing_the_Irradiance_Pattern_with_FIELD-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Slicing_the_Irradiance_Pattern_with_SPREAD-conc.html#Slicing_the_Irradiance_Pattern_with_SPREAD"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/SPREAD_FIELD_Calculations_Point_Sources-task.html#SPREAD_FIELD_Calculations_Point_Sources"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DIMENSIONS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FIELD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPREAD_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="SPREAD_and_FIELD_Command_Differences"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>SPREAD and FIELD Command Differences</title>
+</head>
+<body id="SPREAD_and_FIELD_Command_Differences"><a name="SPREAD_and_FIELD_Command_Differences"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>SPREAD and FIELD Command Differences</h5></span>
+	
+	
+	<div><p>The two field/energy distribution commands, <b>SPREAD</b> and <b>FIELD</b>, appear to perform similar calculations (and in fact can perform many
+		of the same calculations), but there are differences described in this topic. </p>
+
+		<div class="section" id="SPREAD_and_FIELD_Command_Differences__section_A528A58047F4449492A7FFEE5F64F4C7"><a name="SPREAD_and_FIELD_Command_Differences__section_A528A58047F4449492A7FFEE5F64F4C7"><!-- --></a>
+			<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Parameter</span></th><th><span>SPREAD Command</span></th><th><span>FIELD Command</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Calculation</span></td><td><span>Real field characteristics</span></td><td><span>Complex field characteristics</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Coherence</span></td><td><span>Both coherent and incoherent field</span></td><td><span>Only coherent field</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Accuracy</span></td><td><span>Exact coherent/incoherent</span></td><td><span>Exact coherent</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Evaluation plane</span></td><td><span>Plane in orthogonal axis</span></td><td><span>Any skew plane</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Multiple λs</span></td><td><span>Sums over all λs incoherently</span></td><td><span>Sums all coherent contributions at all λs</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Polarization</span></td><td><span>Not calculated</span></td><td><span>Calculated</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Units</span></td><td><span>Flux/area, flux/solid angle</span></td><td><span>Flux/area, phase, wavefront, real, and imaginary parts of the complex
+						field </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Scatter</span></td><td><span>Calculated</span></td><td><span>Not calculated</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Resolution</span></td><td><span>Dimensioning of memory (see <b>DIMENSIONS</b> to obtain
+						maximum <b>PIXEL</b> setting)</span></td><td><span>Limited to total of 65536 (data points)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Mode of calculation</span></td><td><span>Block of pixels at once</span></td><td><span>Entire grid at once</span></td></tr></tbody></table>
+			<p>By default, <b>SPREAD</b> and <b>FIELD</b> calculate the
+				energy or peak flux density relative to the local propagation direction at each
+				sample point. Use the <b>IRRADIANCE X, Y, or Z</b> prior to <b>SPREAD</b> or <b>FIELD</b> to calculate the irradiance
+				relative to the given fixed direction for all sample points. </p>
+
+		</div>
+
+	</div>
+
+<div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="../Concept/Slicing_the_Irradiance_Pattern_with_FIELD-conc.html">Slicing the Irradiance Pattern with FIELD</a></strong><br/>
+FIELD does not have a DOWN option like the SPREAD command, but it is possible to obtain the same information by selecting a narrow WINDOW width in the down direction.</li>
+<li class="ulchildlink"><strong><a href="../Concept/Slicing_the_Irradiance_Pattern_with_SPREAD-conc.html#Slicing_the_Irradiance_Pattern_with_SPREAD">Slicing the Irradiance Pattern with SPREAD</a></strong><br/>
+If you do not need to calculate the entire 3D energy distribution, such as when symmetry is expected, it is more expedient and less time consuming to calculate only a slice of the irradiance pattern.</li>
+<li class="ulchildlink"><strong><a href="../Task/SPREAD_FIELD_Calculations_Point_Sources-task.html#SPREAD_FIELD_Calculations_Point_Sources">SPREAD and FIELD Calculations (Point Sources)</a></strong><br/>
+Prior to defining the rays, specify the input listed in this topic.</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_SZ-ref.html#Reference_SZ" title="Reference topics in this section begin with the letters &#34;S&#34; to &#34;Z&#34;.">Reference (S-Z)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DIMENSIONS_ASAP-cmdref.html" title="Displays a table of maximum array dimensions for the most important program arrays.">DIMENSIONS (ASAP Command)</a></div>
+<div><a href="../Commands/FIELD_ASAP-cmdref.html" title="Calculates the exact complex field distribution.">FIELD (ASAP Command)</a></div>
+<div><a href="../Commands/SPREAD_ASAP-cmdref.html" title="Calculates the exact coherent/incoherent energy distribution.">SPREAD (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

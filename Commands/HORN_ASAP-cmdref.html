@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="HORN (ASAP Command)"/>
+<meta name="abstract" content="Creates a generalized tube with polynomial profiles and elliptical/rectangular cross-sections."/>
+<meta name="description" content="Creates a generalized tube with polynomial profiles and elliptical/rectangular cross-sections."/>
+<meta name="DC.subject" content="HORN (ASAP Command), tube, creating generalized tube"/>
+<meta name="keywords" content="HORN (ASAP Command), tube, creating generalized tube"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_H-ref.html#Commands_and_Macros_H"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LOCAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TUBE_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="HORN_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>HORN (ASAP Command)</title>
+</head>
+<body id="HORN_ASAP_Command"><a name="HORN_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>HORN (ASAP Command)</h5></span>
+	
+	
+	<div><p>Creates a generalized tube with polynomial profiles and elliptical/rectangular
+		cross-sections. </p>
+
+		<p><b>Syntax 1</b>
+		</p>
+
+		<pre class="codeblock">
+HORN X x r [ r' r" ... ] [ FIT n x [ x'  x"    ... ] ]
+     Y y                 [           y [ y' y" ... ] ]
+     Z z                 [           z [ z' z" ... ] ]
+</pre>
+
+		<p><b>Syntax 2 (see Remarks)</b>
+		</p>
+
+		<pre class="codeblock">
+HORN Z z x0 [ x1 x2 ... ] [   FIT n   z0  [ z1  z2  ... ] ]
+         y0 [ y1 y2 ... ] [       n' z0'  [ z1' z2' ... ] ]
+         q0 [ q1 q2 ... ] [       n" z0"  [ z1" z2" .. ] ]
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X, Y or Z</span></td><td><span>axis of symmetry </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x, y or z</span></td><td><span>location along coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>r r' r"...</span></td><td><span>radial coefficients</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>FIT</span></td><td><span>flag to fit data</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span>order number for the polynomial</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x x' x"..., y y' y"...,or z z' z"...</span></td><td><span>data points on surface</span></td></tr></tbody></table>
+		<p><b>Reference Point</b>
+		</p>
+
+		<p>At location along coordinate axis. </p>
+
+		<p><b>Surface Normal</b>
+		</p>
+
+		<p>Radially outward from the axis. </p>
+
+		<p><b>Autolimiting</b>
+		</p>
+
+		<p>Requires a <b>LOCAL</b> modifier if a <b>FIT</b> is not being
+			done. </p>
+
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="HORN_ASAP_Command__ul_1E85510CCCF44F15A60647591DEB515D"><!-- --></a><ol id="HORN_ASAP_Command__ul_1E85510CCCF44F15A60647591DEB515D">
+			<li id="HORN_ASAP_Command__li_732207AD941E47258B8B25CA44862552"><a name="HORN_ASAP_Command__li_732207AD941E47258B8B25CA44862552"><!-- --></a>Creates a surface symmetric about the given
+				axis with a radial profile determined by the following polynomial in the radial
+				distance squared: <p>
+					<br/><a name="HORN_ASAP_Command__image_9D98064953294CCEB9486E6C6FDD6403"><!-- --></a><div class="imagecenter"><img id="HORN_ASAP_Command__image_9D98064953294CCEB9486E6C6FDD6403" src="../Equations/HORN_equation1.gif" width="216" height="30"/></div><br/>
+				</p>
+<p>where <b>d</b> represents the particular axial distance coordinate relative
+					to the reference point (and therefore d is measured in the local coordinate
+					system). </p>
+</li>
+
+			<li id="HORN_ASAP_Command__li_DBCA416F273948CD8B383545BA5CCE63"><a name="HORN_ASAP_Command__li_DBCA416F273948CD8B383545BA5CCE63"><!-- --></a>The program can also <b>FIT</b>
+				the given set of radial and axial positions to an nth-order polynomial (<b>n</b> less than or equal to 10). </li>
+
+			<li id="HORN_ASAP_Command__li_1B3824C6E056429F9E6BD493CE9A0BA3"><a name="HORN_ASAP_Command__li_1B3824C6E056429F9E6BD493CE9A0BA3"><!-- --></a> Rectangular/elliptical horns with
+				different polynomial profiles in the two cross-sections can be created with
+				variations of the following format (only the <b>Z</b> axis form is shown
+				for sake of brevity):
+					<pre class="codeblock">
+HORN Z z x0 [ x1 x2 ... ] [ FIT n   z0 [ z1  z2 ... ] ]
+         y0 [ y1 y2 ... ] [     n'  z0' [ z1' z2' ... ] ]
+         q0 [ q1 q2 ... ] [     n" z0" [ z1" z2" .. ] ]
+         </pre>
+<p>
+					<br/><a name="HORN_ASAP_Command__image_E43CD3DE8DA24E288B546EEDA8FBB768"><!-- --></a><div class="imagecenter"><img id="HORN_ASAP_Command__image_E43CD3DE8DA24E288B546EEDA8FBB768" src="../Equations/HORN_equation2.gif" width="296" height="96"/></div><br/>
+				</p>
+<p>The <b>q</b> parameter controls whether the cross-section is
+					elliptical, rectangular, or something in between (See the TUBE command for more
+					details). As before, each one of these polynomials can be determined by a least
+					squares <b>FIT</b> to a set of values and positions. </p>
+</li>
+
+			<li id="HORN_ASAP_Command__li_75CE3D5928904070B3D597485BF97EA5"><a name="HORN_ASAP_Command__li_75CE3D5928904070B3D597485BF97EA5"><!-- --></a> Either way you do it, remember that the
+				coefficients or the fit points are relative to the reference point (the third
+				entry). The following restrictions on the polynomial orders apply: <p/>
+<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span> less than or equal to 10</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n'</span></td><td><span> less than or equal to 8</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n+n'</span></td><td><span> less than or equal to 10</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n"</span></td><td><span> less than or equal to 6</span></td></tr></tbody></table></li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#HORN">HORN Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_H-ref.html#Commands_and_Macros_H" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “H”.">Commands and Macros (H)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/LOCAL_ASAP-cmdref.html" title="Assigns a local bounding box to the surface/function.">LOCAL (ASAP Command)</a></div>
+<div><a href="../Commands/TUBE_ASAP-cmdref.html" title="Creates a tube with rectangular/elliptical cross-sections.">TUBE (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

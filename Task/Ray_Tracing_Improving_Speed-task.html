@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Ray Tracing - Improving Speed"/>
+<meta name="abstract" content="The ray trace algorithm used in ASAP is optimized for speed and accuracy. This topic describes how you can speed up the process."/>
+<meta name="description" content="The ray trace algorithm used in ASAP is optimized for speed and accuracy. This topic describes how you can speed up the process."/>
+<meta name="DC.subject" content="Ray Tracing - Improving Speed, speed, improving in ASAP, algorithm, ray trace"/>
+<meta name="keywords" content="Ray Tracing - Improving Speed, speed, improving in ASAP, algorithm, ray trace"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Ray_Tracing_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ARROWS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/IO_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PARABASAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SEARCH_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TRACE_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Ray_Tracing_Improving_Speed"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Ray Tracing - Improving Speed</title>
+</head>
+<body id="Ray_Tracing_Improving_Speed"><a name="Ray_Tracing_Improving_Speed"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Ray Tracing - Improving Speed</h5></span> 
+   
+   
+  <div><p>The ray trace algorithm used in ASAP is optimized for speed and
+	 accuracy. This topic describes how you can speed up the process. 
+  </p>
+ 
+	 <div class="section" id="Ray_Tracing_Improving_Speed__context_8EF8464BBBF64386AA624C6F14D99AD0"><a name="Ray_Tracing_Improving_Speed__context_8EF8464BBBF64386AA624C6F14D99AD0"><!-- --></a> 
+		<br/><a name="Ray_Tracing_Improving_Speed__ul_C50C772E06C54D47813F4CFB508C51BC"><!-- --></a><ul id="Ray_Tracing_Improving_Speed__ul_C50C772E06C54D47813F4CFB508C51BC"> 
+		  <li id="Ray_Tracing_Improving_Speed__li_FF1F1F70B1EC4F08A4DF417255A61539"><a name="Ray_Tracing_Improving_Speed__li_FF1F1F70B1EC4F08A4DF417255A61539"><!-- --></a>Trace only as many rays as
+			 are needed. There are many instances when a single ray may provide sufficient
+			 information about the properties of a system. 
+		  </li>
+ 
+		  <li id="Ray_Tracing_Improving_Speed__li_14118E4BAA4949089E76E9DDAD190975"><a name="Ray_Tracing_Improving_Speed__li_14118E4BAA4949089E76E9DDAD190975"><!-- --></a>Use 
+			 <b>LENS/OBJECTS 
+			 </b> where appropriate. Since rays must propagate through lens
+			 conicoids sequentially, ASAP is not slowed down by searching. 
+		  </li>
+ 
+		  <li id="Ray_Tracing_Improving_Speed__li_868F44609A7149D19CA404923DD3791A"><a name="Ray_Tracing_Improving_Speed__li_868F44609A7149D19CA404923DD3791A"><!-- --></a>Use 
+			 <b>SEARCH</b> to optimize the search strategy. This
+			 method may require modifying the input so that the objects are numbered in a
+			 particular manner. 
+		  </li>
+ 
+		  <li id="Ray_Tracing_Improving_Speed__li_D7A059CB9DC04DE683D6E8D8B2EE09F3"><a name="Ray_Tracing_Improving_Speed__li_D7A059CB9DC04DE683D6E8D8B2EE09F3"><!-- --></a>Do not use 
+			 <b>PARABASAL</b> rays unless you need them; they are
+			 traced as rigorously as base rays. 
+		  </li>
+ 
+		  <li id="Ray_Tracing_Improving_Speed__li_C0E8A9AD59BD43B29970264B337F86CD"><a name="Ray_Tracing_Improving_Speed__li_C0E8A9AD59BD43B29970264B337F86CD"><!-- --></a>Turn 
+			 <b>ARROWS OFF</b> to keep the plot files smaller (ray
+			 plot data is only one/fifth as large with 
+			 <b>ARROWS OFF</b> ). 
+		  </li>
+ 
+		  <li id="Ray_Tracing_Improving_Speed__li_49B508BF5CF543D4A333D46479874B3A"><a name="Ray_Tracing_Improving_Speed__li_49B508BF5CF543D4A333D46479874B3A"><!-- --></a>Do not do a 
+			 <b>TRACE PLOT LIST 
+			 </b>unless you need to because it causes excessive disk I/O. 
+		  </li>
+ 
+		  <li id="Ray_Tracing_Improving_Speed__li_56612679C70B4419B4D8AF4033753CB2"><a name="Ray_Tracing_Improving_Speed__li_56612679C70B4419B4D8AF4033753CB2"><!-- --></a>If you are solely
+			 interested in screen graphics and do not want to save the graphics files, then
+			 turn off the 2D graphics file with 
+			 <b>$IO PLOT CANCEL 
+			 </b>, and turn off the 3D vector file with 
+			 <b>$IO VECTOR CANCEL 
+			 </b>. 
+		  </li>
+ 
+		</ul>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Ray_Tracing_Overview-conc.html" title="Ray tracing is accomplished by the RAY and TRACE commands. The fundamental difference between these commands is the permanence of the rays.">Ray Tracing Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/ARROWS_ASAP-cmdref.html" title="Toggles between displaying arrowhead on rays and not displaying them.">ARROWS (ASAP Command)</a></div>
+<div><a href="../Commands/IO_macro_ASAP-cmdref.html" title="Controls I/O redirection.">$IO (ASAP Macro)</a></div>
+<div><a href="../Commands/PARABASAL_ASAP-cmdref.html" title="Sets the number of parabasal rays.">PARABASAL (ASAP Command)</a></div>
+<div><a href="../Commands/SEARCH_ASAP-cmdref.html" title="Sets the local and global object intersection strategy.">SEARCH (ASAP Command)</a></div>
+<div><a href="../Commands/TRACE_ASAP-cmdref.html" title="Traces all currently selected rays in storage.">TRACE (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

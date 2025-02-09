@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="FORM (ASAP Command)"/>
+<meta name="abstract" content="Controls the form of the current distribution data."/>
+<meta name="description" content="Controls the form of the current distribution data."/>
+<meta name="DC.subject" content="FORM (ASAP Command), distribution data, form of, plotting distribution data"/>
+<meta name="keywords" content="FORM (ASAP Command), distribution data, form of, plotting distribution data"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_F-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DISPLAY_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="FORM_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>FORM (ASAP Command)</title>
+</head>
+<body id="FORM_ASAP_Command"><a name="FORM_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>FORM (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Controls the form of the current distribution data. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">FORM [ f ] [ 'flabel' ]</pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>f</span></td><td><span>controls the form of the data to be plotted
+			 (default=1)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>flabel</span></td><td><span>new label for functional data</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="FORM_ASAP_Command__ul_E4DA9029AB9E4A69BF22C495B98D0938"><!-- --></a><ol id="FORM_ASAP_Command__ul_E4DA9029AB9E4A69BF22C495B98D0938"> 
+		<li id="FORM_ASAP_Command__li_65B93A26DF4E44E0A62B699A65CDBE7A"><a name="FORM_ASAP_Command__li_65B93A26DF4E44E0A62B699A65CDBE7A"><!-- --></a>Either raises the data in
+		  the current distribution data file to a power or puts it into log (base 10)
+		  space. 
+		</li>
+ 
+		<li id="FORM_ASAP_Command__li_A9C39BBDDE664FD0A9A64E8639138936"><a name="FORM_ASAP_Command__li_A9C39BBDDE664FD0A9A64E8639138936"><!-- --></a>The default value of 
+		  <b>f</b> is one, which does nothing to the data. 
+		</li>
+ 
+		<li id="FORM_ASAP_Command__li_A40DCCA153EB4EED9510D17C8D6D68E5"><a name="FORM_ASAP_Command__li_A40DCCA153EB4EED9510D17C8D6D68E5"><!-- --></a>If 
+		  <b>f</b> is greater than zero, the data is raised to that
+		  power (that is, 
+		  <b>FORM .5</b> takes the square root of the distribution
+		  data) before plotting. 
+		</li>
+ 
+		<li id="FORM_ASAP_Command__li_DFE111F5BA15455695AC87CD16E5BBCE"><a name="FORM_ASAP_Command__li_DFE111F5BA15455695AC87CD16E5BBCE"><!-- --></a>If less than zero, the
+		  common logarithm of the data is plotted with 
+		  <b>f</b> setting a lower cutoff relative to the data
+		  maximum. 
+		</li>
+ 
+		<li id="FORM_ASAP_Command__li_7B56C85391F94F648927846EB722F9ED"><a name="FORM_ASAP_Command__li_7B56C85391F94F648927846EB722F9ED"><!-- --></a>If the distribution has any
+		  negative values in it, a bias is added to make all values greater than or equal
+		  to zero before the requested operation takes place. 
+		</li>
+ 
+		<li id="FORM_ASAP_Command__li_08E20AE90F6E425A93EAD585245CEB11"><a name="FORM_ASAP_Command__li_08E20AE90F6E425A93EAD585245CEB11"><!-- --></a>Use 
+		  <b>flabel</b> to relabel the functional data. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#FORM">FORM
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_F-ref.html" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “F”.">Commands and Macros (F)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DISPLAY_ASAP-cmdref.html" title="Reads previously created distribution data files so that they can be modified.">DISPLAY (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

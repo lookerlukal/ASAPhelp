@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="LAMBERTIAN (ASAP Command)"/>
+<meta name="abstract" content="Creates a Lambertian scatter model."/>
+<meta name="description" content="Creates a Lambertian scatter model."/>
+<meta name="DC.subject" content="LAMBERTIAN (ASAP Command), scatter model, Lambertian"/>
+<meta name="keywords" content="LAMBERTIAN (ASAP Command), scatter model, Lambertian"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_L-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MINMAX_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MODELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ROUGHNESS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Scatter_Models-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="LAMBERTIAN_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>LAMBERTIAN (ASAP Command)</title>
+</head>
+<body id="LAMBERTIAN_ASAP_Command"><a name="LAMBERTIAN_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>LAMBERTIAN (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Creates a Lambertian scatter model. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">LAMBERTIAN t [ PLOT [ a a' ... ] ]</pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>t</span></td><td><span>total hemispherical diffuse scatter ratio (less than
+			 1)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>PLOT</span></td><td><span>plots the model in log(b-bo) and angle space</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a a' ...</span></td><td><span>user-defined degree specular angles</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="LAMBERTIAN_ASAP_Command__ul_3D667104EC324FD187B99E0CE8AF5029"><!-- --></a><ol id="LAMBERTIAN_ASAP_Command__ul_3D667104EC324FD187B99E0CE8AF5029"> 
+		<li id="LAMBERTIAN_ASAP_Command__li_FAF2D5814A874A2DB9DEEAB00FC641BD"><a name="LAMBERTIAN_ASAP_Command__li_FAF2D5814A874A2DB9DEEAB00FC641BD"><!-- --></a>Use with importance area
+		  sampling. 
+		</li>
+ 
+		<li id="LAMBERTIAN_ASAP_Command__li_B3A25644EE334825B4EE176F5BDEECC0"><a name="LAMBERTIAN_ASAP_Command__li_B3A25644EE334825B4EE176F5BDEECC0"><!-- --></a>The 
+		  <b>PLOT</b> option plots the model (common base 10
+		  logarithm of the BSDF) for up to seven specular angles in ascending order
+		  (default 0, 15, 30, 45, 60, 75, 89.9 degrees). The current 
+		  <b>PIXELS</b> setting controls the resolution of these
+		  plots in direction cosine space. 
+		</li>
+ 
+		<li id="LAMBERTIAN_ASAP_Command__li_E46FF768432B4ED5A1BA340BEBB6F26A"><a name="LAMBERTIAN_ASAP_Command__li_E46FF768432B4ED5A1BA340BEBB6F26A"><!-- --></a>The BSDF is independent of
+		  wavelength, incidence direction, and scatter direction. 
+		</li>
+ 
+		<li id="LAMBERTIAN_ASAP_Command__li_458C0D2C1EC4481DAF9613BAC0CBD19B"><a name="LAMBERTIAN_ASAP_Command__li_458C0D2C1EC4481DAF9613BAC0CBD19B"><!-- --></a>Creates a distribution file
+		  name_angle.dis for each of these angles. 
+		</li>
+ 
+		<li id="LAMBERTIAN_ASAP_Command__li_1B283F749A974A3F865CF2409530671D"><a name="LAMBERTIAN_ASAP_Command__li_1B283F749A974A3F865CF2409530671D"><!-- --></a>The command argument, 
+		  <b>MINMAX</b> may be used to set the minimum and maximum
+		  values of the BSDF for this specific model. 
+		</li>
+ 
+		<li id="LAMBERTIAN_ASAP_Command__li_16AAAE1FACCE4F118C486A81D3C8AA29"><a name="LAMBERTIAN_ASAP_Command__li_16AAAE1FACCE4F118C486A81D3C8AA29"><!-- --></a><b>t</b> does
+		  not affect 
+		  <b>ROUGHNESS</b> models, but is still necessary for the
+		  command to run. You may leave the value as 1. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#LAMBERTIAN">LAMBERTIAN
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+  <div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_L-ref.html" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letters &#34;J&#34; to &#34;L&#34;.">Commands and Macros (J-L)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Scatter_Models-ref.html" title="ASAP supports the scatter models listed in this topic for wide-angle (far from specular) scatter.">Scatter Models</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/MINMAX_arg_ASAP-cmdref.html" title="Sets BSDF bounding.">MINMAX (ASAP Command Argument)</a></div>
+<div><a href="../Commands/MODELS_ASAP-cmdref.html" title="Creates a scattering model.">MODELS (ASAP Command)</a></div>
+<div><a href="../Commands/PIXELS_ASAP-cmdref.html" title="Sets the resolution for graphics and calculations.">PIXELS (ASAP Command)</a></div>
+<div><a href="../Commands/ROUGHNESS_ASAP-cmdref.html" title="Assigns a roughness to the entity of an object, and conserves energy between specular and scattered beams.">ROUGHNESS (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for the technical publication, Stray Light Analysis with ASAP</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Stray Light
+		  Analysis in ASAP, at http://www.breault.com/k-base.php 
+		</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

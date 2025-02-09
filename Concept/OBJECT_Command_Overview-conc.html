@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="OBJECT Command Overview"/>
+<meta name="abstract" content="In ASAP, an object is a bounded physical entity with optical properties. The OBJECT command associates information from the optical property databases with the system geometry databases (MEDIA, COATINGS, MODELS, SURFACES, EDGES, LENSES, and others). Objects are subsequently constructed from these databases."/>
+<meta name="description" content="In ASAP, an object is a bounded physical entity with optical properties. The OBJECT command associates information from the optical property databases with the system geometry databases (MEDIA, COATINGS, MODELS, SURFACES, EDGES, LENSES, and others). Objects are subsequently constructed from these databases."/>
+<meta name="DC.subject" content="OBJECT Command Overview, optical property databases, OBJECT, object, constructing from databases"/>
+<meta name="keywords" content="OBJECT Command Overview, optical property databases, OBJECT, object, constructing from databases"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EDGES_CURVES_ENTITIES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LOCAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MODELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OBJECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ROTATE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SHIFT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SURFACES_FUNCTIONS_ENTITIES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Geometric_Entities-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/INTERFACE_Command_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_OR-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="OBJECT_Command_Overview"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>OBJECT Command Overview</title>
+</head>
+<body id="OBJECT_Command_Overview"><a name="OBJECT_Command_Overview"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>OBJECT Command Overview</h5></span>
+	
+	
+	<div><p>In ASAP, an object is a bounded physical entity with optical properties. The <b>OBJECT</b> command associates information from the optical property databases
+		with the system geometry databases (<b>MEDIA, COATINGS, MODELS, SURFACES, EDGES,
+			LENSES</b>, and others). Objects are subsequently constructed from these
+		databases. </p>
+
+		<p>Objects are defined in a single global coordinate system with each object existing as an
+			independent entity that may be transformed (rotated, shifted, and so on) without
+			altering the locations of other objects. </p>
+
+		<p>Rays/beams intersect objects and are absorbed or redirected by them (that is, the object
+			is what is ray traced in ASAP, not surfaces, edges, or lenses). </p>
+
+		<div class="section" id="OBJECT_Command_Overview__section_F2787732FD5F4507ADE695CE0644A7AF"><a name="OBJECT_Command_Overview__section_F2787732FD5F4507ADE695CE0644A7AF"><!-- --></a><span style="color: #2b6eb5"><h5>Construction of Objects from Data Bases</h5></span>
+			
+			<p>The physical shape of the object is determined from the surface, edge, or lens
+				databases (or some combination). </p>
+
+			<p>The physical bounds of the object are defined by: </p>
+
+			<br/><a name="OBJECT_Command_Overview__ul_CBD977F8D20D454BA8493B6E06ECDC9E"><!-- --></a><ul id="OBJECT_Command_Overview__ul_CBD977F8D20D454BA8493B6E06ECDC9E">
+				<li id="OBJECT_Command_Overview__li_87A1E30EDBE242FF93D222F35A0DF3A5"><a name="OBJECT_Command_Overview__li_87A1E30EDBE242FF93D222F35A0DF3A5"><!-- --></a>Default, if the object is constructed
+					from edge data (edges are self-limiting) </li>
+
+				<li id="OBJECT_Command_Overview__li_D007110CD3D44B5DA073A437098A8070"><a name="OBJECT_Command_Overview__li_D007110CD3D44B5DA073A437098A8070"><!-- --></a>Default, if the object is constructed
+					from lens data (lenses are self-limiting) </li>
+
+				<li id="OBJECT_Command_Overview__li_E6454C33C6D640B880F9352C31001E68"><a name="OBJECT_Command_Overview__li_E6454C33C6D640B880F9352C31001E68"><!-- --></a>Default, if the object is constructed
+					from certain surface types that are self-limiting </li>
+
+				<li id="OBJECT_Command_Overview__li_271D8CD635C144B691BE01922E055D3D"><a name="OBJECT_Command_Overview__li_271D8CD635C144B691BE01922E055D3D"><!-- --></a>Specifying the physical dimensions of
+					the object in either local or global coordinates </li>
+
+				<li id="OBJECT_Command_Overview__li_793480C67A904D76B1A2F059237D3405"><a name="OBJECT_Command_Overview__li_793480C67A904D76B1A2F059237D3405"><!-- --></a>Specifying bounding surfaces </li>
+
+				<li id="OBJECT_Command_Overview__li_F1F5A795E70B48ED8DDD24261F1AC81D"><a name="OBJECT_Command_Overview__li_F1F5A795E70B48ED8DDD24261F1AC81D"><!-- --></a>Specifying bounding surfaces to form a
+					solid </li>
+
+				<li id="OBJECT_Command_Overview__li_BB5275BEE71845D98B2AB8AFDD8D39B1"><a name="OBJECT_Command_Overview__li_BB5275BEE71845D98B2AB8AFDD8D39B1"><!-- --></a>Specifying edges to form a mesh </li>
+
+			</ul>
+
+		</div>
+
+		<div class="section" id="OBJECT_Command_Overview__section_35CEE42DFABF4D9283A7CCD00C4F31C4"><a name="OBJECT_Command_Overview__section_35CEE42DFABF4D9283A7CCD00C4F31C4"><!-- --></a><span style="color: #2b6eb5"><h5>Tips</h5></span>
+			
+			<p>When constructing an object: </p>
+
+			<br/><a name="OBJECT_Command_Overview__ul_7F62DE4537F64A5D8F761A675AC425BD"><!-- --></a><ul id="OBJECT_Command_Overview__ul_7F62DE4537F64A5D8F761A675AC425BD">
+				<li id="OBJECT_Command_Overview__li_98AB34525CB54F29B13340D23176C3C9"><a name="OBJECT_Command_Overview__li_98AB34525CB54F29B13340D23176C3C9"><!-- --></a>Issue a <b>SURFACE</b>,
+						<b>EDGE</b>, or <b>LENS</b> command to tell ASAP the
+					type of entity you are defining and to bound the entity. </li>
+
+				<li id="OBJECT_Command_Overview__li_9ABA6EAD3CF742268C7BDDAF1C208E4C"><a name="OBJECT_Command_Overview__li_9ABA6EAD3CF742268C7BDDAF1C208E4C"><!-- --></a>If applicable, use a <b>LOCAL</b> command to bound the object. </li>
+
+				<li id="OBJECT_Command_Overview__li_AF438220B6C447BD8EA995758F08FF67"><a name="OBJECT_Command_Overview__li_AF438220B6C447BD8EA995758F08FF67"><!-- --></a>Use the appropriate command for the
+					desired entity. </li>
+
+				<li id="OBJECT_Command_Overview__li_A42EB198833843C1AA021046B31CD455"><a name="OBJECT_Command_Overview__li_A42EB198833843C1AA021046B31CD455"><!-- --></a>Use an <b>OBJECT</b>
+					command to make an object from the entity. </li>
+
+				<li id="OBJECT_Command_Overview__li_6272385F4FE84DA9A683CD4C88C699AC"><a name="OBJECT_Command_Overview__li_6272385F4FE84DA9A683CD4C88C699AC"><!-- --></a>Use <b>SHIFT</b> and
+						<b>ROTATE</b> to position and orient the object. </li>
+
+				<li id="OBJECT_Command_Overview__li_C222FF3BB10B4D80B7EE25A3730195DB"><a name="OBJECT_Command_Overview__li_C222FF3BB10B4D80B7EE25A3730195DB"><!-- --></a>Use the <b>INTERFACE</b>
+					command to assign optical properties. </li>
+
+			</ul>
+
+		</div>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_OR-ref.html" title="Reference topics in this section begin with the letters &#34;O&#34; to &#34;R&#34;.">Reference (O-R)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Geometric_Entities-conc.html">Geometric Entities</a></div>
+<div><a href="../Concept/INTERFACE_Command_Overview-conc.html">INTERFACE Command Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/EDGES_CURVES_ENTITIES_ASAP-cmdref.html" title="Signals ASAP that edge definition commands follow.">EDGES/CURVES/ENTITIES (ASAP Command)</a></div>
+<div><a href="../Commands/LOCAL_ASAP-cmdref.html" title="Assigns a local bounding box to the surface/function.">LOCAL (ASAP Command)</a></div>
+<div><a href="../Commands/MEDIA_ASAP-cmdref.html" title="Creates a single refractive material.">MEDIA (ASAP Command)</a></div>
+<div><a href="../Commands/MODELS_ASAP-cmdref.html" title="Creates a scattering model.">MODELS (ASAP Command)</a></div>
+<div><a href="../Commands/OBJECT_ASAP-cmdref.html" title="Defines an object based upon previously defined entities.">OBJECT (ASAP Command)</a></div>
+<div><a href="../Commands/ROTATE_ASAP-cmdref.html" title="Rotates an entity about a point.">ROTATE (ASAP Command)</a></div>
+<div><a href="../Commands/SHIFT_ASAP-cmdref.html" title="Specifies a relative shift of an entity along the coordinate axes.">SHIFT (ASAP Command)</a></div>
+<div><a href="../Commands/SURFACES_FUNCTIONS_ENTITIES_ASAP-cmdref.html" title="Signals ASAP that surface definition commands follow.">SURFACES/FUNCTIONS/ENTITIES (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

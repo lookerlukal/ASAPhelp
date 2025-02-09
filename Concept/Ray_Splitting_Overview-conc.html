@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Ray Splitting Overview"/>
+<meta name="abstract" content="The ASAP ray trace algorithm can split a ray into reflected, transmitted, diffracted, and scattered rays at an object interface. Not only will ASAP split the ray at an interface, it will properly adjust the flux of that ray at the interface according to the interface optical properties."/>
+<meta name="description" content="The ASAP ray trace algorithm can split a ray into reflected, transmitted, diffracted, and scattered rays at an object interface. Not only will ASAP split the ray at an interface, it will properly adjust the flux of that ray at the interface according to the interface optical properties."/>
+<meta name="DC.subject" content="Ray Splitting Overview, splitting rays"/>
+<meta name="keywords" content="Ray Splitting Overview, splitting rays"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_OR-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/BEAMS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/COATINGS_LAYERS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/INTERFACE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OBJECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SCATTER_RANDOM_MODEL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPLIT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/INTERFACE_Command_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Simulating_Diffractive_and_Holographic_Optical_Elements-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Ray_Splitting_Overview"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Ray Splitting Overview</title>
+</head>
+<body id="Ray_Splitting_Overview"><a name="Ray_Splitting_Overview"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Ray Splitting Overview</h5></span> 
+   
+   
+  <div><p>The ASAP ray trace algorithm can split a ray into reflected,
+	 transmitted, diffracted, and scattered rays at an object interface. Not only
+	 will ASAP split the ray at an interface, it will properly adjust the flux of
+	 that ray at the interface according to the interface optical properties. 
+  </p>
+ 
+	 <p>Ray splitting is possible under four conditions: 
+	 </p>
+ 
+	 <p><b>INTERFACE 
+		</b> has a nonzero reflection and transmission coefficient. 
+	 </p>
+ 
+	 <p><b>INTERFACE 
+		</b> is diffractive with multiple orders. 
+	 </p>
+ 
+	 <p><b>INTERFACE 
+		</b> references a birefringent MEDIA. 
+	 </p>
+ 
+	 <p><b>OBJECT 
+		</b>has scattering properties. 
+	 </p>
+ 
+	 <p>The first three conditions are specular properties of the object
+		INTERFACE command. The fourth condition is a scattering property of the object 
+		<b>SCATTER 
+		</b> command. 
+	 </p>
+ 
+	 <p>The ability of an object to generate split rays is controlled by the 
+		<b>SPLIT 
+		</b>command and the parameters of the 
+		<b>INTERFACE 
+		</b> command. The 
+		<b>SPLIT 
+		</b> command controls the number of specularly split rays. The 
+		<b>INTERFACE 
+		</b> command references the 
+		<b>MEDIA 
+		</b> and 
+		<b>COATING 
+		</b> databases. It therefore controls whether reflected and
+		transmitted rays are split and the flux apportioned to those rays. On
+		diffractive interfaces, the 
+		<b>INTERFACE 
+		</b> command controls the type of diffractive order and the order
+		efficiency. 
+	 </p>
+ 
+	 <div class="section" id="Ray_Splitting_Overview__section_43C8A23487D84536975316BC211F3F6D"><a name="Ray_Splitting_Overview__section_43C8A23487D84536975316BC211F3F6D"><!-- --></a><span style="color: #2b6eb5"><h5>Parent and Child Rays</h5></span> 
+		 
+		<p>At an interface with appropriate characteristics, the most energetic
+		  ray (referred to as the parent) is allowed to continue to propagate as it would
+		  in a conventional ray trace code. The position, direction, and optical path
+		  length, along with other ray information of the less energetic ray (referred to
+		  as the child) are written to the virtual ray storage disk file for tracing at a
+		  later time. A primary ray pointer tracks the most energetic rays so that those
+		  rays are traced first. A secondary ray pointer tracks the other split rays.
+		  When the secondary pointer catches up to the primary pointer, all original rays
+		  and split rays have been traced through the system. It is possible to
+		  continually create split rays such that virtual ray storage will fill your disk
+		  space. 
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_OR-ref.html" title="Reference topics in this section begin with the letters &#34;O&#34; to &#34;R&#34;.">Reference (O-R)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/INTERFACE_Command_Overview-conc.html">INTERFACE Command Overview</a></div>
+<div><a href="../Concept/Simulating_Diffractive_and_Holographic_Optical_Elements-conc.html" title="Diffractive Optical Elements (DOEs) are a general class of optical elements that include diffraction gratings, holographic optical elements (HOEs) and binary optics. These elements diffract light by producing periodic changes in the phase or amplitude of an incident wave. This topic addresses DOEs that change the phase of incident optical fields.">Simulating Diffractive and Holographic Optical Elements</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/BEAMS_ASAP-cmdref.html" title="Sets the default coherence, propagation, and shape characteristics for future ray creation.">BEAMS (ASAP Command)</a></div>
+<div><a href="../Commands/COATINGS_LAYERS_ASAP-cmdref.html" title="Creates a coating specified by its multilayer prescription.">COATINGS LAYERS (ASAP Command)</a></div>
+<div><a href="../Commands/INTERFACE_ASAP-cmdref.html" title="Assigns a reflective, refractive or diffractive interface to objects.">INTERFACE (ASAP Command)</a></div>
+<div><a href="../Commands/MEDIA_ASAP-cmdref.html" title="Creates a single refractive material.">MEDIA (ASAP Command)</a></div>
+<div><a href="../Commands/OBJECT_ASAP-cmdref.html" title="Defines an object based upon previously defined entities.">OBJECT (ASAP Command)</a></div>
+<div><a href="../Commands/SCATTER_RANDOM_MODEL_ASAP-cmdref.html" title="Assigns a scattering interface to an object.">SCATTER RANDOM/MODEL (ASAP Command)</a></div>
+<div><a href="../Commands/SPLIT_ASAP-cmdref.html" title="Controls the number of times a ray may be split into specular components.">SPLIT (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

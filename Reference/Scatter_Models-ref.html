@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Scatter Models"/>
+<meta name="abstract" content="ASAP supports the scatter models listed in this topic for wide-angle (far from specular) scatter."/>
+<meta name="description" content="ASAP supports the scatter models listed in this topic for wide-angle (far from specular) scatter."/>
+<meta name="DC.subject" content="Scatter Models, models, scatter"/>
+<meta name="keywords" content="Scatter Models, models, scatter"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Scattering_Overview-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Scatter_Analysis-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Scatter_Analysis_Common_Approaches-conc.html#Scatter_Analysis_Common_Approaches"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Scattered_Radiation_Analysis_Methodology-conc.html#Scattered_Radiation_Analysis_Methodology"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/SCATTER_MODEL_and_TOWARDS_Overview-conc.html#SCATTER_MODEL_and_TOWARDS_Overview"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Scattering_with_ROUGHNESS_RANDOM-conc.html#Scattering_with_ROUGHNESS_RANDOM"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/BEAMS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/BSDFDATA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/HARVEY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LAMBERTIAN_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MODELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OBJECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PARTICLES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SUM_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TOWARDS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/USERBSDF_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/VANES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/VCAVITY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/BSDF_Fit_Utility_Overview-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Scatter_Models"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Scatter Models</title>
+</head>
+<body id="Scatter_Models"><a name="Scatter_Models"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Scatter Models</h5></span> 
+  
+  
+  <div><p>ASAP supports the scatter models listed in this topic for
+	 wide-angle (far from specular) scatter. 
+  </p>
+ 
+	 <div class="section" id="Scatter_Models__section_0074A88170DE481B82D317DBE03DC5C7"><a name="Scatter_Models__section_0074A88170DE481B82D317DBE03DC5C7"><!-- --></a> 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>LAMBERTIAN 
+			 </span></td><td><span> simple Lambertian scatter</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>HARVEY 
+			 </span></td><td><span>Harvey smooth optical surface scatter</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>POLYNOMIAL/TRINOMIAL/BINOMIAL 
+			 </span></td><td><span>scatter defined by a polynomial or fitted data</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>USERBSDF 
+			 </span></td><td><span>user-defined Bi-directional Scattering Distribution Function
+				(BSDF) model scatter)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>VANES 
+			 </span></td><td><span> scatter from vanes along an axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>PARTICLES 
+			 </span></td><td><span>scatter from particulates on a surface</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>VCAVITY 
+			 </span></td><td><span>scatter from a surface of v-shaped cavities</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>BSDFDATA</span></td><td><span>interpolates scatter from entered values</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SUM</span></td><td><span>scatter a composite of BSDF models</span></td></tr></tbody></table> 
+		<p>Scatter models are entered after the 
+		  <b>MODELS</b> command and become part of the models
+		  database. These are later referenced by the 
+		  <b>SCATTER</b> command during the definition of an 
+		  <b>OBJECT</b>. 
+		</p>
+ 
+		<p>Scatter models are intended for use with the 
+		  <b>TOWARDS</b> command for importance sampling.
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="../Concept/SCATTER_MODEL_and_TOWARDS_Overview-conc.html#SCATTER_MODEL_and_TOWARDS_Overview">SCATTER MODEL and TOWARDS Overview</a></strong><br/>
+This topic gives several tips for scattering rays towards a specified small area.</li>
+<li class="ulchildlink"><strong><a href="../Concept/Scattering_with_ROUGHNESS_RANDOM-conc.html#Scattering_with_ROUGHNESS_RANDOM">Scattering with ROUGHNESS RANDOM</a></strong><br/>
+This topic gives several tips for using ROUGHNESS RANDOM, which simulates scatter from a rough surface by randomly perturbing the direction of a reflected or refracted ray. The actual surface of the object is not altered.</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Scattering_Overview-ref.html" title="Scattering is generally defined as the removal of energy from an incident wave and the subsequent re-emission of some portion of that energy. The macroscopic laws of refraction and reflection may even be considered special cases of the statistical averages of scattering phenomena. This topic discusses scatter from nonsmooth surfaces; that is, surface scattering, since ASAP is primarily designed to model surface scattering phenomena. Volume scattering can be modeled by using many transparent scattering surfaces to partition the volume.">Scattering Overview</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Scatter_Analysis-conc.html" title="Performing a scatter analysis is a complex task. In addition to basic scatter theory, there are many ASAP parameters to consider. Each analysis should be evaluated on an individual basis to determine which ASAP tools to use to simulate the problem.">Scatter Analysis</a></div>
+<div><a href="../Concept/Scatter_Analysis_Common_Approaches-conc.html#Scatter_Analysis_Common_Approaches" title="This topic addresses common approaches to scatter analysis.">Scatter Analysis - Common Approaches</a></div>
+<div><a href="../Concept/Scattered_Radiation_Analysis_Methodology-conc.html#Scattered_Radiation_Analysis_Methodology" title="The goal in a classical stray light analysis usually is to determine the amount of unwanted scattered radiation propagating to a detector in order to assess its effect on system performance.">Scattered Radiation Analysis Methodology</a></div>
+<div><a href="../Concept/BSDF_Fit_Utility_Overview-conc.html" title="In most instances where it is appropriate to apply the Harvey model or the Polynomial Fit model, you can use the BSDF Fitting utility, which is integrated with ASAP.">BSDF Fit Utility Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/BEAMS_ASAP-cmdref.html" title="Sets the default coherence, propagation, and shape characteristics for future ray creation.">BEAMS (ASAP Command)</a></div>
+<div><a href="../Commands/BSDFDATA_ASAP-cmdref.html" title="Indirectly or directly interpolates from entered BSDF values.">BSDFDATA (ASAP Command)</a></div>
+<div><a href="../Commands/HARVEY_ASAP-cmdref.html" title="Creates a Harvey (linear shift invariant) scatter model or simple specific model.">HARVEY (ASAP Command)</a></div>
+<div><a href="../Commands/LAMBERTIAN_ASAP-cmdref.html" title="Creates a Lambertian scatter model.">LAMBERTIAN (ASAP Command)</a></div>
+<div><a href="../Commands/MODELS_ASAP-cmdref.html" title="Creates a scattering model.">MODELS (ASAP Command)</a></div>
+<div><a href="../Commands/OBJECT_ASAP-cmdref.html" title="Defines an object based upon previously defined entities.">OBJECT (ASAP Command)</a></div>
+<div><a href="../Commands/PARTICLES_ASAP-cmdref.html" title="Creates a particulate scatter model.">PARTICLES (ASAP Command)</a></div>
+<div><a href="../Commands/POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP-cmdref.html" title="Creates a scatter model based on user-supplied data or polynomial coefficients.">POLYNOMIAL/TRINOMIAL/BINOMIAL (ASAP Command)</a></div>
+<div><a href="../Commands/SUM_ASAP-cmdref.html" title="Creates a composite scatter model.">SUM (ASAP Command)</a></div>
+<div><a href="../Commands/TOWARDS_ASAP-cmdref.html" title="Specifies importance area or direction sampling for scattered rays. Required when specifying a SCATTER MODEL.">TOWARDS (ASAP Command)</a></div>
+<div><a href="../Commands/USERBSDF_ASAP-cmdref.html" title="Specifies an isotropic or anisotropic scatter model.">USERBSDF (ASAP Command)</a></div>
+<div><a href="../Commands/VANES_ASAP-cmdref.html" title="Creates an anisotropic scatter model that simulates the scatter from a vane structure.">VANES (ASAP Command)</a></div>
+<div><a href="../Commands/VCAVITY_ASAP-cmdref.html" title="Creates a scatter model as a random collection of v-cavities.">VCAVITY (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

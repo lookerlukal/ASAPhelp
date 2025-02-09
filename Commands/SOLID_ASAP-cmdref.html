@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="SOLID (ASAP Command)"/>
+<meta name="abstract" content="Makes the previous surface a solid."/>
+<meta name="description" content="Makes the previous surface a solid."/>
+<meta name="DC.subject" content="SOLID (ASAP Command), surface, making solid, solid surface"/>
+<meta name="keywords" content="SOLID (ASAP Command), surface, making solid, solid surface"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_S-ref.html#Commands_and_Macros_S"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/BOUNDS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LOCAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REPEAT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="SOLID_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>SOLID (ASAP Command)</title>
+</head>
+<body id="SOLID_ASAP_Command"><a name="SOLID_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>SOLID (ASAP Command)</h5></span>
+	
+	
+	<div><p>Makes the previous surface a solid. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+SOLID PLUS  [ NOHOLE ]
+      MINUS
+      OFF
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>PLUS</span></td><td><span>uses positive side of surface/function</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MINUS</span></td><td><span>uses negative side of surface/function</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>NOHOLE</span></td><td><span>excludes the interior hole of the <b>LOCAL</b> box, if one
+					exists</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>OFF</span></td><td><span>sets the <b>SOLID</b> command to off</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="SOLID_ASAP_Command__ul_D4E49B74A8A045E3B034F2F183B0F08A"><!-- --></a><ol id="SOLID_ASAP_Command__ul_D4E49B74A8A045E3B034F2F183B0F08A">
+			<li id="SOLID_ASAP_Command__li_5DFDE62A6C684CF0946AE4333417DD10"><a name="SOLID_ASAP_Command__li_5DFDE62A6C684CF0946AE4333417DD10"><!-- --></a>Make the current surface a <b>SOLID</b> formed from the interior of its <b>LOCAL</b> box and
+				the given side of the function. </li>
+
+			<li id="SOLID_ASAP_Command__li_EBF138CC041D49D0A95181B9BDC90A28"><a name="SOLID_ASAP_Command__li_EBF138CC041D49D0A95181B9BDC90A28"><!-- --></a>Currently, the <b>SOLID</b>
+				command only affects the <b>BOUNDS</b> command. </li>
+
+			<li id="SOLID_ASAP_Command__li_5671920A7119432891FD2BD31B7B8F0F"><a name="SOLID_ASAP_Command__li_5671920A7119432891FD2BD31B7B8F0F"><!-- --></a>
+				If the volume needed can be represented by just a <b>LOCAL</b> box,
+				then use the above command with a dummy degree zero surface, for example.
+				<pre class="codeblock">
+SURFACE n
+  GENERAL x y z +1
+     LOCAL ...
+     SOLID PLUS
+:
+OBJECT
+  :
+  BOUNDS +-n	
+        </pre>
+
+			</li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#SOLID">SOLID Examples</a>
+		</p>
+
+	</div>
+
+	<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_S-ref.html#Commands_and_Macros_S" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “S”.">Commands and Macros (S)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/BOUNDS_ASAP-cmdref.html" title="Assigns surfaces and edges as boundaries to objects.">BOUNDS (ASAP Command)</a></div>
+<div><a href="../Commands/LOCAL_ASAP-cmdref.html" title="Assigns a local bounding box to the surface/function.">LOCAL (ASAP Command)</a></div>
+<div><a href="../Commands/REPEAT_ASAP-cmdref.html" title="Repeats previously defined entity data.">REPEAT (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Arrays and Bounds</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Arrays and Bounds, at
+				http://www.breault.com/k-base.php </a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

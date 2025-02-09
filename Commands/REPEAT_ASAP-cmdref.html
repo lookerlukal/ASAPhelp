@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="REPEAT (ASAP Command)"/>
+<meta name="abstract" content="Repeats previously defined entity data."/>
+<meta name="description" content="Repeats previously defined entity data."/>
+<meta name="DC.subject" content="REPEAT (ASAP Command), data, repeating entity, entity, repeating data"/>
+<meta name="keywords" content="REPEAT (ASAP Command), data, repeating entity, entity, repeating data"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_R-ref.html#Commands_and_Macos_R"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Linear_Transformations_for_Edges_Curves-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Linear_Transformations_for_Lenses-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Linear_Transformations_for_Surfaces_Functions-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="REPEAT_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>REPEAT (ASAP Command)</title>
+</head>
+<body id="REPEAT_ASAP_Command"><a name="REPEAT_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>REPEAT (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Repeats previously defined entity data. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+SURFACE or EDGE or LENS
+REPEAT [ i ]
+      </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>i</span></td><td><span>previously defined entity number</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="REPEAT_ASAP_Command__ul_3DEDD20B4EA644AA88A87AA90A249CD8"><!-- --></a><ol id="REPEAT_ASAP_Command__ul_3DEDD20B4EA644AA88A87AA90A249CD8"> 
+		<li id="REPEAT_ASAP_Command__li_57D2662F52AB48CBB3EBED72D5189826"><a name="REPEAT_ASAP_Command__li_57D2662F52AB48CBB3EBED72D5189826"><!-- --></a>Copies data from a
+		  previously defined entity into the current entity location. The new surface
+		  created is the same as surface number 
+		  <b>i</b> 
+		</li>
+ 
+		<li id="REPEAT_ASAP_Command__li_F1E934F5EB3F4757AEDCFC48112F8202"><a name="REPEAT_ASAP_Command__li_F1E934F5EB3F4757AEDCFC48112F8202"><!-- --></a>The default for 
+		  <b>i</b> is 0.1 or the last entity defined. The ith lens
+		  (default last) is duplicated so that it may be displaced and/or rotated
+		  separately from the parent, using the linear transformation commands. 
+		</li>
+ 
+		<li id="REPEAT_ASAP_Command__li_D3F0D9B6AEF941FFB0998F9A38ACD0B1"><a name="REPEAT_ASAP_Command__li_D3F0D9B6AEF941FFB0998F9A38ACD0B1"><!-- --></a>After repeating entity data
+		  the current entity data may be changed by various entity modifiers, that is,
+		  linear transformations. 
+		</li>
+ 
+		<li id="REPEAT_ASAP_Command__li_EB4C302A73994A0DBC3D009B5FDEE8D4"><a name="REPEAT_ASAP_Command__li_EB4C302A73994A0DBC3D009B5FDEE8D4"><!-- --></a>If the entity is a 
+		  <b>SURFACE</b>, all the coefficients are transferred in
+		  their final form, which include any linear transformations applied to the
+		  original surface. 
+		</li>
+ 
+		<li id="REPEAT_ASAP_Command__li_743F927615CA48DE8CC8DA6C3031A1CE"><a name="REPEAT_ASAP_Command__li_743F927615CA48DE8CC8DA6C3031A1CE"><!-- --></a>If the entity is an<b>
+			 EDGE</b>, all edge points are transferred in their final form, which
+		  include any linear transformations applied to the original edge. 
+		</li>
+ 
+		<li id="REPEAT_ASAP_Command__li_6987598322CD479E984B3ED55EA611C7"><a name="REPEAT_ASAP_Command__li_6987598322CD479E984B3ED55EA611C7"><!-- --></a>If the entity is a 
+		  <b>LENS</b>, all conicoid data are transferred in their
+		  final form, which include any linear transformations applied to the original
+		  lens. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#REPEAT">REPEAT
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_R-ref.html#Commands_and_Macos_R" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “R”.">Commands and Macros (R)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Linear_Transformations_for_Edges_Curves-ref.html" title="Linear transformations change the shape, scaling, or orientation of a geometrical entity (surface, edge, lens, object, group, or rays) by applying a general 4x4 transformation matrix (linear transformations change only the orientation of lenses). Linear transformations that change the location of a geometrical entity are applied to the reference point (see table) of the entity.">Linear Transformations for Edges and Curves</a></div>
+<div><a href="../Reference/Linear_Transformations_for_Lenses-ref.html" title="Linear transformations change the shape, scaling, or orientation of a geometrical entity (surface, edge, lens, object, group, or rays) by applying a general 4x4 transformation matrix (linear transformations change only the orientation of LENSES). Linear transformations that change the location of a geometrical entity are applied to the reference point (see table) of the entity.">Linear Transformations for Lenses</a></div>
+<div><a href="../Reference/Linear_Transformations_for_Surfaces_Functions-ref.html" title="Linear transformations change the shape, scaling, or orientation of a geometrical entity (surface, edge, lens, object, group, or rays) by applying a general 4x4 transformation matrix (linear transformations change only the orientation of LENSES). Linear transformations that change the location of a geometrical entity are applied to the reference point of the entity (see table below).">Linear Transformations for Surfaces/Functions</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

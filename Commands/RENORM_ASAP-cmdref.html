@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="RENORM (ASAP Command)"/>
+<meta name="abstract" content="Renormalizes coefficients of surface/function polynomials."/>
+<meta name="description" content="Renormalizes coefficients of surface/function polynomials."/>
+<meta name="DC.subject" content="RENORM (ASAP Command), polynomial, renormalize coefficients, surface/function polynomials, renormalizing"/>
+<meta name="keywords" content="RENORM (ASAP Command), polynomial, renormalize coefficients, surface/function polynomials, renormalizing"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_R-ref.html#Commands_and_Macos_R"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REPEAT_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="RENORM_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>RENORM (ASAP Command)</title>
+</head>
+<body id="RENORM_ASAP_Command"><a name="RENORM_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>RENORM (ASAP Command)</h5></span>
+	
+	
+	<div><p>Renormalizes coefficients of surface/function polynomials. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+RENORM [ c ]
+       [ term c ]
+       [ MIN  c ]
+       [ MAX  c ]
+       [ FUNC c [ x y z ] ]
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>c</span></td><td><span>normalization constant</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>term, MIN, or MAX</span></td><td><span>normalizes the specified coefficients to be exactly equal to <b>c</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x y z</span></td><td><span>point at which function value is to be set</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="RENORM_ASAP_Command__ul_F4B599F30FC547E4ADE0C2213649CA30"><!-- --></a><ol id="RENORM_ASAP_Command__ul_F4B599F30FC547E4ADE0C2213649CA30">
+			<li id="RENORM_ASAP_Command__li_3BB717AFD5044985ACA726C834D201BF"><a name="RENORM_ASAP_Command__li_3BB717AFD5044985ACA726C834D201BF"><!-- --></a>Renormalizes the coefficients of the
+				previous surface function. </li>
+
+			<li id="RENORM_ASAP_Command__li_F96043FBD7FC4567B8E9063646A48369"><a name="RENORM_ASAP_Command__li_F96043FBD7FC4567B8E9063646A48369"><!-- --></a>If it is actually a surface (function is
+				0), the renormalization does not affect the location of the surface, but may change
+				the direction of the normal to the surface or avoid numerical overflow problems. </li>
+
+			<li id="RENORM_ASAP_Command__li_CEA0B31F371146189F23E99E48F42C60"><a name="RENORM_ASAP_Command__li_CEA0B31F371146189F23E99E48F42C60"><!-- --></a>If no additional entries are made, the
+				coefficients are normalized such that the largest and smallest ones are equally
+				spaced in magnitude about 1. </li>
+
+			<li id="RENORM_ASAP_Command__li_49EBF3E287E44E02ABCEE4EDF7FA0073"><a name="RENORM_ASAP_Command__li_49EBF3E287E44E02ABCEE4EDF7FA0073"><!-- --></a>If a single numerical value is entered, all
+				the coefficients are divided by <b>c.</b>
+			</li>
+
+			<li id="RENORM_ASAP_Command__li_C14CE37DFE3642AFB3D20D01E7F2A279"><a name="RENORM_ASAP_Command__li_C14CE37DFE3642AFB3D20D01E7F2A279"><!-- --></a>If a <b>term</b> is specified
+				(that is, <b>XiYjZk</b> or the <b>MIN/MAX),</b> then the
+				coefficients are normalized so that the particular coefficient becomes exactly equal
+				to <b>c.</b>
+			</li>
+
+			<li id="RENORM_ASAP_Command__li_EC824CCA3A29436C877E16687BAC764C"><a name="RENORM_ASAP_Command__li_EC824CCA3A29436C877E16687BAC764C"><!-- --></a>The last form allows you to set the value
+				of the <b>FUNC</b> to <b>c</b> at the point <b>(x,y,z)</b> (default is the reference point). </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#RENORM">RENORM Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_R-ref.html#Commands_and_Macos_R" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “R”.">Commands and Macros (R)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/REPEAT_ASAP-cmdref.html" title="Repeats previously defined entity data.">REPEAT (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

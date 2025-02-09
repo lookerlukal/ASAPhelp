@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="VOXELS (ASAP Command)"/>
+<meta name="abstract" content="Accumulates on the next TRACE, in a 3D array of volume elements (voxels), the flux-per-unit volume or irradiance on an area."/>
+<meta name="description" content="Accumulates on the next TRACE, in a 3D array of volume elements (voxels), the flux-per-unit volume or irradiance on an area."/>
+<meta name="DC.subject" content="VOXELS (ASAP Command), volume, flux-per-unit for 3D array, irradiance, flux-per-unit for 3D array"/>
+<meta name="keywords" content="VOXELS (ASAP Command), volume, flux-per-unit for 3D array, irradiance, flux-per-unit for 3D array"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_V-ref.html#Commands_and_Macros_V"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TRACE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Volumetric_Energy_Tracking-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=25"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="VOXELS_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>VOXELS (ASAP Command)</title>
+</head>
+<body id="VOXELS_ASAP_Command"><a name="VOXELS_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>VOXELS (ASAP Command)</h5></span>
+	
+	
+	<div><p>Accumulates on the next TRACE, in a 3D array of volume elements (voxels), the
+		flux-per-unit volume or irradiance on an area. </p>
+
+		<p><b>Syntax 1</b>
+		</p>
+
+		<pre class="codeblock">
+VOXELS FLUENCE  [ d d ' [ n ] ]
+       ABSORBED   x x' y y' z z' [ n n' n" ]
+       X
+       Y
+       Z
+      -X
+      -Y
+      -Z
+      +X
+      +Y
+      +Z
+      </pre>
+
+		<p><b>Syntax 2</b>
+		</p>
+
+		<pre class="codeblock">
+VOXELS [  OFF        ]
+          READ [ u ]
+          file
+      </pre>
+
+		<p><b>Remarks for Syntax 1</b>
+		</p>
+
+		<br/><a name="VOXELS_ASAP_Command__ul_42A872B074B749A2BF6B0C4948EBB703"><!-- --></a><ol id="VOXELS_ASAP_Command__ul_42A872B074B749A2BF6B0C4948EBB703">
+			<li id="VOXELS_ASAP_Command__li_7608736288BA4BB7ACFD8AF570FB417B"><a name="VOXELS_ASAP_Command__li_7608736288BA4BB7ACFD8AF570FB417B"><!-- --></a>During the next <b>TRACE</b>,
+				accumulate in a 3D array of volume elements (voxels), the flux-per-unit volume
+				(total absolute <b>FLUENCE</b> or <b>ABSORBED</b> in media)
+				or irradiance on an area perpendicular to the given coordinate axis. </li>
+
+			<li id="VOXELS_ASAP_Command__li_772322389A7C45F0B349F991932328AE"><a name="VOXELS_ASAP_Command__li_772322389A7C45F0B349F991932328AE"><!-- --></a>Only accumulates irradiance from rays going
+				in the direction specified by the sign of the axis (no sign is equivalent to a
+				bidirectional irradiance). </li>
+
+			<li id="VOXELS_ASAP_Command__li_25669C006934430698492DF189A7D43C"><a name="VOXELS_ASAP_Command__li_25669C006934430698492DF189A7D43C"><!-- --></a>The volume is either the enclosing box of
+				the currently considered objects, determined by the current <b>WINDOW</b> settings and the specified depth range, or given directly in terms
+				of a range for each of the global coordinates. </li>
+
+			<li id="VOXELS_ASAP_Command__li_DA51A87763344097BEEDEEC16FD65755"><a name="VOXELS_ASAP_Command__li_DA51A87763344097BEEDEEC16FD65755"><!-- --></a>The number <b>(n)</b> of
+				samples per coordinate is then either taken from the current <b>PIXELS</b> setting and a depth number or specified directly. If any of the <b>n</b>'s are entered as zero, the <b>PIXELS</b> setting at the time
+				of the <b>TRACE</b> is used. </li>
+
+			<li id="VOXELS_ASAP_Command__li_46F5733F892E41A5B91DA5698F1BE411"><a name="VOXELS_ASAP_Command__li_46F5733F892E41A5B91DA5698F1BE411"><!-- --></a>The total number of voxels is limited to
+				approximately 81 cubed in ASAP lite. </li>
+
+			<li id="VOXELS_ASAP_Command__li_E16A43E7DD534E6585107F55751EBFDD"><a name="VOXELS_ASAP_Command__li_E16A43E7DD534E6585107F55751EBFDD"><!-- --></a>For all ASAP products except ASAP lite, the
+				total number of voxels is constrained only by limits imposed by the operating
+				system. </li>
+
+			<li id="VOXELS_ASAP_Command__li_06423BC28B8A48D68D22025A44356203"><a name="VOXELS_ASAP_Command__li_06423BC28B8A48D68D22025A44356203"><!-- --></a>After the completion of the next <b>TRACE</b>, the results are written to a 3D version of the standard binary
+				distribution file (BRO009.DAT), and any 2D slice can then be processed by <b>DISPLAY</b> and its subcommands. </li>
+
+		</ol>
+
+		<p><b>Remarks for Syntax 2</b>
+		</p>
+
+		<br/><a name="VOXELS_ASAP_Command__ul_6DA0E94A13194E008948292367D606F1"><!-- --></a><ol id="VOXELS_ASAP_Command__ul_6DA0E94A13194E008948292367D606F1">
+			<li id="VOXELS_ASAP_Command__li_54E906332C1948C894FBE11D76A9CA6D"><a name="VOXELS_ASAP_Command__li_54E906332C1948C894FBE11D76A9CA6D"><!-- --></a>Turn <b>ON</b> or <b>OFF</b> the volume flux tracking during the next <b>TRACE</b>.
+				Optionally, read in a previous 3D binary distribution given by number <b>u</b> (default 9), or name "file" (default DIS extension). The results of the
+				next <b>TRACE</b> are added to these values, and the total is written to
+				the standard distribution file (BRO009.DAT). </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#VOXELS">VOXELS Examples</a>
+		</p>
+
+	</div>
+
+	<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_V-ref.html#Commands_and_Macros_V" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “V”.">Commands and Macros (V)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Volumetric_Energy_Tracking-conc.html" title="The space containing all or part of an optical system can be divided into volume elements or “voxels” to analyze and visualize volume absorption, fluence, and irradiance within this space.">Volumetric Energy Tracking</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/TRACE_ASAP-cmdref.html" title="Traces all currently selected rays in storage.">TRACE (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=25" target="_blank">See the Knowledge Base for the technical publication, Using VOXELS in ASAP for Modeling Fluorescence and Volume Scatter</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Using Voxels in ASAP, at
+				http://www.breault.com/k-base.php </a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

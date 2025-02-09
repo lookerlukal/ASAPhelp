@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="CODE V to ASAP Translation, Step 2"/>
+<meta name="abstract" content="The second step in the translation process is to select the ASAP filename, and to set several translation options."/>
+<meta name="description" content="The second step in the translation process is to select the ASAP filename, and to set several translation options."/>
+<meta name="DC.subject" content="CODE V to ASAP Translation, Step 2, translation, CODE V to ASAP"/>
+<meta name="keywords" content="CODE V to ASAP Translation, Step 2, translation, CODE V to ASAP"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/CODE_V_File_Conversion-task.html#CODE_V_File_Conversion"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/CODE_V_to_ASAP_Translation_Step_1-task.html#CODE_V_to_ASAP_Translation_Step_1"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/CODE_V_to_ASAP_Translation_Step_3-task.html#CODE_V_to_ASAP_Translation_Step_3"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/CODE_V_to_ASAP_Translator_Restrictions-ref.html#CODE_V_to_ASAP_Translator_Restrictions"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="CODE_V_to_ASAP_Translation_Step_2"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>CODE V to ASAP Translation, Step 2</title>
+</head>
+<body id="CODE_V_to_ASAP_Translation_Step_2"><a name="CODE_V_to_ASAP_Translation_Step_2"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>CODE V to ASAP Translation, Step 2</h5></span> 
+   
+   
+  <div><p>The second step in the translation process is to select the ASAP
+	 filename, and to set several translation options.
+  </p>
+ 
+	 <div class="section" id="CODE_V_to_ASAP_Translation_Step_2__context_8EF8464BBBF64386AA624C6F14D99AD0"><a name="CODE_V_to_ASAP_Translation_Step_2__context_8EF8464BBBF64386AA624C6F14D99AD0"><!-- --></a> 
+		<p>The translator constructs a default name for the ASAP file from the
+		  CODE V SEQ filename that you enter in the Step 1 dialog. To change the name of
+		  the ASAP file, enter the new name in the box under 
+		  <b>Select ASAP File</b>. 
+		</p>
+ 
+		<div class="note"><span class="notetitle">Note:</span> 
+		  <p>The translator overwrites an existing ASAP file if you accept the
+			 default ASAP filename or type an existing filename into the box.
+		  </p>
+ 
+		  <p>If you are unsure whether the file currently exists or want to
+			 protect an existing ASAP file, click BROWSE. The translator displays a 
+			 <b>Save As</b> dialog. You can review the contents of the current
+			 directory and enter a new filename. The translator does not overwrite an
+			 existing file if you click the BROWSE button.
+		  </p>
+ 
+		</div>
+ 
+		<p><b>Translation Options</b>
+		</p>
+ 
+		<p><b>Annotate ASAP INR file</b> Instructs the translator to write out
+		  explanations and comments interspersed with the ASAP commands. This is useful
+		  for novice users who wants to understand more about ASAP syntax, or for
+		  documentation purposes. (Default: no check)
+		</p>
+ 
+		<p><b>Translate dummy surfaces</b> “Dummy surfaces” are defined by this
+		  translator as surfaces that have the same refractive media on each side and are
+		  coincident with the subsequent surface. Although these types of surfaces are
+		  commonly used in lens design programs to restore coordinate systems in tilted
+		  and decentered systems, they can mislead the physical raytrace algorithm in
+		  ASAP and cause raytrace errors. (Default: no check)
+		</p>
+ 
+		<p><b>Create edges and bevels</b> Lens designers are accustomed to the
+		  bevels and edges CODE V draws around the optical surfaces to denote physical
+		  construction. Some users also employ the 
+		  <b>CUM</b> and 
+		  <b>THM</b> options to add rear surfaces and edges to mirrors to give
+		  them a more realistic appearance. This option adds additional edge and bevel
+		  objects to the ASAP file to duplicate these functionalities. (Default: check)
+		</p>
+ 
+		<p>The edge and bevel generation logic involves the following activities:
+		  The translator first identifies adjacent surfaces that could potentially be
+		  joined by an edge and possibly bevel(s). Next, the translator checks to see if
+		  either surface is reflecting, if either surface is an SPS CPC Type 2 or Type 3
+		  surface, or if one of the surfaces is a dummy surface. In any of these cases,
+		  the translator cannot generate an edge or bevel. 
+		</p>
+ 
+		<p>The translator checks to see if the adjacent surfaces share a common
+		  axis and have no aperture decentrations. If these conditions are met, the
+		  translator then checks to see if the apertures have the same dimensions. In
+		  this case only an edge is generated connecting the surfaces together. If the
+		  aperture dimensions of one surface are both smaller than the aperture
+		  dimensions of the other surface, a bevel is generated on the smaller aperture
+		  and an edge is generated to connect the larger surface to the bevel. If the
+		  aperture dimensions of one surface are not both smaller than those of the other
+		  surface, a bevel is generated on each surface and an edge is generated to
+		  connect the bevels. 
+		</p>
+ 
+		<p>If the surfaces do not share a common axis and/or have aperture
+		  decentrations, the translator simply connects the apertures with an edge. No
+		  bevels are generated.
+		</p>
+ 
+		<p>The two surfaces do not require the same aperture shape. The
+		  translator generates an edge that connects a circular/elliptical aperture to a
+		  rectangular aperture if necessary.
+		</p>
+ 
+		<p>A rear surface and edge are added to a mirror only if 
+		  <b>THM</b> is nonzero. The curvature of the rear surface is given by 
+		  <b>CUM</b>. If the mirror surface is an SPS CPC Type 2 or Type 3
+		  surface, the rear surface and edge are not generated.
+		</p>
+ 
+		<p>Edges, bevels, and rear mirror surfaces are modeled as absorbing
+		  objects (no 
+		  <b>INTERFACE</b> command). You must add specular and scatter properties
+		  as necessary.
+		</p>
+ 
+		<p><b>Make element color consistent</b> overrides the ASAP default object
+		  color assignment by assigning the same color to all objects that comprise an
+		  optical element. Otherwise, each object is sequentially assigned a color from
+		  the ASAP palette of 27 colors. (Default: check)
+		</p>
+ 
+		<p>This option is independent of the “Create edges and bevels” option. 
+		</p>
+ 
+		<br/><a name="CODE_V_to_ASAP_Translation_Step_2__ul_82EC85BEDDA947789E6FE77795674BEE"><!-- --></a><ul id="CODE_V_to_ASAP_Translation_Step_2__ul_82EC85BEDDA947789E6FE77795674BEE"> 
+		  <li id="CODE_V_to_ASAP_Translation_Step_2__li_81428658CA1A4AD6B5EA0BBB127CC20F"><a name="CODE_V_to_ASAP_Translation_Step_2__li_81428658CA1A4AD6B5EA0BBB127CC20F"><!-- --></a>
+			 <p><b>Unassigned Apertures</b> Since ASAP must know the actual
+				apertures of each object, these must be supplied even if they are missing from
+				the CODE V SEQ file. The translator allows for two options:
+			 </p>
+ 
+			 <p><b>Prompt on surface-by-surface basis during translation</b> The
+				translator displays a 
+				<b>Setting Aperture</b> dialog box for each surface whose aperture
+				information is missing. You can select the type of aperture (circular,
+				elliptical, square, or rectangular), dimensions, and aperture decentration at
+				that time. The translator does not accept a zero aperture dimension and issues
+				a warning message if you enter one. (Default: select.)
+			 </p>
+ 
+			 <a name="CODE_V_to_ASAP_Translation_Step_2__image"><!-- --></a><img id="CODE_V_to_ASAP_Translation_Step_2__image" src="../Graphics/CODEV_ASAP_Translate5.jpg" width="482" height="197"/> 
+			 <p><b>Assign default semidiameter of XXX</b> The translator assigns a
+				default semidiameter of 
+				<b>XXX</b> to each surface whose aperture information is missing.
+			 </p>
+ 
+			 <p>Once an aperture is entered on a given surface, it is used for all
+				other zoom positions (if present). The translator does not prompt again for an
+				unassigned aperture in another zoom position.
+			 </p>
+ 
+		  </li>
+ 
+		  <li id="CODE_V_to_ASAP_Translation_Step_2__li_707011F0FB8D4F7C9F7BD83C09AD0D8C"><a name="CODE_V_to_ASAP_Translation_Step_2__li_707011F0FB8D4F7C9F7BD83C09AD0D8C"><!-- --></a>
+			 <p><b>Coatings</b> Most lens design programs, CODE V among them, do
+				not permit rays to be split into reflected and transmitted components at
+				refractive surfaces. However ASAP does support this feature (called
+				“raysplitting”). The translator offers both options when it constructs the ASAP
+				geometry:
+			 </p>
+ 
+			 <p><b>Idealized (100%) transmission on all refractive surfaces</b>
+				All refractive surfaces are set to unity transmission; there is no reflective
+				component. (Default: 100% transmission)
+			 </p>
+ 
+			 <p><b>Transmission and reflection per Fresnel’s equations</b> The
+				translator constructs the interface properties of each refractive surfaces so
+				that ASAP can compute the transmission and reflection of each ray during the
+				raytrace subject to the ray’s wavelength, angle of incidence, polarization and
+				so on.
+			 </p>
+ 
+			 <p>By default the translator assigns a reflectivity of unity to each
+				mirror (reflective) surface. You may change this by entering a new value into
+				the edit box.
+			 </p>
+ 
+		  </li>
+ 
+		</ul>
+ 
+		<p>At the completion of the Step 2 dialog, click BACK to return to the
+		  first dialog, NEXT to continue, or CANCEL to exit the translator.
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Task/CODE_V_File_Conversion-task.html#CODE_V_File_Conversion" title="ASAP OPTICAL+ and ASAP ADVANCED include the fully integrated capability of importing CODE V® files.">CODE V File Conversion</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/CODE_V_to_ASAP_Translation_Step_1-task.html#CODE_V_to_ASAP_Translation_Step_1" title="The first step in the translation process involves selecting an *.SEQ file written by CODE V. You can either type the name of the file in the box below Select CODEV Lens (sequence) File, or click BROWSE. Either of these actions will display a FILE OPEN dialog, from which you can select an SEQ file.">CODE V to ASAP Translation, Step 1</a></div>
+<div><a href="../Task/CODE_V_to_ASAP_Translation_Step_3-task.html#CODE_V_to_ASAP_Translation_Step_3" title="The final step in the translation process is to choose the zoom position(s) to translate and, optionally, the surface for the origin of the global coordinate system.">CODE V to ASAP Translation, Step 3</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/CODE_V_to_ASAP_Translator_Restrictions-ref.html#CODE_V_to_ASAP_Translator_Restrictions" title="While this translator supports most of the optical system modeling capabilities of CODE V, there are inevitable differences in the database structure and intended applications, so that a precise translation is not always possible. In most cases, the equivalent functionality can be accomplished in ASAP with user intervention. Specific features and limitations of this translator are described in this topic.">CODE V to ASAP Translator Restrictions</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

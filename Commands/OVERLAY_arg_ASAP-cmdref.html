@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="OVERLAY (ASAP Command Argument)"/>
+<meta name="abstract" content="Overlays plots (that is, places them on top of each other)."/>
+<meta name="description" content="Overlays plots (that is, places them on top of each other)."/>
+<meta name="DC.subject" content="OVERLAY (ASAP Command Argument), plots, overlaying, command arguments, OVERLAY"/>
+<meta name="keywords" content="OVERLAY (ASAP Command Argument), plots, overlaying, command arguments, OVERLAY"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_N_O-ref.html#Commands_and_Macros_N_O"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/HISTORY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_BEAMS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PROFILES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REPLOT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPOTS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TRACE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Graphics_Modifiers-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Plotting_Commands-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="OVERLAY_ASAP_Command_Argument"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>OVERLAY (ASAP Command Argument)</title>
+</head>
+<body id="OVERLAY_ASAP_Command_Argument"><a name="OVERLAY_ASAP_Command_Argument"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>OVERLAY (ASAP Command Argument)</h5></span> 
+   
+   
+  <div><p>Overlays plots (that is, places them on top of each other). 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+... OVERLAY [ k ]</pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>k</span></td><td><span>integer quadrant flag</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="OVERLAY_ASAP_Command_Argument__ul_1ADE6343DDC04532B628078FE575343C"><!-- --></a><ol id="OVERLAY_ASAP_Command_Argument__ul_1ADE6343DDC04532B628078FE575343C"> 
+		<li id="OVERLAY_ASAP_Command_Argument__li_C020F80DEC054CBD90AFDF4CF3249191"><a name="OVERLAY_ASAP_Command_Argument__li_C020F80DEC054CBD90AFDF4CF3249191"><!-- --></a>ASAP command arguments are
+		  optional and must follow a command. 
+		</li>
+ 
+		<li id="OVERLAY_ASAP_Command_Argument__li_FE53CE1F4FBE41AE91FA27274E51E060"><a name="OVERLAY_ASAP_Command_Argument__li_FE53CE1F4FBE41AE91FA27274E51E060"><!-- --></a>The command argument, 
+		  <b>OVERLAY</b> tells ASAP not to issue an end of plot so
+		  that the next plot created is overlaid with the current plot. This is useful
+		  for combining system plots with ray trace plots (assuming that the 
+		  <b>WINDOW</b> is the same for all plots), multiple spot
+		  diagrams, and so on. 
+		</li>
+ 
+		<li id="OVERLAY_ASAP_Command_Argument__li_48870B4AD689471DB9DBA0DC165742CB"><a name="OVERLAY_ASAP_Command_Argument__li_48870B4AD689471DB9DBA0DC165742CB"><!-- --></a>Use as a modifier on any
+		  ASAP command that produces graphical output. 
+		</li>
+ 
+		<li id="OVERLAY_ASAP_Command_Argument__li_AD72232380D444359C2019B96172FB35"><a name="OVERLAY_ASAP_Command_Argument__li_AD72232380D444359C2019B96172FB35"><!-- --></a>The 
+		  <b>k</b> is an integer between 1 and 4 inclusive that tells
+		  ASAP to scale the plot down to half size and place it in the 
+		  <b>k</b>th quadrant of the normal plotting area. This
+		  feature can be used to overlay but not overlap successive plots; that is, spot
+		  diagrams for different source points. The quadrants are numbered in the
+		  following manner: 1=upper left, 2=upper right, 3=lower left, 4=lower right. Due
+		  to the scaled-down size, no ordinary border text is placed on the plot. 
+		</li>
+ 
+		<li id="OVERLAY_ASAP_Command_Argument__li_E7FD34DB9FFA49A5ADFCD7A471BAE078"><a name="OVERLAY_ASAP_Command_Argument__li_E7FD34DB9FFA49A5ADFCD7A471BAE078"><!-- --></a>The default value of 
+		  <b>k</b> is 0, that is, normal full-sized plot, if the last
+		  plotting command did not have an 
+		  <b>OVERLAY</b> option on it. Otherwise, it is one more than
+		  the last quadrant specified. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#OVERLAY">OVERLAY
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_N_O-ref.html#Commands_and_Macros_N_O" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “N-O”.">Commands and Macros (N-O)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Graphics_Modifiers-conc.html" title="Most graphics commands offer a common set of modifiers called command arguments that provide you with additional control over the appearance of graphics.">Graphics Modifiers</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Plotting_Commands-ref.html" title="The PLOT command is a general command for plotting virtually any aspect of system geometry and selected ray data.">Plotting Commands</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/HISTORY_ASAP-cmdref.html" title="Recalls ray data from a previously saved binary file for plotting or listing. The first syntax is for compatibility. The second syntax is for the Path Explorer.">HISTORY (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_BEAMS_ASAP-cmdref.html" title="Plots extent of each Gaussian beam within the currently specified graphics window.">PLOT BEAMS (ASAP Command)</a></div>
+<div><a href="../Commands/PROFILES_ASAP-cmdref.html" title="Plots slices through objects contained within the specified graphics window.">PROFILES (ASAP Command)</a></div>
+<div><a href="../Commands/REPLOT_ASAP-cmdref.html" title="Plots data stored in the 3D vector file within the currently defined graphics window.">REPLOT (ASAP Command)</a></div>
+<div><a href="../Commands/SPOTS_ASAP-cmdref.html" title="Creates a geometric spot diagram for the currently selected ray data.">SPOTS (ASAP Command)</a></div>
+<div><a href="../Commands/TRACE_ASAP-cmdref.html" title="Traces all currently selected rays in storage.">TRACE (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

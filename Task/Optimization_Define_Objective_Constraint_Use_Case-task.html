@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Optimization - Defining Objective Constraints"/>
+<meta name="abstract" content="This topic describes how to define and enable objective constraints for optimization. It also describes how to define and assign penalty functions. Objective constraints and penalty functions are optional."/>
+<meta name="description" content="This topic describes how to define and enable objective constraints for optimization. It also describes how to define and assign penalty functions. Objective constraints and penalty functions are optional."/>
+<meta name="DC.subject" content="Optimization - Defining Objective Constraints, Defining Objective Constraints, Optimization Setup Summary Window, penalty function, assigning"/>
+<meta name="keywords" content="Optimization - Defining Objective Constraints, Defining Objective Constraints, Optimization Setup Summary Window, penalty function, assigning"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Optimization_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Getting_Started_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Optimization_Setup_Summary_Window-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Design_Variables_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Design_Variable_Dialog-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Design_Objectives_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Design_Objectives_Dialog-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimize_Objective_Constraints_ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Define_Exit_Criteria_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Exit_Criteria_Dialog-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Set_Method_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Method_Dialog-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Optimization_Results-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Grid_Display_Options_dialog-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Glossary-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Design_Variable_Messages-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Optimization_Use_Case_for_Defining_Objective_Constraints"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Optimization - Defining Objective Constraints</title>
+</head>
+<body id="Optimization_Use_Case_for_Defining_Objective_Constraints"><a name="Optimization_Use_Case_for_Defining_Objective_Constraints"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Optimization - Defining Objective Constraints</h5></span> 
+   
+   
+  <div><p>This topic describes how to define and enable objective
+	 constraints for optimization. It also describes how to define and assign penalty functions. Objective constraints and penalty functions are optional. 
+   
+
+</p>
+ 
+	 <div class="p" id="Optimization_Use_Case_for_Defining_Objective_Constraints__prereq_E5241EE3C17D40819C5AFB44D362E85E"><a name="Optimization_Use_Case_for_Defining_Objective_Constraints__prereq_E5241EE3C17D40819C5AFB44D362E85E"><!-- --></a> Pre-requisites: 
+	 </div>
+ 
+	 <div class="section" id="Optimization_Use_Case_for_Defining_Objective_Constraints__context_A01577D144EA439B9A53F0574964B2DF"><a name="Optimization_Use_Case_for_Defining_Objective_Constraints__context_A01577D144EA439B9A53F0574964B2DF"><!-- --></a> 
+		<p> An open INR file that contains optimization elements, such as a
+		  scalar real variable, must be open in the ASAP Editor window. 
+		
+</p>
+ 
+	 </div>
+ 
+	 <a name="Optimization_Use_Case_for_Defining_Objective_Constraints__steps_2FC6E9AE426345908649BE646D084589"><!-- --></a><ol id="Optimization_Use_Case_for_Defining_Objective_Constraints__steps_2FC6E9AE426345908649BE646D084589"> 
+		<li class="stepexpand" id="Optimization_Use_Case_for_Defining_Objective_Constraints__step_4E0DB75DB25C4C85BEF1CABC3F8A5A35"><a name="Optimization_Use_Case_for_Defining_Objective_Constraints__step_4E0DB75DB25C4C85BEF1CABC3F8A5A35"><!-- --></a> 
+		  <span>Select text from an open INR file that contain a scalar real variable and
+			 right-click the text. </span> 
+		    
+		  The selected text is a valid expression (in the form 
+			 <kbd class="userinput">name=value, 
+			 </kbd> where value is an expression) that can be evaluated to
+			 create an objective constraint. 
+		  
+ 
+		</li>
+ 
+		<li class="stepexpand" id="Optimization_Use_Case_for_Defining_Objective_Constraints__step_2D160F5691924298BE083EFA51ADA7D8"><a name="Optimization_Use_Case_for_Defining_Objective_Constraints__step_2D160F5691924298BE083EFA51ADA7D8"><!-- --></a> 
+		  <span>Select 
+			 <b>Define Objective Constraint</b> from the context
+			 menu. Alternatively, from the Optimize menu on the ASAP toolbar,
+			 select <b>Define Objective Constraint</b>. 
+		  <br/><a name="Optimization_Use_Case_for_Defining_Objective_Constraints__image_67ADA6EC91C740C5BDF029320B54E738"><!-- --></a><div class="imagecenter"><img id="Optimization_Use_Case_for_Defining_Objective_Constraints__image_67ADA6EC91C740C5BDF029320B54E738" longdesc="Optimization Editor - select Define Objective Constraint" src="../Graphics/Optimization_Editor_SelectConstraint.jpg" width="524" height="241"/></div><br/></span> 
+		   A new objective constraint displays on the
+			 Objective Constraints tab of the Optimization Setup Summary window. The name is
+			 automatically inserted, based on user selection in the script. 
+		  <br/><a name="Optimization_Use_Case_for_Defining_Objective_Constraints__image_8948E6B10CE241EDA6EA9655AD4A0F90"><!-- --></a><div class="imagecenter"><img id="Optimization_Use_Case_for_Defining_Objective_Constraints__image_8948E6B10CE241EDA6EA9655AD4A0F90" longdesc="Optimization Setup Summary window - Objective Constraint w/o penalty function" src="../Graphics/Optimization_SetupSumWindow_ObjectiveConstraintsTab_noPF.jpg" width="541" height="189"/></div><br/>
+ 
+		</li>
+ 
+		<li class="stepexpand" id="Optimization_Use_Case_for_Defining_Objective_Constraints__step_397548E0B0B54A24BB37F903924F7A70"><a name="Optimization_Use_Case_for_Defining_Objective_Constraints__step_397548E0B0B54A24BB37F903924F7A70"><!-- --></a><span>If desired, define a penalty function that you can later assign to an objective constraint. </span><a name="Optimization_Use_Case_for_Defining_Objective_Constraints__substeps_39169CABE9D0444DBCC7D1FB96E9D439"><!-- --></a><ol type="a" id="Optimization_Use_Case_for_Defining_Objective_Constraints__substeps_39169CABE9D0444DBCC7D1FB96E9D439"><li id="Optimization_Use_Case_for_Defining_Objective_Constraints__substep_C05934F72DDF45989D9471511C5AFBE2"><a name="Optimization_Use_Case_for_Defining_Objective_Constraints__substep_C05934F72DDF45989D9471511C5AFBE2"><!-- --></a><span>Select text from the script in the Editor containing a scalar variable that can be evaluated as a penalty function. 
+</span></li>
+<li id="Optimization_Use_Case_for_Defining_Objective_Constraints__substep_8111CE4C01B24E18B0636C7E7CD42B5F"><a name="Optimization_Use_Case_for_Defining_Objective_Constraints__substep_8111CE4C01B24E18B0636C7E7CD42B5F"><!-- --></a><span>Select <b>Define Penalty Function</b> from the context menu.  Alternatively, from the Optimize menu on the ASAP toolbar,
+			 select <b>Define Penalty Function</b>. 
+		  
+<br/><a name="Optimization_Use_Case_for_Defining_Objective_Constraints__image_6ADA07481FD647BEB09A8826C5938502"><!-- --></a><div class="imagecenter"><img id="Optimization_Use_Case_for_Defining_Objective_Constraints__image_6ADA07481FD647BEB09A8826C5938502" longdesc="Optimization Editor - Penalty Function menu" src="../Graphics/Optimization_Editor_SelectPenalty.jpg" width="523" height="319"/></div><br/>
+</span></li>
+</ol>
+ Selected text should contain the name of the penalty function and its value; for example, P1=2, P2=1/(C+.001), and P3=5.</li>
+<li class="stepexpand" id="Optimization_Use_Case_for_Defining_Objective_Constraints__step_15C63FF2E39A4B91BAF6BBAD37FD68BE"><a name="Optimization_Use_Case_for_Defining_Objective_Constraints__step_15C63FF2E39A4B91BAF6BBAD37FD68BE"><!-- --></a><span>To assign a defined penalty function to a defined objective constraint, select the name of the constraint on the Objective Constraints tab, and select a pre-defined penalty function name from the drop-down menu in the Penalty Function column on the same row.<br/><a name="Optimization_Use_Case_for_Defining_Objective_Constraints__image_4DDB5698C24446E4A84CF01AB555B968"><!-- --></a><div class="imagecenter"><img id="Optimization_Use_Case_for_Defining_Objective_Constraints__image_4DDB5698C24446E4A84CF01AB555B968" longdesc="Optimization Setup Summary window - assign penalty function to constraint" src="../Graphics/Optimization_Editor_AssignPenalty.jpg" width="543" height="216"/></div><br/>
+</span> For example, select the objective constraint, "C", from the Name column on the Objective Constraints tab. Open the Penalty Function drop-down menu on the same row, and select the name, "P1". <div class="note"><span class="notetitle">Note:</span> You can <i>define</i> penalty functions before or after defining objective constraints, but a penalty function can be <i>assigned</i> only after an objective constraint is defined.
+</div>
+
+
+</li>
+<li class="stepexpand" id="Optimization_Use_Case_for_Defining_Objective_Constraints__step_5B87CA47E4264F299BA590794F59B7B9"><a name="Optimization_Use_Case_for_Defining_Objective_Constraints__step_5B87CA47E4264F299BA590794F59B7B9"><!-- --></a><span>To unassign (remove) a penalty function from a constraint, select <b>No Penalty Function Assigned</b>  from the drop-down menu in the Penalty Function column on the same row
+as the constraint.</span></li>
+<li class="stepexpand" id="Optimization_Use_Case_for_Defining_Objective_Constraints__step_96244786155249288272EF9E26FC711F"><a name="Optimization_Use_Case_for_Defining_Objective_Constraints__step_96244786155249288272EF9E26FC711F"><!-- --></a> 
+		  <span>Optionally, assign or change the minimum and maximum values, and enabled state for each constraint. <br/><a name="Optimization_Use_Case_for_Defining_Objective_Constraints__image_08B8BC2F18A34306880ABD527AAD7123"><!-- --></a><div class="imagecenter"><img id="Optimization_Use_Case_for_Defining_Objective_Constraints__image_08B8BC2F18A34306880ABD527AAD7123" longdesc="Optimization Setup Summary window - Objective Constraints tab" src="../Graphics/Optimization_SetupSumWindow_ObjectiveConstraintsTab2.jpg" width="543" height="186"/></div><br/>
+</span> 
+		    
+		  <div class="note"><span class="notetitle">Note:</span> A constraint is applied only when it is enabled.
+Disabled constraints are ignored.
+</div>
+</li>
+ 
+	 </ol>
+ 
+	 <div class="section" id="Optimization_Use_Case_for_Defining_Objective_Constraints__result_36032E3B97BA4F8589E2F67A23FA1861"><a name="Optimization_Use_Case_for_Defining_Objective_Constraints__result_36032E3B97BA4F8589E2F67A23FA1861"><!-- --></a>Result: 
+		<p>The objective constraint is validated and the objective constraint
+		  count is incremented. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Optimization_Use_Case_for_Defining_Objective_Constraints__postreq_B373DE7D84E74A9599F1DFBCCAB41D09"><a name="Optimization_Use_Case_for_Defining_Objective_Constraints__postreq_B373DE7D84E74A9599F1DFBCCAB41D09"><!-- --></a>
+
+		Post-requisites: 
+		<p>Define valid design variables, design objectives, objective constraints,
+		  exit criteria, and optimization methods, and select 
+		  <a name="Optimization_Use_Case_for_Defining_Objective_Constraints__image_CE57F5624F7C4C4E877A010BFC009C06"><!-- --></a><img id="Optimization_Use_Case_for_Defining_Objective_Constraints__image_CE57F5624F7C4C4E877A010BFC009C06" longdesc="Start Optimization button" src="../Graphics/Optimization_StartButton.jpg" width="126" height="22"/> on the Optimization Method tab. 
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Optimization_Overview-conc.html" title="The Optimization feature in ASAP addresses your need to optimize optical systems under evaluation that were designed or analyzed with ASAP. This topic gives a frame of reference, focusing on criteria you need to satisfy, and the process of designating an optimization method before you can initiate an optimization run in ASAP via the user interface. Related topics are listed at the end of this and other topics for this feature.">Optimization - Overview</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Optimization_Setup_Summary_Window-conc.html" title="The Optimization Setup Summary window presents a multi-tabbed user interface for viewing and entering information that ASAP will use to optimize a system under evaluation (SUE).">Optimization - Setup Summary Window</a></div>
+<div><a href="../Concept/Optimization_Results-conc.html" title="This topic describes the Optimization Results interface, which displays the progress of the optimization process both graphically and as tabular data.">Optimization - Viewing Results</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Optimization_Getting_Started_Use_Case-task.html" title="This topic describes how to set up ASAP before you can initiate an optimization in the optimization user interface. It describes the connection between the script (INR) and the optimization user interface, which is the Optimization Setup Summary window.">Optimization - Setting Up ASAP</a></div>
+<div><a href="../Task/Optimization_Design_Variables_Use_Case-task.html" title="This topic describes how to define and enable a design variable for optimization.">Optimization - Defining Design Variables</a></div>
+<div><a href="../Task/Optimization_Design_Objectives_Use_Case-task.html" title="This topic describes how to define and enable a design objective for optimization.">Optimization - Defining Design Objectives</a></div>
+<div><a href="../Task/Optimization_Define_Exit_Criteria_Use_Case-task.html" title="This topic describes how to define exit criteria to use to determine completion of optimization.">Optimization - Defining Exit Criteria</a></div>
+<div><a href="../Task/Optimization_Set_Method_Use_Case-task.html" title="This topic describes how to set a predefined optimization method.">Optimization - Defining a Method</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Optimization_Design_Variable_Dialog-ref.html" title="The Design Variable tab on the Optimization Setup Summary window lists currently defined design variables for the optimization session. At least one variable must be defined to begin optimization.">Optimization Design Variable Tab</a></div>
+<div><a href="../Reference/Optimization_Design_Objectives_Dialog-ref.html" title="The Design Objectives tab on the Optimization Setup Summary window lists currently defined design objectives for the optimization session. At least one item in the list must be enabled to run optimization.">Optimization Design Objectives Tab</a></div>
+<div><a href="../Reference/Optimize_Objective_Constraints_ref.html" title="The Objective Constraints tab on the Optimization Setup Summary window displays the list of currently defined objective constraints and penalty functions for the current optimization session. Objective constraints and penalty functions are optional.">Optimization Objective Constraints Tab</a></div>
+<div><a href="../Reference/Optimization_Exit_Criteria_Dialog-ref.html" title="The Exit Criteria tab on the Optimization Setup Summary window lets you select the exit criteria that determines completion of optimization.">Optimization Exit Criteria Tab</a></div>
+<div><a href="../Reference/Optimization_Method_Dialog-ref.html" title="The Optimization Method tab on the Optimization Setup Summary window lets you select the method.">Optimization Method Tab</a></div>
+<div><a href="../Reference/Optimization_Grid_Display_Options_dialog-ref.html" title="The Grid Display Options dialog is displayed when you right-click the table in the Optimization Results window.">Optimization Results - Grid Display Options Dialog</a></div>
+<div><a href="../Reference/Optimization_Glossary-ref.html" title="This topic provides a glossary of terms for the optimization feature in ASAP.">Optimization - Glossary</a></div>
+<div><a href="../Reference/Optimization_Design_Variable_Messages-ref.html" title="This topic describes informational messages issued by ASAP when you are defining design variables, design objectives, and objective constrains for optimization. It recommends corrective action.">Optimization Informational Messages</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="INTERFACE (ASAP Command)"/>
+<meta name="abstract" content="Assigns a reflective, refractive or diffractive interface to objects."/>
+<meta name="description" content="Assigns a reflective, refractive or diffractive interface to objects."/>
+<meta name="DC.subject" content="INTERFACE (ASAP Command), object interface, assigning"/>
+<meta name="keywords" content="INTERFACE (ASAP Command), object interface, assigning"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_I-ref.html#Commands_and_Macros_I"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/COATINGS_LAYERS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/INTERFACE_PolarizationModifiers_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/INTERFACE_REPEAT_ASAP-cmdref.html#INTERFACE_REPEAT_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MULTIPLE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WAVELENGTHS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Circular_Diffraction_Grating-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Combinations_of_INTERFACE_and_FRESNEL_Settings-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Glass_Catalogs_for_Refractive_Media-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/INTERFACE_Command_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Media_Storage-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Optical_Properties-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Referencing_Entities-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="INTERFACE_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>INTERFACE (ASAP Command)</title>
+</head>
+<body id="INTERFACE_ASAP_Command"><a name="INTERFACE_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>INTERFACE (ASAP Command)</h5></span>
+	
+	
+	<div><p>Assigns a reflective, refractive or diffractive interface to objects. </p>
+
+		<p><b>Syntax 1</b>
+		</p>
+
+		<pre class="codeblock">
+INTERFACE r [  t m m'] …
+          COAT k                       coat   coat'
+              -k
+              +k
+      </pre>
+
+		<p><b>Syntax 2</b>
+		</p>
+
+		<pre class="codeblock">
+INTERFACE … DIFFRACT i j [ e j' e' … ]
+                           coat   coat'
+      </pre>
+
+		<p><b>Syntax 3</b>
+		</p>
+
+		<pre class="codeblock">
+INTERFACE … DIFFRACT i coat j .j' j" …</pre>
+
+		<p><b>Syntax 4</b>
+		</p>
+
+		<pre class="codeblock">
+INTERFACE … DIFFRACT i… DIFFRACT i' … [ DIFFRACT i" … ]</pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>r</span></td><td><span>reflection coefficient</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>t</span></td><td><span>transmission coefficient</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m m'</span></td><td><span>media numbers (or names) on each side of the object</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>k</span></td><td><span> coating number (or name)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>DIFFRACT</span></td><td><span>flag to assign a diffractive interface to an object</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>i</span></td><td><span>MULTIPLE surface number</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>j j' ...</span></td><td><span>diffraction order number(s)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>e e' ...</span></td><td><span>relative efficiencies of the corresponding orders</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>coat coat'</span></td><td><span>name of a given coating property</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="INTERFACE_ASAP_Command__ul_6967C2E5086E4509A49687DC9234352B"><!-- --></a><ol id="INTERFACE_ASAP_Command__ul_6967C2E5086E4509A49687DC9234352B">
+			<li id="INTERFACE_ASAP_Command__li_9B7AC1D45E07436D94AE85F136116BA9"><a name="INTERFACE_ASAP_Command__li_9B7AC1D45E07436D94AE85F136116BA9"><!-- --></a>If the object surface is an optical
+				boundary through which rays are to be traced, the optical properties of the
+				interface must be specified using the <b>INTERFACE</b> command after the
+				definition command for that object. </li>
+
+			<li id="INTERFACE_ASAP_Command__li_B77FB56EA7494674BAD64E30F44FCE4A"><a name="INTERFACE_ASAP_Command__li_B77FB56EA7494674BAD64E30F44FCE4A"><!-- --></a>The <b>r</b> is the relative
+				energy (or complex amplitude) reflection coefficient for the surface (or the
+				reflectors in a lens structure). </li>
+
+			<li id="INTERFACE_ASAP_Command__li_B90FC0A02D444B2FB734661C28D6EB85"><a name="INTERFACE_ASAP_Command__li_B90FC0A02D444B2FB734661C28D6EB85"><!-- --></a>The <b>t</b> is the
+				transmission coefficient of the surface (or the refractors in a lens structure,
+				their reflectivities are then assumed to be 1<b>t</b>). </li>
+
+			<li id="INTERFACE_ASAP_Command__li_2BC7E97E8DA54A738CE9E180EC565EA7"><a name="INTERFACE_ASAP_Command__li_2BC7E97E8DA54A738CE9E180EC565EA7"><!-- --></a>
+				When explicitly stating numerical <b>r</b> and <b>t</b>
+				quantities in the <b>INTERFACE</b> command, the <b>COATING</b> parameter should not be used, otherwise ASAP produces the
+				wrong number of rays. For example, instead of entering: 
+				<pre class="codeblock">
+INTERFACE COATING 0 1 GLASS GLASS</pre>
+
+				<p>enter: </p>
+
+				<pre class="codeblock">
+INTERFACE 0 1 GLASS GLASS</pre>
+
+				<p>where "0 1" are examples </p>
+
+			</li>
+
+			<li id="INTERFACE_ASAP_Command__li_3DE5A8626D064C7683CC5AA6F001180C"><a name="INTERFACE_ASAP_Command__li_3DE5A8626D064C7683CC5AA6F001180C"><!-- --></a>If <b>t</b> is nonzero, then
+					<b>m</b> and <b>m'</b> are the numbers (or names) of the
+				media on each side of the object surface. </li>
+
+			<li id="INTERFACE_ASAP_Command__li_BF063A788B7C4932914E1E3DA38B71F7"><a name="INTERFACE_ASAP_Command__li_BF063A788B7C4932914E1E3DA38B71F7"><!-- --></a>The order in which <b>m</b> and
+					<b>m'</b> are entered is arbitrary; ASAP determines which to use. </li>
+
+			<li id="INTERFACE_ASAP_Command__li_9EAD456583204E089FF773AF5F85A3B4"><a name="INTERFACE_ASAP_Command__li_9EAD456583204E089FF773AF5F85A3B4"><!-- --></a>If either side of the interface is air or
+				vacuum, <b>m</b> or <b>m'</b> may be set to 0 (zero),
+					<b>AIR</b>, or<b> VACUUM</b>. </li>
+
+			<li id="INTERFACE_ASAP_Command__li_D5254AD4D01B4D3AAF8107F492BDB727"><a name="INTERFACE_ASAP_Command__li_D5254AD4D01B4D3AAF8107F492BDB727"><!-- --></a>Alternatively, the <b>r</b> and
+					<b>t</b> coefficients can be determined from coating number or name
+					<b>k</b> (0 for a <b>BARE SUBSTRATE</b>) and the current
+					<b>WAVELENGTH</b>. ASAP uses the reflection and transmission values
+				from the <b>COATING PROPERTIES</b> table or calculates the coefficients
+				from the <b>COATING LAYERS</b> table based on the normal incident form
+				of Fresnel's formulae. </li>
+
+			<li id="INTERFACE_ASAP_Command__li_CBE9EE4F778A46078461659C195C6741"><a name="INTERFACE_ASAP_Command__li_CBE9EE4F778A46078461659C195C6741"><!-- --></a> The signs in front of <b>k</b>
+				can be used to instruct ASAP to either propagate only a reflected ray <b>(-k:</b>
+				<b>t</b>=0) at that object or to propagate only a transmitted ray
+					<b>(+k:</b>
+				<b>r</b>=0) at that object. </li>
+
+			<li id="INTERFACE_ASAP_Command__li_8A346DAF54C1427BB7E7A0469B1B16F9"><a name="INTERFACE_ASAP_Command__li_8A346DAF54C1427BB7E7A0469B1B16F9"><!-- --></a><b>INTERFACE COATING +k m
+				m'</b>, where <b>k</b>=0 or <b>BARE_SUBSTRATE</b>, is
+				the syntax for modeling the polychromatic transmission properties of a bare
+				substrate. The transmission coefficient is calculated from the normal incident form
+				of the Fresnel formulae and applied to all incident ray angles. </li>
+
+			<li id="INTERFACE_ASAP_Command__li_E58D70A9A9034B6386430B1BB8E7F0E4"><a name="INTERFACE_ASAP_Command__li_E58D70A9A9034B6386430B1BB8E7F0E4"><!-- --></a>If an <b>INTERFACE</b> command
+				does not follow an object definition, the surface is assumed to be perfectly
+				absorbing and all rays reaching the surface is trapped there. </li>
+
+			<li id="INTERFACE_ASAP_Command__li_6C98DDDE1964412FAD8ECF63B0FA0922"><a name="INTERFACE_ASAP_Command__li_6C98DDDE1964412FAD8ECF63B0FA0922"><!-- --></a>Diffractive lines are created by the
+				intersection of the object surface with the different sheets of a <b>MULTIPLE</b> surface <b>i,</b> that is, a ruled linear grating is
+				created if i is a plane, a zone plate is created if the surface is a cylinder, etc. </li>
+
+			<li id="INTERFACE_ASAP_Command__li_8F98D7B4B68B45CAA5B2E64B1BC39ACB"><a name="INTERFACE_ASAP_Command__li_8F98D7B4B68B45CAA5B2E64B1BC39ACB"><!-- --></a>If <b>i</b> is positive, the
+				multiple sheet spacing is taken to be the grating spacing in system units. If
+					<b>i</b> is negative, the spacing is assumed to be in the same units
+				as the last <b>WAVELENGTH</b> specification. The number of sheets
+				entered on the <b>MULTIPLE</b> surface command has no bearing on this
+				application. </li>
+
+			<li id="INTERFACE_ASAP_Command__li_EC6FC7AB8774415B9E6EB47A5C6D1F17"><a name="INTERFACE_ASAP_Command__li_EC6FC7AB8774415B9E6EB47A5C6D1F17"><!-- --></a>ASAP generates diffracted rays/beams for
+				the diffraction order numbers given by the <b>j</b>'s with relative
+				efficiencies given by the corresponding positive <b>e</b>'s. </li>
+
+			<li id="INTERFACE_ASAP_Command__li_30F13DE94BF649939EDC0A886BC7F524"><a name="INTERFACE_ASAP_Command__li_30F13DE94BF649939EDC0A886BC7F524"><!-- --></a> If an <b>e</b> is entered as a
+				negative number or as a name coat, then it is a <b>COATING PROPERTY</b>
+				possibly containing polychromatic complex amplitudes. </li>
+
+			<li id="INTERFACE_ASAP_Command__li_E98D85377D464A24B0C7DA168BAE0B40"><a name="INTERFACE_ASAP_Command__li_E98D85377D464A24B0C7DA168BAE0B40"><!-- --></a>Multiple exposure holograms can be modeled
+				by using more than one <b>DIFFRACT</b> option (the zeroth-order should
+				only be specified once). </li>
+
+			<li id="INTERFACE_ASAP_Command__li_6C61C05F80884ECEB589353725A4B44F"><a name="INTERFACE_ASAP_Command__li_6C61C05F80884ECEB589353725A4B44F"><!-- --></a>If an <b>e</b> is entered as a
+				negative number or as a name then it is a <b>COATING PROPERTY</b>
+				possibly containing polychromatic complex amplitudes. </li>
+
+			<li id="INTERFACE_ASAP_Command__li_D48842A3165643A8B5AF04AAFC8775EF"><a name="INTERFACE_ASAP_Command__li_D48842A3165643A8B5AF04AAFC8775EF"><!-- --></a>A named <b>COATING MODEL</b>
+				can be used to specify the angular variation of the diffraction order efficiencies;
+				that is, <pre class="codeblock">
+INTERFACE ... DIFFRACT i coat j j' j" ...</pre>
+</li>
+
+			<li id="INTERFACE_ASAP_Command__li_F3EC27F57B5B4FED86B8BE599ACF778E"><a name="INTERFACE_ASAP_Command__li_F3EC27F57B5B4FED86B8BE599ACF778E"><!-- --></a>
+				Multiple exposure holograms can be modeled by using more than one <b>DIFFRACT</b> option (the zeroth-order should only be specified once):
+				<pre class="codeblock">
+INTERFACE ... DIFFRACT i ... DIFFRACT i'... [ DIFFRACT i" ... ]</pre>
+
+			</li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#INTERFACE">INTERFACE Examples</a>
+		</p>
+
+	</div>
+
+	<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_I-ref.html#Commands_and_Macros_I" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “I”.">Commands and Macros (I)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/INTERFACE_Command_Overview-conc.html">INTERFACE Command Overview</a></div>
+<div><a href="../Concept/Optical_Properties-conc.html" title="Using ASAP, you can build optical system models by first creating optical property and system geometry databases. The databases have additional commands for direct data entry and commands called modifiers that allow you to alter the databases. As you build an object, you associate data from these databases to the object for ray tracing.">Optical Properties</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Glass_Catalogs_for_Refractive_Media-task.html" title="The glass databases accessible in ASAP include: French, Hikari, Hoya, Hoya New, Ohara, Schott, Schott New, Sumita, and Unusual. The catalogs are in text files named *.CAT. The data for a specific glass consists of the glass name and six interpolation constants. No transmission, absorption, cost, staining data are contained in this database.">Glass Catalogs for Refractive Media</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Circular_Diffraction_Grating-ref.html" title="A circular diffraction grating has equally spaced grating rings that extend radially outward.">Circular Diffraction Grating</a></div>
+<div><a href="../Reference/Combinations_of_INTERFACE_and_FRESNEL_Settings-ref.html" title="Combinations of the INTERFACE and FRESNEL command settings are listed in this topic.">Combinations of INTERFACE and FRESNEL Settings</a></div>
+<div><a href="../Reference/Media_Storage-ref.html" title="Refractive media are stored in a complex array. As MEDIA are defined, they fill the array at the next available location. This setup is important to note because the INTERFACE command, which is an OBJECT modifier, references these media for assignment as an object's specular optical properties.">Media Storage</a></div>
+<div><a href="../Reference/Referencing_Entities-ref.html" title="Databases of surfaces, edges, objects, media (including coatings), rays, and sources may be referenced absolutely or relatively. Objects, media, and coatings also may be referenced literally.">Referencing Entities</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/COATINGS_LAYERS_ASAP-cmdref.html" title="Creates a coating specified by its multilayer prescription.">COATINGS LAYERS (ASAP Command)</a></div>
+<div><a href="../Commands/INTERFACE_PolarizationModifiers_ASAP-cmdref.html" title="Assigns a polarization modification interface to objects.">INTERFACE POLARIZATION (Polarization Modifiers) (ASAP Command)</a></div>
+<div><a href="../Commands/INTERFACE_REPEAT_ASAP-cmdref.html#INTERFACE_REPEAT_ASAP_Command" title="Assigns the interface characteristics of either a specified object or the previous object to the current object.">INTERFACE REPEAT (ASAP Command)</a></div>
+<div><a href="../Commands/MULTIPLE_ASAP-cmdref.html" title="Converts the surface into multiple sheets.">MULTIPLE (ASAP Command)</a></div>
+<div><a href="../Commands/WAVELENGTHS_ASAP-cmdref.html" title="Defines the wavelength(s) for different MEDIA and COATING definitions.">WAVELENGTH(S) (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Diffraction Gratings and DOEs</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Diffraction Gratings and
+				DOEs, at http://www.breault.com/k-base.php </a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Ray Tracing Tips"/>
+<meta name="abstract" content="ASAP begins tracing rays from the point at which they were defined. Inappropriate starting points can give rise to unexpected results. This topic provides tips on ray tracing."/>
+<meta name="description" content="ASAP begins tracing rays from the point at which they were defined. Inappropriate starting points can give rise to unexpected results. This topic provides tips on ray tracing."/>
+<meta name="DC.subject" content="Ray Tracing Tips, ray, tracing algorithm"/>
+<meta name="keywords" content="Ray Tracing Tips, ray, tracing algorithm"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Application_Messages-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Ray_Tracing_Improving_Speed-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Tracing_the_Rays_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Ray_Tracing_Overview-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Ray_Tracing_Tips"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Ray Tracing Tips</title>
+</head>
+<body id="Ray_Tracing_Tips"><a name="Ray_Tracing_Tips"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Ray Tracing Tips</h5></span> 
+  
+  
+  <div><p>ASAP begins tracing rays from the point at which they were
+	 defined. Inappropriate starting points can give rise to unexpected results.
+	 This topic provides tips on ray tracing.
+  </p>
+ 
+	 <br/><a name="Ray_Tracing_Tips__ul_49F53783303A4E36ACD0B99A0B747573"><!-- --></a><ul id="Ray_Tracing_Tips__ul_49F53783303A4E36ACD0B99A0B747573"> 
+		<li id="Ray_Tracing_Tips__li_B926003C4B6440EFA965680D8843560E"><a name="Ray_Tracing_Tips__li_B926003C4B6440EFA965680D8843560E"><!-- --></a>Make sure the rays are
+		  traced from a location involving a nonzero propagation distance to the next
+		  object. 
+		</li>
+ 
+		<li id="Ray_Tracing_Tips__li_18009B3871D54039A4F7C11BBD80902F"><a name="Ray_Tracing_Tips__li_18009B3871D54039A4F7C11BBD80902F"><!-- --></a>ASAP intersects and
+		  propagates rays according to the geometry of the system, the 
+		  <b>SEARCH 
+		  </b> command settings, and the interfaces of the objects.
+		</li>
+ 
+		<li id="Ray_Tracing_Tips__li_8AD16ACD46F349A09675F8413571DA23"><a name="Ray_Tracing_Tips__li_8AD16ACD46F349A09675F8413571DA23"><!-- --></a>ASAP seeks out the
+		  physically correct propagation path, even if it is not necessarily the one you
+		  want.
+		</li>
+ 
+		<li id="Ray_Tracing_Tips__li_C285DFCDAC6D4524A80F607C5897DA47"><a name="Ray_Tracing_Tips__li_C285DFCDAC6D4524A80F607C5897DA47"><!-- --></a>Rays must initially
+		  intersect the first or last conicoid of an object composed of lenses and then
+		  they must intersect the intervening conicoids sequentially. If they do not, you
+		  may generate unreal ray trajectories.
+		</li>
+ 
+		<li id="Ray_Tracing_Tips__li_BB52DA0564EC4AA0B9360438D0A1F704"><a name="Ray_Tracing_Tips__li_BB52DA0564EC4AA0B9360438D0A1F704"><!-- --></a>Objects composed of lenses
+		  are not sealed volumes and so it is possible to propagate rays through an
+		  object as if it were not there.
+		</li>
+ 
+		<li id="Ray_Tracing_Tips__li_F810E2F287EF4B7996637CF76462909D"><a name="Ray_Tracing_Tips__li_F810E2F287EF4B7996637CF76462909D"><!-- --></a>The ray trace algorithm in
+		  ASAP is essentially a smart polynomial root solver designed to quickly locate
+		  the shortest intersection distance to the next valid object. All propagation
+		  distances 
+		  <i>must</i> involve a positive distance.
+		</li>
+ 
+		<li id="Ray_Tracing_Tips__li_8C5A3A7905444D01AEF6F356C4B6646F"><a name="Ray_Tracing_Tips__li_8C5A3A7905444D01AEF6F356C4B6646F"><!-- --></a>A common ray-tracing mistake
+		  is to define a ray grid or move a set of rays such that they are nominally
+		  coincident with an object. This action has the following effects on the ray
+		  trace algorithm: 
+		  <br/><a name="Ray_Tracing_Tips__ol_65913FA966AF435184F5445AE79E6AC1"><!-- --></a><ol id="Ray_Tracing_Tips__ol_65913FA966AF435184F5445AE79E6AC1"> 
+			 <li id="Ray_Tracing_Tips__li_1A9DD94BE431459CBF531105B72D160E"><a name="Ray_Tracing_Tips__li_1A9DD94BE431459CBF531105B72D160E"><!-- --></a>Random chance determines
+				whether or not the rays intersect the object. In all likelihood, some of the
+				rays do not intersect the object and, therefore, follow spurious trajectories.
+			 </li>
+ 
+			 <li id="Ray_Tracing_Tips__li_1597A659A25D45E6810C39479363E8A5"><a name="Ray_Tracing_Tips__li_1597A659A25D45E6810C39479363E8A5"><!-- --></a>Since ASAP determines
+				refractive indices at an interface on 
+				<i>the fly</i>, rays that do not intersect the object may not have
+				refractive indices that make sense at the next object intersection.
+			 </li>
+ 
+			 <li id="Ray_Tracing_Tips__li_901E17A4A25E4F6D9DFCB3F619AB3931"><a name="Ray_Tracing_Tips__li_901E17A4A25E4F6D9DFCB3F619AB3931"><!-- --></a>Although it is unlikely,
+				ASAP could get stuck in a loop in the intersection routine trying to decide if,
+				in fact, it has intersected the object.
+			 </li>
+ 
+		  </ol>
+
+		</li>
+ 
+	 </ul>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Ray_Tracing_Overview-conc.html" title="Ray tracing is accomplished by the RAY and TRACE commands. The fundamental difference between these commands is the permanence of the rays.">Ray Tracing Overview</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Application_Messages-conc.html" title="ASAP issues a variety of application messages to warn, alert, or inform you of any problems or situations it encounters. To learn what these messages mean, consult the BRO Knowledge Base first to determine if an explanation is posted.">Application Messages</a></div>
+<div><a href="../Concept/Tracing_the_Rays_Overview-conc.html" title="Ray tracing is probably the most basic operation in ASAP since all information regarding system performance is obtained with it.">Tracing the Rays Overview</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Ray_Tracing_Improving_Speed-task.html" title="The ray trace algorithm used in ASAP is optimized for speed and accuracy. This topic describes how you can speed up the process.">Ray Tracing - Improving Speed</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

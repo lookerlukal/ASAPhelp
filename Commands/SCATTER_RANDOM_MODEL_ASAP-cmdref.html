@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="SCATTER RANDOM/MODEL (ASAP Command)"/>
+<meta name="abstract" content="Assigns a scattering interface to an object."/>
+<meta name="description" content="Assigns a scattering interface to an object."/>
+<meta name="DC.subject" content="SCATTER RANDOM/MODEL (ASAP Command), object, assigning scatter interface to, random, scatter model"/>
+<meta name="keywords" content="SCATTER RANDOM/MODEL (ASAP Command), object, assigning scatter interface to, random, scatter model"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_S-ref.html#Commands_and_Macros_S"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LEVEL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SCATTER_REPEAT_ASAP-cmdref.html#SCATTER_REPEAT_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SCATTER_RMS_BSDF_ASAP-cmdref.html#SCATTER_RMS_BSDF_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TOWARDS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Optical_Properties-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/SCATTER_MODEL_and_TOWARDS_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Scattering_Overview-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Scattering_with_ROUGHNESS_RANDOM-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Stray_Light_Calculating_Radiation_Scattered_to_Detector-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="SCATTER_RANDOM_MODEL_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>SCATTER RANDOM/MODEL (ASAP Command)</title>
+</head>
+<body id="SCATTER_RANDOM_MODEL_ASAP_Command"><a name="SCATTER_RANDOM_MODEL_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>SCATTER RANDOM/MODEL (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Assigns a scattering interface to an object. 
+  </p>
+ 
+	 <p><b>Syntax 1</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+SCATTER [ RANDOM [ r' n ] ] [ ABS r t ]
+                              REL
+      </pre>
+ 
+	 <p><b>Syntax 2</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+SCATTER MODEL  m
+        MODELS m m'
+      </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RANDOM</span></td><td><span>specifies Lambertian scatter input</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>r'</span></td><td><span>total hemispherical reflectivity</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span>number of randomly distributed scatter rays to be
+			 generated(default value is 1)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ABS or REL</span></td><td><span>specifies absolute or relative scatter</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>r t</span></td><td><span>separately scales the magnitude of the reflective/transmissive
+			 components; required with 
+			 <b>INTERFACE</b> and 
+			 <b>LEVEL ALL</b> for two-way scattering</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MODEL m</span></td><td><span> assigns scatter model m to the interface 
+		  </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MODEL m m'</span></td><td><span>assigns reflective m and transmissive m' scatter models to the
+			 interface</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="SCATTER_RANDOM_MODEL_ASAP_Command__ul_BF7F18180E434B6E8BD1E6B9F8AEB3DA"><!-- --></a><ol id="SCATTER_RANDOM_MODEL_ASAP_Command__ul_BF7F18180E434B6E8BD1E6B9F8AEB3DA"> 
+		<li id="SCATTER_RANDOM_MODEL_ASAP_Command__li_6FE2EC936CFF4743BF728D73DDEC981D"><a name="SCATTER_RANDOM_MODEL_ASAP_Command__li_6FE2EC936CFF4743BF728D73DDEC981D"><!-- --></a><b>SCATTER
+			 RANDOM</b> assigns incoherent random diffuse scattering properties to an
+		  interface and may be used to simulate Lambertian scatter at the interface
+		  (equally bright in all directions). 
+		</li>
+ 
+		<li id="SCATTER_RANDOM_MODEL_ASAP_Command__li_9A639FF2EB5044C48C6B97CE60211C3C"><a name="SCATTER_RANDOM_MODEL_ASAP_Command__li_9A639FF2EB5044C48C6B97CE60211C3C"><!-- --></a>All rays generated by 
+		  <b>RANDOM</b> have the same flux. 
+		</li>
+ 
+		<li id="SCATTER_RANDOM_MODEL_ASAP_Command__li_078A3B79B52040DBB866CCF9E726675C"><a name="SCATTER_RANDOM_MODEL_ASAP_Command__li_078A3B79B52040DBB866CCF9E726675C"><!-- --></a>The 
+		  <b>RANDOM</b> option does not require the modifier 
+		  <b>TOWARDS</b>, but BRO recommends it since it is more
+		  efficient to scatter 
+		  <b>TOWARDS</b> an importance sampled edge. 
+		</li>
+ 
+		<li id="SCATTER_RANDOM_MODEL_ASAP_Command__li_5EB172895BC84514BDE37BBB16B52EE4"><a name="SCATTER_RANDOM_MODEL_ASAP_Command__li_5EB172895BC84514BDE37BBB16B52EE4"><!-- --></a>Using the 
+		  <b>MODELS</b> option requires non-zero specular reflection
+		  and transmission coefficients on the 
+		  <b>INTERFACE</b> command. If the surface has only
+		  transmissive and reflective scatter, use 
+		  <b>INTERFACE 1E-15 1E-15</b> to eliminate the specular rays
+		  while still allowing two-way scatter. 
+		</li>
+ 
+		<li id="SCATTER_RANDOM_MODEL_ASAP_Command__li_2D24D35F58434BE8B81391BD6FCD18A9"><a name="SCATTER_RANDOM_MODEL_ASAP_Command__li_2D24D35F58434BE8B81391BD6FCD18A9"><!-- --></a>While the 
+		  <b>LEVEL</b> command is in effect, the 
+		  <b>RANDOM</b> option causes ASAP to generate a set of
+		  randomly distributed diffuse scatter rays for each incoming ray on the object. 
+		</li>
+ 
+		<li id="SCATTER_RANDOM_MODEL_ASAP_Command__li_485CF2BBCF6B4E19A02C1B7F92335BEB"><a name="SCATTER_RANDOM_MODEL_ASAP_Command__li_485CF2BBCF6B4E19A02C1B7F92335BEB"><!-- --></a>The 
+		  <b>r'</b> is the additional total hemispherical diffuse
+		  reflectivity of the scattering surface. The 
+		  <b>r'</b>=1 corresponds to white Lambertian. 
+		</li>
+ 
+		<li id="SCATTER_RANDOM_MODEL_ASAP_Command__li_515804BD2F674CF4B25A59A3F3FB6CAE"><a name="SCATTER_RANDOM_MODEL_ASAP_Command__li_515804BD2F674CF4B25A59A3F3FB6CAE"><!-- --></a>The 
+		  <b>n</b> is the number of rays to be scattered into the
+		  hemisphere centered on the ray intersection point. 
+		</li>
+ 
+		<li id="SCATTER_RANDOM_MODEL_ASAP_Command__li_36FAB8ADD821487A8D3B83A8C537AA0E"><a name="SCATTER_RANDOM_MODEL_ASAP_Command__li_36FAB8ADD821487A8D3B83A8C537AA0E"><!-- --></a>If both reflective and
+		  transmissive (or multiple diffraction orders) scatter rays are generated (see
+		  the 
+		  <b>LEVEL ALL</b> command), the specified scatter can be
+		  separately scaled in magnitude for the two components by the given 
+		  <b>r</b> and 
+		  <b>t</b> factors. The scatter specified can also be either 
+		  <b>ABSOLUTE</b> (referenced to incident power) or 
+		  <b>REL</b>ative to the specular power. The default is 
+		  <b>ABS 1 1</b> (except for 
+		  <b>SCATTER RMS</b>, which is 
+		  <b>REL 1 1</b>). 
+		</li>
+ 
+		<li id="SCATTER_RANDOM_MODEL_ASAP_Command__li_55251A87961347B29D1E28EF58608C32"><a name="SCATTER_RANDOM_MODEL_ASAP_Command__li_55251A87961347B29D1E28EF58608C32"><!-- --></a>To produce scattered rays, 
+		  <b>SCATTER MODEL m</b> must be followed by the 
+		  <b>TOWARDS</b> modifier. 
+		</li>
+ 
+		<li id="SCATTER_RANDOM_MODEL_ASAP_Command__li_E54EBDC7F1474051895F79E293DABA89"><a name="SCATTER_RANDOM_MODEL_ASAP_Command__li_E54EBDC7F1474051895F79E293DABA89"><!-- --></a>If reflective 
+		  <b>m</b> and transmissive 
+		  <b>m'</b> scatter models are different, specify both. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#SCATTER">SCATTER
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+  <div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_S-ref.html#Commands_and_Macros_S" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “S”.">Commands and Macros (S)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Optical_Properties-conc.html" title="Using ASAP, you can build optical system models by first creating optical property and system geometry databases. The databases have additional commands for direct data entry and commands called modifiers that allow you to alter the databases. As you build an object, you associate data from these databases to the object for ray tracing.">Optical Properties</a></div>
+<div><a href="../Concept/SCATTER_MODEL_and_TOWARDS_Overview-conc.html" title="This topic gives several tips for scattering rays towards a specified small area.">SCATTER MODEL and TOWARDS Overview</a></div>
+<div><a href="../Concept/Scattering_with_ROUGHNESS_RANDOM-conc.html" title="This topic gives several tips for using ROUGHNESS RANDOM, which simulates scatter from a rough surface by randomly perturbing the direction of a reflected or refracted ray. The actual surface of the object is not altered.">Scattering with ROUGHNESS RANDOM</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Scattering_Overview-ref.html" title="Scattering is generally defined as the removal of energy from an incident wave and the subsequent re-emission of some portion of that energy. The macroscopic laws of refraction and reflection may even be considered special cases of the statistical averages of scattering phenomena. This topic discusses scatter from nonsmooth surfaces; that is, surface scattering, since ASAP is primarily designed to model surface scattering phenomena. Volume scattering can be modeled by using many transparent scattering surfaces to partition the volume.">Scattering Overview</a></div>
+<div><a href="../Reference/Stray_Light_Calculating_Radiation_Scattered_to_Detector-ref.html" title="ASAP may be used directly to calculate the amount of radiation scattered to the detector when the critical and illuminated objects are known, as well as the paths connecting them to the detector.">Stray Light - Calculating Radiation Scattered to Detector</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/LEVEL_ASAP-cmdref.html" title="Controls the number of times a scattered ray may be rescattered.">LEVEL (ASAP Command)</a></div>
+<div><a href="../Commands/SCATTER_REPEAT_ASAP-cmdref.html#SCATTER_REPEAT_ASAP_Command" title="Assigns the scatter characteristics of a given object to the current object.">SCATTER REPEAT (ASAP Command)</a></div>
+<div><a href="../Commands/SCATTER_RMS_BSDF_ASAP-cmdref.html#SCATTER_RMS_BSDF_ASAP_Command" title="Assigns a near-specular scattering interface to an object.">SCATTER RMS/BSDF (ASAP Command)</a></div>
+<div><a href="../Commands/TOWARDS_ASAP-cmdref.html" title="Specifies importance area or direction sampling for scattered rays. Required when specifying a SCATTER MODEL.">TOWARDS (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Stray Light Analysis with ASAP</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Scattering in ASAP</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Scattering in
+		  ASAP, http://www.breault.com/k-base.php 
+		</a></div>
+</div>
+</div> 
+
+</body>
+</html></body></html>

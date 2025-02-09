@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="SPREAD and FIELD Calculations (Point Sources)"/>
+<meta name="abstract" content="Prior to defining the rays, specify the input listed in this topic."/>
+<meta name="description" content="Prior to defining the rays, specify the input listed in this topic."/>
+<meta name="DC.subject" content="SPREAD and FIELD Calculations (Point Sources), calculations, SPRED and FIELD"/>
+<meta name="keywords" content="SPREAD and FIELD Calculations (Point Sources), calculations, SPRED and FIELD"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/SPREAD_and_FIELD_Command_Differences-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Slicing_the_Irradiance_Pattern_with_FIELD-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Slicing_the_Irradiance_Pattern_with_SPREAD-conc.html#Slicing_the_Irradiance_Pattern_with_SPREAD"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DISPLAY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FIELD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPREAD_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="SPREAD_FIELD_Calculations_Point_Sources"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>SPREAD and FIELD Calculations (Point Sources)</title>
+</head>
+<body id="SPREAD_FIELD_Calculations_Point_Sources"><a name="SPREAD_FIELD_Calculations_Point_Sources"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>SPREAD and FIELD Calculations (Point Sources)</h5></span> 
+   
+   
+  <div><p>Prior to defining the rays, specify the input listed in this
+	 topic. 
+  </p>
+ 
+	 <div class="section" id="SPREAD_FIELD_Calculations_Point_Sources__context_8EF8464BBBF64386AA624C6F14D99AD0"><a name="SPREAD_FIELD_Calculations_Point_Sources__context_8EF8464BBBF64386AA624C6F14D99AD0"><!-- --></a> 
+		<br/><a name="SPREAD_FIELD_Calculations_Point_Sources__ol_F81285319B2A4F6D99101C660B84E8B5"><!-- --></a><ol id="SPREAD_FIELD_Calculations_Point_Sources__ol_F81285319B2A4F6D99101C660B84E8B5"> 
+		  <li id="SPREAD_FIELD_Calculations_Point_Sources__li_5B126754CB554DCABD17B44A45AD43BD"><a name="SPREAD_FIELD_Calculations_Point_Sources__li_5B126754CB554DCABD17B44A45AD43BD"><!-- --></a><b>BEAMS COHERENT
+				DIFFRACT</b> 
+		  </li>
+ 
+		  <li id="SPREAD_FIELD_Calculations_Point_Sources__li_7E51ADFFD5214B9EA3342B489A588BC8"><a name="SPREAD_FIELD_Calculations_Point_Sources__li_7E51ADFFD5214B9EA3342B489A588BC8"><!-- --></a><b>WAVELENGTH</b>
+			 (required) 
+		  </li>
+ 
+		  <li id="SPREAD_FIELD_Calculations_Point_Sources__li_78FD27CD81B140ECA48E47B7EEAC6037"><a name="SPREAD_FIELD_Calculations_Point_Sources__li_78FD27CD81B140ECA48E47B7EEAC6037"><!-- --></a><b>PARABASAL</b>
+			 (required) 
+		  </li>
+ 
+		  <li id="SPREAD_FIELD_Calculations_Point_Sources__li_F754628313DA438DA4E92ADDB68B52EB"><a name="SPREAD_FIELD_Calculations_Point_Sources__li_F754628313DA438DA4E92ADDB68B52EB"><!-- --></a><b>WIDTH</b>
+			 (usually recommended to smooth out bumps) 
+		  </li>
+ 
+		  <li id="SPREAD_FIELD_Calculations_Point_Sources__li_E1900C8754FF48C98F1C9436B9C07898"><a name="SPREAD_FIELD_Calculations_Point_Sources__li_E1900C8754FF48C98F1C9436B9C07898"><!-- --></a><b>USERAPOD</b> (used only
+			 for Gaussian or user-defined apodization) 
+		  </li>
+ 
+		  <li id="SPREAD_FIELD_Calculations_Point_Sources__li_323D26A00B0C412DBA557A064AF38732"><a name="SPREAD_FIELD_Calculations_Point_Sources__li_323D26A00B0C412DBA557A064AF38732"><!-- --></a><b>POLARIZATION</b> (used
+			 only for polarization ray tracing) 
+		  </li>
+ 
+		</ol>
+ 
+		<p>To specify the rayset, use the following input in this order: 
+		</p>
+ 
+		<br/><a name="SPREAD_FIELD_Calculations_Point_Sources__ol_E66975AC84B9423B917DF09DAE7FBC5D"><!-- --></a><ol id="SPREAD_FIELD_Calculations_Point_Sources__ol_E66975AC84B9423B917DF09DAE7FBC5D"> 
+		  <li id="SPREAD_FIELD_Calculations_Point_Sources__li_70ECB8F7F43E478DBDFB28412ABCA534"><a name="SPREAD_FIELD_Calculations_Point_Sources__li_70ECB8F7F43E478DBDFB28412ABCA534"><!-- --></a><b>GRID 
+			 </b> or 
+			 <b>RAYSET 
+			 </b> (one of these is required) 
+		  </li>
+ 
+		  <li id="SPREAD_FIELD_Calculations_Point_Sources__li_49C1C4190EC84AD6984583EC709EAEBF"><a name="SPREAD_FIELD_Calculations_Point_Sources__li_49C1C4190EC84AD6984583EC709EAEBF"><!-- --></a><b>SOURCE
+				POSITION/DIRECTION/FOCUS 
+			 </b> (one of these is required), or 
+			 <b>GAUSSIAN 
+			 </b> 
+		  </li>
+ 
+		</ol>
+ 
+		<p>After the 
+		  <b>GRID 
+		  </b> and 
+		  <b>SOURCE 
+		  </b> commands, specify the following input in any order. These
+		  inputs are used to modify the characteristics of the 
+		  <b>SOURCE 
+		  </b> : 
+		</p>
+ 
+		<br/><a name="SPREAD_FIELD_Calculations_Point_Sources__ol_250AE46765AF441DAA3580EC23C7F710"><!-- --></a><ol id="SPREAD_FIELD_Calculations_Point_Sources__ol_250AE46765AF441DAA3580EC23C7F710"> 
+		  <li id="SPREAD_FIELD_Calculations_Point_Sources__li_3040ED8F7B114EC3B9AC8B3D3A2146F2"><a name="SPREAD_FIELD_Calculations_Point_Sources__li_3040ED8F7B114EC3B9AC8B3D3A2146F2"><!-- --></a><b>FLUX 
+			 </b> (used to modify fluxes of rays) 
+		  </li>
+ 
+		  <li id="SPREAD_FIELD_Calculations_Point_Sources__li_E3819179C7954363B931942079139780"><a name="SPREAD_FIELD_Calculations_Point_Sources__li_E3819179C7954363B931942079139780"><!-- --></a><b>SHAPE 
+			 </b> (used to modify coherence of the rays) 
+		  </li>
+ 
+		</ol>
+ 
+		<p>To specify where and at what resolution to do the calculation, use the
+		  following input: 
+		</p>
+ 
+		<br/><a name="SPREAD_FIELD_Calculations_Point_Sources__ol_C9CAFA133EE94D5BBB3C06720F16010C"><!-- --></a><ol id="SPREAD_FIELD_Calculations_Point_Sources__ol_C9CAFA133EE94D5BBB3C06720F16010C"> 
+		  <li id="SPREAD_FIELD_Calculations_Point_Sources__li_24BD3167FD9043B2AC4F0AC40C88F1D7"><a name="SPREAD_FIELD_Calculations_Point_Sources__li_24BD3167FD9043B2AC4F0AC40C88F1D7"><!-- --></a><b>CONSIDER/SELECT 
+			 </b> (not required unless you want to restrict the ray data) 
+		  </li>
+ 
+		  <li id="SPREAD_FIELD_Calculations_Point_Sources__li_2DDBC2B4A89040C39991AEDBDB468AE9"><a name="SPREAD_FIELD_Calculations_Point_Sources__li_2DDBC2B4A89040C39991AEDBDB468AE9"><!-- --></a><b>WINDOW 
+			 </b> (required so that ASAP knows where to do the calculation) 
+		  </li>
+ 
+		  <li id="SPREAD_FIELD_Calculations_Point_Sources__li_C97E150F19DB4B5CA96087954B8C3B27"><a name="SPREAD_FIELD_Calculations_Point_Sources__li_C97E150F19DB4B5CA96087954B8C3B27"><!-- --></a><b>PIXEL 
+			 </b> (not required unless you want higher resolution) 
+		  </li>
+ 
+		</ol>
+ 
+		<p>After following the above order, run 
+		  <b>SPREAD</b> or 
+		  <b>FIELD</b>. 
+		</p>
+ 
+		<p>After the calculation, use 
+		  <b>DISPLAY</b> to examine the distribution data. 
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/SPREAD_and_FIELD_Command_Differences-ref.html" title="The two field/energy distribution commands, SPREAD and FIELD, appear to perform similar calculations (and in fact can perform many of the same calculations), but there are differences described in this topic.">SPREAD and FIELD Command Differences</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Slicing_the_Irradiance_Pattern_with_FIELD-conc.html" title="FIELD does not have a DOWN option like the SPREAD command, but it is possible to obtain the same information by selecting a narrow WINDOW width in the down direction.">Slicing the Irradiance Pattern with FIELD</a></div>
+<div><a href="../Concept/Slicing_the_Irradiance_Pattern_with_SPREAD-conc.html#Slicing_the_Irradiance_Pattern_with_SPREAD" title="If you do not need to calculate the entire 3D energy distribution, such as when symmetry is expected, it is more expedient and less time consuming to calculate only a slice of the irradiance pattern.">Slicing the Irradiance Pattern with SPREAD</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DISPLAY_ASAP-cmdref.html" title="Reads previously created distribution data files so that they can be modified.">DISPLAY (ASAP Command)</a></div>
+<div><a href="../Commands/FIELD_ASAP-cmdref.html" title="Calculates the exact complex field distribution.">FIELD (ASAP Command)</a></div>
+<div><a href="../Commands/SPREAD_ASAP-cmdref.html" title="Calculates the exact coherent/incoherent energy distribution.">SPREAD (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

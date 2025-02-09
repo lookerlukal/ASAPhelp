@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="MEDIA CRYSTAL (ASAP Command)"/>
+<meta name="abstract" content="Defines birefringent media."/>
+<meta name="description" content="Defines birefringent media."/>
+<meta name="DC.subject" content="MEDIA CRYSTAL (ASAP Command), media, define birefringent, birefringent media, crystal media"/>
+<meta name="keywords" content="MEDIA CRYSTAL (ASAP Command), media, define birefringent, birefringent media, crystal media"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_M-ref.html#Commands_and_Macros_M"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_ABSORB_ASAP-cmdref.html#MEDIA_ABSORB_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_GRIN_ASAP-cmdref.html#MEDIA_GRIN_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_SCATTER_ASAP-cmdref.html#MEDIA_SCATTER_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Anisotropic_Polarizing_Elements_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=235"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="MEDIA_CRYSTAL_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>MEDIA CRYSTAL (ASAP Command)</title>
+</head>
+<body id="MEDIA_CRYSTAL_ASAP_Command"><a name="MEDIA_CRYSTAL_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>MEDIA CRYSTAL (ASAP Command)</h5></span>
+	
+	
+	<div><p>Defines birefringent media. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+MEDIA [ m ]
+n  [ n' n" . . . ] CRYSTAL a,b,c [ m' ] [ 'name' ]
+      :
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m</span></td><td><span>starting media number</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n n' n" ...</span></td><td><span>real (or complex) refractive indices</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a,b,c</span></td><td><span>optical axis direction</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m'</span></td><td><span>ordinary index number or name</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>name</span></td><td><span>descriptive name that can be assigned to this medium (only the first 24
+					characters after the comment delimiter are stored).</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="MEDIA_CRYSTAL_ASAP_Command__ul_DAA82DCAAA594C089D347F79B25D346E"><!-- --></a><ol id="MEDIA_CRYSTAL_ASAP_Command__ul_DAA82DCAAA594C089D347F79B25D346E">
+			<li id="MEDIA_CRYSTAL_ASAP_Command__li_B3AB022D409E47C3BB7F6EB9311F6930"><a name="MEDIA_CRYSTAL_ASAP_Command__li_B3AB022D409E47C3BB7F6EB9311F6930"><!-- --></a> The ordinary indices are specified on a
+				previous medium <b>m'</b> (default is last media). For example, a
+				calcite crystal with its optical axis initially aligned with the Y-direction is
+				defined as follows:
+				<pre class="codeblock">    
+MEDIA
+1.66 !!ordinary indices for following extraordinary
+1.49 CRYSTAL 0 1 0 'CALCITE'
+         </pre>
+</li>
+
+			<li id="MEDIA_CRYSTAL_ASAP_Command__li_200D37BA2F734A9F858790A211255355"><a name="MEDIA_CRYSTAL_ASAP_Command__li_200D37BA2F734A9F858790A211255355"><!-- --></a> The above example is expressed in the
+				following way when the ordinary index is not defined on the immediately previous
+				medium:
+				<pre class="codeblock">     
+MEDIA
+1.66 'ORDINARY' !!ORDINARY INDICES FOR FOLLOWING EXTRAORDINARY
+1.60 'GLASS'
+1.49 CRYSTAL 0 1 0 ORDINARY 'CALCITE'
+         </pre>
+</li>
+
+			<li id="MEDIA_CRYSTAL_ASAP_Command__li_A72B4D6B754F402ABE6CCBF20E77C5C8"><a name="MEDIA_CRYSTAL_ASAP_Command__li_A72B4D6B754F402ABE6CCBF20E77C5C8"><!-- --></a>If <b>SPLIT</b> is one or
+				higher, ASAP automatically generates an ordinary and extraordinary ray/beam at each
+				crystal interface. </li>
+
+			<li id="MEDIA_CRYSTAL_ASAP_Command__li_2FB28C18A5644A56B30BCF69415A7B28"><a name="MEDIA_CRYSTAL_ASAP_Command__li_2FB28C18A5644A56B30BCF69415A7B28"><!-- --></a>If you linearly transform an object
+				assigned a birefringent <b>MEDIA</b>, the linear transformation is
+				applied also to the optical axis direction of the medium. Any other object using
+				this medium is therefore affected. </li>
+
+			<li id="MEDIA_CRYSTAL_ASAP_Command__li_DD65C2D83F2C438592CD1574DC47074C"><a name="MEDIA_CRYSTAL_ASAP_Command__li_DD65C2D83F2C438592CD1574DC47074C"><!-- --></a>Refractive indices for dispersive materials
+				must be entered in the order indicated by the previous <b>WAVELENGTHS</b> command. </li>
+
+			<li id="MEDIA_CRYSTAL_ASAP_Command__li_57B2CF6D9623474A842743591549A82F"><a name="MEDIA_CRYSTAL_ASAP_Command__li_57B2CF6D9623474A842743591549A82F"><!-- --></a>Linear interpolation is performed, if
+				necessary, to compute a refractive index at a particular wavelength. </li>
+
+			<li id="MEDIA_CRYSTAL_ASAP_Command__li_A2C760D929CC4883854252C7BC96ABBE"><a name="MEDIA_CRYSTAL_ASAP_Command__li_A2C760D929CC4883854252C7BC96ABBE"><!-- --></a>Accurately handles interface
+				reflectivity/transmissivity values in the most common cases (for example,
+				waveplates). However, the approximate (but fast) algorithm used can produce
+				erroneous values for more exotic situations. (The algorithm will be updated in a
+				future release of ASAP to address this.) </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#MEDIA">MEDIA Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_M-ref.html#Commands_and_Macros_M" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “M”.">Commands and Macros (M)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Anisotropic_Polarizing_Elements_Overview-conc.html" title="Retardance (sometimes called birefringence) is the property of an interface, where the Optical Path Length (OPL) or phase change between the orthonormal components, which mathematically describe the polarization state, is a function of the incident polarization state. Many polarizing optical elements, including waveplates and some polarizers, work on this basis.">Anisotropic Polarizing Elements Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/MEDIA_ASAP-cmdref.html" title="Creates a single refractive material.">MEDIA (ASAP Command)</a></div>
+<div><a href="../Commands/MEDIA_ABSORB_ASAP-cmdref.html#MEDIA_ABSORB_ASAP_Command" title="Creates an absorbing refractive material.">MEDIA ABSORB (ASAP Command)</a></div>
+<div><a href="../Commands/MEDIA_GRIN_ASAP-cmdref.html#MEDIA_GRIN_ASAP_Command" title="Creates a GRIN refractive material.">MEDIA GRIN (ASAP Command)</a></div>
+<div><a href="../Commands/MEDIA_SCATTER_ASAP-cmdref.html#MEDIA_SCATTER_ASAP_Command" title="Assigns to medium a GENERAL polynomial or USERFUNC function in the global coordinates X, Y, Z.">MEDIA SCATTER (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=235" target="_blank">See the Knowledge Base for the technical publication, Polarization</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,19 @@
+!!++
+!! PLANE01.INR
+!! Title: Rectangular PLANE Surface
+!! Category: Isolated Command
+!! Keywords: PLANE, SURFACE
+!! Description: Defines a plane normal to
+!! the z axis at z = 5. Requires the key word
+!! SURFACE precede the command.  Note also
+!! that this PLANE is not yet an OBJECT, i.e.,
+!! something that may be ray traced.
+!! Edit History: (latest first)
+!! 10/17/2000 - cp - modified format; added description
+!! 01/01/1996 - bro - creation
+!!--
+
+SURFACE
+  PLANE Z 5 RECT 1
+ 
+

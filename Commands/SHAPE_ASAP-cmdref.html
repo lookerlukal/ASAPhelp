@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="SHAPE (ASAP Command)"/>
+<meta name="abstract" content="Sets the beam shape of the individual rays of the currently selected rayset."/>
+<meta name="description" content="Sets the beam shape of the individual rays of the currently selected rayset."/>
+<meta name="DC.subject" content="SHAPE (ASAP Command), ray, setting beam shape, rayset, setting beam shape"/>
+<meta name="keywords" content="SHAPE (ASAP Command), ray, setting beam shape, rayset, setting beam shape"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_S-ref.html#Commands_and_Macros_S"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/RAYSET_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SELECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WAVELENGTHS_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="SHAPE_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>SHAPE (ASAP Command)</title>
+</head>
+<body id="SHAPE_ASAP_Command"><a name="SHAPE_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>SHAPE (ASAP Command)</h5></span>
+	
+	
+	<div><p>Sets the beam shape of the individual rays of the currently selected rayset. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+SHAPE k    [ s ]
+      beam
+      0    [ n a ] [ a' a" ... ]
+      MODE
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>k</span></td><td><span>beam shape parameter</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>beam</span></td><td><span>beam shape name corresponding to <b>k </b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>s</span></td><td><span>optional parameter required by certain shape parameters</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>0 (or MODE)</span></td><td><span>specifies higher-order Hermite-Gaussian beam modes</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span>number of higher order Hermite-Gaussian beam modes</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a</span></td><td><span>complex amplitude of TEMoo beam mode</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a' a" ...</span></td><td><span>complex amplitudes of higher order beam modes</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="SHAPE_ASAP_Command__ul_2CB2456CB2974352BA5944EC634BC070"><!-- --></a><ol id="SHAPE_ASAP_Command__ul_2CB2456CB2974352BA5944EC634BC070">
+			<li id="SHAPE_ASAP_Command__li_3D797B13F0B24C57939C1D59716C1FB2"><a name="SHAPE_ASAP_Command__li_3D797B13F0B24C57939C1D59716C1FB2"><!-- --></a>Resets the beam shape to the literal
+					<b>beam</b> or integer <b>k</b> for the currently
+					<b>SELECT</b>ed ray set. </li>
+
+			<li id="SHAPE_ASAP_Command__li_6834A06F5B864420AB638FF06C9D9A1A"><a name="SHAPE_ASAP_Command__li_6834A06F5B864420AB638FF06C9D9A1A"><!-- --></a> ASAP currently allows the following beam
+				shapes (the shape is either an amplitude profile for coherent beams or a flux
+				density profile for incoherent beams). <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Beam</span></th><th><span>k</span></th><th><span>Beam Shape</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MODE</span></td><td><span>0</span></td><td><span>Complex Hermite-Gaussian beam (default if WAVEL&gt;0)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ELIP</span></td><td><span>1</span></td><td><span>Uniform ellipse (default when WAVEL=0), central hole ratio <b>s </b>
+						</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>GAUS</span></td><td><span>2</span></td><td><span>External real Gaussian (optional supergaussian of order <b>s
+							</b> )</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RECT</span></td><td><span>3</span></td><td><span>Uniform parallelogram with central hole ratio <b>s </b>
+						</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>BELL</span></td><td><span>4</span></td><td><span>Bell-shaped (cosine squared) approximation to Gaussian</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>LRNZ</span></td><td><span>5</span></td><td><span>General Lorentzian (inverse <b>s </b> asymptotic
+							falloff)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SINC</span></td><td><span>6</span></td><td><span>Sinc (sinx/x) with Fourier central hole ratio <b>s </b>
+						</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SECH</span></td><td><span>7</span></td><td><span>Sech (hyperbolic secant)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SOMB</span></td><td><span>8</span></td><td><span>Sombrero or Airy disk function with Fourier central hole <b>s
+							</b>
+						</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>FIBR</span></td><td><span>9</span></td><td><span>Fundamental mode of circular fiber at normalized frequency <b>s </b>
+						</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SLAB</span></td><td><span>10</span></td><td><span>Fundamental mode of symmetric waveguide at normalized frequency
+								<b>s </b>
+						</span></td></tr></tbody></table></li>
+
+			<li id="SHAPE_ASAP_Command__li_CE19ABC8E4824BDDB82B568104BF80D1"><a name="SHAPE_ASAP_Command__li_CE19ABC8E4824BDDB82B568104BF80D1"><!-- --></a> The sign of <b>k</b> (or
+					<b>beam)</b> determines whether the beam is incoherently added
+				(intensity summing) or coherently added (complex field summing) to other beams of
+				similar designation. <p> k &lt; 1 Coherent beam </p>
+<p> k &gt; 0 Incoherent beam
+				</p>
+</li>
+
+			<li id="SHAPE_ASAP_Command__li_F359360328764778A067502C83603714"><a name="SHAPE_ASAP_Command__li_F359360328764778A067502C83603714"><!-- --></a>The optional entry <b>s</b> is
+				an arbitrary factor that is passed to the USHAPE routine. </li>
+
+			<li id="SHAPE_ASAP_Command__li_45E51355D5704BCE959DD2A0E2528384"><a name="SHAPE_ASAP_Command__li_45E51355D5704BCE959DD2A0E2528384"><!-- --></a> For MODE or <b>k</b> equal to
+				0, <b>n</b> is the number of higher-order Hermite-Gaussian beam modes
+				and <b>a a' a"...</b> are the corresponding complex amplitudes. The
+				modes are ordered in the following manner: 00 10 01 20 11 02 30 21 12 03 40 31 22 13
+				04 50 ... <p><b>CAUTION</b>
+				</p>
+<p>When using <b>SHAPE</b> to alter the beam shape, please be aware
+					that <i>it is possible to create a physically unreal beam</i>. </p>
+</li>
+
+			<li id="SHAPE_ASAP_Command__li_D17A64FF6F0B432EBAD63D0176A410CD"><a name="SHAPE_ASAP_Command__li_D17A64FF6F0B432EBAD63D0176A410CD"><!-- --></a>The default amplitude for the TEMoo is 1
+				(unity). The amplitudes of the higher order beam modes are defaulted to zero. </li>
+
+			<li id="SHAPE_ASAP_Command__li_9079BFC0E8B64F4FAE8F4A8B993DFBE7"><a name="SHAPE_ASAP_Command__li_9079BFC0E8B64F4FAE8F4A8B993DFBE7"><!-- --></a>When higher order beam modes are desired,
+				both the number of higher order modes and their amplitudes must be entered. The
+				number of higher order beam modes is given by <b>n.</b>
+			</li>
+
+			<li id="SHAPE_ASAP_Command__li_79E90C65F0214E6DBDA3C50E50B171DE"><a name="SHAPE_ASAP_Command__li_79E90C65F0214E6DBDA3C50E50B171DE"><!-- --></a>Ray tracing has no affect upon beam shape;
+				it is a property of the beam and is not altered by propagation. Consequently, it may
+				be reset at any time and may be parametrically varied if desired. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#SHAPE">SHAPE Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_S-ref.html#Commands_and_Macros_S" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “S”.">Commands and Macros (S)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/RAYSET_ASAP-cmdref.html" title="Specifies an arbitrary set of rays.">RAYSET (ASAP Command)</a></div>
+<div><a href="../Commands/SELECT_ASAP-cmdref.html" title="Isolates a ray set for further analysis.">SELECT (ASAP Command)</a></div>
+<div><a href="../Commands/WAVELENGTHS_ASAP-cmdref.html" title="Defines the wavelength(s) for different MEDIA and COATING definitions.">WAVELENGTH(S) (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

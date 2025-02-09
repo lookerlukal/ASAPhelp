@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="SYSTEM (ASAP Command)"/>
+<meta name="abstract" content="Stores and retrieves system information."/>
+<meta name="description" content="Stores and retrieves system information."/>
+<meta name="DC.subject" content="SYSTEM (ASAP Command), system information, storing and retrieving, saving system data"/>
+<meta name="keywords" content="SYSTEM (ASAP Command), system information, storing and retrieving, saving system data"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_S-ref.html#Commands_and_Macros_S"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/BOUNDS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/COATINGS_MODELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CONSIDER_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DEFORM_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/END_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FCN_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/INTERFACE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LIMITS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/RAYSET_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/RESET_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SEARCH_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Media_Database_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/OBJECT_Command_Overview-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="SYSTEM_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>SYSTEM (ASAP Command)</title>
+</head>
+<body id="SYSTEM_ASAP_Command"><a name="SYSTEM_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>SYSTEM (ASAP Command)</h5></span>
+	
+	
+	<div><p>Stores and retrieves system information. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+SYSTEM NEW
+       TO   [ file ]
+       FROM
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>NEW</span></td><td><span>reinitializes the data storage</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>FROM</span></td><td><span>reads system from file</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>TO</span></td><td><span>saves system to file</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>file</span></td><td><span>name of unformatted binary file (up to eight characters)</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="SYSTEM_ASAP_Command__ul_AF06442E0756406EA9468788767AC5A4"><!-- --></a><ol id="SYSTEM_ASAP_Command__ul_AF06442E0756406EA9468788767AC5A4">
+			<li id="SYSTEM_ASAP_Command__li_ED12D6CD7E83421BB089CA002B2C9501"><a name="SYSTEM_ASAP_Command__li_ED12D6CD7E83421BB089CA002B2C9501"><!-- --></a>Initializes ASAP at startup. To input a new
+				system, you must reinitialize the data storage using <b>SYSTEM NEW</b>,
+				or ASAP appends the new data to the old system data. </li>
+
+			<li id="SYSTEM_ASAP_Command__li_BD1FDF62421B4085A7A001ED481CE57D"><a name="SYSTEM_ASAP_Command__li_BD1FDF62421B4085A7A001ED481CE57D"><!-- --></a> Saving the current system data in a binary
+				format is accomplished with the <b>SYSTEM TO</b> file command. <p><b>CAUTION:</b></p>
+<p> ASAP stores only the system data (in a binary format,
+					not a text format). Ray data and associated parameters are not saved with the
+					system. </p>
+</li>
+
+			<li id="SYSTEM_ASAP_Command__li_B8F65B61FC4D483C8F88B99326B5EC3D"><a name="SYSTEM_ASAP_Command__li_B8F65B61FC4D483C8F88B99326B5EC3D"><!-- --></a>Previously stored system files may be
+				reloaded into ASAP with the <b>SYSTEM FROM</b> file command. </li>
+
+			<li id="SYSTEM_ASAP_Command__li_34DCB6F0B74D433EB4067A940E95F9CC"><a name="SYSTEM_ASAP_Command__li_34DCB6F0B74D433EB4067A940E95F9CC"><!-- --></a>The file extension for system files is
+				*.SYS. </li>
+
+			<li id="SYSTEM_ASAP_Command__li_3627CE9C3C0E437CAFA40906EB939C1D"><a name="SYSTEM_ASAP_Command__li_3627CE9C3C0E437CAFA40906EB939C1D"><!-- --></a>After an <b>END</b> command and
+				just before exiting, ASAP writes out a system data file named LASTEXEC.SYS. This
+				file may be read into ASAP during the next session by typing <b>SYSTEM
+				FROM</b> without any additional arguments. </li>
+
+			<li id="SYSTEM_ASAP_Command__li_6E93A5D9CBB24A86866E664FFEF14191"><a name="SYSTEM_ASAP_Command__li_6E93A5D9CBB24A86866E664FFEF14191"><!-- --></a>A Select File dialog box containing all of
+				the <b>SYSTEM</b> files in the current directory may be obtained by
+				issuing <b>SYSTEM FROM </b>"*" or <b>SYSTEM FROM_</b>. <div class="note"><span class="notetitle">Note:</span> BRO recommends that you avoid using <b>SYSTEM</b> files for
+					archival purposes, since their binary format normally changes between releases.
+					Data from the <b>SYSTEM</b> command saves includes: </div>
+</li>
+
+		</ol>
+
+		<br/><a name="SYSTEM_ASAP_Command__ul_DF20A85595F542F395468C37334F9838"><!-- --></a><ul id="SYSTEM_ASAP_Command__ul_DF20A85595F542F395468C37334F9838">
+			<li id="SYSTEM_ASAP_Command__li_BC4A43DD3A054EB1A2193372B38A8305"><a name="SYSTEM_ASAP_Command__li_BC4A43DD3A054EB1A2193372B38A8305"><!-- --></a>Data the <b>SYSTEM</b> command
+				saves: Number of surfaces, edges, lenses, number of media, number of objects, number
+				of coatings </li>
+
+			<li id="SYSTEM_ASAP_Command__li_B87A6430BA2C40DA8F7CFD400B6ACB62"><a name="SYSTEM_ASAP_Command__li_B87A6430BA2C40DA8F7CFD400B6ACB62"><!-- --></a>Objects' names </li>
+
+			<li id="SYSTEM_ASAP_Command__li_04E8E1C944EF4214B50E03AC533CFDE1"><a name="SYSTEM_ASAP_Command__li_04E8E1C944EF4214B50E03AC533CFDE1"><!-- --></a>Commands used to define each surface, edge,
+				lens </li>
+
+			<li id="SYSTEM_ASAP_Command__li_CF261409E25447FE9F7D4D2E17516C12"><a name="SYSTEM_ASAP_Command__li_CF261409E25447FE9F7D4D2E17516C12"><!-- --></a>Degree of each surface polynomial, number
+				of points in each edge, number of conicoids in each lens </li>
+
+			<li id="SYSTEM_ASAP_Command__li_69EEF5C9412F4FF489477E105A6244CB"><a name="SYSTEM_ASAP_Command__li_69EEF5C9412F4FF489477E105A6244CB"><!-- --></a>Number of aspheric terms (using the
+					<b>DEFORM</b> command) used on each object </li>
+
+			<li id="SYSTEM_ASAP_Command__li_5D1A17338FC548FDA41F3DE72F3E3694"><a name="SYSTEM_ASAP_Command__li_5D1A17338FC548FDA41F3DE72F3E3694"><!-- --></a>Reference point of each surface, edge, lens </li>
+
+			<li id="SYSTEM_ASAP_Command__li_788092904CF446EC97682E0757284CC6"><a name="SYSTEM_ASAP_Command__li_788092904CF446EC97682E0757284CC6"><!-- --></a>Surface coefficients/edge points/lens
+				parameters </li>
+
+			<li id="SYSTEM_ASAP_Command__li_1B7C8B14107F42B3B8746D0036866749"><a name="SYSTEM_ASAP_Command__li_1B7C8B14107F42B3B8746D0036866749"><!-- --></a>Multiple and array surface data </li>
+
+			<li id="SYSTEM_ASAP_Command__li_C49DBF40623047359EC505FC8497A191"><a name="SYSTEM_ASAP_Command__li_C49DBF40623047359EC505FC8497A191"><!-- --></a>Test points </li>
+
+			<li id="SYSTEM_ASAP_Command__li_C87AC6A0EB1F43FE8CC8AD003C63CA55"><a name="SYSTEM_ASAP_Command__li_C87AC6A0EB1F43FE8CC8AD003C63CA55"><!-- --></a><b>LOCAL</b> data (including
+				transformation matrices and others) </li>
+
+			<li id="SYSTEM_ASAP_Command__li_C0896D50D7DC469885ECA3419BF2AB1C"><a name="SYSTEM_ASAP_Command__li_C0896D50D7DC469885ECA3419BF2AB1C"><!-- --></a>Refractive index and absorption data </li>
+
+			<li id="SYSTEM_ASAP_Command__li_275CFFEACB81425EBB63D361929C39C7"><a name="SYSTEM_ASAP_Command__li_275CFFEACB81425EBB63D361929C39C7"><!-- --></a><b>GRIN</b> data </li>
+
+			<li id="SYSTEM_ASAP_Command__li_D41BCD9B3F5945019E5D213DD46E4548"><a name="SYSTEM_ASAP_Command__li_D41BCD9B3F5945019E5D213DD46E4548"><!-- --></a>Names of <b>MEDIA</b>
+			</li>
+
+			<li id="SYSTEM_ASAP_Command__li_176E340F675C41B6AACFA052132B739A"><a name="SYSTEM_ASAP_Command__li_176E340F675C41B6AACFA052132B739A"><!-- --></a><b>COATING</b> prescription
+				data </li>
+
+			<li id="SYSTEM_ASAP_Command__li_E26C3C1424DC4A57AC4702DC50BB0F56"><a name="SYSTEM_ASAP_Command__li_E26C3C1424DC4A57AC4702DC50BB0F56"><!-- --></a><b>OBJECT</b> status (from
+					<b>CONSIDER</b> command) </li>
+
+			<li id="SYSTEM_ASAP_Command__li_2DFA81D7225D4896A624AA8EC3488E89"><a name="SYSTEM_ASAP_Command__li_2DFA81D7225D4896A624AA8EC3488E89"><!-- --></a><b>LIMITS</b> Main data </li>
+
+			<li id="SYSTEM_ASAP_Command__li_8BD698E0A49241BFB4163CCBF42DBDC7"><a name="SYSTEM_ASAP_Command__li_8BD698E0A49241BFB4163CCBF42DBDC7"><!-- --></a><b>BOUND</b>ed surface data </li>
+
+			<li id="SYSTEM_ASAP_Command__li_5D13F93D08E442C095EADC60EBCC5FAF"><a name="SYSTEM_ASAP_Command__li_5D13F93D08E442C095EADC60EBCC5FAF"><!-- --></a>Real/complex reflection/transmission
+				coefficients </li>
+
+			<li id="SYSTEM_ASAP_Command__li_D82CF857D42E4C3F8246557C10917601"><a name="SYSTEM_ASAP_Command__li_D82CF857D42E4C3F8246557C10917601"><!-- --></a><b>INTERFACE</b> media numbers </li>
+
+			<li id="SYSTEM_ASAP_Command__li_2370014952B54567AD7F0517076954CE"><a name="SYSTEM_ASAP_Command__li_2370014952B54567AD7F0517076954CE"><!-- --></a>Diffractive/holographic optic <b>INTERFACE</b> data </li>
+
+			<li id="SYSTEM_ASAP_Command__li_EF4D05EB8F6D4224B62BB5943C8B87F0"><a name="SYSTEM_ASAP_Command__li_EF4D05EB8F6D4224B62BB5943C8B87F0"><!-- --></a>Object <b>SEARCH</b> strategy
+				data </li>
+
+			<li id="SYSTEM_ASAP_Command__li_CC12AC83E1604B528D25806C1E5B9542"><a name="SYSTEM_ASAP_Command__li_CC12AC83E1604B528D25806C1E5B9542"><!-- --></a><b>INTERFACE</b> scatter data
+				(RMS heights, slopes, BSDFs, RMS roughnesses, important areas, backscatter data and
+				others) </li>
+
+			<li id="SYSTEM_ASAP_Command__li_221A0FCB927641758FF29B369310B48B"><a name="SYSTEM_ASAP_Command__li_221A0FCB927641758FF29B369310B48B"><!-- --></a>Current <b>WAVELENGTH,
+				UNIT</b>s, and wavelengths used to define dispersive <b>MEDIA</b>
+			</li>
+
+			<li id="SYSTEM_ASAP_Command__li_59A84D2106D94D809ADEEA43C26F07A0"><a name="SYSTEM_ASAP_Command__li_59A84D2106D94D809ADEEA43C26F07A0"><!-- --></a><b>$FCN</b>s needed to create
+				geometry </li>
+
+		</ul>
+
+		<p>
+			<a href="../example_scripts.html#SYSTEM">SYSTEM Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_S-ref.html#Commands_and_Macros_S" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “S”.">Commands and Macros (S)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Media_Database_Overview-conc.html">Media Database Overview</a></div>
+<div><a href="../Concept/OBJECT_Command_Overview-conc.html" title="In ASAP, an object is a bounded physical entity with optical properties. The OBJECT command associates information from the optical property databases with the system geometry databases (MEDIA, COATINGS, MODELS, SURFACES, EDGES, LENSES, and others). Objects are subsequently constructed from these databases.">OBJECT Command Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/BOUNDS_ASAP-cmdref.html" title="Assigns surfaces and edges as boundaries to objects.">BOUNDS (ASAP Command)</a></div>
+<div><a href="../Commands/COATINGS_MODELS_ASAP-cmdref.html" title="Specify angular properties for reflection and transmission.">COATINGS MODELS (ASAP Command)</a></div>
+<div><a href="../Commands/CONSIDER_ASAP-cmdref.html" title="Selects a set of objects for ray tracing and plotting.">CONSIDER (ASAP Command)</a></div>
+<div><a href="../Commands/DEFORM_ASAP-cmdref.html" title="Adds small deformations to an object.">DEFORM (ASAP Command)</a></div>
+<div><a href="../Commands/END_ASAP-cmdref.html" title="Terminates program processing.">END (ASAP Command)</a></div>
+<div><a href="../Commands/FCN_macro_ASAP-cmdref.html" title="Defines new in-line math functions.">$FCN (ASAP Macro)</a></div>
+<div><a href="../Commands/INTERFACE_ASAP-cmdref.html" title="Assigns a reflective, refractive or diffractive interface to objects.">INTERFACE (ASAP Command)</a></div>
+<div><a href="../Commands/LIMITS_ASAP-cmdref.html" title="Assigns a global bounding box to the object.">LIMITS (ASAP Command)</a></div>
+<div><a href="../Commands/RAYSET_ASAP-cmdref.html" title="Specifies an arbitrary set of rays.">RAYSET (ASAP Command)</a></div>
+<div><a href="../Commands/RESET_ASAP-cmdref.html" title="Reinitializes all control settings to those at program startup.">RESET (ASAP Command)</a></div>
+<div><a href="../Commands/SEARCH_ASAP-cmdref.html" title="Sets the local and global object intersection strategy.">SEARCH (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

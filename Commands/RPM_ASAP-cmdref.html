@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="RPM (ASAP Command)"/>
+<meta name="abstract" content="Defines a realistic polarizer."/>
+<meta name="description" content="Defines a realistic polarizer."/>
+<meta name="DC.subject" content="RPM (ASAP Command), realistic, model-based polarizer"/>
+<meta name="keywords" content="RPM (ASAP Command), realistic, model-based polarizer"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_R-ref.html#Commands_and_Macos_R"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CPE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=235"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="RPM_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>RPM (ASAP Command)</title>
+</head>
+<body id="RPM_ASAP_Command"><a name="RPM_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>RPM (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Defines a realistic polarizer. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock"> <b> RPM [extinction ratio] [Tp] [Rp] [Rs] [acceptance angle] [no] [ne] [PRE] '[name]'</b> </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span> 
+			 <p>Option 
+			 </p>
+</span></th><th><span> 
+			 <p>Description 
+			 </p>
+</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> extinction ratio 
+		  </span></td><td><span> Extinction ratio of the realistic polarizer. The
+			 default value is 1000. 
+		  </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> T<sub>p</sub> 
+		  </span></td><td><span> Transmittance when incident light is polarized in
+			 the direction of the transmission axis. The default value is 1. 
+		  </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> R<sub>p</sub> 
+		  </span></td><td><span> Reflectance when incident light is polarized in the
+			 direction of the transmission axis. The default value is 0. 
+		  </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> R<sub>s</sub> 
+		  </span></td><td><span> Reflectance when incident light is polarized in the
+			 direction orthogonal to the transmission axis. The default value is 0. 
+		  </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> acceptance angle 
+		  </span></td><td><span> Specifies the acceptance angle of the polarizer.
+			 The angle must be in degrees. The default value is 90°. 
+		  </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> n<sub>o</sub> 
+		  </span></td><td><span> The real part of the ordinary refractive index of
+			 the polarizer. The default value is 1.5. 
+		  </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> n 
+			 <sub>e</sub> 
+		  </span></td><td><span> The real part of the extraordinary refractive index
+			 of the polarizer. The default value is 2.1. 
+		  </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> PRE 
+		  </span></td><td><span> The RPM is a pre-polarizer, in which ASAP assumes
+			 that the incident light on this RPM polarizer is unpolarized. 
+		  </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> name 
+		  </span></td><td><span> The name of the realistic polarizer, up to 32
+			 characters long. 
+			 <div class="note"><span class="notetitle">Note:</span> the name is case sensitive. 
+			 </div>
+ 
+		  </span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><ol> 
+		<li> Both O-type and E-type polarizers can be modeled with RPM model. 
+		</li>
+ 
+		<li> The extinction ratio is defined as T<sub>p</sub>|T<sub>s</sub>,
+		  where T<sub>p</sub> is the transmittance when incident light is polarized in
+		  the direction of the transmission axis and the T<sub>s</sub> is the
+		  transmittance when incident light is polarized in the direction orthogonal to
+		  the transmission axis. Note a positive extinction ratio represents an O-type
+		  polarizer and a negative extinction ratio represents an E-type polarizer. The
+		  default extinction ratios for O- and E-type polarizers are 1000 and -1000
+		  respectively. 
+		</li>
+ 
+		<li> For realistic polarizer models (RPMs), the polarization axis refers
+		  to the direction of its transmission axis. When created, the transmission axis
+		  is always assumed to be the local x axis of any object with a 
+		  <b>POLARIZATION INTERFACE</b>. The transmission axis is in
+		  the plane parallel to the object surface. However, the transmission axis can be
+		  rotated with 
+		  <b>POLARIZATION INTERFACE</b> azimuthal angle. The polar
+		  angle setting is ignored. 
+		</li>
+ 
+		<li> If no name is specified, ASAP uses a default name starting with
+		  "RPM" followed by the list index of this realistic polarizer in the system RPM
+		  element list. For example, the second RPM element is named "RPM00002". 
+		</li>
+ 
+		<li> The pre-polarizer concept only works for forward propagating rays.
+		  For backward propagating rays, the polarization states of the rays are assumed
+		  to be their actual polarization state. This pre-polarizer concept is convenient
+		  to model some type of polarization films such as 3M's DBEF with polarization
+		  state is represented by Jones vectors. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#RPM">RPM
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_R-ref.html#Commands_and_Macos_R" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “R”.">Commands and Macros (R)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/CPE_ASAP-cmdref.html" title="CPE (Cascaded Polarization Element) is used to define a compound polarization device. Every polarization device cascaded in a CPE element is specified by its polarization device type or type index and its device name or device list index in its defined list.">CPE (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=235" target="_blank">See the Knowledge Base for the technical publication, Polarization</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

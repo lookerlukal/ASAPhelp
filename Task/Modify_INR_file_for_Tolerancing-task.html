@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Modify INR file for Tolerancing"/>
+<meta name="abstract" content="This topic describes how to open an INR file for tolerancing purposes."/>
+<meta name="description" content="This topic describes how to open an INR file for tolerancing purposes."/>
+<meta name="DC.subject" content="Modify INR file for Tolerancing, tolerancing, Editor"/>
+<meta name="keywords" content="Modify INR file for Tolerancing, tolerancing, Editor"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Tolerancing_in_the_Editor-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Tolerance_Analysis_Options_Dialog-task.html#Tolerance_Analysis_Options_Dialog"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Tolerance_Data_Table-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Define_Tolerance_Parameter-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Define_Compensator_Parameter-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Delete_FOM_Function-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Syntax_Rules_for_Tolerancing_in_the_Editor-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRAB_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRAB_macro_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Modify_INR_file_for_Tolerancing"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Modify INR file for Tolerancing</title>
+</head>
+<body id="Modify_INR_file_for_Tolerancing"><a name="Modify_INR_file_for_Tolerancing"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Modify INR file for Tolerancing</h5></span>
+	
+	
+	<div><p>This topic describes how to open an INR file for tolerancing purposes. </p>
+
+		<div class="section" id="Modify_INR_file_for_Tolerancing__context_8EF8464BBBF64386AA624C6F14D99AD0"><a name="Modify_INR_file_for_Tolerancing__context_8EF8464BBBF64386AA624C6F14D99AD0"><!-- --></a>
+			<br/><a name="Modify_INR_file_for_Tolerancing__ol_F845D2694FDD49B7A0909A09457D2D1D"><!-- --></a><ol id="Modify_INR_file_for_Tolerancing__ol_F845D2694FDD49B7A0909A09457D2D1D">
+				<li id="Modify_INR_file_for_Tolerancing__li_FF0516A7938F488CA3444625A83C5421"><a name="Modify_INR_file_for_Tolerancing__li_FF0516A7938F488CA3444625A83C5421"><!-- --></a>Open an existing *.inr file, select
+					File&gt; Open or right-click <b>INR Input</b> in ASAP Workspace
+					and select <b>Open</b>. </li>
+
+				<li id="Modify_INR_file_for_Tolerancing__li_D5D8B45FBDD54E459881E8E42A795B57"><a name="Modify_INR_file_for_Tolerancing__li_D5D8B45FBDD54E459881E8E42A795B57"><!-- --></a>Select the Save As command to save the
+					file to an *.inx file type. After the file is saved, ASAP opens the Tolerance
+					Data Table at the bottom of the window. </li>
+
+				<li id="Modify_INR_file_for_Tolerancing__li_3EEF4F41A8A7476CB2821ED033B3381B"><a name="Modify_INR_file_for_Tolerancing__li_3EEF4F41A8A7476CB2821ED033B3381B"><!-- --></a>Define the tolerance parameter and
+					compensator parameter. You may define any number of tolerance parameters, but
+					only one compensator parameter can be defined. </li>
+
+				<li id="Modify_INR_file_for_Tolerancing__li_14DECE876F844E1396FBC96E3605DEC2"><a name="Modify_INR_file_for_Tolerancing__li_14DECE876F844E1396FBC96E3605DEC2"><!-- --></a>Define Figure of Merit (FOM). <div class="note"><span class="notetitle">Note:</span> All
+						FOMs must be placed at the beginning of the *.inx file using the format: FOM
+						‘GrabString’ (similar to the $GRAB macro). “FOM” cannot be used as the name
+						of a FOM function (that is, ‘GrabString’ cannot have the name,
+					“FOM”).</div>
+</li>
+
+				<li id="Modify_INR_file_for_Tolerancing__li_2A4C3CD4E8FC4E338EFE0C9C5D12A4CA"><a name="Modify_INR_file_for_Tolerancing__li_2A4C3CD4E8FC4E338EFE0C9C5D12A4CA"><!-- --></a>Click the Tolerance Table Update button
+						<a name="Modify_INR_file_for_Tolerancing__image"><!-- --></a><img id="Modify_INR_file_for_Tolerancing__image" src="../Graphics/Tolerance_Update_button.jpg" width="25" height="22" longdesc="Tolerancing in the Editior - Update button (reuse: Tolerance Data Table , Tolerancing in the Editor)"/> on the Tolerance Editor toolbar. </li>
+
+				<li id="Modify_INR_file_for_Tolerancing__li_6D33652401D34964AF26E1863FED1A89"><a name="Modify_INR_file_for_Tolerancing__li_6D33652401D34964AF26E1863FED1A89"><!-- --></a>Enter tolerance data values for the
+					applicable columns into the tolerance data table. Tolerance parameter limits are
+					displayed in applicable columns. </li>
+
+				<li id="Modify_INR_file_for_Tolerancing__li_5370BB66072E4785A46E56A77C58C7CF"><a name="Modify_INR_file_for_Tolerancing__li_5370BB66072E4785A46E56A77C58C7CF"><!-- --></a>Save the tolerance data file. </li>
+
+			</ol>
+
+		</div>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Task/Tolerancing_in_the_Editor-task.html" title="Tolerancing in the ASAP Editor is a two-step process: First, you create a tolerance data file, and then perform the Monte Carlo or Sensitivity analysis.">Tolerancing in the Editor</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Tolerance_Analysis_Options_Dialog-task.html#Tolerance_Analysis_Options_Dialog" title="The Tolerance Analysis Options dialog box designates the number of random perturbations you want to perform for the automatic Monte Carlo analysis.">Tolerance Analysis Options Dialog</a></div>
+<div><a href="../Task/Define_Tolerance_Parameter-task.html" title="This topic describes how to define a tolerance parameter in the Editor using one of three methods.">Define Tolerance Parameter</a></div>
+<div><a href="../Task/Define_Compensator_Parameter-task.html" title="This topic describes how to define a compensator parameter in the Editor using one of two methods.">Define Compensator Parameter</a></div>
+<div><a href="../Task/Delete_FOM_Function-task.html" title="This topic describes how to delete Figures of Merit from the tolerance data file.">Delete FOM Function</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Tolerance_Data_Table-ref.html" title="The Tolerance Data Table contains editable and non-editable cells. The first five columns (Parameter Name, Nominal, Minus, Plus, and Distribution Type) are non-editable, and the remaining cells are editable. You cannot manually add or delete rows from the table.">Tolerance Data Table</a></div>
+<div><a href="../Reference/Syntax_Rules_for_Tolerancing_in_the_Editor-ref.html" title="This topic describes syntax rules for tolerancing analysis in the Editor.">Syntax Rules for Tolerancing in the Editor</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/GRAB_macro_ASAP-cmdref.html" title="Grabs isolated numbers or literals from the output buffer.">$GRAB (ASAP Macro)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

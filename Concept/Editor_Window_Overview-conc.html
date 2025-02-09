@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Editor Window Overview"/>
+<meta name="abstract" content="The ASAP Editor supports basic text operations, such as editing script (*.inr, *.txt) files, cutting and pasting, as well as a broad set of features to support creation of command scripts. When an Editor file is run, the commands are sent to the ASAP kernel."/>
+<meta name="description" content="The ASAP Editor supports basic text operations, such as editing script (*.inr, *.txt) files, cutting and pasting, as well as a broad set of features to support creation of command scripts. When an Editor file is run, the commands are sent to the ASAP kernel."/>
+<meta name="DC.subject" content="Editor Window Overview, script editing, smartEditor, Mini Builder, keyword editor, Opening a file"/>
+<meta name="keywords" content="Editor Window Overview, script editing, smartEditor, Mini Builder, keyword editor, Opening a file"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Main_Window-conc.html#Main_Window"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Editor_Keyboard_Shortcuts-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Editor_User_Assistance-task.html#Editor_User_Assistance"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Editor_Window_Toolbar-conc.html#Editor_Window_Toolbar"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Keyword_Editor_Dialog-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Script_Engine_Properties-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Scripting_Languages_Syntax_Non_INR-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Builder_Window_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Quick_Start_Toolbar_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Tolerancing_in_the_Editor-task.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Editor_Window_Overview"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Editor Window Overview</title>
+</head>
+<body id="Editor_Window_Overview"><a name="Editor_Window_Overview"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Editor Window Overview</h5></span> 
+   
+   
+  <div><p>The ASAP Editor supports basic text operations, such as editing
+	 script (*.inr, *.txt) files, cutting and pasting, as well as a broad set of
+	 features to support creation of command scripts. When an Editor file is run,
+	 the commands are sent to the ASAP kernel. 
+  </p>
+ 
+	 <p><br/><div class="imagecenter"><img longdesc="Editor window" src="../Graphics/Editor_window.jpg" width="317" height="204"/></div><br/> 
+	 </p>
+ 
+	 <div class="section" id="Editor_Window_Overview__section_CBBA8D45B6074D198A0AA331D90147E0"><a name="Editor_Window_Overview__section_CBBA8D45B6074D198A0AA331D90147E0"><!-- --></a> 
+		<div class="note"><span class="notetitle">Note:</span> If you choose to use a different editor than the one provided in
+		  ASAP, you will need to open the text file in ASAP.and run it. 
+		</div>
+ 
+	 </div>
+ 
+	 <div class="section" id="Editor_Window_Overview__section_814C246A6E094E9185BBAFF39153E229"><a name="Editor_Window_Overview__section_814C246A6E094E9185BBAFF39153E229"><!-- --></a><span style="color: #2b6eb5"><h5>Editor User Assistance with the smartEditor</h5></span> 
+		 
+		<p>The Editor includes an embedded user-assistant called the smartEditor
+		  to assist you with creating scripts. The smartEditor includes two tools:
+		  Command Tips, a quick way to request command syntax for any ASAP command, and a
+		  tool for finding the correct spelling of an ASAP command. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Editor_Window_Overview__section_2439B4C407AD4B4CB9BBA869EA958C9B"><a name="Editor_Window_Overview__section_2439B4C407AD4B4CB9BBA869EA958C9B"><!-- --></a><span style="color: #2b6eb5"><h5>Mini Builder</h5></span> 
+		 
+		<p>You can take advantage of the quick scripting of the ASAP Builder
+		  while working in the Editor to create your geometry. To open the Mini Builder
+		  in an Editor window, select the 
+		  <b>View</b> menu and click 
+		  <b>Mini Builder</b>, or click the 
+		  <b>Mini Builder</b> button on the Editor toolbar, or press the F9 key.
+		  A one-line Builder window opens at the bottom of the Editor window.
+		  Double-click the cell in the 
+		  <b>Type</b> column and select the commands you want from the drop-down
+		  menu. To move the script from the Mini Builder to the Editor, copy and paste
+		  it, or drag and drop it in the Editor window. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Editor_Window_Overview__section_5403247F66A241E299B3C499DD7B8B09"><a name="Editor_Window_Overview__section_5403247F66A241E299B3C499DD7B8B09"><!-- --></a><span style="color: #2b6eb5"><h5>Scripting Language Support</h5></span> 
+		 
+		<p>From within the ASAP Editor, you can select a scripting language other
+		  than ASAP, such as JScript and VBScript, among others. If you change the
+		  scripting language, you will need to add the letter 
+		  <b>k</b> before an ASAP command; for example, the command 
+		  <b>ARRAY</b> become 
+		  <b>kARRAY</b>. From the Editor Window Toolbar you can select from a
+		  list of supported languages. The syntax required for these languages is listed
+		  in Scripting Language Syntax (Non-INR), along with examples. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Editor_Window_Overview__section_EACD1DA9254D4D8F8A511EDAED49B533"><a name="Editor_Window_Overview__section_EACD1DA9254D4D8F8A511EDAED49B533"><!-- --></a><span style="color: #2b6eb5"><h5>Keyword Editor</h5></span> 
+		 
+		<p>You can create your own keywords of abbreviated command names with the
+		  Keyword Editor. This tool is accessible from the 
+		  <b>Editor</b> menu when the Editor window is active. After you create a
+		  keyword, the Editor treats it the same way as keywords for ASAP commands,
+		  applying color coding and making the Command Tips available with the
+		  smartEditor. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Editor_Window_Overview__section_FE6925D7A2BF4E0081F1DF57F012BE05"><a name="Editor_Window_Overview__section_FE6925D7A2BF4E0081F1DF57F012BE05"><!-- --></a><span style="color: #2b6eb5"><h5>Tolerancing</h5></span> 
+		 
+		<p>The ASAP Editor also supports tolerancing via a user interface within
+		  the Editor. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Editor_Window_Overview__section_4185F4623BB249F5849811CA46589F5B"><a name="Editor_Window_Overview__section_4185F4623BB249F5849811CA46589F5B"><!-- --></a><span style="color: #2b6eb5"><h5>Quick Start toolbar</h5></span> 
+		 
+		<p>Use the Quick Start toolbar on the ASAP main window to drag and drop
+		  glasses, scatter and roughness models, lenses, example scripts, and interactive
+		  scripts. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Editor_Window_Overview__section_EA8914A84B0A4D3AB6012C0AC4D2030E"><a name="Editor_Window_Overview__section_EA8914A84B0A4D3AB6012C0AC4D2030E"><!-- --></a><span style="color: #2b6eb5"><h5>Opening a New Window</h5></span> 
+		 
+		<p>To open a new (blank) ASAP Editor 
+		  <b>Input</b> window, you can select 
+		  <b>New</b> from the 
+		  <b>File</b> menu, or click the 
+		  <b>New</b> button on the main menu toolbar. The window is named 
+		  <b>ASAP - [Input #]</b>, until you save the file you create and assign
+		  a unique name. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Editor_Window_Overview__section_51EF82C79F2E45F8BDA6A6A21141B9BD"><a name="Editor_Window_Overview__section_51EF82C79F2E45F8BDA6A6A21141B9BD"><!-- --></a><span style="color: #2b6eb5"><h5>Opening an Existing File</h5></span> 
+		 
+		<p>To open an existing script file (*.inr) in the Editor Input window,
+		  select 
+		  <b>Open</b> from the 
+		  <b>File</b> menu, and browse to the directory where the file is stored.
+		  
+		</p>
+ 
+		<p><br/><div class="imagecenter"><img longdesc="Open file dialog in Editor window" src="../Graphics/open_file_dialog.jpg" width="426" height="339"/></div><br/> 
+		</p>
+ 
+		<p>The 
+		  <b>Open File</b> dialog box includes three user settings for faster
+		  file location. 
+		</p>
+ 
+		<br/><a name="Editor_Window_Overview__ol_2D552E749784449E8E1AB4E62A7CE3FF"><!-- --></a><ol id="Editor_Window_Overview__ol_2D552E749784449E8E1AB4E62A7CE3FF"> 
+		  <li id="Editor_Window_Overview__li_ADABE1B7EA4D49E6854E3A093B90680F"><a name="Editor_Window_Overview__li_ADABE1B7EA4D49E6854E3A093B90680F"><!-- --></a>Select the type of file
+			 you want to open from the drop-down list box, next to 
+			 <b>Files of type</b>. To select an ASAP Editor file, select 
+			 <b>Input Files (*.inr)</b>. 
+		  </li>
+ 
+		  <li id="Editor_Window_Overview__li_45FA0F292D0A425296D2FA6C3FE7232E"><a name="Editor_Window_Overview__li_45FA0F292D0A425296D2FA6C3FE7232E"><!-- --></a>Set 
+			 <b>Open mode</b> to 
+			 <b>INR Input</b> from the drop-down list box. If you want this mode
+			 to be the default, click the check box next to 
+			 <b>Set as Default</b>. 
+		  </li>
+ 
+		  <li id="Editor_Window_Overview__li_DC54F54CE8B04277AA0E874C5F6509C6"><a name="Editor_Window_Overview__li_DC54F54CE8B04277AA0E874C5F6509C6"><!-- --></a>Click 
+			 <b>Add to project workspace</b> if you want the selected file to
+			 become part of your file list in 
+			 <b>ASAP Workspace</b>. 
+		  </li>
+ 
+		</ol>
+ 
+	 </div>
+ 
+	 <div class="section" id="Editor_Window_Overview__section_0EB297B82AF543138167E0F9E85BA821"><a name="Editor_Window_Overview__section_0EB297B82AF543138167E0F9E85BA821"><!-- --></a> 
+		<div class="note"><span class="notetitle">Note:</span>  
+		  <p>If you receive the error message, "Failed to open document", click 
+			 <b>OK</b>. When the message, "Unrecognized file type", displays,
+			 click 
+			 <b>Yes</b>. To prevent this message from recurring, follow step 2
+			 above. 
+		  </p>
+ 
+		</div>
+ 
+	 </div>
+ 
+	 <div class="section" id="Editor_Window_Overview__section_13F3CF02C7E54E94B5D7BC7FC4130563"><a name="Editor_Window_Overview__section_13F3CF02C7E54E94B5D7BC7FC4130563"><!-- --></a><span style="color: #2b6eb5"><h5>Accessing Help from the Editor with F1</h5></span> 
+		 
+		<p>Highlight a command in the Editor window and press 
+		  <b>F1</b> to open the associated Help topic or Help index. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Editor_Window_Overview__section_D51B5A781BC94ED4A54C16B45D6CFDDB"><a name="Editor_Window_Overview__section_D51B5A781BC94ED4A54C16B45D6CFDDB"><!-- --></a><span style="color: #2b6eb5"><h5>Opening and Closing Editor Windows</h5></span> 
+		 
+		<p>You can create or eliminate Editor windows as needed. For example,
+		  open one window for the system geometry, another window for ray initialization
+		  and trace commands, and a third for analysis of the ray data. You can switch
+		  from window to window, make the appropriate changes, and re-run the input until
+		  the analysis is done. 
+		</p>
+ 
+		<p>The Editor window contains a menu bar at the top. When your mouse
+		  points to a button on the Editor window button bar, the status bar at the
+		  bottom of the main window indicates the function of that button. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Editor_Window_Overview__section_27E5446DF2AF4276BFE8C536BA67850C"><a name="Editor_Window_Overview__section_27E5446DF2AF4276BFE8C536BA67850C"><!-- --></a><span style="color: #2b6eb5"><h5>Feature Set in the Editor</h5></span> 
+		 
+		<p>The Editor supports a wide range of features, all of which are
+		  available without any extra programming after the control is created: 
+		</p>
+ 
+		<br/><a name="Editor_Window_Overview__ul_1A3A2BCE1D3940B9A5FEA7410CBB5085"><!-- --></a><ul id="Editor_Window_Overview__ul_1A3A2BCE1D3940B9A5FEA7410CBB5085"> 
+		  <li id="Editor_Window_Overview__li_8A12F5EE710F4E3CB62203AB17B55598"><a name="Editor_Window_Overview__li_8A12F5EE710F4E3CB62203AB17B55598"><!-- --></a><b>Color Syntax
+				Highlighting</b>. Language-specific keywords, comments, and strings are colored
+			 differently to set them apart from plain text. 
+		  </li>
+ 
+		  <li id="Editor_Window_Overview__li_02E0E07B70F541B99D2557AEC3C08780"><a name="Editor_Window_Overview__li_02E0E07B70F541B99D2557AEC3C08780"><!-- --></a><b>Fully Customizable
+				Keyboard Mappings</b>. Keystrokes can be added and removed to emulate popular
+			 keyboard mappings, like Brief and Epsilon. 
+		  </li>
+ 
+		  <li id="Editor_Window_Overview__li_27B5358C4485479BACE3128530A99324"><a name="Editor_Window_Overview__li_27B5358C4485479BACE3128530A99324"><!-- --></a><b>Keystroke Macros</b>.
+			 Record a series of keystrokes and assign a keystroke to play back the
+			 keystrokes repeatedly. Up to 10 macros may be recorded. 
+		  </li>
+ 
+		  <li id="Editor_Window_Overview__li_9E1F5B88C2024288A7193F4567A931AA"><a name="Editor_Window_Overview__li_9E1F5B88C2024288A7193F4567A931AA"><!-- --></a><b>Drag and Drop Text
+				Manipulation</b>. Highlighted text can be dragged and dropped between any
+			 window supporting OLE text Drag and Drop. Text may be copied or moved. 
+		  </li>
+ 
+		  <li id="Editor_Window_Overview__li_B51B3224DEA742D2AC66903A34E5C059"><a name="Editor_Window_Overview__li_B51B3224DEA742D2AC66903A34E5C059"><!-- --></a><b>Multiple Split
+				Views</b>. Create up to four separate views of the same edit buffer. Each view
+			 can be scrolled independently. 
+		  </li>
+ 
+		  <li id="Editor_Window_Overview__li_37C560DEAC934DB089E9CA7ECC8EDEFD"><a name="Editor_Window_Overview__li_37C560DEAC934DB089E9CA7ECC8EDEFD"><!-- --></a><b>Unlimited
+				Undo/Redo</b>. All edit actions can be fully undone and redone. A limit can be
+			 set on the number of edit actions that may be undone. 
+		  </li>
+ 
+		  <li id="Editor_Window_Overview__li_92C6FCE3D534454BB9C6D3EB93B0D2FD"><a name="Editor_Window_Overview__li_92C6FCE3D534454BB9C6D3EB93B0D2FD"><!-- --></a><b>Auto Indentation</b>.
+			 Once a language is chosen, as the user enters code, the Editor will
+			 automatically indent lines to follow the scoping rules of the language. 
+		  </li>
+ 
+		  <li id="Editor_Window_Overview__li_2C6DBA4D06EA40F6A7F971E549E648A8"><a name="Editor_Window_Overview__li_2C6DBA4D06EA40F6A7F971E549E648A8"><!-- --></a><b>File Support</b>.
+			 Saving, Loading, and Inserting of files is easily achieved by sending a single
+			 message to an Editor window. 
+		  </li>
+ 
+		  <li id="Editor_Window_Overview__li_063906727D954383B87854BC1059F0D2"><a name="Editor_Window_Overview__li_063906727D954383B87854BC1059F0D2"><!-- --></a><b>Clipboard Support</b>.
+			 Text can be cut, copied and pasted onto the Clipboard using the right-click
+			 menu or a keystroke. 
+		  </li>
+ 
+		  <li id="Editor_Window_Overview__li_B8B238C83D37442BB78387C2098B4618"><a name="Editor_Window_Overview__li_B8B238C83D37442BB78387C2098B4618"><!-- --></a><b>Support for C/C++,
+				Java, SQL, Pascal, and Basic</b>. An Editor control is already aware of five of
+			 the most popular languages, without any additional programming required. 
+		  </li>
+ 
+		  <li id="Editor_Window_Overview__li_630015CCC4CB4DD595C657C932A9B481"><a name="Editor_Window_Overview__li_630015CCC4CB4DD595C657C932A9B481"><!-- --></a><b>Support for Custom
+				Languages</b>. If the Editor does not support a specific language, you can
+			 register a language by sending a single message. Once registered, all
+			 language-related features are fully functional with the new language. 
+		  </li>
+ 
+		  <li id="Editor_Window_Overview__li_9CF280DB6FDA4070B9D237038AB5AC19"><a name="Editor_Window_Overview__li_9CF280DB6FDA4070B9D237038AB5AC19"><!-- --></a><b>Column Selection and
+				Manipulation</b>. Columns of text can be selected with the mouse and then
+			 manipulated. Empty columns (columns with a width of zero characters) can be
+			 selected, causing subsequent typing and deletion to occur over multiple lines
+			 at the same time. 
+		  </li>
+ 
+		  <li id="Editor_Window_Overview__li_D13E1D379BF3410D8DA773AA8CA270D6"><a name="Editor_Window_Overview__li_D13E1D379BF3410D8DA773AA8CA270D6"><!-- --></a><b>Custom Color
+				Settings</b>. All foreground and background colors used in an Editor control
+			 can be configured with a single Editor message. Configure colors in the window
+			 properties dialog. 
+		  </li>
+ 
+		  <li id="Editor_Window_Overview__li_314018B3DC364FE4994088218036B8E1"><a name="Editor_Window_Overview__li_314018B3DC364FE4994088218036B8E1"><!-- --></a><b>Built-In Window
+				Properties Dialog</b>. Most properties, including keyboard assignments, colors,
+			 current language, and tab settings, are available to the user in a tabbed
+			 dialog available from the built-in right-click menu or a keystroke (Alt+Enter).
+			 This dialog can be easily disabled and/or overridden by the parent window. 
+		  </li>
+ 
+		  <li id="Editor_Window_Overview__li_D1FF701AD2454795B4B47A287B2F7505"><a name="Editor_Window_Overview__li_D1FF701AD2454795B4B47A287B2F7505"><!-- --></a><b>Context-Sensitive
+				Menu</b>. A set of commonly used commands is available from a default
+			 right-click menu. The menu can be easily disabled and/or overridden by the
+			 parent window. 
+		  </li>
+ 
+		  <li id="Editor_Window_Overview__li_BB42A592E26F4806BFBBA18F901F3E6A"><a name="Editor_Window_Overview__li_BB42A592E26F4806BFBBA18F901F3E6A"><!-- --></a><b>Microsoft IntelliMouse
+				Support</b>. Scrolling, word selection, and line selection is easily
+			 accomplished with the Microsoft IntelliMouse. 
+		  </li>
+ 
+		  <li id="Editor_Window_Overview__li_AA032C4A11E948D9B132943171F9684C"><a name="Editor_Window_Overview__li_AA032C4A11E948D9B132943171F9684C"><!-- --></a><b>Over 120 Separate Edit
+				Commands</b>. More than 120 separate edit commands can be assigned to a
+			 keystroke and invoked by the user. 
+		  </li>
+ 
+		</ul>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="../Concept/Editor_Keyboard_Shortcuts-conc.html">Editor Keyboard Shortcuts</a></strong><br/>
+The Editor Window offers shortcut commands for keyboard strokes and left- and right-mouse clicks. These shortcuts are listed below, followed by sections on using the mouse to accomplish tasks in the Editor more efficiently, and right-click menu shortcuts.</li>
+<li class="ulchildlink"><strong><a href="../Task/Editor_User_Assistance-task.html#Editor_User_Assistance">Editor User Assistance</a></strong><br/>
+The smartEditor™ is an embedded user assistant in ASAP for creating more accurate scripts in the ASAP Editor window.</li>
+<li class="ulchildlink"><strong><a href="../Concept/Editor_Window_Toolbar-conc.html#Editor_Window_Toolbar">Editor Window Toolbar</a></strong><br/>
+The Editor Window toolbar supports the commands via the following buttons.</li>
+<li class="ulchildlink"><strong><a href="../Task/Keyword_Editor_Dialog-task.html">Keyword Editor Dialog</a></strong><br/>
+Customizes the name of an ASAP command, typically by shortening its name. Keywords appear in the ASAP Editor window in the same color coding as command names.</li>
+<li class="ulchildlink"><strong><a href="../Task/Script_Engine_Properties-task.html">Script Engine Properties</a></strong><br/>
+This dialog box configures the properties for a script engine that will be used in the ASAP Editor.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Scripting_Languages_Syntax_Non_INR-ref.html">Scripting Languages Syntax (Non-INR)</a></strong><br/>
+This topic relates to the use of scripting languages other than ASAP in the ASAP Editor window. It includes kernel functions, kernel procedures, routines for setting and getting kernel variables, spanning multiple lines, and displaying a message box, predefined kernel macros; and examples for JScript and VBScript.</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Main_Window-conc.html#Main_Window">ASAP Interface</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Builder_Window_Overview-conc.html" title="The Builder offers a simple approach to building your system. Designed for both new and experienced ASAP users, the Builder introduces you to the concepts of using ASAP to create your geometry, including sources. The entire system’s geometry is created in one window, using most standard spreadsheet navigation features, and saved with the file extension, .enx (an XML file), or .enz (a compressed XML file). You can also use the Builder for tracing rays and analyzing your system.">Builder Window Overview</a></div>
+<div><a href="../Concept/Quick_Start_Toolbar_Overview-conc.html" title="The Quick Start toolbar in the ASAP Window gives you quick access to catalogs in ASAP.">Quick Start Toolbar Overview</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Tolerancing_in_the_Editor-task.html" title="Tolerancing in the ASAP Editor is a two-step process: First, you create a tolerance data file, and then perform the Monte Carlo or Sensitivity analysis.">Tolerancing in the Editor</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

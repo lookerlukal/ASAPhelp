@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="PLOT LENSES (ASAP Command)"/>
+<meta name="abstract" content="Plots lenses in the currently specified graphics window."/>
+<meta name="description" content="Plots lenses in the currently specified graphics window."/>
+<meta name="DC.subject" content="PLOT LENSES (ASAP Command), lens, plotting, graphics, plotting lenses"/>
+<meta name="keywords" content="PLOT LENSES (ASAP Command), lens, plotting, graphics, plotting lenses"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_P-ref.html#Commands_and_Macros_P"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT3D_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_BEAMS_ASAP-cmdref.html#PLOT_BEAMS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_CURVES_ASAP-cmdref.html#PLOT_CURVES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_EDGES_ASAP-cmdref.html#PLOT_EDGES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_ENTITIES_ASAP-cmdref.html#PLOT_ENTITIES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_FACETS_ASAP-cmdref.html#PLOT_FACETS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_LIMITS_ASAP-cmdref.html#PLOT_LIMITS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_LOCAL_ASAP-cmdref.html#PLOT_LOCAL_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_MESHES_ASAP-cmdref.html#PLOT_MESHES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_POLARIZATION_ASAP-cmdref.html#PLOT_POLARIZATION_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_RAYS_ASAP-cmdref.html#PLOT_RAYS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_SURFACES_ASAP-cmdref.html#PLOT_SURFACES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OVERLAY_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Plotting_Commands-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PROFILES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REPLOT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/XYZ_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WINDOW_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Lens_Entity-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="PLOT_LENSES_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>PLOT LENSES (ASAP Command)</title>
+</head>
+<body id="PLOT_LENSES_ASAP_Command"><a name="PLOT_LENSES_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>PLOT LENSES (ASAP Command)</h5></span>
+	
+	
+	<div><p>Plots lenses in the currently specified graphics window. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+PLOT LENSES [ -n ] [ 'title' ]
+            [  k [ k' [ k" ] ] ]
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span>plot last n lenses</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>k k' k"</span></td><td><span>range of edges (k to k') to be plotted in k" steps</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>'title'</span></td><td><span>optional title for plot (up to 64 characters)</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="PLOT_LENSES_ASAP_Command__ul_D754DF1FB53F4D399CE9EE8A85F7CBD0"><!-- --></a><ol id="PLOT_LENSES_ASAP_Command__ul_D754DF1FB53F4D399CE9EE8A85F7CBD0">
+			<li id="PLOT_LENSES_ASAP_Command__li_D3770F93492E43619AD480F206AF0E13"><a name="PLOT_LENSES_ASAP_Command__li_D3770F93492E43619AD480F206AF0E13"><!-- --></a>By default, plots all lenses in the current
+				database, whether or not they are assigned to objects. </li>
+
+			<li id="PLOT_LENSES_ASAP_Command__li_AEACC58BFD394DD4B325F56CD33BEEF7"><a name="PLOT_LENSES_ASAP_Command__li_AEACC58BFD394DD4B325F56CD33BEEF7"><!-- --></a>If <b>n</b> is negative, the
+				last <b>n</b> lenses are plotted. </li>
+
+			<li id="PLOT_LENSES_ASAP_Command__li_F8EE652CD65B44B187B2AC75127E859F"><a name="PLOT_LENSES_ASAP_Command__li_F8EE652CD65B44B187B2AC75127E859F"><!-- --></a>If <b>k</b> is positive and no
+				other entries are present, only the <b>k</b>th lens is plotted. </li>
+
+			<li id="PLOT_LENSES_ASAP_Command__li_8815EF1E81BB4A80ABDF6DDE441BE664"><a name="PLOT_LENSES_ASAP_Command__li_8815EF1E81BB4A80ABDF6DDE441BE664"><!-- --></a>If <b>k</b> and <b>k'</b> are present, lenses <b>k</b> through <b>k'</b>
+				are plotted. </li>
+
+			<li id="PLOT_LENSES_ASAP_Command__li_DA336A013E854C939713E1F56E4E92E5"><a name="PLOT_LENSES_ASAP_Command__li_DA336A013E854C939713E1F56E4E92E5"><!-- --></a>If <b>k, k', and k"</b> are all
+				present, ASAP plots lenses <b>k</b> through <b>k'</b> in
+				steps of <b>k"</b> (that is, <b>PLOT LENSES 1 5 2</b> tells
+				ASAP to plot lenses 1, 3, and 5). </li>
+
+			<li id="PLOT_LENSES_ASAP_Command__li_950B76D8041A46E4BC837F3D630911A0"><a name="PLOT_LENSES_ASAP_Command__li_950B76D8041A46E4BC837F3D630911A0"><!-- --></a><b>WINDOW</b>, <b>WINDOW
+					X Z,</b>
+				<b>WINDOW Y X</b>, and <b>WINDOW Z Y</b> display the system
+				in a left-handed coordinate system. Use <b>WINDOW X -Z</b>, <b>WINDOW Y -X</b>, or <b>WINDOW Z -Y</b> to display the system
+				in a right-handed coordinate system. </li>
+
+			<li id="PLOT_LENSES_ASAP_Command__li_CACE57EA06EA42BB8E81D0ECC5796ACD"><a name="PLOT_LENSES_ASAP_Command__li_CACE57EA06EA42BB8E81D0ECC5796ACD"><!-- --></a>In addition to the 2-D plot that is
+				generated, the full 3-D data is written to the VECTOR file (default logical unit
+				30). </li>
+
+			<li id="PLOT_LENSES_ASAP_Command__li_696A60E20A8B4FE0A3F0113F79F717BB"><a name="PLOT_LENSES_ASAP_Command__li_696A60E20A8B4FE0A3F0113F79F717BB"><!-- --></a>The title is delimited by a single quote <b>'</b> , as shown. </li>
+
+			<li id="PLOT_LENSES_ASAP_Command__li_24B4520E48C648AE8351F874931246A5"><a name="PLOT_LENSES_ASAP_Command__li_24B4520E48C648AE8351F874931246A5"><!-- --></a>The <b>OVERLAY</b> command
+				argument tells ASAP not to issue an end of plot so that the next plot created is
+				overlaid with the current plot. This is useful for combining system plots with ray
+				trace plots (assuming that the <b>WINDOW</b> is the same for all plots),
+				multiple spot diagrams, and so on. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#PLOT">PLOT Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_P-ref.html#Commands_and_Macros_P" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “P”.">Commands and Macros (P)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Lens_Entity-conc.html" title="ASAP defines a lens entity to be a sequence of refractive or reflective conicoid surfaces that are bounded by circular apertures and separated by homogeneous MEDIA.">Lens Entity</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Plotting_Commands-ref.html" title="The PLOT command is a general command for plotting virtually any aspect of system geometry and selected ray data.">Plotting Commands</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/PLOT3D_ASAP-cmdref.html" title="Creates a 3D representation of the current distribution data file with 1D cross-sections.">PLOT3D (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_BEAMS_ASAP-cmdref.html#PLOT_BEAMS_ASAP_Command" title="Plots extent of each Gaussian beam within the currently specified graphics window.">PLOT BEAMS (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_CURVES_ASAP-cmdref.html#PLOT_CURVES_ASAP_Command" title="Plots a wire-frame outline of curves, with the control points displayed, in the currently specified graphics window.">PLOT CURVES (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_EDGES_ASAP-cmdref.html#PLOT_EDGES_ASAP_Command" title="Plots a wireframe outline of edges in the currently specified graphics window.">PLOT EDGES (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_ENTITIES_ASAP-cmdref.html#PLOT_ENTITIES_ASAP_Command" title="Plots surface, edge, and lens entities in the currently specified graphics window.">PLOT ENTITIES (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_FACETS_ASAP-cmdref.html#PLOT_FACETS_ASAP_Command" title="Plots parametric mesh representation of objects in the currently specified graphics window.">PLOT FACETS (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_LIMITS_ASAP-cmdref.html#PLOT_LIMITS_ASAP_Command" title="Plots a wireframe box denoting the extent of the specified objects limits box in the currently specified graphics window.">PLOT LIMITS (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_LOCAL_ASAP-cmdref.html#PLOT_LOCAL_ASAP_Command" title="Plots local boxes of surface entities.">PLOT LOCAL (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_MESHES_ASAP-cmdref.html#PLOT_MESHES_ASAP_Command" title="Plots all currently specified objects using a wireframe mesh.">PLOT MESHES (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_POLARIZATION_ASAP-cmdref.html#PLOT_POLARIZATION_ASAP_Command" title="Plots polarization state ellipses.">PLOT POLARIZATION (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_RAYS_ASAP-cmdref.html#PLOT_RAYS_ASAP_Command" title="Plots vectors along the direction of each ray contained within the currently specified graphics window.">PLOT RAYS (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_SURFACES_ASAP-cmdref.html#PLOT_SURFACES_ASAP_Command" title="Plots surfaces in the currently specified graphics window.">PLOT SURFACES (ASAP Command)</a></div>
+<div><a href="../Commands/OVERLAY_arg_ASAP-cmdref.html" title="Overlays plots (that is, places them on top of each other).">OVERLAY (ASAP Command Argument)</a></div>
+<div><a href="../Commands/PIXELS_ASAP-cmdref.html" title="Sets the resolution for graphics and calculations.">PIXELS (ASAP Command)</a></div>
+<div><a href="../Commands/PROFILES_ASAP-cmdref.html" title="Plots slices through objects contained within the specified graphics window.">PROFILES (ASAP Command)</a></div>
+<div><a href="../Commands/REPLOT_ASAP-cmdref.html" title="Plots data stored in the 3D vector file within the currently defined graphics window.">REPLOT (ASAP Command)</a></div>
+<div><a href="../Commands/XYZ_arg_ASAP-cmdref.html" title="Sets the window to the given directions and size for only the currently active plot.">XY[Z] and Other Plot Window Overrides (ASAP Command Argument)</a></div>
+<div><a href="../Commands/WINDOW_ASAP-cmdref.html" title="Sets the plotting window for graphical output.">WINDOW (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

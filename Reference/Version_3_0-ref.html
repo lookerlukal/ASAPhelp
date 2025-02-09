@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Version 3.0"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Release_Notes-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_3_2.html#Version_3_2"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_2_9-ref.html#Version_2.9"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Version_3_0"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Version 3.0</title>
+</head>
+<body id="Version_3_0"><a name="Version_3_0"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Version 3.0</h5></span>
+	<div>
+		<div class="section" id="Version_3_0__section_421DA21C908D4636AE192B4891D37B3E"><a name="Version_3_0__section_421DA21C908D4636AE192B4891D37B3E"><!-- --></a>
+			<p>May 1991 </p>
+
+		</div>
+
+		<div class="section" id="Version_3_0__section_A834F27FE0454BD3A4635199D03F8035"><a name="Version_3_0__section_A834F27FE0454BD3A4635199D03F8035"><!-- --></a><span style="color: #2b6eb5"><h5>Recent GALOP enhancements: </h5></span>
+			
+			<pre class="codeblock">
+  Chromatic aberration correction
+  Complete Schott catalog for glass selection
+  Much improved hybrid optimization algorithm (SVD with PSD damping)
+  New variables
+    Stop position
+    Edge (marginal) ray height (power redistribution)
+    Tilted/decentered aspherics that maintain 1st order layout
+    SINGLET and DOUBLET thicknesses
+  Generation of 2D plot file in ANALYZE for later hardcopy</pre>
+
+			</div>
+
+			<div class="section" id="Version_3_0__section_EF63FFD0683D44AD856171182519739A"><a name="Version_3_0__section_EF63FFD0683D44AD856171182519739A"><!-- --></a><span style="color: #2b6eb5"><h5>New RABET commands: </h5></span>
+				
+				<pre class="codeblock">
+  LENSES are a sequence of up to 10 arbitrary conicoids (one object)
+    SEQUENCE entered directly
+    MIRROR surface
+    SINGLET lens
+    MANGIN mirror
+    DOUBLET cemented (achromat)
+    RIGHT angle prism
+    PENTA prism
+    WEDGE of glass
+    AFOCAL beam expander or reducer (mirrors and/or lenses)
+      ALTER any lens parameter
+    IDEAL lens module from ABCD matrix
+  MODELS for surface scatter in extended version
+    LAMBERTIAN diffuse
+    HARVEY shift-invariant polished surface
+    POLYNOMIAL with actual BSDF data FIT option
+    VANES angled with rounded tips
+    USERBSDF programmed by user
+  EMITTING surfaces or volumes from a randomly created ray set
+  TITLE and identifier for plots
+  DISPLAY
+    COMBINE two data sets
+    REDUCE current data to smaller subset
+    ... COLOR override option on all plot commands
+    MESH write to 3D vector file
+    ENCLOSED energy within a rectangle
+    RANGE reset for minimum and maximum functional value
+  LSQFIT variable normalization and singular value threshold
+  HISTORY of ray trajectories from SAVE file
+  SCATTER with MODEL assignment
+    TOWARDS an important area bounded by an edge
+  DOMACROS determines priority of user macro commands
+  SEGMENTS sets number used to draw elliptical arcs
+  SHOW current commands settings</pre>
+
+			</div>
+
+			<div class="section" id="Version_3_0__section_6CBB7944B6CA424698568105DAEF38DB"><a name="Version_3_0__section_6CBB7944B6CA424698568105DAEF38DB"><!-- --></a><span style="color: #2b6eb5"><h5>Enhanced RABET Commands: </h5></span>
+				
+				<pre class="codeblock">
+  SEARCH LIST option added
+  EDGES can now have smooth elliptical arc segments
+    Dashed LINE option
+    OVAL is shape factored polygonal edge
+    RTRACK is racetrack
+  SURFACES
+    MULTIPLE linear displacements
+  HORN FIT to point/derivative pairs option added
+  BOUNDS checking with EDGES added
+  SPREAD automatically sums multiple wavelengths incoherently
+  FIELD sums all coherent contributions, just not current WAVELENGTH
+  FIELD ... DELTA option allows varying "time"
+  Relative indexing for ray and source numbers added to GET/PUT and SELECT
+  GET totals and averages for all the current rays
+  RAY,REPLOT graphical inputs
+    "?" displays current cursor coordinate
+    Equivalent commands written to USR file
+  DISPLAY
+    FFT any part not just modulus
+    RADIAL averages and/or plots function and/or integral
+    GRAPH has new options
+    CONTOUR level values written on plot
+  OPDMAP ... PSF option
+  TRACE GRAPH option displays progress of ray storage
+  USERAPOD input apodization both in position and directional space
+  SOURCE LINE and WAVEFUNC for arbitrary input wavefronts</pre>
+
+			</div>
+
+			<div class="section" id="Version_3_0__section_5D72699DD59A4D2CBBC93DD1570C4274"><a name="Version_3_0__section_5D72699DD59A4D2CBBC93DD1570C4274"><!-- --></a><span style="color: #2b6eb5"><h5>Code changes: </h5></span>
+				
+				<pre class="codeblock">
+  RABET default array sizes increased:
+  Pixel sampling         128x128 to 256x256
+  Objects                    160 to 200
+  Surfaces+edges+lenses      480 to 600
+  Media/coatings              40 to 50
+  Interpolation wavelengths    5 to 9
+  Simultaneous HOE orders      3 to 5
+  Important areas per object   3 to 10
+  SPREAD and FIELD from 2x to 20x faster
+  Faster SELECT command avoids ray paging
+  Glass MEDIA referred by name can be automatically created from SCHOTT.CAT
+  USERFUNC,USERSURF coefficients passed in double precision
+  Concave facets/polygons now allowed
+  BSI is now a set of subcommands in STRAP</pre>
+
+			</div>
+
+			<div class="section" id="Version_3_0__section_457D1D5021D64528A45EEFBF316901B5"><a name="Version_3_0__section_457D1D5021D64528A45EEFBF316901B5"><!-- --></a><span style="color: #2b6eb5"><h5>Macro Language: </h5></span>
+				
+				<pre class="codeblock">
+  SGN math function added
+  $TIC internal macro for elapsed CPU time
+  $ARG controls macro argument prompting
+  $SCR displays and/or edits register fields
+  $CASE allows upper, lower, or both cases for commands
+  $ECHO controls/overrides echo of input</pre>
+
+			</div>
+
+			<div class="section" id="Version_3_0__section_58465924498E4A12B42EEB69E956495C"><a name="Version_3_0__section_58465924498E4A12B42EEB69E956495C"><!-- --></a><span style="color: #2b6eb5"><h5>Macro libraries: </h5></span>
+				
+				<pre class="codeblock">
+  UTIL contains many useful macros for lenses, prisms, etc.
+  ACCS2RBT permits reading or converting AccosV input files
+  OSLO2RBT                  "            OSLO       "
+				</pre>
+
+			</div>
+
+			<div class="section" id="Version_3_0__section_10D6EEFC3D9042B38117B8615C6EB21B"><a name="Version_3_0__section_10D6EEFC3D9042B38117B8615C6EB21B"><!-- --></a><span style="color: #2b6eb5"><h5>2D graphics drivers: </h5></span>
+				
+				<pre class="codeblock">
+  TERMSP now supports UNIX X-Windows through XTERM emulator.
+  HPGLNP can output separate plotter files
+  PSCRIP creates encapsulated PostScript files, portrait or landscape
+  EPSONP now handles 24-pin printers as well as 9-pin
+				</pre>
+
+			</div>
+
+			<div class="section" id="Version_3_0__section_1170B730CC9241D5A32020331070ACF9"><a name="Version_3_0__section_1170B730CC9241D5A32020331070ACF9"><!-- --></a><span style="color: #2b6eb5"><h5>Documentation: </h5></span>
+				
+				<pre class="codeblock">
+  New format and packaging
+  TUTORIAL is now two volumes totalling almost 700 pages with an index</pre>
+
+			</div>
+
+	</div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Release_Notes-ref.html" title="Topics in this section include all known release notes for ASAP up to the last version. Release notes for the current version can be viewed in the ASAP Command Output window, or opened from your ASAP installation root folder.">Release Notes</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a href="../Reference/Version_3_2.html#Version_3_2">Version 3.2</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a href="../Reference/Version_2_9-ref.html#Version_2.9">Version 2.9</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

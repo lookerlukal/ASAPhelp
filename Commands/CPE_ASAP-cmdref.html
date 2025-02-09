@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="CPE (ASAP Command)"/>
+<meta name="abstract" content="CPE (Cascaded Polarization Element) is used to define a compound polarization device. Every polarization device cascaded in a CPE element is specified by its polarization device type or type index and its device name or device list index in its defined list."/>
+<meta name="description" content="CPE (Cascaded Polarization Element) is used to define a compound polarization device. Every polarization device cascaded in a CPE element is specified by its polarization device type or type index and its device name or device list index in its defined list."/>
+<meta name="DC.subject" content="CPE (ASAP Command), cascaded polarization element, polarization, cascading polarization element"/>
+<meta name="keywords" content="CPE (ASAP Command), cascaded polarization element, polarization, cascading polarization element"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_C-ref.html#Commands_and_Macros_C"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/JONES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/RPM_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=235"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="CPE_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>CPE (ASAP Command)</title>
+</head>
+<body id="CPE_ASAP_Command"><a name="CPE_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>CPE (ASAP Command)</h5></span>
+	
+	
+	<div><p>CPE (Cascaded Polarization Element) is used to define a compound polarization device.
+		Every polarization device cascaded in a CPE element is specified by its polarization device
+		type or type index and its device name or device list index in its defined list. </p>
+
+		<p>The orientation of the polarization axis of every cascaded device is specified by the
+			polar and azimuthal angles either 1) relative to its previous device in the series
+			(relative orientation convention), or 2) relative to the first element (absolute
+			orientation convention). </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+CPE   n   Alignment   [stacked]    [‘name’] 
+{type|type_ID}     {element name|list_ID}      theta     phi
+{type|type_ID}     {element name|list_ID}      theta     phi
+	…..
+  </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>
+					<p>Option </p>
+
+				</span></th><th><span>
+					<p>Description </p>
+
+				</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> n </span></td><td><span> Number of polarization elements cascaded in this <b>CPE</b>
+					device </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> Alignment </span></td><td><span> Alignment convention. It can be either RELATIVE (or simply R) or ABSOLUTE
+					(A). In RELATIVE alignment convention, the orientation of its polarization axis
+					is calculated relative to those of its immediate previous element is the series.
+				</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> stacked </span></td><td><span> Controls the way space and material between individual elements are
+					interpolated. If this argument is not present, the polarization elements of the
+					CPE is assumed to be separated by infinitesimally thick isotropic layers with
+					the refractive index of the incident medium of the <b>POLARIZATION
+						INTERFACE</b> to which it is attached. If it is set to <b>stacked</b>, the polarization elements in the CPE are assumed to be
+					stacked together. </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> name </span></td><td><span> User-specified name of the Cascaded Polarization Element (CPE), up to 32
+					characters long. If no name is specified, ASAP uses a default name starting with
+					"CPE" followed by the list index of this cascaded polarization element in the
+					system CPE element list. For example, the second CPE element is named as
+					"CPE00002". <div class="note"><span class="notetitle">Note:</span> The name is case sensitive. </div>
+</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> type|type_ID </span></td><td><span> Types of polarization devices. See Remarks for a table of defined
+					polarization device types. <div class="note"><span class="notetitle">Note:</span> You can specify the polarization device type by
+						either its type index or its alternative input option listed in the table in
+						the Remarks section. If the alternative input is used, the letters must be
+						included in single quote. For example, 'JONES' can stand for Jones matrix
+						element. </div>
+</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> element name|list_ID </span></td><td><span> Name or list index of the cascaded elements. Alternatively, you can also
+					input the list index of the element on its defined list. <div class="note"><span class="notetitle">Note:</span> ASAP maintains a
+						dynamic list for each defined polarization device type. </div>
+</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> theta </span></td><td><span> Polar angle in degrees of the <i>polarization axis</i> of the cascaded
+					polarization device </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> phi </span></td><td><span> Azimuthal angle in degrees of the <i>polarization axis</i> of the cascaded
+					polarization device </span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="CPE_ASAP_Command__ol_AAEB0CD834994F139D77CF0C5F5B47C1"><!-- --></a><ol id="CPE_ASAP_Command__ol_AAEB0CD834994F139D77CF0C5F5B47C1">
+			<li id="CPE_ASAP_Command__li_C8E97B469E6B463889E0E68627CC66F3"><a name="CPE_ASAP_Command__li_C8E97B469E6B463889E0E68627CC66F3"><!-- --></a>A <b>CPE</b> element can
+				contain an unlimited number of polarization elements. </li>
+
+			<li id="CPE_ASAP_Command__li_0F84D80E2EC04BCF8C4E367D9A8C5FFF"><a name="CPE_ASAP_Command__li_0F84D80E2EC04BCF8C4E367D9A8C5FFF"><!-- --></a><b>CPE</b> elements can not be
+				nested. This means that the polarization elements of a <b>CPE</b> can
+				not be another <b>CPE</b> element or itself. </li>
+
+			<li id="CPE_ASAP_Command__li_5BCC249295DF49CA822CC309AC543C14"><a name="CPE_ASAP_Command__li_5BCC249295DF49CA822CC309AC543C14"><!-- --></a>Defined polarization device types include:
+			</li>
+
+		</ol>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>
+					<p>Type Index </p>
+
+				</span></th><th><span>
+					<p>Type Name </p>
+
+				</span></th><th><span>
+					<p>Input Option </p>
+
+				</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> 1 </span></td><td><span> Jones matrix </span></td><td><span>
+					<b>JONES </b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> 3 </span></td><td><span> Realistic polarizer </span></td><td><span>
+					<b>POLARIZER</b>
+				</span></td></tr></tbody></table>
+		<p>
+			<a href="../example_scripts.html#CPE">CPE Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_C-ref.html#Commands_and_Macros_C" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “C”.">Commands and Macros (C)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/JONES_ASAP-cmdref.html" title="Defines a Jones matrix element.">JONES (ASAP Command)</a></div>
+<div><a href="../Commands/RPM_ASAP-cmdref.html" title="Defines a realistic polarizer.">RPM (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=235" target="_blank">See the Knowledge Base for the technical publication, Polarization</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

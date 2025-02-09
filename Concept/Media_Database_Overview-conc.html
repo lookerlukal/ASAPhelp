@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Media Database Overview"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_GM-ref.html#Reference_G_M"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Axial_GRIN_Singlet-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Glass_Catalogs_for_Refractive_Media-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/INTERFACE_Command_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Media_Storage-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Optical_Properties-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Media_Database_Overview"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Media Database Overview</title>
+</head>
+<body id="Media_Database_Overview"><a name="Media_Database_Overview"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Media Database Overview</h5></span>
+	<div>
+		<p>ASAP uses refractive indices to calculate optical transformations at an object. The
+			refractive indices are stored in a <b>MEDIA</b> database. You must specify
+			any refractive media data for a given analysis by entering that data in a <b>MEDIA</b> table.</p>
+
+		<p>Unless the calculation has some wavelength dependence, or dispersive media are used, you
+			need only enter a single refractive index/medium.</p>
+
+		<p>ASAP performs only a simple linear interpolation to compute the refractive indices of
+			dispersive media at wavelengths other than those defined in the <b>MEDIA</b>
+			table. There is no private catalog utility, although one could be implemented with the
+			macro feature.</p>
+
+		<p>Glass catalogs are available but their data is not entered directly in the <b>MEDIA</b> table. That data is accessed directly by an object on the object's
+				<b>INTERFACE</b> command.</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_GM-ref.html#Reference_G_M" title="Reference topics in this section begin with the letters &#34;G&#34; to &#34;M&#34;.">Reference (G-M)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/INTERFACE_Command_Overview-conc.html">INTERFACE Command Overview</a></div>
+<div><a href="../Concept/Optical_Properties-conc.html" title="Using ASAP, you can build optical system models by first creating optical property and system geometry databases. The databases have additional commands for direct data entry and commands called modifiers that allow you to alter the databases. As you build an object, you associate data from these databases to the object for ray tracing.">Optical Properties</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Glass_Catalogs_for_Refractive_Media-task.html" title="The glass databases accessible in ASAP include: French, Hikari, Hoya, Hoya New, Ohara, Schott, Schott New, Sumita, and Unusual. The catalogs are in text files named *.CAT. The data for a specific glass consists of the glass name and six interpolation constants. No transmission, absorption, cost, staining data are contained in this database.">Glass Catalogs for Refractive Media</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Axial_GRIN_Singlet-ref.html" title="The example of Axial Gradient Index (GRIN) shows an axial GRIN singlet lens. This lens was actually designed in ASAP but only its GRIN properties are examined. The gradient function is simply a linear function of z coordinate in the singlet.">Axial GRIN Singlet</a></div>
+<div><a href="../Reference/Media_Storage-ref.html" title="Refractive media are stored in a complex array. As MEDIA are defined, they fill the array at the next available location. This setup is important to note because the INTERFACE command, which is an OBJECT modifier, references these media for assignment as an object's specular optical properties.">Media Storage</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/MEDIA_ASAP-cmdref.html" title="Creates a single refractive material.">MEDIA (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

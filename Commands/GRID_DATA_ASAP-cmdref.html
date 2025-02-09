@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="GRID DATA (ASAP Command)"/>
+<meta name="abstract" content="Creates a rectangular grid of rays."/>
+<meta name="description" content="Creates a rectangular grid of rays."/>
+<meta name="DC.subject" content="GRID DATA (ASAP Command), rays, rectangular grid, rectangular grid of rays"/>
+<meta name="keywords" content="GRID DATA (ASAP Command), rays, rectangular grid, rectangular grid of rays"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_G-ref.html#Commands_and_Macros_G"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CLIP_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CUTOFF_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_ELLIPTIC_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_HEX_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_OBJECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_POLAR_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_RECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_WINDOW_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/HALT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/POLARIZ_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SOURCE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPOTS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/GRID_Command_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="GRID_DATA_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>GRID DATA (ASAP Command)</title>
+</head>
+<body id="GRID_DATA_ASAP_Command"><a name="GRID_DATA_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>GRID DATA (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Creates a rectangular grid of rays. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+GRID DATA [ file [ n ] [ RANDOM r ] ]
+            u
+      </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>file</span></td><td><span>name of the distribution file (default .DIS
+			 extension)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>u</span></td><td><span>Logical unit number (default 9) of distribution data file
+			 (default .DAT extension)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span>specifies the creation of rays at every nth location</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RANDOM r</span></td><td><span>randomization factor</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="GRID_DATA_ASAP_Command__ul_8002C3626A804F3AB5AF80F77A55CD5A"><!-- --></a><ol id="GRID_DATA_ASAP_Command__ul_8002C3626A804F3AB5AF80F77A55CD5A"> 
+		<li id="GRID_DATA_ASAP_Command__li_8FFEF5D0F9A344EE81693C9F2EFB3503"><a name="GRID_DATA_ASAP_Command__li_8FFEF5D0F9A344EE81693C9F2EFB3503"><!-- --></a>Creates a rectangular grid
+		  of rays based on the coordinates found in the header of the distribution file
+		  (default file.dis or BRO009.DAT). 
+		</li>
+ 
+		<li id="GRID_DATA_ASAP_Command__li_34F06ADA7AF44EAFAADEF97EE9290E13"><a name="GRID_DATA_ASAP_Command__li_34F06ADA7AF44EAFAADEF97EE9290E13"><!-- --></a>A ray is created at each
+		  sample location in the file (or optionally every 
+		  <b>n</b>th location). 
+		</li>
+ 
+		<li id="GRID_DATA_ASAP_Command__li_B176525632DD4BBB8DABF0EE5C6DA87F"><a name="GRID_DATA_ASAP_Command__li_B176525632DD4BBB8DABF0EE5C6DA87F"><!-- --></a>Each ray's flux is
+		  proportional to the corresponding data value in the file. 
+		</li>
+ 
+		<li id="GRID_DATA_ASAP_Command__li_357EBF1DDF024BDBB1638566E38D834A"><a name="GRID_DATA_ASAP_Command__li_357EBF1DDF024BDBB1638566E38D834A"><!-- --></a>Each ray position on the
+		  grid can be uniformly 
+		  <b>RANDOM</b>ized within a region 
+		  <b>r</b> times the local grid spacing. 
+		</li>
+ 
+		<li id="GRID_DATA_ASAP_Command__li_DD6544816ABE4CE7B520B157DDAEF602"><a name="GRID_DATA_ASAP_Command__li_DD6544816ABE4CE7B520B157DDAEF602"><!-- --></a>In addition to the usual 
+		  <b>CLIP POS</b>ition, the current flux 
+		  <b>CUTOFF</b> and 
+		  <b>HALT</b> settings may also truncate the distribution. 
+		</li>
+ 
+		<li id="GRID_DATA_ASAP_Command__li_1774073547C645A1B06C4B5DDD39A9F7"><a name="GRID_DATA_ASAP_Command__li_1774073547C645A1B06C4B5DDD39A9F7"><!-- --></a>If the labels in the file do
+		  not contain coordinates, then the data is mapped to the current plotting 
+		  <b>WINDOW</b> at the zero depth plane. 
+		</li>
+ 
+		<li id="GRID_DATA_ASAP_Command__li_21E6718B43F94C2290F418CEF0C3647C"><a name="GRID_DATA_ASAP_Command__li_21E6718B43F94C2290F418CEF0C3647C"><!-- --></a>Used in conjunction with the
+		  
+		  <b>SOURCE</b> command, 
+		  <b>GRID DATA</b> creates ray data that can be traced in
+		  ASAP. 
+		</li>
+ 
+		<li id="GRID_DATA_ASAP_Command__li_5559F2CDB94C4C999D4680FC9433EB5A"><a name="GRID_DATA_ASAP_Command__li_5559F2CDB94C4C999D4680FC9433EB5A"><!-- --></a>When in doubt about the
+		  exact distribution that is created by 
+		  <b>GRID DATA</b> use the 
+		  <b>SPOTS POSITION</b> command to display the grid. 
+		</li>
+ 
+		<li id="GRID_DATA_ASAP_Command__li_C518595E5C38462497C6539E3AF14754"><a name="GRID_DATA_ASAP_Command__li_C518595E5C38462497C6539E3AF14754"><!-- --></a>ASAP modifies the
+		  polarization of rays as needed to avoid the creation of axial fields, and warns
+		  when this occurs. Modifications do not permanently change the 
+		  <b>POLARIZ 
+		  </b>settings. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#GRID">GRID
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+  <div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_G-ref.html#Commands_and_Macros_G" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “G”.">Commands and Macros (G)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/GRID_Command_Overview-conc.html" title="The GRID command generates a planar distribution of rays, which, in conjunction with the SOURCE command, creates ray data that can be traced in ASAP.">GRID Command Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/CLIP_ASAP-cmdref.html" title="Specifies positional or directional ray limiting or clipping boxes.">CLIP (ASAP Command)</a></div>
+<div><a href="../Commands/CUTOFF_ASAP-cmdref.html" title="Sets the conditions controlling ray termination.">CUTOFF (ASAP Command)</a></div>
+<div><a href="../Commands/GRID_ELLIPTIC_ASAP-cmdref.html" title="Generates a rectangular grid of rays inside an elliptical aperture.">GRID ELLIPTIC (ASAP Command)</a></div>
+<div><a href="../Commands/GRID_HEX_ASAP-cmdref.html" title="Generates a hexagonal grid of rays.">GRID HEX (ASAP Command)</a></div>
+<div><a href="../Commands/GRID_OBJECT_ASAP-cmdref.html" title="Generates a uniform grid of rays on an object.">GRID OBJECT (ASAP Command)</a></div>
+<div><a href="../Commands/GRID_POLAR_ASAP-cmdref.html" title="Generates a circular grid of rays.">GRID POLAR (ASAP Command)</a></div>
+<div><a href="../Commands/GRID_RECT_ASAP-cmdref.html" title="Generates a rectangular grid of rays inside a rectangular aperture.">GRID RECT (ASAP Command)</a></div>
+<div><a href="../Commands/GRID_WINDOW_ASAP-cmdref.html" title="Creates a rectangular raster-type ray grid.">GRID WINDOW (ASAP Command)</a></div>
+<div><a href="../Commands/HALT_ASAP-cmdref.html" title="Sets the conditions controlling ray termination.">HALT (ASAP Command)</a></div>
+<div><a href="../Commands/POLARIZ_ASAP-cmdref.html" title="Sets the polarization properties for future ray creation.">POLARIZ (ASAP Command)</a></div>
+<div><a href="../Commands/SOURCE_ASAP-cmdref.html" title="Specifies sources for the rays/beams.">SOURCE (ASAP Command)</a></div>
+<div><a href="../Commands/SPOTS_ASAP-cmdref.html" title="Creates a geometric spot diagram for the currently selected ray data.">SPOTS (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Wave Optics in ASAP</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Wave Optics in
+		  ASAP, at http://www.breault.com/k-base.php 
+		</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

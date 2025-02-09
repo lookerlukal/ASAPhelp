@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="$CASE (ASAP Macro)"/>
+<meta name="abstract" content="Specifies case sensitivity."/>
+<meta name="description" content="Specifies case sensitivity."/>
+<meta name="DC.subject" content="$CASE (ASAP Macro), case, upper and lower, macros, case"/>
+<meta name="keywords" content="$CASE (ASAP Macro), case, upper and lower, macros, case"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_C-ref.html#Commands_and_Macros_C"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Macro_Language-conc.html#ASAP_Macro_Language"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=33"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="CASE_ASAP_Macro"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>$CASE (ASAP Macro)</title>
+</head>
+<body id="CASE_ASAP_Macro"><a name="CASE_ASAP_Macro"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>$CASE (ASAP Macro)</h5></span>
+	
+	
+	<div><p>Specifies case sensitivity. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+$CASE [ UPPER ]
+        LOWER
+        BOTH
+      </pre>
+
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="CASE_ASAP_Macro__ul_56A926866B2540B8B3814BE45C3FF007"><!-- --></a><ol id="CASE_ASAP_Macro__ul_56A926866B2540B8B3814BE45C3FF007">
+			<li id="CASE_ASAP_Macro__li_85DB5380C7194AE68C3432338B34F285"><a name="CASE_ASAP_Macro__li_85DB5380C7194AE68C3432338B34F285"><!-- --></a>Macro instructs the parser to recognize
+				only <b>UPPER</b>- or <b>LOWER</b>-case letters or <b>BOTH</b>. </li>
+
+			<li id="CASE_ASAP_Macro__li_7C854D015BFD45D6A198114CDB1D7AAD"><a name="CASE_ASAP_Macro__li_7C854D015BFD45D6A198114CDB1D7AAD"><!-- --></a>The case of the prompt displayed below the
+				ASAP Command Input window reflects the setting of the <b>$CASE</b>
+				macro. </li>
+
+			<li id="CASE_ASAP_Macro__li_6645500853C748D5BCC97F9ECC1E57AD"><a name="CASE_ASAP_Macro__li_6645500853C748D5BCC97F9ECC1E57AD"><!-- --></a>If no argument is given on the command, the
+				state before the last <b>$CASE</b> command is restored. </li>
+
+			<li id="CASE_ASAP_Macro__li_84007F2E562848A192A5596B6F8419A7"><a name="CASE_ASAP_Macro__li_84007F2E562848A192A5596B6F8419A7"><!-- --></a>Letters opposite in case to that set by the
+					<b>$CASE</b> command can also be used as embedded comments, since
+				the program treats them as blanks. Trailing comments can be entered after an
+				exclamation point "!", since this character signals the program to stop decoding
+				input from the command. </li>
+
+			<li id="CASE_ASAP_Macro__li_D4D578295C8A4B03ABD414F59A1FA1C4"><a name="CASE_ASAP_Macro__li_D4D578295C8A4B03ABD414F59A1FA1C4"><!-- --></a>Opposite case letters: treated as blanks </li>
+
+			<li id="CASE_ASAP_Macro__li_98A7641907684F7B96677EA51105D0A8"><a name="CASE_ASAP_Macro__li_98A7641907684F7B96677EA51105D0A8"><!-- --></a>Last entry, stop parsing: exclamation point </li>
+
+			<li id="CASE_ASAP_Macro__li_B8038573BE8C4D6188C20E9A9FAC3CE2"><a name="CASE_ASAP_Macro__li_B8038573BE8C4D6188C20E9A9FAC3CE2"><!-- --></a>When using lower case for comments, do not
+				include underscores "_" as these are treated as upper case and generate an
+				"Unrecognized command or macro" error. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#$CASE">$CASE Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_C-ref.html#Commands_and_Macros_C" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “C”.">Commands and Macros (C)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/ASAP_Macro_Language-conc.html#ASAP_Macro_Language">ASAP Macro Language</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=33" target="_blank">See the Knowledge Base for the technical publication, Predefined Macros</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,27 @@
+!!++
+!! DISPLAY_READ.INR
+!! Title: Reading a Distribution Externally
+!! Category: Isolated Command
+!! Keywords: DISPLAY, Fortran, external, distribution
+!! Description: Fortran Code for reading an ASAP binary
+!! distribution file.
+!! Note: This file is not a runable inr file.
+!! Edit History: (latest first)
+!! 12/19/2001 - cp - modified description
+!! 10/02/2000 - cp - modified format; added description
+!! 01/01/1996 - bro - creation
+!!--
+ 
+* Fortran code for reading a binary distribution file      
+                                                   
+*                                                  
+* variable declarations                            
+      IMPLICIT REAL (A-H,O-Z)                      
+      IMPLICIT INTEGER (I-N)                       
+      PARAMETER (MREC=4) !1 for Digital Fortran    
+      CHARACTER*24 NAME,TITLE                      
+      CHARACTER*8 ZLABEL                           
+      CHARACTER*16 FLABEL,XLABEL,YLABEL            
+      PARAMETER (MAXF=1,MAXX=362,MAXY=362)         
+                                                   
+                                                   

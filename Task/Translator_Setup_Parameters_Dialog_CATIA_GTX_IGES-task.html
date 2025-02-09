@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Translator Setup Parameters Dialog (CATIA, GTX, IGES)"/>
+<meta name="abstract" content="This dialog box applies to translations for CATIA, GTX (XML), and IGES files."/>
+<meta name="description" content="This dialog box applies to translations for CATIA, GTX (XML), and IGES files."/>
+<meta name="DC.subject" content="Translator Setup Parameters Dialog (CATIA, GTX, IGES, CATIA, import preferences, GTX, import preferences, IGES, import preferences, XML import preferences"/>
+<meta name="keywords" content="Translator Setup Parameters Dialog (CATIA, GTX, IGES, CATIA, import preferences, GTX, import preferences, IGES, import preferences, XML import preferences"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/CATIA_Files_importing_via_CATIA_Configuration-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/CATIA_Installation_Location-task.html#CATIA_Installation_Location"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/CATIA_Geometry_Filters-ref.html#CATIA_Geometry_Filters"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Importing_IGES_or_CAD_Files-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EDGES_CURVES_ENTITIES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PATCHES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/User_Interface_Preferences_CAD_Import_Tab-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EDGES_CURVES_ENTITIES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PATCHES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/User_Interface_Preferences_CAD_Import_Tab-task.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Translator_Setup_Parameters_Dialog_CATIA_GTX_IGES"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Translator Setup Parameters Dialog (CATIA, GTX, IGES)</title>
+</head>
+<body id="Translator_Setup_Parameters_Dialog_CATIA_GTX_IGES"><a name="Translator_Setup_Parameters_Dialog_CATIA_GTX_IGES"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Translator Setup Parameters Dialog (CATIA, GTX, IGES)</h5></span>
+	
+	
+	<div><p>This dialog box applies to translations for CATIA, GTX (XML), and IGES files. </p>
+
+		<div class="section" id="Translator_Setup_Parameters_Dialog_CATIA_GTX_IGES__context_8EF8464BBBF64386AA624C6F14D99AD0"><a name="Translator_Setup_Parameters_Dialog_CATIA_GTX_IGES__context_8EF8464BBBF64386AA624C6F14D99AD0"><!-- --></a>
+			<p>The settings in the <b>Setup Parameters</b> dialog box are temporary—they apply only
+				to the current translation in process, not to future translations. If you want the
+				settings to become the defaults, you can set them on the <b>ASAP Preferences</b>
+				dialog box (<i> File &gt; Preferences</i>). </p>
+
+			<p>The <b>Setup Parameters</b> dialog box opens on top of the <b>ASAP Translator</b>
+				window, unless <b>Do not show this dialog</b> is selected on this dialog or in <b>ASAP Preferences</b> on the <b>Translators</b> tab. </p>
+
+			<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Independent Curves</span></td><td><span>Allows you to import curves that do not form surfaces. ASAP modifiers
+						(like <b>SWEEP</b>) must be added to these base curves to create
+						surfaces.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Create Specific Surface-Based Objects</span></td><td><span>Causes ASAP to detect and change planes, spheroids and other
+						recognizable edge-based objects to their ASAP surface-based equivalents for
+						more efficient ray tracing.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Parametric Space Trimming </span></td><td><span>Uses parametric instead of model space trimming.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Use Filename as Root Object</span></td><td><span>Select for ASAP to import the geometry using the degree and product
+						specified for the geometry in the file. No approximation of underlying
+						geometry is performed where possible.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Try Other Approximation to Spline Surfaces </span></td><td><span>
+						<p>Deselect for IGES or GTX (XML) to choose whether to loft in the <b>u</b> or <b>v</b> parametric direction, based on
+							minimizing the number of ASAP <b>CURVE</b> entities. </p>
+
+						<p>Select so that the other approximation (even though it uses more <b>CURVES</b>) is closer to the original NURBS. </p>
+
+					</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Use Accelerated OpenGL</span></td><td><span>Deselect to assign a non-optimized OpenGL pixel format for the meshed
+						preview window. This is the default. <p>Select to use an optimized pixel
+							format. </p>
+<p>Note: most meshed objects do not require optimized
+							rendering. </p>
+</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Use Model Accuracy(not available for CATIA)</span></td><td><span>Select for ASAP to import the geometry using the degree and product
+						specified for the geometry in the file. No approximation of the underlying
+						geometry is performed where possible to improve import accuracy and shape
+						identity of the geometry; however, ray tracing may slow due to more complex
+						geometry. <p>Deselect to activate the maximum degree product and Bezier
+							order spinner arrows, so you can choose the values. Note: deselecting
+							this option may speed up ray trace times, but it may also adversely
+							affect the quality of the geometry imported into ASAP. </p>
+</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Locate Duplicate Geometry</span></td><td><span>Reports detection of duplicate surface geometry during current import
+						session.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Maximum degree-product of PATCHES</span></td><td><span>Enter a number. Makes current curve/edge points a surface mesh of
+						Bezier degree <b>k</b> by <b>l</b> with <b>m</b> by <b>n</b> continuously
+						joined or <b>SEPARATE</b> rational patches. See Notes
+					below.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Bezier Order</span></td><td><span>Enter a number. Maximum order of the explicit polynomial that defines
+						the Bezier segment (not more than 20). See Notes below.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Material Database</span></td><td><span>Select current directory or browse to another directory to store *.dat
+						files for the material database.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Use Current Directory</span></td><td><span>Select to store files in the currently working directory (<i>File &gt; Set Working Directory</i>). <p>If deselected, the path
+							shows the directory in which files are stored. You can change the path
+							for the current translation in this dialog. </p>
+<p>For future
+							translations, change the path in the User Interface Preferences dialog
+							box on the CAD Import tab. </p>
+</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Display Setup Dialog </span></td><td><span>Select if you want this dialog to open when you initiate importing a
+						file. This setting can be changed on <i>File&gt; Preferences&gt; ASAP
+							Preferences&gt; CAD Import</i> tab.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Geometry Filter(CATIA only)</span></td><td><span>Click to open or close the Geometry Filter area of the
+					dialog.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Main Solid</span></td><td><span>Imports the solid associated with the main "PartBody".</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>All Solids</span></td><td><span>Imports all solids in the CATIA file.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>All Surfaces</span></td><td><span>Imports all CATIA surfaces under the "Geometrical Set" or "Ordered
+						Geometrical Set". These surfaces include those absorbed into other surfaces;
+						for example, surfaces used to form a "Join Surface" are not duplicated.
+						Filters can be combined; for example, you can import surfaces and solids
+						together. See CATIA filter combinations.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Reset CATIA Path (CATIA only) </span></td><td><span>After browsing to the new CATIA installation location for the bin
+						folder in your Dassult Systemes installation folder, click this button to
+						reset the path. </span></td></tr></tbody></table>
+			<div class="note"><span class="notetitle">Note:</span> 
+				<br/><a name="Translator_Setup_Parameters_Dialog_CATIA_GTX_IGES__ol_A0EE3BC2070E4C7F9B75333529BB5585"><!-- --></a><ol id="Translator_Setup_Parameters_Dialog_CATIA_GTX_IGES__ol_A0EE3BC2070E4C7F9B75333529BB5585">
+					<li id="Translator_Setup_Parameters_Dialog_CATIA_GTX_IGES__li_E65301A6304C4335845AFF8633746BB2"><a name="Translator_Setup_Parameters_Dialog_CATIA_GTX_IGES__li_E65301A6304C4335845AFF8633746BB2"><!-- --></a>The correct settings for the
+						Maximum degree-product of <b>PATCHES</b> and the Bezier Order
+						are important for two reasons: speed and accuracy. The "degree-product" is
+						the product of the degrees of the Bezier equations, defined in orthogonal
+						directions, comprising the surface. The Bezier order is the order of the
+						explicit polynomial. For example, a surface composed of a second order
+						parametric equation swept along another second order equation has a
+						degree-product of 1. Each polynomial has a Bezier order of 2. </li>
+
+					<li id="Translator_Setup_Parameters_Dialog_CATIA_GTX_IGES__li_8C3B0DC2BF9E46F6A892472CE73EC35A"><a name="Translator_Setup_Parameters_Dialog_CATIA_GTX_IGES__li_8C3B0DC2BF9E46F6A892472CE73EC35A"><!-- --></a>The ray trace speed is also
+						directly related to the degree-product and Bezier order. The more patches
+						and the higher the Bezier order, the longer the ray trace times. In fact,
+						when the patch degree exceeds second order, ASAP issues a warning informing
+						you to expect "Slower ray tracing ahead." The maximum degree-product is
+						currently defaulted to 5 and the Bezier order is defaulted to third order.
+						These settings are suitable for many illumination applications and some
+						imaging applications. However, you should perform the analysis at different
+						settings to access the accuracy for your particular application, especially
+						if it is an imaging application. Translations involving imaging applications
+						should be done at their exact orders. </li>
+
+					<li id="Translator_Setup_Parameters_Dialog_CATIA_GTX_IGES__li_EC4279EBB3CD40F7869038A2C9120918"><a name="Translator_Setup_Parameters_Dialog_CATIA_GTX_IGES__li_EC4279EBB3CD40F7869038A2C9120918"><!-- --></a>The translator by default builds a
+						lofted bi-quadratic rational Bezier surface approximation to the original
+						NURBS surface. It chooses ahead of time whether to loft in the u or v
+						parametric direction, based on minimizing the number of ASAP <b>CURVE</b> entities. Sometimes the other approximation (even though it
+						uses more CURVES) is closer to the original NURBS. </li>
+
+					<li id="Translator_Setup_Parameters_Dialog_CATIA_GTX_IGES__li_C79EFC26341847198E3CA7C198B86752"><a name="Translator_Setup_Parameters_Dialog_CATIA_GTX_IGES__li_C79EFC26341847198E3CA7C198B86752"><!-- --></a>If the NURBS surface in the IGES
+						file is already in Bezier format (an export option in some CAD systems) AND
+						its degree product does not exceed the specified value AND the maximum order
+						(interchangeable with "degree") in either parametric direction does not
+						exceed its specified value, then the surface is transferred directly and
+						exactly to ASAP. However, raytrace times may increase dramatically relative
+						to the default spline approximation discussed in 3 above). </li>
+
+				</ol>
+
+			</div>
+
+		</div>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Task/CATIA_Files_importing_via_CATIA_Configuration-task.html" title="You can import CATIA files via the CAA V5 plug-in included with ASAP CAD+ if you have CATIA (a product of Dassault Systemes) installed and you have ASAP CAD+.">CATIA Files, Importing in ASAP</a></div>
+</div>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Task/Importing_IGES_or_CAD_Files-task.html" title="This topic describes how to import an IGES or CAD file into ASAP for analysis.">Importing IGES or CAD Files</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/CATIA_Installation_Location-task.html#CATIA_Installation_Location">CATIA Installation Location</a></div>
+<div><a href="../Task/User_Interface_Preferences_CAD_Import_Tab-task.html" title="The user preferences described in this topic apply globally to the CAD translation process.">User Interface Preferences - CAD Import Tab</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/CATIA_Geometry_Filters-ref.html#CATIA_Geometry_Filters" title="CATIA geometry filters can be combined with one another, depending on the filter type.">CATIA Geometry Filters</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/EDGES_CURVES_ENTITIES_ASAP-cmdref.html" title="Signals ASAP that edge definition commands follow.">EDGES/CURVES/ENTITIES (ASAP Command)</a></div>
+<div><a href="../Commands/PATCHES_ASAP-cmdref.html" title="Points represent Bezier surface patches.">PATCHES (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

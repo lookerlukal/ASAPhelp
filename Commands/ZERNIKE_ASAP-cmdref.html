@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="ZERNIKE (ASAP Command)"/>
+<meta name="abstract" content="Creates a surface specified by an explicit Zernike polynomial."/>
+<meta name="description" content="Creates a surface specified by an explicit Zernike polynomial."/>
+<meta name="DC.subject" content="ZERNIKE (ASAP Command), surface, speciifying explicit Zernike polynomial"/>
+<meta name="keywords" content="ZERNIKE (ASAP Command), surface, speciifying explicit Zernike polynomial"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_XYZ-ref.html#Commands_and_Macros_X_Y_Z"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LIMITS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LOCAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SCALE_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="ZERNIKE_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>ZERNIKE (ASAP Command)</title>
+</head>
+<body id="ZERNIKE_ASAP_Command"><a name="ZERNIKE_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>ZERNIKE (ASAP Command)</h5></span>
+	
+	
+	<div><p>Creates a surface specified by an explicit Zernike polynomial. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+ZERNIKE X x c c' c" ...  [aperture ]
+        Y y 
+        Z z
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X, Y, or Z</span></td><td><span>specifies axis of symmetry</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x, y, or z</span></td><td><span>location along axis of symmetry</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>c c' c" c'" ...</span></td><td><span>University of Arizona FRINGE Zernike coefficients</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>aperture</span></td><td><span>ELLIPSE, RECTANGLE, or HEXAGONAL</span></td></tr></tbody></table>
+		<p><b>Reference Point</b>
+		</p>
+
+		<p>At intersection of the surface and coordinate axis. </p>
+
+		<p><b>Surface Normal</b>
+		</p>
+
+		<p>Along negative coordinate axis. </p>
+
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="ZERNIKE_ASAP_Command__ul_E2382C965E6F4F87A0FD2D891B59B81C"><!-- --></a><ol id="ZERNIKE_ASAP_Command__ul_E2382C965E6F4F87A0FD2D891B59B81C">
+			<li id="ZERNIKE_ASAP_Command__li_A184C160AA8C473A81A32948882E0638"><a name="ZERNIKE_ASAP_Command__li_A184C160AA8C473A81A32948882E0638"><!-- --></a>Creates an explicit surface by transforming
+				the University of Arizona FRINGE Zernike coefficient set <b>c c' ...</b>
+				to a polynomial. </li>
+
+			<li id="ZERNIKE_ASAP_Command__li_92B049CD31EC4460B0B9B62CB2BF659E"><a name="ZERNIKE_ASAP_Command__li_92B049CD31EC4460B0B9B62CB2BF659E"><!-- --></a>The second entry designates the axis of
+				symmetry (either <b>X, Y, or Z)</b> for the surface. </li>
+
+			<li id="ZERNIKE_ASAP_Command__li_093BBD01995C474EA6A9D9E555C31246"><a name="ZERNIKE_ASAP_Command__li_093BBD01995C474EA6A9D9E555C31246"><!-- --></a> The zeroth coefficient <b>c</b> is the constant term (piston). The 36th or last coefficient is the
+				12th-order radial term (spherical). The first nine terms are related to the
+				classical third-order optical aberrations: <br/><img src="../Equations/ZERNIKE_equation1.gif"/><br/></li>
+
+			<li id="ZERNIKE_ASAP_Command__li_F22D11698C5F48C5A0AC3FBAF2FB247F"><a name="ZERNIKE_ASAP_Command__li_F22D11698C5F48C5A0AC3FBAF2FB247F"><!-- --></a>ρ is the distance from the coordinate axis. </li>
+
+			<li id="ZERNIKE_ASAP_Command__li_E1A025C65F0749589943F2502E992C05"><a name="ZERNIKE_ASAP_Command__li_E1A025C65F0749589943F2502E992C05"><!-- --></a>It may be necessary to <b>SCALE</b> the
+				surface to its proper dimensions, since these coefficients are usually defined
+				relative to a unit circle area. The <b>SCALE</b> command automatically scales the
+				physical dimension of the surface. </li>
+
+			<li id="ZERNIKE_ASAP_Command__li_5F4F546F5F5F44AE9FB2AAA3E4D35BD5"><a name="ZERNIKE_ASAP_Command__li_5F4F546F5F5F44AE9FB2AAA3E4D35BD5"><!-- --></a>If the sag of the surface is to remain
+				constant over the new physical dimension, then one of the <b>SCALE</b> parameters
+				must be 1. For example, to <b>SCALE</b> by a factor of 2 in the <b>X</b> and <b>Y</b> dimensions while maintaining the same sag as over the unit circle, use <b>SCALE 2 2 1</b>. </li>
+
+			<li id="ZERNIKE_ASAP_Command__li_00ED1D9AD5674BA2BEFB290A79367A92"><a name="ZERNIKE_ASAP_Command__li_00ED1D9AD5674BA2BEFB290A79367A92"><!-- --></a>
+				This surface can extend to infinity unless a LOCAL command follows, or a trailing
+				aperture option of the following form is specified:
+				<pre class="codeblock">     
+ELLIPSE   a [ a' [ o [ s [ s' ] ] ] ]
+RECTANGLE
+HEXAGONAL a [ o [ s [ s' ] ] ]
+           </pre>
+
+			</li>
+
+			<li id="ZERNIKE_ASAP_Command__li_53034354CB804E34BA7CC011DBD052F7"><a name="ZERNIKE_ASAP_Command__li_53034354CB804E34BA7CC011DBD052F7"><!-- --></a><b>a a'</b> are the heights in
+				the other two transverse directions. </li>
+
+			<li id="ZERNIKE_ASAP_Command__li_958EA678FC7C4BC98C5A752E4041A5E0"><a name="ZERNIKE_ASAP_Command__li_958EA678FC7C4BC98C5A752E4041A5E0"><!-- --></a>For the <b>HEXAGONAL</b> form, <b>a</b> is the center-to-vertex distance (maximum height). </li>
+
+			<li id="ZERNIKE_ASAP_Command__li_50F81DAE90FB420BB15DF91EBD39DC23"><a name="ZERNIKE_ASAP_Command__li_50F81DAE90FB420BB15DF91EBD39DC23"><!-- --></a><b>o</b> is an optional central
+				hole ratio. </li>
+
+			<li id="ZERNIKE_ASAP_Command__li_1BA9796E9F874E5587B8945F3D85A890"><a name="ZERNIKE_ASAP_Command__li_1BA9796E9F874E5587B8945F3D85A890"><!-- --></a><b>s s'</b> are the transverse
+				coordinates of the center of the aperture. </li>
+
+		</ol>
+
+		<p>
+			<a href="/example_scripts.html#ZERNIKE">ZERNIKE Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_XYZ-ref.html#Commands_and_Macros_X_Y_Z" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letters “X, Y, Z”.">Commands and Macros (XYZ)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/LIMITS_ASAP-cmdref.html" title="Assigns a global bounding box to the object.">LIMITS (ASAP Command)</a></div>
+<div><a href="../Commands/LOCAL_ASAP-cmdref.html" title="Assigns a local bounding box to the surface/function.">LOCAL (ASAP Command)</a></div>
+<div><a href="../Commands/SCALE_ASAP-cmdref.html" title="Specifies arbitrary scaling of an entity.">SCALE (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

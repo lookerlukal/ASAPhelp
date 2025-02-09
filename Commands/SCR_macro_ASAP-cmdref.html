@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="$SCR (ASAP Macro)"/>
+<meta name="abstract" content="Defines a user-programmable screen template."/>
+<meta name="description" content="Defines a user-programmable screen template."/>
+<meta name="DC.subject" content="$SCR (ASAP Macro), macros, screen template, screen template, user-programmable"/>
+<meta name="keywords" content="$SCR (ASAP Macro), macros, screen template, screen template, user-programmable"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_S-ref.html#Commands_and_Macros_S"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SEARCH_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Macro_Language-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="SCR_ASAP_Macro"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>$SCR (ASAP Macro)</title>
+</head>
+<body id="SCR_ASAP_Macro"><a name="SCR_ASAP_Macro"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>$SCR (ASAP Macro)</h5></span>
+	
+	
+	<div><p>Defines a user-programmable screen template. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+$SCR [ name ] [ 'title' ]
+        m
+      </pre>
+
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Screen definition file extension</span></td><td><span>SCR</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Maximum screen size</span></td><td><span>79 x 24 characters</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Register field start delimiter</span></td><td><span>\</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Register field end delimiter</span></td><td><span> \ ?</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Literal field designator</span></td><td><span>"</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Integer field designator</span></td><td><span>(nothing at end of register)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Floating point designator</span></td><td><span>.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Boolean field designator</span></td><td><span>:</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="SCR_ASAP_Macro__ul_2CE01AFCBAB14FA9905DEA16C9CBE5D6"><!-- --></a><ol id="SCR_ASAP_Macro__ul_2CE01AFCBAB14FA9905DEA16C9CBE5D6">
+			<li id="SCR_ASAP_Macro__li_40FA9F0D54244CD5A913C8E820D0B888"><a name="SCR_ASAP_Macro__li_40FA9F0D54244CD5A913C8E820D0B888"><!-- --></a>This macro may be used to define a screen
+				template from which any group of variables may be displayed or modified by editing
+				their assigned fields. In this case and instead of the normal end-of-file, a line
+				with only a closed brace <b>}</b> in column one can be used to terminate the
+				template definition and signal the beginning of up to 1000 lines of 79
+				character-wide help text. </li>
+
+			<li id="SCR_ASAP_Macro__li_D7B23987CCFA4099A66092E9656DF0EA"><a name="SCR_ASAP_Macro__li_D7B23987CCFA4099A66092E9656DF0EA"><!-- --></a>
+				The template may be read from a file called <b>name.scr</b> or from the <b>m</b> records that follow. 
+				<div class="note"><span class="notetitle">Note:</span>  Screen files invoked with the <b>$SCR</b> command are searched in
+					the following locations, in this order: <br/><a name="SCR_ASAP_Macro__ol_6DB5A2F5F0624FE9BBFEB309B6F2CF53"><!-- --></a><ul id="SCR_ASAP_Macro__ol_6DB5A2F5F0624FE9BBFEB309B6F2CF53">
+						<li id="SCR_ASAP_Macro__li_689E0EC52FB74A6CB83D200CD0E8503B"><a name="SCR_ASAP_Macro__li_689E0EC52FB74A6CB83D200CD0E8503B"><!-- --></a>working directory, and </li>
+
+						<li id="SCR_ASAP_Macro__li_52D9C4CEC0304BA69B92EA0B02616E5F"><a name="SCR_ASAP_Macro__li_52D9C4CEC0304BA69B92EA0B02616E5F"><!-- --></a><b>$SEARCH</b> path
+							elements, in the order assigned. </li>
+
+					</ul>
+</div>
+
+			</li>
+
+			<li id="SCR_ASAP_Macro__li_284F3B42698048E19E0D368B7B5CB97C"><a name="SCR_ASAP_Macro__li_284F3B42698048E19E0D368B7B5CB97C"><!-- --></a>Within the screen template, each register
+				field is delimited by either two back slashes \\ for display-only fields or a
+				backslash and question mark <b>?</b> for modifiable fields. The register name
+				immediately follows the first backslash. </li>
+
+			<li id="SCR_ASAP_Macro__li_749756CE794B4961993C6E8C233C71B0"><a name="SCR_ASAP_Macro__li_749756CE794B4961993C6E8C233C71B0"><!-- --></a>A colon, caret, period, double quote or
+				nothing at the end of the register name determines the register data type; Boolean,
+				floating point, literal or integer, respectively. If floating, a single-digit number
+				to the right of the period determines the number of digits to the right of the
+				decimal point that will be displayed. The overall size of the field, and the
+				register value displayed in it, are controlled by the position of the second
+				delimiter. </li>
+
+			<li id="SCR_ASAP_Macro__li_793CFC4AB31D4E4396CE2BD6CB03D894"><a name="SCR_ASAP_Macro__li_793CFC4AB31D4E4396CE2BD6CB03D894"><!-- --></a>
+				If there are no editable fields in the template (no question marks ?), the result
+				is written directly as simple text to the current output device. 
+				<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Screen definition file extension:</span></td><td><span>SCR</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Maximum editable screen size:</span></td><td><span>79x24 characters</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Maximum output template size:</span></td><td><span>344x24 characters</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Register field start delimiter:</span></td><td><span>\</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Register field end delimiter</span></td><td><span> \ ?</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Literal field designator</span></td><td><span> "</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Integer field designator: </span></td><td><span/></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Floating point designator:</span></td><td><span> .</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span># digits right of decimal point: </span></td><td><span> .#</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Boolean field designator:</span></td><td><span> :</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Exponential field designator</span></td><td><span> ^</span></td></tr></tbody></table>
+			</li>
+
+			<li id="SCR_ASAP_Macro__li_C540C96188A946C08529D6BA5A301BB2"><a name="SCR_ASAP_Macro__li_C540C96188A946C08529D6BA5A301BB2"><!-- --></a>
+				The display attributes of the background and fields can be programmed according
+				to the following table: 
+				<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Entry</span></th><th><span>Default</span></th><th><span>Meaning</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>at</span></td><td><span>7</span></td><td><span>Background text</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>aw</span></td><td><span>7</span></td><td><span>Write only fields</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ar</span></td><td><span>0</span></td><td><span>Read fields before</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>au</span></td><td><span>0</span></td><td><span>After update</span></td></tr></tbody></table>
+			</li>
+
+			<li id="SCR_ASAP_Macro__li_3EB7A510CC6A4DE7BA12DAB3B6F391ED"><a name="SCR_ASAP_Macro__li_3EB7A510CC6A4DE7BA12DAB3B6F391ED"><!-- --></a>The Tab and Shift-Tab keys are used to move
+				the pointer within the dialog. </li>
+
+			<li id="SCR_ASAP_Macro__li_955A95E3A1D5484B99AE92A9614E6A77"><a name="SCR_ASAP_Macro__li_955A95E3A1D5484B99AE92A9614E6A77"><!-- --></a>Press <b>Enter</b> after each entry, and
+				click <b>OK </b>or <b>Cancel</b> as appropriate to
+				exit the dialog. </li>
+
+			<li id="SCR_ASAP_Macro__li_60A0AD5152794C3B9CBCDE2C8B2500F9"><a name="SCR_ASAP_Macro__li_60A0AD5152794C3B9CBCDE2C8B2500F9"><!-- --></a>The screen is displayed in the upper-right
+				corner. </li>
+
+			<li id="SCR_ASAP_Macro__li_821C419326054C5891A2B88971C28FD1"><a name="SCR_ASAP_Macro__li_821C419326054C5891A2B88971C28FD1"><!-- --></a> To display the <b>Cancel</b> button, enter <b>SCR_CANCEL=1</b> before the
+					<b>$SCR command</b>. If <b>SCR_CANCEL=0</b>, the button
+				does not display. </li>
+
+			<li id="SCR_ASAP_Macro__li_6B80C6DE23314D3E99231CD3573963EE"><a name="SCR_ASAP_Macro__li_6B80C6DE23314D3E99231CD3573963EE"><!-- --></a>If you need text or display-only fields,
+				enter <b>\DUMMY : ?</b> at the end of the .SCR file to display the
+				window. </li>
+
+			<li id="SCR_ASAP_Macro__li_31E5191E4BFB496790A4874DA6C72393"><a name="SCR_ASAP_Macro__li_31E5191E4BFB496790A4874DA6C72393"><!-- --></a> If you click <b>OK</b>,
+					<b>SCR_CANCEL</b> becomes 0. </li>
+
+			<li id="SCR_ASAP_Macro__li_EF2E056D26F84860B79B4218A0D08731"><a name="SCR_ASAP_Macro__li_EF2E056D26F84860B79B4218A0D08731"><!-- --></a>If you previously clicked <b>OK</b>, reset <b>SCR_CANCEL</b> to 1 before using it each time.
+				Otherwise, the next <b>$SCR</b> will not display a <b>Cancel</b> button. </li>
+
+			<li id="SCR_ASAP_Macro__li_ABF77E2AEA22419D96BD8DA2D9C38C3C"><a name="SCR_ASAP_Macro__li_ABF77E2AEA22419D96BD8DA2D9C38C3C"><!-- --></a>
+				After the <b>$SCR</b> line, enter:
+				<pre class="codeblock">$IF (SCR_CANCEL) EQ 1; $GO usercancel !! or a similar jump to skip the code that you do not want to execute!!</pre>
+
+			</li>
+
+			<li id="SCR_ASAP_Macro__li_DE5DCACF408B4CEFAF40AA97C17611C4"><a name="SCR_ASAP_Macro__li_DE5DCACF408B4CEFAF40AA97C17611C4"><!-- --></a>When the screen template displays, the
+					<b>OK</b> and <b>Restore</b> buttons are
+				visible. Click <b>OK</b> if you want the INR file to continue from
+				the point the <b>$SCR</b> command was issued. If you entered values but
+				want to return to the original settings, click <b>Restore</b>. This
+				action restores the default values that were in place when you issued the <b>$SCR</b> command. </li>
+
+		</ol>
+
+		<p>
+			<a href="/example_scripts.html#$SCR">$SCR Examples</a>
+		</p>
+
+	</div>
+
+	<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_S-ref.html#Commands_and_Macros_S" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “S”.">Commands and Macros (S)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/ASAP_Macro_Language-conc.html">ASAP Macro Language</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/SEARCH_macro_ASAP-cmdref.html" title="Provides user control of which paths are searched, and also the order in which paths are searched. These paths are defined and associated with symbolic names. $SEARCH specifies up to 20 paths to be searched for screen (*.scr), macro (*.mac), and macro library (*.lib) files.">$SEARCH (ASAP Macro)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Predefined ASAP Macros</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Predefined Macros at
+				http://www.breault.com/k-base.php </a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

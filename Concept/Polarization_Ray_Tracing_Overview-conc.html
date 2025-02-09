@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Polarization Ray Tracing Overview"/>
+<meta name="abstract" content="FRESNEL BOTH initiates polarization calculations by instructing ASAP to calculate the appropriate reflection and transmission coefficients at an OBJECT INTERFACE for each ray as a function of polarization and angle of incidence."/>
+<meta name="description" content="FRESNEL BOTH initiates polarization calculations by instructing ASAP to calculate the appropriate reflection and transmission coefficients at an OBJECT INTERFACE for each ray as a function of polarization and angle of incidence."/>
+<meta name="DC.subject" content="Polarization Ray Tracing Overview, ray trace, polarization, FRESNEL BOTH, initiating polarization calculations"/>
+<meta name="keywords" content="Polarization Ray Tracing Overview, ray trace, polarization, FRESNEL BOTH, initiating polarization calculations"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_OR-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FRESNEL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/INTERFACE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OBJECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/POLARIZ_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Anisotropic_Polarizing_Elements_Overview-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Polarization_Ray_Tracing_Overview"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Polarization Ray Tracing Overview</title>
+</head>
+<body id="Polarization_Ray_Tracing_Overview"><a name="Polarization_Ray_Tracing_Overview"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Polarization Ray Tracing Overview</h5></span> 
+  
+  
+  <div><p><b>FRESNEL BOTH</b> initiates polarization
+	 calculations by instructing ASAP to calculate the appropriate reflection and
+	 transmission coefficients at an 
+	 <b>OBJECT INTERFACE</b> for each ray as a function of
+	 polarization and angle of incidence. 
+  </p>
+ 
+	 <div class="section" id="Polarization_Ray_Tracing_Overview__section_D2AE1ACEAA02498296EE45624587F3B7"><a name="Polarization_Ray_Tracing_Overview__section_D2AE1ACEAA02498296EE45624587F3B7"><!-- --></a><span style="color: #2b6eb5"><h5>Performing a Polarization Ray Trace</h5></span> 
+		 
+		<p>To perform a polarization ray trace, you must configure the system
+		  geometry and sources for the ray trace. The primary method of configuring the
+		  system geometry for a polarization ray trace is to issue a 
+		  <b>FRESNEL BOTH</b> command. 
+		</p>
+
+		<p><b>FRESNEL</b> has many options including the ability to
+		  calculate the reflection and transmission coefficients independently as a
+		  function of either an 
+		  <b>s</b> or 
+		  <b>p</b> state or an incoherent average of the two. 
+		  <b>FRESNEL BOTH</b> is required for a complete polarization
+		  ray trace. The 
+		  <b>FRESNEL</b> command can be issued at your discretion and
+		  only affects the ray trace.
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Polarization_Ray_Tracing_Overview__section_0A8745D0426047138BAF4FFB75FC55D8"><a name="Polarization_Ray_Tracing_Overview__section_0A8745D0426047138BAF4FFB75FC55D8"><!-- --></a><span style="color: #2b6eb5"><h5>Configuring the Source for Polarization Ray Trace</h5></span> 
+		 
+		<p>To configure the source, you must add a physical property to the
+		  source with the 
+		  <b>POLARIZ</b> command, which sets up the initial
+		  polarization state of the rays. The command parameters are very similar to the
+		  Jones Calculus format.
+		</p>
+ 
+		<p>In the ASAP unpolarized mode of operation, the optical field 
+		  <b>U</b> is a scalar quantity that is solely a function of position.
+		  The field is therefore written as:
+		</p>
+ 
+		<p><i>U = U(q,r)</i>
+		</p>
+ 
+		<p>where 
+		  <b>q, r</b> are arbitrary coordinates. When polarization analysis is
+		  requested, the optical field becomes a complex vector quantity of the form:
+		</p>
+ 
+		<p><i>U = (aq + a'r) U(q,r)</i>
+		</p>
+ 
+		<p>where 
+		  <b>q, r</b> are orthogonal unit vectors and 
+		  <i>a,a' 
+		  </i>are complex amplitudes in the two orthogonal directions. It follows
+		  that the direction of propagation 
+		  <b>k</b> is given by:
+		</p>
+ 
+		<p><i>k = q x r</i>
+		</p>
+ 
+		<p>The variables, 
+		  <b>a</b> and 
+		  <b>a'</b> may be interpreted as Jones vector coefficients if the model
+		  is set up in a specific orientation. 
+		</p>
+ 
+		<p>Recognizing that the ASAP polarization formalism is similar in
+		  structure to that of Jones calculus, it is not surprising that ASAP shares its
+		  limitations. Therefore, when polarization ray tracing is requested, ASAP can
+		  only propagate coherent beams that are completely polarized. Unpolarized beams
+		  must be synthesized by superimposing beams of (user-specified) random
+		  polarization states.
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Polarization_Ray_Tracing_Overview__section_E68869C8476341A5967B59DEB53D27B3"><a name="Polarization_Ray_Tracing_Overview__section_E68869C8476341A5967B59DEB53D27B3"><!-- --></a> 
+		<div class="note"><span class="notetitle">Note:</span> Polarized light is widely discussed in the general optics
+		  literature. Note the topic of sign conventions. An excellent discussion is
+		  contained in section 8.12 of 
+		  <i>Optics</i> by Eugene Hecht or the out-of-print book, 
+		  <i>Polarized Light: Production and Use</i> by William A. Shurcliff. 
+		</div>
+ 
+	 </div>
+ 
+	 <div class="section" id="Polarization_Ray_Tracing_Overview__section_51876256E8A648D49A1D2F7876693804"><a name="Polarization_Ray_Tracing_Overview__section_51876256E8A648D49A1D2F7876693804"><!-- --></a><span style="color: #2b6eb5"><h5>Background of Ray Tracing Analysis</h5></span> 
+		 
+		<p>Ray tracing analysis techniques traditionally have assumed unpolarized
+		  light and ignored the polarization sensitivity of optical interfaces and
+		  coatings. In more recent years however, the demands for accurate assessment of
+		  the polarization state of light passing through an optical system have grown in
+		  support of the design of increasingly sensitive instrumentation. Consequently,
+		  most comprehensive optical design/analysis software have this analysis
+		  capability.
+		</p>
+ 
+		<p>Two optical techniques have been used over the years for the
+		  characterization of polarized light: Jones Calculus and Mueller Calculus. ASAP
+		  uses neither of them, although the Jones calculus is close to what ASAP does: 
+		</p>
+ 
+		<br/><a name="Polarization_Ray_Tracing_Overview__ul_DAB2DFAF7A49455E9512CADB1458D389"><!-- --></a><ul id="Polarization_Ray_Tracing_Overview__ul_DAB2DFAF7A49455E9512CADB1458D389"> 
+		  <li id="Polarization_Ray_Tracing_Overview__li_9DDD645520D94D23B7FFB473BB90B8D1"><a name="Polarization_Ray_Tracing_Overview__li_9DDD645520D94D23B7FFB473BB90B8D1"><!-- --></a>
+			 <p>Jones Calculus
+			 </p>
+ 
+			 <p>The Jones calculus was designed specifically for purely polarized
+				light and is mathematically compact: polarizing elements are described by a
+				complex 2x2 matrix (the Jones matrix) and the polarization state vector is a
+				2-vector (the Jones vector). While much simpler to manipulate, the penalty is
+				of course the amount of complex arithmetic. 
+			 </p>
+
+		  </li>
+ 
+		  <li id="Polarization_Ray_Tracing_Overview__li_54CD06D817EC44C2B17B795CD9E25EB5"><a name="Polarization_Ray_Tracing_Overview__li_54CD06D817EC44C2B17B795CD9E25EB5"><!-- --></a>
+			 <p>Mueller Calculus
+			 </p>
+ 
+			 <p>The Mueller calculus is more general than Jones calculus, since it
+				can describe both polarized and unpolarized light and everything in between.
+				The penalty for this generality is the verbosity of the mathematics: polarizing
+				elements are described by a 4x4 matrix (the Mueller matrix) and the
+				polarization state vector is a 4-vector (the Stokes vector). Tracing the
+				polarization state through a system involves a series of 4x4 matrix
+				multiplications at each surface intersection for each ray that is traced.
+			 </p>
+
+		  </li>
+ 
+		</ul>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_OR-ref.html" title="Reference topics in this section begin with the letters &#34;O&#34; to &#34;R&#34;.">Reference (O-R)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Anisotropic_Polarizing_Elements_Overview-conc.html" title="Retardance (sometimes called birefringence) is the property of an interface, where the Optical Path Length (OPL) or phase change between the orthonormal components, which mathematically describe the polarization state, is a function of the incident polarization state. Many polarizing optical elements, including waveplates and some polarizers, work on this basis.">Anisotropic Polarizing Elements Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/FRESNEL_ASAP-cmdref.html" title="Adjusts the reflection/transmission coefficients specified on an interface using Fresnel's formulae during a ray trace.">FRESNEL (ASAP Command)</a></div>
+<div><a href="../Commands/INTERFACE_ASAP-cmdref.html" title="Assigns a reflective, refractive or diffractive interface to objects.">INTERFACE (ASAP Command)</a></div>
+<div><a href="../Commands/OBJECT_ASAP-cmdref.html" title="Defines an object based upon previously defined entities.">OBJECT (ASAP Command)</a></div>
+<div><a href="../Commands/POLARIZ_ASAP-cmdref.html" title="Sets the polarization properties for future ray creation.">POLARIZ (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

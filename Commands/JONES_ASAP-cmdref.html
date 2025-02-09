@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="JONES (ASAP Command)"/>
+<meta name="abstract" content="Defines a Jones matrix element."/>
+<meta name="description" content="Defines a Jones matrix element."/>
+<meta name="DC.subject" content="JONES (ASAP Command), matrix element, Jones, polarization, JONES matrix element"/>
+<meta name="keywords" content="JONES (ASAP Command), matrix element, Jones, polarization, JONES matrix element"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_L-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CPE_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="JONES_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>JONES (ASAP Command)</title>
+</head>
+<body id="JONES_ASAP_Command"><a name="JONES_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>JONES (ASAP Command)</h5></span>
+	
+	
+	<div><p>Defines a Jones matrix element. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock"> 
+<b>JONES T11 T12 T21 T22 [R11 R12 R21 R22] [REFL] ['name']</b> 
+</pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>
+					<p>Option </p>
+
+				</span></th><th><span>
+					<p>Name </p>
+
+				</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> T11, T12, T21, T22 </span></td><td><span> Transmission <b>JONES</b> matrix </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> R11, R12, R21, R22 </span></td><td><span> Reflection <b>JONES</b> matrix </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> name </span></td><td><span> Name of the <b>JONES</b> matrix element, up to 32 characters
+					long <div class="p">
+						<div class="note"><span class="notetitle">Note:</span> the name is case sensitive. </div>
+
+					</div>
+</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="JONES_ASAP_Command__ol_0A2D57BAFF0841F39323A6EEAA8C6D9F"><!-- --></a><ol id="JONES_ASAP_Command__ol_0A2D57BAFF0841F39323A6EEAA8C6D9F">
+			<li id="JONES_ASAP_Command__li_27785370600D4DF781EF703DB9282F68"><a name="JONES_ASAP_Command__li_27785370600D4DF781EF703DB9282F68"><!-- --></a> For the Jones matrix element, the
+				polarization axis refers to its local x axis. </li>
+
+			<li id="JONES_ASAP_Command__li_4603964D65E343059F07756CBB9E575F"><a name="JONES_ASAP_Command__li_4603964D65E343059F07756CBB9E575F"><!-- --></a> The <b>REFL</b> option is
+				important if only one <b>JONES</b> matrix is specified. In this case,
+				the <b>REFL</b> indicates that the specified <b>JONES</b>
+				matrix is for only a reflected ray. If <b>REFL</b> is not presented, the
+				specified <b>JONES</b> matrix defaults to being applied to a transmitted
+				ray. If two <b>JONES</b> matrices are specified, the first <b>JONES</b> matrix is applied to the transmitted ray and the second to the
+				reflected ray. </li>
+
+			<li id="JONES_ASAP_Command__li_AD1CEAB7D15941B8B8596915543B9F3C"><a name="JONES_ASAP_Command__li_AD1CEAB7D15941B8B8596915543B9F3C"><!-- --></a> If no name is supplied by users, ASAP uses
+				a default name string with "JONES", followed by the list index of this Jones matrix
+				element in the system Jones matrix element list. For example, the second Jones
+				matrix is named "JONES00002". <div class="note"><span class="notetitle">Note:</span> For the Jones matrix element, the polarization
+					axis refers to its local x axis. </div>
+</li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#JONES">JONES Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_L-ref.html" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letters &#34;J&#34; to &#34;L&#34;.">Commands and Macros (J-L)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/CPE_ASAP-cmdref.html" title="CPE (Cascaded Polarization Element) is used to define a compound polarization device. Every polarization device cascaded in a CPE element is specified by its polarization device type or type index and its device name or device list index in its defined list.">CPE (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

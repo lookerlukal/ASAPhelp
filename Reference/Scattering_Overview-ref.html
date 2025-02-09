@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Scattering Overview"/>
+<meta name="abstract" content="Scattering is generally defined as the removal of energy from an incident wave and the subsequent re-emission of some portion of that energy. The macroscopic laws of refraction and reflection may even be considered special cases of the statistical averages of scattering phenomena. This topic discusses scatter from nonsmooth surfaces; that is, surface scattering, since ASAP is primarily designed to model surface scattering phenomena. Volume scattering can be modeled by using many transparent scattering surfaces to partition the volume."/>
+<meta name="description" content="Scattering is generally defined as the removal of energy from an incident wave and the subsequent re-emission of some portion of that energy. The macroscopic laws of refraction and reflection may even be considered special cases of the statistical averages of scattering phenomena. This topic discusses scatter from nonsmooth surfaces; that is, surface scattering, since ASAP is primarily designed to model surface scattering phenomena. Volume scattering can be modeled by using many transparent scattering surfaces to partition the volume."/>
+<meta name="DC.subject" content="Scattering Overview, scattered energy, surface, scattering"/>
+<meta name="keywords" content="Scattering Overview, scattered energy, surface, scattering"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_SZ-ref.html#Reference_SZ"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Scatter_Analysis-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Scatter_Analysis_Common_Approaches-conc.html#Scatter_Analysis_Common_Approaches"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Scattered_Radiation_Analysis_Methodology-conc.html#Scattered_Radiation_Analysis_Methodology"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Scatter_Models-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Scattering_Overview"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Scattering Overview</title>
+</head>
+<body id="Scattering_Overview"><a name="Scattering_Overview"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Scattering Overview</h5></span> 
+   
+  
+  <div><p>Scattering is generally defined as the removal of energy from an
+	 incident wave and the subsequent re-emission of some portion of that energy.
+	 The macroscopic laws of refraction and reflection may even be considered
+	 special cases of the statistical averages of scattering phenomena. This topic
+	 discusses scatter from nonsmooth surfaces; that is, surface scattering, since
+	 ASAP is primarily designed to model surface scattering phenomena. Volume
+	 scattering can be modeled by using many transparent scattering surfaces to
+	 partition the volume.
+  </p>
+ 
+	 <div class="section" id="Scattering_Overview__section_5823F0C5B64E456B8603AF3B9B18F6C4"><a name="Scattering_Overview__section_5823F0C5B64E456B8603AF3B9B18F6C4"><!-- --></a><span style="color: #2b6eb5"><h5>Other Reasons for Scatter</h5></span> 
+		 
+		<p>Scattered light is more commonly associated with the re-emission of
+		  incident energy from small particles, such as atoms or dust in the atmosphere,
+		  dust on a surface, or a nonsmooth surface finish, which is referred to as
+		  surface scattering.
+		</p>
+ 
+		<p>Scatter may also be caused by bulk material contamination or by
+		  variations in the homogeneity of the index of refraction of the material, which
+		  is referred to as volume scattering. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Scattering_Overview__section_64E690FE78A64BD28D0BCAF0FEABE37F"><a name="Scattering_Overview__section_64E690FE78A64BD28D0BCAF0FEABE37F"><!-- --></a><span style="color: #2b6eb5"><h5>Scattered Energy</h5></span> 
+		 
+		<p>Most optical software packages model surfaces as perfectly smooth,
+		  even though in reality they are not. The optical grinding and polishing
+		  processes damage the surface and subsurface of the optic. 
+		</p>
+ 
+		<p>Painted surfaces, such as those used for baffles or lens mounts,
+		  generally have rougher base surfaces than optical surfaces, since the paint is
+		  usually applied to a metal substrate. 
+		</p>
+ 
+		<p>In either case, it is the scattered energy from these surfaces that
+		  propagates to undesired places in the optical system thereby reducing system
+		  performance. You must, therefore, be able to quantify the scatter from these
+		  surfaces.
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Scattering_Overview__section_1A90D3DDE8954566B6EF6B1A5DB2A451"><a name="Scattering_Overview__section_1A90D3DDE8954566B6EF6B1A5DB2A451"><!-- --></a><span style="color: #2b6eb5"><h5>Simulating Surface Scattering</h5></span> 
+		 
+		<p>A common mechanical way to describe the roughness of a surface is by
+		  its RMS surface roughness. The RMS surface roughness may be related to the
+		  scattering properties of the surface; namely, the BSDF function. The BSDF is
+		  generally defined as the ratio of the scattered surface radiance to the
+		  incident surface irradiance. The BSDF is what ASAP requires to simulate surface
+		  scattering. Mathematically, this is a six-dimensional quantity describing how
+		  light scatters off a surface as a function of angle and position on the
+		  surface.
+		</p>
+ 
+		<p>The surface roughness is measurable directly via profile methods. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Scattering_Overview__section_7433F54AEA3B479794BF3DE8BFF1C41E"><a name="Scattering_Overview__section_7433F54AEA3B479794BF3DE8BFF1C41E"><!-- --></a><span style="color: #2b6eb5"><h5>Notes</h5></span> 
+		 
+		<br/><a name="Scattering_Overview__ul_7DC2AE32FB7642B1815332B05510E49D"><!-- --></a><ul id="Scattering_Overview__ul_7DC2AE32FB7642B1815332B05510E49D"> 
+		  <li id="Scattering_Overview__li_3EAC8F123C914AD99C5D9C9ED15CBF71"><a name="Scattering_Overview__li_3EAC8F123C914AD99C5D9C9ED15CBF71"><!-- --></a>The subsurface damage of
+			 transmissive optics cannot be measured via profile methods. The RMS surface
+			 roughness is a compact and convenient figure of merit for surface scattering,
+			 but presents severe restrictions on its use. For example, after examining the
+			 constraints of the following equations relating RMS surface roughness to BSDF,
+			 you may notice they are for optically polished surfaces. 
+		  </li>
+ 
+		  <li id="Scattering_Overview__li_B8A0E25789394D889F7E8A1A38D6EBA3"><a name="Scattering_Overview__li_B8A0E25789394D889F7E8A1A38D6EBA3"><!-- --></a>Painted surfaces and, in
+			 general, surfaces with much higher surface roughnesses have scattering
+			 properties that behave radically different from optically polished surfaces. In
+			 fact, you cannot characterize the scattering behavior of painted surfaces with
+			 a single figure of merit. Typically, you have to measure scatter from these
+			 surfaces at many angles of incidence to obtain the entire six dimensional BSDF.
+			 
+		  </li>
+ 
+		</ul>
+ 
+	 </div>
+ 
+	 <div class="section" id="Scattering_Overview__section_3EF62CE524C54C00AD34A795502B3C05"><a name="Scattering_Overview__section_3EF62CE524C54C00AD34A795502B3C05"><!-- --></a><span style="color: #2b6eb5"><h5>Angle Resolved Scatter and Total Integrated Scatter</h5></span> 
+		 
+		<p>The BSDF is a special form of what is called ARS. ARS is a product of
+		  the intrinsic surface roughness and the extrinsic measurement parameters of
+		  incident wavelength, angle of incidence, material index, polarization state,
+		  and scattering angle. The integral of ARS over all angles is the TIS. TIS is
+		  the ratio of light scattered into a hemisphere to the total incident specular
+		  light. It is related to the RMS surface roughness by the following equation:
+		</p>
+ 
+		<p><a name="Scattering_Overview__image_621133DE752E48CFB3D0792807499324"><!-- --></a><img id="Scattering_Overview__image_621133DE752E48CFB3D0792807499324" src="../Equations/Scattering_Overview_equation1.gif" width="440" height="195"/>
+		</p>
+ 
+		<p>This equation is valid between wavelengths of 0.1 to 1.15μm and only
+		  if the heights of surface irregularities are small compared to the incident
+		  wavelength (approximately 100 Angstroms, if HeNe light is used). This theory
+		  also assumes that the scattering originates solely at the top surface and is
+		  not attributable to material inhomogeneity or multilayer coatings.
+		</p>
+ 
+		<p>ARS measurements relate the angular distribution of scattered light to
+		  the surface roughness of the optic. It is related mathematically to the TIS as:
+		</p>
+
+		<p><a name="Scattering_Overview__image_9B940AE74AB24BC7A5E1A05972A9AEB8"><!-- --></a><img id="Scattering_Overview__image_9B940AE74AB24BC7A5E1A05972A9AEB8" src="../Equations/Scattering_Overview_equation2.gif" width="138" height="50"/>
+		</p>
+ 
+		<p>A special form of ARS (and the one most commonly used in ASAP) is the
+		  BSDF. The BSDF has dimensions of inverse solid angle and is defined as follows:
+		</p>
+
+		<p><a name="Scattering_Overview__image_5C0716082AB9451C96BD93B4748E377C"><!-- --></a><img id="Scattering_Overview__image_5C0716082AB9451C96BD93B4748E377C" src="../Equations/Scattering_Overview_equation3.gif" width="391" height="58"/>
+		</p>
+
+		<p><a name="Scattering_Overview__image_96358B3811734580B7AC74AD29DD6900"><!-- --></a><img id="Scattering_Overview__image_96358B3811734580B7AC74AD29DD6900" src="../Equations/Scattering_Overview_equation4.gif" width="223" height="56"/>
+		</p>
+
+		<p><a name="Scattering_Overview__image_191F5701D13C42A09A78CB93E009D0AB"><!-- --></a><img id="Scattering_Overview__image_191F5701D13C42A09A78CB93E009D0AB" src="../Equations/Scattering_Overview_equation5.gif" width="115" height="30"/>
+		</p>
+
+		<p>
+		</p>
+
+		<p>
+		</p>
+
+		<p> 
+		  <a name="Scattering_Overview__image_42AF93C38C7B404EBA7FE0229E35C6B4"><!-- --></a><img id="Scattering_Overview__image_42AF93C38C7B404EBA7FE0229E35C6B4" src="../Equations/Scattering_Overview_equation5a.gif" width="226" height="80"/>
+		</p>
+ 
+		<p>Although there is no consistent convention for plotting BSDF, it is
+		  commonly expressed and plotted in the following format (after Harvey).
+		</p>
+ 
+		<a name="Scattering_Overview__image_589AF3203DC84DFE941763EACF250513"><!-- --></a><img id="Scattering_Overview__image_589AF3203DC84DFE941763EACF250513" src="../Equations/Scattering_Overview_equation6.gif" width="296" height="255"/> 
+		<p>By plotting the BSDF this way, the shift invariance of the BSDF is
+		  demonstrated for optically polished surfaces. This is not the case for painted
+		  surfaces. For smooth surfaces, m is typically between -1 and -3. The BSDF is
+		  typically between 0.01 and 0.07 in the visible for 0- degree- to 20-degree
+		  angles of incidence.
+		</p>
+ 
+		<p>The BSDF may be related to RMS surface roughness with the following
+		  equation:
+		</p>
+
+		<p><a name="Scattering_Overview__image_B95580A1836146DFACE7F61BE0FA4B28"><!-- --></a><img id="Scattering_Overview__image_B95580A1836146DFACE7F61BE0FA4B28" src="../Equations/Scattering_Overview_equation7.gif" width="275" height="68"/>
+		</p>
+
+		<p><a name="Scattering_Overview__image_836A25E348BB4C0388580C6AD8009829"><!-- --></a><img id="Scattering_Overview__image_836A25E348BB4C0388580C6AD8009829" src="../Equations/Scattering_Overview_equation8.gif" width="193" height="40"/>
+		</p>
+
+		<p><a name="Scattering_Overview__image_EF84D99BC00D4B87B5DDE2EFB74DAD31"><!-- --></a><img id="Scattering_Overview__image_EF84D99BC00D4B87B5DDE2EFB74DAD31" src="../Equations/Scattering_Overview_equation9.gif" width="201" height="73"/> 
+		</p>
+
+		<p><a name="Scattering_Overview__image_43955B96057B4E0EA750F6E9A763949E"><!-- --></a><img id="Scattering_Overview__image_43955B96057B4E0EA750F6E9A763949E" src="../Equations/Scattering_Overview_equation9a.gif" width="395" height="271"/>
+		</p>
+ 
+		<p>This equation was derived assuming that the RMS surface roughness is
+		  much less than one wave and that most of the scatter occurs between the angles
+		  arcsin(β1) and arcsin(β2). 
+		</p>
+ 
+		<p>Often, BSDF measurements for smooth surfaces are made at a wavelength
+		  other than the operating wavelength. The BSDF at a second wavelength may be
+		  calculated from the following relation:
+		</p>
+ 
+		<p><a name="Scattering_Overview__image"><!-- --></a><img id="Scattering_Overview__image" src="../Equations/Scattering_Overview_equation10.gif" width="271" height="68"/>
+		</p>
+ 
+		<p>This equation is valid in the wavelength range of 0.4 to 0.6µm. A
+		  similar scaling law does not exist for paints.
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="../Concept/Scatter_Analysis-conc.html">Scatter Analysis</a></strong><br/>
+Performing a scatter analysis is a complex task. In addition to basic scatter theory, there are many ASAP parameters to consider. Each analysis should be evaluated on an individual basis to determine which ASAP tools to use to simulate the problem.</li>
+<li class="ulchildlink"><strong><a href="../Concept/Scatter_Analysis_Common_Approaches-conc.html#Scatter_Analysis_Common_Approaches">Scatter Analysis - Common Approaches</a></strong><br/>
+This topic addresses common approaches to scatter analysis.</li>
+<li class="ulchildlink"><strong><a href="../Concept/Scattered_Radiation_Analysis_Methodology-conc.html#Scattered_Radiation_Analysis_Methodology">Scattered Radiation Analysis Methodology</a></strong><br/>
+The goal in a classical stray light analysis usually is to determine the amount of unwanted scattered radiation propagating to a detector in order to assess its effect on system performance.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Scatter_Models-ref.html">Scatter Models</a></strong><br/>
+ASAP supports the scatter models listed in this topic for wide-angle (far from specular) scatter.</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_SZ-ref.html#Reference_SZ" title="Reference topics in this section begin with the letters &#34;S&#34; to &#34;Z&#34;.">Reference (S-Z)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Scattering in ASAP</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Scattering in ASAP, at http://www.breault.com/k-base.php 
+ </a></div>
+</div>
+</div>
+
+
+</body>
+</html></body></html>

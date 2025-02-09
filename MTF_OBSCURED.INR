@@ -1,0 +1,66 @@
+!!++
+!! MTF_OBSCURED.INR
+!! Title: Monochromatic Diffraction MTF 
+!! Category: Simple Problem
+!! Keywords: Wave, mtf, FFT, diffraction, macro, APPEND
+!! Description: Monochromatic diffraction MTF of
+!! an obscured aperture F/2 system.
+!! Edit History: (latest first)
+!! 11/05/2003 - cp - fixed keyword
+!! 10/09/2000 - cp - modified format; added description
+!! 01/01/1996 - bro - creation
+!!--
+
+SYSTEM NEW
+RESET
+
+COATING PROPERTIES
+  1 0 'REFL'
+
+SURFACE
+  OPTICAL Z 0 -40 -1 ELLIPSE 5
+OBJECT 'PRIMARY_MIRROR'
+  INTERFACE COATING REFL
+
+SURFACE
+  PLANE Z -20 ELLIPSE 1
+OBJECT 'DETECTOR'
+
+SEARCH SEQUENTIAL FORWARD
+PIX=51  WAVEL=0.5  UNI=39.37E-6  FNUM=2
+WIDE=PIX*PIX*WAVEL*UNI*FNUM/1024
+
+COBSMTF {  !! MTF macro of obscured systems
+PARABASALS 4
+BEAMS COHERENT DIFFRACT
+WAVELENGTHS (WAVEL) UNITS (UNI)
+WIDTHS 1.414
+GRID ELLIPTIC Z -5 -4@5 2@15 #1
+  SOURCE DIRECTION 0 0 1
+  
+TRACE
+WINDOW Y -2@(WIDE) X -2@(WIDE)
+PIXELS (PIX)
+FIELD ENERGY -20
+$IO PLOT REWIND
+TITLE 'MTF OF OBSCURED APERTURE F/2 SYSTEM'
+DISPLAY
+  RADIAL
+  FFT
+  NORM MAX
+  NORM 0.0101
+  GRAPH APPEND AXIS -100 100 
+    'RELATIVE SPATIAL FREQUENCY [%]'
+    '0%, 25%, 50%, 75% LINEAR OBSCURATION'
+RETURN
+}
+
+$DO 0 3  !! Loop to do MTF calculations
+  &COBSMTF ?/4
+
+DISPLAY
+FFT
+  NORMALIZE MAX MAX
+  NORMALIZE 0.010 0.010 
+ISOMETRIC '3D MTF PATTERN FOR 75% LINEAR OBSCURATED SYSTEM'
+RETURN

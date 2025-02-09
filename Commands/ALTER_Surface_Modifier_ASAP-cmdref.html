@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="ALTER (Surface Modifier) (ASAP Command)"/>
+<meta name="abstract" content="Edits specific polynomial coefficients to form a differently shaped or oriented surface."/>
+<meta name="description" content="Edits specific polynomial coefficients to form a differently shaped or oriented surface."/>
+<meta name="DC.subject" content="ALTER (Surface Modifier) (ASAP Command), surface modifier, polynomial coefficients"/>
+<meta name="keywords" content="ALTER (Surface Modifier) (ASAP Command), surface modifier, polynomial coefficients"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_A-ref.html#Commands_and_Macros_A"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ALTER_Edge_Modifier_ASAP-cmdref.html#ALTER_Edge_Modifier_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ALTER_Lens_Modifier_ASAP-cmdref.html#ALTER_Lens_Modifier_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REPEAT_ASAP-cmdref.html#REPEAT_ASAP_Command"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="ALTER_Surface_Modifier_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>ALTER (Surface Modifier) (ASAP Command)</title>
+</head>
+<body id="ALTER_Surface_Modifier_ASAP_Command"><a name="ALTER_Surface_Modifier_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>ALTER (Surface Modifier) (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Edits specific polynomial coefficients to form a differently
+	 shaped or oriented surface.
+  </p>
+ 
+	 <p><b>Syntax</b>
+	 </p>
+ 
+	 <pre class="codeblock">ALTER [ n ] term a [ b ] [ term' a' [ b' ] ...</pre>
+ 
+	 <p><b>Remarks</b>
+	 </p>
+ 
+	 <br/><a name="ALTER_Surface_Modifier_ASAP_Command__ul_7A543F946BB5485ABFBA542375CF5521"><!-- --></a><ol id="ALTER_Surface_Modifier_ASAP_Command__ul_7A543F946BB5485ABFBA542375CF5521"> 
+		<li id="ALTER_Surface_Modifier_ASAP_Command__li_1DB25E28CE9B45FDB8641E86C27F202B"><a name="ALTER_Surface_Modifier_ASAP_Command__li_1DB25E28CE9B45FDB8641E86C27F202B"><!-- --></a>ASAP is capable of handling
+		  any implicit surface that can be represented by an arbitrary function of a
+		  general 
+		  <b>n</b>th order polynomial in the global coordinates
+		  X,Y,Z, with arbitrary reference point x,y,z and real coefficients c. 
+		</li>
+ 
+		<li id="ALTER_Surface_Modifier_ASAP_Command__li_BC876DDAECE442CD9A6A6C546C8A3A24"><a name="ALTER_Surface_Modifier_ASAP_Command__li_BC876DDAECE442CD9A6A6C546C8A3A24"><!-- --></a><b>ALTER</b>
+		  changes the coefficient of the given polynomial 
+		  <b>term</b> to be 
+		  <b>a</b> plus 
+		  <b>b</b> (default 0) times its current value. For example,
+		  to multiply the constant term by 2 and change the Z term to -1: 
+		  <pre class="codeblock">  ALTER C 0 2 Z -1</pre>
+
+		</li>
+ 
+		<li id="ALTER_Surface_Modifier_ASAP_Command__li_EE9C67B92C8247F288353946D0B8F845"><a name="ALTER_Surface_Modifier_ASAP_Command__li_EE9C67B92C8247F288353946D0B8F845"><!-- --></a>If any of the terms are of a
+		  higher degree than the current surface, then increase the degree of the current
+		  surface to 
+		  <b>n</b> (zeroing out new coefficients) before altering any
+		  terms.
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#ALTER">ALTER
+		  Examples</a>
+	 </p>
+
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_A-ref.html#Commands_and_Macros_A" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “A”.">Commands and Macros (A)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/ALTER_Edge_Modifier_ASAP-cmdref.html#ALTER_Edge_Modifier_ASAP_Command" title="Alters specific edge-points data. Modifies the shape of an edge-based entity.">ALTER (Edge Modifier) (ASAP Command)</a></div>
+<div><a href="../Commands/ALTER_Lens_Modifier_ASAP-cmdref.html#ALTER_Lens_Modifier_ASAP_Command" title="Alters lens conicoid database.">ALTER (Lens Modifier) (ASAP Command)</a></div>
+<div><a href="../Commands/REPEAT_ASAP-cmdref.html#REPEAT_ASAP_Command" title="Repeats previously defined entity data.">REPEAT (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

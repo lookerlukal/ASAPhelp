@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="$DO (ASAP Macro)"/>
+<meta name="abstract" content="Loops through input record(s)."/>
+<meta name="description" content="Loops through input record(s)."/>
+<meta name="DC.subject" content="$DO (ASAP Macro), looping input records, macros, looping"/>
+<meta name="keywords" content="$DO (ASAP Macro), looping input records, macros, looping"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_D-ref.html#Commands_and_Macros_D"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Macro_Language-conc.html#ASAP_Macro_Language"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=33"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="DO_ASAP_Macro"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>$DO (ASAP Macro)</title>
+</head>
+<body id="DO_ASAP_Macro"><a name="DO_ASAP_Macro"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>$DO (ASAP Macro)</h5></span>
+	
+	
+	<div><p>Loops through input record(s). </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+$DO [ i [ j [ k ] ] ]
+&amp;DO
+    ... [ ? ] ...
+         |
+      </pre>
+
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="DO_ASAP_Macro__ul_709D60F733714B79B8885C7BF3086386"><!-- --></a><ol id="DO_ASAP_Macro__ul_709D60F733714B79B8885C7BF3086386">
+			<li id="DO_ASAP_Macro__li_B75A2AA7092E4342B3C3DFC043F5D31B"><a name="DO_ASAP_Macro__li_B75A2AA7092E4342B3C3DFC043F5D31B"><!-- --></a>Reads and runs the next input record(s) as
+				many times as necessary to satisfy the starting, ending, and increment parameters. </li>
+
+			<li id="DO_ASAP_Macro__li_E788BBF6510E430B8BA218F955196AE9"><a name="DO_ASAP_Macro__li_E788BBF6510E430B8BA218F955196AE9"><!-- --></a>The integer increment <b>k</b>
+				defaults to either +1 or -1 depending upon the values of <b>i</b> and
+					<b>j</b>. </li>
+
+			<li id="DO_ASAP_Macro__li_74DFC5DCE02140F8A469DC331CDA6306"><a name="DO_ASAP_Macro__li_74DFC5DCE02140F8A469DC331CDA6306"><!-- --></a>The sign of <b>k</b> is always
+				set to be the same as the sign of <b>j-i</b>, and so the loop is always
+				run at least once. </li>
+
+			<li id="DO_ASAP_Macro__li_60072C3A7F0C423D85DFF1294FA1FB60"><a name="DO_ASAP_Macro__li_60072C3A7F0C423D85DFF1294FA1FB60"><!-- --></a>For <b>$DO</b> the question
+				mark “<b>?</b>” is the loop counter; for <b>&amp;DO</b> the
+				vertical bar “<b>|</b>” is used instead. </li>
+
+			<li id="DO_ASAP_Macro__li_9EA46946C0C54A7A936AC9632DC6324E"><a name="DO_ASAP_Macro__li_9EA46946C0C54A7A936AC9632DC6324E"><!-- --></a>The loop is terminated only when the
+				counter reaches or exceeds the ending value. </li>
+
+			<li id="DO_ASAP_Macro__li_72961E5797A744B9954D4212BB6ED5FF"><a name="DO_ASAP_Macro__li_72961E5797A744B9954D4212BB6ED5FF"><!-- --></a>Only one level of looping per macro nesting
+				level is permitted; for multiple looping it is necessary to jump to another macro
+				level. </li>
+
+			<li id="DO_ASAP_Macro__li_D170C177EB884BF4BE47E5F87D56B053"><a name="DO_ASAP_Macro__li_D170C177EB884BF4BE47E5F87D56B053"><!-- --></a>An input error, a <b>$GO</b> or
+				a <b>$LEAVE</b> command in the record forces a premature exit from the
+				loop. </li>
+
+			<li id="DO_ASAP_Macro__li_542476BAEF3B47459137EE2E46B70464"><a name="DO_ASAP_Macro__li_542476BAEF3B47459137EE2E46B70464"><!-- --></a>It is not necessary to reference the loop
+				counter in the record(s). </li>
+
+			<li id="DO_ASAP_Macro__li_D62855462C634B2CA55E31CB28FA5BF6"><a name="DO_ASAP_Macro__li_D62855462C634B2CA55E31CB28FA5BF6"><!-- --></a><b>By default only the next record is
+					repeated</b>. If all of the commands to be looped cannot fit on the next record,
+				you may put the commands into a macro and then loop over the macro. Alternatively,
+				you may enclose multiple looping records between curly braces. </li>
+
+			<li id="DO_ASAP_Macro__li_59DEB44FB15244898064C66802A5130F"><a name="DO_ASAP_Macro__li_59DEB44FB15244898064C66802A5130F"><!-- --></a>When <b>$DO</b>
+				<b>with multiple records enclosed between curly braces</b> is nested inside a
+				user-defined macro, the closing curly brace should not be in the first column.
+				Otherwise, the user-defined macro is delimited by the intended end of the <b>$DO</b>. </li>
+
+			<li id="DO_ASAP_Macro__li_8D322B2FA7184791AB906C464DC24190"><a name="DO_ASAP_Macro__li_8D322B2FA7184791AB906C464DC24190"><!-- --></a>You cannot implement nested <b>$DO</b> loops directly. However, you can define a macro with a <b>$DO</b> loop, and the macro can contain a <b>$DO</b> loop. </li>
+
+		</ol>
+
+		<p><b>Example</b>
+		</p>
+
+		<pre class="codeblock">
+!! TO CONSTRUCT A NESTED LOOP AND UPDATE 
+!! GRAPHICS TITLE WITH INCREMENT VALUES
+!! [date]
+MACC { 1
+$DO 2 3 
+TITLE 'BTB=#1 BCB=?'
+ SHOW 
+}   
+
+$DO 0 2
+{ &amp;MACC LIT[?]
+  }
+
+SURFACE
+ PLANE Z 0 RECT 1 1 
+OBJ
+WIN Y X; PRO
+     </pre>
+
+		<p>
+			<a href="../example_scripts.html#$DO">$DO Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_D-ref.html#Commands_and_Macros_D" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “D”.">Commands and Macros (D)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/ASAP_Macro_Language-conc.html#ASAP_Macro_Language">ASAP Macro Language</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=33" target="_blank">See the Knowledge Base for the technical publication, Predefined Macros</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

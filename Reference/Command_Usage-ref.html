@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Command Usage"/>
+<meta name="abstract" content="ASAP commands consist of up to 10,000 unformatted alphanumeric entries separated by one or more of blanks &#34; &#34; or commas &#34;,&#34;."/>
+<meta name="description" content="ASAP commands consist of up to 10,000 unformatted alphanumeric entries separated by one or more of blanks &#34; &#34; or commas &#34;,&#34;."/>
+<meta name="DC.subject" content="Command Usage, strings, alpha-numeric, decimal point"/>
+<meta name="keywords" content="Command Usage, strings, alpha-numeric, decimal point"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Kernel_Capabilities_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Command_Scripting-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/General_Input_Techniques-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Input_Records-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Command_Comment_Strings-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Command_Description_Notation-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/ASAP_Prompts-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Mathematical_Functions_Supported-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Mathematical_Operators-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Registers_for_Storing_Arithmetic_Results-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Files_Produced_by_ASAP-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/File_Structure_of_ASAP-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Entries_Repeated_and_Incremented-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Specifying_Complex_Numbers-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Command_Usage"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Command Usage</title>
+</head>
+<body id="Command_Usage"><a name="Command_Usage"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Command Usage</h5></span> 
+   
+  
+  <div><p>ASAP commands consist of up to 10,000 unformatted alphanumeric
+	 entries separated by one or more of blanks " " or commas ",". 
+  </p>
+ 
+	 <div class="section"> 
+		<p>Arbitrary string entries can be delimited by double quotes. Otherwise,
+		  literal entries consist of an unbroken string of alphanumeric characters (A
+		  through Z through 9, and _). They must start with a letter or underscore "_"
+		  and can be of any length (but only the first 8 may be significant). 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Command_Usage__section_9A5793909B5F4256B03F89EFBF4D75C1"><a name="Command_Usage__section_9A5793909B5F4256B03F89EFBF4D75C1"><!-- --></a> 
+		<p>Numeric entries can be in integer, floating point or exponential
+		  format. Exponential entries, for example "1.34E-5", cannot be longer than 40
+		  characters.
+		</p>
+ 
+		<p>Usually a command begins with a literal, and there is only one command
+		  in each input record. However, more than one command can be placed in a record
+		  by separating them with semicolons ";". Also a command can extend over more
+		  than one record. If the last non-blank character in an input record is a comma
+		  (,), the command continues to the next record.
+		</p>
+ 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Entry delimiters</span></td><td><span>blanks and commas</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Maximum number of entries per command</span></td><td><span>10000</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Literal entries</span></td><td><span>begin with a letter</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Commands</span></td><td><span>usually start with a literal</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Maximum exponential numeric entry length</span></td><td><span>40 characters</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Multiple commands per record separator</span></td><td><span>semicolon</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Command continuation</span></td><td><span>comma last character of record</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Command arguments</span></td><td><span>optional entries beginning with …(example: 
+				<b>…CLIP</b>); must appear after a command</span></td></tr></tbody></table> 
+	 </div>
+ 
+	 <div class="section" id="Command_Usage__section_13EB55F51B0C408C8D4C84A26B8DCE1F"><a name="Command_Usage__section_13EB55F51B0C408C8D4C84A26B8DCE1F"><!-- --></a><span style="color: #2b6eb5"><h5>Note to European ASAP Users</h5></span> 
+		 
+		<p>Decimal numbers must be entered with a U.S. decimal point, using the
+		  period (.) key. If you enter decimal numbers with the European decimal point,
+		  using the comma (,) key, ASAP treats it as a space, and your results will not
+		  be accurate.
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Kernel_Capabilities_Overview-conc.html" title="This topic briefly describes how ASAP models optical/mechanical systems, traces rays through the system, and models physical optics.">Kernel Capabilities Overview</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Command_Scripting-conc.html" title="This topic describes scripting functions available only in command mode.">Command Scripting</a></div>
+<div><a href="../Concept/File_Structure_of_ASAP-conc.html" title="ASAP is a sophisticated set of 3D system modeling and optical ray/beam propagation algorithms. It performs the entire ray tracing and derivative calculations.">File Structure of ASAP</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/General_Input_Techniques-ref.html" title="Techniques for ASAP input include: radian angle entries, relative and literal referencing, direction vectors, and linear transformations.">General Input Techniques</a></div>
+<div><a href="../Reference/Input_Records-ref.html" title="Describes how ASAP reads input data.">Input Records</a></div>
+<div><a href="../Reference/Command_Comment_Strings-ref.html" title="User comment strings may be embedded in any command without usually affecting processing.">Command Comment Strings</a></div>
+<div><a href="../Reference/Command_Description_Notation-ref.html" title="Shows format or syntax of each ASAP command in the command topics. Syntax can be followed by a detailed explanation of the command’s function.">Command Description Notation</a></div>
+<div><a href="../Reference/ASAP_Prompts-ref.html" title="Describes ASAP prompts (ASAP&gt;) that precede the Command Input window, and lists the prompt variations.">ASAP Prompts</a></div>
+<div><a href="../Reference/Mathematical_Functions_Supported-ref.html" title="Describes the set of supported mathematical functions.">Mathematical Functions Supported</a></div>
+<div><a href="../Reference/Mathematical_Operators-ref.html" title="Lists mathematical operators that affect entries in ASAP.">Mathematical Operators</a></div>
+<div><a href="../Reference/Registers_for_Storing_Arithmetic_Results-ref.html" title="Describes how arithmetic results in ASAP are stored in registers.">Registers for Storing Arithmetic Results</a></div>
+<div><a href="../Reference/Files_Produced_by_ASAP-ref.html" title="Lists the file types that ASAP produces and uses.">Files Produced by ASAP</a></div>
+<div><a href="../Reference/Entries_Repeated_and_Incremented-ref.html" title="This topic provides rules and examples of command entries that are repeated and incremented.">Entries Repeated and Incremented</a></div>
+<div><a href="../Reference/Specifying_Complex_Numbers-ref.html" title="Complex numbers can be entered in some of the ASAP dialogs.">Specifying Complex Numbers</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

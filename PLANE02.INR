@@ -1,0 +1,24 @@
+!!++
+!! PLANE02.INR
+!! Title: Elliptical PLANE Surface
+!! Category: Isolated Command
+!! Keywords: PLANE, SURFACE
+!! Description: A plane surface using the
+!! ELLIPSE modifier to describe its boundary.
+!! Edit History: (latest first)
+!! 10/16/2000 - cp - modified format; added description
+!! 01/01/1996 - bro - creation
+!!--
+
+SYSTEM NEW
+RESET
+
+SURFACE
+  PLANE Z 0 ELLIPSE 1
+  OBJECT 
+  
+WINDOW Y Z  !! To view object
+WINDOW 1.5
+OBLIQUE
+PLOT FACETS 5 5 'SURF:PLANE' COLORS 11
+RETURN

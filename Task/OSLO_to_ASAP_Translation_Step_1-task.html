@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="OSLO to ASAP Translation Step 1"/>
+<meta name="abstract" content="The first step in the OSLO to ASAP translation process involves selecting a *.LEN file produced by OSLO."/>
+<meta name="description" content="The first step in the OSLO to ASAP translation process involves selecting a *.LEN file produced by OSLO."/>
+<meta name="DC.subject" content="OSLO to ASAP Translation Step 1, LEN file, OSLO, translating OSLO files, step 1"/>
+<meta name="keywords" content="OSLO to ASAP Translation Step 1, LEN file, OSLO, translating OSLO files, step 1"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/OSLO_to_ASAP_Translation-conc.html#OSLO_to_ASAP_Translation"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/OSLO_to_ASAP_Translation_Step_2-task.html#OSLO_to_ASAP_Translation_Step_2"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/OSLO_to_ASAP_Translation_Step_3-task.html#OSLO_to_ASAP_Translation_Step_3"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/OSLO_Restrictions-ref.html#OSLO_Restrictions"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="OSLO_to_ASAP_Translation_Step_1"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>OSLO to ASAP Translation Step 1</title>
+</head>
+<body id="OSLO_to_ASAP_Translation_Step_1"><a name="OSLO_to_ASAP_Translation_Step_1"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>OSLO to ASAP Translation Step 1</h5></span> 
+  
+   
+  <div><p>The first step in the OSLO to ASAP translation process involves
+	 selecting a *.LEN file produced by OSLO. 
+  </p>
+ 
+	 <div class="section" id="OSLO_to_ASAP_Translation_Step_1__context_8EF8464BBBF64386AA624C6F14D99AD0"><a name="OSLO_to_ASAP_Translation_Step_1__context_8EF8464BBBF64386AA624C6F14D99AD0"><!-- --></a> 
+		<p>Either type the name of the file in the edit box or press the Browse
+		  button to display a File Open dialog to select a LEN file. 
+		</p>
+ 
+		<p>The translator confirms the file’s existence by attempting to open it.
+		  If it is successful, the name of the selected file appears in the edit box, and
+		  the translator creates a default name for the ASAP file. (In this case, the
+		  default name for the ASAP file is Anaprism.inr). If the translator cannot open
+		  the OSLO file, it displays a message box. 
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p><b>Tip</b>
+		</p>
+ 
+		<p>The translator does not move to the next dialog unless a valid
+		  filename is selected.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>After the OSLO file is selected, the translator reads the file for
+		  compatibility with ASAP and displays a summary in the scrolling list box. The
+		  list box has four columns of adjustable width for read truncated text. The
+		  columns are:
+		</p>
+ 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>Surface</b>	
+			 </span></td><td><span>Surface number to which the translator calls
+				attention.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>Command</b></span></td><td><span>Exact text of the OSLO command the translator
+				read.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>Message</b></span></td><td><span>Brief message summarizing the translator’s response to the
+				OSLO command. 
+			 </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>Explanation</b></span></td><td><span>Describes commands that are not supported in OSLO
+				command.</span></td></tr></tbody></table> 
+		<p>
+		</p>
+ 
+		<p><b>Messages</b>
+		</p>
+ 
+		<p>Messages do not necessarily indicate that there is a problem. These
+		  are intended to alert you to features and capabilities present in one program
+		  that may be imprecisely translated into the other. Messages fall into the
+		  following categories:
+		</p>
+ 
+		<p><b>Aperture specification is missing in the OSLO lens</b>. The OSLO
+		  file did not contain an 
+		  <b>AP</b> command specifying aperture information on one or more
+		  surfaces.
+		</p>
+ 
+		<p><b>Valid but unsupported OSLO command was read by the translator</b>.
+		  OSLO is a comprehensive lens design program with numerous features such as
+		  drawing structure around elements, setting up element arrays, and so on, which
+		  do not have direct analogs in ASAP and therefore cannot be translated. Certain
+		  surface (eikonals, etc.) and phase diffractive types also fall into this
+		  category.
+		</p>
+ 
+		<p><b>OSLO feature is only partially supported in ASAP</b>. OSLO can
+		  describe certain surface types that can be modeled only partially in ASAP. To
+		  accomplish the translation it is therefore sometimes necessary to truncate the
+		  order of the polynomial, restrict the translation of a polynomial description
+		  to specific terms, or call attention to a specific term that is not supported.
+		</p>
+ 
+		<p><b>OSLO file contains “special” surfaces or materials</b>. The
+		  translator flags all types of aspherics, gradient index (GRIN) materials, and
+		  diffractive surfaces.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>After creating the list, the translator writes out a summary
+		  recommendation, which fall into five categories:
+		</p>
+ 
+		<p><b>Solves and/or pickups were found; delete before proceeding</b>.
+		  Solves and pickups are used in lens design to establish relationships between
+		  surfaces, locations and so on. Unfortunately OSLO only writes the relationship
+		  into the LEN file, not the data being related; therefore, the LEN file does not
+		  contain a complete prescription. 
+		</p>
+ 
+		<p><b>CAUTION:</b> Translating a LEN file with solves and/or pickups
+		  almost certainly result in an erroneous ASAP model and so these should be
+		  deleted prior to translation. (The OSLO commands, CSD and TSD may be used to
+		  delete curvature and thickness solves and pickups.)
+		</p>
+ 
+		<p><b>Special surface types and/or materials were found; check ASAP
+			 model</b>. The translator noted these while reading the OSLO file. Carefully
+		  review the notes in the list box and the ASAP model for potential problems.
+		</p>
+ 
+		<p><b>Missing apertures on some surfaces; correct LEN file or set default
+			 in next dialog</b>. Since precise aperture information is essential to ASAP,
+		  this information must be supplied in order to perform the translation. While it
+		  is probably best if you return to OSLO and properly set the aperture(s), you
+		  can also set default apertures or ask to be prompted for apertures in the
+		  second translation dialog.
+		</p>
+ 
+		<p><b>Unsupported commands were found and could affect translation
+			 accuracy</b>. The translator noted these while reading the OSLO file. Carefully
+		  review the notes in the list box and the ASAP model for potential problems.
+		</p>
+ 
+		<p><b>OSLO lens is ready for translation</b>. No warnings were found.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>At the completion of this dialog, click 
+		  <b>NEXT</b> to continue, or 
+		  <b>CANCEL</b> to terminate the translator.
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/OSLO_to_ASAP_Translation-conc.html#OSLO_to_ASAP_Translation" title="ASAP OPTICAL+ and ASAP ADVANCED include the fully integrated capability of importing OSLO® files. You can open this file type (*.LEN) in ASAP from the Open dialog box on the File menu.">OSLO to ASAP Translation</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/OSLO_to_ASAP_Translation_Step_2-task.html#OSLO_to_ASAP_Translation_Step_2" title="The second step in the OSLO to ASAP translation process is to select the ASAP filename, and set several translation options.">OSLO to ASAP Translation Step 2</a></div>
+<div><a href="../Task/OSLO_to_ASAP_Translation_Step_3-task.html#OSLO_to_ASAP_Translation_Step_3" title="The final step in the translation process is to choose how the translator deal with refractive indices. (In the following discussion, the term “glass” refers to any refractive material including glass, plastics, crystals, and other refractive materials.)">OSLO to ASAP Translation Step 3</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/OSLO_Restrictions-ref.html#OSLO_Restrictions" title="This topic describes specific features and limitations of the OSLO to ASAP translator.">OSLO Restrictions</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

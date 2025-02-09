@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="DRAWING (ASAP Command)"/>
+<meta name="abstract" content="Plots a four-view drawing of the current system geometry."/>
+<meta name="description" content="Plots a four-view drawing of the current system geometry."/>
+<meta name="DC.subject" content="DRAWING (ASAP Command), plotting geometry, geometry, 4-way plotting"/>
+<meta name="keywords" content="DRAWING (ASAP Command), plotting geometry, geometry, 4-way plotting"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_D-ref.html#Commands_and_Macros_D"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CONSIDER_ASAP-cmdref.html#CONSIDER_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DIMENSIONS_ASAP-cmdref.html#DIMENSIONS_ASAP_Command"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="DRAWING_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>DRAWING (ASAP Command)</title>
+</head>
+<body id="DRAWING_ASAP_Command"><a name="DRAWING_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>DRAWING (ASAP Command)</h5></span>
+	
+	
+	<div><p>Plots a four-view drawing of the current system geometry. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">DRAWING [ xyz ] [ DIMENSIONS ] [ NORAYS ]</pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>xyz</span></td><td><span>changes the default XYZ coordinate ordering</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>DIMENSIONS</span></td><td><span>add system dimensions to plot</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>NORAYS</span></td><td><span>plot the intersection points of the rays on each object</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="DRAWING_ASAP_Command__ul_3688AC0A15494326B0FF3367FBC3132D"><!-- --></a><ol id="DRAWING_ASAP_Command__ul_3688AC0A15494326B0FF3367FBC3132D">
+			<li id="DRAWING_ASAP_Command__li_6BA7284584F14B63966685AF40E8B58F"><a name="DRAWING_ASAP_Command__li_6BA7284584F14B63966685AF40E8B58F"><!-- --></a>Plots a black-and-white, four-view drawing
+				of the current data in the 3D vector file (BRO030.DAT or *.VCR). The three
+				nonoblique views are aligned and identically scaled, and optionally, can have simple
+					<b>DIMENSION</b>ing added. </li>
+
+			<li id="DRAWING_ASAP_Command__li_203F119162784C06B867DB292FD50790"><a name="DRAWING_ASAP_Command__li_203F119162784C06B867DB292FD50790"><!-- --></a> The default views are: <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Quadrant</span></th><th><span>View</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Top Left</span></td><td><span><b>X</b> vs. <b>Z</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Top Right</span></td><td><span><b>Y</b> vs. <b>X</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Bottom Left</span></td><td><span><b>Y</b> vs. <b>Z</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Bottom Right</span></td><td><span><b>YX</b> Oblique</span></td></tr></tbody></table></li>
+
+			<li id="DRAWING_ASAP_Command__li_E171EA56ACC742F2A56F6C477A47A086"><a name="DRAWING_ASAP_Command__li_E171EA56ACC742F2A56F6C477A47A086"><!-- --></a>The optional <b>xyz</b>
+				argument is a three-letter permutation of the default XYZ coordinate ordering and
+				can be used to obtain a different set of views. </li>
+
+			<li id="DRAWING_ASAP_Command__li_16F31506679542ABB69D52FA2FD6FFF6"><a name="DRAWING_ASAP_Command__li_16F31506679542ABB69D52FA2FD6FFF6"><!-- --></a>The <b>NORAYS</b> option
+				suppresses the replotting of the rays themselves, but does plot the intersection
+				points of the rays on each object. </li>
+
+			<li id="DRAWING_ASAP_Command__li_931E8A65F98145E28C9785468A8B46F5"><a name="DRAWING_ASAP_Command__li_931E8A65F98145E28C9785468A8B46F5"><!-- --></a>Takes into account the current <b>CONSIDER</b> settings. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#DRAWING">DRAWING Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_D-ref.html#Commands_and_Macros_D" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “D”.">Commands and Macros (D)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/CONSIDER_ASAP-cmdref.html#CONSIDER_ASAP_Command" title="Selects a set of objects for ray tracing and plotting.">CONSIDER (ASAP Command)</a></div>
+<div><a href="../Commands/DIMENSIONS_ASAP-cmdref.html#DIMENSIONS_ASAP_Command" title="Displays a table of maximum array dimensions for the most important program arrays.">DIMENSIONS (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

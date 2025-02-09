@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="VANES (ASAP Command)"/>
+<meta name="abstract" content="Creates an anisotropic scatter model that simulates the scatter from a vane structure."/>
+<meta name="description" content="Creates an anisotropic scatter model that simulates the scatter from a vane structure."/>
+<meta name="DC.subject" content="VANES (ASAP Command), scatter model, anisotropic"/>
+<meta name="keywords" content="VANES (ASAP Command), scatter model, anisotropic"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_V-ref.html#Commands_and_Macros_V"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EDGES_CURVES_ENTITIES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MINMAX_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MODEL_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MODELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Scatter_Models-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=24"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="VANES_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>VANES (ASAP Command)</title>
+</head>
+<body id="VANES_ASAP_Command"><a name="VANES_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>VANES (ASAP Command)</h5></span>
+	
+	
+	<div><p>Creates an anisotropic scatter model that simulates the scatter from a vane
+		structure. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+VANES X a s d t [ t' [ c [ w ]]] [ EDGES r [ t" ]] [ DIFFRACT [ h n ]] [ PLOT [ a a' ... ] ]
+      Y
+      Z
+:
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X</span></td><td><span>specifies symmetric axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a</span></td><td><span>vane angle from the surface (0 to 180).</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>s</span></td><td><span>vane separation</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>d</span></td><td><span>vane depth</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>t t'</span></td><td><span>vane TIS (sides and bottom)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>c</span></td><td><span>cylindrical radius of curvature of the vaned surface (default=0;
+				infinite)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>w</span></td><td><span>vane cavity width (default=0; infinite)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>EDGES r</span></td><td><span>vane tips edge with radius</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>t"</span></td><td><span>Lambertian vane edge TIS</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>DIFFRACT</span></td><td><span>specifies vane tip diffraction </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>h</span></td><td><span>diffracting edge serration angle</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span>number of diffracting vertices per unit length</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>PLOT</span></td><td><span>plots the model in log(b-bo) and angle space</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a a' ...</span></td><td><span>user-defined degree specular angles</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="VANES_ASAP_Command__ul_1B6CD8DE909B4E118DD8E9605571049B"><!-- --></a><ol id="VANES_ASAP_Command__ul_1B6CD8DE909B4E118DD8E9605571049B">
+			<li id="VANES_ASAP_Command__li_576EE7D4BD46466FBECE30656414270F"><a name="VANES_ASAP_Command__li_576EE7D4BD46466FBECE30656414270F"><!-- --></a>The surface scatters as if it were the
+				locus of vane tips parallel to the local "Alpha" direction. </li>
+
+			<li id="VANES_ASAP_Command__li_90968960478645C192EA55F38780CDDB"><a name="VANES_ASAP_Command__li_90968960478645C192EA55F38780CDDB"><!-- --></a>The vane cavity surfaces are assumed to be
+				Lambertian with TIS values of <b>t</b> and <b>t'</b> for the
+				sides and bottom, respectively. </li>
+
+			<li id="VANES_ASAP_Command__li_09A9E8075A14458D93E3F784B454F34C"><a name="VANES_ASAP_Command__li_09A9E8075A14458D93E3F784B454F34C"><!-- --></a>The vane tips may have rounded <b>EDGES</b> of radius <b>r</b> and a Lambertian TIS of <b>t".</b>
+			</li>
+
+			<li id="VANES_ASAP_Command__li_A588566FC74842DC8BEEF8E4544827A1"><a name="VANES_ASAP_Command__li_A588566FC74842DC8BEEF8E4544827A1"><!-- --></a>The vane tips may also diffract energy as
+				if they are optionally serrated with <b>h,</b> the half-angle in degrees
+				of each vertex, and <b>n</b> the number of vertices per unit length
+				(that is, two over the serration period). </li>
+
+			<li id="VANES_ASAP_Command__li_89D4A050752641ECBACA199A8BEC260F"><a name="VANES_ASAP_Command__li_89D4A050752641ECBACA199A8BEC260F"><!-- --></a>Scattering from anisotropic surfaces is not
+				rotationally symmetric at normal incidence and not necessarily symmetric about the
+				plane of incidence otherwise. Therefore, the orientation of the model on the surface
+				is important and is generally specified by an axis for the second command entry. For
+				syntax information, see the command argument, <b>MODEL</b>. </li>
+
+			<li id="VANES_ASAP_Command__li_6DF0F4B5FFEC44E7A3E2CD725A37D26A"><a name="VANES_ASAP_Command__li_6DF0F4B5FFEC44E7A3E2CD725A37D26A"><!-- --></a>The <b>PLOT</b> option plots
+				the model (common base 10 logarithm of the BSDF) for up to 7 specular angles in
+				ascending order (default 0, 15, 30, 45, 60, 75, 89.9 degrees). The current <b>PIXELS</b> setting controls the resolution of these plots in direction
+				cosine space. Also, creates a distribution file <b>name_angle.dis</b> for each of
+				these angles. </li>
+
+			<li id="VANES_ASAP_Command__li_A0924CE5FBB54824AB74FEE96F1594E1"><a name="VANES_ASAP_Command__li_A0924CE5FBB54824AB74FEE96F1594E1"><!-- --></a>The command argument, <b>MINMAX</b> may be used to set the minimum and maximum values of the BSDF for
+				this specific model. </li>
+
+			<li id="VANES_ASAP_Command__li_D8B0AA93884943638E0D83919B2745F6"><a name="VANES_ASAP_Command__li_D8B0AA93884943638E0D83919B2745F6"><!-- --></a>Please note that this model is an
+				approximation that currently ignores the scatter between the sides and bottom of the
+				cavity. Therefore, under certain circumstances it may underestimate the effective
+				BRDF. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#VANES">VANES Examples</a>
+		</p>
+
+	</div>
+
+	<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_V-ref.html#Commands_and_Macros_V" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “V”.">Commands and Macros (V)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Scatter_Models-ref.html" title="ASAP supports the scatter models listed in this topic for wide-angle (far from specular) scatter.">Scatter Models</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/EDGES_CURVES_ENTITIES_ASAP-cmdref.html" title="Signals ASAP that edge definition commands follow.">EDGES/CURVES/ENTITIES (ASAP Command)</a></div>
+<div><a href="../Commands/MINMAX_arg_ASAP-cmdref.html" title="Sets BSDF bounding.">MINMAX (ASAP Command Argument)</a></div>
+<div><a href="../Commands/MODEL_arg_ASAP-cmdref.html" title="Scattering from anisotropic surfaces (for example, brushed, diamond-turned) is not rotationally symmetric at normal incidence, and not necessarily symmetric about the plane of incidence otherwise.">MODEL (ASAP Command Argument)</a></div>
+<div><a href="../Commands/MODELS_ASAP-cmdref.html" title="Creates a scattering model.">MODELS (ASAP Command)</a></div>
+<div><a href="../Commands/PIXELS_ASAP-cmdref.html" title="Sets the resolution for graphics and calculations.">PIXELS (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=24" target="_blank">See the Knowledge Base for the technical publication, Stray Light Analysis</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Stray Light Analysis in ASAP,
+				at http://www.breault.com/k-base.php </a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

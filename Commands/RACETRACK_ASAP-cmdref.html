@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="RACETRACK (ASAP Command)"/>
+<meta name="abstract" content="Creates a racetrack or rectangular edge with smooth (continuous) rounded corners."/>
+<meta name="description" content="Creates a racetrack or rectangular edge with smooth (continuous) rounded corners."/>
+<meta name="DC.subject" content="RACETRACK (ASAP Command), edge or racetrack, creating, corners, rounded for edge"/>
+<meta name="keywords" content="RACETRACK (ASAP Command), edge or racetrack, creating, corners, rounded for edge"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_R-ref.html#Commands_and_Macos_R"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Edges_and_Curves_Overview-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="RACETRACK_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>RACETRACK (ASAP Command)</title>
+</head>
+<body id="RACETRACK_ASAP_Command"><a name="RACETRACK_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>RACETRACK (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Creates a racetrack or rectangular edge with smooth (continuous)
+	 rounded corners. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+RACETRACK X x y z y' [ z'] [ SPLIT ]
+          Y y z x z'   x'
+          Z z x y x'   y'
+      </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X, Y or Z</span></td><td><span>coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x, y or z</span></td><td><span>location along coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>y z, z x, or x y</span></td><td><span>overall semimajor widths</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>y' [ z' ], z' [ x' ], or x' [ y' ]</span></td><td><span>semimajor widths of the elliptical corners</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SPLIT</span></td><td><span>flag to split straight-aways into two equal line
+			 segments</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="RACETRACK_ASAP_Command__ul_902A7A19EAC4452E951FE25A16FC01F5"><!-- --></a><ol id="RACETRACK_ASAP_Command__ul_902A7A19EAC4452E951FE25A16FC01F5"> 
+		<li id="RACETRACK_ASAP_Command__li_9E04F210C9344EBCB2747AA3D4DB65E2"><a name="RACETRACK_ASAP_Command__li_9E04F210C9344EBCB2747AA3D4DB65E2"><!-- --></a><b>RACETRACK</b>
+		  creates a racetrack or rectangular edge with straight sides and smooth
+		  (continuous), rounded corners. 
+		</li>
+ 
+		<li id="RACETRACK_ASAP_Command__li_D564CE1B07874DB3A0784E3722BE0314"><a name="RACETRACK_ASAP_Command__li_D564CE1B07874DB3A0784E3722BE0314"><!-- --></a>If the overall semiwidths
+		  are equal to the corner semiwidths, the racetrack has no straight-aways; it is
+		  a pure ellipse. 
+		</li>
+ 
+		<li id="RACETRACK_ASAP_Command__li_629A3FA371164E94B7322AC9FC977972"><a name="RACETRACK_ASAP_Command__li_629A3FA371164E94B7322AC9FC977972"><!-- --></a>If the corner semiwidths are
+		  zero, the racetrack has no elliptical turns; it is a pure rectangle. 
+		</li>
+ 
+		<li id="RACETRACK_ASAP_Command__li_5B723D7CED704EDFA5E777D821FCC977"><a name="RACETRACK_ASAP_Command__li_5B723D7CED704EDFA5E777D821FCC977"><!-- --></a>For compatibility with
+		  previous versions of ASAP, the straight-aways can be 
+		  <b>split</b> into two equal line segments. 
+		</li>
+ 
+		<li id="RACETRACK_ASAP_Command__li_4BC680C4312F4E6798A73D837127995F"><a name="RACETRACK_ASAP_Command__li_4BC680C4312F4E6798A73D837127995F"><!-- --></a>This edge is a combination
+		  of coplanar straight line and higher-order curved segments. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#RACETRACK">RACETRACK
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_R-ref.html#Commands_and_Macos_R" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “R”.">Commands and Macros (R)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Edges_and_Curves_Overview-ref.html" title="Edges and curves are made up of a series of connected points in space that form a parametric representation of an entity.">Edges and Curves Overview</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

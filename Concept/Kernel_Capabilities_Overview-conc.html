@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Kernel Capabilities Overview"/>
+<meta name="abstract" content="This topic briefly describes how ASAP models optical/mechanical systems, traces rays through the system, and models physical optics."/>
+<meta name="description" content="This topic briefly describes how ASAP models optical/mechanical systems, traces rays through the system, and models physical optics."/>
+<meta name="DC.subject" content="Kernel Capabilities Overview, ASAP kernel capabilities"/>
+<meta name="keywords" content="Kernel Capabilities Overview, ASAP kernel capabilities"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_all-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Command_Scripting-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/General_Input_Techniques-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Input_Records-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Command_Comment_Strings-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Command_Description_Notation-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Command_Usage-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/ASAP_Prompts-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Mathematical_Functions_Supported-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Mathematical_Operators-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Registers_for_Storing_Arithmetic_Results-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Files_Produced_by_ASAP-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/File_Structure_of_ASAP-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Entries_Repeated_and_Incremented-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Specifying_Complex_Numbers-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Kernel_Capabilities_Overview"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Kernel Capabilities Overview</title>
+</head>
+<body id="Kernel_Capabilities_Overview"><a name="Kernel_Capabilities_Overview"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Kernel Capabilities Overview</h5></span> 
+   
+  
+  <div><p>This topic briefly describes how ASAP models optical/mechanical
+	 systems, traces rays through the system, and models physical optics.
+  </p>
+ 
+	 <div class="section" id="Kernel_Capabilities_Overview__section_ADB09E14ED714042BCF5489F764D93E0"><a name="Kernel_Capabilities_Overview__section_ADB09E14ED714042BCF5489F764D93E0"><!-- --></a><span style="color: #2b6eb5"><h5>Modeling Optical/Mechanical Systems</h5></span> 
+		 
+		<p>ASAP accurately models virtually any optical/mechanical systems.
+		  Similar to 3D solids modeling programs, it utilizes a very powerful geometrical
+		  approach that permits a nearly limitless variety of systems to be handled in a
+		  straightforward manner. As opposed to most other ray tracing algorithms, all
+		  surfaces and ray data are referenced by default to a single global Cartesian
+		  coordinate system. Smooth continuous object surfaces can be represented by a
+		  sequence of simple conicoids or a general 286-term polynomial (taken to 10th or
+		  20th-order in the three Cartesian components or their squares) and can be
+		  bounded by other surfaces of the same general form. Therefore, anything from a
+		  simple plane with a polygonal boundary to an arbitrarily oriented elliptical
+		  toroid can be modeled precisely. Even more complex parametric mesh surfaces
+		  (NURBS) can be defined by connecting two or more arbitrary curves, each formed
+		  by a series of lines and/or conic arcs in space. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Kernel_Capabilities_Overview__section_3CD9151625A646EFB9D05CE0B37FE278"><a name="Kernel_Capabilities_Overview__section_3CD9151625A646EFB9D05CE0B37FE278"><!-- --></a><span style="color: #2b6eb5"><h5>Tracing Rays through the System</h5></span> 
+		 
+		<p>Bundles of rays can be traced through the system such that after every
+		  reflection or refraction each ray always transfers to the nearest object. Also,
+		  rays are allowed to interact with an object any number of times; that is,
+		  multiple bounces. Therefore, the program easily handles the "funneling" effect
+		  of non-imaging radiation collectors as well as imaging systems. In addition,
+		  each ray may be assigned an arbitrary total flux that is reduced by volume and
+		  surface absorption (or increased in a gain medium) as the ray propagates
+		  through the system. The standard Fresnel equations are used to not only
+		  calculate (as a function of incidence angle and polarization) transmission
+		  losses at interfaces between two dielectric media, but also reflection losses
+		  at any dielectric/conductor interfaces. The program is also of capable of
+		  splitting any ray into reflected, transmitted, diffractive, near specular,
+		  diffuse, and backscatter components. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Kernel_Capabilities_Overview__section_B2D37BE871AB413D825D9DD5E667725F"><a name="Kernel_Capabilities_Overview__section_B2D37BE871AB413D825D9DD5E667725F"><!-- --></a><span style="color: #2b6eb5"><h5>Modeling of Physical Optics</h5></span> 
+		 
+		<p>Each ray may also be treated as a coherent/incoherent scalar/vector
+		  beam (normally Gaussian). Groups of these beams can be combined to simulate the
+		  optical or electromagnetic field incident on a system. Each beam and thus the
+		  entire "wavefront" is then rigorously propagated. The resulting field may then
+		  be calculated and displayed at any location within the system (including on the
+		  surfaces of grazing incidence optics) and not just near focus. Therefore, ASAP
+		  not only performs geometrical optics modeling, but also accurate physical
+		  optics modeling of any system. 
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="../Concept/Command_Scripting-conc.html">Command Scripting</a></strong><br/>
+This topic describes scripting functions available only in command mode.</li>
+<li class="ulchildlink"><strong><a href="../Reference/General_Input_Techniques-ref.html">General Input Techniques</a></strong><br/>
+Techniques for ASAP input include: radian angle entries, relative and literal referencing, direction vectors, and linear transformations.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Input_Records-ref.html">Input Records</a></strong><br/>
+Describes how ASAP reads input data.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Command_Comment_Strings-ref.html">Command Comment Strings</a></strong><br/>
+User comment strings may be embedded in any command without usually affecting processing.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Command_Description_Notation-ref.html">Command Description Notation</a></strong><br/>
+Shows format or syntax of each ASAP command in the command topics. Syntax can be followed by a detailed explanation of the command’s function.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Command_Usage-ref.html">Command Usage</a></strong><br/>
+ASAP commands consist of up to 10,000 unformatted alphanumeric entries separated by one or more of blanks " " or commas ",".</li>
+<li class="ulchildlink"><strong><a href="../Reference/ASAP_Prompts-ref.html">ASAP Prompts</a></strong><br/>
+Describes ASAP prompts (ASAP&gt;) that precede the Command Input window, and lists the prompt variations.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Mathematical_Functions_Supported-ref.html">Mathematical Functions Supported</a></strong><br/>
+Describes the set of supported mathematical functions.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Mathematical_Operators-ref.html">Mathematical Operators</a></strong><br/>
+Lists mathematical operators that affect entries in ASAP.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Registers_for_Storing_Arithmetic_Results-ref.html">Registers for Storing Arithmetic Results</a></strong><br/>
+Describes how arithmetic results in ASAP are stored in registers.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Files_Produced_by_ASAP-ref.html">Files Produced by ASAP</a></strong><br/>
+Lists the file types that ASAP produces and uses.</li>
+<li class="ulchildlink"><strong><a href="../Concept/File_Structure_of_ASAP-conc.html">File Structure of ASAP</a></strong><br/>
+ASAP is a sophisticated set of 3D system modeling and optical ray/beam propagation algorithms. It performs the entire ray tracing and derivative calculations.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Entries_Repeated_and_Incremented-ref.html">Entries Repeated and Incremented</a></strong><br/>
+This topic provides rules and examples of command entries that are repeated and incremented.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Specifying_Complex_Numbers-ref.html">Specifying Complex Numbers</a></strong><br/>
+Complex numbers can be entered in some of the ASAP dialogs.</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_all-ref.html" title="Topics in this section of the Contents tab include topics relating to A SAP scripting language concepts, organized by alphabetical subgroups, and to Macro Concepts.">Scripting Language Concepts</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

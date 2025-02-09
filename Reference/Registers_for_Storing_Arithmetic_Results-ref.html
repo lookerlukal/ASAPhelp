@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Registers for Storing Arithmetic Results"/>
+<meta name="abstract" content="Describes how arithmetic results in ASAP are stored in registers."/>
+<meta name="description" content="Describes how arithmetic results in ASAP are stored in registers."/>
+<meta name="DC.subject" content="Registers for Storing Arithmetic Results, registers, storing arithmetic results in"/>
+<meta name="keywords" content="Registers for Storing Arithmetic Results, registers, storing arithmetic results in"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Kernel_Capabilities_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Command_Scripting-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/General_Input_Techniques-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Input_Records-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Command_Comment_Strings-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Command_Description_Notation-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Command_Usage-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/ASAP_Prompts-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Mathematical_Functions_Supported-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Mathematical_Operators-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Files_Produced_by_ASAP-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/File_Structure_of_ASAP-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Entries_Repeated_and_Incremented-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Specifying_Complex_Numbers-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GET_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REG_macro_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Registers_for_Storing_Arithmetic_Results"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Registers for Storing Arithmetic Results</title>
+</head>
+<body id="Registers_for_Storing_Arithmetic_Results"><a name="Registers_for_Storing_Arithmetic_Results"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Registers for Storing Arithmetic Results</h5></span> 
+   
+  
+  <div><p>Describes how arithmetic results in ASAP are stored in registers.
+  </p>
+ 
+	 <div class="section" id="Registers_for_Storing_Arithmetic_Results__section_885B1A092436414C81E8942DAAE53649"><a name="Registers_for_Storing_Arithmetic_Results__section_885B1A092436414C81E8942DAAE53649"><!-- --></a> 
+		<p>ASAP has 286 direct registers designated by the letters A through Z by
+		  themselves or followed by the numbers 0 through 9. (A special set of registers
+		  starting with an underscore "_" instead of a letter are reserved for argument
+		  passing). These registers can be used for the storage of both intermediate
+		  arithmetic results and literals.
+		</p>
+ 
+		<p>Three pieces of information are associated with each of these
+		  registers: 
+		</p>
+ 
+		<br/><a name="Registers_for_Storing_Arithmetic_Results__ul_A9C6581C412B479B963FCF00C5D68597"><!-- --></a><ul id="Registers_for_Storing_Arithmetic_Results__ul_A9C6581C412B479B963FCF00C5D68597"> 
+		  <li id="Registers_for_Storing_Arithmetic_Results__li_2B3E214C8C8B41389DBADB7D86E1E05F"><a name="Registers_for_Storing_Arithmetic_Results__li_2B3E214C8C8B41389DBADB7D86E1E05F"><!-- --></a>location (A...Z9)
+		  </li>
+ 
+		  <li id="Registers_for_Storing_Arithmetic_Results__li_1D7D10DCFD414C8F98D692497DD4E883"><a name="Registers_for_Storing_Arithmetic_Results__li_1D7D10DCFD414C8F98D692497DD4E883"><!-- --></a>name (literal up to 16
+			 characters)
+		  </li>
+ 
+		  <li id="Registers_for_Storing_Arithmetic_Results__li_27725849C8864E6D87C6A35AF4520BA5"><a name="Registers_for_Storing_Arithmetic_Results__li_27725849C8864E6D87C6A35AF4520BA5"><!-- --></a>number designation (double
+			 precision)
+		  </li>
+ 
+		</ul>
+ 
+		<p>In the following examples, 
+		  <b>R</b> stands for any register. To store the value of any valid
+		  arithmetic expression or literal in a register (forming a null entry) or recall
+		  a value in a register as an input number, use the following formats:
+		</p>
+ 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span/></td><td><span><b>Old</b></span></td><td><span><b>New</b></span></td><td><span><b>Precedence Level</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Store numeric in R</span></td><td><span>expression=R</span></td><td><span>R=expression</span></td><td><span>3</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Store literal in R</span></td><td><span>literal=R</span></td><td><span>R="literal"</span></td><td><span>0</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Recall numeric from R</span></td><td><span>R.</span></td><td><span>(R) 
+			 </span></td><td><span/></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Recall literal from R</span></td><td><span>R"</span></td><td><span>R" 
+			 </span></td><td><span/></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Recall number from register with literal</span></td><td><span>literal.</span></td><td><span>(literal) 
+			 </span></td><td><span/></td></tr></tbody></table> 
+		<p>where 
+		  <b>R</b> is one of 286 registers A...Z or A0...Z9.
+		</p>
+ 
+		<p>Registers are zeroed and blanked out at program start up. The
+		  capability to recall the numeric in a register by referencing the literal
+		  stored in that register allows the user to assign a register a variable name
+		  and then use that name (up to 32 characters) instead of the short fixed
+		  register name. 
+		</p>
+ 
+		<p>An unknown variable is automatically assigned to an unused indirect
+		  register location starting at 1768 and working down; that is,. up to 1482 user
+		  variables can be created before any conflict with the normal direct register
+		  set occurs.
+		</p>
+ 
+		<p>As an example, the following input increments the contents of the
+		  register/variable, and uses the result as the current input entry:
+		</p>
+ 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>R.+1=R.</span></td><td><span>!increment register/variable and use result (OLD)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>(R=R+1)</span></td><td><span>!increment register/variabler and use result (NEW)</span></td></tr></tbody></table> 
+		<p>If the period had been left off the end of the OLD expression or the
+		  parentheses left off the NEW, the register would still be incremented, but no
+		  input would be passed to the program. The current contents of the
+		  registers/variables can be displayed using the $REG predefined macro command.
+		</p>
+ 
+	 </div>
+ 
+  </div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Kernel_Capabilities_Overview-conc.html" title="This topic briefly describes how ASAP models optical/mechanical systems, traces rays through the system, and models physical optics.">Kernel Capabilities Overview</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Command_Scripting-conc.html" title="This topic describes scripting functions available only in command mode.">Command Scripting</a></div>
+<div><a href="../Concept/File_Structure_of_ASAP-conc.html" title="ASAP is a sophisticated set of 3D system modeling and optical ray/beam propagation algorithms. It performs the entire ray tracing and derivative calculations.">File Structure of ASAP</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/General_Input_Techniques-ref.html" title="Techniques for ASAP input include: radian angle entries, relative and literal referencing, direction vectors, and linear transformations.">General Input Techniques</a></div>
+<div><a href="../Reference/Input_Records-ref.html" title="Describes how ASAP reads input data.">Input Records</a></div>
+<div><a href="../Reference/Command_Comment_Strings-ref.html" title="User comment strings may be embedded in any command without usually affecting processing.">Command Comment Strings</a></div>
+<div><a href="../Reference/Command_Description_Notation-ref.html" title="Shows format or syntax of each ASAP command in the command topics. Syntax can be followed by a detailed explanation of the command’s function.">Command Description Notation</a></div>
+<div><a href="../Reference/Command_Usage-ref.html" title="ASAP commands consist of up to 10,000 unformatted alphanumeric entries separated by one or more of blanks &#34; &#34; or commas &#34;,&#34;.">Command Usage</a></div>
+<div><a href="../Reference/ASAP_Prompts-ref.html" title="Describes ASAP prompts (ASAP&gt;) that precede the Command Input window, and lists the prompt variations.">ASAP Prompts</a></div>
+<div><a href="../Reference/Mathematical_Functions_Supported-ref.html" title="Describes the set of supported mathematical functions.">Mathematical Functions Supported</a></div>
+<div><a href="../Reference/Mathematical_Operators-ref.html" title="Lists mathematical operators that affect entries in ASAP.">Mathematical Operators</a></div>
+<div><a href="../Reference/Files_Produced_by_ASAP-ref.html" title="Lists the file types that ASAP produces and uses.">Files Produced by ASAP</a></div>
+<div><a href="../Reference/Entries_Repeated_and_Incremented-ref.html" title="This topic provides rules and examples of command entries that are repeated and incremented.">Entries Repeated and Incremented</a></div>
+<div><a href="../Reference/Specifying_Complex_Numbers-ref.html" title="Complex numbers can be entered in some of the ASAP dialogs.">Specifying Complex Numbers</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/GET_ASAP-cmdref.html" title="Retrieves ray data and copies it into variables.">GET (ASAP Command)</a></div>
+<div><a href="../Commands/REG_macro_ASAP-cmdref.html" title="Displays the contents of registers and associated variables.">$REG (ASAP Macro)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

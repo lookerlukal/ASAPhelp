@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="CODE V to ASAP Translator Restrictions"/>
+<meta name="abstract" content="While this translator supports most of the optical system modeling capabilities of CODE V, there are inevitable differences in the database structure and intended applications, so that a precise translation is not always possible. In most cases, the equivalent functionality can be accomplished in ASAP with user intervention. Specific features and limitations of this translator are described in this topic."/>
+<meta name="description" content="While this translator supports most of the optical system modeling capabilities of CODE V, there are inevitable differences in the database structure and intended applications, so that a precise translation is not always possible. In most cases, the equivalent functionality can be accomplished in ASAP with user intervention. Specific features and limitations of this translator are described in this topic."/>
+<meta name="DC.subject" content="CODE V to ASAP Translator Restrictions, translation, restrictions in CODE V to ASAP"/>
+<meta name="keywords" content="CODE V to ASAP Translator Restrictions, translation, restrictions in CODE V to ASAP"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/CODE_V_File_Conversion-task.html#CODE_V_File_Conversion"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/CODE_V_to_ASAP_Translation_Step_1-task.html#CODE_V_to_ASAP_Translation_Step_1"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/CODE_V_to_ASAP_Translation_Step_2-task.html#CODE_V_to_ASAP_Translation_Step_2"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/CODE_V_to_ASAP_Translation_Step_3-task.html#CODE_V_to_ASAP_Translation_Step_3"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="CODE_V_to_ASAP_Translator_Restrictions"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>CODE V to ASAP Translator Restrictions</title>
+</head>
+<body id="CODE_V_to_ASAP_Translator_Restrictions"><a name="CODE_V_to_ASAP_Translator_Restrictions"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>CODE V to ASAP Translator Restrictions</h5></span>
+	
+	
+	<div><p>While this translator supports most of the optical system modeling capabilities of
+		CODE V, there are inevitable differences in the database structure and intended
+		applications, so that a precise translation is not always possible. In most cases, the
+		equivalent functionality can be accomplished in ASAP with user intervention. Specific
+		features and limitations of this translator are described in this topic. </p>
+
+		<div class="section" id="CODE_V_to_ASAP_Translator_Restrictions__section_ECFABF5043F8436C8BB14DFC8ACB0EE5"><a name="CODE_V_to_ASAP_Translator_Restrictions__section_ECFABF5043F8436C8BB14DFC8ACB0EE5"><!-- --></a>
+			<p><b>Afocal systems: </b>
+			</p>
+
+			<p><b>AFC</b> is supported but accommodation ACM is not. </p>
+
+			<p><b>AFO</b> is not supported. The perfect lens is modeled as a dummy plane. </p>
+
+			<p><b>AFI</b> is supported. The perfect lens is modeled as an <b>IDEAL</b> ASAP lens.
+			</p>
+
+		</div>
+
+		<div class="section" id="CODE_V_to_ASAP_Translator_Restrictions__section_A81F9359D38747D38D8294F098B0E90A"><a name="CODE_V_to_ASAP_Translator_Restrictions__section_A81F9359D38747D38D8294F098B0E90A"><!-- --></a>
+			<p><b>Alternate surface intersection</b>: Alternate surface intersection flag <b>IC</b>
+				is not supported. </p>
+
+			<p><b>Apertures</b>: Only simple circular, elliptical, and rectangular apertures are
+				supported. Aperture decentrations are supported but aperture rotations (<b>ARO</b>)
+				are not. If there are multiple apertures on a surface, only the first aperture is
+				used. Labeled apertures are supported. </p>
+
+			<p><b>Array elements</b>: Array elements are not supported. </p>
+
+			<p><b>Coatings</b>: Coatings are not supported. </p>
+
+			<p><b>Depth of focus</b>: Only the nominal focal plane location is translated. </p>
+
+			<p><b>Fictitious glasses</b>: CODE V uses a proprietary dispersion model based upon six
+				“real” glasses to compute the refractive indices of fictitious glasses at the
+				specified wavelengths. A similar model was developed for this translator; however,
+				there are small refractive index differences. BRO recommends that you replace
+				fictitious glasses with “real” glasses prior to attempting a translation. </p>
+
+			<p><b>GDP</b>: This partial dispersion option is not supported. </p>
+
+			<p><b>Gradient index (GRIN) media</b>: Only the reference wavelength gradient function
+				is in the ASAP model. The following gradients are not supported: </p>
+
+			<p> Gradient Lens Corporation </p>
+
+			<p>Luneburg and Maxwell </p>
+
+			<p>Selfoc </p>
+
+			<p>User-defined gradients </p>
+
+			<p><b>Holographic surfaces: </b>
+			</p>
+
+			<p>Volume HOEs are not supported; they are translated as surface HOEs. </p>
+
+			<p>Phase terms involving absolute values are not supported. These include <b>HCT AXY,
+					HCT XAY, HCT XYA</b> and <b>HCT AR</b>. </p>
+
+			<p>User-defined phase functions are not supported. </p>
+
+			<p>CODE V can model a two-point HOE with aspheric phase terms; however ASAP has no
+				equivalent diffractive entity. The translator breaks the single CODE V HOE surface
+				into two (or three) ASAP objects a small distance apart. The first ASAP object is
+				the two- point HOE; the second is the aspheric phase HOE. (If the CODE V surface is
+				reflective, a dummy reflecting object is also created to restore the propagation
+				direction.) </p>
+
+			<p>You must set the <b>SEARCH</b> command so that the rays follow the desired
+				trajectory. </p>
+
+			<p><b>Interferometric Deformations and Intensity Apodizations</b> are not supported. </p>
+
+			<p><b>Lens modules</b>: Only the focal length and principal reduction ratio are
+				supported. </p>
+
+			<p><b>Non-sequential surfaces:</b> While ASAP raytrace is fundamentally non-sequential,
+				the differences between CODE V and ASAP make an automated translation unfeasible.
+				Consequently, predefined non-sequential modules such as corner cubes (<b>CCR</b>)
+				and roof prisms (<b>ROO</b>) are also not supported. </p>
+
+			<p><b>Non-spherical surfaces: </b>
+			</p>
+
+			<p>Thermal gradient surfaces and user-defined surfaces are not supported. </p>
+
+			<p><b>Pickups</b>: Pickups are not supported. This is not an issue with CODE V-generated
+				SEQ files, since CODE V writes both the pickup instructions and the resulting
+				parameter values into the SEQ file. However, user-generated SEQ files must contain
+				the resulting parameter values for the translation to be successful. </p>
+
+			<p><b>Polarization</b>: Polarized sources, linear polarizing elements and retarders are
+				not supported. </p>
+
+			<p><b>Private catalog: </b>
+			</p>
+
+			<p>Dispersion formulae are not supported. </p>
+
+			<p>Melt fit option <b>MLT</b> is not supported. </p>
+
+			<p>Transmission data <b>TRN</b> , specific gravity data <b>SPG</b>, and price data <b>PRC</b> are not supported. </p>
+
+			<p><b>Pupil Apodization</b>: Pupil apodization is not supported. </p>
+
+			<p><b>Refract/reflect mode</b>: <b>RMD</b> is not supported. </p>
+
+			<p><b>Solves</b>: Solves are not supported. This is not an issue with CODE V-generated
+				SEQ files, since CODE V writes both the solve instructions and the resulting
+				parameter values into the SEQ file. However user-generated SEQ files must contain
+				the resulting parameter values for the translation to be successful. </p>
+
+			<p><b>Special surfaces:</b>
+			</p>
+
+			<p>Bounding box dimensions are not used by the translator. </p>
+
+			<p><b>CN1</b> surfaces (Fresnel surface on a right circular cone with parallel back
+				cuts) are not supported. </p>
+
+			<p><b>CN2</b> surfaces (Fresnel surface on a right circular cone with non-parallel back
+				cuts) are not supported. </p>
+
+			<p><b>FRS</b> surfaces (Fresnel surface on planar substrate) are not supported. </p>
+
+			<p><b>SEG</b> surfaces (segmented conic surface) are not supported. </p>
+
+			<p><b>XYP</b> polynomial surfaces are not supported. </p>
+
+			<p><b>ZRN</b> surfaces (standard Zernike surface) are not supported. </p>
+
+			<p><b>Specification data</b>: Image space specifications (for example, <b>FNO</b>, <b>XIM</b>) are not supported. Operating modes such as <b>WID</b>, <b>CRA</b>, <b>TEL</b>, <b>XZF</b> do not affect the system geometry and so they are not
+				translated. You must construct the desired raytrace characteristics. </p>
+
+			<p><b>Surface grouping</b>: Surface grouping is not supported. </p>
+
+			<p><b>Thermal expansion, atmospheric and pressure data:</b> Environmental conditions are
+				not supported. </p>
+
+			<p><b>Tolerance data</b>: Tolerance data is ignored by the translator. </p>
+
+			<p><b>Wavelengths and refractive indices</b>: The translator writes out all the
+				wavelength and refractive index data that is specified in the CODE V SEQ file. Make
+				sure the number of wavelengths/refractive indices does not exceed the ASAP capacity.
+			</p>
+
+		</div>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Task/CODE_V_File_Conversion-task.html#CODE_V_File_Conversion" title="ASAP OPTICAL+ and ASAP ADVANCED include the fully integrated capability of importing CODE V® files.">CODE V File Conversion</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/CODE_V_to_ASAP_Translation_Step_1-task.html#CODE_V_to_ASAP_Translation_Step_1" title="The first step in the translation process involves selecting an *.SEQ file written by CODE V. You can either type the name of the file in the box below Select CODEV Lens (sequence) File, or click BROWSE. Either of these actions will display a FILE OPEN dialog, from which you can select an SEQ file.">CODE V to ASAP Translation, Step 1</a></div>
+<div><a href="../Task/CODE_V_to_ASAP_Translation_Step_2-task.html#CODE_V_to_ASAP_Translation_Step_2" title="The second step in the translation process is to select the ASAP filename, and to set several translation options.">CODE V to ASAP Translation, Step 2</a></div>
+<div><a href="../Task/CODE_V_to_ASAP_Translation_Step_3-task.html#CODE_V_to_ASAP_Translation_Step_3" title="The final step in the translation process is to choose the zoom position(s) to translate and, optionally, the surface for the origin of the global coordinate system.">CODE V to ASAP Translation, Step 3</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Linear Transformations for Lenses"/>
+<meta name="abstract" content="Linear transformations change the shape, scaling, or orientation of a geometrical entity (surface, edge, lens, object, group, or rays) by applying a general 4x4 transformation matrix (linear transformations change only the orientation of LENSES). Linear transformations that change the location of a geometrical entity are applied to the reference point (see table) of the entity."/>
+<meta name="description" content="Linear transformations change the shape, scaling, or orientation of a geometrical entity (surface, edge, lens, object, group, or rays) by applying a general 4x4 transformation matrix (linear transformations change only the orientation of LENSES). Linear transformations that change the location of a geometrical entity are applied to the reference point (see table) of the entity."/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_GM-ref.html#Reference_G_M"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Linear_Transformations_for_Lenses"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Linear Transformations for Lenses</title>
+</head>
+<body id="Linear_Transformations_for_Lenses"><a name="Linear_Transformations_for_Lenses"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Linear Transformations for Lenses</h5></span>
+	
+	<div><p>Linear transformations change the shape, scaling, or orientation of a geometrical entity (surface, edge, lens, object, group, or rays) by applying a general 4x4 transformation matrix (linear transformations change only the orientation of <b>LENSES</b>). Linear transformations that change the location of a geometrical entity are applied to the reference point (see table) of the entity.</p>
+
+		<div class="section" id="Linear_Transformations_for_Lenses__section_8C3A59E713A447FD88F878A3A31F4EA5"><a name="Linear_Transformations_for_Lenses__section_8C3A59E713A447FD88F878A3A31F4EA5"><!-- --></a>
+			<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>LENSES</b></span></td><td><span><b>Reference Point</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>SEQUENCE</b></span></td><td><span>at vertex of first conicoid</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>MIRROR </b></span></td><td><span>at intersection of the mirror and coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>SINGLET</b></span></td><td><span>at intersection of first conicoid vertex and coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>MANGIN</b></span></td><td><span>at intersection of first conicoid vertex and coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>RIGHT</b></span></td><td><span>at intersection of first face and coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>AFOCAL</b></span></td><td><span>at intersection of first conicoid vertex and coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>IDEAL</b></span></td><td><span>at intersection of first conicoid vertex and coordinate axis</span></td></tr></tbody></table>
+		</div>
+
+		<div class="section" id="Linear_Transformations_for_Lenses__section_36941F795919499AB6CEFAFFCE13CC7D"><a name="Linear_Transformations_for_Lenses__section_36941F795919499AB6CEFAFFCE13CC7D"><!-- --></a><span style="color: #2b6eb5"><h5>Tips</h5></span>
+			
+			<br/><a name="Linear_Transformations_for_Lenses__ul_2D4C60DFC9C3459184FFF149B76D2400"><!-- --></a><ul id="Linear_Transformations_for_Lenses__ul_2D4C60DFC9C3459184FFF149B76D2400">
+				<li id="Linear_Transformations_for_Lenses__li_87B6FEC517A54142A63EF2F7CA643612"><a name="Linear_Transformations_for_Lenses__li_87B6FEC517A54142A63EF2F7CA643612"><!-- --></a>Any number of the following linear transformation commands may be applied after any entity definition to build up the final matrix. The order in which these transformation commands are entered is exactly the order in which they are to be applied to the entity. These commands must be grouped together following an entity definition with no other commands between them (except for a comment).</li>
+
+				<li id="Linear_Transformations_for_Lenses__li_74AB1EA3C7004DE48B2A0D8D68C05ADD"><a name="Linear_Transformations_for_Lenses__li_74AB1EA3C7004DE48B2A0D8D68C05ADD"><!-- --></a>The <b>LIST</b> option causes the resulting 4-by-4 transformation matrix to be printed and decoded into simple operations if possible.</li>
+
+				<li id="Linear_Transformations_for_Lenses__li_04D6BBA04DED4C66A2241DA08A76D9F7"><a name="Linear_Transformations_for_Lenses__li_04D6BBA04DED4C66A2241DA08A76D9F7"><!-- --></a>For the transformation of a direction vector, the dummy row contains all zeros. </li>
+
+				<li id="Linear_Transformations_for_Lenses__li_4C45DB47DB174ED6BB1A1791DE003C0E"><a name="Linear_Transformations_for_Lenses__li_4C45DB47DB174ED6BB1A1791DE003C0E"><!-- --></a>Ray data may also be transformed by these commands.</li>
+
+				<li id="Linear_Transformations_for_Lenses__li_8A767820FD514AF2AA7F98EFE8B60433"><a name="Linear_Transformations_for_Lenses__li_8A767820FD514AF2AA7F98EFE8B60433"><!-- --></a>For more information, see Coordinate Transformations in ASAP.</li>
+
+			</ul>
+
+		</div>
+
+	</div>
+ 
+	
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_GM-ref.html#Reference_G_M" title="Reference topics in this section begin with the letters &#34;G&#34; to &#34;M&#34;.">Reference (G-M)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

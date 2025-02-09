@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Version 2.8"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Release_Notes-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_2_9-ref.html#Version_2.9"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_1_8-ref.html#Version_1.8"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Version_2.8"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Version 2.8</title>
+</head>
+<body id="Version_2.8"><a name="Version_2.8"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Version 2.8</h5></span>
+	<div>
+		<div class="section" id="Version_2.8__section_A82A693C7D68436C8C30F5F9689755E8"><a name="Version_2.8__section_A82A693C7D68436C8C30F5F9689755E8"><!-- --></a>
+			<p>July 1988 </p>
+
+		</div>
+
+		<div class="section" id="Version_2.8__section_9F7A381E7FF34ECFA91F1EA4FB761E58"><a name="Version_2.8__section_9F7A381E7FF34ECFA91F1EA4FB761E58"><!-- --></a><span style="color: #2b6eb5"><h5>RENAMED COMMANDS:</h5></span>
+			
+			<pre class="pre">
+                   STATS OBJECTS         ==&gt; PATHS
+                   INTERFACE ... SCATTER ==&gt; INTERFACE ... RMS/BSDF
+                   INTERFACE ... RANDOM  ==&gt; OBJECT; # RANDOM ...
+                   DISPLAY;REPLACE       ==&gt; DISPLAY;WRITE
+			</pre>
+
+		</div>
+
+		<div class="section" id="Version_2.8__section_64F763BC7F3D4D3181470B668EC5C41E"><a name="Version_2.8__section_64F763BC7F3D4D3181470B668EC5C41E"><!-- --></a><span style="color: #2b6eb5"><h5>ENHANCED COMMANDS: </h5></span>
+			
+			<pre class="pre">
+                   $GO       can jump directly to a particular macro line
+                   $IF       AND/OR constructs now permitted
+                   MEDIA     Inhomogeneous (GRIN) added
+                   MOVE      TO PLANE added
+                   CUTOFF    Upper limit on # of objects encountered
+                   CURVE     Additional entry and least-squares fit
+                   FFAD      Ray SPOTS can be added to display
+                   PARABASAL Beam scaling entry replaced by beam divergence
+                   RAY       SEARCH reset and interactive tracing
+                   OBJECT    One edge faceted objects allowed 
+                   TRACE     Can STEP a given number of objects
+                   LIST      Info on SOURCES and all parabasal rays
+                   SPOTS     Plotting all parabasals, distribution file
+                    END       Automatic system save to LASTEXEC.SYS
+                    SYSTEM    FROM defaulted to LASTEXEC.SYS
+                   RAYSET    can be completely recovered from last run
+                   SELECT    based on previous ray objects added
+                   USERSURF  rotations now saved and passed to user
+                   SOURCE    can use last GRID to define distribution
+                   DISPLAY   Allows the naming of distribution files
+                   SHIFT     a distance along a given direction
+                   FIELD     Saves specified distribution to file
+                   PROFILES  New default operation
+				</pre>
+
+			</div>
+
+			<div class="section" id="Version_2.8__section_BB5F319FBF6C444E8DBAEA35ECACA69E"><a name="Version_2.8__section_BB5F319FBF6C444E8DBAEA35ECACA69E"><!-- --></a><span style="color: #2b6eb5"><h5>NEW COMMANDS: </h5></span>
+				
+				<pre class="pre">
+                   WIDTHS    Sets beam width scaling factors
+                   EDGE;LINE Equally divided straight line
+                   USERFUNC  User-programmable function (GRIN, surface)
+                   IRRADIANC Sets irradiance direction for SPREAD/FIELD
+                   DISPLAY
+                      MODIFY  Allows modification of data regions
+                      CONTOUR Contour plot
+                      RADIAL  Averaging distribution radially about a point
+				</pre>
+
+			</div>
+
+			<div class="section" id="Version_2.8__section_B7D281C0FFD8436CB370E89115942391"><a name="Version_2.8__section_B7D281C0FFD8436CB370E89115942391"><!-- --></a><span style="color: #2b6eb5"><h5>CODE CHANGES: </h5></span>
+				
+				<pre class="pre">
+                   VIRTUAL.PGS and *.SYS files are incompatible
+                   Nested parentheses can be used in input arithmetic
+                   Input registers can now be accessed by assigned literal
+                   On-the-fly macro definitions require 2 prefixes, e.g. $$
+                   Up to 6th-order 84-term SURFACES and 25-point EDGES
+                   Parabasal ray errors now halt trace of that beam
+                   New header for unformatted distribution files (FOR009)
+                   Improved accuracy in OPL calculations
+                   Numerous bugs have been squashed (SOP)
+                   Default DEFORM and USERSURF definitions changed
+                   General clipping and device support added to VIEW3D
+                   ACADIN program for 3D file to AutoCAD-9 DXF conversion
+				</pre>
+
+			</div>
+
+			<div class="section" id="Version_2.8__section_ACACFEB2916F4180B30836403C37EBA6"><a name="Version_2.8__section_ACACFEB2916F4180B30836403C37EBA6"><!-- --></a><span style="color: #2b6eb5"><h5>IN THE WORKS: </h5></span>
+				
+				<pre class="pre">
+                   Non-lambertian COATING/MODELS in STRAP
+                   $ITER internal macro varies any group of program inputs
+                      and plots or minimizes any program output
+                   More "bells and whistles" (SOP)
+                   Interactive optimizing graphical preprocessor (4th qtr.)
+                   ACADIN program for 3D file to AutoCAD-10 DXF conversion
+				</pre>
+
+			</div>
+
+	</div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Release_Notes-ref.html" title="Topics in this section include all known release notes for ASAP up to the last version. Release notes for the current version can be viewed in the ASAP Command Output window, or opened from your ASAP installation root folder.">Release Notes</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a href="../Reference/Version_2_9-ref.html#Version_2.9">Version 2.9</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a href="../Reference/Version_1_8-ref.html#Version_1.8">Version 1.8</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

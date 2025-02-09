@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="IESFILE (ASAP Command)"/>
+<meta name="abstract" content="Writes out Illuminating Engineering Society (IES)-format file."/>
+<meta name="description" content="Writes out Illuminating Engineering Society (IES)-format file."/>
+<meta name="DC.subject" content="IESFILE (ASAP Command), files, IES, LM-63-1995 IESNA file"/>
+<meta name="keywords" content="IESFILE (ASAP Command), files, IES, LM-63-1995 IESNA file"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_I-ref.html#Commands_and_Macros_I"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ANGLES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/RADIANT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPOTS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/UNITS_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="IESFILE_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>IESFILE (ASAP Command)</title>
+</head>
+<body id="IESFILE_ASAP_Command"><a name="IESFILE_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>IESFILE (ASAP Command)</h5></span>
+	
+	
+	<div><p>Writes out Illuminating Engineering Society (IES)-format file. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+IESFILE [ name [ SFLUX f ] [ ELLIP w l h ] ] [ PAD [ p ] ] [ 'string' ]
+                             RECT
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>name</span></td><td><span>name of the created file (extension is .IES)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SFLUX</span></td><td><span>causes the source flux f to be written to the header of the output IES
+				file</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ELLIP or RECT</span></td><td><span>add the devices ELLIPtical or RECTangular width, length, and height to the
+					header of the output IES file</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>w</span></td><td><span>width of the elliptical or rectangular device</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>l</span></td><td><span>length of the elliptical or rectangular device</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>h</span></td><td><span>height of the elliptical or rectangular device</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>PAD p</span></td><td><span>flag to pad the distribution with value given by p (defaults to minimum
+					value in the distribution if p is omitted)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>'string'</span></td><td><span>adds a comment string to the header of the IES file</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="IESFILE_ASAP_Command__ul_95766E5625474F4BB4B9B28224FF4B44"><!-- --></a><ol id="IESFILE_ASAP_Command__ul_95766E5625474F4BB4B9B28224FF4B44">
+			<li id="IESFILE_ASAP_Command__li_15BB64F95DBE45D99082BECB02C93A60"><a name="IESFILE_ASAP_Command__li_15BB64F95DBE45D99082BECB02C93A60"><!-- --></a>Writes out a standard LM-63-1995 IESNA
+				photometric file (name.IES) representing an angular distribution created by either a
+					<b>RADIANT</b> command (A-Type or C-Type photometry where the polar
+				axis becomes vertical), or a <b>SPOTS DIR</b> and <b>ANGLES</b> combination (B photometry). The IESFILE must follow the LM-63-1995
+				standard.</li>
+
+			<li id="IESFILE_ASAP_Command__li_6325021B388344CF9F90C67D27F7B87E"><a name="IESFILE_ASAP_Command__li_6325021B388344CF9F90C67D27F7B87E"><!-- --></a>The device's <b>RECT</b>angular
+				or <b>ELLIP</b>tical width <b>w,</b> length <b>l,</b> and height <b>h</b> can be written to the header of the
+				output IES file. The dimensions are written either in meters (if the system <b>UNITS</b> are metric) or in feet (if the system <b>UNITS</b>
+				are English). If system <b>UNITS</b> are not defined, the dimensions are
+				assumed to be meters. </li>
+
+			<li id="IESFILE_ASAP_Command__li_B97F17331A75431890C9D3CBB697AEC5"><a name="IESFILE_ASAP_Command__li_B97F17331A75431890C9D3CBB697AEC5"><!-- --></a>If the distribution does not cover the
+				whole sphere, it can be optionally <b>PAD</b>ded with value <b>p</b>, which defaults to the minimum value in the distribution for A-Type and
+				B-Type photometry. </li>
+
+			<li id="IESFILE_ASAP_Command__li_0E48EA65FD394A7092AFF4A27AF6C96C"><a name="IESFILE_ASAP_Command__li_0E48EA65FD394A7092AFF4A27AF6C96C"><!-- --></a><b>PADding</b> is not be
+				performed for C-Type photometry. Distributions for C-Type photometry are assumed to
+				fill a hemisphere and can be created, for example, with <p><b>RADIANT Z 0 180
+						180 0 360 360</b></p>
+</li>
+
+			<li id="IESFILE_ASAP_Command__li_FA73FB91049D4440AE22FB59074DA94A"><a name="IESFILE_ASAP_Command__li_FA73FB91049D4440AE22FB59074DA94A"><!-- --></a>A comment <b>string</b> may be
+				added to the header of the output IES file. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#IESFILE">IESFILE Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_I-ref.html#Commands_and_Macros_I" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “I”.">Commands and Macros (I)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/ANGLES_ASAP-cmdref.html" title="Converts the current distribution data to an angle space RADIANCE or radiant intensity distribution.">ANGLES (ASAP Command)</a></div>
+<div><a href="../Commands/RADIANT_ASAP-cmdref.html" title="Calculates the far-field incoherent intensity or radiance of the currently selected ray data.">RADIANT (ASAP Command)</a></div>
+<div><a href="../Commands/SPOTS_ASAP-cmdref.html" title="Creates a geometric spot diagram for the currently selected ray data.">SPOTS (ASAP Command)</a></div>
+<div><a href="../Commands/UNITS_ASAP-cmdref.html" title="Defines the system units.">UNITS (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

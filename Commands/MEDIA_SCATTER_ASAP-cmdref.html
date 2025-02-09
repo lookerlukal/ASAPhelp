@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="MEDIA SCATTER (ASAP Command)"/>
+<meta name="abstract" content="Assigns to medium a GENERAL polynomial or USERFUNC function in the global coordinates X, Y, Z."/>
+<meta name="description" content="Assigns to medium a GENERAL polynomial or USERFUNC function in the global coordinates X, Y, Z."/>
+<meta name="DC.subject" content="MEDIA SCATTER (ASAP Command), GENERAL poylnomial, assign to medium, medium, assign GENERAL polynomial, function, assign to medium"/>
+<meta name="keywords" content="MEDIA SCATTER (ASAP Command), GENERAL poylnomial, assign to medium, medium, assign GENERAL polynomial, function, assign to medium"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_M-ref.html#Commands_and_Macros_M"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_ABSORB_ASAP-cmdref.html#MEDIA_ABSORB_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_CRYSTAL_ASAP-cmdref.html#MEDIA_CRYSTAL_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_GRIN_ASAP-cmdref.html#MEDIA_GRIN_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SURFACES_FUNCTIONS_ENTITIES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/USERFUNC_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="MEDIA_SCATTER_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>MEDIA SCATTER (ASAP Command)</title>
+</head>
+<body id="MEDIA_SCATTER_ASAP_Command"><a name="MEDIA_SCATTER_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>MEDIA SCATTER (ASAP Command)</h5></span>
+	
+	
+	<div><p>Assigns to medium a GENERAL polynomial or USERFUNC function in the global coordinates
+		X, Y, Z. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+MEDIA  [ m ]
+n  [ n' n" . . . ] SCATTER m k e t [ l ]  ]  [  'name' ]
+              :
+    </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>i </span></td><td><span>starting media number</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SCATTER</span></td><td><span>allows specification of the maximum number of scattering events per ray for
+					all volumentric models, including homogeneous models expressed by the short
+					form. The maximum number of scattering events per ray defaults to 1000 if
+						<b>l</b> is not specified.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m</span></td><td><span>refers to a <b>VOLUME</b> scattering <b>MODE</b>L</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>k</span></td><td><span>its magnitude is the <b>SURFACE</b> designation for this
+					function</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>e</span></td><td><span>exponent of the scattering function</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>t</span></td><td><span>step length used for tracing a ray when tracing a ray in this inhomogeneous
+					medium</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>l</span></td><td><span>maximum number of ray steps in medium</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>name</span></td><td><span>descriptive name that can be assigned to this medium (only the first 24
+					characters after the comment delimiter are stored).</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="MEDIA_SCATTER_ASAP_Command__ul_CF4F03D5A90341B88D7BCD0F05EBC48E"><!-- --></a><ol id="MEDIA_SCATTER_ASAP_Command__ul_CF4F03D5A90341B88D7BCD0F05EBC48E">
+			<li id="MEDIA_SCATTER_ASAP_Command__li_D7C60C908FB244C1BFB3BEDF417AA90E"><a name="MEDIA_SCATTER_ASAP_Command__li_D7C60C908FB244C1BFB3BEDF417AA90E"><!-- --></a>The medium is homogeneously scattering by
+				default. </li>
+
+			<li id="MEDIA_SCATTER_ASAP_Command__li_921D867A613E415995902C01007F0B41"><a name="MEDIA_SCATTER_ASAP_Command__li_921D867A613E415995902C01007F0B41"><!-- --></a>The medium is inhomogeneously scattering if
+				a <b>SURFACE</b>
+				<b>k</b> is specified, which has the effect of multiplying the
+				homogeneous scattering model m by the modified <b>SURFACE</b> function.
+					<p>
+					<img src="../Equations/MEDIA_SCATTER_equation1.gif"/></p>
+</li>
+
+			<li id="MEDIA_SCATTER_ASAP_Command__li_FFB36865DF104A789968FA57594C4588"><a name="MEDIA_SCATTER_ASAP_Command__li_FFB36865DF104A789968FA57594C4588"><!-- --></a> The <b>SURFACE</b> function
+					<b>k</b>, if specified, must be greater than zero at all points in
+				regions characterized by medium <b>i</b>. </li>
+
+			<li id="MEDIA_SCATTER_ASAP_Command__li_401CB31192AD46B1B91685092F285DA3"><a name="MEDIA_SCATTER_ASAP_Command__li_401CB31192AD46B1B91685092F285DA3"><!-- --></a>Rays which would require more than <b>l</b> scattering event or more than <b>LEVEL</b> scattering
+				events will not escape from the volumetric scatterer, and will be reported (as by
+					<b>STATS</b>) as attached to the last surface intersected. Setting
+					<b>l</b> larger than <b>LEVELS</b> has no effect. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#MEDIA">MEDIA Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_M-ref.html#Commands_and_Macros_M" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “M”.">Commands and Macros (M)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/MEDIA_ASAP-cmdref.html" title="Creates a single refractive material.">MEDIA (ASAP Command)</a></div>
+<div><a href="../Commands/MEDIA_ABSORB_ASAP-cmdref.html#MEDIA_ABSORB_ASAP_Command" title="Creates an absorbing refractive material.">MEDIA ABSORB (ASAP Command)</a></div>
+<div><a href="../Commands/MEDIA_CRYSTAL_ASAP-cmdref.html#MEDIA_CRYSTAL_ASAP_Command" title="Defines birefringent media.">MEDIA CRYSTAL (ASAP Command)</a></div>
+<div><a href="../Commands/MEDIA_GRIN_ASAP-cmdref.html#MEDIA_GRIN_ASAP_Command" title="Creates a GRIN refractive material.">MEDIA GRIN (ASAP Command)</a></div>
+<div><a href="../Commands/SURFACES_FUNCTIONS_ENTITIES_ASAP-cmdref.html" title="Signals ASAP that surface definition commands follow.">SURFACES/FUNCTIONS/ENTITIES (ASAP Command)</a></div>
+<div><a href="../Commands/USERFUNC_ASAP-cmdref.html" title="Creates a surface specified by a user-defined function.">USERFUNC (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

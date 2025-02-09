@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="WAVELENGTH(S) (ASAP Command)"/>
+<meta name="abstract" content="Defines the wavelength(s) for different MEDIA and COATING definitions."/>
+<meta name="description" content="Defines the wavelength(s) for different MEDIA and COATING definitions."/>
+<meta name="DC.subject" content="WAVELENGTHS (ASAP Command), media, defining wavelength for, coating, defining wavelength for, UNITS"/>
+<meta name="keywords" content="WAVELENGTHS (ASAP Command), media, defining wavelength for, coating, defining wavelength for, UNITS"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/COATINGS_LAYERS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/COLORS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/INTERFACE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPECTRUM_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/UNITS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Coherent_Incoherent_Analysis-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Defining_Nondispersive_MEDIA-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Defining_WAVELENGTHS_and_Associated_Dispersive_MEDIA-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Glass_Catalogs_for_Refractive_Media-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Modeling_Dispersive_GRIN_Systems-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_W-ref.html#Commands_and_Macros_W"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="WAVELENGTHS_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>WAVELENGTH(S) (ASAP Command)</title>
+</head>
+<body id="WAVELENGTHS_ASAP_Command"><a name="WAVELENGTHS_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>WAVELENGTH(S) (ASAP Command)</h5></span>
+	
+	
+	<div><p>Defines the wavelength(s) for different MEDIA and COATING definitions. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+WAVELENGTH w [ w' w" ... [  name  ] ]
+                            UNITS u
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>w w' w" ...</span></td><td><span>wavelength(s)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>name</span></td><td><span>wavelength units designation</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>u</span></td><td><span>multiplier to convert wavelength into system units</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="WAVELENGTHS_ASAP_Command__ul_9EB41AF6C4404AC1866B3DE659029E56"><!-- --></a><ol id="WAVELENGTHS_ASAP_Command__ul_9EB41AF6C4404AC1866B3DE659029E56">
+			<li id="WAVELENGTHS_ASAP_Command__li_632E3F2B9E0C43648003EE2F607488A7"><a name="WAVELENGTHS_ASAP_Command__li_632E3F2B9E0C43648003EE2F607488A7"><!-- --></a>Sets the wavelength for any future
+				calculations to <b>w</b> (normally in system units). </li>
+
+			<li id="WAVELENGTHS_ASAP_Command__li_29B229A7C3FE41C095C3336D725C6D8B"><a name="WAVELENGTHS_ASAP_Command__li_29B229A7C3FE41C095C3336D725C6D8B"><!-- --></a>WAVELENGTH(S) must precede any ray
+				definitions to properly set up the Gaussian beams used to calculate the diffracted
+				field. </li>
+
+			<li id="WAVELENGTHS_ASAP_Command__li_E1465731509E4B71AD4BCB2F0E84A8FA"><a name="WAVELENGTHS_ASAP_Command__li_E1465731509E4B71AD4BCB2F0E84A8FA"><!-- --></a>To change the wavelength (for setting up
+				rays for tracing, for example), enter the <b>WAVELENGTH</b> command with
+				the appropriate wavelength. ASAP remembers the wavelength units. </li>
+
+			<li id="WAVELENGTHS_ASAP_Command__li_93A35DC696CA4E90A301A9DD4DE98C95"><a name="WAVELENGTHS_ASAP_Command__li_93A35DC696CA4E90A301A9DD4DE98C95"><!-- --></a>Enter the <b>UNITS</b> option
+				on the <b>WAVELENGTH</b> command only once. </li>
+
+			<li id="WAVELENGTHS_ASAP_Command__li_71FA2727352C4F96B84D5713D9D40D91"><a name="WAVELENGTHS_ASAP_Command__li_71FA2727352C4F96B84D5713D9D40D91"><!-- --></a>Specifies wavelengths used in media,
+				coatings, and other databases. Multiple wavelengths in either ascending or
+				descending order should be entered for any <b>MEDIA</b> or <b>COATING</b> commands that have multiple refractive indices or properties
+				so as to identify the wavelength for each entry. </li>
+
+			<li id="WAVELENGTHS_ASAP_Command__li_746EA6BBCC2F4CC3BF9B3F2FB265B5D9"><a name="WAVELENGTHS_ASAP_Command__li_746EA6BBCC2F4CC3BF9B3F2FB265B5D9"><!-- --></a><b>WAVELENGTH(S)</b> as
+				measured in vacuum should be entered on WAVELENGTH(S). </li>
+
+			<li id="WAVELENGTHS_ASAP_Command__li_B17A15C541D947F9B1EAD5ED4C5B5A53"><a name="WAVELENGTHS_ASAP_Command__li_B17A15C541D947F9B1EAD5ED4C5B5A53"><!-- --></a>The <b>UNITS</b> option with a
+				scale factor <b>u</b> (default=1) may be used to convert <b>w</b> into system units. The argument <b>u</b> is almost always a
+				number much less than unity. </li>
+
+			<li id="WAVELENGTHS_ASAP_Command__li_4D1E63DED89B4A96B7908FDC2ECD8C64"><a name="WAVELENGTHS_ASAP_Command__li_4D1E63DED89B4A96B7908FDC2ECD8C64"><!-- --></a>
+				<p>Alternatively, if a basic <b>UNITS</b> command has already be issued,
+					then any of the following <b>name's</b> can be used to calculate
+						<b>u</b> automatically: </p>
+
+				<p>A or ANGSTROMS </p>
+
+				<p>NM or NANOMETERS </p>
+
+				<p>UM or MICRONS </p>
+
+				<p>MM or MILLIMETERS </p>
+
+				<p>CM or CENTIMETERS </p>
+
+				<p>M or METERS </p>
+
+			</li>
+
+			<li id="WAVELENGTHS_ASAP_Command__li_9E90359F0EF14F4E9EAEA97626FE31AF"><a name="WAVELENGTHS_ASAP_Command__li_9E90359F0EF14F4E9EAEA97626FE31AF"><!-- --></a>Some input parameters have units that are
+				the same as <b>w</b> (see the <b>INTERFACE</b> command) so
+				that it is sometimes more convenient for these parameters to have different units
+				than the physical system. </li>
+
+			<li id="WAVELENGTHS_ASAP_Command__li_F0F559E63D7048E4A029F1FAE8A769B6"><a name="WAVELENGTHS_ASAP_Command__li_F0F559E63D7048E4A029F1FAE8A769B6"><!-- --></a>When the <b>WAVELENGTH(S)</b>
+				command is used with the MEDIA command, up to 25 wavelengths for ASAP Pro and up to
+				15 wavelengths for ASAP Basic may be specified for interpolation purposes to
+				determine the refractive index for intermediate wavelengths. </li>
+
+			<li id="WAVELENGTHS_ASAP_Command__li_28ECFA4CC0F74B5DB801BFBA0022689C"><a name="WAVELENGTHS_ASAP_Command__li_28ECFA4CC0F74B5DB801BFBA0022689C"><!-- --></a>When the <b>WAVELENGTH(S)</b>
+				command is used with the SPECTRUM command, up to 200 weights, along with the
+				corresponding wavelengths from the most recent <b>WAVELENGTH(S)</b>
+				command, can be used to create a multi-wavelength spectrum of a source. A link to
+				the technical guide, Sources, is shown below under the heading, "See Also". </li>
+
+			<li id="WAVELENGTHS_ASAP_Command__li_0E58FBA1A92044A2830E900E49325514"><a name="WAVELENGTHS_ASAP_Command__li_0E58FBA1A92044A2830E900E49325514"><!-- --></a>If a wavelength is not specified for a set
+				of sources, rays and ray paths are plotted in the arbitrary sequence of colors from
+				the order in the COLORS command for the sequence of sources. </li>
+
+			<li id="WAVELENGTHS_ASAP_Command__li_FC9C5E0A0C094858BB99752664911E34"><a name="WAVELENGTHS_ASAP_Command__li_FC9C5E0A0C094858BB99752664911E34"><!-- --></a>All of the rays from one source have the
+				same color, whatever color is appropriate for that source. </li>
+
+			<li id="WAVELENGTHS_ASAP_Command__li_E37EE0EC4F4B4AE9871027F65974F33A"><a name="WAVELENGTHS_ASAP_Command__li_E37EE0EC4F4B4AE9871027F65974F33A"><!-- --></a>When sources of different wavelengths are
+				created, the colors range from blue to red in a quasi-spectral sense, corresponding
+				respectively to the wavelengths ranging from shorter to longer. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#WAVELENGTHS">WAVELENGTHS
+			Examples</a>
+		</p>
+
+	</div>
+
+	<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_W-ref.html#Commands_and_Macros_W" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “W”.">Commands and Macros (W)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Coherent_Incoherent_Analysis-conc.html">Coherent - Incoherent Analysis</a></div>
+<div><a href="../Concept/Defining_Nondispersive_MEDIA-conc.html" title="In some situations, you can safely ignore the polychromatic nature of light to perform a valid systems analysis.">Defining Nondispersive MEDIA</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Defining_WAVELENGTHS_and_Associated_Dispersive_MEDIA-task.html" title="This topic lists the input arguments and return for defining WAVELENGTH(S) and associated dispersive MEDIA.">Defining WAVELENGTHS and Associated Dispersive MEDIA</a></div>
+<div><a href="../Task/Glass_Catalogs_for_Refractive_Media-task.html" title="The glass databases accessible in ASAP include: French, Hikari, Hoya, Hoya New, Ohara, Schott, Schott New, Sumita, and Unusual. The catalogs are in text files named *.CAT. The data for a specific glass consists of the glass name and six interpolation constants. No transmission, absorption, cost, staining data are contained in this database.">Glass Catalogs for Refractive Media</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Modeling_Dispersive_GRIN_Systems-ref.html">GRIN Systems - Modeling Dispersive</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/COATINGS_LAYERS_ASAP-cmdref.html" title="Creates a coating specified by its multilayer prescription.">COATINGS LAYERS (ASAP Command)</a></div>
+<div><a href="../Commands/COLORS_ASAP-cmdref.html" title="Reassigns the color used to display each object.">COLORS (ASAP Command)</a></div>
+<div><a href="../Commands/INTERFACE_ASAP-cmdref.html" title="Assigns a reflective, refractive or diffractive interface to objects.">INTERFACE (ASAP Command)</a></div>
+<div><a href="../Commands/MEDIA_ASAP-cmdref.html" title="Creates a single refractive material.">MEDIA (ASAP Command)</a></div>
+<div><a href="../Commands/SPECTRUM_ASAP-cmdref.html" title="Simplifies flux weighting of rays as a function of wavelength - for spectral apodization.">SPECTRUM (ASAP Command)</a></div>
+<div><a href="../Commands/UNITS_ASAP-cmdref.html" title="Defines the system units.">UNITS (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Sources in ASAP</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Wave Optics</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publications, Sources in ASAP, and Wave
+				Optics in ASAP, at http://www.breault.com/k-base.php </a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

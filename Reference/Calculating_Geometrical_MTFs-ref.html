@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Calculating Geometrical MTFs"/>
+<meta name="abstract" content="In optical systems where the residual aberrations are large, the diffraction MTF can be difficult to compute. Consequently, an analogous measure of performance, the MTF is defined. Whereas, the diffraction Modulation Transfer Function (MTF) is the Fourier transform of the Point Spread Function (PSF), the geometrical MTF is a Fourier transform of the spot diagram."/>
+<meta name="description" content="In optical systems where the residual aberrations are large, the diffraction MTF can be difficult to compute. Consequently, an analogous measure of performance, the MTF is defined. Whereas, the diffraction Modulation Transfer Function (MTF) is the Fourier transform of the Point Spread Function (PSF), the geometrical MTF is a Fourier transform of the spot diagram."/>
+<meta name="DC.subject" content="Calculating Geometrical MTFs, geometrical modular transfer functions, MTF, geometrical"/>
+<meta name="keywords" content="Calculating Geometrical MTFs, geometrical modular transfer functions, MTF, geometrical"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPOTS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Calculating_Phase_Transfer_Functions-ref.html#Calculating_Phase_Transfer_Functions"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_ABC-ref.html#Reference_AC"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Calculating_Geometrical_MTFs"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Calculating Geometrical MTFs</title>
+</head>
+<body id="Calculating_Geometrical_MTFs"><a name="Calculating_Geometrical_MTFs"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Calculating Geometrical MTFs</h5></span>
+	
+	
+	<div><p>In optical systems where the residual aberrations are large, the diffraction MTF can
+		be difficult to compute. Consequently, an analogous measure of performance, the MTF is
+		defined. Whereas, the diffraction Modulation Transfer Function (MTF) is the Fourier
+		transform of the Point Spread Function (PSF), the geometrical MTF is a Fourier transform of
+		the spot diagram. </p>
+
+		<div class="section" id="Calculating_Geometrical_MTFs__section_A647BD0892B24433A32AB02DB0D71610"><a name="Calculating_Geometrical_MTFs__section_A647BD0892B24433A32AB02DB0D71610"><!-- --></a>
+			<p>The geometrical MTF is calculated in ASAP in the same manner as the diffraction MTF.
+				The major difference is that the <b>SPOTS</b> command is used rather
+				than the <b>SPREAD</b> or <b>FIELD</b> commands to generate
+				the PSF. Polychromatic calculations are done by incoherently summing several
+				monochromatic PSFs and then Fourier transforming. </p>
+
+			<p>The <b>WINDOW</b> and <b>PIXEL</b> commands should be set as
+				per the instructions in Calculating MTFs. The spatial frequency cutoff is the hard
+				upper limit on resolution regardless of whether the calculation is performed in the
+				geometrical or diffraction regime. </p>
+
+			<p>A note on geometrical MTFs: a geometrically perfect system produces a PSF that is
+				essentially a delta function. From Fourier transform theory the transform of the
+				delta function is unity at all spatial frequencies. This is clearly not physical
+				because in those instances diffraction determines the cutoff frequency. It is
+				therefore important to consider the validity of geometrical MTFs of near ideal
+				systems. </p>
+
+		</div>
+
+		<div class="section" id="Calculating_Geometrical_MTFs__section_A3ABF6D188E94F88A98DA3CC45E36691"><a name="Calculating_Geometrical_MTFs__section_A3ABF6D188E94F88A98DA3CC45E36691"><!-- --></a><span style="color: #2b6eb5"><h5>See Also</h5></span>
+			
+			<p><i>Modern Optical Engineering</i> by W. Smith, Sections 11.8 through 11.10, for a
+				discussion of transfer functions. </p>
+
+		</div>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_ABC-ref.html#Reference_AC" title="Reference topics in this section begin with the letters &#34;A&#34; to &#34;C&#34;.">Reference (A-C)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Calculating_Phase_Transfer_Functions-ref.html#Calculating_Phase_Transfer_Functions" title="While Modulation Transfer Function (MTF) calculations are by far the more common of the two, there are instances when the Phase Transfer function (PTF) is also needed to completely characterize the imaging properties of an optical system.">Calculating Phase Transfer Functions</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/SPOTS_ASAP-cmdref.html" title="Creates a geometric spot diagram for the currently selected ray data.">SPOTS (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

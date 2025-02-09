@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Define Tolerance Parameter"/>
+<meta name="abstract" content="This topic describes how to define a tolerance parameter in the Editor using one of three methods."/>
+<meta name="description" content="This topic describes how to define a tolerance parameter in the Editor using one of three methods."/>
+<meta name="DC.subject" content="Define Tolerance Parameter, tolerancing, defining tolerance parameter"/>
+<meta name="keywords" content="Define Tolerance Parameter, tolerancing, defining tolerance parameter"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Tolerancing_in_the_Editor-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Tolerance_Analysis_Options_Dialog-task.html#Tolerance_Analysis_Options_Dialog"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Tolerance_Data_Table-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Define_Compensator_Parameter-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Delete_FOM_Function-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Modify_INR_file_for_Tolerancing-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Syntax_Rules_for_Tolerancing_in_the_Editor-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Tolerance_Parameter_Limits_Dialog-task.html#Tolerance_Parameter_Limits_Dialog"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Define_Tolerance_Parameter"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Define Tolerance Parameter</title>
+</head>
+<body id="Define_Tolerance_Parameter"><a name="Define_Tolerance_Parameter"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Define Tolerance Parameter</h5></span>
+	
+	
+	<div><p>This topic describes how to define a tolerance parameter in the Editor using one of
+		three methods. </p>
+
+		<div class="section" id="Define_Tolerance_Parameter__context_8EF8464BBBF64386AA624C6F14D99AD0"><a name="Define_Tolerance_Parameter__context_8EF8464BBBF64386AA624C6F14D99AD0"><!-- --></a>
+			<br/><a name="Define_Tolerance_Parameter__ol_B7F9FBD594DA47A6A32041B92C3A7AF6"><!-- --></a><ol id="Define_Tolerance_Parameter__ol_B7F9FBD594DA47A6A32041B92C3A7AF6">
+				<li id="Define_Tolerance_Parameter__li_F3F8C31EC3D84C89B2EEC6FEA4FE4B4E"><a name="Define_Tolerance_Parameter__li_F3F8C31EC3D84C89B2EEC6FEA4FE4B4E"><!-- --></a>Select the parameter text of an ASAP
+					command line and manually enter angle brackets (&lt; &gt;) at the beginning and
+					end of the text string. For example, to define a tolerance parameter for the
+					radius of curvature for the <b>OPTICAL</b> command, enter: <b>OPTICAL Z 0 &lt;1&gt;</b>. </li>
+
+				<li id="Define_Tolerance_Parameter__li_F1E4CD45ECB9497281F42159D451B10B"><a name="Define_Tolerance_Parameter__li_F1E4CD45ECB9497281F42159D451B10B"><!-- --></a>Select the parameter text of an ASAP
+					command line and add the angle brackets automatically using the Tolerance
+					Parameter command. When you select valid numeric text, the Tolerance Parameter
+					button becomes active. Click this button to insert the brackets. After the
+					brackets are inserted at the beginning and end of the text, the Tolerance
+					Parameter button becomes inactive. </li>
+
+				<li id="Define_Tolerance_Parameter__li_E7451823A1B547B7A5D92D6C6C6C5005"><a name="Define_Tolerance_Parameter__li_E7451823A1B547B7A5D92D6C6C6C5005"><!-- --></a>Select the <b>Tolerance Table
+						Update</b>
+					<a name="Define_Tolerance_Parameter__image"><!-- --></a><img id="Define_Tolerance_Parameter__image" src="../Graphics/Perturb_button.jpg" width="22" height="22" longdesc="Perturb button"/> button
+					on the Tolerance Editor toolbar to update the Tolerance Data Table. </li>
+
+			</ol>
+
+		</div>
+
+	</div>
+
+<div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="../Task/Tolerance_Parameter_Limits_Dialog-task.html#Tolerance_Parameter_Limits_Dialog">Tolerance Parameter Limits Dialog</a></strong><br/>
+When a tolerance data file (*.inx) is displayed in the ASAP Editor window, the Tolerance Parameter Limits dialog is available on the View menu, or by clicking on the Editor toolbar.</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Task/Tolerancing_in_the_Editor-task.html" title="Tolerancing in the ASAP Editor is a two-step process: First, you create a tolerance data file, and then perform the Monte Carlo or Sensitivity analysis.">Tolerancing in the Editor</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Tolerance_Analysis_Options_Dialog-task.html#Tolerance_Analysis_Options_Dialog" title="The Tolerance Analysis Options dialog box designates the number of random perturbations you want to perform for the automatic Monte Carlo analysis.">Tolerance Analysis Options Dialog</a></div>
+<div><a href="../Task/Define_Compensator_Parameter-task.html" title="This topic describes how to define a compensator parameter in the Editor using one of two methods.">Define Compensator Parameter</a></div>
+<div><a href="../Task/Delete_FOM_Function-task.html" title="This topic describes how to delete Figures of Merit from the tolerance data file.">Delete FOM Function</a></div>
+<div><a href="../Task/Modify_INR_file_for_Tolerancing-task.html" title="This topic describes how to open an INR file for tolerancing purposes.">Modify INR file for Tolerancing</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Tolerance_Data_Table-ref.html" title="The Tolerance Data Table contains editable and non-editable cells. The first five columns (Parameter Name, Nominal, Minus, Plus, and Distribution Type) are non-editable, and the remaining cells are editable. You cannot manually add or delete rows from the table.">Tolerance Data Table</a></div>
+<div><a href="../Reference/Syntax_Rules_for_Tolerancing_in_the_Editor-ref.html" title="This topic describes syntax rules for tolerancing analysis in the Editor.">Syntax Rules for Tolerancing in the Editor</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

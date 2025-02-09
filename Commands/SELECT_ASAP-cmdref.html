@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="SELECT (ASAP Command)"/>
+<meta name="abstract" content="Isolates a ray set for further analysis."/>
+<meta name="description" content="Isolates a ray set for further analysis."/>
+<meta name="DC.subject" content="SELECT (ASAP Command), ray set, isolating for analysis, analysis, isolating rays for"/>
+<meta name="keywords" content="SELECT (ASAP Command), ray set, isolating for analysis, analysis, isolating rays for"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_S-ref.html#Commands_and_Macros_S"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CONSIDER_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SUBSET_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Coherent_Incoherent_Analysis-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Ghost_Image_Analysis-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Isolating_Ray_Data-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="SELECT_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>SELECT (ASAP Command)</title>
+</head>
+<body id="SELECT_ASAP_Command"><a name="SELECT_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>SELECT (ASAP Command)</h5></span>
+	
+	
+	<div><p>Isolates a ray set for further analysis. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+SELECT [ ALL ]
+         ADD     [ entry entry' [ AND entry entry' ...
+                                  OR
+         REMOVE  [ entry entry' [ AND entry entry' ...
+                                  OR
+         ONLY    [ entry entry' [ AND entry entry' ...
+                                  OR
+         EXCEPT  [ entry entry' [ AND entry entry' ...                  
+         NONE
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ALL</span></td><td><span>selects all rays</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ADD</span></td><td><span>conditionally adds rays</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>REMOVE</span></td><td><span>conditionally removes rays</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ONLY</span></td><td><span>selects only the specified rays</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>EXCEPT</span></td><td><span>selects all rays except the specified rays</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>NONE</span></td><td><span>unselects all rays</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>AND OR</span></td><td><span>Boolean logical operators</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>entry entry'</span></td><td><span>see Remarks</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="SELECT_ASAP_Command__ul_4AAC87E09C4D4F11B0226E9A56FDF18D"><!-- --></a><ol id="SELECT_ASAP_Command__ul_4AAC87E09C4D4F11B0226E9A56FDF18D">
+			<li id="SELECT_ASAP_Command__li_8E7B1A1C0DA54336A22BA48DE9616AF2"><a name="SELECT_ASAP_Command__li_8E7B1A1C0DA54336A22BA48DE9616AF2"><!-- --></a>Gives the user control over the current set
+				of rays ASAP is to consider in all calculations and output (similar to the <b>CONSIDER</b> command for objects). </li>
+
+			<li id="SELECT_ASAP_Command__li_3741E568E92E4E76999DA10AA2C26164"><a name="SELECT_ASAP_Command__li_3741E568E92E4E76999DA10AA2C26164"><!-- --></a><b>ADD</b> and <b>REMOVE</b> add or remove rays matching a subsequent Boolean condition to or
+				from, respectively, the set of currently selected rays. </li>
+
+			<li id="SELECT_ASAP_Command__li_735BC58FCE47496291C5A23E3DA7DC10"><a name="SELECT_ASAP_Command__li_735BC58FCE47496291C5A23E3DA7DC10"><!-- --></a><b>NONE</b> takes no Boolean
+				conditional and makes the set of currently selected rays equivalent to the empty
+				set. It is included for convenience. </li>
+
+			<li id="SELECT_ASAP_Command__li_D9FBAB341BDA49BAB4AD56CE4EA7252A"><a name="SELECT_ASAP_Command__li_D9FBAB341BDA49BAB4AD56CE4EA7252A"><!-- --></a> Boolean conditions are specified by
+				entering pairs of entries separated by a logical operator (<b>AND/OR</b>) according to the following table. <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>entry</span></th><th><span>entry'</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>i</span></td><td><span>j</span></td><td><span>Ray number is between <b>i</b> through <b>j</b> inclusive</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>OBJECT</span></td><td><span>n</span></td><td><span>Ray comes from previous object <b>n</b> (name or number)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>OBJECT</span></td><td><span>-n</span></td><td><span>Ray was scattered from object <b>n</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>OBJECT</span></td><td><span>+n</span></td><td><span>Ray was split from object <b>n</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SOURCE</span></td><td><span>k</span></td><td><span>Ray originated from source number <b>k</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SOURCE</span></td><td><span>-k</span></td><td><span>Scattered ray from source number <b>k</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MEDIA</span></td><td><span>m</span></td><td><span>Ray is in MEDIA <b>m</b> (name or number</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MEDIA</span></td><td><span>-m</span></td><td><span>Scattered ray is in MEDIA <b>m</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>GENERATION</span></td><td><span>n</span></td><td><span>Ray was split +scattered <b>n</b> times</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>GENERATION</span></td><td><span>-n</span></td><td><span>Ray was scattered <b>n</b> times</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>GENERATION</span></td><td><span>+n</span></td><td><span>Ray was split <b>n</b> times</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>EVERY</span></td><td><span>n</span></td><td><span>Ray number modulo <b>n</b> equals one.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>HITS</span></td><td><span>n</span></td><td><span> Ray has hit objects <b>n</b> times </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span/></td><td><span>-[n]</span></td><td><span>Ray has hit objects <b>n</b> times and has not yet
+							refracted/reflected with last object</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span/></td><td><span>+[n]</span></td><td><span>Ray has hit objects <b>n</b> times and has refracted/reflected with
+							last object</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>PATH</span></td><td><span>l</span></td><td><span>Ray belongs to <b>l</b>th path from last PATHS command</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>PATH</span></td><td><span>0</span></td><td><span>Ray belongs to a path not listed by last PATHS command</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>w</span></td><td><span>W</span></td><td><span>Ray has wavelength greater than <b>w</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>W</span></td><td><span>w</span></td><td><span>Ray has wavelength less than <b>w</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>f</span></td><td><span>F</span></td><td><span>Ray has flux greater than <b>f</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>F</span></td><td><span>f</span></td><td><span>Ray has flux less than <b>f</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>d</span></td><td><span>L</span></td><td><span>Ray has optical path length greater than <b>d</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>L</span></td><td><span>d</span></td><td><span>Ray has optical path length less than <b>d</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>r</span></td><td><span>R</span></td><td><span>Ray has AXIS radial coordinates greater than <b>r</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>R</span></td><td><span>r'</span></td><td><span>Ray has AXIS radial coordinates less than <b>r'</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>t</span></td><td><span>T</span></td><td><span>Ray has AXIS angular coordinates greater than <b>t</b>
+						degrees</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>T</span></td><td><span>t'</span></td><td><span>Ray has AXIS angular coordinates less than <b>t'</b>
+						degrees</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>U</span></td><td><span>i</span></td><td><span>Ray on object's element # i (conicoid, array or patch
+						"row")</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>V</span></td><td><span>j</span></td><td><span>Ray on object's element # j (array or patch "column")</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>u</span></td><td><span>U</span></td><td><span>Ray has first parametric coordinate greater than u</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>U</span></td><td><span>u</span></td><td><span>Ray has first parametric coordinate less than u</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>v</span></td><td><span>V</span></td><td><span>Ray has second parametric coordinate greater than v</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>V</span></td><td><span>v</span></td><td><span>Ray has second parametric coordinate less than v</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x</span></td><td><span>X</span></td><td><span>Ray has X coordinates greater than <b>x</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X</span></td><td><span>x'</span></td><td><span>Ray has X coordinates less than <b>x'</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>y</span></td><td><span>Y</span></td><td><span>Ray has Y coordinates greater than <b>y</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Y</span></td><td><span>y'</span></td><td><span>Ray has Y coordinates less than <b>y'</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>z</span></td><td><span>Z</span></td><td><span>Ray has Z coordinates greater than <b>z</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Z</span></td><td><span>z'</span></td><td><span>Ray has Z coordinates less than <b>z'</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a</span></td><td><span>A</span></td><td><span>Ray has X direction cosines greater than <b>a</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>A</span></td><td><span>a'</span></td><td><span>Ray has X direction cosines less than <b>a'</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>b</span></td><td><span>B</span></td><td><span>Ray has Y direction cosines greater than <b>b</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>B</span></td><td><span>b'</span></td><td><span>Ray has Y direction cosines less than <b>b'</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>c</span></td><td><span>C</span></td><td><span>Ray has Z direction cosines greater than <b>c</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>C</span></td><td><span>c'</span></td><td><span>Ray has Z direction cosines less than <b>c'</b></span></td></tr></tbody></table></li>
+
+			<li id="SELECT_ASAP_Command__li_385D0DD7C714466393A9E86B361E0B5A"><a name="SELECT_ASAP_Command__li_385D0DD7C714466393A9E86B361E0B5A"><!-- --></a>The sign of the entry for hits determines
+				whether or not the ray has interacted with the last object. A minus sign indicates
+				the ray has not yet refracted/reflected. A plus sign or no sign indicates the ray
+				has already refracted/reflected. </li>
+
+			<li id="SELECT_ASAP_Command__li_50B37774C8FF4EACA1FE9ECBC409B452"><a name="SELECT_ASAP_Command__li_50B37774C8FF4EACA1FE9ECBC409B452"><!-- --></a>All tests, including logical operations,
+				are applied to each ray individually, one at a time. The ray must satisfy all
+				specified conditions to be selected. The final number of rays selected is displayed
+				after all rays have been tested. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#SELECT">SELECT Examples</a>
+		</p>
+
+	</div>
+
+	<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_S-ref.html#Commands_and_Macros_S" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “S”.">Commands and Macros (S)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Coherent_Incoherent_Analysis-conc.html">Coherent - Incoherent Analysis</a></div>
+<div><a href="../Concept/Ghost_Image_Analysis-conc.html" title="Ghost images are produced by inter-reflections of light from optical element surfaces that have nonzero reflection and transmission coefficients. Some of the incident light is transmitted at a surface of the element while some is reflected at the same surface. The reflected light propagates back to another element surface, is reflected there, and eventually propagates to the image plane or detector. The culmination of these reflections results in a ghost image.">Ghost Image Analysis</a></div>
+<div><a href="../Concept/Isolating_Ray_Data-conc.html">Isolating Ray Data</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/CONSIDER_ASAP-cmdref.html" title="Selects a set of objects for ray tracing and plotting.">CONSIDER (ASAP Command)</a></div>
+<div><a href="../Commands/SUBSET_ASAP-cmdref.html" title="Selects a subset of the current ray set and rejects remaining ray data.">SUBSET (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Stray Light Analysis with ASAP</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Stray Light Analysis, at
+				http://www.breault.com/k-base.php </a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="VIEW (ASAP Command)"/>
+<meta name="abstract" content="Make all future plots a true perspective view."/>
+<meta name="description" content="Make all future plots a true perspective view."/>
+<meta name="DC.subject" content="VIEW (ASAP Command), plots, true perspective view"/>
+<meta name="keywords" content="VIEW (ASAP Command), plots, true perspective view"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_V-ref.html#Commands_and_Macros_V"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OBLIQUE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WINDOW_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="VIEW_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>VIEW (ASAP Command)</title>
+</head>
+<body id="VIEW_ASAP_Command"><a name="VIEW_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>VIEW (ASAP Command)</h5></span>
+	
+	
+	<div><p>Make all future plots a true perspective view. </p>
+
+		<p><b>Syntax 1</b>
+		</p>
+
+		<pre class="codeblock">
+VIEW [ X ] [ h ] [ CENTER x y z ] [ EYE x' y' z' ]
+       Y                            DIR a,b,c
+       Z
+</pre>
+
+		<p><b>Syntax 2</b>
+		</p>
+
+		<p>The current view can be modified with the following forms: </p>
+
+		<pre class="codeblock">
+VIEW [ OFF ] [ ZOOM f ] [ DOLLY d ] [ ORBIT o ] [ FOV a ]
+  0
+      </pre>
+
+		<p><b>Remarks - Syntax 2</b>
+		</p>
+
+		<br/><a name="VIEW_ASAP_Command__ul_3E399E54F763480E9224D32A7592A596"><!-- --></a><ol id="VIEW_ASAP_Command__ul_3E399E54F763480E9224D32A7592A596">
+			<li id="VIEW_ASAP_Command__li_787AB52E2A4A4F68B1BA2808C9E8836D"><a name="VIEW_ASAP_Command__li_787AB52E2A4A4F68B1BA2808C9E8836D"><!-- --></a> Make all future plots a true perspective
+				view instead of using the current <b>WINDOW</b> (and <b>OBLIQUE</b>) settings. The view is completely determined by an up coordinate
+				axis, a vertical full height <b>h</b> in system units, the global center
+				of the view <b>x y z,</b> and eye point <b>x' y' z'</b> (or
+					<b>DIRection a,b,c</b> equivalent to an eye point a distance
+					1000*<b>h</b> away). <p>The current perspective view can be modified
+					a variety of ways, as shown in the second syntax above. </p>
+</li>
+
+			<li id="VIEW_ASAP_Command__li_AA243E68B15741818D71AD44484A1A75"><a name="VIEW_ASAP_Command__li_AA243E68B15741818D71AD44484A1A75"><!-- --></a> Turn perspective viewing <b>OFF;</b> that is, return to normal <b>WINDOW</b> (and <b>OBLIQUE</b>) settings. <p>The form <b>VIEW 0</b> calculates
+					the closest perspective view to the current <b>WINDOW</b> (and
+						<b>OBLIQUE</b>) settings assuming an eye distance that is twice
+					the vertical height (closely approximates a standard 35mm camera lens).
+					</p>
+<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>ZOOM</b></span></td><td><span>divides the current vertical height by a factor <b>f</b> (&gt;1
+							zooms in, &lt;1 zooms out).</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>DOLLY</b></span></td><td><span>changes the current height and eye distance by the signed fraction
+								<b>d</b> (positive moves toward the center point, negative
+						away).</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>ORBIT</b></span></td><td><span>rotates the eye point an angle <b>o</b> degrees about
+							the up coordinate axis.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>FOV</b></span></td><td><span>changes the eye distance to yield a full field-of-view equal to
+								<b>a</b> degrees (enter zero for parallel
+						projection).</span></td></tr></tbody></table></li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#VIEW">VIEW Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_V-ref.html#Commands_and_Macros_V" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “V”.">Commands and Macros (V)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/OBLIQUE_ASAP-cmdref.html" title="Switches future graphical output between normal (orthogonal) projection and oblique (non-orthogonal) projection.">OBLIQUE (ASAP Command)</a></div>
+<div><a href="../Commands/WINDOW_ASAP-cmdref.html" title="Sets the plotting window for graphical output.">WINDOW (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

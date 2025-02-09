@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="POLARIZ (ASAP Command)"/>
+<meta name="abstract" content="Sets the polarization properties for future ray creation."/>
+<meta name="description" content="Sets the polarization properties for future ray creation."/>
+<meta name="DC.subject" content="POLARIZ (ASAP Command), polarization, setting properties, ray, polarization properties"/>
+<meta name="keywords" content="POLARIZ (ASAP Command), polarization, setting properties, ray, polarization properties"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_P-ref.html#Commands_and_Macros_P"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FIELD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FRESNEL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GET_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_DATA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LIST_ELLIPSE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_POLARIZATION_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/POLARIZ_K_ReferenceRayDir_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/POLARIZ_Polarization_Vector_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/POLARIZ_RANDOM_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/POLARIZ_TREF_Transverse_ReferenceDir_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PUT_ASAP-cmdref.html#PUT_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/RAYSET_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SHOW_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPREAD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Polarization_Ray_Tracing_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=20"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=235"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=19"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="POLARIZ_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>POLARIZ (ASAP Command)</title>
+</head>
+<body id="POLARIZ_ASAP_Command"><a name="POLARIZ_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>POLARIZ (ASAP Command)</h5></span>
+	
+	
+	<div><p>Sets the polarization properties for future ray creation. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+POLARIZ X [ a a' ]
+        Y
+        Z
+        OFF
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X, Y, or Z</span></td><td><span>coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a a'</span></td><td><span>complex amplitudes</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>OFF</span></td><td><span>flag to turn polarization direction off</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="POLARIZ_ASAP_Command__ul_16D4D43B90F04B9EAA5680FCB72D437B"><!-- --></a><ol id="POLARIZ_ASAP_Command__ul_16D4D43B90F04B9EAA5680FCB72D437B">
+			<li id="POLARIZ_ASAP_Command__li_1774627086234D54B76789ECB80D117C"><a name="POLARIZ_ASAP_Command__li_1774627086234D54B76789ECB80D117C"><!-- --></a>Sets the polarization direction and
+				optionally the complex amplitudes of the two orthogonal polarization components of
+				rays, for future ray creation (<b>RAYSET</b> and <b>GRID</b>) and analyses (<b>SPREAD</b> and <b>FIELD</b>). </li>
+
+			<li id="POLARIZ_ASAP_Command__li_236562619F284518A14C7B28D2F4D89A"><a name="POLARIZ_ASAP_Command__li_236562619F284518A14C7B28D2F4D89A"><!-- --></a>Initializes the complex coefficients
+					<b>a</b> and <b>a'</b>&gt; for the two orthogonal
+				components. </li>
+
+			<li id="POLARIZ_ASAP_Command__li_2B6D9329F35A4CA3B72FC79C423F3686"><a name="POLARIZ_ASAP_Command__li_2B6D9329F35A4CA3B72FC79C423F3686"><!-- --></a><b>POLARIZ</b> selects the <b><i>E</i></b> field direction in the <b>FIELD</b> command. The
+					<b><i>E</i></b> field is parallel to the specified coordinate axis. </li>
+
+			<li id="POLARIZ_ASAP_Command__li_4593CBB6534C438BBD9AD04C3FDD50FB"><a name="POLARIZ_ASAP_Command__li_4593CBB6534C438BBD9AD04C3FDD50FB"><!-- --></a>Must precede the <b>GRID, RAYSET,
+					FIELD</b> and <b>SPREAD</b> commands as it is a physical
+				property of the rays. </li>
+
+			<li id="POLARIZ_ASAP_Command__li_F1AB8660062148A0AD71698F4EE8369D"><a name="POLARIZ_ASAP_Command__li_F1AB8660062148A0AD71698F4EE8369D"><!-- --></a>The <b>FRESNEL BOTH</b> command
+				should be used in conjunction with <b>POLARIZ</b> to configure the
+				system geometry to include polarization effects. </li>
+
+			<li id="POLARIZ_ASAP_Command__li_AD493C31438342A1BC4768D1A3238E3C"><a name="POLARIZ_ASAP_Command__li_AD493C31438342A1BC4768D1A3238E3C"><!-- --></a> A transverse optical field can be written
+				as: <p>
+					<br/><img src="../Equations/POLARIZ_equation1.gif"/><br/>
+				</p>
+<p>where <img src="../Equations/POLARIZ_equation_inline1.gif"/> and <img src="../Equations/POLARIZ_equation_inline2.gif"/> are orthogonal real
+					(linear) unit vectors, and the wave-vector <br/><img src="../Equations/POLARIZ_equation2.gif"/><br/></p>
+
+				<p>gives
+					the propagation direction of the field. The <b>POLARIZ</b> command
+					allows specification of complex amplitudes <b>a</b> and <b>a'</b> to represent the polarization of the electric field. The unit
+					vector <img src="../Equations/POLARIZ_equation_inline1.gif"/> is parallel to
+					the coordinate axis specified by the parameter immediately before a. The unit
+					vector <img src="../Equations/POLARIZ_equation_inline2.gif"/> is derived from
+					the propagation direction of each subsequently defined source to satisfy the
+					transverse condition, <br/><img src="../Equations/POLARIZ_equation3.gif"/><br/></p>
+
+				<p>that is to say, <br/><img src="../Equations/POLARIZ_equation4.gif"/><br/></p>
+
+			</li>
+
+			<li id="POLARIZ_ASAP_Command__li_74BAF1CADD924B54834C216DC67AA8E4"><a name="POLARIZ_ASAP_Command__li_74BAF1CADD924B54834C216DC67AA8E4"><!-- --></a>ASAP modifies the polarization of rays as
+				needed to avoid the creation of axial fields, and warns when this occurs.
+				Modifications do not permanently change the <b>POLARIZ</b> settings. </li>
+
+			<li id="POLARIZ_ASAP_Command__li_11EEDF0817674BA798BCB620DC89A982"><a name="POLARIZ_ASAP_Command__li_11EEDF0817674BA798BCB620DC89A982"><!-- --></a><b>SHOW</b> presents the
+				complete complex coefficients of <b>POLARIZ</b>. </li>
+
+		</ol>
+
+		<p>
+			<a href="/example_scripts.html#POLARIZ">POLARIZ Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_P-ref.html#Commands_and_Macros_P" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “P”.">Commands and Macros (P)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Polarization_Ray_Tracing_Overview-conc.html" title="FRESNEL BOTH initiates polarization calculations by instructing ASAP to calculate the appropriate reflection and transmission coefficients at an OBJECT INTERFACE for each ray as a function of polarization and angle of incidence.">Polarization Ray Tracing Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/FIELD_ASAP-cmdref.html" title="Calculates the exact complex field distribution.">FIELD (ASAP Command)</a></div>
+<div><a href="../Commands/FRESNEL_ASAP-cmdref.html" title="Adjusts the reflection/transmission coefficients specified on an interface using Fresnel's formulae during a ray trace.">FRESNEL (ASAP Command)</a></div>
+<div><a href="../Commands/GET_ASAP-cmdref.html" title="Retrieves ray data and copies it into variables.">GET (ASAP Command)</a></div>
+<div><a href="../Commands/GRID_DATA_ASAP-cmdref.html" title="Creates a rectangular grid of rays.">GRID DATA (ASAP Command)</a></div>
+<div><a href="../Commands/LIST_ELLIPSE_ASAP-cmdref.html" title="Lists polarization parameters of currently selected ray data.">LIST ELLIPSE (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_POLARIZATION_ASAP-cmdref.html" title="Plots polarization state ellipses.">PLOT POLARIZATION (ASAP Command)</a></div>
+<div><a href="../Commands/POLARIZ_K_ReferenceRayDir_ASAP-cmdref.html" title="Sets the direction of the reference ray.">POLARIZ K (Reference Ray Direction) (ASAP Command)</a></div>
+<div><a href="../Commands/POLARIZ_Polarization_Vector_ASAP-cmdref.html" title="Sets the polarization vector in a ray local polarization coordinate system.">POLARIZ (Polarization Vector) (ASAP Command)</a></div>
+<div><a href="../Commands/POLARIZ_RANDOM_ASAP-cmdref.html" title="Randomize the polarization state vector of the rays.">POLARIZ RANDOM (ASAP Command)</a></div>
+<div><a href="../Commands/POLARIZ_TREF_Transverse_ReferenceDir_ASAP-cmdref.html" title="Sets polarization reference coordinate system.">POLARIZ TREF (Transverse Reference Direction) (ASAP Command)</a></div>
+<div><a href="../Commands/PUT_ASAP-cmdref.html#PUT_ASAP_Command" title="Copies variable data into the current ray data.">PUT (ASAP Command)</a></div>
+<div><a href="../Commands/RAYSET_ASAP-cmdref.html" title="Specifies an arbitrary set of rays.">RAYSET (ASAP Command)</a></div>
+<div><a href="../Commands/SHOW_ASAP-cmdref.html" title="Displays current settings.">SHOW (ASAP Command)</a></div>
+<div><a href="../Commands/SPREAD_ASAP-cmdref.html" title="Calculates the exact coherent/incoherent energy distribution.">SPREAD (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=20" target="_blank">See the Knowledge Base for the technical publication, Modeling Incoherent Extended Sources in ASAP</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=235" target="_blank">See the Knowledge Base for the technical publication, Polarization</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=19" target="_blank">See the Knowledge Base for the technical publication, Telecommunications Component Modeling</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

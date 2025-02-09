@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="FFT (ASAP Command)"/>
+<meta name="abstract" content="Calculates the spatial frequency spectrum of current distribution data."/>
+<meta name="description" content="Calculates the spatial frequency spectrum of current distribution data."/>
+<meta name="DC.subject" content="FFT (ASAP Command), distribution data, spatial frequency, spatial frequency"/>
+<meta name="keywords" content="FFT (ASAP Command), distribution data, spatial frequency, spatial frequency"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DIMENSIONS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DISPLAY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FTSIZE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OPDMAP_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPREAD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Distribution_Data_Files_Data_Manipulation-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_F-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="FFT_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>FFT (ASAP Command)</title>
+</head>
+<body id="FFT_ASAP_Command"><a name="FFT_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>FFT (ASAP Command)</h5></span>
+	
+	
+	<div><p>Calculates the spatial frequency spectrum of current distribution data. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+FFT [ f ] [ AMPLITUDE ] [SIZE [ m ] ] [ 'flabel' ]
+      n     PHASE
+            MODULUS
+            WAVEFRONT
+            REAL
+            IMAGINARY
+            ENERGY
+     </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>f</span></td><td><span>fraction of grid of transformed data to be used to replace the current
+					distribution file</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m</span></td><td><span>Fourier transform size (see Remarks)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span>number of pixels in the transformed data to be used to replace the current
+					distribution file</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>AMPLITUDE, PHASE, MODULUS, WAVEFRONT, REAL, IMAGINARY, ENERGY</span></td><td><span>transform characteristic of interest</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>flabel</span></td><td><span>new label for functional data</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="FFT_ASAP_Command__ul_A06760BD69164059A9110BFBE415CC4B"><!-- --></a><ol id="FFT_ASAP_Command__ul_A06760BD69164059A9110BFBE415CC4B">
+			<li id="FFT_ASAP_Command__li_994EF88E3705432A9753E2814CEB77A4"><a name="FFT_ASAP_Command__li_994EF88E3705432A9753E2814CEB77A4"><!-- --></a>Replaces the current distribution file with
+				its spatial frequency spectrum. It does this by applying a Fast Fourier Transform to
+				an m-by-m block of data points, where <b>m</b> is the current Fourier
+				transform size (2 raised to the <b>m</b>th power, or as set by the
+					<b>FTSIZE</b> command) minus one. See <b>DIMENSION</b>
+				output. </li>
+
+			<li id="FFT_ASAP_Command__li_BF2A4FA0DB6F43AAB5DCD977A949517C"><a name="FFT_ASAP_Command__li_BF2A4FA0DB6F43AAB5DCD977A949517C"><!-- --></a>If the original data area is smaller than
+					<b>m</b>-by-<b>m</b>, the data is centered and any
+				excess is zero filled. </li>
+
+			<li id="FFT_ASAP_Command__li_21DB24A660444B2AB8CC74C1F876B8AB"><a name="FFT_ASAP_Command__li_21DB24A660444B2AB8CC74C1F876B8AB"><!-- --></a>If the original data area is larger, you
+				must make sure that most of the energy lies in the first <b>m</b>-by-<b>m</b> block. ASAP then takes the selected part
+				(default <b>MODULUS</b>) of the center <b>n</b>-by-<b>n</b> or <b>f</b>*<b>m</b>-by-<b>b</b>*<b>m</b> area of the <b>FFT</b> as the
+				current data set. </li>
+
+			<li id="FFT_ASAP_Command__li_569048DF5F0A4E72ABFCCE40574A38D8"><a name="FFT_ASAP_Command__li_569048DF5F0A4E72ABFCCE40574A38D8"><!-- --></a>If <b>f</b> is an integer
+					<b>n</b> greater than one, it is the actual number of pixels to use.
+				ASAP calculates the default for <b>n</b> to maintain the original data
+				size. </li>
+
+			<li id="FFT_ASAP_Command__li_0AFC054B8EAA41CD97804B1C7FC5BEAF"><a name="FFT_ASAP_Command__li_0AFC054B8EAA41CD97804B1C7FC5BEAF"><!-- --></a>If <b>f</b> or <b>n,</b> are a negative number, the inverse <b>FFT</b> operation is
+				performed. </li>
+
+			<li id="FFT_ASAP_Command__li_5E498C8473EB41C09F2B4A7A2C5ECE41"><a name="FFT_ASAP_Command__li_5E498C8473EB41C09F2B4A7A2C5ECE41"><!-- --></a>Applying the <b>FFT</b> command
+				to the diffraction image of a point object generated by a <b>SPREAD</b>
+				or <b>OPDMAP</b> command produces the classical MTF (Modulation Transfer
+				Function) of the system. </li>
+
+			<li id="FFT_ASAP_Command__li_17E53E9A41544EFEA49C9FE34D31B1B0"><a name="FFT_ASAP_Command__li_17E53E9A41544EFEA49C9FE34D31B1B0"><!-- --></a> The spacing <b>S'</b> between
+				sample points after the <b>FFT</b> is related to the original spacing
+					<b>S</b> by: <p>
+					<br/><a name="FFT_ASAP_Command__image_CF64039887CE4AFF95CBBA2540F37C88"><!-- --></a><img id="FFT_ASAP_Command__image_CF64039887CE4AFF95CBBA2540F37C88" src="../Equations/FFT_equation1.gif" width="183" height="50"/><br/>
+				</p>
+<p>where the maximum pixel value determines the constant in the above
+					expression. </p>
+<p>Use the <b>flabel</b> option to relabel the
+					functional data. </p>
+</li>
+
+			<li id="FFT_ASAP_Command__li_8DDA47B809BE49A984D71C89F6557DD6"><a name="FFT_ASAP_Command__li_8DDA47B809BE49A984D71C89F6557DD6"><!-- --></a>If the Fourier transformed field <b>U(p,q)</b> is written in the form: <p>
+					<br/><a name="FFT_ASAP_Command__image_9CDF7C60F9FB4808BE1409383D076625"><!-- --></a><img id="FFT_ASAP_Command__image_9CDF7C60F9FB4808BE1409383D076625" src="../Equations/FFT_equation2.gif" width="281" height="33"/><br/>
+				</p>
+<p>where <b>A(p,q)</b> is the real part and <b>B(p,q)</b> is the imaginary part
+					of the field, then the components of the complex field that can be displayed
+					include those in the following table. </p>
+<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Operation</span></th><th><span>Physical Significance</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>AMPLITUDE</b></span></td><td><span>sign(real( U )) | U |</span></td><td><span>signed modulus of field</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>PHASE</b></span></td><td><span>arctan( B / A )</span></td><td><span>phase in radians</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>MODULUS</b></span></td><td><span>| U |</span></td><td><span>modulus of the field</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>WAVEFRONT</b></span></td><td><span>arctan( B / A ) / 2 p</span></td><td><span>wavefront in waves</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>REAL</b></span></td><td><span>real( U )</span></td><td><span>or A real part of field</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>IMAGINARY</b></span></td><td><span>imaginary( U ) or B</span></td><td><span>imaginary part of field</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>ENERGY</b></span></td><td><span>U U*</span></td><td><span>modulus squared of field (energy density) </span></td></tr></tbody></table></li>
+
+			<li id="FFT_ASAP_Command__li_755F4A1273C34E26ABAD52314F866B8A"><a name="FFT_ASAP_Command__li_755F4A1273C34E26ABAD52314F866B8A"><!-- --></a>The phase transfer function (PTF) may be
+				obtained by extracting the phase or wavefront from the FFT operation. The wavefront
+				is usually better choice because it attempts to remove the <b>2π</b> phase steps
+				from the wavefront. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#FFT">FFT Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_F-ref.html" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “F”.">Commands and Macros (F)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Distribution_Data_Files_Data_Manipulation-conc.html" title="ASAP supports a rich set of data processing commands that act on the distribution data files.">Distribution Data Files - Data Manipulation</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DIMENSIONS_ASAP-cmdref.html" title="Displays a table of maximum array dimensions for the most important program arrays.">DIMENSIONS (ASAP Command)</a></div>
+<div><a href="../Commands/DISPLAY_ASAP-cmdref.html" title="Reads previously created distribution data files so that they can be modified.">DISPLAY (ASAP Command)</a></div>
+<div><a href="../Commands/FTSIZE_ASAP-cmdref.html" title="Sets the Fourier Transform size to the default maximum.">FTSIZE (ASAP Command)</a></div>
+<div><a href="../Commands/OPDMAP_ASAP-cmdref.html" title="Creates a geometric wavefront map of the currently selected ray data.">OPDMAP (ASAP Command)</a></div>
+<div><a href="../Commands/SPREAD_ASAP-cmdref.html" title="Calculates the exact coherent/incoherent energy distribution.">SPREAD (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="REVOLUTION (ASAP Command)"/>
+<meta name="abstract" content="Creates a surface specified by spinning a 2D curve around a given axis."/>
+<meta name="description" content="Creates a surface specified by spinning a 2D curve around a given axis."/>
+<meta name="DC.subject" content="REVOLUTION (ASAP Command), surface, spinning 2D curve"/>
+<meta name="keywords" content="REVOLUTION (ASAP Command), surface, spinning 2D curve"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_R-ref.html#Commands_and_Macos_R"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LIMITS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LOCAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REVOLUTION_Fitted_ASAP-cmdref.html#REVOLUTION_Fitted_ASAP_Command"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="REVOLUTION_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>REVOLUTION (ASAP Command)</title>
+</head>
+<body id="REVOLUTION_ASAP_Command"><a name="REVOLUTION_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>REVOLUTION (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Creates a surface specified by spinning a 2D curve around a given
+	 axis. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <p>(numbers represent powers): 
+	 </p>
+ 
+	 <pre class="codeblock">
+REVOLUTION  X x c0 z1 x1 [z2 zx x2 [z3... [z4... [z5... ]]]] [DECENTER d]
+            Y y c0 x1 y1 [x2 xy y2 [x3... [x4... [x5... ]]]]
+            Z z c0 y1 z1 [y2 yz z2 [y3... [y4... [y5... ]]]]
+      </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X, Y or Z</span></td><td><span>axis of symmetry</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x, y or z</span></td><td><span>location along coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>c0 z1 x1..., c0 x1 y1..., or c0 y1 z1...</span></td><td><span>coefficients of 2D curve</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>DECENTER d</span></td><td><span>optional decentering</span></td></tr></tbody></table> 
+	 <p><b>Reference Point</b> 
+	 </p>
+ 
+	 <p>At location along coordinate axis. 
+	 </p>
+ 
+	 <p><b>Surface Normal</b> 
+	 </p>
+ 
+	 <p>Radially outward from the axis. 
+	 </p>
+ 
+	 <p><b>Autolimiting</b> 
+	 </p>
+ 
+	 <p>No; requires 
+		<b>LOCAL</b> or 
+		<b>LIMITS</b> modifiers. 
+	 </p>
+ 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="REVOLUTION_ASAP_Command__ul_63CAD31B3F7A4280BAB7ECB22C395547"><!-- --></a><ol id="REVOLUTION_ASAP_Command__ul_63CAD31B3F7A4280BAB7ECB22C395547"> 
+		<li id="REVOLUTION_ASAP_Command__li_31310D25631945D9AAA48C9E0C2D9BEA"><a name="REVOLUTION_ASAP_Command__li_31310D25631945D9AAA48C9E0C2D9BEA"><!-- --></a>Takes the general 2D curve
+		  defined relative to the given coordinate by the ascending coefficients (up to
+		  21, that is, fifth), optionally decenters it a distance d, and then rotates it
+		  about the given axis to form a 3D surface of up to twice the order of the
+		  curve. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#REVOLUTION">REVOLUTION
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_R-ref.html#Commands_and_Macos_R" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “R”.">Commands and Macros (R)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/LIMITS_ASAP-cmdref.html" title="Assigns a global bounding box to the object.">LIMITS (ASAP Command)</a></div>
+<div><a href="../Commands/LOCAL_ASAP-cmdref.html" title="Assigns a local bounding box to the surface/function.">LOCAL (ASAP Command)</a></div>
+<div><a href="../Commands/REVOLUTION_Fitted_ASAP-cmdref.html#REVOLUTION_Fitted_ASAP_Command" title="Creates a surface by spinning a 2D curve fit to data points.">REVOLUTION (Fitted) (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

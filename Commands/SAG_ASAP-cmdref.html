@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="SAG (ASAP Command)"/>
+<meta name="abstract" content="Deforms or sags an edge onto a surface."/>
+<meta name="description" content="Deforms or sags an edge onto a surface."/>
+<meta name="DC.subject" content="SAG (ASAP Command), edge, deform or sag, surface, deforming edge or sag onto"/>
+<meta name="keywords" content="SAG (ASAP Command), edge, deform or sag, surface, deforming edge or sag onto"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_S-ref.html#Commands_and_Macros_S"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REPEAT_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="SAG_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>SAG (ASAP Command)</title>
+</head>
+<body id="SAG_ASAP_Command"><a name="SAG_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>SAG (ASAP Command)</h5></span>
+	
+	
+	<div><p>Deforms or sags an edge onto a surface. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+SAG [ X ] i  [ ABS ]
+          Y    REL
+          Z  [ CV c [ c'] ] [ CC k [ k'] ] [ AD d [ d'] ] [ VP p [ p'] ]
+               RD r   r'
+               SPHERE r [ q q' [ p p' ] ]
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X Y Z</span></td><td><span>sag direction</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>i</span></td><td><span>ith previously defined surface/function</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ABS</span></td><td><span>sag the edge ABSsolutely (the default) for all points</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>REL</span></td><td><span>sag the edge RELatively for any interior control points</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CV</span></td><td><span> curvature sag flag</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>c c'</span></td><td><span>vertex curvature</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CC</span></td><td><span>conic constant sag flag</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>k k'</span></td><td><span>conic constant</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>AD</span></td><td><span>fourth-order deformation sag flag</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>d d'</span></td><td><span>fourth-order deformation coefficients</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>VP</span></td><td><span>vertex offset sag flag</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>p p'</span></td><td><span>vertex offset</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RD</span></td><td><span>radius sag flag</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>r r'</span></td><td><span>vertex radius</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>k k'</span></td><td><span>conic constant</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SPHERE</span></td><td><span>sphere sag flag</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>r</span></td><td><span>distance from the edge's reference point (or the given vertex point p p')
+					to center of sphere</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>q q'</span></td><td><span>maps remaining two coordinate directions to the surface</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>p p'</span></td><td><span>vertex offset</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="SAG_ASAP_Command__ul_F071DCC8F0D244E693526A31522EF07D"><!-- --></a><ol id="SAG_ASAP_Command__ul_F071DCC8F0D244E693526A31522EF07D">
+			<li id="SAG_ASAP_Command__li_28DA147394314DC3B317BAB5F9CEDF6E"><a name="SAG_ASAP_Command__li_28DA147394314DC3B317BAB5F9CEDF6E"><!-- --></a>Deforms the last EDGE specification by
+				sagging the points on the edge. </li>
+
+			<li id="SAG_ASAP_Command__li_8E8014030337496F8399B53F33178130"><a name="SAG_ASAP_Command__li_8E8014030337496F8399B53F33178130"><!-- --></a> The actual sag can be specified in three
+				different ways: <br/><a name="SAG_ASAP_Command__ol_F81B6BDBB4114D73B4A77245B180880E"><!-- --></a><ul id="SAG_ASAP_Command__ol_F81B6BDBB4114D73B4A77245B180880E">
+					<li id="SAG_ASAP_Command__li_675C2669DB23496B9E94432FCBEB6C9A"><a name="SAG_ASAP_Command__li_675C2669DB23496B9E94432FCBEB6C9A"><!-- --></a>The edge can be sagged to the
+						previously defined ith SURFACE. This can be ABSolutely (the default) for all
+						points or RELatively for any interior control points. The latter retains the
+						shapes of individual segments of the edge. </li>
+
+					<li id="SAG_ASAP_Command__li_D9B7231EA6EB41E3A6C54493B1A2008D"><a name="SAG_ASAP_Command__li_D9B7231EA6EB41E3A6C54493B1A2008D"><!-- --></a>The sag can be specified
+						independently via a standard optical sag formula. The <b>c, r, d, k
+							and p</b> specify the vertex curvature, vertex radius,
+						fourth-order deformation coefficient, conic constant, and vertex offset
+						respectively, of the first semimajor axis component. The primed quantities
+						refer to the second axis and are defaulted to the same values as the first.
+						The default for the conic constant <b>k</b> is -1, that is, a
+						parabola. </li>
+
+					<li id="SAG_ASAP_Command__li_30503508889349A3B69995B1C5DDEB7D"><a name="SAG_ASAP_Command__li_30503508889349A3B69995B1C5DDEB7D"><!-- --></a>All the edge points can be exactly
+						sagged to a <b>SPHERE</b>. The center of the sphere is located a distance
+							<b>r</b> from the edge's reference point (or the given
+						vertex point <b>p p')</b> along the given coordinate axis. The
+						mapping of the other two coordinate directions to the surface of the sphere
+						is controlled by the <b>q and q'</b> parameters. A value of zero
+						performs a latitude mapping; a value of one performs a longitude mapping.
+						The parameters can be varied continuously between these two cases. </li>
+
+				</ul>
+</li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#SAG">SAG Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_S-ref.html#Commands_and_Macros_S" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “S”.">Commands and Macros (S)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/REPEAT_ASAP-cmdref.html" title="Repeats previously defined entity data.">REPEAT (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

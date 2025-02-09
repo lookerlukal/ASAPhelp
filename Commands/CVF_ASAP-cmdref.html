@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="CVF (ASAP Command)"/>
+<meta name="abstract" content="The CVF (Complex Vector Field) command provides a bidirectional translation facility between ASAP and FDTD Solutions™ by Lumerical."/>
+<meta name="description" content="The CVF (Complex Vector Field) command provides a bidirectional translation facility between ASAP and FDTD Solutions™ by Lumerical."/>
+<meta name="DC.subject" content="CVF (ASAP Command), complex vector field, FDTD Solutions, bidirectional translation with ASAP"/>
+<meta name="keywords" content="CVF (ASAP Command), complex vector field, FDTD Solutions, bidirectional translation with ASAP"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_C-ref.html#Commands_and_Macros_C"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/BEAMS_ASAP-cmdref.html#BEAMS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DECOMPOSE_ASAP-cmdref.html#DECOMPOSE_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FIELD_ASAP-cmdref.html#FIELD_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FRESNEL_ASAP-cmdref.html#FRESNEL_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/IMMERSE_ASAP-cmdref.html#IMMERSE_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/POLARIZ_ASAP-cmdref.html#POLARIZ_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/UNITS_ASAP-cmdref.html#UNITS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WAVELENGTHS_ASAP-cmdref.html#WAVELENGTHS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Coordinate_Transformations_in_ASAP-ref.html#Coordinate_Transformations_in_ASAP"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="CVF_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>CVF (ASAP Command)</title>
+</head>
+<body id="CVF_ASAP_Command"><a name="CVF_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>CVF (ASAP Command)</h5></span> 
+   
+   
+  <div><p>The CVF (Complex Vector Field) command provides a bidirectional
+	 translation facility between ASAP and FDTD Solutions™ by Lumerical. 
+  </p>
+ 
+	 <p><b>Syntax</b>
+	 </p>
+ 
+	 <pre class="codeblock">
+CVF EXPORT format  [ dist_filespec  [ exch_filespec ]  ]
+    IMPORT         [ exch_filespec  [ dist_filespec ]  ]
+</pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>EXPORT or IMPORT</span></td><td><span>direction of data exchange, from or to ASAP,
+			 respectively</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><i>format</i></span></td><td><span>manner of data exchange; currently only LUMERICAL is
+			 supported</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>dist_filespec</span></td><td><span>optionally specifies an ASAP-native distribution file by
+			 either name or unit number. See Remarks below.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>exch_filespec</span></td><td><span>optionally specifies a file for data exchange by name. See
+			 Remarks below.</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b>
+	 </p>
+ 
+	 <br/><a name="CVF_ASAP_Command__ul_93B7BBCD70F645D5A717388ACE7F9567"><!-- --></a><ol id="CVF_ASAP_Command__ul_93B7BBCD70F645D5A717388ACE7F9567"> 
+		<li id="CVF_ASAP_Command__li_18271F45EE4B4A418A2FB55130C71C0A"><a name="CVF_ASAP_Command__li_18271F45EE4B4A418A2FB55130C71C0A"><!-- --></a><b>CVF</b> works
+		  with complex vector fields and, therefore, requires that 
+		  <b>FRESNEL BOTH</b> be in effect. See remark below about
+		  the 
+		  <b>FIELD</b> command.
+		</li>
+ 
+		<li id="CVF_ASAP_Command__li_41CD2689D4314AC69F604D73D3C755A0"><a name="CVF_ASAP_Command__li_41CD2689D4314AC69F604D73D3C755A0"><!-- --></a><b>CVF</b>
+		  exports the full vectorial electric field, and so operates only on fields of
+		  specified polarization and only in 
+		  <b>COHERENT</b> mode. Therefore, both 
+		  <b>BEAMS COHERENT</b> and a 
+		  <b>POLARIZ</b> command must precede the creation of a
+		  source that is to be exported with 
+		  <b>CVF</b> 
+		  <b>EXPORT</b>.
+		</li>
+ 
+		<li id="CVF_ASAP_Command__li_B78E8D834ED74A2D8F797725225993A6"><a name="CVF_ASAP_Command__li_B78E8D834ED74A2D8F797725225993A6"><!-- --></a>Exchanged data comprise
+		  transformed complex electric vector field data, such as those typically stored
+		  in the BRO029.DAT file by the 
+		  <b>FIELD</b> command, along with a small amount of internal
+		  metadata. 
+		</li>
+ 
+		<li id="CVF_ASAP_Command__li_FDB766790695430F8FC41047671355CE"><a name="CVF_ASAP_Command__li_FDB766790695430F8FC41047671355CE"><!-- --></a><b>dist_filespec:</b> the
+		  filename may have a three-letter extension. If a filename is provided without
+		  an extension, .DAT is assumed. If neither a name nor a unit number is provided,
+		  the BRO029.DAT file is used by default. Pre-existing files are overwritten on
+		  output.
+		</li>
+ 
+		<li id="CVF_ASAP_Command__li_EE659016506A44F09807670BB6026BEF"><a name="CVF_ASAP_Command__li_EE659016506A44F09807670BB6026BEF"><!-- --></a><b>exch_filespec:</b> the
+		  filename may have a three-letter extension. If a filename is provided without
+		  an extension, .FLD is assumed. If no filename is provided, CVF.FLD is assumed.
+		  Pre-existing files are overwritten on output.
+		</li>
+ 
+		<li id="CVF_ASAP_Command__li_F48FC3863AA14BC4AB5C483B8523373A"><a name="CVF_ASAP_Command__li_F48FC3863AA14BC4AB5C483B8523373A"><!-- --></a> 
+		  <div class="note"><span class="notetitle">Note:</span> (A) The second filespec requires that the first filespec also be
+			 present. The converse is false. 
+		  </div>
+
+		</li>
+ 
+		<li id="CVF_ASAP_Command__li_9929CDBEABED4BBA818546EBE99A6569"><a name="CVF_ASAP_Command__li_9929CDBEABED4BBA818546EBE99A6569"><!-- --></a>Data exchange between ASAP
+		  and FDTD Solutions is performed in SI units. Unit conversions are handled
+		  internally, and are transparent to users. An exchange file, upon being imported
+		  to a native ASAP distribution file, is expressed in the current system 
+		  <b>UNITS</b> and 
+		  <b>WAVELENGTH</b> units. See Note below.
+		</li>
+ 
+		<li id="CVF_ASAP_Command__li_73A6680476B341EC9BD1F9926B2ACE48"><a name="CVF_ASAP_Command__li_73A6680476B341EC9BD1F9926B2ACE48"><!-- --></a>
+		  <div class="note"><span class="notetitle">Note:</span> (B) If you have not set system units before importing the
+			 exchange file, a message in the Command Output window advises you that ASAP
+			 will use meters.
+		  </div>
+
+		</li>
+ 
+	 </ol>
+ 
+	 <p><b>Remarks for Advanced ASAP Users</b>
+	 </p>
+ 
+	 <p>The following ASAP register settings occur after a successful import:
+	 </p>
+ 
+	 <br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CVF_WAVE</span></td><td><span>Holds the wavelength that is associated with imported data,
+			 expressed in the current 
+			 <b>WAVELENGTH</b> units (see Note (A) above).</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CVF_DEPTH</span></td><td><span>Holds the offset 'depth' of the sampled field with respect to
+			 the grid, as expressed in the current system 
+			 <b>UNITS</b> (see Note (B) above). This situation is
+			 exactly analogous to the depth specified with a 
+			 <b>FIELD</b> command.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CVF_INDEX</span></td><td><span>Holds the refractive index associated with the imported data,
+			 and can be used to 
+			 <b>IMMERSE</b> a source that was created by applying 
+			 <b>DECOMPOSE</b> to the imported data. To ensure that the
+			 practical effects of fields overlapping inhomogeneous media are minimized, you
+			 must make judicious choices for the locations of grids in ASAP, and of sources
+			 and monitors in FDTD Solutions.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CVF_SCALE</span></td><td><span>Holds the scale factor found in the exchange file, which
+			 describes scaling between natural ASAP units and SI units for the electric
+			 field. This scale factor is typically of little interest, as unit conversions
+			 are automatically performed.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CVF_X</span></td><td><span>X-offset of local system wrt global system</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CVF_Y</span></td><td><span>Y-offset of local system wrt global system</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CVF_Z</span></td><td><span>Z-offset of local system wrt global system</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CVF_PHI</span></td><td><span>1st Euler angle</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CVF_THETA</span></td><td><span>2nd Euler angle</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CVF_PSI</span></td><td><span>3rd Euler angle</span></td></tr></tbody></table> 
+	 <p> 
+		<a href="../example_scripts.html#CVF">CVF
+		  Examples</a>
+	 </p>
+
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_C-ref.html#Commands_and_Macros_C" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “C”.">Commands and Macros (C)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Coordinate_Transformations_in_ASAP-ref.html#Coordinate_Transformations_in_ASAP" title="The coordinate transformations used in ASAP are applicable both to explicit transformations (for example, SHIFT, ROTATE) and implicit transformations (for example, AXIS LOCAL in combination with FIELD or CVF).">Coordinate Transformations in ASAP</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/BEAMS_ASAP-cmdref.html#BEAMS_ASAP_Command" title="Sets the default coherence, propagation, and shape characteristics for future ray creation.">BEAMS (ASAP Command)</a></div>
+<div><a href="../Commands/DECOMPOSE_ASAP-cmdref.html#DECOMPOSE_ASAP_Command" title="Decomposes an existing field into a new set of Gaussian beams.">DECOMPOSE (ASAP Command)</a></div>
+<div><a href="../Commands/FIELD_ASAP-cmdref.html#FIELD_ASAP_Command" title="Calculates the exact complex field distribution.">FIELD (ASAP Command)</a></div>
+<div><a href="../Commands/FRESNEL_ASAP-cmdref.html#FRESNEL_ASAP_Command" title="Adjusts the reflection/transmission coefficients specified on an interface using Fresnel's formulae during a ray trace.">FRESNEL (ASAP Command)</a></div>
+<div><a href="../Commands/IMMERSE_ASAP-cmdref.html#IMMERSE_ASAP_Command" title="Creates rays in MEDIA in other than zero.">IMMERSE (ASAP Command)</a></div>
+<div><a href="../Commands/POLARIZ_ASAP-cmdref.html#POLARIZ_ASAP_Command" title="Sets the polarization properties for future ray creation.">POLARIZ (ASAP Command)</a></div>
+<div><a href="../Commands/UNITS_ASAP-cmdref.html#UNITS_ASAP_Command" title="Defines the system units.">UNITS (ASAP Command)</a></div>
+<div><a href="../Commands/WAVELENGTHS_ASAP-cmdref.html#WAVELENGTHS_ASAP_Command" title="Defines the wavelength(s) for different MEDIA and COATING definitions.">WAVELENGTH(S) (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

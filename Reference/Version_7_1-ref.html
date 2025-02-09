@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Version 7.1"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Release_Notes-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_7_5-ref.html#Version_7_5"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_7_0-ref.html#Version_7_0"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Version_7_1"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Version 7.1</title>
+</head>
+<body id="Version_7_1"><a name="Version_7_1"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Version 7.1</h5></span>
+	<div>
+		<div class="section" id="Version_7_1__section_82F2AF89E5384302B902B6BB4F2DE469"><a name="Version_7_1__section_82F2AF89E5384302B902B6BB4F2DE469"><!-- --></a><span style="color: #2b6eb5"><h5>Release Notes for ASAP 7.1 Kernel as of February 28, 2002</h5></span>
+			
+		</div>
+
+		<div class="section" id="Version_7_1__section_F1AD9A5694EB4E84BE3A99D5E144B7F9"><a name="Version_7_1__section_F1AD9A5694EB4E84BE3A99D5E144B7F9"><!-- --></a><span style="color: #2b6eb5"><h5>New Commands</h5></span>
+			
+			<pre class="codeblock">
+MODELS
+		RAWDATA version of BSDFDATA that does not interpolate in logarithmic space.
+OBJECT
+		RBOUNDS version of BOUNDS allows virtually unlimited entity ranges.</pre>
+
+		</div>
+
+		<div class="section" id="Version_7_1__section_072395CD0ABC4DE78EF7D1E084DB539C"><a name="Version_7_1__section_072395CD0ABC4DE78EF7D1E084DB539C"><!-- --></a><span style="color: #2b6eb5"><h5>Enhanced Commands</h5></span>
+			
+			<pre class="codeblock">
+MOVE
+		BY/TO a specified optical path length.
+		TO a best-fit SPHERical wavefront.
+DECOMPOSE
+		POSITION CONVERGE/DIVERGE accuracy improved by using non-planar beamlets.
+		No longer creates "left-handed" beams that have anomalous pi/2 phase shift.
+MODELS
+		VOLUME uses (and MIE displays) absorption efficiency if non-zero.
+SURFACES
+		SOLID faster and now set automatically by TUBE, semi-ELLIPSOID, and CONDUIT.
+		...HEXAGONAL aperture option in addition to RECTANGLE and ELLIPSE.
+		SAMPLED distribution files are now fully buffered for a tremendous speedup.
+		OPTICAL allows new parabolic term to be subtracted from base definition.
+DISPLAY
+		REDUCE now has a shorter form for picking out every nth pixel.
+		GRAPH DISCRETE option drawsd vertical lines from axi to each data point. 
+SELECT on number of times ray has HIT objects and/or AXIS angular range.
+EMIT DATA
+		Now allows control of which hemisphere from a 2D distribution.
+		Can read directly new compressed DUMP format.
+EDGE
+		POINTS now more thoroughly checks consistency of input data.
+		SPLINE 3D version optionally allows specification of CURVatures at points.
+		LINE/ELLIP/RECT/OVAL/ROUND redefining default sudivision can be suppressed.
+		CONIC now allows a parabola to be subtracted from base curve.
+FIELD
+		More accurate (and sometimes faster) version of the FD-BPM algorithm.
+		Validity extended by using non-paraxial invariants for Gaussian beamlets.
+		Restored applicability and improved speed of the "fast" method.
+MEDIA SCATTER rays are now uniquely tagged for breakdown by PATHS.
+SCATTER
+		TOWARDS temporary limitation to 32767 scattered rays per incident removed.
+OBJECT now issues warning for duplicate names.
+HISTORY can process only every nth ray instead of all rays.
+CAD IGES 
+		Now exports ARRAYs of surfaces in the form of 308/408 Subfigures.
+		Displays residual angular errors for SURFACE entity spline approximations.
+LENS
+		ABERRATIONS
+	   	STORE can now write ZEMAX and OSLO lens files (in addition to CodeV).
+VUFACETS defaults tessallation of unBOUNDed planar EDGE objects to 3D viewer.
+</pre>
+
+		</div>
+
+		<div class="section" id="Version_7_1__section_C2CA2F172E6F40EFA3B010C06B769440"><a name="Version_7_1__section_C2CA2F172E6F40EFA3B010C06B769440"><!-- --></a><span style="color: #2b6eb5"><h5>Macro Language</h5></span>
+			
+			<p>Macro argument "#" substitution no longer occurs beyond "!!" comment start.</p>
+
+			<p>Macro, function, and variable name lengths increased from 16 to 32 characters.</p>
+
+			<p>$MOVE same as $COPY except the source file is deleted afterwards.</p>
+
+			<p>$EVAL can now take a $FCN that returns a complex (real,imaginary) result.</p>
+
+		</div>
+
+		<div class="section" id="Version_7_1__section_030C1E52C32D40A586BDE25E663EC621"><a name="Version_7_1__section_030C1E52C32D40A586BDE25E663EC621"><!-- --></a><span style="color: #2b6eb5"><h5>Other Changes</h5></span>
+			
+			<pre class="codeblock">
+*.SYS (as usual) and *.REG files are incompatible with previous versions.
+IGES import
+		Added option to compress (COMPOSITE) multiple trimming curves into one.
+		ALL geometry option now includes unbounded Faces (510) of solid Shell (514)
+		Unnested Subfigures (308/408) are now processed.
+Total geometry storage doubled in both Basic and Pro versions.
+Most coherent SPREAD/FIELD Gaussian beamlet calculations 3 to 5 times faster.
+Maximum allowed FFT size set to 2^16 (65536) in both Basic and Pro versions.</pre>
+
+		</div>
+ 
+</div>
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Release_Notes-ref.html" title="Topics in this section include all known release notes for ASAP up to the last version. Release notes for the current version can be viewed in the ASAP Command Output window, or opened from your ASAP installation root folder.">Release Notes</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a href="../Reference/Version_7_5-ref.html#Version_7_5">Version 7.5</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a href="../Reference/Version_7_0-ref.html#Version_7_0">Version 7.0</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

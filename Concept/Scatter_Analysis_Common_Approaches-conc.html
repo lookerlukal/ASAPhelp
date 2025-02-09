@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Scatter Analysis - Common Approaches"/>
+<meta name="abstract" content="This topic addresses common approaches to scatter analysis."/>
+<meta name="description" content="This topic addresses common approaches to scatter analysis."/>
+<meta name="DC.subject" content="Scatter Analysis - Common Approaches, analysis, scatter"/>
+<meta name="keywords" content="Scatter Analysis - Common Approaches, analysis, scatter"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Scattering_Overview-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Scatter_Analysis-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Scattered_Radiation_Analysis_Methodology-conc.html#Scattered_Radiation_Analysis_Methodology"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Scatter_Models-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ROUGHNESS_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Scatter_Analysis_Common_Approaches"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Scatter Analysis - Common Approaches</title>
+</head>
+<body id="Scatter_Analysis_Common_Approaches"><a name="Scatter_Analysis_Common_Approaches"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Scatter Analysis - Common Approaches</h5></span> 
+  
+  
+  <div><p>This topic addresses common approaches to scatter analysis.
+  </p>
+ 
+	 <br/><a name="Scatter_Analysis_Common_Approaches__ul_FCF51432AD4145E2AED04AAD5357A069"><!-- --></a><ul id="Scatter_Analysis_Common_Approaches__ul_FCF51432AD4145E2AED04AAD5357A069"> 
+		<li id="Scatter_Analysis_Common_Approaches__li_F92D253059B645B080816B2FA38A59D6"><a name="Scatter_Analysis_Common_Approaches__li_F92D253059B645B080816B2FA38A59D6"><!-- --></a>
+		  <p>Random perturbation of incident ray optical path length and
+			 direction:
+		  </p>
+ 
+		  <p>- Performed with the ROUGHNESS command
+		  </p>
+ 
+		  <p>- One ray in, one ray out
+		  </p>
+
+		</li>
+ 
+		<li id="Scatter_Analysis_Common_Approaches__li_4BF97E6DEE7747F788761F4332D64D94"><a name="Scatter_Analysis_Common_Approaches__li_4BF97E6DEE7747F788761F4332D64D94"><!-- --></a>
+		  <p>Random Lambertian Scatter:
+		  </p>
+ 
+		  <p>- Performed with the SCATTER RANDOM command
+		  </p>
+ 
+		  <p>- One ray in, one to many rays out
+		  </p>
+
+		</li>
+ 
+		<li id="Scatter_Analysis_Common_Approaches__li_A50EE46A14344FB79B2ADEC4112E1306"><a name="Scatter_Analysis_Common_Approaches__li_A50EE46A14344FB79B2ADEC4112E1306"><!-- --></a>
+		  <p>Scatter towards important edges or directions:
+		  </p>
+ 
+		  <p>- Performed with the SCATTER MODEL and TOWARDS commands
+		  </p>
+ 
+		  <p>- One ray in one, to many rays out
+		  </p>
+
+		</li>
+ 
+		<li id="Scatter_Analysis_Common_Approaches__li_712A73C80418474F84E201744DAF7185"><a name="Scatter_Analysis_Common_Approaches__li_712A73C80418474F84E201744DAF7185"><!-- --></a>
+		  <p>Lorentzian beam shape assignment:
+		  </p>
+ 
+		  <p>- Performed with the SCATTER BSDF command
+		  </p>
+ 
+		  <p>- One ray in, two rays out
+		  </p>
+ 
+		</li>
+ 
+	 </ul>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Scattering_Overview-ref.html" title="Scattering is generally defined as the removal of energy from an incident wave and the subsequent re-emission of some portion of that energy. The macroscopic laws of refraction and reflection may even be considered special cases of the statistical averages of scattering phenomena. This topic discusses scatter from nonsmooth surfaces; that is, surface scattering, since ASAP is primarily designed to model surface scattering phenomena. Volume scattering can be modeled by using many transparent scattering surfaces to partition the volume.">Scattering Overview</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Scatter_Analysis-conc.html" title="Performing a scatter analysis is a complex task. In addition to basic scatter theory, there are many ASAP parameters to consider. Each analysis should be evaluated on an individual basis to determine which ASAP tools to use to simulate the problem.">Scatter Analysis</a></div>
+<div><a href="../Concept/Scattered_Radiation_Analysis_Methodology-conc.html#Scattered_Radiation_Analysis_Methodology" title="The goal in a classical stray light analysis usually is to determine the amount of unwanted scattered radiation propagating to a detector in order to assess its effect on system performance.">Scattered Radiation Analysis Methodology</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Scatter_Models-ref.html" title="ASAP supports the scatter models listed in this topic for wide-angle (far from specular) scatter.">Scatter Models</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/ROUGHNESS_ASAP-cmdref.html" title="Assigns a roughness to the entity of an object, and conserves energy between specular and scattered beams.">ROUGHNESS (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

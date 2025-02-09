@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="PARABASAL (ASAP Command)"/>
+<meta name="abstract" content="Sets the number of parabasal rays."/>
+<meta name="description" content="Sets the number of parabasal rays."/>
+<meta name="DC.subject" content="PARABASAL (ASAP Command), rays, setting parabasal"/>
+<meta name="keywords" content="PARABASAL (ASAP Command), rays, setting parabasal"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_P-ref.html#Commands_and_Macros_P"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_DATA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MOVE_PARABASALS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/RAYSET_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WAVELENGTHS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WIDTHS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Coherent_Incoherent_Analysis-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Parabasal_Ray_Overview-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="PARABASAL_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>PARABASAL (ASAP Command)</title>
+</head>
+<body id="PARABASAL_ASAP_Command"><a name="PARABASAL_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>PARABASAL (ASAP Command)</h5></span>
+	
+	
+	<div><p>Sets the number of parabasal rays. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">PARABASAL n [ d  [ d' ] ] [ CLIP ]
+[ g  h  u  v  ]
+[ g' h' u' v' ]
+[ g" h" u" v" ]
+       :</pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span>number of parabasal rays</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>d d'</span></td><td><span>semidivergences of each geometric incoherent beam (radians)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>g h u v, g' h' u' v' ...</span></td><td><span>see Remarks</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CLIP</span></td><td><span>flag to check for parabasal ray clipping</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="PARABASAL_ASAP_Command__ul_D116D5ACD8404B8A80262ED0AA46639E"><!-- --></a><ol id="PARABASAL_ASAP_Command__ul_D116D5ACD8404B8A80262ED0AA46639E">
+			<li id="PARABASAL_ASAP_Command__li_E19C09CCC70F4A1881C0F7A39BA37F02"><a name="PARABASAL_ASAP_Command__li_E19C09CCC70F4A1881C0F7A39BA37F02"><!-- --></a>Sets the number of parabasal rays to be
+				traced around each base ray and should precede any ray definition commands (<b>GRID</b>, <b>RAYSET</b> and others). </li>
+
+			<li id="PARABASAL_ASAP_Command__li_45FEA7D5855B485386A5A1286ADEDD4B"><a name="PARABASAL_ASAP_Command__li_45FEA7D5855B485386A5A1286ADEDD4B"><!-- --></a>The parabasal rays follow the same path
+				through the system as the primary ray and are never clipped by a boundary unless the
+				primary ray is also clipped. </li>
+
+			<li id="PARABASAL_ASAP_Command__li_53B0005E856C4C1FAE8D349F0244870E"><a name="PARABASAL_ASAP_Command__li_53B0005E856C4C1FAE8D349F0244870E"><!-- --></a>The <b>n</b> usually takes on
+				values of 0, 2, 4 or 8. </li>
+
+			<li id="PARABASAL_ASAP_Command__li_2FD45E0BE8C8480AA417299513265F23"><a name="PARABASAL_ASAP_Command__li_2FD45E0BE8C8480AA417299513265F23"><!-- --></a>If <b>n</b> equals four or
+				eight and a <b>WAVELENGTH</b> has been specified, the parabasal rays are
+				used to define general Gaussian beams centered on each base ray. </li>
+
+			<li id="PARABASAL_ASAP_Command__li_6D0318B9A09A4401BD30CD655F25833C"><a name="PARABASAL_ASAP_Command__li_6D0318B9A09A4401BD30CD655F25833C"><!-- --></a>The <b>d</b> and <b>d'</b> set the defaults for the semidivergences of each geometrical
+				incoherent beam in radians. This value is only used if <b>n</b>=0 or 4, and the
+				current <b>WAVELENGTH</b> is zero, that is, a geometrical optics radiant
+				beam. </li>
+
+			<li id="PARABASAL_ASAP_Command__li_F6232C52DD15466AA30CE951AD0B9A3F"><a name="PARABASAL_ASAP_Command__li_F6232C52DD15466AA30CE951AD0B9A3F"><!-- --></a>The <b>CLIP</b> option signals
+				ASAP to check for clipping of the parabasal rays by boundaries and reduce the beam
+				flux accordingly. The parabasal rays are not actually clipped from the beam,
+				however. </li>
+
+			<li id="PARABASAL_ASAP_Command__li_7861A8A876654D31B0C308539A525EFD"><a name="PARABASAL_ASAP_Command__li_7861A8A876654D31B0C308539A525EFD"><!-- --></a> Parabasal rays are numbered according to
+				the following scheme (where Wi refers to a waist ray displaced in the positive ith
+				direction and Di refers to a divergence ray propagating in the positive <b>i</b>th direction): <p><b>Parabasal Ray Number </b></p>
+<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>n</span></th><th><span>1</span></th><th><span>2</span></th><th><span>3</span></th><th><span>4</span></th><th><span>5</span></th><th><span>6</span></th><th><span>7</span></th><th><span>8</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>1</span></td><td><span>Wx</span></td><td><span/></td><td><span/></td><td><span/></td><td><span/></td><td><span/></td><td><span/></td><td><span/></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>2</span></td><td><span>Wx</span></td><td><span>Wy</span></td><td><span/></td><td><span/></td><td><span/></td><td><span/></td><td><span/></td><td><span/></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>3</span></td><td><span>Wx</span></td><td><span>Wy</span></td><td><span>Dx</span></td><td><span/></td><td><span/></td><td><span/></td><td><span/></td><td><span/></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>4</span></td><td><span>Wx</span></td><td><span>Wy</span></td><td><span>Dx</span></td><td><span>Dy</span></td><td><span/></td><td><span/></td><td><span/></td><td><span/></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>5</span></td><td><span>Wx</span></td><td><span>Wy</span></td><td><span>Dx</span></td><td><span>Dy</span></td><td><span>-Wx</span></td><td><span/></td><td><span/></td><td><span/></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>6</span></td><td><span>Wx</span></td><td><span>Wy</span></td><td><span>Dx</span></td><td><span>Dy</span></td><td><span>-Wx</span></td><td><span>-Wy</span></td><td><span/></td><td><span/></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>7</span></td><td><span>Wx</span></td><td><span>Wy</span></td><td><span>Dx</span></td><td><span>Dy</span></td><td><span>-Wx</span></td><td><span>-Wy</span></td><td><span>-Dx</span></td><td><span/></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>8</span></td><td><span>Wx</span></td><td><span>Wy</span></td><td><span>Dx</span></td><td><span>Dy</span></td><td><span>-Wx</span></td><td><span>-Wy</span></td><td><span>-Dx</span></td><td><span>-Dy</span></td></tr></tbody></table></li>
+
+			<li id="PARABASAL_ASAP_Command__li_5077DB280D094BD98C9A11D2B5E689F2"><a name="PARABASAL_ASAP_Command__li_5077DB280D094BD98C9A11D2B5E689F2"><!-- --></a> The divergence angle, <b>u</b>, of the parabasal rays is calculated from the equation: <p>tan(u) =
+					λ/(4h) </p>
+<p>where λ is the <b>WAVELENGTH</b> of the beam and h is
+					the waist semidiameter of the Gaussian beam. This definition was chosen so that
+					the width of the Gaussian beam corresponds to </p>
+<p>e^(-λ/4) or roughly the 45
+					percent amplitude point. </p>
+</li>
+
+			<li id="PARABASAL_ASAP_Command__li_7E0C751B43134113AB07122FA8CAB642"><a name="PARABASAL_ASAP_Command__li_7E0C751B43134113AB07122FA8CAB642"><!-- --></a>Normally, depending upon the properties of
+				the beams being created, the transverse positions and direction of the parabasal
+				rays are automatically set by ASAP. However, an override table can be entered, one
+				line per parabasal ray. The <b>g</b>'s and <b>h</b>'s are
+				the relative heights in the two orthogonal directions. The <b>u</b>'s
+				and <b>v</b>'s are the orthogonal convergences/divergences angles in
+				radians. </li>
+
+			<li id="PARABASAL_ASAP_Command__li_4216B49D10C8452A966EA53827477171"><a name="PARABASAL_ASAP_Command__li_4216B49D10C8452A966EA53827477171"><!-- --></a>The <b>WIDTHS</b> command
+				modifies the default parabasal ray settings, scaling the width of the parabasal
+				rays. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#PARABASAL">PARABASAL Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_P-ref.html#Commands_and_Macros_P" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “P”.">Commands and Macros (P)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Coherent_Incoherent_Analysis-conc.html">Coherent - Incoherent Analysis</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Parabasal_Ray_Overview-ref.html" title="This topic describes two types of parabasal rays.">Parabasal Ray Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/GRID_DATA_ASAP-cmdref.html" title="Creates a rectangular grid of rays.">GRID DATA (ASAP Command)</a></div>
+<div><a href="../Commands/MOVE_PARABASALS_ASAP-cmdref.html" title="Moves the parabasal rays for each ray/beam to its base ray plane.">MOVE PARABASALS (ASAP Command)</a></div>
+<div><a href="../Commands/RAYSET_ASAP-cmdref.html" title="Specifies an arbitrary set of rays.">RAYSET (ASAP Command)</a></div>
+<div><a href="../Commands/WAVELENGTHS_ASAP-cmdref.html" title="Defines the wavelength(s) for different MEDIA and COATING definitions.">WAVELENGTH(S) (ASAP Command)</a></div>
+<div><a href="../Commands/WIDTHS_ASAP-cmdref.html" title="Modifies the default parabasal ray settings, scaling the width of the parabasal rays.">WIDTHS (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Harvey Dialog in BSDF Fit Utility"/>
+<meta name="abstract" content="The Harvey (Models) dialog on the BSDF Fit Utility window includes identical data elements for the Harvey 1 and Harvey 2 models. These elements correspond to the isotropic HARVEY command options in ASAP."/>
+<meta name="description" content="The Harvey (Models) dialog on the BSDF Fit Utility window includes identical data elements for the Harvey 1 and Harvey 2 models. These elements correspond to the isotropic HARVEY command options in ASAP."/>
+<meta name="DC.subject" content="Harvey Dialog in BSDF Fit Utility, BSDF Fit utility, Harvey dialog"/>
+<meta name="keywords" content="Harvey Dialog in BSDF Fit Utility, BSDF Fit utility, Harvey dialog"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/BSDF_Fit_Utility_Window-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/BSDF_Fit_Utility_Menus_and_Toolbar-conc.html#BSDF_Fit_Utility_Menus_and_Toolbar"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Status_Bar_for_BSDF_Fit_Utility-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Graph_Window_BSDF-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Measuring_Angles-conc.html#Measuring_Angles"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Model_Description_Dialog-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Harvey_Model-conc.html#Harvey_Model"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Harvey_Parameters_Dialog-task.html#Harvey_Parameters_Dialog"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Polynomial_Dialog_in_BSDF_Fit_Utility-task.html#Polynomial_Dialog_in_BSDF_Fit_Utility"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/HARVEY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/HARVEY_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Parameters_Panel_in_Harvey_Fit_Utility"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Harvey Dialog in BSDF Fit Utility</title>
+</head>
+<body id="Parameters_Panel_in_Harvey_Fit_Utility"><a name="Parameters_Panel_in_Harvey_Fit_Utility"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Harvey Dialog in BSDF Fit Utility</h5></span> 
+   
+  
+  <div><p>The Harvey (Models) dialog on the BSDF Fit Utility window includes
+	 identical data elements for the Harvey 1 and Harvey 2 models. These elements
+	 correspond to the isotropic 
+	 <b>HARVEY</b> command options in ASAP. 
+  </p>
+ 
+	 <div class="section" id="Parameters_Panel_in_Harvey_Fit_Utility__context_8EF8464BBBF64386AA624C6F14D99AD0"><a name="Parameters_Panel_in_Harvey_Fit_Utility__context_8EF8464BBBF64386AA624C6F14D99AD0"><!-- --></a><br/><div class="imagecenter"><img longdesc="BSDF Fit Utility - Harvey dialog" src="../Graphics/fit_Harvey_dialog.jpg" width="276" height="407"/></div><br/> 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>Models Panel</b></span></td><td><span><b>Description</b></span></td><td><span><b>HARVEY</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span/></td><td><span> 
+				<p><b>BSDF (b)</b>: Maximum BSDF value (at specular); determines
+				  the height of the plateau. 
+				</p>
+ 
+				<p><b>Slope (S)</b>: Asymptotic fall-off with angle (slope),
+				  typically between -1 to -2.5. 
+				</p>
+ 
+				<p><b>Shoulder (l)</b>: Rollover point location in radians. 
+				</p>
+ 
+				<p>Optional roughness parameters are defined by the ASAP HARVEY
+				  model. 
+				</p>
+ 
+				<p><b>TIS</b>: Total Integrated Scatter, expressed as a percentage.
+				  
+				</p>
+ 
+				<p><b>Combined TIS</b>: Total Integrated Scatter of model 1 plus
+				  model 2, expressed as a percentage. 
+				</p>
+ 
+				<p><b>Panel Buttons</b>: 
+				  <a name="Parameters_Panel_in_Harvey_Fit_Utility__image"><!-- --></a><img id="Parameters_Panel_in_Harvey_Fit_Utility__image" src="../Graphics/fit_points_button.jpg" width="54" height="20" longdesc="BSDF Fit Utility - points button"/>: This
+				  Points button fits the Harvey model based on points selected in the Graph
+				  window. 
+				</p>
+ 
+				<p>First point designates the approximate maximum BSDF value
+				  height). 
+				</p>
+ 
+				<p>Second and third points define the slope and the fall-off
+				  location. 
+				</p>
+ 
+				<p>Most of the angular range of data (from the specular angle)
+				  falls on the slope. 
+				</p>
+ 
+				<p><b>Clear</b> 
+				  <img longdesc="BSDF Fit Utility - Clear button" src="../Graphics/fit_Harvey_Clear_button.jpg" width="62" height="24"/>: Deletes the current values for a
+				  model. 
+				</p>
+ 
+				<p><b>Autofit</b> : 
+				  <img longdesc="BSDF Fit Utility - Autofit button" src="../Graphics/fit_Harvey_Autofit_button.jpg" width="62" height="23"/>opens the Autofit Parameter dialog
+				  box. 
+				</p>
+ 
+				<p><b>Update</b> 
+				  <img longdesc="BSDF Fit Utility - Update button" src="../Graphics/fit_Harvey_Update_button.jpg" width="64" height="24"/> : Updates the Graph window, using
+				  the sum of the two Harvey models. 
+				</p>
+ 
+				<p><b>Spin boxes</b>: text boxes with up and down arrows that you
+				  click to move through a set of fixed values. You can also type a valid value in
+				  the box. 
+				</p>
+ 
+			 </span></td><td><span> 
+				<p><b>b</b> 
+				</p>
+ 
+				<p><b>s</b> 
+				</p>
+ 
+				<p><b>l</b> 
+				</p>
+ 
+				<p><b>m, n</b> 
+				</p>
+ 
+			 </span></td></tr></tbody></table> 
+		<p>The sum of the first and second Harvey models is displayed in the
+		  Graph window. 
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Task/BSDF_Fit_Utility_Window-task.html" title="The BSDF Fit window consists of two panels: parameters and graph.">BSDF Fit Utility Window</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/BSDF_Fit_Utility_Menus_and_Toolbar-conc.html#BSDF_Fit_Utility_Menus_and_Toolbar" title="The BSDF Fit graph window includes dynamic ASAP menu commands, which appear when the BSDF fit window is open, as well as a toolbar, above the BSDF graph window, for quick access to common operation in Windows.">BSDF Fit Utility Menus and Toolbar</a></div>
+<div><a href="../Concept/Graph_Window_BSDF-conc.html" title="The Graph window displays measured data on an x, y grid. It also displays the Harvey or Polynomial fitted curve.">Graph Window (BSDF)</a></div>
+<div><a href="../Concept/Measuring_Angles-conc.html#Measuring_Angles" title="Angles are measured from specular as illustrated in this topic.">Measuring Angles</a></div>
+<div><a href="../Concept/Harvey_Model-conc.html#Harvey_Model" title="Most materials and surface treatments that are used in illumination applications fit the modified Harvey model, or a sum or two Harvey models.">Harvey Model</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Status_Bar_for_BSDF_Fit_Utility-task.html" title="The BSDF Fit status bar is located on the footer of Graph window.">BSDF Fit Utility Status Bar</a></div>
+<div><a href="../Task/Model_Description_Dialog-task.html" title="This dialog box opens from either the Roughness Models tab or the Scatter Models tab on the Quick Start toolbar. Double-click a model name to open the dialog.">Model Description Dialog</a></div>
+<div><a href="../Task/Harvey_Parameters_Dialog-task.html#Harvey_Parameters_Dialog" title="Automatic fitting for both the Harvey and Polynomial fit models is accomplished with a down-hill simplex method.">Harvey Parameters Dialog</a></div>
+<div><a href="../Task/Polynomial_Dialog_in_BSDF_Fit_Utility-task.html#Polynomial_Dialog_in_BSDF_Fit_Utility" title="Describes the Polynomial dialog for the BSDF Polynomial Fit Utility.">Polynomial Dialog in BSDF Fit Utility</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/HARVEY_ASAP-cmdref.html" title="Creates a Harvey (linear shift invariant) scatter model or simple specific model.">HARVEY (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

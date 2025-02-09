@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="$EVAL (ASAP Macro)"/>
+<meta name="abstract" content="Evaluates a given $FCN function."/>
+<meta name="description" content="Evaluates a given $FCN function."/>
+<meta name="DC.subject" content="$EVAL (ASAP Macro), macros, evaluate function, FCN, evaluate"/>
+<meta name="keywords" content="$EVAL (ASAP Macro), macros, evaluate function, FCN, evaluate"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_E-ref.html#Commands_and_Macros_E"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FCN_macro_ASAP-cmdref.html#FCN_ASAP_Macro"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Macro_Language-conc.html#ASAP_Macro_Language"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="EVAL_ASAP_Macro"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>$EVAL (ASAP Macro)</title>
+</head>
+<body id="EVAL_ASAP_Macro"><a name="EVAL_ASAP_Macro"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>$EVAL (ASAP Macro)</h5></span>
+	
+	
+	<div><p>Evaluates a given $FCN function. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+$EVAL    vary a b n [ vary' a' b' n' ...]  [ func [ func' ...] ] [ 'title' ] 
+    [ m ]         d               d'
+     </pre>
+
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="EVAL_ASAP_Macro__ul_C149C21A9FD94BF1BE681CE021C7D98B"><!-- --></a><ol id="EVAL_ASAP_Macro__ul_C149C21A9FD94BF1BE681CE021C7D98B">
+			<li id="EVAL_ASAP_Macro__li_89A7328C4EA64243B95D62C51A876F5E"><a name="EVAL_ASAP_Macro__li_89A7328C4EA64243B95D62C51A876F5E"><!-- --></a> The first format evaluates the given
+					<b>$FCN</b> functions while changing the internal register vary from
+					<b>a</b> to <b>b</b> in <b>n</b> steps (up
+				to 30000). Actually, <p><a name="EVAL_ASAP_Macro__image_A1CCEB2FE02D46ACB6E4B6F53B497458"><!-- --></a><img id="EVAL_ASAP_Macro__image_A1CCEB2FE02D46ACB6E4B6F53B497458" src="../Equations/$EVAL_macro_equation1.gif" width="275" height="183"/>
+				</p>
+</li>
+
+			<li id="EVAL_ASAP_Macro__li_DDC38C8C114642D2A30A311D0A6AE144"><a name="EVAL_ASAP_Macro__li_DDC38C8C114642D2A30A311D0A6AE144"><!-- --></a>Up to 60 variables are permitted. The
+				resulting values in the function <b>func</b> (or the sum of the squares,
+				if more than one given) at the first three levels are continually written to a BRO
+				binary distribution file called EVAL.DIS or macro.dis (with optional title) for
+				later processing. One additional evaluation is done with the registers reset to
+				their values at which the discrete value of <b>func</b> was minimum. </li>
+
+			<li id="EVAL_ASAP_Macro__li_6DC2FE4C3FFF48C0B00EAF7CB8BEECCD"><a name="EVAL_ASAP_Macro__li_6DC2FE4C3FFF48C0B00EAF7CB8BEECCD"><!-- --></a> The second format iterates the next input
+				record either <b>m</b> times while changing the <b>vary</b>s
+				randomly, or to approach the actual minimum of the sum of the squared <b>func</b>s (up to 250). If <b>m</b> is specified the <b>d</b> are the probability distribution types; that is, <p><a name="EVAL_ASAP_Macro__image_DA8EC7FF5D5541B087AA6589604033E7"><!-- --></a><img id="EVAL_ASAP_Macro__image_DA8EC7FF5D5541B087AA6589604033E7" src="../Equations/$EVAL_macro_equation2.gif" width="298" height="51"/>
+				</p>
+<p>Otherwise, if <b>m</b> is not specified, <b>d</b> are
+					fractional derivative increments, relative to the ranges a <b>b</b>
+					that are used to build a change matrix, which is solved by a Singular Valued
+					Decomposition (SVD) technique. Double-sided derivatives are computed to
+					approximate a damping factor from the non-linearity predicted by the homogeneous
+					second derivatives. Therefore, the required number of evaluations is
+					2*(variables+1); that is, </p>
+<p><a name="EVAL_ASAP_Macro__image_20F50D1237554A7A8913A1E0BEE7C7C3"><!-- --></a><img id="EVAL_ASAP_Macro__image_20F50D1237554A7A8913A1E0BEE7C7C3" src="../Equations/$EVAL_macro_equation3.gif" width="193" height="268"/>
+				</p>
+</li>
+
+			<li id="EVAL_ASAP_Macro__li_05B127CC7943453387F178D223E6CFBD"><a name="EVAL_ASAP_Macro__li_05B127CC7943453387F178D223E6CFBD"><!-- --></a>The number of <b>func</b>s
+				should be greater than (&gt;) or equal to (=) the number of <b>vary</b>s
+				for it to find a unique solution. For nonlinear problems, successive <b>$EVAL</b> commands may be needed to reach the precise minimum. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#$EVAL">$EVAL Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_E-ref.html#Commands_and_Macros_E" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “E”.">Commands and Macros (E)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/ASAP_Macro_Language-conc.html#ASAP_Macro_Language">ASAP Macro Language</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/FCN_macro_ASAP-cmdref.html#FCN_ASAP_Macro" title="Defines new in-line math functions.">$FCN (ASAP Macro)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Predefined ASAP Macros</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="ARRAY (ASAP Command)"/>
+<meta name="abstract" content="Turns the last surface into a set of identical surfaces."/>
+<meta name="description" content="Turns the last surface into a set of identical surfaces."/>
+<meta name="DC.subject" content="ARRAY (ASAP Command), surface, linearly spaced, matrix, pattern, repetitive, peen"/>
+<meta name="keywords" content="ARRAY (ASAP Command), surface, linearly spaced, matrix, pattern, repetitive, peen"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_A-ref.html#Commands_and_Macros_A"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/BOUNDS_ASAP-cmdref.html#BOUNDS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REPEAT_ASAP-cmdref.html#REPEAT_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SEARCH_ASAP-cmdref.html#SEARCH_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=30"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="ARRAY_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>ARRAY (ASAP Command)</title>
+</head>
+<body id="ARRAY_ASAP_Command"><a name="ARRAY_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>ARRAY (ASAP Command)</h5></span>
+	
+	
+	<div><p>Turns the last surface into a set of identical surfaces. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+ARRAY n x y z [ n' x' y' z' ] [ EXPONENT p [ p' ] ] [ RANDOM r ] [ BOUNDS       ]
+       X n s      Y n' s'                                       SEARCH [ k ]
+                  Z
+       Y          Z
+                  X
+       Z          X
+                  Y
+</pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ARRAY</span></td><td><span>elements are associated with an OBJECT</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n n'</span></td><td><span>number of linearly spaced elements</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x y z x' y' z'</span></td><td><span>reference point shift</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>EXPONENT</span></td><td><span>modifies reference point coefficient</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RANDOM (or RAN)</span></td><td><span>randomize positions of individual array elements (RAN is an acceptable
+					abbreviation for <b>RANDOM</b>.)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>p p'</span></td><td><span>reference point coefficient exponent</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>BOUNDS</span></td><td><span>treats each instance as a separate entity</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SEARCH</span></td><td><span>Limits testing of ray intersections to elements within <b>k</b>
+					nearest neighbors</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>k</span></td><td><span>number of additional "rings" of instances about the nearest one to
+				consider</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="ARRAY_ASAP_Command__ul_56945FF6D65E4A09877ED9E2D16904A3"><!-- --></a><ol id="ARRAY_ASAP_Command__ul_56945FF6D65E4A09877ED9E2D16904A3">
+			<li id="ARRAY_ASAP_Command__li_4743778DEAB5492EA0B43C6710521B6A"><a name="ARRAY_ASAP_Command__li_4743778DEAB5492EA0B43C6710521B6A"><!-- --></a> Turns the last surface into an <b>n</b>+1 by <b>n'</b>+1 set of identical but linearly spaced
+					(<b>s</b> and <b>s'</b> apart) surfaces. For the first,
+				more general (possibly skew) syntax, the replicated surfaces are spaced according to
+				the equation: <p>
+					<br/><a name="ARRAY_ASAP_Command__image_94BF7FA3DF7946E3B5CD195F75B91F8C"><!-- --></a><img id="ARRAY_ASAP_Command__image_94BF7FA3DF7946E3B5CD195F75B91F8C" src="../Equations/ARRAY_equation1.gif" width="435" height="45"/><br/>
+				</p>
+</li>
+
+			<li id="ARRAY_ASAP_Command__li_3B87A330E3DA4B38BCC11265AF3D0484"><a name="ARRAY_ASAP_Command__li_3B87A330E3DA4B38BCC11265AF3D0484"><!-- --></a> The <b>EXPONENT</b> option
+				allows the reference point coefficient to be modified as follows: <p>
+					<br/><a name="ARRAY_ASAP_Command__image_0EAC231B00764F228D1443054669778B"><!-- --></a><img id="ARRAY_ASAP_Command__image_0EAC231B00764F228D1443054669778B" src="../Equations/ARRAY_equation2.gif" width="168" height="83"/><br/>
+				</p>
+</li>
+
+			<li id="ARRAY_ASAP_Command__li_9593AC23A274444A85170396ABDB3FB3"><a name="ARRAY_ASAP_Command__li_9593AC23A274444A85170396ABDB3FB3"><!-- --></a>The defaults for <b>p</b> and
+					<b>p'</b> are both 1. </li>
+
+			<li id="ARRAY_ASAP_Command__li_6AB87DBB756B45DEA664354234AEFB47"><a name="ARRAY_ASAP_Command__li_6AB87DBB756B45DEA664354234AEFB47"><!-- --></a>Positions of each element of the array
+				(except for the original one, i=0, j=0) can be <b>RANDOM</b>ized a
+				relative amount given by the fractional part of <b>r</b>. The
+				whole/integer part of <b>r</b> (default 0) determines a unique random
+				sequence to be used. </li>
+
+			<li id="ARRAY_ASAP_Command__li_0B8F20BE7DB54C58ADAB1CA9A8A40DD2"><a name="ARRAY_ASAP_Command__li_0B8F20BE7DB54C58ADAB1CA9A8A40DD2"><!-- --></a>Each instance (that is, element) can be
+				optionally treated as a separate entity on a <b>BOUNDS</b> command.
+				Otherwise, if used as a base object surface, the <b>SEARCH</b> for any
+				ray intersection is restricted to the instance nearest to where the ray intersects
+				the plane of the array (default or <b>k</b> zero). <b>SEARCH</b> cannot be applied to an <b>ARRAY</b> with an <b>ARRAY BOUNDS</b> command. </li>
+
+			<li id="ARRAY_ASAP_Command__li_776188DED0144A45A6FE11A5A252071F"><a name="ARRAY_ASAP_Command__li_776188DED0144A45A6FE11A5A252071F"><!-- --></a>The <b>k</b> option is the
+				number of additional "rings" of instances about this nearest one to also consider.
+				For large arrays, this can speed up the trace calculation by orders of magnitude,
+				but runs the risk of some rays unphysically missing the object. Larger values of
+					<b>k</b> reduce this risk but slow down the trace. </li>
+
+		</ol>
+
+		<div class="note"><span class="notetitle">Note:</span> From ASAP, open and run the sample project, backlight.apf, located in your <i>&lt;ASAP install folder&gt;\Projects\Samples\LCDbacklight</i>. </div>
+
+		<p>
+			<a href="../example_scripts.html#ARRAY">ARRAY Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_A-ref.html#Commands_and_Macros_A" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “A”.">Commands and Macros (A)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/BOUNDS_ASAP-cmdref.html#BOUNDS_ASAP_Command" title="Assigns surfaces and edges as boundaries to objects.">BOUNDS (ASAP Command)</a></div>
+<div><a href="../Commands/REPEAT_ASAP-cmdref.html#REPEAT_ASAP_Command" title="Repeats previously defined entity data.">REPEAT (ASAP Command)</a></div>
+<div><a href="../Commands/SEARCH_ASAP-cmdref.html#SEARCH_ASAP_Command" title="Sets the local and global object intersection strategy.">SEARCH (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=30" target="_blank">See the Knowledge Base for technical publication, Arrays and Bounds</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

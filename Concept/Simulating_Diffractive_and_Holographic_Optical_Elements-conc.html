@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Simulating Diffractive and Holographic Optical Elements"/>
+<meta name="abstract" content="Diffractive Optical Elements (DOEs) are a general class of optical elements that include diffraction gratings, holographic optical elements (HOEs) and binary optics. These elements diffract light by producing periodic changes in the phase or amplitude of an incident wave. This topic addresses DOEs that change the phase of incident optical fields."/>
+<meta name="description" content="Diffractive Optical Elements (DOEs) are a general class of optical elements that include diffraction gratings, holographic optical elements (HOEs) and binary optics. These elements diffract light by producing periodic changes in the phase or amplitude of an incident wave. This topic addresses DOEs that change the phase of incident optical fields."/>
+<meta name="DC.subject" content="Simulating Diffractive and Holographic Optical Elements, DOEs, simulating, HOEs"/>
+<meta name="keywords" content="Simulating Diffractive and Holographic Optical Elements, DOEs, simulating, HOEs"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_SZ-ref.html#Reference_SZ"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FIELD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MULTIPLE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPREAD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/INTERFACE_Command_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="conc"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Simulating Diffractive and Holographic Optical Elements</title>
+</head>
+<body id="conc"><a name="conc"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Simulating Diffractive and Holographic Optical Elements</h5></span> 
+   
+  
+  <div><p>Diffractive Optical Elements (DOEs) are a general class of optical
+	 elements that include diffraction gratings, holographic optical elements (HOEs)
+	 and binary optics. These elements diffract light by producing periodic changes
+	 in the phase or amplitude of an incident wave. This topic addresses DOEs that
+	 change the phase of incident optical fields. 
+  </p>
+ 
+	 <p>Two common approaches to calculating the diffraction pattern from DOEs
+		are:
+	 </p>
+ 
+	 <br/><a name="conc__ul_E2A23FFD5CA74878BF600DA24DA20E05"><!-- --></a><ul id="conc__ul_E2A23FFD5CA74878BF600DA24DA20E05"> 
+		<li id="conc__li_2923CF09619044AA93E5B4A5DD9F3FE9"><a name="conc__li_2923CF09619044AA93E5B4A5DD9F3FE9"><!-- --></a>Calculating the directions
+		  of propagation of the various reflected and transmitted orders of a beam after
+		  interacting with the DOE as well as the fractional power contained in each
+		  order using vector diffraction theory. This complicated calculation involves
+		  not only the DOE structural data, but also the physical and electromagnetic
+		  properties of the DOE. ASAP does not perform this type of approach.
+		</li>
+ 
+		<li id="conc__li_A1D020D410D942A7B645E772DBFA2794"><a name="conc__li_A1D020D410D942A7B645E772DBFA2794"><!-- --></a>Calculating the idealized
+		  directions of propagation of the various reflected and transmitted orders of a
+		  beam after interacting with a diffractive element using scalar diffraction
+		  theory. The diffraction orders are selected by adjusting the direction cosines
+		  of the exiting beams according to the grating equation. The diffraction
+		  efficiencies cannot be calculated with this method since this is a scalar
+		  technique. Most optical design and analysis software, including ASAP, use this
+		  technique since it is very adaptable to ray tracing. 
+		</li>
+ 
+	 </ul>
+ 
+	 <p>ASAP models DOEs by simulating the phase surface of the DOE as a series
+		of grating lines. Replicating the grating line spacing mathematically simulates
+		the grating lines. The replication is then associated with the base entity of
+		an object. After intersecting the base object, ASAP computes the local grating
+		spacing and applies the grating equation to compute the direction of
+		propagation. Moreover, since ASAP can split rays, it can also propagate several
+		diffracted orders simultaneously after the intersection.
+	 </p>
+ 
+	 <div class="section" id="conc__section_C9373DAF778345B7B4AC16026E8A9D21"><a name="conc__section_C9373DAF778345B7B4AC16026E8A9D21"><!-- --></a><span style="color: #2b6eb5"><h5>Tip</h5></span> 
+		 
+		<br/><a name="conc__ul_8326302E17E441B28C2092DAE90631A3"><!-- --></a><ul id="conc__ul_8326302E17E441B28C2092DAE90631A3"> 
+		  <li id="conc__li_EF71EB19D9274F688CF9E51EAA3978A5"><a name="conc__li_EF71EB19D9274F688CF9E51EAA3978A5"><!-- --></a>To model the phase surface
+			 of a DOE as a series of grating lines, you must use another modifier to the
+			 surface database called 
+			 <b>MULTIPLE</b>, which creates multiple sheets of a
+			 surface to simulate the grating lines. Also use the object modifier, 
+			 <b>INTERFACE</b>, to assign a diffractive interface to an
+			 object.
+		  </li>
+ 
+		  <li id="conc__li_3B374FEDCD4F46998A6E0BAE48F056E7"><a name="conc__li_3B374FEDCD4F46998A6E0BAE48F056E7"><!-- --></a>The phase surfaces of an
+			 optical field exiting a DOE may exhibit 2- step discontinuities. Although the
+			 wavefront shows the phase steps, 
+			 <b>SPREAD</b> and 
+			 <b>FIELD</b> removes the discontinuities in the process
+			 of synthesizing the optical field.
+		  </li>
+ 
+		</ul>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_SZ-ref.html#Reference_SZ" title="Reference topics in this section begin with the letters &#34;S&#34; to &#34;Z&#34;.">Reference (S-Z)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/INTERFACE_Command_Overview-conc.html">INTERFACE Command Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/FIELD_ASAP-cmdref.html" title="Calculates the exact complex field distribution.">FIELD (ASAP Command)</a></div>
+<div><a href="../Commands/MULTIPLE_ASAP-cmdref.html" title="Converts the surface into multiple sheets.">MULTIPLE (ASAP Command)</a></div>
+<div><a href="../Commands/SPREAD_ASAP-cmdref.html" title="Calculates the exact coherent/incoherent energy distribution.">SPREAD (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Diffraction Gratings and DOEs</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Diffraction Gratings and DOEs, at http://www.breault.com/k-base.php 
+ </a></div>
+</div>
+</div>
+
+
+</body>
+</html></body></html>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="SAVE (ASAP Command)"/>
+<meta name="abstract" content="Writes future ray trace data to a file for post-processing."/>
+<meta name="description" content="Writes future ray trace data to a file for post-processing."/>
+<meta name="DC.subject" content="SAVE (ASAP Command), ray trace, write data, write, ray trace data"/>
+<meta name="keywords" content="SAVE (ASAP Command), ray trace, write data, write, ray trace data"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_S-ref.html#Commands_and_Macros_S"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/IO_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SYSTEM_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TRACE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="SAVE_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>SAVE (ASAP Command)</title>
+</head>
+<body id="SAVE_ASAP_Command"><a name="SAVE_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>SAVE (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Writes future ray trace data to a file for post-processing. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+SAVE [ k [ name ]]
+       OFF
+      </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>k</span></td><td><span>unformatted binary file number (or extension)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>name</span></td><td><span>unformatted binary file name</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>OFF</span></td><td><span>turns off selection of saving ray trace data (data is not
+			 saved)</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="SAVE_ASAP_Command__ul_B2AEFF5DFFD245668C1DF5FB47CBDB3C"><!-- --></a><ol id="SAVE_ASAP_Command__ul_B2AEFF5DFFD245668C1DF5FB47CBDB3C"> 
+		<li id="SAVE_ASAP_Command__li_D641461EAD9442B5850D049B09B4E404"><a name="SAVE_ASAP_Command__li_D641461EAD9442B5850D049B09B4E404"><!-- --></a>Directs ASAP to save an
+		  unformatted binary file number information about every ray intersection found
+		  during any future ray traces. 
+		</li>
+ 
+		<li id="SAVE_ASAP_Command__li_DC8E32A73EB24A0AA5CFDFCFB314A704"><a name="SAVE_ASAP_Command__li_DC8E32A73EB24A0AA5CFDFCFB314A704"><!-- --></a>If 
+		  <b>k</b> is present, it becomes the file extension;
+		  otherwise, "his" is the assumed extension, and is automatically incremented
+		  after each 
+		  <b>TRACE</b> command, unless another 
+		  <b>SAVE</b> command is used to override it or turn it 
+		  <b>OFF.</b> 
+		</li>
+ 
+		<li id="SAVE_ASAP_Command__li_C5ADDA3594434D939B85B8CE9819D7A7"><a name="SAVE_ASAP_Command__li_C5ADDA3594434D939B85B8CE9819D7A7"><!-- --></a>The default name part of the
+		  file is "ASAPTEMP" or it is taken from the last 
+		  <b>SYSTEM</b> or 
+		  <b>$IO</b> command. Otherwise, it can be directly specified
+		  with the additional "name" entry. 
+		</li>
+ 
+		<li id="SAVE_ASAP_Command__li_D5331418E05149B681D88C4A967BC143"><a name="SAVE_ASAP_Command__li_D5331418E05149B681D88C4A967BC143"><!-- --></a>The next 
+		  <b>HISTORY</b> or 
+		  <b>RENDER…RAYS</b> command uses the file. 
+		</li>
+ 
+		<li id="SAVE_ASAP_Command__li_4C1D06B695784FB0AB986D87F18C48CD"><a name="SAVE_ASAP_Command__li_4C1D06B695784FB0AB986D87F18C48CD"><!-- --></a>Currently, 
+		  <b>SAVE</b> takes precedence over the 
+		  <b>TRACE PLOT</b> command to prevent excessive disk
+		  thrashing. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#SAVE">SAVE
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+
+  <div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_S-ref.html#Commands_and_Macros_S" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “S”.">Commands and Macros (S)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/IO_macro_ASAP-cmdref.html" title="Controls I/O redirection.">$IO (ASAP Macro)</a></div>
+<div><a href="../Commands/SYSTEM_ASAP-cmdref.html" title="Stores and retrieves system information.">SYSTEM (ASAP Command)</a></div>
+<div><a href="../Commands/TRACE_ASAP-cmdref.html" title="Traces all currently selected rays in storage.">TRACE (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Stray Light Analysis with ASAP</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Stray Light
+		  Analysis, at http://www.breault.com/k-base.php 
+		</a></div>
+</div>
+</div> 
+
+</body>
+</html></body></html>

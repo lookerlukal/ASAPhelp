@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Scatter Analysis"/>
+<meta name="abstract" content="Performing a scatter analysis is a complex task. In addition to basic scatter theory, there are many ASAP parameters to consider. Each analysis should be evaluated on an individual basis to determine which ASAP tools to use to simulate the problem."/>
+<meta name="description" content="Performing a scatter analysis is a complex task. In addition to basic scatter theory, there are many ASAP parameters to consider. Each analysis should be evaluated on an individual basis to determine which ASAP tools to use to simulate the problem."/>
+<meta name="DC.subject" content="Scatter Analysis, analysis, scatter, specular split rays, scatter, out of field, scatter, calculation, scatter, statistical accuracy"/>
+<meta name="keywords" content="Scatter Analysis, analysis, scatter, specular split rays, scatter, out of field, scatter, calculation, scatter, statistical accuracy"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Scattering_Overview-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Scatter_Analysis_Common_Approaches-conc.html#Scatter_Analysis_Common_Approaches"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Scattered_Radiation_Analysis_Methodology-conc.html#Scattered_Radiation_Analysis_Methodology"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Scatter_Models-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LEVEL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PATHS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SCATTER_RANDOM_MODEL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SCATTER_RMS_BSDF_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SELECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPLIT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPOTS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPREAD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TOWARDS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Ray_Tracing_Utility_Commands-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Scatter_Analysis"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Scatter Analysis</title>
+</head>
+<body id="Scatter_Analysis"><a name="Scatter_Analysis"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Scatter Analysis</h5></span> 
+   
+  
+  <div><p>Performing a scatter analysis is a complex task. In addition to
+	 basic scatter theory, there are many ASAP parameters to consider. Each analysis
+	 should be evaluated on an individual basis to determine which ASAP tools to use
+	 to simulate the problem. 
+  </p>
+ 
+	 <p>A fundamental concept to consider first is the type of scatter you want
+		to simulate: 
+	 </p>
+ 
+	 <br/><a name="Scatter_Analysis__ul_19CE985B0D6B4350AFB0A4E3CA621882"><!-- --></a><ul id="Scatter_Analysis__ul_19CE985B0D6B4350AFB0A4E3CA621882"> 
+		<li id="Scatter_Analysis__li_E8EE2C88A8F440FCB3A6DDBBAFEA5464"><a name="Scatter_Analysis__li_E8EE2C88A8F440FCB3A6DDBBAFEA5464"><!-- --></a>In-field scatter, also
+		  called near-specular scatter, is the scattered radiation propagating very close
+		  to the specular beam. It is typically generated from the specular beam
+		  interacting with scatter surfaces such as lenses and mirrors. 
+		</li>
+ 
+		<li id="Scatter_Analysis__li_D1A42044435047BEB952FBF8BB4C6961"><a name="Scatter_Analysis__li_D1A42044435047BEB952FBF8BB4C6961"><!-- --></a>Out-of-field scatter,
+		  conversely, is scattered radiation that does not propagate close to the
+		  specular beam. In fact, it may be incident radiation from beyond the FOV of the
+		  optical device that scatters off baffles or mounts and eventually reaches the
+		  detector or image plane. 
+		</li>
+ 
+	 </ul>
+ 
+	 <div class="section" id="Scatter_Analysis__section_615FC9B8C4214E5886D9C3DCFB347400"><a name="Scatter_Analysis__section_615FC9B8C4214E5886D9C3DCFB347400"><!-- --></a><span style="color: #2b6eb5"><h5>ASAP Scatter Commands</h5></span> 
+		 
+		<p>ASAP uses different scattering commands to simulate in-field and
+		  out-of-field scatter as well as different analysis techniques to analyze the
+		  different scatter contributions. 
+		</p>
+ 
+		<p>In either in-field or out-of-field scatter, ASAP generates incoherent
+		  scattered rays at an object in a similar sense to generating specular split
+		  rays. The 
+		  <b>OBJECT 
+		  </b>command modifier, 
+		  <b>SCATTER</b>, informs ASAP that the object is a
+		  scattering object. SCATTER is an independent modifier of the object, but it can
+		  also use information from another optical properties database, called 
+		  <b>MODELS</b>, which contains scatter models. 
+		</p>
+ 
+		<p>The 
+		  <b>OBJECT</b> modifier distinction is closely associated
+		  with the type of scatter simulation you are performing. For example, 
+		  <b>SCATTER BSDF</b> or 
+		  <b>SCATTER RMS</b> are 
+		  <b>OBJECT</b> modifiers for in-field scatter calculations. 
+		  <b>SCATTER RANDOM</b> or 
+		  <b>SCATTER MODEL i</b> are 
+		  <b>OBJECT</b> modifiers for out-of-field scatter
+		  calculations. For more information, see Scatter Analysis: Common Approaches. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Scatter_Analysis__section_9DE2836559A346D8BF28EEE128899EA0"><a name="Scatter_Analysis__section_9DE2836559A346D8BF28EEE128899EA0"><!-- --></a><span style="color: #2b6eb5"><h5>Specular Split Rays</h5></span> 
+		 
+		<p>When generating specular split rays, the 
+		  <b>SPLIT</b> command controls the number of splits. An
+		  analogous command, 
+		  <b>LEVEL</b>, controls the number of levels of scattered
+		  rays. For in-field scatter calculations, 
+		  <b>LEVEL</b> sets to 1. At each interface, ASAP generates a
+		  scattered ray that travels along with the specular ray. Higher levels of
+		  scatter, for in-field scatter from optically polished surfaces, are
+		  unnecessary: the power scattered by a scattered ray is significantly less than
+		  the original signal ray power. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Scatter_Analysis__section_75AAEB8AB6C34C03AD7E9E49CBA8DC09"><a name="Scatter_Analysis__section_75AAEB8AB6C34C03AD7E9E49CBA8DC09"><!-- --></a><span style="color: #2b6eb5"><h5>Out-of-Field Scatter</h5></span> 
+		 
+		<p>The 
+		  <b>LEVEL</b> command is typically set to a larger number
+		  for out-of-field scatter calculations. In these situations scattered rays may
+		  contain high enough power levels to be of significance at the next level of
+		  scatter. Also, the 
+		  <b>SCATTER RANDOM</b> or 
+		  <b>SCATTER MODEL</b> object modifiers allow multiple rays
+		  to be generated for a single input ray, independent of the 
+		  <b>LEVEL</b> command setting, which is necessary to
+		  simulate radiation propagating in directions other than the specular direction,
+		  that is, out of field. 
+		</p>
+ 
+		<p>Out-of-field scatter calculations require generating many rays. The
+		  rays are generated with a Monte-Carlo technique whereby the ray direction is
+		  randomly chosen to propagate into a hemisphere, and the ray flux is adjusted
+		  according to the BSDF of the object. 
+		</p>
+ 
+		<p>Although all the scattered rays can propagate into the hemisphere, but
+		  this is an inefficient simulation technique. For example, it requires
+		  generating a large number of rays for each incident ray to place enough rays at
+		  the detector to obtain a reasonable statistical accuracy for the simulation. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Scatter_Analysis__section_315E922806754E2B8258469EA3E8CD22"><a name="Scatter_Analysis__section_315E922806754E2B8258469EA3E8CD22"><!-- --></a><span style="color: #2b6eb5"><h5>Improving Scatter Calculation Efficiency and Statistical
+		  Accuracy</h5></span> 
+		 
+		<p>To improve the scatter calculation efficiency and statistical
+		  accuracy, ASAP uses a modified Monte-Carlo technique to force scattered rays to
+		  propagate toward important areas. It is the 
+		  <b>TOWARDS</b> command - a 
+		  <b>SCATTER RANDOM</b> and 
+		  <b>SCATTER MODEL</b> modifier. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Scatter_Analysis__section_B5E0283570354335A85EFB45B771CC08"><a name="Scatter_Analysis__section_B5E0283570354335A85EFB45B771CC08"><!-- --></a><span style="color: #2b6eb5"><h5>Analysis</h5></span> 
+		 
+		<p>The results of in-field and out-of-field ray trace calculations are
+		  analyzed with different techniques. The scattered rays generated for in-field
+		  calculations are incoherent beams with a specific set of propagation rules. 
+		  <b>SPREAD NORMAL</b> analyzes their combined effect.
+		  Scattered rays generated for out-of-field calculations are simulated as rays
+		  and not beams. 
+		  <b>SPOTS</b> analyzes their combined effect. 
+		  <b>SELECT 
+		  </b>and 
+		  <b>PATHS</b> commands isolate beams of interest for your
+		  analysis. Whereas in-field calculations are almost automatic, out-of-field
+		  calculations require more user interaction. You must define the appropriate
+		  scatter models, create important areas for an efficient scatter ray trace, and
+		  then analyze the results with a 
+		  <b>SPOTS</b> command. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Scatter_Analysis__section_7F57A28982014F3E8C6AD3353CED567C"><a name="Scatter_Analysis__section_7F57A28982014F3E8C6AD3353CED567C"><!-- --></a> 
+		<p> 
+		</p>
+ 
+		<p>For a more complete theoretical treatment of this subject, consult the
+		  following references: 
+		</p>
+ 
+		<p>Bennett, J. M., et al., Introduction to Surface Roughness and
+		  Scattering, (Optical Society of America, Washington, D. C., 1989), ISBN:
+		  1557521085. 
+		</p>
+ 
+		<p>Stover, J. C., Optical Scattering: Measurement and Analysis, (Society
+		  of Photo Optical, 1995, 2nd edition), ISBN: 0819419346. 
+		</p>
+ 
+		<p>Beckmann, P., et al., Scattering of Electromagnetic Waves from Rough
+		  Surfaces (Artech House, 1987), ISBN: 0890062382. 
+		</p>
+ 
+		<p>Harvey, J. E., Light-Scattering Characteristics of Optical Surfaces,
+		  (Ph.D. Dissertation, University of Arizona, 1976). 
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Scattering_Overview-ref.html" title="Scattering is generally defined as the removal of energy from an incident wave and the subsequent re-emission of some portion of that energy. The macroscopic laws of refraction and reflection may even be considered special cases of the statistical averages of scattering phenomena. This topic discusses scatter from nonsmooth surfaces; that is, surface scattering, since ASAP is primarily designed to model surface scattering phenomena. Volume scattering can be modeled by using many transparent scattering surfaces to partition the volume.">Scattering Overview</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Scatter_Analysis_Common_Approaches-conc.html#Scatter_Analysis_Common_Approaches" title="This topic addresses common approaches to scatter analysis.">Scatter Analysis - Common Approaches</a></div>
+<div><a href="../Concept/Scattered_Radiation_Analysis_Methodology-conc.html#Scattered_Radiation_Analysis_Methodology" title="The goal in a classical stray light analysis usually is to determine the amount of unwanted scattered radiation propagating to a detector in order to assess its effect on system performance.">Scattered Radiation Analysis Methodology</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Scatter_Models-ref.html" title="ASAP supports the scatter models listed in this topic for wide-angle (far from specular) scatter.">Scatter Models</a></div>
+<div><a href="../Reference/Ray_Tracing_Utility_Commands-ref.html" title="Commands that toggle flags for the ray trace algorithm, set options, thresholds and others, are referred to as utility commands. A list of these commands is included in this topic.">Ray Tracing Utility Commands</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/LEVEL_ASAP-cmdref.html" title="Controls the number of times a scattered ray may be rescattered.">LEVEL (ASAP Command)</a></div>
+<div><a href="../Commands/PATHS_ASAP-cmdref.html" title="Produces a table of summarizing propagation paths of currently defined rays.">PATHS (ASAP Command)</a></div>
+<div><a href="../Commands/SCATTER_RANDOM_MODEL_ASAP-cmdref.html" title="Assigns a scattering interface to an object.">SCATTER RANDOM/MODEL (ASAP Command)</a></div>
+<div><a href="../Commands/SCATTER_RMS_BSDF_ASAP-cmdref.html" title="Assigns a near-specular scattering interface to an object.">SCATTER RMS/BSDF (ASAP Command)</a></div>
+<div><a href="../Commands/SELECT_ASAP-cmdref.html" title="Isolates a ray set for further analysis.">SELECT (ASAP Command)</a></div>
+<div><a href="../Commands/SPLIT_ASAP-cmdref.html" title="Controls the number of times a ray may be split into specular components.">SPLIT (ASAP Command)</a></div>
+<div><a href="../Commands/SPOTS_ASAP-cmdref.html" title="Creates a geometric spot diagram for the currently selected ray data.">SPOTS (ASAP Command)</a></div>
+<div><a href="../Commands/SPREAD_ASAP-cmdref.html" title="Calculates the exact coherent/incoherent energy distribution.">SPREAD (ASAP Command)</a></div>
+<div><a href="../Commands/TOWARDS_ASAP-cmdref.html" title="Specifies importance area or direction sampling for scattered rays. Required when specifying a SCATTER MODEL.">TOWARDS (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

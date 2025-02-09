@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Extended Sources - Setup and Analysis"/>
+<meta name="abstract" content="This topic describes how to set up sources for analysis."/>
+<meta name="description" content="This topic describes how to set up sources for analysis."/>
+<meta name="DC.subject" content="Extended Sources - Set Up and Analysis, sources, extended setup and analysis"/>
+<meta name="keywords" content="Extended Sources - Set Up and Analysis, sources, extended setup and analysis"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_DEF-ref.html#Reference_DEF"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CLIP_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CONSIDER_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DISPLAY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FLUX_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/POLARIZ_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPOTS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/USERAPOD_ANGLES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WAVELENGTHS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WINDOW_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Extended_Sources_Set_Up_and_Analysis"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Extended Sources - Setup and Analysis</title>
+</head>
+<body id="Extended_Sources_Set_Up_and_Analysis"><a name="Extended_Sources_Set_Up_and_Analysis"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Extended Sources - Setup and Analysis</h5></span> 
+   
+   
+  <div><p>This topic describes how to set up sources for analysis. 
+  </p>
+ 
+	 <div class="p" id="Extended_Sources_Set_Up_and_Analysis__prereq_C6594A406062432590B2D378EBF72A0A"><a name="Extended_Sources_Set_Up_and_Analysis__prereq_C6594A406062432590B2D378EBF72A0A"><!-- --></a>Pre-requisites: 
+		<p>Prior to defining the rays, specify the following input in this order:
+		  
+		</p>
+ 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>WAVELENGTH</span></td><td><span>(not required)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CLIP</span></td><td><span>(not required)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>USERAPOD ANGLES</span></td><td><span>(user-defined apodization)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>POLARIZATION</span></td><td><span>(emitting raysets are randomly linearly polarized
+				(default))</span></td></tr></tbody></table> 
+	 </div>
+ 
+	 <div class="section" id="Extended_Sources_Set_Up_and_Analysis__context_8EF8464BBBF64386AA624C6F14D99AD0"><a name="Extended_Sources_Set_Up_and_Analysis__context_8EF8464BBBF64386AA624C6F14D99AD0"><!-- --></a> 
+		<p> 
+		</p>
+ 
+		<p>The following input specifies the rayset: 
+		</p>
+ 
+		<p><b>EMITTING. . .</b> 
+		</p>
+ 
+		<p>The EMITTING family of commands defines rays that are randomly
+		  distributed in position and direction over a surface or volume. 
+		</p>
+ 
+		<p> 
+		</p>
+ 
+		<p>To modify the characteristics of the rayset after specifying the 
+		  <b>EMITTING</b> commands, specify the following input: 
+		</p>
+ 
+		<p>FLUX (used to modify fluxes of rays) 
+		</p>
+ 
+		<p> 
+		</p>
+ 
+		<p>To specify where and at what resolution to do the calculation, enter
+		  the following input: 
+		</p>
+ 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CONSIDER/SELECT</span></td><td><span>(not required unless you want to restrict the ray
+				data)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>WINDOW</span></td><td><span>(required so that ASAP knows where to do the
+				calculation)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>PIXELS</span></td><td><span>(not required unless you want higher resolution)</span></td></tr></tbody></table> 
+		<p>After following the order of the previous commands, run 
+		  <b>SPOTS POSITION</b>, 
+		  <b>SPOTS DIRECTION</b>, or 
+		  <b>RADIANT</b>. 
+		</p>
+ 
+		<p>After the calculation, use DISPLAY to examine the distribution data. 
+		</p>
+ 
+		<p> 
+		</p>
+ 
+		<div class="note"><span class="notetitle">Note:</span>  
+		  <br/><a name="Extended_Sources_Set_Up_and_Analysis__ul_20DCED645277455D9295B31AABC4AA74"><!-- --></a><ul id="Extended_Sources_Set_Up_and_Analysis__ul_20DCED645277455D9295B31AABC4AA74"> 
+			 <li id="Extended_Sources_Set_Up_and_Analysis__li_426EA062E6194F7E844989CBCBC4CAFC"><a name="Extended_Sources_Set_Up_and_Analysis__li_426EA062E6194F7E844989CBCBC4CAFC"><!-- --></a>Incoherent geometric
+				extended sources have similar properties to point sources. However, the spatial
+				and angular properties of the source are defined with a single 
+				<b>EMITTING</b> command. 
+			 </li>
+ 
+			 <li id="Extended_Sources_Set_Up_and_Analysis__li_3263878AA0F14788A4D3DBA36F4BD589"><a name="Extended_Sources_Set_Up_and_Analysis__li_3263878AA0F14788A4D3DBA36F4BD589"><!-- --></a> 
+				<p>Coherent/Incoherent geometric point sources typically are
+				  created on 2D planar grids (with a 
+				  <b>GRID</b> command), which define the spatial extent
+				  of the source (spatial property). The grids may be rotated, shifted or
+				  otherwise transformed with the linear transformation commands. A grid of rays
+				  that has direction cosine vectors assigned to it with a SOURCE command is the
+				  actual source. 
+				</p>
+ 
+				<p>In fact, a grid of rays cannot be traced until the direction
+				  cosine vectors assign the propagation direction to the spatial arrangement of
+				  rays (angular property). Direction cosines are geometric cosines (the sum of
+				  the squares of the direction cosines is equal to one). They are not optical
+				  cosines used by other lens design codes. 
+				</p>
+ 
+				<p>The main check ASAP uses to determine if a set of beams
+				  comprising a monochromatic point source is coherent or not is a modification of
+				  the 
+				  <b>BEAMS</b> command. If the 
+				  <b>BEAMS COHERENT DIFFRACT</b> is specified, then, in
+				  general, the beams of a monochromatic point source are assumed to be coherent
+				  with respect to each other. 
+				</p>
+ 
+				<br/><a name="Extended_Sources_Set_Up_and_Analysis__ul_C7EA0F97A1344506BC07E6234F33BEF6"><!-- --></a><ul id="Extended_Sources_Set_Up_and_Analysis__ul_C7EA0F97A1344506BC07E6234F33BEF6"> 
+				  <li id="Extended_Sources_Set_Up_and_Analysis__li_1D01E408C7144BB295F6B6DCCCF615DA"><a name="Extended_Sources_Set_Up_and_Analysis__li_1D01E408C7144BB295F6B6DCCCF615DA"><!-- --></a>If the individual
+					 beams are 
+					 <i>coherent</i> with respect to each other, ASAP will linearly
+					 superpose the electric field amplitudes of the individual beams to calculate
+					 the energy distributions. 
+				  </li>
+ 
+				  <li id="Extended_Sources_Set_Up_and_Analysis__li_B2830879FF9046FA8F8C54455186F7D3"><a name="Extended_Sources_Set_Up_and_Analysis__li_B2830879FF9046FA8F8C54455186F7D3"><!-- --></a>If the individual
+					 beams are 
+					 <i>incoherent</i> with respect to each other, ASAP will
+					 linearly superpose the modulus squared of the electric field amplitudes (energy
+					 density) of the individual beams to calculate the energy distributions. 
+				  </li>
+ 
+				  <li id="Extended_Sources_Set_Up_and_Analysis__li_5F0B523C72F54B63A0010130F3668509"><a name="Extended_Sources_Set_Up_and_Analysis__li_5F0B523C72F54B63A0010130F3668509"><!-- --></a>Beams comprising a
+					 monochromatic point source are coherent with respect to each other. Beams
+					 comprising a polychromatic point source are incoherent between wavelengths, but
+					 coherent with respect to each other at a single wavelength. 
+				  </li>
+ 
+				</ul>
+ 
+			 </li>
+ 
+		  </ul>
+ 
+		</div>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_DEF-ref.html#Reference_DEF" title="Reference topics in this section begin with the letters &#34;D-E-F&#34;.">Reference (D-F)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/CLIP_ASAP-cmdref.html" title="Specifies positional or directional ray limiting or clipping boxes.">CLIP (ASAP Command)</a></div>
+<div><a href="../Commands/CONSIDER_ASAP-cmdref.html" title="Selects a set of objects for ray tracing and plotting.">CONSIDER (ASAP Command)</a></div>
+<div><a href="../Commands/DISPLAY_ASAP-cmdref.html" title="Reads previously created distribution data files so that they can be modified.">DISPLAY (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_ASAP-cmdref.html" title="Creates a composite single-source emitter from several EMITTING volume commands.">EMITTING (ASAP Command)</a></div>
+<div><a href="../Commands/FLUX_ASAP-cmdref.html" title="Modifies ray fluxes of currently selected ray data.">FLUX (ASAP Command)</a></div>
+<div><a href="../Commands/PIXELS_ASAP-cmdref.html" title="Sets the resolution for graphics and calculations.">PIXELS (ASAP Command)</a></div>
+<div><a href="../Commands/POLARIZ_ASAP-cmdref.html" title="Sets the polarization properties for future ray creation.">POLARIZ (ASAP Command)</a></div>
+<div><a href="../Commands/SPOTS_ASAP-cmdref.html" title="Creates a geometric spot diagram for the currently selected ray data.">SPOTS (ASAP Command)</a></div>
+<div><a href="../Commands/USERAPOD_ANGLES_ASAP-cmdref.html" title="Specifies 3D angular apodization of volume emitters.">USERAPOD ANGLES (ASAP Command)</a></div>
+<div><a href="../Commands/WAVELENGTHS_ASAP-cmdref.html" title="Defines the wavelength(s) for different MEDIA and COATING definitions.">WAVELENGTH(S) (ASAP Command)</a></div>
+<div><a href="../Commands/WINDOW_ASAP-cmdref.html" title="Sets the plotting window for graphical output.">WINDOW (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

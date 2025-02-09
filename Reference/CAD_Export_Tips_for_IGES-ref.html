@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="CAD Export Tips for IGES"/>
+<meta name="abstract" content="This topic gives you tips for exporting CAD files to IGES."/>
+<meta name="description" content="This topic gives you tips for exporting CAD files to IGES."/>
+<meta name="DC.subject" content="CAD Export Tips for IGES, IGES, CAD export tips, exporting, geometry"/>
+<meta name="keywords" content="CAD Export Tips for IGES, IGES, CAD export tips, exporting, geometry"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Export_to_CAD_Dialog-task.html#Export_to_CAD_Dialog"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/CAD_Exort_Log_File-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/CAD_Library-ref.html#CAD_Library"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Translator_Overview_for_IGES_and_XML-ref.html#Translator_Overview_for_IGES_and_XML"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Importing_IGES_or_CAD_Files-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/IGES_Definitions_Menu-task.html#IGES_Definitions_Menu"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Import_from_IGES_Accuracy-conc.html#ASAP_Import_from_IGES_Accuracy"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/IGES_Export_Accuracy-conc.html#IGES_Export_Accuracy"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/IGES_Rhino_Import-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Currently_Supported_IGES_Translation_Entities-conc.html#Currently_Supported_IGES_Translation_Entities"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/User_Interface_Preferences_CAD_Import_Tab-task.html#User_Interface_Preferences_CAD_Import_Tab"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ARRAY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/BOUNDS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CADEXPORT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LIMITS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LOCAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REDEFINE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ARRAY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/BOUNDS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CADEXPORT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LIMITS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LOCAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REDEFINE_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="CAD_Export_Tips_for_IGES"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>CAD Export Tips for IGES</title>
+</head>
+<body id="CAD_Export_Tips_for_IGES"><a name="CAD_Export_Tips_for_IGES"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>CAD Export Tips for IGES</h5></span> 
+   
+   
+  <div><p>This topic gives you tips for exporting CAD files to IGES. 
+  </p>
+ 
+	 <div class="section" id="CAD_Export_Tips_for_IGES__section_09ABC21E13024D2EB86F56AAA9F694E0"><a name="CAD_Export_Tips_for_IGES__section_09ABC21E13024D2EB86F56AAA9F694E0"><!-- --></a> 
+		<br/><a name="CAD_Export_Tips_for_IGES__ul_CAA981093EAA496F8A58A5C0B6549DA7"><!-- --></a><ul id="CAD_Export_Tips_for_IGES__ul_CAA981093EAA496F8A58A5C0B6549DA7"> 
+		  <li id="CAD_Export_Tips_for_IGES__li_7C48B7E46E9548F898DDE7AAADADD4A9"><a name="CAD_Export_Tips_for_IGES__li_7C48B7E46E9548F898DDE7AAADADD4A9"><!-- --></a> When bounding with an
+			 edge, the edge is swept an infinite distance along a direction perpendicular to
+			 the plane containing the edge. For edge bounding to work predictably, these two
+			 situations should exist: 
+			 <br/><a name="CAD_Export_Tips_for_IGES__ol_720502C55D9B487D9F57246D2A804275"><!-- --></a><ol id="CAD_Export_Tips_for_IGES__ol_720502C55D9B487D9F57246D2A804275"> 
+				<li id="CAD_Export_Tips_for_IGES__li_FF9555499D5A4CF38DB6B5084A93E07A"><a name="CAD_Export_Tips_for_IGES__li_FF9555499D5A4CF38DB6B5084A93E07A"><!-- --></a>Edge should be closed
+				  - If a bounding edge is open, it will be closed with a line that passes through
+				  the start and end points of the edge. 
+				</li>
+ 
+				<li id="CAD_Export_Tips_for_IGES__li_331CF6ABA043422D8B3A321DA440726A"><a name="CAD_Export_Tips_for_IGES__li_331CF6ABA043422D8B3A321DA440726A"><!-- --></a>Edge should lie on a
+				  plane 
+				</li>
+ 
+			 </ol>
+ 
+		  </li>
+ 
+		  <li id="CAD_Export_Tips_for_IGES__li_CE8FF8987D6543709F968D5D07DC0E83"><a name="CAD_Export_Tips_for_IGES__li_CE8FF8987D6543709F968D5D07DC0E83"><!-- --></a>For surface bounding to
+			 work predictably, the surface should be G1 continuous, that is, no sharp
+			 corners. 
+		  </li>
+ 
+		  <li id="CAD_Export_Tips_for_IGES__li_C3310DE5502343459E5861574E98CE9B"><a name="CAD_Export_Tips_for_IGES__li_C3310DE5502343459E5861574E98CE9B"><!-- --></a>Trimming an object using
+			 the 
+			 <b>BOUNDS</b> modifier requires that the bounding edge or
+			 surface, intersects the bounded surface. The resulting intersection curve must
+			 either be closed or form a closed curve when trimmed with existing boundaries
+			 on the bounded surface. Avoid creating closed intersection curves that
+			 intersect the outer boundary of a surface at a single point. 
+		  </li>
+ 
+		  <li id="CAD_Export_Tips_for_IGES__li_B8C232DDAA004640BF3FA07523EAFF6D"><a name="CAD_Export_Tips_for_IGES__li_B8C232DDAA004640BF3FA07523EAFF6D"><!-- --></a>A surface used as a
+			 bounding entity is not extended to infinity. The surface is constrained to lie
+			 within its 
+			 <b>LOCAL</b> box. 
+		  </li>
+ 
+		  <li id="CAD_Export_Tips_for_IGES__li_A32D5FF8B97C4C2C98E7857C29FA74F6"><a name="CAD_Export_Tips_for_IGES__li_A32D5FF8B97C4C2C98E7857C29FA74F6"><!-- --></a>All ARRAY command
+			 qualifiers, except 
+			 <b>BOUNDS</b>, are ignored. 
+		  </li>
+ 
+		  <li id="CAD_Export_Tips_for_IGES__li_B853AF7287264AA09185E774C370B9E5"><a name="CAD_Export_Tips_for_IGES__li_B853AF7287264AA09185E774C370B9E5"><!-- --></a>A bounding region as
+			 defined by the 
+			 <b>LIMITS</b> modifier must be rectangular;
+			 non-rectangular regions are ignored. An example of a non-rectangular region is
+			 when the 
+			 <b>LIMITS</b> modifier is used with a coordinate
+			 direction. This situation defines a cylindrical bounding region, with constant
+			 elliptical cross-section in planes perpendicular to the specified coordinate
+			 direction. If a non-rectangular region is needed, 
+			 <b>BOUND</b>ing to surfaces or edges should be used. 
+		  </li>
+ 
+		  <li id="CAD_Export_Tips_for_IGES__li_B32B7B112709498D80A76E40A6777DA7"><a name="CAD_Export_Tips_for_IGES__li_B32B7B112709498D80A76E40A6777DA7"><!-- --></a>There will be no ‘round
+			 trip’, that is, the sequence below will not, in general, generate the original
+			 INR file defined in the first situation: 
+			 <br/><a name="CAD_Export_Tips_for_IGES__ol_9DF6F2A7E01F4BD5A420D66EA4442CDF"><!-- --></a><ol id="CAD_Export_Tips_for_IGES__ol_9DF6F2A7E01F4BD5A420D66EA4442CDF"> 
+				<li id="CAD_Export_Tips_for_IGES__li_69F10E72E7444AFBB794E06657825C3A"><a name="CAD_Export_Tips_for_IGES__li_69F10E72E7444AFBB794E06657825C3A"><!-- --></a>Run an INR file 
+				</li>
+ 
+				<li id="CAD_Export_Tips_for_IGES__li_6ACCF0CE6DFA4F459BEF9D6B38C33A26"><a name="CAD_Export_Tips_for_IGES__li_6ACCF0CE6DFA4F459BEF9D6B38C33A26"><!-- --></a>Export the geometry in
+				  the INR file in the first situation (edge should be closed) to an IGES file. 
+				</li>
+ 
+				<li id="CAD_Export_Tips_for_IGES__li_2667ADF03B0142859938862B07DE8440"><a name="CAD_Export_Tips_for_IGES__li_2667ADF03B0142859938862B07DE8440"><!-- --></a>Import the IGES file
+				  in the second situation (edge should lie on a plane). 
+				</li>
+ 
+			 </ol>
+ 
+		  </li>
+ 
+		  <li id="CAD_Export_Tips_for_IGES__li_FED9FC67BA474F5B9AEE9D29A9B08267"><a name="CAD_Export_Tips_for_IGES__li_FED9FC67BA474F5B9AEE9D29A9B08267"><!-- --></a>If units are not specified
+			 for IGES export, they are assumed to be MM. 
+		  </li>
+ 
+		  <li id="CAD_Export_Tips_for_IGES__li_EEC2396C77DC4B4FB93797C69E2C312D"><a name="CAD_Export_Tips_for_IGES__li_EEC2396C77DC4B4FB93797C69E2C312D"><!-- --></a> 
+			 <p>The conversion of an ASAP bounded surface to an IGES trimmed
+				surface is dependent on tolerances for 3D position and angle: 
+			 </p>
+ 
+			 <br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>3D Position Tolerance</span></td><td><span>Controls the accuracy of the intersection of an ASAP
+					 object with a bounding surface or edge. If it is too small, the intersection
+					 procedure may fail. If the tolerance is too large the intersection procedure
+					 may give an incorrect result.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Angle Tolerance</span></td><td><span>Controls the intersection curve that results from the
+					 intersection of an ASAP object with a bounding surface or edge. A small angle
+					 may prohibit the construction of an intersection curve. A large angle could
+					 result in an incorrect intersection curve. 
+				  </span></td></tr></tbody></table> 
+		  </li>
+ 
+		  <li id="CAD_Export_Tips_for_IGES__li_D32C2F9B9D9F4463B53DABC72C7224D2"><a name="CAD_Export_Tips_for_IGES__li_D32C2F9B9D9F4463B53DABC72C7224D2"><!-- --></a>A surface 
+			 <b>REDEFINE</b>d with the 
+			 <b>THICKNESS</b> option cannot be bound with another
+			 surface or edge-based entity. Also, the 
+			 <b>LIMITS</b> modifier has no effect. 
+		  </li>
+ 
+		  <li id="CAD_Export_Tips_for_IGES__li_C724DE9A43B749D189DAD3ED4081326E"><a name="CAD_Export_Tips_for_IGES__li_C724DE9A43B749D189DAD3ED4081326E"><!-- --></a>A surface cannot be
+			 bounded with surfaces 
+			 <b>REDEFINE</b>d with the 
+			 <b>THICKNESS</b> option. 
+		  </li>
+ 
+		</ul>
+ 
+	 </div>
+ 
+  </div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Task/Export_to_CAD_Dialog-task.html#Export_to_CAD_Dialog" title="Writes a CAD-compatible system geometry file. Export includes surface representation of all lenses, surface/sampled, and continuous curve- and edge-based objects.">Export to CAD Dialog</a></div>
+</div>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Translator_Overview_for_IGES_and_XML-ref.html#Translator_Overview_for_IGES_and_XML" title="ASAP CAD+ includes IGES and GTX (XML) import capability, by translating IGES (Initial Graphics Exchange Specification) files and XML (eXtensible Markup Language) in GTX format to ASAP format. You can perform optical analyses on geometries initially created in a CAD program.">Translator Overview for IGES and GTX</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/ASAP_Import_from_IGES_Accuracy-conc.html#ASAP_Import_from_IGES_Accuracy" title="The accuracy of the ASAP import capability cannot be generally specified. The accuracy is dependent upon a number of parameters and must be treated on a case-by-case basis. This topic addresses some accuracy issues.">ASAP Import from IGES - Accuracy</a></div>
+<div><a href="../Concept/IGES_Export_Accuracy-conc.html#IGES_Export_Accuracy" title="IGES export to ASAP is exact. This topic addresses accuracy issues.">IGES Export Accuracy</a></div>
+<div><a href="../Concept/IGES_Rhino_Import-conc.html" title="This topic gives an example of preparing a Rhino file in Rhinoceros (&#34;Rhino&#34;) before using the IGES to ASAP Translator, smartIGES™.">CAD Import - Rhino Files</a></div>
+<div><a href="../Concept/Currently_Supported_IGES_Translation_Entities-conc.html#Currently_Supported_IGES_Translation_Entities" title="This topic presents in table form IGES entities and corresponding ASAP commands.">Currently Supported IGES Translation Entities</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/CAD_Exort_Log_File-task.html" title="Each time you initiate an IGES export to a CAD file, information for the export is logged to a file.">CAD Export Log File</a></div>
+<div><a href="../Task/Importing_IGES_or_CAD_Files-task.html" title="This topic describes how to import an IGES or CAD file into ASAP for analysis.">Importing IGES or CAD Files</a></div>
+<div><a href="../Task/IGES_Definitions_Menu-task.html#IGES_Definitions_Menu" title="IGES translation involves a Definitions menu for setting properties.">IGES Definitions Menu</a></div>
+<div><a href="../Task/User_Interface_Preferences_CAD_Import_Tab-task.html#User_Interface_Preferences_CAD_Import_Tab" title="The user preferences described in this topic apply globally to the CAD translation process.">User Interface Preferences - CAD Import Tab</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/CAD_Library-ref.html#CAD_Library" title="The BRO CAD library (cad.lib) contains macros for turning common ASAP surfaces into parameterized (EDGE/CURVE-based objects).">CAD Library</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/ARRAY_ASAP-cmdref.html" title="Turns the last surface into a set of identical surfaces.">ARRAY (ASAP Command)</a></div>
+<div><a href="../Commands/BOUNDS_ASAP-cmdref.html" title="Assigns surfaces and edges as boundaries to objects.">BOUNDS (ASAP Command)</a></div>
+<div><a href="../Commands/CADEXPORT_ASAP-cmdref.html" title="Writes out CAD-compatible system geometry file.">CADEXPORT (ASAP Command)</a></div>
+<div><a href="../Commands/LIMITS_ASAP-cmdref.html" title="Assigns a global bounding box to the object.">LIMITS (ASAP Command)</a></div>
+<div><a href="../Commands/LOCAL_ASAP-cmdref.html" title="Assigns a local bounding box to the surface/function.">LOCAL (ASAP Command)</a></div>
+<div><a href="../Commands/REDEFINE_ASAP-cmdref.html" title="Adds options to an object.">REDEFINE (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

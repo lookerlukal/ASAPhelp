@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Optimization Exit Criteria Tab"/>
+<meta name="abstract" content="The Exit Criteria tab on the Optimization Setup Summary window lets you select the exit criteria that determines completion of optimization."/>
+<meta name="description" content="The Exit Criteria tab on the Optimization Setup Summary window lets you select the exit criteria that determines completion of optimization."/>
+<meta name="DC.subject" content="Optimization Exit Criteria Tab, Exit Criteria Tab, Optimization Setup Summary Window"/>
+<meta name="keywords" content="Optimization Exit Criteria Tab, Exit Criteria Tab, Optimization Setup Summary Window"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Optimization_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Getting_Started_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Optimization_Setup_Summary_Window-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Design_Variables_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Design_Variable_Dialog-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Design_Objectives_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Design_Objectives_Dialog-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Define_Objective_Constraint_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimize_Objective_Constraints_ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Define_Exit_Criteria_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Set_Method_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Method_Dialog-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Optimization_Results-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Grid_Display_Options_dialog-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Glossary-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Design_Variable_Messages-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Define_Exit_Criteria_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Design_Variable_Messages-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Define_Exit_Criteria_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Design_Variable_Messages-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Optimization_Exit_Criteria_Tab"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Optimization Exit Criteria Tab</title>
+</head>
+<body id="Optimization_Exit_Criteria_Tab"><a name="Optimization_Exit_Criteria_Tab"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Optimization Exit Criteria Tab</h5></span> 
+   
+   
+  <div><p>The Exit Criteria tab on the Optimization Setup Summary window
+	 lets you select the exit criteria that determines completion of optimization. 
+  </p>
+ 
+	 <div class="section" id="Optimization_Exit_Criteria_Tab__refsyn_616ED2A7893248E183E6B0FE9960E707"><a name="Optimization_Exit_Criteria_Tab__refsyn_616ED2A7893248E183E6B0FE9960E707"><!-- --></a>You can switch to
+		another tab on the Optimization Setup Summary window without performing final
+		validation. Some validation may occur when you select 
+		<a name="Optimization_Exit_Criteria_Tab__image_8A70894D222C48DFAB9854CE67F5EC18"><!-- --></a><img id="Optimization_Exit_Criteria_Tab__image_8A70894D222C48DFAB9854CE67F5EC18" longdesc="Start Optimization button" src="../Graphics/Optimization_StartButton.jpg" width="126" height="22"/> on the Optimization Method
+		tab. 
+	 </div>
+ 
+	 <a name="Optimization_Exit_Criteria_Tab__properties_6440063841A14B749C4F7676DC34C1D5"><!-- --></a><table cellpadding="4" cellspacing="0" summary="" id="Optimization_Exit_Criteria_Tab__properties_6440063841A14B749C4F7676DC34C1D5" border="1" class="simpletableborder"> 
+		<tr>
+<th valign="bottom" align="left" id="d15963e35">Property Type</th>
+<th valign="bottom" align="left" id="d15963e38">Field</th>
+<th valign="bottom" align="left" id="d15963e41">Property Description</th>
+</tr> 
+		<tr>
+<td valign="top" headers="d15963e35">Limit on Number of Trial Solutions</td>
+<td valign="top" headers="d15963e38">Required integer</td>
+<td valign="top" headers="d15963e41">Maximum number of Trial Solutions that will be evaluated in
+			 the search for an optimal design. The number must be greater than zero (&gt;0).
+			 Default is 100.</td>
+</tr>
+ 
+		<tr>
+<td valign="top" headers="d15963e35">Use Acceptance Limit</td>
+<td valign="top" headers="d15963e38">Optional
+			 real value</td>
+<td valign="top" headers="d15963e41">The number must be a positive real value. If
+			 this field is clear, the default is none. If this field is selected, the
+			 default is 0.0010. 
+		  </td>
+</tr>
+ 
+		<tr>
+<td valign="top" headers="d15963e35">Use Relative Divergence of Trial
+			 Solutions</td>
+<td valign="top" headers="d15963e38">Optional</td>
+<td valign="top" headers="d15963e41">Provides a way to
+			 terminate optimizations that are diverging in excess of a user-specified,
+			 acceptable rate. If this check box is selected, the following two fields are
+			 required: 
+			 <b>Relative Divergence Limit Ratio</b> and 
+			 <b>Number of Consecutively Preceding Trial
+				Solutions</b>. 
+		  </td>
+</tr>
+ 
+		<tr>
+<td valign="top" headers="d15963e35">Relative Divergence Limit
+			 Ratio</td>
+<td valign="top" headers="d15963e38">Required 
+		  </td>
+<td valign="top" headers="d15963e41">The value for the ratio 
+			 <b>r</b> entered represents the acceptable ratio of the
+			 FOM over any of the 
+			 <b>n</b> consecutively preceding trial solutions as a
+			 condition for considering additional trial solutions. If the check box, 
+			 <b>Use Relative Divergence of Trial Solutions</b> is
+			 selected, the default value of 0.5 is displayed. The default can be changed. 
+		  </td>
+</tr>
+ 
+		<tr>
+<td valign="top" headers="d15963e35">Number of Consecutively Preceding Trial
+			 Solutions</td>
+<td valign="top" headers="d15963e38">Required 
+		  </td>
+<td valign="top" headers="d15963e41">The value for 
+			 <b>n</b> represents the number of consecutively preceding
+			 trial solutions used to evaluate the rate of divergence. If the check box, 
+			 <b>Use Relative Divergence of Trial Solutions</b> is
+			 selected, the default value of 10 is displayed. The default can be changed. 
+		  </td>
+</tr>
+ 
+		<tr>
+<td valign="top" headers="d15963e35">Use Acceptable
+			 Noise</td>
+<td valign="top" headers="d15963e38">Optional</td>
+<td valign="top" headers="d15963e41">Provides a way to
+			 terminate optimization after an acceptable "signal-to-noise ratio" is achieved.
+			 If the check box is selected, the following two fields are required: 
+			 <b>Acceptable Noise Ratio</b> and 
+			 <b>Number of Consecutively Preceding Trial
+				Solutions</b>. 
+		  </td>
+</tr>
+ 
+		<tr>
+<td valign="top" headers="d15963e35">Acceptable Noise
+			 Ratio</td>
+<td valign="top" headers="d15963e38">Required</td>
+<td valign="top" headers="d15963e41">The value for the
+			 ratio 
+			 <b>r</b> represents the maximum variability over a number
+			 
+			 <b>n</b> of consecutively preceding trial solutions as a
+			 condition of considering additional trial solutions. The acceptable noise ratio
+			 is the "inverse signal-to-noise ratio". If the check box, 
+			 <b>Use Acceptable Noise</b> is selected, a value, the
+			 default value of 0.01 is displayed. The default can be changed. 
+		  </td>
+</tr>
+ 
+		<tr>
+<td valign="top" headers="d15963e35">Number of Consecutively Preceding Trial
+			 Solutions</td>
+<td valign="top" headers="d15963e38">Required</td>
+<td valign="top" headers="d15963e41">The number of
+			 consecutively preceding trial solutions, 
+			 <b>n</b> is used to evaluate the "signal-to-noise ratio".
+			 If the check box, 
+			 <b>Use Acceptable Noise</b> is selected, the default
+			 value of 10 is displayed. The default can be changed. 
+		  </td>
+</tr>
+ 
+		<tr>
+<td valign="top" headers="d15963e35">Close</td>
+<td valign="top" headers="d15963e38">Button</td>
+<td valign="top" headers="d15963e41">Closes
+			 the Optimization Setup Summary window, and ends the Optimization
+			 session.</td>
+</tr>
+ 
+		<tr>
+<td valign="top" headers="d15963e35">Help</td>
+<td valign="top" headers="d15963e38">Button</td>
+<td valign="top" headers="d15963e41">Opens
+			 Help topic that describes the dialog box.</td>
+</tr>
+ 
+	 </table>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Optimization_Overview-conc.html" title="The Optimization feature in ASAP addresses your need to optimize optical systems under evaluation that were designed or analyzed with ASAP. This topic gives a frame of reference, focusing on criteria you need to satisfy, and the process of designating an optimization method before you can initiate an optimization run in ASAP via the user interface. Related topics are listed at the end of this and other topics for this feature.">Optimization - Overview</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Optimization_Setup_Summary_Window-conc.html" title="The Optimization Setup Summary window presents a multi-tabbed user interface for viewing and entering information that ASAP will use to optimize a system under evaluation (SUE).">Optimization - Setup Summary Window</a></div>
+<div><a href="../Concept/Optimization_Results-conc.html" title="This topic describes the Optimization Results interface, which displays the progress of the optimization process both graphically and as tabular data.">Optimization - Viewing Results</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Optimization_Getting_Started_Use_Case-task.html" title="This topic describes how to set up ASAP before you can initiate an optimization in the optimization user interface. It describes the connection between the script (INR) and the optimization user interface, which is the Optimization Setup Summary window.">Optimization - Setting Up ASAP</a></div>
+<div><a href="../Task/Optimization_Design_Variables_Use_Case-task.html" title="This topic describes how to define and enable a design variable for optimization.">Optimization - Defining Design Variables</a></div>
+<div><a href="../Task/Optimization_Design_Objectives_Use_Case-task.html" title="This topic describes how to define and enable a design objective for optimization.">Optimization - Defining Design Objectives</a></div>
+<div><a href="../Task/Optimization_Define_Objective_Constraint_Use_Case-task.html" title="This topic describes how to define and enable objective constraints for optimization. It also describes how to define and assign penalty functions. Objective constraints and penalty functions are optional.">Optimization - Defining Objective Constraints</a></div>
+<div><a href="../Task/Optimization_Define_Exit_Criteria_Use_Case-task.html" title="This topic describes how to define exit criteria to use to determine completion of optimization.">Optimization - Defining Exit Criteria</a></div>
+<div><a href="../Task/Optimization_Set_Method_Use_Case-task.html" title="This topic describes how to set a predefined optimization method.">Optimization - Defining a Method</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Optimization_Design_Variable_Dialog-ref.html" title="The Design Variable tab on the Optimization Setup Summary window lists currently defined design variables for the optimization session. At least one variable must be defined to begin optimization.">Optimization Design Variable Tab</a></div>
+<div><a href="../Reference/Optimization_Design_Objectives_Dialog-ref.html" title="The Design Objectives tab on the Optimization Setup Summary window lists currently defined design objectives for the optimization session. At least one item in the list must be enabled to run optimization.">Optimization Design Objectives Tab</a></div>
+<div><a href="../Reference/Optimize_Objective_Constraints_ref.html" title="The Objective Constraints tab on the Optimization Setup Summary window displays the list of currently defined objective constraints and penalty functions for the current optimization session. Objective constraints and penalty functions are optional.">Optimization Objective Constraints Tab</a></div>
+<div><a href="../Reference/Optimization_Method_Dialog-ref.html" title="The Optimization Method tab on the Optimization Setup Summary window lets you select the method.">Optimization Method Tab</a></div>
+<div><a href="../Reference/Optimization_Grid_Display_Options_dialog-ref.html" title="The Grid Display Options dialog is displayed when you right-click the table in the Optimization Results window.">Optimization Results - Grid Display Options Dialog</a></div>
+<div><a href="../Reference/Optimization_Glossary-ref.html" title="This topic provides a glossary of terms for the optimization feature in ASAP.">Optimization - Glossary</a></div>
+<div><a href="../Reference/Optimization_Design_Variable_Messages-ref.html" title="This topic describes informational messages issued by ASAP when you are defining design variables, design objectives, and objective constrains for optimization. It recommends corrective action.">Optimization Informational Messages</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

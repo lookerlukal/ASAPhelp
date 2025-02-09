@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="PRINT (Polarization Models) (ASAP Command)"/>
+<meta name="abstract" content="Print defined surface polarization modifiers."/>
+<meta name="description" content="Print defined surface polarization modifiers."/>
+<meta name="DC.subject" content="PRINT MODEL (Polarization) (ASAP Command), polarization, surface modifiers, surface, polarization modifiers for"/>
+<meta name="keywords" content="PRINT MODEL (Polarization) (ASAP Command), polarization, surface modifiers, surface, polarization modifiers for"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_P-ref.html#Commands_and_Macros_P"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PRINT_ASAP-cmdref.html#PRINT_ASAP_Command"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="PRINT_MODEL_Polarization_Models_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>PRINT (Polarization Models) (ASAP Command)</title>
+</head>
+<body id="PRINT_MODEL_Polarization_Models_ASAP_Command"><a name="PRINT_MODEL_Polarization_Models_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>PRINT (Polarization Models) (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Print defined surface polarization modifiers. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+PRINT [I] 
+PRINT MODEL {JONES|RPM|CPE|PM} [j]</pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span> 
+			 <p>Option 
+			 </p>
+</span></th><th><span> 
+			 <p>Description 
+			 </p>
+</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> JONES|RPM|CPE|PM 
+		  </span></td><td><span> Specifies the type of the polarization interface
+			 models to be printed. 
+			 <b>PM</b> represents the surface Polarization Modifier. 
+		  </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>I</span></td><td><span><b>I</b>th
+			 object</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> j</span></td><td><span> List index of the model to be
+			 printed in the system-defined list of the desired polarization interface model
+			 type. If no 
+			 <b>I</b> is present, ASAP prints all models of the
+			 specified polarization interface. 
+		  </span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="PRINT_MODEL_Polarization_Models_ASAP_Command__ol_685A25E1C2D847E49B7327E13EF5B7FD"><!-- --></a><ol id="PRINT_MODEL_Polarization_Models_ASAP_Command__ol_685A25E1C2D847E49B7327E13EF5B7FD"> 
+		<li id="PRINT_MODEL_Polarization_Models_ASAP_Command__li_83DFFA44F2F3447599587D7DF1DF7D82"><a name="PRINT_MODEL_Polarization_Models_ASAP_Command__li_83DFFA44F2F3447599587D7DF1DF7D82"><!-- --></a><b> PRINT</b>
+		  command without argument prints all polarization interface models along with
+		  other system database information. 
+		</li>
+ 
+		<li id="PRINT_MODEL_Polarization_Models_ASAP_Command__li_5108D8AB42DA413A9B3B26B2D1C27D7E"><a name="PRINT_MODEL_Polarization_Models_ASAP_Command__li_5108D8AB42DA413A9B3B26B2D1C27D7E"><!-- --></a> By default, 
+		  <b>PRINT MODEL</b> prints all scatter models and
+		  polarization interface models. 
+		</li>
+ 
+		<li id="PRINT_MODEL_Polarization_Models_ASAP_Command__li_F8EDEFACA9F74F7795CAECD38FDE0450"><a name="PRINT_MODEL_Polarization_Models_ASAP_Command__li_F8EDEFACA9F74F7795CAECD38FDE0450"><!-- --></a> Relative indexing is
+		  supported when referring to individual polarization interface models. 
+		</li>
+ 
+		<li id="PRINT_MODEL_Polarization_Models_ASAP_Command__li_3EE302F2696947478F79A86A750E184A"><a name="PRINT_MODEL_Polarization_Models_ASAP_Command__li_3EE302F2696947478F79A86A750E184A"><!-- --></a> For the 
+		  <b>PRINT</b> 
+		  <b>I</b> command, the polarization interface model of the
+		  specified object is printed along with all other properties of the object. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#PRINT (Polarization Models)">PRINT (Polarization Models) Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_P-ref.html#Commands_and_Macros_P" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “P”.">Commands and Macros (P)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/PRINT_ASAP-cmdref.html#PRINT_ASAP_Command" title="Prints out specific database information.">PRINT (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

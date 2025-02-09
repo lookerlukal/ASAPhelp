@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="CODE V to ASAP Translation, Step 3"/>
+<meta name="abstract" content="The final step in the translation process is to choose the zoom position(s) to translate and, optionally, the surface for the origin of the global coordinate system."/>
+<meta name="description" content="The final step in the translation process is to choose the zoom position(s) to translate and, optionally, the surface for the origin of the global coordinate system."/>
+<meta name="DC.subject" content="CODE V to ASAP Translation, Step 3, translation, CODE V to ASAP"/>
+<meta name="keywords" content="CODE V to ASAP Translation, Step 3, translation, CODE V to ASAP"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/CODE_V_File_Conversion-task.html#CODE_V_File_Conversion"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/CODE_V_to_ASAP_Translation_Step_1-task.html#CODE_V_to_ASAP_Translation_Step_1"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/CODE_V_to_ASAP_Translation_Step_2-task.html#CODE_V_to_ASAP_Translation_Step_2"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/CODE_V_to_ASAP_Translator_Restrictions-ref.html#CODE_V_to_ASAP_Translator_Restrictions"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="CODE_V_to_ASAP_Translation_Step_3"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>CODE V to ASAP Translation, Step 3</title>
+</head>
+<body id="CODE_V_to_ASAP_Translation_Step_3"><a name="CODE_V_to_ASAP_Translation_Step_3"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>CODE V to ASAP Translation, Step 3</h5></span> 
+   
+   
+  <div><p>The final step in the translation process is to choose the zoom
+	 position(s) to translate and, optionally, the surface for the origin of the
+	 global coordinate system.
+  </p>
+ 
+	 <div class="section" id="CODE_V_to_ASAP_Translation_Step_3__context_8EF8464BBBF64386AA624C6F14D99AD0"><a name="CODE_V_to_ASAP_Translation_Step_3__context_8EF8464BBBF64386AA624C6F14D99AD0"><!-- --></a> 
+		<p>The message under 
+		  <b>Refractive media</b> reminds you to verify the 
+		  <b>MEDIA</b> in the ASAP file, particularly if an unknown material was
+		  encountered.
+		</p>
+ 
+		<p>The translator offers four options for writing the ASAP INR file:
+		</p>
+ 
+		<br/><a name="CODE_V_to_ASAP_Translation_Step_3__ul_DF10989833F74F839658D2E5520182FF"><!-- --></a><ul id="CODE_V_to_ASAP_Translation_Step_3__ul_DF10989833F74F839658D2E5520182FF"> 
+		  <li id="CODE_V_to_ASAP_Translation_Step_3__li_E5A3468F51074CB2A78091F6A5BD6C11"><a name="CODE_V_to_ASAP_Translation_Step_3__li_E5A3468F51074CB2A78091F6A5BD6C11"><!-- --></a><b>Translate only first
+				position</b> Translates only the first zoom position. If the system is not
+			 zoomed, the first position is the only position. The ASAP filename is the name
+			 selected in the Step 2 translation dialog. (Default: selected)
+		  </li>
+ 
+		  <li id="CODE_V_to_ASAP_Translation_Step_3__li_2F2F74DA24DE4D358E04C8993747071D"><a name="CODE_V_to_ASAP_Translation_Step_3__li_2F2F74DA24DE4D358E04C8993747071D"><!-- --></a><b>Translate only zoom
+				position XXX</b> Translates only the specified zoom position. Appends 
+			 <b>_ZOOMXXX</b> to the ASAP filename that was selected in the Step 3
+			 translation dialog, where 
+			 <b>XXX</b> is the number of the zoom position. If you enter an
+			 invalid zoom position, the translator issues a warning message. (If the system
+			 is not zoomed, any entry other than 1 produces a warning message.)
+		  </li>
+ 
+		  <li id="CODE_V_to_ASAP_Translation_Step_3__li_0395E48264AB4B2B87519B3AB79EBEA9"><a name="CODE_V_to_ASAP_Translation_Step_3__li_0395E48264AB4B2B87519B3AB79EBEA9"><!-- --></a><b>Translate all zoom
+				positions</b> Writes out a separate ASAP file for each zoom position found in
+			 the SEQ file. Appends 
+			 <b>_ZOOMXXX</b> to the ASAP filename selected in the Step 2
+			 translation dialog, where 
+			 <b>XXX</b> is the number of the zoom position.
+		  </li>
+ 
+		  <li id="CODE_V_to_ASAP_Translation_Step_3__li_8C8A69B417AE42FEBA9E3E7F13B3DC82"><a name="CODE_V_to_ASAP_Translation_Step_3__li_8C8A69B417AE42FEBA9E3E7F13B3DC82"><!-- --></a><b>Translate all zoom
+				positions such that the origin is at surface number YYY</b> Writes out a
+			 separate ASAP file for each zoom position found in the SEQ file.
+			 Appends<b>_ZOOMXXX</b> to the ASAP filename selected in the Step 2 translation
+			 dialog, where 
+			 <b>XXX</b> is the number of the zoom position. See Note below. 
+		  </li>
+ 
+		</ul>
+ 
+		<div class="note"><span class="notetitle">Note:</span>  
+		  <p>The significant functionality of the last option is the ability to
+			 specify surface YYY as the origin of the global coordinate system. By default,
+			 the translator makes the object surface the origin of the global coordinate
+			 system in a finite conjugate system and the first non-dummy surface the origin
+			 in an infinite conjugate system. However, if you are combining several
+			 translated files into a single ASAP INR file, it may be expedient to specify
+			 some other surface as the global origin so that you can “cut and paste” the
+			 composite model together.
+		  </p>
+ 
+		  <p>Furthermore, this option is also available to non-zoomed systems for
+			 those instances where the default global origin is not convenient.
+		  </p>
+ 
+		</div>
+ 
+		<p>At the conclusion of the translation, the translator displays a
+		  message box showing the location of the original CODE V file and the translated
+		  ASAP file.
+		</p>
+ 
+		<br/><a name="CODE_V_to_ASAP_Translation_Step_3__image_0645524DA6D0438881ED7BED651FFAB7"><!-- --></a><div class="imagecenter"><img id="CODE_V_to_ASAP_Translation_Step_3__image_0645524DA6D0438881ED7BED651FFAB7" src="../Graphics/CODEV_ASAP_Translate6.jpg" width="279" height="152"/></div><br/> 
+		<p>If the translator created more than one ASAP file, the message box
+		  notes this and displays the range of names.
+		</p>
+ 
+		<br/><a name="CODE_V_to_ASAP_Translation_Step_3__image"><!-- --></a><div class="imagecenter"><img id="CODE_V_to_ASAP_Translation_Step_3__image" src="../Graphics/CODEV_ASAP_Translate7.jpg" width="356" height="165"/></div><br/> 
+		<p>With the exception of the SPS CPC surface, all the ASAP surfaces are
+		  functional duplicates of the CODE V surfaces. However, in the case of the SPS
+		  CPC surface, where there is no equivalent ASAP surface, the translator prompts
+		  you for a number of sample points. The translator generates your specified
+		  number of linearly-connected points on the curve, extrudes or sweeps the curve
+		  (depending upon the type of CPC) to create a close approximation to the CODE V
+		  surface, and then writes the points out as an 
+		  <b>EDGE</b>-based object.
+		</p>
+ 
+		<br/><a name="CODE_V_to_ASAP_Translation_Step_3__image"><!-- --></a><div class="imagecenter"><img id="CODE_V_to_ASAP_Translation_Step_3__image" src="../Graphics/CODEV_ASAP_Translate8.jpg" width="287" height="149"/></div><br/> 
+		<p>You can edit the translated file and add the 
+		  <b>SMOOTH</b> command, if desired, to smooth out the linearly-connected
+		  curve. However experiments conducted during the development of the translator
+		  indicate that agreement with CODE V is best obtained with 300 to 500 linearly
+		  connected points.
+		</p>
+ 
+		<p>At the completion of this Step 3 dialog, you can click BACK to return
+		  to the previous dialog, FINISH, or CANCEL to exit the translator.
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Task/CODE_V_File_Conversion-task.html#CODE_V_File_Conversion" title="ASAP OPTICAL+ and ASAP ADVANCED include the fully integrated capability of importing CODE V® files.">CODE V File Conversion</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/CODE_V_to_ASAP_Translation_Step_1-task.html#CODE_V_to_ASAP_Translation_Step_1" title="The first step in the translation process involves selecting an *.SEQ file written by CODE V. You can either type the name of the file in the box below Select CODEV Lens (sequence) File, or click BROWSE. Either of these actions will display a FILE OPEN dialog, from which you can select an SEQ file.">CODE V to ASAP Translation, Step 1</a></div>
+<div><a href="../Task/CODE_V_to_ASAP_Translation_Step_2-task.html#CODE_V_to_ASAP_Translation_Step_2" title="The second step in the translation process is to select the ASAP filename, and to set several translation options.">CODE V to ASAP Translation, Step 2</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/CODE_V_to_ASAP_Translator_Restrictions-ref.html#CODE_V_to_ASAP_Translator_Restrictions" title="While this translator supports most of the optical system modeling capabilities of CODE V, there are inevitable differences in the database structure and intended applications, so that a precise translation is not always possible. In most cases, the equivalent functionality can be accomplished in ASAP with user intervention. Specific features and limitations of this translator are described in this topic.">CODE V to ASAP Translator Restrictions</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

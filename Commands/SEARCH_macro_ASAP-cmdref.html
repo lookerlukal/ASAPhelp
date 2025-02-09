@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="$SEARCH (ASAP Macro)"/>
+<meta name="abstract" content="Provides user control of which paths are searched, and also the order in which paths are searched. These paths are defined and associated with symbolic names. $SEARCH specifies up to 20 paths to be searched for screen (*.scr), macro (*.mac), and macro library (*.lib) files."/>
+<meta name="description" content="Provides user control of which paths are searched, and also the order in which paths are searched. These paths are defined and associated with symbolic names. $SEARCH specifies up to 20 paths to be searched for screen (*.scr), macro (*.mac), and macro library (*.lib) files."/>
+<meta name="DC.subject" content="$SEARCH (ASAP Macro), macros, $SEARCH, paths, searching, files, searching for paths"/>
+<meta name="keywords" content="$SEARCH (ASAP Macro), macros, $SEARCH, paths, searching, files, searching for paths"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_S-ref.html#Commands_and_Macros_S"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/IO_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SCR_macro_ASAP-cmdref.html#SCR_ASAP_Macro"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Macro_Language-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Calling_a_Macro-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Files_Produced_by_ASAP-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="SEARCH_ASAP_Macro"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>$SEARCH (ASAP Macro)</title>
+</head>
+<body id="SEARCH_ASAP_Macro"><a name="SEARCH_ASAP_Macro"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>$SEARCH (ASAP Macro)</h5></span>
+	
+	
+	<div><p>Provides user control of which paths are searched, and also the order in which paths
+		are searched. These paths are defined and associated with symbolic names. <b>$SEARCH</b>
+		specifies up to 20 paths to be searched for screen (*.scr), macro (*.mac), and macro library
+		(*.lib) files. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+$SEARCH MENU
+        LIST
+        RESET
+        SET    symbol
+        SET    "path"
+        ADD    symbol
+        ADD    "path"
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MENU</span></td><td><span>displays the paths available to the $SEARCH command</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>LIST</span></td><td><span>displays the paths currently in use as search paths by ASAP</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SET</span></td><td><span>sets the $SEARCH path to include only the path named by <i>symbol</i>.
+					Accepts a literal path of up to 344 characters. See Remarks.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ADD</span></td><td><span>appends the path named by symbol to the $SEARCH path. Accepts a literal
+					path of up to 344 characters. See Remarks.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RESET</span></td><td><span>clears the $SEARCH path and restores default behavior</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="SEARCH_ASAP_Macro__ul_63760DA936C844EC94B31F5227E1AB83"><!-- --></a><ol id="SEARCH_ASAP_Macro__ul_63760DA936C844EC94B31F5227E1AB83">
+			<li id="SEARCH_ASAP_Macro__li_A2DE3BEE3DEB465DAA1542E20B839AD9"><a name="SEARCH_ASAP_Macro__li_A2DE3BEE3DEB465DAA1542E20B839AD9"><!-- --></a>The paths displayed by the <b>MENU</b> option are selected for use by the <b>SET</b> or
+					<b>ADD</b> options. </li>
+
+			<li id="SEARCH_ASAP_Macro__li_7C9150285EC04CF4B0132839522D4290"><a name="SEARCH_ASAP_Macro__li_7C9150285EC04CF4B0132839522D4290"><!-- --></a>The list displayed by the <b>LIST</b> option is initially empty when the ASAP kernel is started or
+				restarted to ensure backward compatibility. </li>
+
+			<li id="SEARCH_ASAP_Macro__li_BCB31EBE96174CF7B7C14C7A87A5B5E7"><a name="SEARCH_ASAP_Macro__li_BCB31EBE96174CF7B7C14C7A87A5B5E7"><!-- --></a>If <b>ALL</b> is substituted
+				for symbol with the <b>SET</b> option, all available paths in the menu
+				are added, in the order of appearance in PATHS.TXT. </li>
+
+			<li id="SEARCH_ASAP_Macro__li_CC81663F472F4FD89F3B20D1D1BE6B19"><a name="SEARCH_ASAP_Macro__li_CC81663F472F4FD89F3B20D1D1BE6B19"><!-- --></a>The literal path limit of 344 characters
+				for the <b>SET</b> and <b>ADD</b> options is inclusive of
+				the required delimiting double quotes, and is not associated with any symbol. </li>
+
+			<li id="SEARCH_ASAP_Macro__li_31C60348241448E69D49C83C06E9BDEA"><a name="SEARCH_ASAP_Macro__li_31C60348241448E69D49C83C06E9BDEA"><!-- --></a>Paths defined and associated with symbolic
+				names are in the PATHS.TXT file in the <i>asap install folder\bin
+				directory</i>. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#$SEARCH">$SEARCH Examples</a>
+		</p>
+
+	</div>
+
+	<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_S-ref.html#Commands_and_Macros_S" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “S”.">Commands and Macros (S)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/ASAP_Macro_Language-conc.html">ASAP Macro Language</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Calling_a_Macro-ref.html" title="A macro command is unformatted like all other commands. There can be only one user macro command per input record and it should be the last command on the record. The first entry of a macro command is either a dollar sign &#34;$&#34; or ampersand &#34;&amp;&#34; followed immediately by the macro name. The name can be of any length but only the first 32 characters are significant. The dollar sign &#34;$&#34; causes the program to print the commands in the macro definition after the variables have been replaced by their corresponding arguments. Only the macro command itself is printed when the ampersand &#34;&amp;&#34; is used.">Calling a Macro</a></div>
+<div><a href="../Reference/Files_Produced_by_ASAP-ref.html" title="Lists the file types that ASAP produces and uses.">Files Produced by ASAP</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/IO_macro_ASAP-cmdref.html" title="Controls I/O redirection.">$IO (ASAP Macro)</a></div>
+<div><a href="../Commands/SCR_macro_ASAP-cmdref.html#SCR_ASAP_Macro" title="Defines a user-programmable screen template.">$SCR (ASAP Macro)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Predefined ASAP Macros</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Predefined Macros at
+				http://www.breault.com/k-base.php </a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

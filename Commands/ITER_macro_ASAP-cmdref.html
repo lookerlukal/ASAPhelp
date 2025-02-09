@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="$ITER (ASAP Macro)"/>
+<meta name="abstract" content="Iterates input records and a set of variables."/>
+<meta name="description" content="Iterates input records and a set of variables."/>
+<meta name="DC.subject" content="$ITER (ASAP Macro), macros, interate input records, input records, iterating"/>
+<meta name="keywords" content="$ITER (ASAP Macro), macros, interate input records, input records, iterating"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_I-ref.html#Commands_and_Macros_I"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DISPLAY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Macro_Language-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ITER_Macro_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="ITER_macro_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>$ITER (ASAP Macro)</title>
+</head>
+<body id="ITER_macro_ASAP_Command"><a name="ITER_macro_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>$ITER (ASAP Macro)</h5></span>
+	
+	
+	<div><p>Iterates input records and a set of variables. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+$ITER      vary a b n [ vary' a' b' n' ... ] [func [ func' ... ] [ 'title'] ] [NOMIN]       [ m ]         d               d'   ...
+      </pre>
+
+		<p><b>Remarks, 1st syntax</b>
+		</p>
+
+		<br/><a name="ITER_macro_ASAP_Command__ul_1638E54D050E47C390F70E49B1F64CA1"><!-- --></a><ol id="ITER_macro_ASAP_Command__ul_1638E54D050E47C390F70E49B1F64CA1">
+			<li id="ITER_macro_ASAP_Command__li_6FC450128D6648BDB54C0F6054EB9E08"><a name="ITER_macro_ASAP_Command__li_6FC450128D6648BDB54C0F6054EB9E08"><!-- --></a> The first syntax of <b>$ITER
+				</b>iterates the next input record (or brace delimited block) while changing
+				the internal register <b>vary</b> from <b>a</b> to <b>b</b> in <b>n</b> steps (up to 30000): <p><a name="ITER_macro_ASAP_Command__image_0E51CBDE1581490EBABB00750B10B1EA"><!-- --></a><img id="ITER_macro_ASAP_Command__image_0E51CBDE1581490EBABB00750B10B1EA" src="../Equations/$ITER_equation1.gif" width="313" height="168"/>
+				</p>
+</li>
+
+			<li id="ITER_macro_ASAP_Command__li_57519A7571FC45A6BF669EF8D2ED22FC"><a name="ITER_macro_ASAP_Command__li_57519A7571FC45A6BF669EF8D2ED22FC"><!-- --></a>Up to 60 <b>vary</b> variables
+				(levels of iteration) are permitted, so that the next input record is executed
+					<b>n*n’*...</b> times. If a single register <b>func</b>
+				is specified, the values stored in <b>func</b> at the first three levels
+				of iteration are written to a BRO binary distribution file. If more than one func
+				register is specified, the sum of the squares of these values is written to the file
+				instead. The name of the distribution file is either ITER.DIS or macro.DIS, with an
+				optional <b>title.</b> The file may be processed like any Distribution
+				file, typically with the <b>DISPLAY </b>command and related commands. </li>
+
+			<li id="ITER_macro_ASAP_Command__li_A7FCBD12301443F6A61CF223D5F5D9B7"><a name="ITER_macro_ASAP_Command__li_A7FCBD12301443F6A61CF223D5F5D9B7"><!-- --></a>One additional iteration is performed, by
+				default, after the specified <b>n*n'*...</b> iterations, with the
+					<b>vary</b> variables set to the values for which either the
+				discrete value of <b>func</b> was minimized, if only one <b>func</b> register was specified; or the discrete value of the sum of the
+				squares of the <b>func</b> registers was minimized, if more than one was
+				specified. If the minimum of the discretely tabulated value is not unique, the first
+				minimizing combination of <b>vary</b> variables is used, in the order of
+				iteration. </li>
+
+			<li id="ITER_macro_ASAP_Command__li_0BE0AF93C43D4B029A123B7DB803D5A2"><a name="ITER_macro_ASAP_Command__li_0BE0AF93C43D4B029A123B7DB803D5A2"><!-- --></a>The additional iteration can be suppressed
+				by specifying the <b>NOMIN</b> option. Consequently, <b>NOMIN</b> is a reserved name within the scope of an <b>ITER</b>
+				construct and cannot be used as a <b>func</b> register. If <b>NOMIN</b> is specified, each <b>vary</b> variable contains
+				its corresponding terminal value upon completion of the iterations. If <b>NOMIN</b> is not specified, the <b>vary</b> variables are set
+				to the values corresponding to the (possibly non-unique) minimum, as described in
+				the previous paragraph, upon completion of the additional iteration. </li>
+
+			<li id="ITER_macro_ASAP_Command__li_C9C8D7D500574BA38E90F4A82CFE6DF9"><a name="ITER_macro_ASAP_Command__li_C9C8D7D500574BA38E90F4A82CFE6DF9"><!-- --></a> The second sytax iterates the next input
+				record either <b>m</b> times while changing the <b>vary</b>
+				variables randomly, or in order to approach the actual minimum of the sum of the
+				squared <b>func</b> registers (up to 250). If <b>m</b> is
+				specified, the <b>d</b>s are the probability distribution types. That
+				is, <p><a name="ITER_macro_ASAP_Command__image_FA18F93DE7C34E668874BDEB281952A8"><!-- --></a><img id="ITER_macro_ASAP_Command__image_FA18F93DE7C34E668874BDEB281952A8" src="../Equations/$ITER_equation2.gif" width="321" height="55"/>
+				</p>
+<p>Otherwise if <b>m</b> is not specified, the <b>d</b>s are
+					fractional derivative increments relative to the ranges <b>a b,</b>
+					which are used to build a change matrix that will be solved by a SVD technique.
+					Double-sided derivatives are computed to approximate a damping factor from the
+					non-linearity predicted by the homogeneous second derivatives. Therefore, the
+					required number of iterations is 2*(variables+1); that is, </p>
+<p><a name="ITER_macro_ASAP_Command__image_2EC62E34379C444589D239B44582A12A"><!-- --></a><img id="ITER_macro_ASAP_Command__image_2EC62E34379C444589D239B44582A12A" src="../Equations/$ITER_equation3.gif" width="206" height="175"/>
+				</p>
+</li>
+
+			<li id="ITER_macro_ASAP_Command__li_6B9F7158D58348609FC9FF70383999C1"><a name="ITER_macro_ASAP_Command__li_6B9F7158D58348609FC9FF70383999C1"><!-- --></a>The number of <b>funcs</b>
+				should be greater than (&gt;) or equal to (=) the number of <b>vary</b>'s to find a unique solution. In the case of nonlinear problems,
+				successive <b>$ITER</b> commands may be required to reach the precise
+				minimum. </li>
+
+			<li id="ITER_macro_ASAP_Command__li_4DC1E293E3794EE085555304DF78C915"><a name="ITER_macro_ASAP_Command__li_4DC1E293E3794EE085555304DF78C915"><!-- --></a>Use <b>&amp;ITER </b>instead of
+					<b>$ITER</b> to automatically cancel output during loop processing
+				and restore it when completed. </li>
+
+			<li id="ITER_macro_ASAP_Command__li_1C362352E36145DB8B17E5A21E1888A6"><a name="ITER_macro_ASAP_Command__li_1C362352E36145DB8B17E5A21E1888A6"><!-- --></a>Multiple record iteration loops must be
+				enclosed in braces; that is, the next record after the <b>ITER</b> and
+				the first record of the block must start with an open brace <b>{</b> and the last
+				must end with a closed brace <b>}</b>.
+				<pre class="codeblock">
+$ITER vary a b n [ vary ' ...] [ func [ func' ... ] ]
+  { ...
+       :
+        ... }	
+         </pre>
+</li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#$ITER">$ITER Examples</a>
+		</p>
+
+	</div>
+
+	<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_I-ref.html#Commands_and_Macros_I" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “I”.">Commands and Macros (I)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/ASAP_Macro_Language-conc.html">ASAP Macro Language</a></div>
+<div><a href="../Concept/ITER_Macro_Overview-conc.html" title="The user-defined macro command, $ITER can vary the contents of up to 60 user-specified variables. $ITER runs user-written macro(s) as the variables are varied. It uses these variables as input to perform operations, either within the macro language or as inputs to ASAP. The desired output is placed in user-specified function variables.">$ITER Macro Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DISPLAY_ASAP-cmdref.html" title="Reads previously created distribution data files so that they can be modified.">DISPLAY (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Predefined ASAP Macros</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Predefined Macros at
+				http://www.breault.com/k-base.php </a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

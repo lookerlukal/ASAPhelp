@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="XMEMORY (ASAP Command)"/>
+<meta name="abstract" content="Specifies the type and amount of ray data to store, subject to available hardware and operating system limits."/>
+<meta name="description" content="Specifies the type and amount of ray data to store, subject to available hardware and operating system limits."/>
+<meta name="DC.subject" content="XMEMORY (ASAP Command), ray data, specifiying type and amount to store"/>
+<meta name="keywords" content="XMEMORY (ASAP Command), ray data, specifiying type and amount to store"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_XYZ-ref.html#Commands_and_Macros_X_Y_Z"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FIELD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GET_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LIST_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OPDMAP_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PARABASAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_BEAMS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PUT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPREAD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/EMITTING_Source_Overview-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="XMEMORY_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>XMEMORY (ASAP Command)</title>
+</head>
+<body id="XMEMORY_ASAP_Command"><a name="XMEMORY_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>XMEMORY (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Specifies the type and amount of ray data to store, subject to
+	 available hardware and operating system limits. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+XMEMORY MIN   [ 'pagefile' ]
+        NORM      m
+        FULL  
+      </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>NORM</span></td><td><span>imaging (incoherent) no parabasals and higher-order beam modes
+			 are saved</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MIN</span></td><td><span>illumination (incoherent) no polarization, path lengths,
+			 paths, and beam sizes; 
+			 <b>PLOT BEAMS/POLARIZ, SPREAD, FIELD, OPDMAP</b> are
+			 disabled</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>FULL</span></td><td><span>imaging (coherent) automatically set by 
+			 <b>PARABASAL</b> command</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>'pagefile'</span></td><td><span>name of the pagefile (default VIRTUAL.PGS)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m</span></td><td><span>allocates only contiguous RAM for virtual.pgs, up to a maximum
+			 of 
+			 <b>m</b> rays</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="XMEMORY_ASAP_Command__ul_362F3C456C8B493BBB5680E1C1AB17BF"><!-- --></a><ol id="XMEMORY_ASAP_Command__ul_362F3C456C8B493BBB5680E1C1AB17BF"> 
+		<li id="XMEMORY_ASAP_Command__li_BC7D2693B20D4EE387B8AA47DE7BEC9B"><a name="XMEMORY_ASAP_Command__li_BC7D2693B20D4EE387B8AA47DE7BEC9B"><!-- --></a> 
+		  <p>The availability of the FULL, NORM, and MIN options are dependent on
+			 the ASAP version: 
+		  </p>
+ 
+		  <br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>ASAP Version</b></span></td><td><span><b>Available
+					 Option</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ASAP CAD+, OPTICAL+, BIO, and ADVANCED</span></td><td><span> 
+				  <p>FULL, NORM, and MIN 
+				  </p>
+ 
+				  <p>System start-up value is NORM. 
+				  </p>
+ 
+				  <p>Dynamic allocation of rays in RAM. 
+				  </p>
+ 
+				  <p>Use 
+					 <b>m</b> after the command to specify the maximum
+					 number of rays. 
+				  </p>
+</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ASAP lite</span></td><td><span> 
+				  <p>MIN 
+				  </p>
+ 
+				  <p>System start-up value is MIN. 
+				  </p>
+</span></td></tr></tbody></table> 
+		</li>
+ 
+		<li id="XMEMORY_ASAP_Command__li_4A77F8443DD24F32830DC05D802F43FA"><a name="XMEMORY_ASAP_Command__li_4A77F8443DD24F32830DC05D802F43FA"><!-- --></a> 
+		  <p>Raytracing speed may benefit from using the lowest 
+			 <b>XMEMORY</b> option (MIN, NORM, FULL) appropriate for
+			 the application. 
+		  </p>
+ 
+		  <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>XMEMORY setting</span></th><th><span>Words (Bytes) per
+				  ray</span></th><th><span>Comments</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>FULL</span></td><td><span>128
+				  (512)</span></td><td><span>Automatically set by the 
+				  <b>PARABASAL</b> command.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>NORM</span></td><td><span>48 (192)</span></td><td><span>No
+				  parabasals and higher-order beam modes (default) are saved.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MIN</span></td><td><span>16 (64)</span></td><td><span>No
+				  polarization, path lengths, paths, and beam sizes are saved. 
+				  <b>LIST ELLIPSE, PLOT BEAMS/POLARIZ, SPREAD,
+					 FIELD</b>, and OPDMAP are disabled.</span></td></tr></tbody></table> 
+		</li>
+ 
+		<li id="XMEMORY_ASAP_Command__li_0C827D27D7094FD6B35EB2D4EB40F4AD"><a name="XMEMORY_ASAP_Command__li_0C827D27D7094FD6B35EB2D4EB40F4AD"><!-- --></a>Use 
+		  <b>XMEMORY MIN</b> when modeling illumination system
+		  sources. 
+		  <b>XMEMORY MIN</b> is recommended because of the large
+		  number of rays required in these analyses. 
+		</li>
+ 
+		<li id="XMEMORY_ASAP_Command__li_93E00A4CBFF84413A82B74B9CC2FC570"><a name="XMEMORY_ASAP_Command__li_93E00A4CBFF84413A82B74B9CC2FC570"><!-- --></a>The format of a VIRTUAL.PGS
+		  file for 
+		  <b>XMEMORY FULL</b> is different from the file format
+		  produced by 
+		  <b>XMEMORY MIN</b> or 
+		  <b>XMEMORY NORM</b>. Therefore, files created under the
+		  control of 
+		  <b>XMEMORY FULL</b> are not readable under the control of 
+		  <b>XMEMORY MIN</b> or 
+		  <b>XMEMORY NORM</b>, and vice versa. 
+		</li>
+ 
+		<li id="XMEMORY_ASAP_Command__li_C39559E533D942189ADAAC54720712B3"><a name="XMEMORY_ASAP_Command__li_C39559E533D942189ADAAC54720712B3"><!-- --></a>By default, the VIRTUAL.PGS
+		  file is written to the hard drive in the current ASAP working directory.
+		  However, if the optional parameter m is specified, ASAP attempts to secure from
+		  the operating system physical memory (RAM) sufficient to store up to a maximum
+		  of m rays. If the operating system cannot satisfy this request, ASAP is forced
+		  to use a VIRTUAL.PGS file. Keeping rays in physical memory typically has
+		  negligible effect on raytracing speed, but may speed up a small number of
+		  post-processing commands, like 
+		  <b>SELECT</b>. 
+		</li>
+ 
+		<li id="XMEMORY_ASAP_Command__li_C0AE49042C184082A7BB86E0A2C32D17"><a name="XMEMORY_ASAP_Command__li_C0AE49042C184082A7BB86E0A2C32D17"><!-- --></a>Physical memory (RAM)
+		  allocated with the m parameter is taken from contiguous free memory. System
+		  load unrelated to ASAP can reduce the amount of contiguous free memory. The
+		  Windows operating system for 32-bit systems limits the memory available to 2
+		  GB, regardless of the total installed RAM. The operating system also requires
+		  memory of its own. A system with 2 GB of RAM typically can make, at most, a
+		  little over 1 GB of RAM available for ray data, before forcing ASAP to switch
+		  to a VIRTUAL.PGS file. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p><b>CAUTION</b> 
+	 </p>
+ 
+	 <p><b>XMEMORY</b> should be set before defining rays. If you
+		run XMEMORY during an ASAP analysis, ASAP initializes (deletes) the current
+		VIRTUAL.PGS file. 
+	 </p>
+ 
+	 <p> 
+		<a href="../example_scripts.html#XMEMORY">XMEMORY
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_XYZ-ref.html#Commands_and_Macros_X_Y_Z" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letters “X, Y, Z”.">Commands and Macros (XYZ)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/EMITTING_Source_Overview-ref.html" title="The following commands randomly create rays within a specified volume. The flux of each ray can be modified via an &#34;apodization&#34; function programmed by the user USERAPOD ANGLES/BOTH commands, EMITTING CONE/PYRAMID and EMITTING BOX/SPHEROID.">EMITTING Source Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/FIELD_ASAP-cmdref.html" title="Calculates the exact complex field distribution.">FIELD (ASAP Command)</a></div>
+<div><a href="../Commands/GET_ASAP-cmdref.html" title="Retrieves ray data and copies it into variables.">GET (ASAP Command)</a></div>
+<div><a href="../Commands/LIST_ASAP-cmdref.html" title="Lists currently selected ray data by the second literal entry for the current ray set.">LIST (ASAP Command)</a></div>
+<div><a href="../Commands/OPDMAP_ASAP-cmdref.html" title="Creates a geometric wavefront map of the currently selected ray data.">OPDMAP (ASAP Command)</a></div>
+<div><a href="../Commands/PARABASAL_ASAP-cmdref.html" title="Sets the number of parabasal rays.">PARABASAL (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_BEAMS_ASAP-cmdref.html" title="Plots extent of each Gaussian beam within the currently specified graphics window.">PLOT BEAMS (ASAP Command)</a></div>
+<div><a href="../Commands/PUT_ASAP-cmdref.html" title="Copies variable data into the current ray data.">PUT (ASAP Command)</a></div>
+<div><a href="../Commands/SPREAD_ASAP-cmdref.html" title="Calculates the exact coherent/incoherent energy distribution.">SPREAD (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

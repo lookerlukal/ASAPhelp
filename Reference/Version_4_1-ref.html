@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Version 4.1"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Release_Notes-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_5_0-ref.html#Version_5_0"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_4_0-ref.html#Version_4_0"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Version_4_1"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Version 4.1</title>
+</head>
+<body id="Version_4_1"><a name="Version_4_1"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Version 4.1</h5></span>
+	<div>
+		<div class="section" id="Version_4_1__section_B2CDDA6DB71C43C1969B9E135FABEEC6"><a name="Version_4_1__section_B2CDDA6DB71C43C1969B9E135FABEEC6"><!-- --></a>
+			<p>ASAP 4.1 Release Notes as of July 25, 1995</p>
+
+			<pre class="codeblock">
+IMPORTANT CHANGE (requires modifying any affected user files)
+  OBJECT; signs of solid "q" factors have been reversed to conform with BOUNDS.
+			</pre>
+
+		</div>
+
+		<div class="section" id="Version_4_1__section_C9F29B0CB36942BFAA0F6F6E1B0EEB27"><a name="Version_4_1__section_C9F29B0CB36942BFAA0F6F6E1B0EEB27"><!-- --></a><span style="color: #2b6eb5"><h5>Other changed commands </h5></span>
+			
+			<pre class="codeblock">
+  PLOT ...
+    LOCALS/LIMITS plots only boxes, i.e. no longer INTERSECTS surface.
+    OBJECTS has been deleted since MESHES is now the equivalent (and default).
+  SEGMENTS now sets number of line segments in a 45 (instead of 90) degree arc.</pre>
+
+		</div>
+
+		<div class="section" id="Version_4_1__section_9AE187C5555848A8A019E5C9F7C62D69"><a name="Version_4_1__section_9AE187C5555848A8A019E5C9F7C62D69"><!-- --></a><span style="color: #2b6eb5"><h5>Undocumented 4.0 Commands</h5></span>
+			
+			<pre class="codeblock">
+  EMITTING HELIX creates a straight helical filament source directly.</pre>
+
+		</div>
+
+		<div class="section" id="Version_4_1__section_EAD5F82B7BAA4A5F83EAD9657F2C204F"><a name="Version_4_1__section_EAD5F82B7BAA4A5F83EAD9657F2C204F"><!-- --></a><span style="color: #2b6eb5"><h5>New Commands </h5></span>
+			
+			<pre class="codeblock">
+  SURFACE
+    PARAMETERIZE given local coordinate axis for meshing surface.
+  PLOT ...
+    ENTITIES plots all entity types (SURFACES, LENSES, and EDGES).
+    SURFACES directly plots surface entities which have local boxes.
+  DISPLAY
+    IMAGE produces "gray"-scale picture of distribution using SHADED process.
+  MODEL
+    VCAVITY is a geometrical model for a rough (random v-cavities) surface.</pre>
+
+		</div>
+
+		<div class="section" id="Version_4_1__section_6EE1E8FD27DC45149FBB2C9FF082A70E"><a name="Version_4_1__section_6EE1E8FD27DC45149FBB2C9FF082A70E"><!-- --></a><span style="color: #2b6eb5"><h5>Enhanced commands </h5></span>
+			
+			<pre class="codeblock">
+  $EDIT can now edit arbitrary files (not just inputs and macros).
+  $HELP system is now menu-driven.
+  DISPLAY
+    WRITE can now optionally produce only the DIN or DIS version of file.
+    DIRECTION now has a legend to help distinguish the two curves.
+    AVERAGE can optionally smooth data using a median window technique.
+  PLOT ...
+    MESHES/FACETS work not only for EDGE objects but also LENS and SURFACE ones.
+    FACETS...HIDE option produces hidden-line perspective plot.
+  USERAPOD BOTH "usap3d.#" file can now accept data every degree in both angles.
+  XMEMORY can specify any name for page file (not just VIRTUAL.PGS).
+  LEVEL can generate scatter rays for ALL specular child rays (not just parent).
+  SCATTER can be ABSolute or RELative with separate reflect/transmit scaling.
+  SELECT now works on any number of rays (not just ones with bit flags).
+  FIELD can now ADD its results to a previous field calculation.
+  HISTORY can show ray SPOTS on objects instead of PLOTting trajectories.</pre>
+
+		</div>
+
+		<div class="section" id="Version_4_1__section_434D324BB0E94D05BD0542090A13A4A8"><a name="Version_4_1__section_434D324BB0E94D05BD0542090A13A4A8"><!-- --></a><span style="color: #2b6eb5"><h5>Code Changes</h5></span>
+			
+			<pre class="codeblock">
+  As usual *.SYS files are incompatible with previous versions.
+  All known bugs have been fixed.</pre>
+
+		</div>
+
+		<div class="section" id="Version_4_1__section_308DF4EE34F349FC9BA44E506A346363"><a name="Version_4_1__section_308DF4EE34F349FC9BA44E506A346363"><!-- --></a><span style="color: #2b6eb5"><h5>New Platforms </h5></span>
+			
+			<pre class="codeblock">
+  AIX 4.1 on IBM RISC/6000 and PowerPC.
+  Microsoft Windows 3.1 on Intel CPUs.</pre>
+
+		</div>
+
+	</div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Release_Notes-ref.html" title="Topics in this section include all known release notes for ASAP up to the last version. Release notes for the current version can be viewed in the ASAP Command Output window, or opened from your ASAP installation root folder.">Release Notes</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a href="../Reference/Version_5_0-ref.html#Version_5_0">Version 5.0</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a href="../Reference/Version_4_0-ref.html#Version_4_0">Version 4.0</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

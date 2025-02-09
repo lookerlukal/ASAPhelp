@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Diffraction Calculations"/>
+<meta name="abstract" content="The technique ASAP uses for diffraction analysis is named beam superposition. While superposition theory is not an entirely new concept, the combination and implementation of it with real ray tracing is new. The ASAP technique is substantially enhanced to include: effects of higher-order Gaussian beam modes, polarization, and general electromagnetic wavefront propagation, including mixed coherent/incoherent spread functions."/>
+<meta name="description" content="The technique ASAP uses for diffraction analysis is named beam superposition. While superposition theory is not an entirely new concept, the combination and implementation of it with real ray tracing is new. The ASAP technique is substantially enhanced to include: effects of higher-order Gaussian beam modes, polarization, and general electromagnetic wavefront propagation, including mixed coherent/incoherent spread functions."/>
+<meta name="DC.subject" content="Diffraction Calculations, beam superposition, diffraction analysis"/>
+<meta name="keywords" content="Diffraction Calculations, beam superposition, diffraction analysis"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_DEF-ref.html#Reference_DEF"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Ray_Tracing_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Diffraction_Calculations"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Diffraction Calculations</title>
+</head>
+<body id="Diffraction_Calculations"><a name="Diffraction_Calculations"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Diffraction Calculations</h5></span> 
+   
+   
+  <div><p>The technique ASAP uses for diffraction analysis is named beam
+	 superposition. While superposition theory is not an entirely new concept, the
+	 combination and implementation of it with real ray tracing is new. The ASAP
+	 technique is substantially enhanced to include: effects of higher-order
+	 Gaussian beam modes, polarization, and general electromagnetic wavefront
+	 propagation, including mixed coherent/incoherent spread functions. 
+  </p>
+ 
+	 <div class="section" id="Diffraction_Calculations__section_7CCE388C22AC4FFEBCE5A7BCE63CD939"><a name="Diffraction_Calculations__section_7CCE388C22AC4FFEBCE5A7BCE63CD939"><!-- --></a><span style="color: #2b6eb5"><h5>ASAP beam superposition algorithm</h5></span> 
+		 
+		<p>The ASAP beam superposition algorithm models an arbitrary optical
+		  field with fundamental beams. The fundamental beams are each represented by an
+		  apodization function, such as a Gaussian, and a set of real rays describing the
+		  apodization function, which may be traced through the opto-mechanical system.
+		  This set of rays characterizes the near-field and far-field properties of the
+		  beam. It is possible to use the ray trace information from the individual beams
+		  to recreate the energy distribution at any position in space. How these
+		  fundamental beams interact with each other determines the coherence of the
+		  source. 
+		</p>
+ 
+		<p>Traditionally, diffraction analyses are done using two very different
+		  methods, each with limitations. However, the diffraction analysis option in
+		  ASAP does not use either of these techniques and therefore does not suffer from
+		  these limitations. 
+		</p>
+ 
+		<p>You can derive the pupil function, if enough rays are traced through a
+		  system and the optical path differences (OPD) between the rays are calculated.
+		  By using Fourier transform techniques on this function, you can get the point
+		  spread function (PSF), which in turn may be Fourier-transformed to obtain the
+		  system transfer function. This method is probably the most common technique
+		  implemented in current optical design software. Consider the following: 
+		</p>
+ 
+		<br/><a name="Diffraction_Calculations__ul_4E6063E450F640B8A0511F1ABEBD6773"><!-- --></a><ul id="Diffraction_Calculations__ul_4E6063E450F640B8A0511F1ABEBD6773"> 
+		  <li id="Diffraction_Calculations__li_604E5770DFDE40769431ED7A819147D0"><a name="Diffraction_Calculations__li_604E5770DFDE40769431ED7A819147D0"><!-- --></a>Sampling of the pupil
+			 function and grid spacing requirements in order to perform the fast Fourier
+			 transform (FFT) 
+		  </li>
+ 
+		  <li id="Diffraction_Calculations__li_2438BDC9C6E2406DB2D68361130DA5E2"><a name="Diffraction_Calculations__li_2438BDC9C6E2406DB2D68361130DA5E2"><!-- --></a>Calculation speed if a
+			 discrete Fourier transform is performed 
+		  </li>
+ 
+		  <li id="Diffraction_Calculations__li_1EE76BE5B96845D18743C0E2AEA99EC6"><a name="Diffraction_Calculations__li_1EE76BE5B96845D18743C0E2AEA99EC6"><!-- --></a>Aliasing problems
+			 associated with nonperiodic functions 
+		  </li>
+ 
+		  <li id="Diffraction_Calculations__li_162159421BD64B4097BDCDEFCA1EDC5C"><a name="Diffraction_Calculations__li_162159421BD64B4097BDCDEFCA1EDC5C"><!-- --></a>Determination of
+			 diffraction image on a plane close to focus and nearly perpendicular to the
+			 axis of the imaging cone 
+		  </li>
+ 
+		  <li id="Diffraction_Calculations__li_CECE3B1FBAED4832B60C6F1052CCB3F9"><a name="Diffraction_Calculations__li_CECE3B1FBAED4832B60C6F1052CCB3F9"><!-- --></a>Systems that have a
+			 well-defined exit pupil with minimal pupil aberrations 
+		  </li>
+ 
+		  <li id="Diffraction_Calculations__li_E421B227C83B481D9CD60624BE1268C1"><a name="Diffraction_Calculations__li_E421B227C83B481D9CD60624BE1268C1"><!-- --></a>Difficulty in doing
+			 diffraction calculations in a skew direction 
+		  </li>
+ 
+		</ul>
+ 
+		<p>When modeling an optical field by a complex matrix, you can propagate
+		  this field using FFT s. Consider the following: 
+		</p>
+ 
+		<br/><a name="Diffraction_Calculations__ul_2864388A87C4443DA6C406A025A257F4"><!-- --></a><ul id="Diffraction_Calculations__ul_2864388A87C4443DA6C406A025A257F4"> 
+		  <li id="Diffraction_Calculations__li_DD276CF4183549749C765A86F1CA2130"><a name="Diffraction_Calculations__li_DD276CF4183549749C765A86F1CA2130"><!-- --></a>Resolution of the sampling
+			 process and the need to add guard bands 
+		  </li>
+ 
+		  <li id="Diffraction_Calculations__li_91BEDCC94F4240D5A5A19A349E6F1B47"><a name="Diffraction_Calculations__li_91BEDCC94F4240D5A5A19A349E6F1B47"><!-- --></a>Aliasing of the FFT 
+		  </li>
+ 
+		  <li id="Diffraction_Calculations__li_A0346CFCE4FF4172A1A450D81CFBC4C0"><a name="Diffraction_Calculations__li_A0346CFCE4FF4172A1A450D81CFBC4C0"><!-- --></a>Inability to accurately
+			 model the interaction of the field with complex optical surfaces 
+		  </li>
+ 
+		  <li id="Diffraction_Calculations__li_4302FF8E23F8447A95B776F7C58F79A1"><a name="Diffraction_Calculations__li_4302FF8E23F8447A95B776F7C58F79A1"><!-- --></a>Different propagation
+			 techniques depending upon whether the beam is in the near field or far field 
+		  </li>
+ 
+		</ul>
+ 
+	 </div>
+ 
+  </div>
+ 
+  <div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_DEF-ref.html#Reference_DEF" title="Reference topics in this section begin with the letters &#34;D-E-F&#34;.">Reference (D-F)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Ray_Tracing_Overview-conc.html" title="Ray tracing is accomplished by the RAY and TRACE commands. The fundamental difference between these commands is the permanence of the rays.">Ray Tracing Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Diffraction Gratings and DOEs</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Diffraction
+		  Gratings and DOEs, at http://www.breault.com/k-base.php 
+		</a></div>
+</div>
+</div> 
+
+</body>
+</html></body></html>

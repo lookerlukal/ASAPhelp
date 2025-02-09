@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="2D Data Files (Central Plot Routine Protocol)"/>
+<meta name="abstract" content="The two-dimensional (2D) plot data follows very closely the CALCOMP protocol. Each line in the file corresponds to a call to the PLOT routine and contains essentially the calling arguments."/>
+<meta name="description" content="The two-dimensional (2D) plot data follows very closely the CALCOMP protocol. Each line in the file corresponds to a call to the PLOT routine and contains essentially the calling arguments."/>
+<meta name="DC.subject" content="2D Data Files, central plot routine protocol, plot data, 2D, PLOT routine"/>
+<meta name="keywords" content="2D Data Files, central plot routine protocol, plot data, 2D, PLOT routine"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_DEF-ref.html#Reference_DEF"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Data_Files_3D_Protocol-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Displaying_Graphics_in_2D_or_3D-task.html#Displaying_Graphics_in_2D_or_3D"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Generating_ASAP_Graphics-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/POINTS_2D_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Graphics_Driver_Directly_Accessing_the_Immediate-task.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Data_Files_2D_Central_Plot_Routine_Protocol"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>2D Data Files (Central Plot Routine Protocol)</title>
+</head>
+<body id="Data_Files_2D_Central_Plot_Routine_Protocol"><a name="Data_Files_2D_Central_Plot_Routine_Protocol"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>2D Data Files (Central Plot Routine Protocol)</h5></span> 
+   
+   
+  <div><p>The two-dimensional (2D) plot data follows very closely the
+	 CALCOMP protocol. Each line in the file corresponds to a call to the PLOT
+	 routine and contains essentially the calling arguments. 
+  </p>
+ 
+	 <div class="section">CALL PLOT(X,Y,IPEN) -99.999 &lt; X &lt; 99.999 
+	 </div>
+ 
+	 <div class="section">-9.999 &lt; Y &lt; 99.999 (maximum) 
+	 </div>
+ 
+	 <div class="section">0. &lt; Y &lt; 11. (typical) 
+	 </div>
+ 
+	 <div class="section" id="Data_Files_2D_Central_Plot_Routine_Protocol__section_EBCD695DF2D744998B7DB883B356393E"><a name="Data_Files_2D_Central_Plot_Routine_Protocol__section_EBCD695DF2D744998B7DB883B356393E"><!-- --></a> 
+		<p>Except for an IPEN value of 0, X and Y, the floating point coordinates
+		  are in inches in the long and short directions of the device, respectively. If
+		  the origin is not changed, X can take on values from -99.999 to 99.999, and Y
+		  typically from 0.000 to 11.000 inches. IPEN is the integer "pen" control
+		  parameter and can take the following values: 
+		</p>
+ 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>IPEN</b></span></td><td><span><b>ACTION</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>0</span></td><td><span>Set character height to X inches and rotation to Y
+				degrees</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>1</span></td><td><span>Move to X,Y with pen up, put pen down (simple point
+				plot).</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>2</span></td><td><span>Move to X,Y with pen down (draw line).</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>3</span></td><td><span>Move to X,Y with pen up (no drawing, simple move).</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>4</span></td><td><span>Fill a rectangle from last point to diagonal corner at
+				X,Y.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>5-31</span></td><td><span>Change pen attribute* to IPEN-4, and then move to X,Y with
+				pen up.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>32-127</span></td><td><span>Place corresponding ASCII character at X,Y (lower left
+				corner).</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>128-998</span></td><td><span>Reserved for other attributes and/or character
+				fonts.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> &lt; 0</span></td><td><span>Perform above functions, and then place new origin at
+				X,Y.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>999</span></td><td><span>End of plot and dget ready for new plot indicator (exit
+				graphics mode; set flag to enter graphics mode, and clear device on next write
+				to plot X and Y not used.</span></td></tr></tbody></table> 
+		<p>*The pen attribute is assumed to be a color number from 1 to 27 with 1
+		  being completely opposite of the devices background color (the default) and 27
+		  being the same as the background. For example, a useful default definition for
+		  the colors in terms of relative primary content would be: 
+		</p>
+ 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Blue = mod(k,3)</span></td><td><span>k=27-n for Black background</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Red = mod(k/3,3)</span></td><td><span>k=–1 for White background</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Green= mod(k/9,3)</span></td><td><span>n=1,27</span></td></tr></tbody></table> 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_DEF-ref.html#Reference_DEF" title="Reference topics in this section begin with the letters &#34;D-E-F&#34;.">Reference (D-F)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Generating_ASAP_Graphics-conc.html" title="ASAP has the ability to write graphical data to several files simultaneously. These files contain information from which printed copies are made.">Generating ASAP Graphics</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Displaying_Graphics_in_2D_or_3D-task.html#Displaying_Graphics_in_2D_or_3D" title="ASAP has complete 2D and 3D graphics capabilities that include overlays, oblique views, annotation, static and dynamic rendering, zoom in/out, interactive point-and-shoot ray tracing, and many other features.">Displaying Graphics in 2D or 3D</a></div>
+<div><a href="../Task/Graphics_Driver_Directly_Accessing_the_Immediate-task.html" title="You can directly access the graphics drivers in ASAP for faster, more interactive displays.">Graphics Driver - Directly Accessing the Immediate</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Data_Files_3D_Protocol-ref.html" title="The protocol for the three-dimensional (3D) data files is a simple one devised by BRO. Each line in the file corresponds to a coordinate in 3D space.">3D Data Files (Protocol)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/POINTS_2D_ASAP-cmdref.html" title="Creates a generalized planar edge.">POINTS (2D) (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

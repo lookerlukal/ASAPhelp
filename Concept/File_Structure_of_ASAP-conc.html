@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="File Structure of ASAP"/>
+<meta name="abstract" content="ASAP is a sophisticated set of 3D system modeling and optical ray/beam propagation algorithms. It performs the entire ray tracing and derivative calculations."/>
+<meta name="description" content="ASAP is a sophisticated set of 3D system modeling and optical ray/beam propagation algorithms. It performs the entire ray tracing and derivative calculations."/>
+<meta name="DC.subject" content="File Structure of ASAP, files, plots, files, text, files, script"/>
+<meta name="keywords" content="File Structure of ASAP, files, plots, files, text, files, script"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_DEF-ref.html#Reference_DEF"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Kernel_Capabilities_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Command_Scripting-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/General_Input_Techniques-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Input_Records-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Command_Comment_Strings-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Command_Description_Notation-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Command_Usage-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/ASAP_Prompts-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Mathematical_Functions_Supported-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Mathematical_Operators-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Registers_for_Storing_Arithmetic_Results-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Files_Produced_by_ASAP-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Entries_Repeated_and_Incremented-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Specifying_Complex_Numbers-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="File_Structure_of_ASAP"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>File Structure of ASAP</title>
+</head>
+<body id="File_Structure_of_ASAP"><a name="File_Structure_of_ASAP"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>File Structure of ASAP</h5></span> 
+   
+  
+  <div><p>ASAP is a sophisticated set of 3D system modeling and optical
+	 ray/beam propagation algorithms. It performs the entire ray tracing and
+	 derivative calculations. 
+  </p>
+ 
+	 <p><b>Ray data</b> is stored in an external file called 
+		<b>VIRTUAL.PGS</b>. ASAP performs a ray trace by reading and writing ray
+		data from and to this file, while using the optical prescription data stored
+		within data arrays. Since ray data is stored in an external file, the total
+		number of generated rays is a function of your disk space. 
+	 </p>
+ 
+	 <p><b>Optical fields</b> calculated from a ray trace are stored in several
+		files. If only scalar optical field data is calculated (such as spot diagrams
+		or irradiance patterns), it is stored in a file called 
+		<b>BRO009.DAT</b>. If complex or vector optical field data are
+		calculated, (such as polarized field amplitudes), they are stored in a file
+		called 
+		<b>BRO029.DAT</b>.
+	 </p>
+ 
+	 <p><b>Plots</b> created in ASAP, whether of a ray trace or other derivative
+		ray trace calculation (such as a spot diagram), are written to a plot file
+		(unless you override this). This plot file typically is named
+		filename<b>.PLR</b>, where 
+		<b>filename</b> is the last loaded .INR file. 
+	 </p>
+ 
+	 <p><b>Text</b> information is not written to a file unless you specify
+		this. The text information is typically stored in filename<b>.OUT</b> or
+		filename<b>.OTR</b>. The latter is created when ASAP is run in batch mode.
+		Every command that is interactively entered from the keyboard is archived in a
+		file typically called filename<b>.USR</b>.
+	 </p>
+ 
+	 <p><b>External editor</b>: If you are not using the Windows dialogs to
+		perform an ASAP analysis, you are most likely creating ASCII files
+		(<b>*.INR</b>) with an external editor. These files typically contain ASAP
+		commands that describe the optical system geometry and sources of radiation.
+		Commands for performing an actual analysis may be included in the files, or
+		entered interactively via the keyboard. The Editor window in ASAP is accessible
+		from ASAP Workspace on the 
+		<b>Views</b> tab, or by opening an INR file.
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_DEF-ref.html#Reference_DEF" title="Reference topics in this section begin with the letters &#34;D-E-F&#34;.">Reference (D-F)</a></div>
+</div>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Kernel_Capabilities_Overview-conc.html" title="This topic briefly describes how ASAP models optical/mechanical systems, traces rays through the system, and models physical optics.">Kernel Capabilities Overview</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Command_Scripting-conc.html" title="This topic describes scripting functions available only in command mode.">Command Scripting</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/General_Input_Techniques-ref.html" title="Techniques for ASAP input include: radian angle entries, relative and literal referencing, direction vectors, and linear transformations.">General Input Techniques</a></div>
+<div><a href="../Reference/Input_Records-ref.html" title="Describes how ASAP reads input data.">Input Records</a></div>
+<div><a href="../Reference/Command_Comment_Strings-ref.html" title="User comment strings may be embedded in any command without usually affecting processing.">Command Comment Strings</a></div>
+<div><a href="../Reference/Command_Description_Notation-ref.html" title="Shows format or syntax of each ASAP command in the command topics. Syntax can be followed by a detailed explanation of the command’s function.">Command Description Notation</a></div>
+<div><a href="../Reference/Command_Usage-ref.html" title="ASAP commands consist of up to 10,000 unformatted alphanumeric entries separated by one or more of blanks &#34; &#34; or commas &#34;,&#34;.">Command Usage</a></div>
+<div><a href="../Reference/ASAP_Prompts-ref.html" title="Describes ASAP prompts (ASAP&gt;) that precede the Command Input window, and lists the prompt variations.">ASAP Prompts</a></div>
+<div><a href="../Reference/Mathematical_Functions_Supported-ref.html" title="Describes the set of supported mathematical functions.">Mathematical Functions Supported</a></div>
+<div><a href="../Reference/Mathematical_Operators-ref.html" title="Lists mathematical operators that affect entries in ASAP.">Mathematical Operators</a></div>
+<div><a href="../Reference/Registers_for_Storing_Arithmetic_Results-ref.html" title="Describes how arithmetic results in ASAP are stored in registers.">Registers for Storing Arithmetic Results</a></div>
+<div><a href="../Reference/Files_Produced_by_ASAP-ref.html" title="Lists the file types that ASAP produces and uses.">Files Produced by ASAP</a></div>
+<div><a href="../Reference/Entries_Repeated_and_Incremented-ref.html" title="This topic provides rules and examples of command entries that are repeated and incremented.">Entries Repeated and Incremented</a></div>
+<div><a href="../Reference/Specifying_Complex_Numbers-ref.html" title="Complex numbers can be entered in some of the ASAP dialogs.">Specifying Complex Numbers</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

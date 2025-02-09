@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Importing CCD Images"/>
+<meta name="abstract" content="The BMP2DIS.exe utility is for importing CCD images into ASAP, and is stored in your ASAP installation area under \bin. It reads a Windows BMP (bitmap) file and creates an ASAP DIS file. In the following syntax, the width option specifies system units length in ASAP."/>
+<meta name="description" content="The BMP2DIS.exe utility is for importing CCD images into ASAP, and is stored in your ASAP installation area under \bin. It reads a Windows BMP (bitmap) file and creates an ASAP DIS file. In the following syntax, the width option specifies system units length in ASAP."/>
+<meta name="DC.subject" content="Importing CCD Images, BMP2DIS.exe utility, bitmap files, reading"/>
+<meta name="keywords" content="Importing CCD Images, BMP2DIS.exe utility, bitmap files, reading"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Converting_BMP_Bitmap_Files_to_from_Distribution_Data-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Exporting_a_Windows_Bitmap_File-ref.html#Exporting_a_Windows_Bitmap_File"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ABEL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_DATA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ABEL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_DATA_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Importing_CCD_Images"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Importing CCD Images</title>
+</head>
+<body id="Importing_CCD_Images"><a name="Importing_CCD_Images"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Importing CCD Images</h5></span>
+	
+	
+	<div><p>The BMP2DIS.exe utility is for importing CCD images into ASAP, and is stored in your
+		ASAP installation area under <i>\bin</i>. It reads a Windows BMP (bitmap) file
+		and creates an ASAP DIS file. In the following syntax, the <b>width</b> option specifies
+		system units length in ASAP. </p>
+
+		<div class="section" id="Importing_CCD_Images__section_A6F452F633DB4780B07101E156FBC966"><a name="Importing_CCD_Images__section_A6F452F633DB4780B07101E156FBC966"><!-- --></a><span style="color: #2b6eb5"><h5>Syntax</h5></span>
+			
+			<pre class="codeblock">
+BMP2DIS file [ Red  ] [ width ]
+               Green	
+               Blue	
+      </pre>
+
+		</div>
+
+		<div class="section" id="Importing_CCD_Images__section_7C962493F7F04C5E996562C1B20A69EC"><a name="Importing_CCD_Images__section_7C962493F7F04C5E996562C1B20A69EC"><!-- --></a><span style="color: #2b6eb5"><h5>Remarks</h5></span>
+			
+			<br/><a name="Importing_CCD_Images__ul_82B9A600CF2C4ADD96144E5A65AE1BB5"><!-- --></a><ul id="Importing_CCD_Images__ul_82B9A600CF2C4ADD96144E5A65AE1BB5">
+				<li id="Importing_CCD_Images__li_6BC106B4EFDA4B7E9EE35122D29EAB83"><a name="Importing_CCD_Images__li_6BC106B4EFDA4B7E9EE35122D29EAB83"><!-- --></a>
+					<p>BMP2DIS converts one color in a 24 bit-per-pixel Windows BMP (bitmap) image
+						to a <b>DIS</b>tribution data file, and sets the full <b>width</b> (in system length units) of the distribution: </p>
+
+					<pre class="codeblock">
+BMP2DIS file [ Red ] [ width ]
+               Green
+               Blue
+               Mono
+         </pre>
+
+					<p>The Mono version converts the three colors into a greyscale, using the
+						standard CCIR/ITU Rec. 601 formula, .30*Red+.59*Green+.11*Blue. </p>
+
+				</li>
+
+			</ul>
+
+			<p>DIS2BMP converts one or three <b>DIS</b>tribution data files to a
+				monochrome or color BMP (bitmap) image file, respectively: </p>
+
+			<pre class="codeblock">
+DIS2BMP disfile [ bmpfile ]
+DIS2BMP redfile greenfile bluefile [ bmpfile ]
+</pre>
+
+		</div>
+
+		<div class="section" id="Importing_CCD_Images__section_82A7668738954F848BECD7016802DB81"><a name="Importing_CCD_Images__section_82A7668738954F848BECD7016802DB81"><!-- --></a>
+			<div class="note"><span class="notetitle">Note:</span> Run the Project example, "BMPSourceTrace" in your ASAP installation area in the
+				folder, <i>projects\samples</i>. </div>
+
+		</div>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Converting_BMP_Bitmap_Files_to_from_Distribution_Data-ref.html" title="Two utilities are available in ASAP for converting bitmap files.">Converting BMP Bitmap Files to/from Distribution Data</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Exporting_a_Windows_Bitmap_File-ref.html#Exporting_a_Windows_Bitmap_File" title="The DIS2BMP.exe utility reads an ASAP DIS (display) file and creates a Windows BMP (bitmap) graphic file. It is stored in the ASAP installation folder, \bin. You can use this utility to create and export bitmap files for presentations or reports.">Exporting a Windows Bitmap File</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/ABEL_ASAP-cmdref.html" title="Performs an Abel or inverse Abel transform on each line of data about the horizontal axis.">ABEL (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_DATA_ASAP-cmdref.html" title="Creates rays from data in given binary distribution file.">EMITTING DATA (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

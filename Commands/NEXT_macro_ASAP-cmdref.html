@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="$NEXT (ASAP Macro)"/>
+<meta name="abstract" content="Immediately begins processing of the next $DO or $ITER iteration by forcing a branch to the top of the current loop block."/>
+<meta name="description" content="Immediately begins processing of the next $DO or $ITER iteration by forcing a branch to the top of the current loop block."/>
+<meta name="DC.subject" content="$NEXT (ASAP Macro), macros, $NEXT, $DO, begin processing, $ITER, begin processing"/>
+<meta name="keywords" content="$NEXT (ASAP Macro), macros, $NEXT, $DO, begin processing, $ITER, begin processing"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_N_O-ref.html#Commands_and_Macros_N_O"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DO_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ITER_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Macro_Language-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=33"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="NEXT_ASAP_Macro"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>$NEXT (ASAP Macro)</title>
+</head>
+<body id="NEXT_ASAP_Macro"><a name="NEXT_ASAP_Macro"><!-- --></a>
+
+
+  <span style="color: #2b6eb5"><h5>$NEXT (ASAP Macro)</h5></span>
+  
+  
+  <div><p>Immediately begins processing of the next $DO or $ITER iteration by forcing a branch to
+    the top of the current loop block. </p>
+
+    <p><b>Syntax</b>
+    </p>
+
+    <pre class="codeblock">$NEXT</pre>
+
+    <p><b> Example</b>
+    </p>
+
+    <pre class="codeblock">
+$DO 1 10
+{ :
+
+This block is executed every iteration
+:
+$IF ? LE 5; $NEXT
+:
+This block is executed only for iterations 6 through 10
+:
+    </pre>
+
+    <p>
+      <a href="/example_scripts.html#$NEXT">$NEXT Examples</a>
+    </p>
+
+  </div>
+
+  
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_N_O-ref.html#Commands_and_Macros_N_O" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “N-O”.">Commands and Macros (N-O)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/ASAP_Macro_Language-conc.html">ASAP Macro Language</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DO_macro_ASAP-cmdref.html" title="Loops through input record(s).">$DO (ASAP Macro)</a></div>
+<div><a href="../Commands/ITER_macro_ASAP-cmdref.html" title="Iterates input records and a set of variables.">$ITER (ASAP Macro)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=33" target="_blank">See the Knowledge Base for the technical publication, Predefined Macros</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Scripting Languages Syntax (Non-INR)"/>
+<meta name="abstract" content="This topic relates to the use of scripting languages other than ASAP in the ASAP Editor window. It includes kernel functions, kernel procedures, routines for setting and getting kernel variables, spanning multiple lines, and displaying a message box, predefined kernel macros; and examples for JScript and VBScript."/>
+<meta name="description" content="This topic relates to the use of scripting languages other than ASAP in the ASAP Editor window. It includes kernel functions, kernel procedures, routines for setting and getting kernel variables, spanning multiple lines, and displaying a message box, predefined kernel macros; and examples for JScript and VBScript."/>
+<meta name="DC.subject" content="Scripting Languages Syntax (Non-INR), syntax, scripting languages, VBScript"/>
+<meta name="keywords" content="Scripting Languages Syntax (Non-INR), syntax, scripting languages, VBScript"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Editor_Window_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Editor_Keyboard_Shortcuts-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Editor_User_Assistance-task.html#Editor_User_Assistance"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Editor_Window_Toolbar-conc.html#Editor_Window_Toolbar"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Keyword_Editor_Dialog-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Script_Engine_Properties-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/PythonScript-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Scripting_Languages_Syntax_Non_INR"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Scripting Languages Syntax (Non-INR)</title>
+</head>
+<body id="Scripting_Languages_Syntax_Non_INR"><a name="Scripting_Languages_Syntax_Non_INR"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Scripting Languages Syntax (Non-INR)</h5></span> 
+   
+  
+  <div><p>This topic relates to the use of scripting languages other than
+	 ASAP in the ASAP Editor window. It includes kernel functions, kernel
+	 procedures, routines for setting and getting kernel variables, spanning
+	 multiple lines, and displaying a message box, predefined kernel macros; and
+	 examples for JScript and VBScript. 
+  </p>
+ 
+	 <div class="section" id="Scripting_Languages_Syntax_Non_INR__section_5EFB4CFEBC064B5087F7A1EC5B7D0607"><a name="Scripting_Languages_Syntax_Non_INR__section_5EFB4CFEBC064B5087F7A1EC5B7D0607"><!-- --></a> 
+		<p>VBScript is a subset of VB/VBA language.
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Scripting_Languages_Syntax_Non_INR__section_34CF868A9D0C439AAB4D72FE15837D73"><a name="Scripting_Languages_Syntax_Non_INR__section_34CF868A9D0C439AAB4D72FE15837D73"><!-- --></a> 
+		<p><b>Kernel functions (return a number, bAlt replaces bracket-1 or
+			 paren-0 notation)</b>
+		</p>
+
+		<pre class="codeblock">
+kInt (double val, BOOL bAlt)
+ kExp (double val, BOOL bAlt)
+ kLog (double val, BOOL bAlt)
+ kAbs (double val)
+ kSgn (double val)
+ kSqrt (double val)
+ kCbrt (double val)
+ kSin (double val, BOOL bAlt)
+ kCos (double val, BOOL bAlt)
+ kTan (double val, BOOL bAlt)
+ kAsin (double val, BOOL bAlt)
+ kAcos (double val, BOOL bAlt)
+ kAtan (double val, BOOL bAlt)
+ kBj (double val, long nFunction)
+ kBk (double val, long nFunction)
+ kStep (double val)
+ kRect (double val)
+ kGaus (double val, BOOL bAlt)
+ kSinc (double val, BOOL bAlt)
+ kSomb (double val, BOOL bAlt)
+ kFact (double val)
+ kErf (double val, BOOL bAlt)
+ kFile (double val)
+ kFbi (double val, BOOL bAlt)
+ kLpw (double val)
+ kEye (double val, BOOL bAlt)
+ kLit (double val, BOOL bAlt)
+ kMode (double val)
+ kRan (double val, BOOL bAlt)
+</pre>
+
+		<p>
+		</p>
+
+		<p><b>Kernel procedures (can also return output from the Command Output
+			 Window)</b>
+		</p>
+
+		<pre class="codeblock"> 
+kAbel(VARIANT Args)
+ kAberrations(VARIANT Args)
+ kAccuracy(VARIANT Args)
+ kAfocal(VARIANT Args)
+ kAlign(VARIANT Args)
+ kAllowed(VARIANT Args)
+ kAlter(VARIANT Args)
+ kAngles(VARIANT Args)
+ kAppend(VARIANT Args)
+ kArc(VARIANT Args)
+ kArray(VARIANT Args)
+ kArrows(VARIANT Args)
+ kAscale(VARIANT Args)
+ kAsym(VARIANT Args)
+ kAverage(VARIANT Args)
+ kAxiconic(VARIANT Args)
+ kAxis(VARIANT Args)
+ kBeams(VARIANT Args)
+ kBend(VARIANT Args)
+ kBezier(VARIANT Args)
+ kBiconic(VARIANT Args)
+ kBilateral(VARIANT Args)
+ kBounds(VARIANT Args)
+ kBranch(VARIANT Args)
+ kBsdfdata(VARIANT Args)
+ kCad(VARIANT Args)
+ kCartoval(VARIANT Args)
+ kCharacter(VARIANT Args)
+ kClip(VARIANT Args)
+ kCoarsen(VARIANT Args)
+ kCoatings(VARIANT Args)
+ kCollection(VARIANT Args)
+ kColors(VARIANT Args)
+ kCombine(VARIANT Args)
+ kComposite(VARIANT Args)
+ kConic(VARIANT Args)
+ kConsider(VARIANT Args)
+ kContour(VARIANT Args)
+ kCorner(VARIANT Args)
+ kCutoff(VARIANT Args)
+ kDecompose(VARIANT Args)
+ kDeform(VARIANT Args)
+ kDimensions(VARIANT Args)
+ kDirectional(VARIANT Args)
+ kDisplay(VARIANT Args)
+ kDmap(VARIANT Args)
+ kDomacros(VARIANT Args)
+ kDome(VARIANT Args)
+ kDoublet(VARIANT Args)
+ kDrawing(VARIANT Args)
+ kDump(VARIANT Args)
+ kEdge(VARIANT Args)
+ kCurves(VARIANT Args)
+ kCurve(VARIANT Args)
+ kEllipse(VARIANT Args)
+ kEllipsoid(VARIANT Args)
+ kEmitting(VARIANT Args)
+ kEnclosed(VARIANT Args)
+ kEnd(VARIANT Args)
+ kEnt(VARIANT Args)
+ kExplicit(VARIANT Args)
+ kExplode(VARIANT Args)
+ kExtend(VARIANT Args)
+ kExtremes(VARIANT Args)
+ kFacets(VARIANT Args)
+ kFcn(VARIANT Args)
+ kFfad(VARIANT Args)
+ kFft(VARIANT Args)
+ kField(VARIANT Args)
+ kFitted(VARIANT Args)
+ kFlux(VARIANT Args)
+ kFmap(VARIANT Args)
+ kFocus(VARIANT Args)
+ kFold(VARIANT Args)
+ kForm(VARIANT Args)
+ kFresnel(VARIANT Args)
+ kFtsize(VARIANT Args)
+ kGaussian(VARIANT Args)
+ kGeneral(VARIANT Args)
+ kGet(VARIANT Args)
+ kGraph(VARIANT Args)
+ kGrid(VARIANT Args)
+ kGroup(VARIANT Args)
+ kHalt(VARIANT Args)
+ kHarvey(VARIANT Args)
+ kHeader(VARIANT Args)
+ kHelix(VARIANT Args)
+ kHistory(VARIANT Args)
+ kHorn(VARIANT Args)
+ kIdeal(VARIANT Args)
+ kIesfile(VARIANT Args)
+ kImage(VARIANT Args)
+ kImmerse(VARIANT Args)
+ kInterface(VARIANT Args)
+ kInvert(VARIANT Args)
+ kIrradiance(VARIANT Args)
+ kIsometric(VARIANT Args)
+ kLambertian(VARIANT Args)
+ kLenses(VARIANT Args)
+ kLevel(VARIANT Args)
+ kLights(VARIANT Args)
+ kLimits(VARIANT Args)
+ kLine(VARIANT Args)
+ kList(VARIANT Args)
+ kLocal(VARIANT Args)
+ kLsqfit(VARIANT Args)
+ kMangin(VARIANT Args)
+ kMap(VARIANT Args)
+ kMatrix(VARIANT Args)
+ kMedia(VARIANT Args)
+ kMesh(VARIANT Args)
+ kMirror(VARIANT Args)
+ kMissed(VARIANT Args)
+ kModels(VARIANT Args)
+ kModify(VARIANT Args)
+ kMove(VARIANT Args)
+ kMultiple(VARIANT Args)
+ kNonlinear(VARIANT Args)
+ kNormalize(VARIANT Args)
+ kNumbers(VARIANT Args)
+ kObject(VARIANT Args)
+ kOblique(VARIANT Args)
+ kOffset(VARIANT Args)
+ kOpdmap(VARIANT Args)
+ kOptical(VARIANT Args)
+ kOval(VARIANT Args)
+ kParabasal(VARIANT Args)
+ kParameterize(VARIANT Args)
+ kParticles(VARIANT Args)
+ kPatches(VARIANT Args)
+ kPaths(VARIANT Args)
+ kPenta(VARIANT Args)
+ kPerfect(VARIANT Args)
+ kPhysical(VARIANT Args)
+ kPicture(VARIANT Args)
+ kPixels(VARIANT Args)
+ kPlace(VARIANT Args)
+ kPlane(VARIANT Args)
+ kPlot(VARIANT Args)
+ kPlot3d(VARIANT Args)
+ kPoints(VARIANT Args)
+ kPolariz(VARIANT Args)
+ kPolynomial(VARIANT Args)
+ kTrinomial(VARIANT Args)
+ kBinomial(VARIANT Args)
+ kPrint(VARIANT Args)
+ kSprint(VARIANT Args)
+ kQprint(VARIANT Args)
+ kProfiles(VARIANT Args)
+ kPut(VARIANT Args)
+ kRacetrack(VARIANT Args)
+ kRadial(VARIANT Args)
+ kRadiant(VARIANT Args)
+ kRange(VARIANT Args)
+ kRay(VARIANT Args)
+ kRays(VARIANT Args)
+ kRayset(VARIANT Args)
+ kRectangle(VARIANT Args)
+ kRedefine(VARIANT Args)
+ kReduce(VARIANT Args)
+ kRender(VARIANT Args)
+ kRenorm(VARIANT Args)
+ kRepeat(VARIANT Args)
+ kReplicate(VARIANT Args)
+ kReplot(VARIANT Args)
+ kReset(VARIANT Args)
+ kReturn(VARIANT Args)
+ kReverse(VARIANT Args)
+ kRevolution(VARIANT Args)
+ kRight(VARIANT Args)
+ kRms(VARIANT Args)
+ kRotate(VARIANT Args)
+ kRoughness(VARIANT Args)
+ kRounded(VARIANT Args)
+ kSag(VARIANT Args)
+ kSampled(VARIANT Args)
+ kSave(VARIANT Args)
+ kSawtooth(VARIANT Args)
+ kScale(VARIANT Args)
+ kScatter(VARIANT Args)
+ kSearch(VARIANT Args)
+ kSection(VARIANT Args)
+ kSeed(VARIANT Args)
+ kSegments(VARIANT Args)
+ kSelect(VARIANT Args)
+ kSequence(VARIANT Args)
+ kShape(VARIANT Args)
+ kShift(VARIANT Args)
+ kShow(VARIANT Args)
+ kSinglet(VARIANT Args)
+ kSkew(VARIANT Args)
+ kSmooth(VARIANT Args)
+ kSolid(VARIANT Args)
+ kSource(VARIANT Args)
+ kSpectrum(VARIANT Args)
+ kSpline(VARIANT Args)
+ kSplit(VARIANT Args)
+ kSpots(VARIANT Args)
+ kSpread(VARIANT Args)
+ kStats(VARIANT Args)
+ kSubset(VARIANT Args)
+ kSum(VARIANT Args)
+ kSurface(VARIANT Args)
+ kSweep(VARIANT Args)
+ kSystem(VARIANT Args)
+ kTable(VARIANT Args)
+ kTelescope(VARIANT Args)
+ kTest(VARIANT Args)
+ kTextfile(VARIANT Args)
+ kThreshold(VARIANT Args)
+ kTitle(VARIANT Args)
+ kTorus(VARIANT Args)
+ kTrace(VARIANT Args)
+ kTranspose(VARIANT Args)
+ kTree(VARIANT Args)
+ kTube(VARIANT Args)
+ kUnits(VARIANT Args)
+ kUpdate(VARIANT Args)
+ kUserapod(VARIANT Args)
+ kApodize(VARIANT Args)
+ kUserbsdf(VARIANT Args)
+ kUsercurv(VARIANT Args)
+ kUserfunc(VARIANT Args)
+ kUsersag(VARIANT Args)
+ kUsersurf(VARIANT Args)
+ kUvspace(VARIANT Args)
+ kValues(VARIANT Args)
+ kVanes(VARIANT Args)
+ kVcavity(VARIANT Args)
+ kView(VARIANT Args)
+ kViolation(VARIANT Args)
+ kVolume(VARIANT Args)
+ kVoxels(VARIANT Args)
+ kVufacets(VARIANT Args)
+ kWarnings(VARIANT Args)
+ kWavelengths(VARIANT Args)
+ kWedge(VARIANT Args)
+ kWidths(VARIANT Args)
+ kWindow(VARIANT Args)
+ kWrite(VARIANT Args)
+ kXeq(VARIANT Args)
+ kXmemory(VARIANT Args)
+ kZernike(VARIANT Args)</pre>
+
+		<p>
+		</p>
+
+		<p><b>Routine for setting a kernel variable 
+		  </b>
+		</p>
+
+		<pre class="codeblock">kSetVar(string VarName, double Value)</pre>
+
+		<p>
+		</p>
+
+		<p><b>Routine for getting a kernel variable (returns a number)</b>
+		</p>
+
+		<pre class="codeblock">kGetVar (string VarName)</pre>
+
+		<p>
+		</p>
+
+		<p><b>Routine for kernel commands that can span multiple lines</b>
+		</p>
+
+		<pre class="codeblock">kFollow(VARIANT Args)</pre>
+
+		<p>
+		</p>
+
+		<p><b>Routine for displaying a message box</b>
+		</p>
+
+		<pre class="codeblock">kMsgBox(VARIANT Args);</pre>
+
+		<p>
+		</p>
+
+		<p><b>Predefined Kernel macros ($ macros have single underscore, &amp;
+			 macros have double underscore)</b>
+		</p>
+
+		<pre class="codeblock"> k_Ask (VARIANT Args)
+ k_Beep (VARIANT Args)
+ k_Case (VARIANT Args)
+ k_Clear (VARIANT Args)
+ k_Copy (VARIANT Args)
+ k_Datim (VARIANT Args)
+ k_Dbg (VARIANT Args)
+ k_Disp (VARIANT Args)
+ k_Echo (VARIANT Args)
+ k_Eval (VARIANT Args)
+ k_Fast (VARIANT Args)
+ k_Fcn (VARIANT Args)
+ k_Grab (VARIANT Args)
+ k_Io (VARIANT Args)
+ k_Iter (VARIANT Args)
+ k_Path (VARIANT Args)
+ k_Plot (VARIANT Args)
+ k_Ran (VARIANT Args)
+ k_Read (VARIANT Args)
+ k_Reg (VARIANT Args)
+ k_Scr (VARIANT Args)
+ k_Show (VARIANT Args)
+ k_Rcl (VARIANT Args)
+ k_Sto (VARIANT Args)
+ k__Sto (VARIANT Args)
+ k_Sys (VARIANT Args)
+ k_Tic (VARIANT Args)
+ k__Tic (VARIANT Args)
+ k_Unvar (VARIANT Args)
+ k_View (VARIANT Args)
+ k__View (VARIANT Args)
+ k_Wait (VARIANT Args)
+ k_Gui (VARIANT Args)
+ k__Gui (VARIANT Args)
+</pre>
+
+		<p>
+		</p>
+
+		<p><b>Example of JScript</b>
+		</p>
+
+		<div class="note"><span class="notetitle">Note:</span> Additional examples are available in your asap install folder&gt;
+		  examples &gt; projects directory.
+		</div>
+
+		<pre class="codeblock">
+//++
+// LENS_ARRAY01.JS
+// Title: A Discreet Lens Array
+// Category: Simple Problem
+// Keywords: Macros_user, array, lenslet, macro
+// Description: A micro-lens array with discreet lens
+// objects using nested macro/do loops. This is better
+// performed with bounding and using the ARRAY command.
+// Edit History (latest first)
+// 12/13/2002 - ma - Converted to JScript
+// 11/16/2000 - cp - creation
+//--
+
+function DoLenslet (arg1, arg2) 
+{  
+  // create a single circular LENSLET at (x,y) 
+
+  kSurfaces ();
+    kOptical ("Z", 0, 1, "ELLIPSE 0.4");
+    kObject ("'LENS_SURF_FRONT_X" + arg1 + "_Y" + arg2 + "'");
+      kInterface ("COATING +TRANS AIR GLASS");
+  
+  kSurfaces ();
+    kPlane ("Z 0.25 1 ELLIPSE 0.4");
+    kObject ("'LENS_SURF_BACK_X" + arg1 + "_Y" + arg2 + "'");
+      kInterface ("COATING +TRANS AIR GLASS");
+  kGroup (-2);
+  kShift ("X", arg1);
+  kShift ("Y", arg2);
+}
+
+function DoRow (arg1)
+{  
+  // create a row of LENSLETs
+  var i;
+
+  
+  for (i = 1; i &lt;= 8; i++)
+    DoLenslet (i, arg1);
+}
+
+function DoArray ()
+{  
+  // create the entire ARRAY from nested functions
+  var i;
+  
+  for (i = 1; i &lt;= 5; i++)
+    DoRow (i);
+    
+  return 0;
+}
+
+kSystem ("NEW");
+kReset ();
+
+kMedia ();
+  kFollow ("1.5 'GLASS'");
+  
+kCoating ("PROPERTIES");
+  kFollow ("0 1 'TRANS'");
+
+DoArray ();
+kPlot ("FACETS 3 3");
+k_View ();
+kReturn ();
+</pre>
+
+		<p>
+		</p>
+
+		<p><b>Example of VBScript</b>
+		</p>
+
+		<div class="note"><span class="notetitle">Note:</span> Additional examples are available in your asap install folder&gt;
+		  examples &gt; projects directory.
+		</div>
+
+		<pre class="codeblock">
+'++
+' LENS_ARRAY01.VBS
+' Title: A Discreet Lens Array
+' Category: Simple Problem
+' Keywords: Macros_user, array, lenslet, macro
+' Description: A micro-lens array with discreet lens
+' objects using nested macro/do loops. This is better
+' performed with bounding and using the ARRAY command.
+' Edit History (latest first)
+' 12/13/2002 - ma - Converted to VBScript
+' 11/16/2000 - cp - creation
+'--
+
+kSYSTEM "NEW"
+kRESET
+
+kMEDIA
+  kFollow "1.5", "'GLASS'"
+  
+kCOATINGS "PROPERTIES"
+
+  kFollow "0 1 'TRANS'"
+
+' create a single circular LENSLET at (x,y)         
+sub LENSLET (arg1, arg2) 
+  kSURFACE
+    kOPTICAL "Z 0 1 ELLIPSE 0.4"
+    kOBJECT "'LENS_SURF_FRONT_X" &amp; arg1 &amp; "_Y" &amp; arg2 &amp; "'"
+      kINTERFACE "COATING +TRANS AIR GLASS"
+  
+  kSURFACE
+    kPLANE "Z 0.25 1 ELLIPSE 0.4"
+    kOBJECT "'LENS_SURF_BACK_X" &amp; arg1 &amp; "_Y" &amp; arg2 &amp; "'"
+      kINTERFACE "COATING +TRANS AIR GLASS"
+  kGROUP -2
+  kSHIFT "X", (arg1)
+  kSHIFT "Y", (arg2)
+end sub
+
+       
+' create a row of LENSLETs 
+sub ROW (arg1)
+  dim i
+  
+  for i = 1 to 8
+    call LENSLET (i, arg1)  
+  next  
+end sub
+
+' create the entire ARRAY from nested macros 
+sub DoARRAY ()  
+  dim i
+  
+  for i = 1 to 5
+    call ROW (i)   
+  next
+end sub
+
+call DoARRAY
+kPLOT "FACETS 3 3"
+k_VIEW
+kRETURN
+</pre>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="../Concept/PythonScript-conc.html">PythonScript</a></strong><br/>
+When using PythonScript with the ASAP Editor, "IKernel." must preface any kernel command.</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Editor_Window_Overview-conc.html" title="The ASAP Editor supports basic text operations, such as editing script (*.inr, *.txt) files, cutting and pasting, as well as a broad set of features to support creation of command scripts. When an Editor file is run, the commands are sent to the ASAP kernel.">Editor Window Overview</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Editor_Keyboard_Shortcuts-conc.html" title="The Editor Window offers shortcut commands for keyboard strokes and left- and right-mouse clicks. These shortcuts are listed below, followed by sections on using the mouse to accomplish tasks in the Editor more efficiently, and right-click menu shortcuts.">Editor Keyboard Shortcuts</a></div>
+<div><a href="../Concept/Editor_Window_Toolbar-conc.html#Editor_Window_Toolbar" title="The Editor Window toolbar supports the commands via the following buttons.">Editor Window Toolbar</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Editor_User_Assistance-task.html#Editor_User_Assistance" title="The smartEditor™ is an embedded user assistant in ASAP for creating more accurate scripts in the ASAP Editor window.">Editor User Assistance</a></div>
+<div><a href="../Task/Keyword_Editor_Dialog-task.html" title="Customizes the name of an ASAP command, typically by shortening its name. Keywords appear in the ASAP Editor window in the same color coding as command names.">Keyword Editor Dialog</a></div>
+<div><a href="../Task/Script_Engine_Properties-task.html" title="This dialog box configures the properties for a script engine that will be used in the ASAP Editor.">Script Engine Properties</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

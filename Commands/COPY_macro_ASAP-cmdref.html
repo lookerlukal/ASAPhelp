@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="$COPY (ASAP Macro)"/>
+<meta name="abstract" content="Performs a raw, byte-for-byte copy of the source file to a destination file."/>
+<meta name="description" content="Performs a raw, byte-for-byte copy of the source file to a destination file."/>
+<meta name="DC.subject" content="$COPY (ASAP Macro), source file, copy, macros, copy source file"/>
+<meta name="keywords" content="$COPY (ASAP Macro), source file, copy, macros, copy source file"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_C-ref.html#Commands_and_Macros_C"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Macro_Language-conc.html#ASAP_Macro_Language"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=33"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="COPY_ASAP_Macro"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>$COPY (ASAP Macro)</title>
+</head>
+<body id="COPY_ASAP_Macro"><a name="COPY_ASAP_Macro"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>$COPY (ASAP Macro)</h5></span>
+	
+	
+	<div><p>Performs a raw, byte-for-byte copy of the source file to a destination file. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+$COPY source destination
+&amp;COPY   s        d
+$MOVE
+&amp;MOVE
+      </pre>
+
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="COPY_ASAP_Macro__ul_C55E72CAFC2840488804E11B0332F973"><!-- --></a><ol id="COPY_ASAP_Macro__ul_C55E72CAFC2840488804E11B0332F973">
+			<li id="COPY_ASAP_Macro__li_A67D37D6728144148B33E553839D7C1F"><a name="COPY_ASAP_Macro__li_A67D37D6728144148B33E553839D7C1F"><!-- --></a>Does a raw byte-for-byte copy of the source
+				file (name <b>source</b> or number <b>s</b>) to a
+				destination file (name <b>destination</b> or number <b>d</b>). </li>
+
+			<li id="COPY_ASAP_Macro__li_D54F77CE7ED945788708866EB15B2353"><a name="COPY_ASAP_Macro__li_D54F77CE7ED945788708866EB15B2353"><!-- --></a>If the destination file does not exist, it
+				is created. Otherwise, <b>$COPY</b> overwrites it while <b>&amp;COPY</b> appends to it. </li>
+
+			<li id="COPY_ASAP_Macro__li_CD23E1EE116547669F6A55EBFD71E8CF"><a name="COPY_ASAP_Macro__li_CD23E1EE116547669F6A55EBFD71E8CF"><!-- --></a>The command works with all file types (text
+				and binary), but it usually is not recommended for appending with one or both files
+				if they are binary. </li>
+
+			<li id="COPY_ASAP_Macro__li_B1C8CDA3C3A0454997DEB7817C8F676F"><a name="COPY_ASAP_Macro__li_B1C8CDA3C3A0454997DEB7817C8F676F"><!-- --></a>The <b>MOVE</b> versions behave
+				identically to <b>COPY</b> except that the source file is deleted
+				afterwards. </li>
+
+		</ol>
+
+		<p><b>Example</b>
+		</p>
+
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>$COPY MODE.DAT 29</b></span></td><td><span>!copy mode.dat to bro029.dat</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>&amp;COPY NEW.LIB UTIL.LIB</b></span></td><td><span>!add new library to util.lib</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>$COPY 30 SAVE.VCR</b></span></td><td><span>!copy current 3D vectors to save.vcr</span></td></tr></tbody></table>
+		<p>
+			<a href="../example_scripts.html#$COPY">$COPY Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_C-ref.html#Commands_and_Macros_C" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “C”.">Commands and Macros (C)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/ASAP_Macro_Language-conc.html#ASAP_Macro_Language">ASAP Macro Language</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=33" target="_blank">See the Knowledge Base for the technical publication, Predefined Macros</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="FOCUS (ASAP Command)"/>
+<meta name="abstract" content="Determines the best 3D focal point of currently selected ray data."/>
+<meta name="description" content="Determines the best 3D focal point of currently selected ray data."/>
+<meta name="DC.subject" content="FOCUS (ASAP Command), 3D focal point, ray data, 3D focal point"/>
+<meta name="keywords" content="FOCUS (ASAP Command), 3D focal point, ray data, 3D focal point"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_F-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CONSIDER_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GET_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OPDMAP_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PUT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SELECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPOTS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Best_Focus_Position-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="FOCUS_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>FOCUS (ASAP Command)</title>
+</head>
+<body id="FOCUS_ASAP_Command"><a name="FOCUS_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>FOCUS (ASAP Command)</h5></span>
+	
+	
+	<div><p>Determines the best 3D focal point of currently selected ray data. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">FOCUS [ MODE  [ m ] ]  [ MOVE [ r ]  ]</pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MODE m</span></td><td><span>specifies the method of determining the best 3D focal point for the current
+					ray bundle</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MOVE</span></td><td><span>transfers currently selected ray data to a plane that passes through the
+					best 3D focal point</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MOVE r</span></td><td><span>transfers currently selected ray data to a reference sphere of radius r
+					centered on the best 3D focal point</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="FOCUS_ASAP_Command__ul_9CEE3CD8ACD54928A1462FFCE7D33842"><!-- --></a><ol id="FOCUS_ASAP_Command__ul_9CEE3CD8ACD54928A1462FFCE7D33842">
+			<li id="FOCUS_ASAP_Command__li_51F4BA0A40D440719B951037E2B34AF7"><a name="FOCUS_ASAP_Command__li_51F4BA0A40D440719B951037E2B34AF7"><!-- --></a> Determines the best 3D focal point and RMS
+				deviations of the ray data from this point for the current ray bundle using one of
+				the following methods (listed from fastest to slowest): <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>MODE</span></th><th><span>METHOD</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m&lt;0</span></td><td><span>Centroid of individual ray foci</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m=0 (default)</span></td><td><span>Least squares closest approach of base rays</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m&gt;0</span></td><td><span>Above plus first "m" parabasal rays</span></td></tr></tbody></table></li>
+
+			<li id="FOCUS_ASAP_Command__li_29B342B1A6AD41B4B92FE8504D0AED73"><a name="FOCUS_ASAP_Command__li_29B342B1A6AD41B4B92FE8504D0AED73"><!-- --></a>In general, use <b>CONSIDER</b>
+				to isolate the object of interest before using <b>FOCUS</b>. If you do
+				not, <b>FOCUS</b> uses ray data from all available objects and gives you
+				the wrong answer. </li>
+
+			<li id="FOCUS_ASAP_Command__li_AC017C53B0B140F3BE3184FD7C1A94BB"><a name="FOCUS_ASAP_Command__li_AC017C53B0B140F3BE3184FD7C1A94BB"><!-- --></a>If there are several sources, you may need
+				to use <b>SELECT</b> to isolate a particular source to avoid the problem
+				described previously. </li>
+
+			<li id="FOCUS_ASAP_Command__li_9F80694F0D834D208569C027724F2DF4"><a name="FOCUS_ASAP_Command__li_9F80694F0D834D208569C027724F2DF4"><!-- --></a>The <b>MOVE</b> option
+				calculates best focus and then moves the current ray bundle to the plane that passes
+				through this focal point. </li>
+
+			<li id="FOCUS_ASAP_Command__li_7DFC0A73E0A24BF19473BEC16E820113"><a name="FOCUS_ASAP_Command__li_7DFC0A73E0A24BF19473BEC16E820113"><!-- --></a>The <b>SPOTS</b> command can
+				then be used to generate a spot diagram at this best focus. </li>
+
+			<li id="FOCUS_ASAP_Command__li_7DBAA886C88F491CA5A37DD4E148F8DC"><a name="FOCUS_ASAP_Command__li_7DBAA886C88F491CA5A37DD4E148F8DC"><!-- --></a><b>MOVE r</b> is used to move
+				the ray data to a reference sphere centered on the best focal point and adjust the
+				optical path lengths so that geometric wavefront analyses may be performed. The
+				peak-to-valley and RMS optical path differences are also printed out. </li>
+
+		</ol>
+
+		<p><b>Example</b>
+		</p>
+
+		<pre class="codeblock">
+--- SELECT ONLY SOURCE 1
+    160 ray flags changed
+     80 rays now selected
+
+ --- STATS POS
+
+ Current Statistics for Object   0 -
+  Total Flux = 13.1172     from     80 rays ( 33.33%)
+                                         X                   Y                  Z
+        Centroid:         0.185707E-07   -.461274      0.000000
+   RMS Deviation:      0.951377           0.961321     0.000000
+  Maximum Spread: -1.80000           -1.33873       0.000000
+               to             1.80000             2.26127       0.000000
+
+ --- FOCUS
+
+ Least Squares Focus Calculation for     80 Rays:
+                                 X                    Y                 Z
+  Centroid Point  0.0000000     -3.000000      3.000000
+  RMS Deviations 0.3033E-07    0.7508E-07    0.8019E-07
+  Mean Direction  0.0000000    -0.6244647     0.7810531
+
+ Total Flux =  13.12     RMS Blur Diameter = 0.1832593E-06
+ Maximum Ray Angle from Mean =  25.1041 degrees, F/ 1.067
+
+ --- FOCUS MOVE
+
+ Least Squares Focus Calculation for     80 Rays:
+                                   X                 Y                       Z
+  Centroid Point    0.0000000     -3.000000        3.000000
+  RMS Deviations  0.3033E-07      0.7508E-07    0.8019E-07
+  Mean Direction  0.0000000      -0.6244647      0.7810531
+
+ Total Flux =  13.12     RMS Blur Diameter = 0.1832593E-06
+ Maximum Ray Angle from Mean =  25.1041 degrees, F/ 1.067
+
+ --- STATS POS
+
+ Current Statistics for Object   0 -
+  Total Flux = 13.1172     from     80 rays ( 33.33%)
+                                         X                   Y                            Z
+               Centroid:   0.462397E-17   -3.00000             3.00000
+       RMS Deviation:   0.547368E-16     0.198808E-15   0.146429E-15
+  Maximum Spread:  -.146438E-15      -.888178E-15    -.444089E-15
+               to             0.285834E-15     0.888178E-15    0.444089E-15
+
+ --- FOCUS MOVE -10
+
+ Least Squares Focus Calculation for     80 Rays:
+                                 X                        Y                    Z
+  Centroid Point   0.3239507E-17 -3.000000        3.000000
+  RMS Deviations  0.5079E-16        0.8324E-16     0.9947E-16
+  Mean Direction  0.0000000        -0.6244647       0.7810531
+ 
+
+ Total Flux =  13.12     RMS Blur Diameter = 0.2206772E-15
+ Maximum Ray Angle from Mean =  25.1041 degrees, F/ 1.067
+
+ Flux weighted statistics:
+ P-V Optical Path Difference =   0.280714E-11 waves
+    Wavefront Variance (RMS) =   0.412710E-12 waves
+     </pre>
+
+		<p>
+			<a href="../example_scripts.html#FOCUS">FOCUS Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_F-ref.html" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “F”.">Commands and Macros (F)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Best_Focus_Position-ref.html" title="The ASAP best focus position is the point in 3D space where the root mean square (RMS) distance to all the considered and selected rays is a minimum.">Best Focus Position</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/CONSIDER_ASAP-cmdref.html" title="Selects a set of objects for ray tracing and plotting.">CONSIDER (ASAP Command)</a></div>
+<div><a href="../Commands/GET_ASAP-cmdref.html" title="Retrieves ray data and copies it into variables.">GET (ASAP Command)</a></div>
+<div><a href="../Commands/OPDMAP_ASAP-cmdref.html" title="Creates a geometric wavefront map of the currently selected ray data.">OPDMAP (ASAP Command)</a></div>
+<div><a href="../Commands/PUT_ASAP-cmdref.html" title="Copies variable data into the current ray data.">PUT (ASAP Command)</a></div>
+<div><a href="../Commands/SELECT_ASAP-cmdref.html" title="Isolates a ray set for further analysis.">SELECT (ASAP Command)</a></div>
+<div><a href="../Commands/SPOTS_ASAP-cmdref.html" title="Creates a geometric spot diagram for the currently selected ray data.">SPOTS (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

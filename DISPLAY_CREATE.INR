@@ -1,0 +1,85 @@
+!!++
+!! DISPLAY_CREATE.INR
+!! Title: Distribution Created Externally
+!! Category: Isolated Command
+!! Keywords: DISPLAY, Fortran, external, distribution
+!! Description: Creating your own binary distribution.
+!! You can create your own distribution of data
+!! for plotting or optionally writing to the
+!! BRO00x.dat or name.dis file with the command
+!! sequence shown first, below. Another way to create a *.dis
+!! (binary) file is by writing your own external program.
+!! A Fortran example is shown next. 
+!! Note: This file is not a runable inr file.
+!! Edit History: (latest first)
+!! 12/19/2001 - cp - fixed structure and description
+!! 10/02/2000 - cp - modified format; added description
+!! 01/01/1996 - bro - creation
+!!--
+ 
+DISPLAY  0 [ 'title' ]
+            -u
+---  zlabel z flabel   ylabel y y' j   xlabel x x' i   [ 'title' ]
+---  f f' f" ...
+---       :
+              j lines of i entries each
+[WRITEname ]
+          :
+              other DISPLAY subcommands
+
+!!!!!!!! The following shows an example of a Fortran external file!!!!!!
+
+* CODE FOR CREATING A BINARY DISTRIBUTION FILE
+         *
+         * record length multiplier MREC normally 4 (except 1 if Digital
+         Fortran)
+         *
+         * variable declarations
+               IMPLICIT REAL (A-H,O-Z)
+               IMPLICIT INTEGER (I-N)
+               PARAMETER (MREC=4) !1 for VMS
+               CHARACTER*24 NAME,TITLE
+               CHARACTER*8 ZLABEL
+               CHARACTER*16 FLABEL,XLABEL,YLABEL
+               PARAMETER (NUMF=1,NUMX=50,NUMY=50)
+
+               DIMENSION F(NUMF,NUMX,NUMY)
+         * variable assignments
+               XMIN=-2
+               XMAX=2
+               YMIN=-1.5
+               YMAX=2.5
+               ZVAL=0
+               NAME='example'
+               L=INDEX(NAME//' ',' ')-1
+               TITLE='exponential'
+               ZLABEL='z-axis'
+               FLABEL='f(x,y)'
+               XLABEL='x-axis'
+               YLABEL='y-axis'
+         * function definition
+               DO 300 J=1,NUMY
+
+                 Y=YMIN+(J-.5)*(YMAX-YMIN)/NUMY
+                 DO 200 I=1,NUMX
+                   X=XMIN+(I-.5)*(XMAX-XMIN)/NUMX
+                   DO 100 N=1,NUMF
+                     F(N,I,J)=EXP(-X**2-Y**2)*X
+         100       CONTINUE
+         200     CONTINUE
+         300   CONTINUE
+         * open, write, and close file
+               LENR=MAX(7,NUMF*NUMX)
+               OPEN(9,FILE=NAME(1:L)//'.DIS',RECL=MREC*LENR,
+              $ACCESS='DIRECT',FORM='UNFORMATTED',STATUS='UNKNOWN')
+
+               WRITE(9,REC=1) 247+256*LENR*4
+               WRITE(9,REC=2) TITLE,NUMF
+               WRITE(9,REC=3) ZLABEL,ZVAL,FLABEL
+               WRITE(9,REC=4) YLABEL,YMIN,YMAX,NUMY
+               WRITE(9,REC=5) XLABEL,XMIN,XMAX,NUMX
+               DO 400 J=1,NUMY
+                 WRITE(9,REC=5+J) ((F(N,I,J),N=1,NUMF),I=1,NUMX)
+         400   CONTINUE
+               CLOSE(9)
+               END

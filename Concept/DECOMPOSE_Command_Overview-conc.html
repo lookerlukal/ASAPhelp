@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="DECOMPOSE Command Overview"/>
+<meta name="abstract" content="Aperture diffraction calculations made by ASAP are partly a function of the beam sampling of the aperture. The question is whether a suitable number of Gaussian beams clipped by the aperture so that the aperture apodization is represented in the subsequent diffraction pattern."/>
+<meta name="description" content="Aperture diffraction calculations made by ASAP are partly a function of the beam sampling of the aperture. The question is whether a suitable number of Gaussian beams clipped by the aperture so that the aperture apodization is represented in the subsequent diffraction pattern."/>
+<meta name="DC.subject" content="DECOMPOSE Command Overview, diffraction, aperture, aperture diffraction calculations"/>
+<meta name="keywords" content="DECOMPOSE Command Overview, diffraction, aperture, aperture diffraction calculations"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_DEF-ref.html#Reference_DEF"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Decompose_Coherent_Field_Dialog-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DECOMPOSE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GUI_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FIELD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Distribution_Data_Files_Overview-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="DECOMPOSE_Command_Overview"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>DECOMPOSE Command Overview</title>
+</head>
+<body id="DECOMPOSE_Command_Overview"><a name="DECOMPOSE_Command_Overview"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>DECOMPOSE Command Overview</h5></span> 
+   
+   
+  <div><p>Aperture diffraction calculations made by ASAP are partly a
+	 function of the beam sampling of the aperture. The question is whether a
+	 suitable number of Gaussian beams clipped by the aperture so that the aperture
+	 apodization is represented in the subsequent diffraction pattern. 
+  </p>
+ 
+	 <br/><a name="DECOMPOSE_Command_Overview__ul_EA733AA2C0D744CC9687882E9880A883"><!-- --></a><ul id="DECOMPOSE_Command_Overview__ul_EA733AA2C0D744CC9687882E9880A883"> 
+		<li id="DECOMPOSE_Command_Overview__li_D4C71E21EE954901B8DC0C947C21C278"><a name="DECOMPOSE_Command_Overview__li_D4C71E21EE954901B8DC0C947C21C278"><!-- --></a>For example a circular,
+		  collimated beam of light incident on a rectangular aperture that is brought to
+		  focus has an irradiance pattern that is a sinc-squared function. The fidelity
+		  of the ASAP diffraction pattern to the real pattern is a function of how well
+		  the Gaussian beams passing through the aperture represent the pattern of the
+		  aperture. 
+		</li>
+ 
+		<li id="DECOMPOSE_Command_Overview__li_9DB996678C8F4CDE82F970039FE5BA99"><a name="DECOMPOSE_Command_Overview__li_9DB996678C8F4CDE82F970039FE5BA99"><!-- --></a>When using ASAP to filter a
+		  set of beams spatially at focus, the above sampling condition would not be
+		  fulfilled at all. For example, a set of Gaussian beams that describe a perfect
+		  optical field at focus overlays each beam. A spatial filter placed in the focal
+		  plane of the ASAP model passes all of the beams, since the base ray would
+		  typically pass through the aperture. 
+		</li>
+ 
+	 </ul>
+ 
+	 <div class="section" id="DECOMPOSE_Command_Overview__section_48AC9A70CE2840A4BA89FE776B00FB6A"><a name="DECOMPOSE_Command_Overview__section_48AC9A70CE2840A4BA89FE776B00FB6A"><!-- --></a><span style="color: #2b6eb5"><h5>Tip</h5></span> 
+		 
+		<p>The parabasal rays are not clipped. This is also true for beams near,
+		  but not at-focus, for which aperture sampling becomes an issue. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="DECOMPOSE_Command_Overview__section_D9E85AAB0A364E51BE997F674270C2C8"><a name="DECOMPOSE_Command_Overview__section_D9E85AAB0A364E51BE997F674270C2C8"><!-- --></a><span style="color: #2b6eb5"><h5>Spatial Filter Calculations</h5></span> 
+		 
+		<p>With the 
+		  <b>DECOMPOSE</b> command, you can perform spatial filter
+		  calculations where aperture sampling is an issue. The 
+		  <b>DECOMPOSE</b> command transforms a distribution file,
+		  created by 
+		  <b>FIELD ENERGY</b>, into a new set of Gaussian beams
+		  representing the optical field at the point of the 
+		  <b>FIELD ENERGY</b> calculation. Since 
+		  <b>FIELD ENERGY</b> has a 
+		  <b>CLIP</b> option, you may clip the distribution; that is,
+		  spatially filter it. The 
+		  <b>DECOMPOSED</b> set of beams will simulate the spatial
+		  filtering. Also note that the window size for 
+		  <b>FIELD</b> acts like another spatial filter clipping
+		  radiation outside the window. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="DECOMPOSE_Command_Overview__section_CA3A33DE4CA24E35858B61824218F12B"><a name="DECOMPOSE_Command_Overview__section_CA3A33DE4CA24E35858B61824218F12B"><!-- --></a><span style="color: #2b6eb5"><h5>Source Creation</h5></span> 
+		 
+		<p>Consider 
+		  <b>DECOMPOSE 
+		  </b>as a command for source creation. 
+		  <b>DECOMPOSE</b> creates the spatial and angular properties
+		  of the beams, but you need to define the physical properties of these beams.
+		  Since DECOMPOSE essentially creates a new source, use the appropriate commands
+		  to verify the source fidelity. 
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="../Task/Decompose_Coherent_Field_Dialog-task.html">Decompose Coherent Field Dialog</a></strong><br/>
+Decomposes an existing field into a new set of Gaussian beams.</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_DEF-ref.html#Reference_DEF" title="Reference topics in this section begin with the letters &#34;D-E-F&#34;.">Reference (D-F)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Distribution_Data_Files_Overview-conc.html" title="ASAP has several commands for calculating the irradiance, intensity, radiance etc., for a set of files, some of which produce immediate results of these calculations in the form of plots directly on the screen.">Distribution Data Files Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DECOMPOSE_ASAP-cmdref.html" title="Decomposes an existing field into a new set of Gaussian beams.">DECOMPOSE (ASAP Command)</a></div>
+<div><a href="../Commands/GUI_macro_ASAP-cmdref.html" title="Sends the given command strings to the graphical user interface (GUI).">$GUI (ASAP Macro)</a></div>
+<div><a href="../Commands/FIELD_ASAP-cmdref.html" title="Calculates the exact complex field distribution.">FIELD (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

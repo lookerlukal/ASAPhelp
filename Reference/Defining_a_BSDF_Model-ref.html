@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Defining a BSDF Model"/>
+<meta name="abstract" content="This topic illustrates how to define a BSDF model in ASAP."/>
+<meta name="description" content="This topic illustrates how to define a BSDF model in ASAP."/>
+<meta name="DC.subject" content="Defining a BSDF Model, BSDF, defining a model, model, defining a BSDF"/>
+<meta name="keywords" content="Defining a BSDF Model, BSDF, defining a model, model, defining a BSDF"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_DEF-ref.html#Reference_DEF"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Defining_a_BSDF_Model"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Defining a BSDF Model</title>
+</head>
+<body id="Defining_a_BSDF_Model"><a name="Defining_a_BSDF_Model"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Defining a BSDF Model</h5></span> 
+  
+  
+  <div><p>This topic illustrates how to define a BSDF model in ASAP.
+  </p>
+ 
+	 <div class="section" id="Defining_a_BSDF_Model__section_4BD22E9F79F240CBBE6C369CFD3891CE"><a name="Defining_a_BSDF_Model__section_4BD22E9F79F240CBBE6C369CFD3891CE"><!-- --></a> 
+		<p>FUNCTION USERBSDF( A2B2, BB0, B02, C, N, ERRMSG ) 
+		</p>
+ 
+		<p>Input arguments:
+		</p>
+ 
+		<p>A2B2 = A^2+B^2 where (A,B) are the direction cosines of the scatter
+		  direction
+		</p>
+ 
+		<p>BB0 = B * B0 where (0, B0) is the direction vector of the specular
+		  direction
+		</p>
+ 
+		<p>B02 = B0^2
+		</p>
+ 
+		<p>C(1:N) = array of coefficients passed by ASAP from the USERBSDF
+		  command
+		</p>
+ 
+		<p>ERRMSG = error message string (80 characters)
+		</p>
+ 
+		<p>Return:
+		</p>
+ 
+		<br/><a name="Defining_a_BSDF_Model__ul_C90433C5BCC5495D8AAA6E96E335D768"><!-- --></a><ul id="Defining_a_BSDF_Model__ul_C90433C5BCC5495D8AAA6E96E335D768"> 
+		  <li id="Defining_a_BSDF_Model__li_6599A362D6ED4C4893B8ADF2CAB9236F"><a name="Defining_a_BSDF_Model__li_6599A362D6ED4C4893B8ADF2CAB9236F"><!-- --></a>isotropic BSDF
+		  </li>
+ 
+		  <li id="Defining_a_BSDF_Model__li_BD12906055B84E5CB0CE102D531B7487"><a name="Defining_a_BSDF_Model__li_BD12906055B84E5CB0CE102D531B7487"><!-- --></a>error message in ERRMSG,
+			 otherwise ERRMSG is left blank. If ERRMSG is returned non-blank, ASAP stops
+			 running. 
+		  </li>
+ 
+		</ul>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_DEF-ref.html#Reference_DEF" title="Reference topics in this section begin with the letters &#34;D-E-F&#34;.">Reference (D-F)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

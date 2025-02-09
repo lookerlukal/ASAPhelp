@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="IDEAL (ASAP Command)"/>
+<meta name="abstract" content="Creates an idealized optical element (ABCD and Jones matrices)."/>
+<meta name="description" content="Creates an idealized optical element (ABCD and Jones matrices)."/>
+<meta name="DC.subject" content="IDEAL (ASAP Command), optical element, creating, matrices, creating ABCD and Jones, Jones matrix, Ray matrix"/>
+<meta name="keywords" content="IDEAL (ASAP Command), optical element, creating, matrices, creating ABCD and Jones, Jones matrix, Ray matrix"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_I-ref.html#Commands_and_Macros_I"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FCN_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PERFECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Anisotropic_Polarizing_Elements_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="IDEAL_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>IDEAL (ASAP Command)</title>
+</head>
+<body id="IDEAL_ASAP_Command"><a name="IDEAL_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>IDEAL (ASAP Command)</h5></span>
+	
+	
+	<div><p>Creates an idealized optical element (ABCD and Jones matrices). </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+IDEAL X x h [ t [ h' ] ] [ RANA ] [ fcn ]
+      Y y                  RANB
+      Z z
+[ a b c d [ o ] ]
+[ p q r s ]
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X, Y, or Z</span></td><td><span>specifies axis of symmetry </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x, y, or z</span></td><td><span>location along coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>h</span></td><td><span>input aperture semidiameter (height)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>t</span></td><td><span>output distance</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>h'</span></td><td><span>output aperture semidiameter (height)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RANA or RANB</span></td><td><span>randomize the output rays azimuthally (around the axis)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>fcn</span></td><td><span>name of the function</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a b c d</span></td><td><span>components of 2x2 ABCD matrix</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>o</span></td><td><span>object distance from first conicoid</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>p q r s</span></td><td><span>2x2 complex Jones matrix</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="IDEAL_ASAP_Command__ul_16EC5BEF6D64409DB09D607D5BC7594F"><!-- --></a><ol id="IDEAL_ASAP_Command__ul_16EC5BEF6D64409DB09D607D5BC7594F">
+			<li id="IDEAL_ASAP_Command__li_209A22D486FC41B68AC88F57FA27A4FF"><a name="IDEAL_ASAP_Command__li_209A22D486FC41B68AC88F57FA27A4FF"><!-- --></a>Defines an idealized (but unphysical) lens
+				of input height <b>h,</b> output distance <b>t,</b> and
+				output height <b>h'.</b> The input ray vectors are linearly related to
+				the output ray vectors by the 2x2 ABCD matrix given on the next line of input
+				(default is an identity matrix), and whose input polarization state is related to
+				the output polarization states via a Jones matrix. </li>
+
+			<li id="IDEAL_ASAP_Command__li_2E21F031B27F4610A37A97EB4EAE2914"><a name="IDEAL_ASAP_Command__li_2E21F031B27F4610A37A97EB4EAE2914"><!-- --></a>Jones matrix behavior is virtually
+				independent of the incidence angle. </li>
+
+			<li id="IDEAL_ASAP_Command__li_6546655C08134BFEBE5A26C1058CBDE1"><a name="IDEAL_ASAP_Command__li_6546655C08134BFEBE5A26C1058CBDE1"><!-- --></a>Each matrix is entered on an individual
+				input line. The matrix coefficients are as follows: <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Ray Matrix</span></th><th><span>Jones Matrix</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a b</span></td><td><span>p q</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>c d</span></td><td><span>r s</span></td></tr></tbody></table></li>
+
+			<li id="IDEAL_ASAP_Command__li_D6A808C68F274EE29FA1616EDBC09FB6"><a name="IDEAL_ASAP_Command__li_D6A808C68F274EE29FA1616EDBC09FB6"><!-- --></a>Common idealized optical systems include:
+					<p>Perfect lens of focal length <b>f, a=1 b=0 c=-1/f d=1</b>
+				</p>
+<p>Afocal system of angular magnification <b>m, a-1/m b=0 c=0
+					d=m</b>
+				</p>
+<p>"Nonlens" where output rays are extensions of input rays: <b>a=1 b=t
+						c=0</b>
+				</p>
+<p>Telecentric lens of focal length f and semi-field angle <b>u, t=f a=1
+						b=f c=-1/f d=0 h'=h+ftanu </b>
+				</p>
+</li>
+
+			<li id="IDEAL_ASAP_Command__li_7B74FB2E9A5444CB9D87AF373CF554A2"><a name="IDEAL_ASAP_Command__li_7B74FB2E9A5444CB9D87AF373CF554A2"><!-- --></a>The input and output media are assumed to
+				be the same isotropic medium. Therefore, the determinant of the ray matrix should be
+				unity; that is, ad-cb=1. </li>
+
+			<li id="IDEAL_ASAP_Command__li_4B74426BAB034AAE90A2AE59D3E2E8DF"><a name="IDEAL_ASAP_Command__li_4B74426BAB034AAE90A2AE59D3E2E8DF"><!-- --></a>There are no ray aberrations at all
+				conjugates. However, the wavefronts from this lens can only be perfectly spherical
+				for a single conjugate. The <b>o</b> is the object distance from the
+				first surface for this perfect imaging. The default value for o is zero; the object
+				is at infinity (optical path length is not constant for different field points). For
+				an infinite object distance, enter zero (the default). </li>
+
+			<li id="IDEAL_ASAP_Command__li_2315149239624B6188527998D7C6C0B9"><a name="IDEAL_ASAP_Command__li_2315149239624B6188527998D7C6C0B9"><!-- --></a>The optional additional line of input
+					<b>p q r s</b> is the four elements of the 2x2 complex Jones matrix
+				for linearly altering the polarization states of transmitted beams. In general,
+				Jones matrices are really only defined for beams normally incident on the reference
+				plane. Therefore, non-normal incidence beams may have their polarizations (and
+				fluxes) altered in unexpected ways. </li>
+
+			<li id="IDEAL_ASAP_Command__li_F76FEA1579014E1C93BE11734D228B50"><a name="IDEAL_ASAP_Command__li_F76FEA1579014E1C93BE11734D228B50"><!-- --></a>The <b>RAN</b> options
+				randomize azimuthally (around the axis) the output rays. <b>RANA</b>
+				does just the angle by rotating the output ray about its exit point. <b>RANB</b> does both position and direction by rotating about the center of the
+				output aperture. These can be used to simulate some non-imaging effects. </li>
+
+			<li id="IDEAL_ASAP_Command__li_EC5948B877D749B6A66A78C8241AAEB8"><a name="IDEAL_ASAP_Command__li_EC5948B877D749B6A66A78C8241AAEB8"><!-- --></a> The fluxes of the rays can be apodized
+				both radially and directionally if a <b>$FCN</b>
+				<b>fcn</b> is specified. The function takes as it first argument _1 the
+				normalized (between 0 and 1) radial position of the ray. The optional second
+				argument _2 is the sine of the angle from normal for the ray direction. The valued
+				returned (last expression) is multiplied with the ray flux to get the new ray flux.
+				For example, these two options could be combined to do an efficient simulation of an
+				incoherent multi-mode fiber:
+				<pre class="codeblock">
+NA=.5 !numerical aperture of fiber
+$FCN CUTOFF RECT(_2/(2*NA)) !directional cutoff
+IDEAL Z 0 .1 1000 .1 RANB CUTOFF !1000mm long 100um fiber
+            </pre>
+</li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#IDEAL">IDEAL Examples</a>
+		</p>
+
+	</div>
+
+	<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_I-ref.html#Commands_and_Macros_I" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “I”.">Commands and Macros (I)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Anisotropic_Polarizing_Elements_Overview-conc.html" title="Retardance (sometimes called birefringence) is the property of an interface, where the Optical Path Length (OPL) or phase change between the orthonormal components, which mathematically describe the polarization state, is a function of the incident polarization state. Many polarizing optical elements, including waveplates and some polarizers, work on this basis.">Anisotropic Polarizing Elements Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/FCN_macro_ASAP-cmdref.html" title="Defines new in-line math functions.">$FCN (ASAP Macro)</a></div>
+<div><a href="../Commands/PERFECT_ASAP-cmdref.html" title="A &#34;perfect&#34; (but realistic) lens.">PERFECT (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Lens Entities</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Polarization</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publications, Lens Entities in ASAP, and
+				Polarization in ASAP, at http://www.breault.com/k-base.php </a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

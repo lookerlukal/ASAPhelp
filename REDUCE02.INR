@@ -1,0 +1,39 @@
+!!++
+!! REDUCE02.INR
+!! Title: REDUCE Display Command #2
+!! Category: Isolated Command
+!! Keywords: REDUCE, DISPLAY
+!! Description: Using REDUCE to modify a
+!! display file.
+!! Edit History: (latest first)
+!! 3/8/2001 - cp - modified format; added description
+!! 02/27/2001 - arg - creation
+!!--
+!!--
+
+SYSTEM NEW
+RESET
+
+EMITTING RECTANGLE Z 0 5 5 100000
+FLUX TOTAL 100
+
+PIXELS 101
+WINDOW Y X
+SPOTS POSITION ATTRIBUTE 0
+
+DISPLAY
+  PICTURE
+RETURN
+$GRAB 'TOTAL FLUX' TOTALFLUX
+
+DISPLAY
+  REDUCE 0.50
+  WRITE FLUXREDUX DIS
+RETURN
+$GRAB 'TOTAL FLUX' REDUCEDFLUX
+
+&REG
+
+DISPLAY FLUXREDUX
+  PICTURE
+RETURN

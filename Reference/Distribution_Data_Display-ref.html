@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Distribution Data Display"/>
+<meta name="abstract" content="Many analysis commands (SPOTS, OPDMAP and others) create distribution data files. These files contain matrices of various forms of data (flux data, optical path difference data and others) and are stored on disk in binary format for efficiency as they can become quite large."/>
+<meta name="description" content="Many analysis commands (SPOTS, OPDMAP and others) create distribution data files. These files contain matrices of various forms of data (flux data, optical path difference data and others) and are stored on disk in binary format for efficiency as they can become quite large."/>
+<meta name="DC.subject" content="Distribution Data Display, display, distribution data"/>
+<meta name="keywords" content="Distribution Data Display, display, distribution data"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_DEF-ref.html#Reference_DEF"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Distribution_Data_Files_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DISPLAY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/DISPLAY_Inputting_an_Arbitrary_Data_Distribution-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Distribution_Data_Display"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Distribution Data Display</title>
+</head>
+<body id="Distribution_Data_Display"><a name="Distribution_Data_Display"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Distribution Data Display</h5></span> 
+   
+   
+  <div><p>Many analysis commands (<b>SPOTS, OPDMAP</b> and
+	 others) create distribution data files. These files contain matrices of various
+	 forms of data (flux data, optical path difference data and others) and are
+	 stored on disk in binary format for efficiency as they can become quite large. 
+  </p>
+ 
+	 <div class="section" id="Distribution_Data_Display__section_1CA941206F534732B1C8366F4864CD6D"><a name="Distribution_Data_Display__section_1CA941206F534732B1C8366F4864CD6D"><!-- --></a> 
+		<p><b>DISPLAY</b> is a top-level ASAP command, like 
+		  <b>SURFACE</b> and 
+		  <b>OBJECT</b> that provides storage, retrieval, editing,
+		  graphical display, and post-processing of 2D distribution data files. Unlike
+		  other ASAP commands, 
+		  <b>DISPLAY</b> is almost a separate program operating
+		  within ASAP, and it has its own rich set of commands specifically tailored for
+		  working with distribution data files. 
+		</p>
+ 
+		<p>If you enter a command that 
+		  <b>DISPLAY</b> does not recognize, you will be prompted
+		  with a dialog box showing the following message: 
+		</p>
+ 
+		<p>Unrecognized DISPLAY subcommand! 
+		</p>
+ 
+		<p>If you respond by clicking CANCEL, you are returned to DISPLAY;
+		  otherwise ASAP attempts to execute the command, thereby placing you out of the
+		  DISPLAY portion of the program. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Distribution_Data_Display__section_DDB4511B694E4A8FB4715918A27F2225"><a name="Distribution_Data_Display__section_DDB4511B694E4A8FB4715918A27F2225"><!-- --></a><span style="color: #2b6eb5"><h5>File Format</h5></span> 
+		 
+		<p>The header of the distribution data file contains information about
+		  the data contained within it. 
+		</p>
+ 
+		<br/><a name="Distribution_Data_Display__ul_9227BA5707FC460FBD9119E003FD21E0"><!-- --></a><ul id="Distribution_Data_Display__ul_9227BA5707FC460FBD9119E003FD21E0"> 
+		  <li id="Distribution_Data_Display__li_57C584055BF74D3F880E3A07611563D7"><a name="Distribution_Data_Display__li_57C584055BF74D3F880E3A07611563D7"><!-- --></a>The first line identifies
+			 the distribution data file. 
+		  </li>
+ 
+		  <li id="Distribution_Data_Display__li_459026BA5A764870A0A5D789758AAA2B"><a name="Distribution_Data_Display__li_459026BA5A764870A0A5D789758AAA2B"><!-- --></a>The next lines specify the
+			 type of data, units, the spatial (or directional) coordinates over which the
+			 data was taken, and the number of pixels (sample points). 
+		  </li>
+ 
+		  <li id="Distribution_Data_Display__li_E4A234F0A6FB49AAB74839AE23D22A65"><a name="Distribution_Data_Display__li_E4A234F0A6FB49AAB74839AE23D22A65"><!-- --></a> 
+			 <p>The following lines report the data statistics, units, and
+				locations of minimum, maximum, and average data values. If appropriate, the
+				last line indicates the total integrated flux contained in the data. 
+			 </p>
+ 
+			 <pre class="codeblock">
+Opening OLD   distribution file  9: bro009.dat
+ 4-record file header:
+  Geometrical Ray SPOTS      11
+  Z     0.000000E+00 FLUX / UNIT-AREA
+  X           -4.545455    4.545455     11
+  Y           -4.545455    4.545455     11
+
+ Statistics on  11 by  11 data set: 
+                FLUX / UNIT-AREA     Location  Y        X 
+ Minimum  .0000000     1  1   -4.132232    -4.132231
+ Maximum  1.209978    4  1   -1.652893    -4.132231
+ Average  .9699814      6  6   -.2980232E-07   .1192093E-06
+
+ TOTAL FLUX = 80.164
+</pre>
+ 
+		  </li>
+ 
+		</ul>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_DEF-ref.html#Reference_DEF" title="Reference topics in this section begin with the letters &#34;D-E-F&#34;.">Reference (D-F)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Distribution_Data_Files_Overview-conc.html" title="ASAP has several commands for calculating the irradiance, intensity, radiance etc., for a set of files, some of which produce immediate results of these calculations in the form of plots directly on the screen.">Distribution Data Files Overview</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/DISPLAY_Inputting_an_Arbitrary_Data_Distribution-ref.html" title="Creating a user-defined distribution of data for plotting.">DISPLAY - Inputting an Arbitrary Data Distribution</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DISPLAY_ASAP-cmdref.html" title="Reads previously created distribution data files so that they can be modified.">DISPLAY (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

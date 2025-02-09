@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="MEDIA ABSORB (ASAP Command)"/>
+<meta name="abstract" content="Creates an absorbing refractive material."/>
+<meta name="description" content="Creates an absorbing refractive material."/>
+<meta name="DC.subject" content="MEDIA ABSORB (ASAP Command), material, create absorbing refractive, refractive, create absorbing material"/>
+<meta name="keywords" content="MEDIA ABSORB (ASAP Command), material, create absorbing refractive, refractive, create absorbing material"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_M-ref.html#Commands_and_Macros_M"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GENERAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_CRYSTAL_ASAP-cmdref.html#MEDIA_CRYSTAL_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_GRIN_ASAP-cmdref.html#MEDIA_GRIN_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_SCATTER_ASAP-cmdref.html#MEDIA_SCATTER_ASAP_Command"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="MEDIA_ABSORB_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>MEDIA ABSORB (ASAP Command)</title>
+</head>
+<body id="MEDIA_ABSORB_ASAP_Command"><a name="MEDIA_ABSORB_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>MEDIA ABSORB (ASAP Command)</h5></span>
+	
+	
+	<div><p>Creates an absorbing refractive material. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+MEDIA [ m ]
+n [ n' n" ... ] ABSORB a [ j q t [ l ] [ 'name' ]
+     :
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m</span></td><td><span>starting media number</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n n' n" ...</span></td><td><span>real (or complex) refractive indices</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a</span></td><td><span>absorption (or gain) coefficient (inverse length units); positive for an
+					absorbing medium or negative for a gain (lasing) medium</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>j</span></td><td><span><b>SURFACE</b> designation for a inhomogeneous <b>ABSORB</b> function</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>q</span></td><td><span>exponent of inhomogeneous <b>ABSORB</b> function</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>t</span></td><td><span>step length to be used during ray trace in an inhomogeneous
+				medium</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>l</span></td><td><span>maximum number of ray steps in medium; default is 1000</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>name</span></td><td><span>descriptive name that can be assigned to this medium (only the first 24
+					characters after the comment delimiter are stored).</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="MEDIA_ABSORB_ASAP_Command__ul_185414EDD9004D7A9D431E1906F28253"><!-- --></a><ol id="MEDIA_ABSORB_ASAP_Command__ul_185414EDD9004D7A9D431E1906F28253">
+			<li id="MEDIA_ABSORB_ASAP_Command__li_5C5D2897E3704944A6B3416407584FB2"><a name="MEDIA_ABSORB_ASAP_Command__li_5C5D2897E3704944A6B3416407584FB2"><!-- --></a><b>ABSORB</b> identifies the medium as a
+				general absorbing one. </li>
+
+			<li id="MEDIA_ABSORB_ASAP_Command__li_A3C746574BF4421480C73F05D782471C"><a name="MEDIA_ABSORB_ASAP_Command__li_A3C746574BF4421480C73F05D782471C"><!-- --></a>Refractive indices for dispersive materials
+				must be entered in the order indicated by the previous <b>WAVELENGTHS</b> command. </li>
+
+			<li id="MEDIA_ABSORB_ASAP_Command__li_E7493BB0ECB54D2C820D10B703188C76"><a name="MEDIA_ABSORB_ASAP_Command__li_E7493BB0ECB54D2C820D10B703188C76"><!-- --></a>If only real refractive index data are
+				entered and a non-zero value is <b>not</b> given for <b>a,</b> the
+				absorption is set to zero. </li>
+
+			<li id="MEDIA_ABSORB_ASAP_Command__li_40DCE6CEA2554EE292319B6B1B4A5031"><a name="MEDIA_ABSORB_ASAP_Command__li_40DCE6CEA2554EE292319B6B1B4A5031"><!-- --></a> If complex refractive index data are
+				entered and <b>a</b> is <i>not </i>specified, ASAP calculates <b>a</b> (the absorption coefficient) from the wavelength and the imaginary part
+				of the complex refractive index η as follows. Given: <p><img src="../Equations/MEDIA_ABSORB_equation1.gif"/>
+				</p>
+<p>The meaning of the absorption coefficient <b>a</b> is given by
+					</p>
+<p><img src="../Equations/MEDIA_ABSORB_equation2.gif"/>
+				</p>
+<p>In this equation, <b>I</b> is the intensity of a plane-wave at a depth <b>L</b> in the medium, when the intensity on entering the medium is </p>
+<p><img src="../Equations/MEDIA_ABSORB_equation3.gif"/>
+				</p>
+<p>See the Example below. </p>
+</li>
+
+			<li id="MEDIA_ABSORB_ASAP_Command__li_0050A7FFF15449FABDD72C86B563F283"><a name="MEDIA_ABSORB_ASAP_Command__li_0050A7FFF15449FABDD72C86B563F283"><!-- --></a> To handle inhomogeneous absorption or
+				gain, assign the medium a GENERAL polynomial function in the global coordinates
+					<b>(X,Y,Z).</b> The magnitude of <b>j</b> is the
+					<b>SURFACE</b> designation for this function. <p>The absorption
+					coefficient a at each point in the medium is then given by: </p>
+<p><img src="../Equations/MEDIA_ABSORB_equation4.gif"/>
+				</p>
+</li>
+
+			<li id="MEDIA_ABSORB_ASAP_Command__li_1DDDD6897A014E2D8CDF3A86BB04F502"><a name="MEDIA_ABSORB_ASAP_Command__li_1DDDD6897A014E2D8CDF3A86BB04F502"><!-- --></a>Linear interpolation is performed, if
+				necessary, to compute a refractive index at a particular wavelength. The
+				interpolated values are then used to calculate absorption coefficients (for complex
+				indices). </li>
+
+		</ol>
+
+		<p><b>Example</b>
+		</p>
+
+		<p>Consider aluminum with n^ = 1.44 + i5.23: </p>
+
+		<p>You can enter this in ASAP using either of two forms: </p>
+
+		<pre class="codeblock">
+UNITS MICRONS
+WAVELENGTH 0.589
+N=1.44                           !! REAL PART OF INDEX
+NK=5.23                          !! IMAGINARY PART OF INDEX
+K=NK/N                           !! ATTENUATION INDEX KAPPA
+ALPHA=4*3.14*NK/0.589            !! ABSORPTION COEFFICIENT AT 589 NANOMETERS
+
+MEDIA
+(N)`(NK) 'ALUMINUM_1'            !! 1ST FORM
+(N) ABSORB (ALPHA) 'ALUMINUM_2'  !! 2ND FORM
+RETURN
+      </pre>
+
+		<p>These two definitions are equivalent in the example given, in which only a single
+			wavelength is present. The second form, using <b>ABSORB</b>, is independent
+			of wavelength. The first form becomes wavelength-dependent if dispersion data are
+			specified; that is, if multiple <b>WAVELENGTHS</b> are specified with
+			corresponding complex refractive indices. In the latter case, ASAP interpolates among
+			the given indices to compute the complex index and the absorption coefficient. </p>
+
+		<p>ASAP does not impose the Kramers-Krönig relation upon refractive indices specified for
+			multiple wavelengths; the indices need not be consistent with causality. </p>
+
+		<p>
+			<a href="../example_scripts.html#MEDIA">MEDIA Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_M-ref.html#Commands_and_Macros_M" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “M”.">Commands and Macros (M)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/GENERAL_ASAP-cmdref.html" title="Creates a general surface defined by polynomial coefficients.">GENERAL (ASAP Command)</a></div>
+<div><a href="../Commands/MEDIA_ASAP-cmdref.html" title="Creates a single refractive material.">MEDIA (ASAP Command)</a></div>
+<div><a href="../Commands/MEDIA_CRYSTAL_ASAP-cmdref.html#MEDIA_CRYSTAL_ASAP_Command" title="Defines birefringent media.">MEDIA CRYSTAL (ASAP Command)</a></div>
+<div><a href="../Commands/MEDIA_GRIN_ASAP-cmdref.html#MEDIA_GRIN_ASAP_Command" title="Creates a GRIN refractive material.">MEDIA GRIN (ASAP Command)</a></div>
+<div><a href="../Commands/MEDIA_SCATTER_ASAP-cmdref.html#MEDIA_SCATTER_ASAP_Command" title="Assigns to medium a GENERAL polynomial or USERFUNC function in the global coordinates X, Y, Z.">MEDIA SCATTER (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

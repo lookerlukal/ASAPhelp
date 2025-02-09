@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="$FAST (ASAP Macro)"/>
+<meta name="abstract" content="Performs fast reading of numeric arrays."/>
+<meta name="description" content="Performs fast reading of numeric arrays."/>
+<meta name="DC.subject" content="$FAST (ASAP Macro), macros, fast reading, arrays, numeric"/>
+<meta name="keywords" content="$FAST (ASAP Macro), macros, fast reading, arrays, numeric"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_F-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DIMENSIONS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DO_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ITER_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/READ_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Macro_Language-conc.html#ASAP_Macro_Language"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="FAST_ASAP_Macro"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>$FAST (ASAP Macro)</title>
+</head>
+<body id="FAST_ASAP_Macro"><a name="FAST_ASAP_Macro"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>$FAST (ASAP Macro)</h5></span> 
+   
+   
+  <div><p>Performs fast reading of numeric arrays. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+$FAST n  [ m ]  [ s ]  [ COMPLEX ]
+                 label
+  . . .    n or 2n numbers
+      :
+   m records
+ [ label ]     
+      </pre>
+ 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="FAST_ASAP_Macro__ul_B75394994229407A943D9B2ACA401A32"><!-- --></a><ol id="FAST_ASAP_Macro__ul_B75394994229407A943D9B2ACA401A32"> 
+		<li id="FAST_ASAP_Macro__li_EDF9A33AB16645C8AEAFCEF5D78A10D2"><a name="FAST_ASAP_Macro__li_EDF9A33AB16645C8AEAFCEF5D78A10D2"><!-- --></a>Macro reads directly from
+		  the current input file 
+		  <b>m</b> records (default 1 or until 
+		  <b>label</b> is reached, or until read error) of 
+		  <b>n</b> real or 
+		  <b>COMPLEX</b> entries each. 
+		</li>
+ 
+		<li id="FAST_ASAP_Macro__li_AC3E9C7B092447CD9454ABE6B453F078"><a name="FAST_ASAP_Macro__li_AC3E9C7B092447CD9454ABE6B453F078"><!-- --></a>ASAP uses the flexible,
+		  list-directed input facility of Fortran and, therefore: 
+		  <br/><a name="FAST_ASAP_Macro__ol_9349BBC8F1A649E891ED717D2882B193"><!-- --></a><ul id="FAST_ASAP_Macro__ol_9349BBC8F1A649E891ED717D2882B193"> 
+			 <li id="FAST_ASAP_Macro__li_DD230D3DCE15454C826D57525FC940DF"><a name="FAST_ASAP_Macro__li_DD230D3DCE15454C826D57525FC940DF"><!-- --></a>ASAP does not do the
+				extensive parsing it normally does; that is, only numbers separated by a comma
+				and/or blanks are accepted. 
+			 </li>
+ 
+			 <li id="FAST_ASAP_Macro__li_938544BD27AF45EE809DFFAAA3460C6A"><a name="FAST_ASAP_Macro__li_938544BD27AF45EE809DFFAAA3460C6A"><!-- --></a>This input is never
+				echoed to the output device. 
+			 </li>
+ 
+			 <li id="FAST_ASAP_Macro__li_9308C500DC824BCDB746130C5A9501CD"><a name="FAST_ASAP_Macro__li_9308C500DC824BCDB746130C5A9501CD"><!-- --></a>If reading directly from
+				a file and not indirectly from a macro or loop, ASAP attempts to read 
+				<b>n</b> times 
+				<b>m</b>numbers, with line breaks required only after
+				every 
+				<b>n</b>th number; that is, additional line breaks can
+				be inserted so that lines are not limited to the normal 344 characters. 
+			 </li>
+ 
+			 <li id="FAST_ASAP_Macro__li_72D701F7B88F4FF88B6638B7FEBA817C"><a name="FAST_ASAP_Macro__li_72D701F7B88F4FF88B6638B7FEBA817C"><!-- --></a>The number of data that 
+				<b>$FAST</b> itself can read is limited only by how
+				high a 32-bit computer can count using signed integers. Typically, the
+				meaningful limit is imposed by the purpose for which 
+				<b>$FAST</b> is applied. If, for example, 
+				<b>$FAST</b> is used to define 
+				<b>POINTS</b> for an 
+				<b>EDGE</b>, an implied limit on 
+				<b>$FAST</b> data for this purpose is set by the Total
+				CurvEdge Points, which depends on the version of ASAP. Another example would be
+				the limit imposed by sampling points to create a 
+				<b>SAMPLED</b> surface, based on maximum allowed
+				Sampling Pixels on a Side (See 
+				<b>DIMENSIONS</b> command). 
+			 </li>
+ 
+		  </ul>
+ 
+		</li>
+ 
+		<li id="FAST_ASAP_Macro__li_8E9F26F2053D46CFA3A5A3DD2C277E92"><a name="FAST_ASAP_Macro__li_8E9F26F2053D46CFA3A5A3DD2C277E92"><!-- --></a>Each number of the array
+		  optionally may be multiplied by a scale factor 
+		  <b>s</b> (default 1). 
+		</li>
+ 
+		<li id="FAST_ASAP_Macro__li_E1EBFA092FDE44D2843971C8C1F85B7B"><a name="FAST_ASAP_Macro__li_E1EBFA092FDE44D2843971C8C1F85B7B"><!-- --></a>Optionally, ASAP can also
+		  assume each successive pair of numbers forms a 
+		  <b>COMPLEX</b> (real, imaginary) entry. In this case, rule
+		  3 above should be read with 
+		  <b>2n</b> substituted for 
+		  <b>n</b> 
+		</li>
+ 
+		<li id="FAST_ASAP_Macro__li_87CF3DC5E3184FD6B90EAF19B8FB3CA9"><a name="FAST_ASAP_Macro__li_87CF3DC5E3184FD6B90EAF19B8FB3CA9"><!-- --></a><b>$FAST</b> may
+		  be used in 
+		  <b>$DO</b> and 
+		  <b>$ITER</b> loops and in user-defined macros. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#$FAST">$FAST
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+  <div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_F-ref.html" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “F”.">Commands and Macros (F)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/ASAP_Macro_Language-conc.html#ASAP_Macro_Language">ASAP Macro Language</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DIMENSIONS_ASAP-cmdref.html" title="Displays a table of maximum array dimensions for the most important program arrays.">DIMENSIONS (ASAP Command)</a></div>
+<div><a href="../Commands/DO_macro_ASAP-cmdref.html" title="Loops through input record(s).">$DO (ASAP Macro)</a></div>
+<div><a href="../Commands/ITER_macro_ASAP-cmdref.html" title="Iterates input records and a set of variables.">$ITER (ASAP Macro)</a></div>
+<div><a href="../Commands/READ_macro_ASAP-cmdref.html" title="Start reading future records from the beginning of the given file name (with default extension .INR).">$READ (ASAP Macro)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Coupling Other Software Programs to ASAP</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Predefined ASAP Macros</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publications, Predefined
+		  Macros, and Coupling with Other Software Programs to ASAP, at
+		  http://www.breault.com/k-base.php 
+		</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

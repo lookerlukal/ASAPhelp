@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Stray Light - Calculating Radiation Scattered to Detector"/>
+<meta name="abstract" content="ASAP may be used directly to calculate the amount of radiation scattered to the detector when the critical and illuminated objects are known, as well as the paths connecting them to the detector."/>
+<meta name="description" content="ASAP may be used directly to calculate the amount of radiation scattered to the detector when the critical and illuminated objects are known, as well as the paths connecting them to the detector."/>
+<meta name="DC.subject" content="Stray Light - Calculating Radiation Scattered to Detector, radiation, calculating in stray light, scattered stray light, calculating radiation"/>
+<meta name="keywords" content="Stray Light - Calculating Radiation Scattered to Detector, radiation, calculating in stray light, scattered stray light, calculating radiation"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Stray_Light_Analysis_Identifying_Critical_Objects-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Stray_Light_Analysis_Identifying_Illuminated_Objects-conc.html#Stray_Light_Analysis_Identifying_Illuminated_Objects"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PATHS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/STATS_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Stray_Light_Calculating_Radiation_Scattered_to_Detector"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Stray Light - Calculating Radiation Scattered to Detector</title>
+</head>
+<body id="Stray_Light_Calculating_Radiation_Scattered_to_Detector"><a name="Stray_Light_Calculating_Radiation_Scattered_to_Detector"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Stray Light - Calculating Radiation Scattered to Detector</h5></span>
+	
+	
+	<div><p>ASAP may be used directly to calculate the amount of radiation scattered to the
+		detector when the critical and illuminated objects are known, as well as the paths
+		connecting them to the detector. </p>
+
+		<div class="section" id="Stray_Light_Calculating_Radiation_Scattered_to_Detector__section_28749C31B6CD4AECA1858B47B0BC9929"><a name="Stray_Light_Calculating_Radiation_Scattered_to_Detector__section_28749C31B6CD4AECA1858B47B0BC9929"><!-- --></a>
+			<p>In out-of-field situations, it is crucial that important areas are properly
+				configured within your system model. For example, important areas are often pupil
+				sizes and placed at pupil locations to force scattered radiation in the general
+				direction of the detector. At this point in the stray light analysis, the critical
+				and illuminated objects should have the appropriate scattering models assigned to
+				them. </p>
+
+			<p>Initially, trace only a small number of rays from the scatter source to verify that
+				the system geometry and associated scatter commands were entered correctly. When the
+				preliminary calculations are complete, you may trace a large number (and scatter a
+				large) number of rays to obtain an accurate calculation of the scattered radiation
+				propagating to the detector plane. The <b>PATHS</b> command is
+				especially useful for assessing scattered ray paths and their associated scattered
+				power. </p>
+
+			<p>ASAP may be used to perform a first-order stray light analysis of power scattered to
+				the detector. This technique may be alone, or as a first-order check on a power
+				transfer analysis described previously. This is accomplished by first relating the
+				information on the <b>STATS</b> command to the basic power transfer
+				equation. The basic power transfer equation is </p>
+
+			<p>
+				<br/><div class="imagecenter"><img longdesc="Stray Light Calculating Radiation - equation" src="../Equations/Stray_Light_Calc_Radiation_equation1.gif" width="455" height="275"/></div><br/>
+			</p>
+
+			<p>
+				<br/><div class="imagecenter"><img longdesc="Stray Light Calculating Radiation - equation" src="../Equations/Stray_Light_Calc_Radiation_equation2.gif" width="381" height="96"/></div><br/>
+			</p>
+
+			<div class="note"><span class="notetitle">Note:</span> 
+				<p>The geometrical configuration factor (GCF) is composed entirely of geometrical
+					quantities. If you now propagate radiation from an <b>EMITTING</b>
+					area (with a normalized total flux of 1 flux unit) backward from the detector
+					the power transfer equation becomes, since the BSDF of a Lambertian surface or
+					emitter is 1/p. </p>
+
+			</div>
+
+			<p>
+				<br/><div class="imagecenter"><img longdesc="Stray Light Calculating Radiation - equation" src="../Equations/Stray_Light_Calc_Radiation_equation3.gif" width="200" height="51"/></div><br/>
+			</p>
+
+			<p>
+				<br/><div class="imagecenter"><img longdesc="Stray Light Calculating Radiation - equation" src="../Equations/Stray_Light_Calc_Radiation_equation4.gif" width="238" height="58"/></div><br/>
+			</p>
+
+			<p>If this quantity is multiplied by the ratio of the area of the collector to the
+				source, you obtain the GCF from the source to the collector as a function of power
+				of, or on, the source. Therefore by tracing rays from the detector, using the
+					<b>STATS POSITION </b>command, and the appropriate source and
+				collector areas, the GCF from the source to the collector is determined. If you now
+				trace rays into the system with an appropriate normalization, the <b>STATS
+					POSITION </b> command may be used to calculate the power on each source
+				object. Again apply the BSDF form of the power transfer equation to calculate the
+				power scattered to the detector. </p>
+
+			<p>If thermal emission is important in your analysis, then multiply each GCF from
+				collector to the source by the Stephan-Boltzman constant, the temperature to the
+				fourth power, the object emissivity, and the collector area to obtain the thermally
+				emitted power scattered to the detector. </p>
+
+			<p>
+				<br/><div class="imagecenter"><img longdesc="Stray Light Calculating Radiation - equation" src="../Equations/Stray_Light_Calc_Radiation_equation5.gif" width="178" height="36"/></div><br/>
+			</p>
+
+			<div class="note"><span class="notetitle">Note:</span> 
+				<p>This is a first-order analysis of the power scattered to the detector, which
+					should get to within a factor of three to four of an actual ASAP analysis. If it
+					does not, re-evaluate your analysis. </p>
+
+				<p>In general, predicting the actual power scattered to the detector to within a
+					factor of two to three is good. </p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Stray_Light_Analysis_Identifying_Critical_Objects-conc.html" title="Identifying critical objects is perhaps the most important part of a stray light analysis. The critical objects are those objects seen by the detector, either directly or directly imaged onto the detector.">Stray Light Analysis - Identifying Critical Objects</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Stray_Light_Analysis_Identifying_Illuminated_Objects-conc.html#Stray_Light_Analysis_Identifying_Illuminated_Objects" title="ASAP identifies illuminated objects by tracing rays forward through the optical system in the conventional manner. The illuminated objects, as well as the amount of power incident upon them, also may be printed with the STATS POSITION command.">Stray Light Analysis - Identifying Illuminated Objects</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/EMITTING_ASAP-cmdref.html" title="Creates a composite single-source emitter from several EMITTING volume commands.">EMITTING (ASAP Command)</a></div>
+<div><a href="../Commands/PATHS_ASAP-cmdref.html" title="Produces a table of summarizing propagation paths of currently defined rays.">PATHS (ASAP Command)</a></div>
+<div><a href="../Commands/STATS_ASAP-cmdref.html" title="Lists statistics of the currently selected ray data.">STATS (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

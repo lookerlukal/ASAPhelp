@@ -1,0 +1,24 @@
+!!++
+!! SURF_TORUS01.INR
+!! Title: TORUS Surface #1
+!! Category: Isolated Command
+!! Keywords: TORUS, SURFACE
+!! Description: A torus surface specified by its
+!! Z axis center, height to center of ring, and
+!! semi-radius of torus cross-section.
+!! Edit History: (latest first) 
+!! 02/28/2002 - cp - corrected style
+!! 10/16/2000 - cp - modified format; added description
+!! 01/01/1996 - bro - creation
+!!--
+
+SYSTEM NEW
+RESET
+
+SURFACE
+  TORUS Z 0  1 0.5
+OBJECT 
+  
+WINDOW Y X  !! To view object
+PLOT FACETS 5 5 'SURF:TORUS' COLORS 11
+RETURN

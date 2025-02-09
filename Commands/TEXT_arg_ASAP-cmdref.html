@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="TEXT (ASAP Command Argument)"/>
+<meta name="abstract" content="Prints text annotation within the graphics window."/>
+<meta name="description" content="Prints text annotation within the graphics window."/>
+<meta name="DC.subject" content="TEXT (ASAP Command Argument), command arguments, TEXT, graphics, printing annotated text, print, annotated text"/>
+<meta name="keywords" content="TEXT (ASAP Command Argument), command arguments, TEXT, graphics, printing annotated text, print, annotated text"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_T-ref.html#Commands_and_Macros_T"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OBJECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WINDOW_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/XYZ_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Graphics_Modifiers-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Plotting_Commands-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="TEXT_ASAP_Command_Argument"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>TEXT (ASAP Command Argument)</title>
+</head>
+<body id="TEXT_ASAP_Command_Argument"><a name="TEXT_ASAP_Command_Argument"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>TEXT (ASAP Command Argument)</h5></span>
+	
+	
+	<div><p>Prints text annotation within the graphics window. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+... TEXT
+x y [ z ] x' y' [ z' ] x" y" [ z" ] [ k ] 'string'
+  :
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x y [ z ]</span></td><td><span>Starting point</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x' y' [ z' ]</span></td><td><span>Character spacing vector</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x" y" [ z" ]</span></td><td><span>Character height vector</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>k</span></td><td><span>Color number (1-26)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>'string'</span></td><td><span>text annotation</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="TEXT_ASAP_Command_Argument__ul_A8736B00CB89499098005A713CBFC9D5"><!-- --></a><ol id="TEXT_ASAP_Command_Argument__ul_A8736B00CB89499098005A713CBFC9D5">
+			<li id="TEXT_ASAP_Command_Argument__li_012EFB2194AD4CBF81412BBD3B1E4079"><a name="TEXT_ASAP_Command_Argument__li_012EFB2194AD4CBF81412BBD3B1E4079"><!-- --></a>ASAP command arguments are optional and
+				must follow a command. </li>
+
+			<li id="TEXT_ASAP_Command_Argument__li_098E65E14B374DC2BB717F8A5BE11D6C"><a name="TEXT_ASAP_Command_Argument__li_098E65E14B374DC2BB717F8A5BE11D6C"><!-- --></a>Draws text of color <b>k</b>
+				(default 1) on 2D and 3D plots. </li>
+
+			<li id="TEXT_ASAP_Command_Argument__li_45C144BB6EF9430C880873194376CE2F"><a name="TEXT_ASAP_Command_Argument__li_45C144BB6EF9430C880873194376CE2F"><!-- --></a> The number of entries determines whether
+				the starting point, character spacing vector and character height vector are in 2D
+				plot units or 3D system units as follows: <p>If the number of entries is seven or
+					less, then ASAP assumes 2D only, paper coordinates (0-10, 0-7.5). </p>
+<p>If the
+					number of entries is eight or more, then ASAP assumes 3D (and 2D projection)
+					system coordinates. </p>
+</li>
+
+			<li id="TEXT_ASAP_Command_Argument__li_8176F49A1B5F4753A1E36C659862908B"><a name="TEXT_ASAP_Command_Argument__li_8176F49A1B5F4753A1E36C659862908B"><!-- --></a>With 2D coordinates the plot window is 10
+				inches wide (horizontal or <b>x</b> direction) by 7.5 inches high
+				(vertical or <b>y</b> direction). Especially useful for placing text
+				relative to the plotting window; using 2D paper coordinates to place text next to a
+				system <b>OBJECT</b> can be difficult, since the location of plotted <b>OBJECT</b>s in the window changes according to the setting of the <b>WINDOW</b> command. </li>
+
+			<li id="TEXT_ASAP_Command_Argument__li_D015D2EE38EA413EB1D52F9E7A8A3A53"><a name="TEXT_ASAP_Command_Argument__li_D015D2EE38EA413EB1D52F9E7A8A3A53"><!-- --></a>The starting point and vector entries for
+				placing text on 3D and 2D projection plots are expressed in global system
+				coordinates. Remember that the WINDOW setting determines the apparent size of the
+				text on a given plot, so size the text in proportion to the size of the <b>OBJECT</b>s that you wish to view in the plot <b>WINDOW</b>. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#TEXT">TEXT Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_T-ref.html#Commands_and_Macros_T" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “T”.">Commands and Macros (T)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Graphics_Modifiers-conc.html" title="Most graphics commands offer a common set of modifiers called command arguments that provide you with additional control over the appearance of graphics.">Graphics Modifiers</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Plotting_Commands-ref.html" title="The PLOT command is a general command for plotting virtually any aspect of system geometry and selected ray data.">Plotting Commands</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/OBJECT_ASAP-cmdref.html" title="Defines an object based upon previously defined entities.">OBJECT (ASAP Command)</a></div>
+<div><a href="../Commands/WINDOW_ASAP-cmdref.html" title="Sets the plotting window for graphical output.">WINDOW (ASAP Command)</a></div>
+<div><a href="../Commands/XYZ_arg_ASAP-cmdref.html" title="Sets the window to the given directions and size for only the currently active plot.">XY[Z] and Other Plot Window Overrides (ASAP Command Argument)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

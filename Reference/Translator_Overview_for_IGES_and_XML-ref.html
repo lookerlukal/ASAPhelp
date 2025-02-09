@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Translator Overview for IGES and GTX"/>
+<meta name="abstract" content="ASAP CAD+ includes IGES and GTX (XML) import capability, by translating IGES (Initial Graphics Exchange Specification) files and XML (eXtensible Markup Language) in GTX format to ASAP format. You can perform optical analyses on geometries initially created in a CAD program."/>
+<meta name="description" content="ASAP CAD+ includes IGES and GTX (XML) import capability, by translating IGES (Initial Graphics Exchange Specification) files and XML (eXtensible Markup Language) in GTX format to ASAP format. You can perform optical analyses on geometries initially created in a CAD program."/>
+<meta name="DC.subject" content="Translator Overview for IGES and GTX, translator, IGES, translator, XML, IGES translator, GTX file translation, XML translator"/>
+<meta name="keywords" content="Translator Overview for IGES and GTX, translator, IGES, translator, XML, IGES translator, GTX file translation, XML translator"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Workspace-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Command_Output_Window-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Quick_Start_Toolbar_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Workspace-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Command_Output_Window-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Quick_Start_Toolbar_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Importing_Exporting-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Importing_IGES_or_CAD_Files-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/IGES_Definitions_Menu-task.html#IGES_Definitions_Menu"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Import_from_IGES_Accuracy-conc.html#ASAP_Import_from_IGES_Accuracy"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/IGES_Export_Accuracy-conc.html#IGES_Export_Accuracy"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/CAD_Export_Tips_for_IGES-ref.html#CAD_Export_Tips_for_IGES"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/IGES_Rhino_Import-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Currently_Supported_IGES_Translation_Entities-conc.html#Currently_Supported_IGES_Translation_Entities"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/User_Interface_Preferences_CAD_Import_Tab-task.html#User_Interface_Preferences_CAD_Import_Tab"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Translator_Overview_for_IGES_and_XML"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Translator Overview for IGES and GTX</title>
+</head>
+<body id="Translator_Overview_for_IGES_and_XML"><a name="Translator_Overview_for_IGES_and_XML"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Translator Overview for IGES and GTX</h5></span> 
+   
+   
+  <div><p>ASAP CAD+ includes IGES and GTX (XML) import capability, by
+	 translating IGES (Initial Graphics Exchange Specification) files and XML
+	 (eXtensible Markup Language) in GTX format to ASAP format. You can perform
+	 optical analyses on geometries initially created in a CAD program. 
+  </p>
+ 
+	 <div class="section" id="Translator_Overview_for_IGES_and_XML__section_85CDF7EFA5CD49DDAB366B7966DA59F7"><a name="Translator_Overview_for_IGES_and_XML__section_85CDF7EFA5CD49DDAB366B7966DA59F7"><!-- --></a> 
+		<p>In the case of IGES, the translator convert top-level parametric
+		  surface definitions (entities 100 through 144) into ASAP 
+		  <b>CURVE</b>-based objects, and writes them to I2A and V2A
+		  files of the same name. You can rename the I2A file to an INR file for direct
+		  reading by ASAP. 
+		</p>
+ 
+		<p>These are the general steps in the translation process: 
+		</p>
+ 
+		<br/><a name="Translator_Overview_for_IGES_and_XML__ul_6A1D87C69A884C17AD21648C38645E6F"><!-- --></a><ul id="Translator_Overview_for_IGES_and_XML__ul_6A1D87C69A884C17AD21648C38645E6F"> 
+		  <li id="Translator_Overview_for_IGES_and_XML__li_86180A5AFF034ABF9D4B151AE0265654"><a name="Translator_Overview_for_IGES_and_XML__li_86180A5AFF034ABF9D4B151AE0265654"><!-- --></a>In the CAD program, export
+			 the system geometry in IGES or GTX file format. 
+		  </li>
+ 
+		  <li id="Translator_Overview_for_IGES_and_XML__li_6B4FCAC7CD2949FCB827621551D1F8EC"><a name="Translator_Overview_for_IGES_and_XML__li_6B4FCAC7CD2949FCB827621551D1F8EC"><!-- --></a>Translate the data from
+			 IGES or GTX to ASAP format: select 
+			 <b>Open</b> on the ASAP File menu and then select *.igs or *.gtx as
+			 the file type to translate. 
+		  </li>
+ 
+		  <li id="Translator_Overview_for_IGES_and_XML__li_B5ED3022324C4B18965AA09138748756"><a name="Translator_Overview_for_IGES_and_XML__li_B5ED3022324C4B18965AA09138748756"><!-- --></a>Assign optical properties
+			 to the ASAP 
+			 <b>OBJECTS</b> created from the IGES or GTX file. 
+		  </li>
+ 
+		  <li id="Translator_Overview_for_IGES_and_XML__li_E0794C9DCA5848D1BB8AD57D01129FB6"><a name="Translator_Overview_for_IGES_and_XML__li_E0794C9DCA5848D1BB8AD57D01129FB6"><!-- --></a>Export IGES files from the
+			 File menu or by right-clicking the Objects tab on the ASAP Workspace window. 
+		  </li>
+ 
+		</ul>
+ 
+		<p>ASAP lite also supports exporting CAD files with IGES and XML.
+		  Configuration features are outlined in the following table: 
+		</p>
+ 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><i>Configuration</i></span></td><td><span><i>CAD Input</i></span></td><td><span><i>CAD Export</i></span></td><td><span><i>Lens Design Input</i></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ASAP lite</span></td><td><span>DXF</span></td><td><span>DXF, IGS 
+			 </span></td><td><span/></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ASAP CAD+</span></td><td><span>DXF, IGS, GTX</span></td><td><span>DXF, IGS 
+			 </span></td><td><span/></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ASAP OPTICAL+</span></td><td><span>DXF</span></td><td><span>DXF, IGS</span></td><td><span>CODE V, OSLO, SYNOPSYS, ZEMAX and interoperable with FDTD
+				Solutions</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CATIA Configuration</span></td><td><span>CATPART, CATPRODUCT</span></td><td><span/></td><td><span/></td></tr></tbody></table> 
+	 </div>
+ 
+  </div>
+ 
+  <div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="../Task/Importing_IGES_or_CAD_Files-task.html">Importing IGES or CAD Files</a></strong><br/>
+This topic describes how to import an IGES or CAD file into ASAP for analysis.</li>
+<li class="ulchildlink"><strong><a href="../Task/IGES_Definitions_Menu-task.html#IGES_Definitions_Menu">IGES Definitions Menu</a></strong><br/>
+IGES translation involves a Definitions menu for setting properties.</li>
+<li class="ulchildlink"><strong><a href="../Concept/ASAP_Import_from_IGES_Accuracy-conc.html#ASAP_Import_from_IGES_Accuracy">ASAP Import from IGES - Accuracy</a></strong><br/>
+The accuracy of the ASAP import capability cannot be generally specified. The accuracy is dependent upon a number of parameters and must be treated on a case-by-case basis. This topic addresses some accuracy issues.</li>
+<li class="ulchildlink"><strong><a href="../Concept/IGES_Export_Accuracy-conc.html#IGES_Export_Accuracy">IGES Export Accuracy</a></strong><br/>
+IGES export to ASAP is exact. This topic addresses accuracy issues.</li>
+<li class="ulchildlink"><strong><a href="../Reference/CAD_Export_Tips_for_IGES-ref.html#CAD_Export_Tips_for_IGES">CAD Export Tips for IGES</a></strong><br/>
+This topic gives you tips for exporting CAD files to IGES.</li>
+<li class="ulchildlink"><strong><a href="../Concept/IGES_Rhino_Import-conc.html">CAD Import - Rhino Files</a></strong><br/>
+This topic gives an example of preparing a Rhino file in Rhinoceros ("Rhino") before using the IGES to ASAP Translator, smartIGES™.</li>
+<li class="ulchildlink"><strong><a href="../Concept/Currently_Supported_IGES_Translation_Entities-conc.html#Currently_Supported_IGES_Translation_Entities">Currently Supported IGES Translation Entities</a></strong><br/>
+This topic presents in table form IGES entities and corresponding ASAP commands.</li>
+<li class="ulchildlink"><strong><a href="../Task/User_Interface_Preferences_CAD_Import_Tab-task.html#User_Interface_Preferences_CAD_Import_Tab">User Interface Preferences - CAD Import Tab</a></strong><br/>
+The user preferences described in this topic apply globally to the CAD translation process.</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Importing_Exporting-conc.html" title="You can import or export several types of files, either those generated by ASAP or those used as inputs to ASAP.">Importing/Exporting</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/ASAP_Workspace-conc.html" title="ASAP Workspace includes a list of all available document windows in ASAP. ASAP Workspace reflects whichever window you have in focus. Right-click any of the listed windows to open a pop-up menu (Open, New, and Close All).">ASAP Workspace</a></div>
+<div><a href="../Concept/Quick_Start_Toolbar_Overview-conc.html" title="The Quick Start toolbar in the ASAP Window gives you quick access to catalogs in ASAP.">Quick Start Toolbar Overview</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Command_Output_Window-task.html" title="This topic describes the output window that lists all commands that are run in an ASAP session and the output.">Command Output Window</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, IGES Import in
+		  ASAP, at http://www.breault.com/k-base.php 
+		</a></div>
+</div>
+</div> 
+
+</body>
+</html></body></html>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="PARAMETERIZE (ASAP Command)"/>
+<meta name="abstract" content="Sets the parameterization axis for meshing the current surface."/>
+<meta name="description" content="Sets the parameterization axis for meshing the current surface."/>
+<meta name="DC.subject" content="PARAMETERIZE (ASAP Command), axis, setting parameterization for meshing surface, surface, setting parameterization for meshing"/>
+<meta name="keywords" content="PARAMETERIZE (ASAP Command), axis, setting parameterization for meshing surface, surface, setting parameterization for meshing"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_P-ref.html#Commands_and_Macros_P"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_ENTITY_or_OBJECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_OBJECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LOCAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_FACETS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_MESHES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_SURFACES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REPEAT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/VUFACETS_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="PARAMETERIZE_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>PARAMETERIZE (ASAP Command)</title>
+</head>
+<body id="PARAMETERIZE_ASAP_Command"><a name="PARAMETERIZE_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>PARAMETERIZE (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Sets the parameterization axis for meshing the current surface. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+PARAMETERIZE -X
+             -Y
+             -Z
+             +X
+             +Y
+             +Z
+</pre>
+ 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="PARAMETERIZE_ASAP_Command__ul_40521F7D4A5A41D4959B4C15D4956C5C"><!-- --></a><ol id="PARAMETERIZE_ASAP_Command__ul_40521F7D4A5A41D4959B4C15D4956C5C"> 
+		<li id="PARAMETERIZE_ASAP_Command__li_D0D9DF4C646D41F099267A45BFCCDAC7"><a name="PARAMETERIZE_ASAP_Command__li_D0D9DF4C646D41F099267A45BFCCDAC7"><!-- --></a><b>PLOT
+			 FACETS</b> command can be used on virtually all 
+		  <b>SURFACE/OBJECTS</b> to produce a wire-frame plot of the 
+		  <b>OBJECT</b>. In some situations, the inherent
+		  parameterization of the polynomial fails. The 
+		  <b>PARAMETERIZE</b> command re-parameterizes the plot. 
+		</li>
+ 
+		<li id="PARAMETERIZE_ASAP_Command__li_1003C9BFB1EB40888456A8A4BAA6B18E"><a name="PARAMETERIZE_ASAP_Command__li_1003C9BFB1EB40888456A8A4BAA6B18E"><!-- --></a>Sets the parameterization of
+		  the current surface to be either parallel ( - ) or perpendicular ( + ) to the
+		  given local axis. 
+		</li>
+ 
+		<li id="PARAMETERIZE_ASAP_Command__li_A5CB49A9D455437D895C3FF6078C64E3"><a name="PARAMETERIZE_ASAP_Command__li_A5CB49A9D455437D895C3FF6078C64E3"><!-- --></a>Tells ASAP how to mesh the
+		  surface (for 
+		  <b>PLOT SURFACE</b>, 
+		  <b>PLOT MESH</b>, 
+		  <b>PLOT FACETS</b>, 
+		  <b>VUFACETS</b>, and 
+		  <b>GRID OBJECT</b> or 
+		  <b>ENTITY</b>, 
+		  <b>EMIT OBJECT</b> or 
+		  <b>ENTITY</b> commands), but requires that the surface have
+		  a 
+		  <b>LOCAL</b> box defined either implicitly or explicitly.
+		  Since this is automatically set for most surfaces, it is rarely necessary to
+		  override with the 
+		  <b>PARAMETERIZE</b> command. 
+		</li>
+ 
+		<li id="PARAMETERIZE_ASAP_Command__li_98595AC53617481D82AD3C484D6EAD21"><a name="PARAMETERIZE_ASAP_Command__li_98595AC53617481D82AD3C484D6EAD21"><!-- --></a>If you do override the
+		  command, remember that ASAP cannot mesh (facet) the surface if the 
+		  <b>LOCAL</b> box clips the surface along a parameterization
+		  direction. However, do not set the 
+		  <b>LOCAL</b> box too large in this direction since this can
+		  also prevent the meshing or faceting of the surface. 
+		</li>
+ 
+		<li id="PARAMETERIZE_ASAP_Command__li_181E84A156B042FBACC33D0AD854F7A9"><a name="PARAMETERIZE_ASAP_Command__li_181E84A156B042FBACC33D0AD854F7A9"><!-- --></a>This command and whether a
+		  surface can be meshed (facetted) has absolutely no effect on tracing rays/beams
+		  to or through the surface. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#PARAMETERIZE">PARAMETERIZE Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_P-ref.html#Commands_and_Macros_P" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “P”.">Commands and Macros (P)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/EMITTING_ENTITY_or_OBJECT_ASAP-cmdref.html" title="Randomly distributes rays over the faceted surface(s) of SURFACE/EDGE entities or SURFACE/EDGE OBJECTS (entity number k or object k (number or name)).">EMITTING ENTITY or OBJECT (ASAP Command)</a></div>
+<div><a href="../Commands/GRID_OBJECT_ASAP-cmdref.html" title="Generates a uniform grid of rays on an object.">GRID OBJECT (ASAP Command)</a></div>
+<div><a href="../Commands/LOCAL_ASAP-cmdref.html" title="Assigns a local bounding box to the surface/function.">LOCAL (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_FACETS_ASAP-cmdref.html" title="Plots parametric mesh representation of objects in the currently specified graphics window.">PLOT FACETS (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_MESHES_ASAP-cmdref.html" title="Plots all currently specified objects using a wireframe mesh.">PLOT MESHES (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_SURFACES_ASAP-cmdref.html" title="Plots surfaces in the currently specified graphics window.">PLOT SURFACES (ASAP Command)</a></div>
+<div><a href="../Commands/REPEAT_ASAP-cmdref.html" title="Repeats previously defined entity data.">REPEAT (ASAP Command)</a></div>
+<div><a href="../Commands/VUFACETS_ASAP-cmdref.html" title="Shortcut for faceting and viewing current objects.">VUFACETS (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

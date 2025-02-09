@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Version 2005 V1R2"/>
+<meta name="abstract" content="ASAP 2005 V1R2 (June 2005) Release Notes File"/>
+<meta name="description" content="ASAP 2005 V1R2 (June 2005) Release Notes File"/>
+<meta name="DC.subject" content="release notes, 2005 V1R2"/>
+<meta name="keywords" content="release notes, 2005 V1R2"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Release_Notes-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_2005_V1R3-ref.html#Version_2005_V1R3"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_2005_V1R1-ref.html#Version_2005_V1R1"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Version_2005_V1R2"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Version 2005 V1R2</title>
+</head>
+<body id="Version_2005_V1R2"><a name="Version_2005_V1R2"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Version 2005 V1R2</h5></span> 
+  
+  
+  <div><p>ASAP 2005 V1R2 (June 2005) Release Notes File 
+  </p>
+ 
+	 <div class="section" id="Version_2005_V1R2__section_09EE482C075D479B94860BA9A6F4A20A"><a name="Version_2005_V1R2__section_09EE482C075D479B94860BA9A6F4A20A"><!-- --></a> 
+		<p>(c) 1982-2005 Breault Research Organization, Inc. All rights reserved.
+		</p>
+ 
+		<p>Late-breaking information about this release of ASAP™.
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Version_2005_V1R2__section_1D7B7D7D6CD1453298E5290E02476F03"><a name="Version_2005_V1R2__section_1D7B7D7D6CD1453298E5290E02476F03"><!-- --></a><span style="color: #2b6eb5"><h5>KERNEL</h5></span> 
+		 
+		<p>POLARIZ Settings
+		</p>
+ 
+		<p>ASAP now generates a warning at source-creation time, if it is
+		  necessary to change the polarization to avoid nonphysical, axially polarized
+		  rays. This warning should be taken seriously.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>SHOW: Polarize
+		</p>
+ 
+		<p>The SHOW command reports the complete complex reference-polarization
+		  vector. Previously, only the real parts were displayed.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>FIELD command causes Kernel crash
+		</p>
+ 
+		<p>ASAP now prints a diagnostic message (instead of crashing) upon a
+		  FIELD… MULTIPLY|COUPLE|ADD request for distributions of non-matching
+		  dimensions.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>WRITE command causes Kernel crash
+		</p>
+ 
+		<p>Eliminated obscure Kernel crashes associated with WRITE.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>CRYSTAL waveplate in an IDEAL analyzer
+		</p>
+ 
+		<p>Corrected the a polarization error with birefringent CRYSTAL media. 
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>$FAST
+		</p>
+ 
+		<p>The use of $FAST in $DO and user-defined macros now correctly parses
+		  all records following the loop/macro-structure.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>$ITER
+		</p>
+ 
+		<p>Introduced the NOMIN option to suppress the minimizing iteration of
+		  $ITER.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>DISPLAY: Integral value restored.
+		</p>
+ 
+		<p>Output of the “Integral” value was restored for ill-conditioned
+		  distributions having no variation of data or incompletely defined data.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>TIR POLARIZATION Difference
+		</p>
+ 
+		<p>Fixed an error in the phase of the p-polarized component light subject
+		  to total internal reflection.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>STATS: TOTAL
+		</p>
+ 
+		<p>The STATS command now prints TOTAL data, even if no rays exist, to
+		  facilitate processing with $GRAB.
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Version_2005_V1R2__section_B705E19C0DE141CBB0F5EBA2262541E1"><a name="Version_2005_V1R2__section_B705E19C0DE141CBB0F5EBA2262541E1"><!-- --></a><span style="color: #2b6eb5"><h5>GUI</h5></span> 
+		 
+		<p>3D Viewer
+		</p>
+ 
+		<p>3D Viewer Help topics – Polar Plot
+		</p>
+ 
+		<p>3D Viewer now has additional help for the Polar Plot functionality
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>BRDF Fit Utility
+		</p>
+ 
+		<p>BRDF Tooltip
+		</p>
+ 
+		<p>BRDF Fit utility now maps to the correct tooltip
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Version_2005_V1R2__section_857F63576E004B91B12C147376CA5B26"><a name="Version_2005_V1R2__section_857F63576E004B91B12C147376CA5B26"><!-- --></a><span style="color: #2b6eb5"><h5>Builder</h5></span> 
+		 
+		<p>Empty Files
+		</p>
+ 
+		<p>ASAP now correctly saves data from the Builder into ENX and ENZ file
+		  formats
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>Builder Export
+		</p>
+ 
+		<p>ASAP now correctly generates INR files when exporting from the
+		  Builder.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>Mini-Builder Syntax
+		</p>
+ 
+		<p>ASAP now correctly copies from the Mini-Builder.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>Mini-Builder EXPLODE
+		</p>
+ 
+		<p>ASAP now supports correct functionality of AFOCAL LENS EXPLODE
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Version_2005_V1R2__section_7B78C27A821D40A799CDD98243DF2BB2"><a name="Version_2005_V1R2__section_7B78C27A821D40A799CDD98243DF2BB2"><!-- --></a><span style="color: #2b6eb5"><h5>User interface fixes include updating default values,
+		  clarification and re-positioning of column names for the following
+		  commands:</h5></span> 
+		 
+		<p>OPTICAL 
+		</p>
+ 
+		<p>PIXELS 
+		</p>
+ 
+		<p>IDEAL 
+		</p>
+ 
+		<p>CONIC 
+		</p>
+ 
+		<p>PLANE 
+		</p>
+ 
+		<p>COATINGS 
+		</p>
+ 
+		<p>MEDIA 
+		</p>
+ 
+		<p>MODELS 
+		</p>
+ 
+		<p>SPOTS POS 
+		</p>
+ 
+		<p>PLOT3D 
+		</p>
+ 
+		<p>EMITTING OBJECT
+		</p>
+ 
+		<p>FLUX TOTAL 
+		</p>
+ 
+		<p>EXTREME 
+		</p>
+ 
+		<p>SUBSET 
+		</p>
+ 
+		<p>APODIZE 
+		</p>
+ 
+		<p>USERAPOD 
+		</p>
+ 
+		<p>SOURCE DIR GRID 
+		</p>
+ 
+		<p>LOCAL 
+		</p>
+ 
+		<p>GRID ELLIP 
+		</p>
+ 
+		<p>GRID RECT
+		</p>
+ 
+		<p>VIEW 
+		</p>
+ 
+		<p>$VIEW 
+		</p>
+ 
+		<p>WINDOW 
+		</p>
+ 
+		<p>PROFILES 
+		</p>
+ 
+		<p>ELLIPSOID 
+		</p>
+ 
+		<p>PLANE 
+		</p>
+ 
+		<p>LOCAL
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>Calculate Flux Distribution Dialog
+		</p>
+ 
+		<p>Calculate Flux Distribution outputted the generated '3D Radiant
+		  Sphere' option incorrectly.
+		</p>
+ 
+		<p>ASAP now generates the correct command string based upon user input in
+		  the Calculate Flux Distribution Dialog.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>CIE
+		</p>
+ 
+		<p>CIE Autoscale
+		</p>
+ 
+		<p>ASAP now supports correct Autoscale functionality on within the
+		  Display Viewer.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>Display Pull-down
+		</p>
+ 
+		<p>Display Graphics pull-down was missing MESH option.
+		</p>
+ 
+		<p>ASAP now has the MESH option added to the Display Graphics pull-down.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>ELTM
+		</p>
+ 
+		<p>GEOMETRY tab functionality
+		</p>
+ 
+		<p>ASAP now supports correct functionality upon error condition of the
+		  source having no rays.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>ENX file support
+		</p>
+ 
+		<p>ASAP no longer supports direct loading of ENX files into ELTM.
+		</p>
+ 
+		<p>Light Source Library (LSL) Support
+		</p>
+ 
+		<p>When creating a source with the Light Source Library Wizard in
+		  conjunction with ELTM, ASAP will automatically load the newly created source.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>ELTM Source Path
+		</p>
+ 
+		<p>ASAP now checks for empty source paths within ELTM.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>ELTM Geometry and Rays loading
+		</p>
+ 
+		<p>ASAP now correctly makes single copies of geometry and raysets within
+		  ELTM.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>Incoherent Radiant Dialog
+		</p>
+ 
+		<p>Option Radiant dialog under Analysis menu: Incoherent Radiant Dialog
+		  did not recognize Rescaling Factor.
+		</p>
+ 
+		<p>ASAP now generates correct form of the Radiant Dialog commands and
+		  recognizes user input values for Rescaling Factor.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>Plot Viewer
+		</p>
+ 
+		<p>Plot Viewer Annotation Tool Bar did not render lines correctly
+		</p>
+ 
+		<p>ASAP now correctly renders lines in the Plot Viewer Annotation Toolbar
+		  when User changes focus.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>Registration Dialog
+		</p>
+ 
+		<p>Registration Dialog Crash
+		</p>
+ 
+		<p>ASAP now correctly implements functionality of the Registration
+		  Dialog.
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Version_2005_V1R2__section_8C2ED0A0B9BB424684BE15E4B092ED89"><a name="Version_2005_V1R2__section_8C2ED0A0B9BB424684BE15E4B092ED89"><!-- --></a><span style="color: #2b6eb5"><h5>Remote</h5></span> 
+		 
+		<p>File Open Failure
+		</p>
+ 
+		<p>ASAP Remote now supports file open functionality for files resident on
+		  a REMOTE machine.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>RENDER
+		</p>
+ 
+		<p>RENDER Dialog Formatting
+		</p>
+ 
+		<p>ASAP now correctly formats commands PIXELS and RENDER within the
+		  RENDER dialog.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>User Preferences
+		</p>
+ 
+		<p>ENT support
+		</p>
+ 
+		<p>The User Preferences dialog correctly reflects the deprecation of ENT
+		  file support within ASAP. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Version_2005_V1R2__section_084082BBCC7E40F1A370C42CAAA5332F"><a name="Version_2005_V1R2__section_084082BBCC7E40F1A370C42CAAA5332F"><!-- --></a><span style="color: #2b6eb5"><h5>Translators</h5></span> 
+		 
+		<p>IGES/GTX Import Dialog
+		</p>
+ 
+		<p>IGES/GTX Import Dialog has been renamed within ASAP to CAD Import
+		  Dialog
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>IGES Import
+		</p>
+ 
+		<p>Optional Color Name read failure on IGES object type 314.
+		</p>
+ 
+		<p>ASAP now employs a delimiter ‘,’ versus ‘;’ when reading an optional
+		  color name on an IGES object of type 314.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>Imported Surface shift
+		</p>
+ 
+		<p>ASAP no longer alters revolved surface-end angles when the end angle
+		  exceeds 360 degrees.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>Degenerate Edge Tolerance
+		</p>
+ 
+		<p>ASAP now employs a more relaxed test for detecting a degenerate edge.
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Release_Notes-ref.html" title="Topics in this section include all known release notes for ASAP up to the last version. Release notes for the current version can be viewed in the ASAP Command Output window, or opened from your ASAP installation root folder.">Release Notes</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a href="../Reference/Version_2005_V1R3-ref.html#Version_2005_V1R3" title="ASAP 2005 (September 2005) Release Notes File">Version 2005 V1R3</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a href="../Reference/Version_2005_V1R1-ref.html#Version_2005_V1R1" title="ASAP 2005 (7 March 2005) Release Notes File">Version 2005 V1R1</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

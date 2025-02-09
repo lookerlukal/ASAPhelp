@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="WINDOW (ASAP Command)"/>
+<meta name="abstract" content="Sets the plotting window for graphical output."/>
+<meta name="description" content="Sets the plotting window for graphical output."/>
+<meta name="DC.subject" content="WINDOW (ASAP Command), plot, setting window for output, graphical output, setting plotting window"/>
+<meta name="keywords" content="WINDOW (ASAP Command), plot, setting window for output, graphical output, setting plotting window"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_W-ref.html#Commands_and_Macros_W"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DISPLAY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FIELD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FMAP_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MAP_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OBJECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OPDMAP_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PROFILES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/RADIANT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REPLOT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPOTS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPREAD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Calculating_Phase_Transfer_Functions-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Distribution_Data_Files_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Plotting_Commands-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="WINDOW_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>WINDOW (ASAP Command)</title>
+</head>
+<body id="WINDOW_ASAP_Command"><a name="WINDOW_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>WINDOW (ASAP Command)</h5></span> 
+   
+  
+  <div><p>Sets the plotting window for graphical output. 
+  </p>
+ 
+	 <p><b>Syntax 1 - Setting a Window</b>
+	 </p>
+ 
+	 <pre class="codeblock">
+WINDOW [ X [ a a'  ]  Y  [ d    d' ] ]
+             OBJ  i   Z    OBJ  j
+         Y            Z
+         X
+         Z            X
+         Y
+       </pre>
+ 
+	 <p><b>Syntax 2 - Modifying a Window</b>
+	 </p>
+ 
+	 <pre class="codeblock">
+WINDOW [ ACROSS     ] m p   [ ACROSS    m' p'  ]
+         VERTICAL       CEN   VERTICAL     CEN
+         DOWN                 DOWN
+         HORIZONTAL           HORIZONTAL
+         BOTH
+      </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a a'</span></td><td><span>window limits along the vertical axis of the graphics
+			 device</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>d d'</span></td><td><span>window limits along the horizontal axis of the graphics
+			 device</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>OBJ i, OBJ j</span></td><td><span>sets window to the LIMITS range on the given OBJect
+			 numbers</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X Y Z</span></td><td><span>coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m m'</span></td><td><span>magnification factors</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>p p'</span></td><td><span>relative pan factors</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ACROSS</span></td><td><span>window direction to be modified</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>DOWN</span></td><td><span>window direction to be modified</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>VERTICAL</span></td><td><span>window direction to be modified</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>HORIZONTAL</span></td><td><span>window direction to be modified</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CEN</span></td><td><span>automatically centers the window on the current data</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b>
+	 </p>
+ 
+	 <br/><a name="WINDOW_ASAP_Command__ul_CFB0D6010A334E4C89D14787D70E0D7F"><!-- --></a><ol id="WINDOW_ASAP_Command__ul_CFB0D6010A334E4C89D14787D70E0D7F"> 
+		<li id="WINDOW_ASAP_Command__li_547E5009F9674713859A1814E2AC2183"><a name="WINDOW_ASAP_Command__li_547E5009F9674713859A1814E2AC2183"><!-- --></a>Since ASAP has no preferred
+		  set of axes, use 
+		  <b>WINDOW</b> to define the plane of your plotting window. For example,
+		  WINDOW Y Z, or WINDOW Y - 1 1 Z 0 3.
+		</li>
+ 
+		<li id="WINDOW_ASAP_Command__li_4B37B68DE3294D46B6048180C1800785"><a name="WINDOW_ASAP_Command__li_4B37B68DE3294D46B6048180C1800785"><!-- --></a>Objects/data inside the
+		  window are plotted; objects/data outside this window are not plotted.
+		</li>
+ 
+		<li id="WINDOW_ASAP_Command__li_AD9599F52DEF4D9697FF97F00F97C8C7"><a name="WINDOW_ASAP_Command__li_AD9599F52DEF4D9697FF97F00F97C8C7"><!-- --></a><b>WINDOW</b> does not set
+		  the third coordinate (the one different than the two entered on the WINDOW
+		  command).
+		</li>
+ 
+		<li id="WINDOW_ASAP_Command__li_D2F7E945A1544C089268AEEE4CCD4FB1"><a name="WINDOW_ASAP_Command__li_D2F7E945A1544C089268AEEE4CCD4FB1"><!-- --></a>If either 
+		  <b>a=a'</b> or 
+		  <b>d=d'</b>, ASAP attempts to autoscale in that direction (the word
+		  attempt is used because 
+		  <b>WINDOW</b> always keeps the aspect ratio correctly unless overridden
+		  with a PIXEL command).
+		</li>
+ 
+		<li id="WINDOW_ASAP_Command__li_EF3220646182479C837D25144FE06342"><a name="WINDOW_ASAP_Command__li_EF3220646182479C837D25144FE06342"><!-- --></a>If both sets of numerical
+		  entries are omitted, ASAP autoscales in both directions.
+		</li>
+ 
+		<li id="WINDOW_ASAP_Command__li_77FC6CBC3E574EE5A570C8773AA3E5BF"><a name="WINDOW_ASAP_Command__li_77FC6CBC3E574EE5A570C8773AA3E5BF"><!-- --></a>Autoscaling is performed on
+		  the basis of the current object set. Objects that have been considered invalid
+		  do not influence the autoscaling, nor are they drawn. Autoscaling is also
+		  performed on ray trace data (spot diagrams, and so on.).
+		</li>
+ 
+		<li id="WINDOW_ASAP_Command__li_18C396493E174BACBC6B5213C6CC5F6E"><a name="WINDOW_ASAP_Command__li_18C396493E174BACBC6B5213C6CC5F6E"><!-- --></a>Window settings are active
+		  until replaced by another 
+		  <b>WINDOW</b> command. A previous window setting may be scaled by 
+		  <b>WINDOW f</b>, where 
+		  <b>f</b> is a scale factor.
+		</li>
+ 
+		<li id="WINDOW_ASAP_Command__li_3AE9D740C5A54D01BC3E9F39453CD755"><a name="WINDOW_ASAP_Command__li_3AE9D740C5A54D01BC3E9F39453CD755"><!-- --></a>If 
+		  <b>a'&lt;a</b> or 
+		  <b>d'&lt;d</b>, the plot is flipped about that axis. It is possible to
+		  flip a plot about an axis by prefixing the coordinate indicator with a minus
+		  sign.
+		</li>
+ 
+		<li id="WINDOW_ASAP_Command__li_D6C80110E561455CA7CBEBEF478A477D"><a name="WINDOW_ASAP_Command__li_D6C80110E561455CA7CBEBEF478A477D"><!-- --></a>The window size may also be
+		  set to the 
+		  <b>LIMITS</b> range on the OBJECT number or name given.
+		</li>
+ 
+		<li id="WINDOW_ASAP_Command__li_205D28CDD1824CB3AAEAE56D19D5FF9D"><a name="WINDOW_ASAP_Command__li_205D28CDD1824CB3AAEAE56D19D5FF9D"><!-- --></a>The current (or next
+		  autoscaled) window can be modified by specifying a window magnification factor
+		  m and/or relative pan factor 
+		  <b>p</b> for one particular direction or both.
+		</li>
+ 
+		<li id="WINDOW_ASAP_Command__li_0B10C0102F24401E960E36E0E7085A4A"><a name="WINDOW_ASAP_Command__li_0B10C0102F24401E960E36E0E7085A4A"><!-- --></a>ASAP cannot autoscale a
+		  finite WINDOW size from just 1 ray. You must explicitly set the WINDOW.
+		</li>
+ 
+	 </ol>
+ 
+	 <p><b>Second Syntax</b>
+	 </p>
+ 
+	 <br/><a name="WINDOW_ASAP_Command__ul_235038D6FEE049569787A16B137E35C7"><!-- --></a><ol id="WINDOW_ASAP_Command__ul_235038D6FEE049569787A16B137E35C7"> 
+		<li id="WINDOW_ASAP_Command__li_DDFE73966C6F4EBC89D014CF70CD9B3C"><a name="WINDOW_ASAP_Command__li_DDFE73966C6F4EBC89D014CF70CD9B3C"><!-- --></a><b>ACROSS=VERTICAL</b> and 
+		  <b>DOWN=HORIZONTAL</b>, depending on whether you are referring to the
+		  printer or plot output.
+		</li>
+ 
+		<li id="WINDOW_ASAP_Command__li_6A01471ED4CC425890D6331D49462612"><a name="WINDOW_ASAP_Command__li_6A01471ED4CC425890D6331D49462612"><!-- --></a>As an alternative to the
+		  numeric pan factor, ASAP can automatically calculate a pan factor that results
+		  in 
+		  <b>CENtering</b> the particular data being plotted within
+		  the window.
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="/example_scripts.html#WINDOW">WINDOW
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_W-ref.html#Commands_and_Macros_W" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “W”.">Commands and Macros (W)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Distribution_Data_Files_Overview-conc.html" title="ASAP has several commands for calculating the irradiance, intensity, radiance etc., for a set of files, some of which produce immediate results of these calculations in the form of plots directly on the screen.">Distribution Data Files Overview</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Calculating_Phase_Transfer_Functions-ref.html" title="While Modulation Transfer Function (MTF) calculations are by far the more common of the two, there are instances when the Phase Transfer function (PTF) is also needed to completely characterize the imaging properties of an optical system.">Calculating Phase Transfer Functions</a></div>
+<div><a href="../Reference/Plotting_Commands-ref.html" title="The PLOT command is a general command for plotting virtually any aspect of system geometry and selected ray data.">Plotting Commands</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DISPLAY_ASAP-cmdref.html" title="Reads previously created distribution data files so that they can be modified.">DISPLAY (ASAP Command)</a></div>
+<div><a href="../Commands/FIELD_ASAP-cmdref.html" title="Calculates the exact complex field distribution.">FIELD (ASAP Command)</a></div>
+<div><a href="../Commands/FMAP_ASAP-cmdref.html" title="Creates a contour slice map of a 3D surface.">FMAP (ASAP Command)</a></div>
+<div><a href="../Commands/MAP_ASAP-cmdref.html" title="Produces a depth map of the currently defined object surfaces.">MAP (ASAP Command)</a></div>
+<div><a href="../Commands/OBJECT_ASAP-cmdref.html" title="Defines an object based upon previously defined entities.">OBJECT (ASAP Command)</a></div>
+<div><a href="../Commands/OPDMAP_ASAP-cmdref.html" title="Creates a geometric wavefront map of the currently selected ray data.">OPDMAP (ASAP Command)</a></div>
+<div><a href="../Commands/PIXELS_ASAP-cmdref.html" title="Sets the resolution for graphics and calculations.">PIXELS (ASAP Command)</a></div>
+<div><a href="../Commands/PROFILES_ASAP-cmdref.html" title="Plots slices through objects contained within the specified graphics window.">PROFILES (ASAP Command)</a></div>
+<div><a href="../Commands/RADIANT_ASAP-cmdref.html" title="Calculates the far-field incoherent intensity or radiance of the currently selected ray data.">RADIANT (ASAP Command)</a></div>
+<div><a href="../Commands/REPLOT_ASAP-cmdref.html" title="Plots data stored in the 3D vector file within the currently defined graphics window.">REPLOT (ASAP Command)</a></div>
+<div><a href="../Commands/SPOTS_ASAP-cmdref.html" title="Creates a geometric spot diagram for the currently selected ray data.">SPOTS (ASAP Command)</a></div>
+<div><a href="../Commands/SPREAD_ASAP-cmdref.html" title="Calculates the exact coherent/incoherent energy distribution.">SPREAD (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

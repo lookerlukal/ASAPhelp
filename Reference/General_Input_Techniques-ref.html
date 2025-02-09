@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="General Input Techniques"/>
+<meta name="abstract" content="Techniques for ASAP input include: radian angle entries, relative and literal referencing, direction vectors, and linear transformations."/>
+<meta name="description" content="Techniques for ASAP input include: radian angle entries, relative and literal referencing, direction vectors, and linear transformations."/>
+<meta name="DC.subject" content="General Input Techniques, radian angle entries, relative and literal referencing, direction vectors, linear transformations"/>
+<meta name="keywords" content="General Input Techniques, radian angle entries, relative and literal referencing, direction vectors, linear transformations"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_GM-ref.html#Reference_G_M"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Kernel_Capabilities_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Command_Scripting-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Input_Records-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Command_Comment_Strings-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Command_Description_Notation-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Command_Usage-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/ASAP_Prompts-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Mathematical_Functions_Supported-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Mathematical_Operators-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Registers_for_Storing_Arithmetic_Results-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Files_Produced_by_ASAP-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/File_Structure_of_ASAP-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Entries_Repeated_and_Incremented-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Specifying_Complex_Numbers-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/abc_arg_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="General_Input_Techniques"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>General Input Techniques</title>
+</head>
+<body id="General_Input_Techniques"><a name="General_Input_Techniques"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>General Input Techniques</h5></span> 
+   
+   
+  <div><p>Techniques for ASAP input include: radian angle entries, relative
+	 and literal referencing, direction vectors, and linear transformations. 
+  </p>
+ 
+	 <div class="section" id="General_Input_Techniques__section_148181CE0A6F429FBA1BBE8183DD7E9D"><a name="General_Input_Techniques__section_148181CE0A6F429FBA1BBE8183DD7E9D"><!-- --></a><span style="color: #2b6eb5"><h5>Radian Angle Entries</h5></span> 
+		 
+		<p>Angle entries that by default are in radians (that is, the 
+		  <b>PARABASAL</b> divergence, 
+		  <b>ROUGHNESS</b> 
+		  <b>RANDOM</b> slope, and 
+		  <b>INTERFACE RMS/BSDF</b> back cone angle) can also be
+		  entered in degrees by appending a "D" to the end of the number. For example,
+		  the following two entries are equivalent: 
+		</p>
+ 
+		<p>2.5D 2.5/57.29578 radians 
+		</p>
+ 
+		<p>If the entry is a direction cosine coordinate (<b>CLIP
+			 DIR</b> or 
+		  <b>SPOTS/SPREAD DIR</b> window), the result is the sine of
+		  the angle; for example: 
+		</p>
+ 
+		<p>2.5D SIN(2.5/57.29578) 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="General_Input_Techniques__section_99F4145057FA4C5F8417D32548A3064E"><a name="General_Input_Techniques__section_99F4145057FA4C5F8417D32548A3064E"><!-- --></a><span style="color: #2b6eb5"><h5>Relative and Literal Referencing of Entities</h5></span> 
+		 
+		<p>Alternate schemes are available when referencing surface/edge/lens,
+		  media, object, ray or source numbers within commands. Instead of using the
+		  actual absolute number, you can specify a number relative to the largest number
+		  defined by using a decimal entry of the form ".i" where i is an integer between
+		  1 and 9999 inclusive. ".i" is equivalent the 1 plus largest number defined,
+		  minus i. 
+		</p>
+ 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>Referencing
+				  Method</b></span></td><td><span><b>Format</b></span></td><td><span><b>Description</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Absolute</span></td><td><span>n</span></td><td><span>actual entity
+				number</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Relative 
+			 </span></td><td><span>.i</span></td><td><span> max+1-i</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Literal 
+			 </span></td><td><span> name 
+			 </span></td><td><span> exact or abbreviation</span></td></tr></tbody></table> 
+		<p>Some examples of relative indexing are: 
+		</p>
+ 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> .2</span></td><td><span>next to the largest number defined so
+				far</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>-.1</span></td><td><span>negative of the largest number
+				defined</span></td></tr></tbody></table> 
+		<p>Also, for most commands that require the specification of a particular
+		  object, media or coating, the name can be used in place of directly specifying
+		  the number or using the relative indexing described above. ASAP first attempts
+		  an exact match (ignoring blanks). Otherwise, the characters in an abbreviation
+		  must be present in the same order as in original object, media or coating name
+		  but not necessarily consecutive; that is, any number of original characters can
+		  be skipped to make the abbreviation small enough but unique. An underscore "_"
+		  in a literal media reference always requires an exact match and is also used to
+		  separate the catalog name (file with extension CAT) from the glass name; for
+		  example, "SCHOTT_BK7". 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="General_Input_Techniques__section_5EFE2EE9AC004ECDAD15A03A28C98DC4"><a name="General_Input_Techniques__section_5EFE2EE9AC004ECDAD15A03A28C98DC4"><!-- --></a><span style="color: #2b6eb5"><h5>Direction Vectors</h5></span> 
+		 
+		<p>See ...a,b,c... (ASAP Command Argument) 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="General_Input_Techniques__section_9683FAC809D24C4AA748D9C3B3F5F600"><a name="General_Input_Techniques__section_9683FAC809D24C4AA748D9C3B3F5F600"><!-- --></a><span style="color: #2b6eb5"><h5>Linear Transformations</h5></span> 
+		 
+		<p>Linear transformations change the scaling or orientation of a
+		  geometrical entity (surface, edge, lens, object, group, and rays) by applying a
+		  general 4-by-4 linear transformation matrix to it. Any number of the following
+		  elementary operations can be applied after any entity definition to build up
+		  the final matrix. The order in which these operations are entered into the
+		  input stream is exactly the order in which they will be applied to the entity.
+		  These commands must be grouped together following an entity definition with no
+		  other commands between them (except for a comment). The LIST option causes the
+		  resulting 4-by-4 transformation matrix to be printed and decoded into simple
+		  operations if possible. A general transformation for a position vector (X,Y,Z)
+		  has the form: 
+		  <br/><a name="General_Input_Techniques__image_35B895D317C34EFAA65F06299EC4BD14"><!-- --></a><img id="General_Input_Techniques__image_35B895D317C34EFAA65F06299EC4BD14" src="../Equations/GeneralInputTech_equation1.gif" width="377" height="162"/><br/> 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="General_Input_Techniques__section_CEACB07ADC394F68B7F5CE450A1BF567"><a name="General_Input_Techniques__section_CEACB07ADC394F68B7F5CE450A1BF567"><!-- --></a> 
+		<div class="note"><span class="notetitle">Note:</span>  
+		  <p>The A's are the rotation submatrix while the D's are the translation
+			 vector. 
+		  </p>
+ 
+		  <p>The first row is a dummy used to make the matrix square (and thus
+			 invertable). 
+		  </p>
+ 
+		  <p>For the transformation of a direction vector the dummy row contains
+			 all zeros. 
+		  </p>
+ 
+		</div>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_GM-ref.html#Reference_G_M" title="Reference topics in this section begin with the letters &#34;G&#34; to &#34;M&#34;.">Reference (G-M)</a></div>
+</div>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Kernel_Capabilities_Overview-conc.html" title="This topic briefly describes how ASAP models optical/mechanical systems, traces rays through the system, and models physical optics.">Kernel Capabilities Overview</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Command_Scripting-conc.html" title="This topic describes scripting functions available only in command mode.">Command Scripting</a></div>
+<div><a href="../Concept/File_Structure_of_ASAP-conc.html" title="ASAP is a sophisticated set of 3D system modeling and optical ray/beam propagation algorithms. It performs the entire ray tracing and derivative calculations.">File Structure of ASAP</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Input_Records-ref.html" title="Describes how ASAP reads input data.">Input Records</a></div>
+<div><a href="../Reference/Command_Comment_Strings-ref.html" title="User comment strings may be embedded in any command without usually affecting processing.">Command Comment Strings</a></div>
+<div><a href="../Reference/Command_Description_Notation-ref.html" title="Shows format or syntax of each ASAP command in the command topics. Syntax can be followed by a detailed explanation of the command’s function.">Command Description Notation</a></div>
+<div><a href="../Reference/Command_Usage-ref.html" title="ASAP commands consist of up to 10,000 unformatted alphanumeric entries separated by one or more of blanks &#34; &#34; or commas &#34;,&#34;.">Command Usage</a></div>
+<div><a href="../Reference/ASAP_Prompts-ref.html" title="Describes ASAP prompts (ASAP&gt;) that precede the Command Input window, and lists the prompt variations.">ASAP Prompts</a></div>
+<div><a href="../Reference/Mathematical_Functions_Supported-ref.html" title="Describes the set of supported mathematical functions.">Mathematical Functions Supported</a></div>
+<div><a href="../Reference/Mathematical_Operators-ref.html" title="Lists mathematical operators that affect entries in ASAP.">Mathematical Operators</a></div>
+<div><a href="../Reference/Registers_for_Storing_Arithmetic_Results-ref.html" title="Describes how arithmetic results in ASAP are stored in registers.">Registers for Storing Arithmetic Results</a></div>
+<div><a href="../Reference/Files_Produced_by_ASAP-ref.html" title="Lists the file types that ASAP produces and uses.">Files Produced by ASAP</a></div>
+<div><a href="../Reference/Entries_Repeated_and_Incremented-ref.html" title="This topic provides rules and examples of command entries that are repeated and incremented.">Entries Repeated and Incremented</a></div>
+<div><a href="../Reference/Specifying_Complex_Numbers-ref.html" title="Complex numbers can be entered in some of the ASAP dialogs.">Specifying Complex Numbers</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/abc_arg_ASAP-cmdref.html" title="Some commands (for example, PLANE NORMAL, ALIGN, RAY, SOURCE DIRECTION) require the specification of a direction vector. The following formats can be used for these three input entries (shown as simply &#34;a,b,c&#34; in the command descriptions).">a,b,c... (ASAP Command Argument)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

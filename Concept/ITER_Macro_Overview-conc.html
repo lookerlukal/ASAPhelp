@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="$ITER Macro Overview"/>
+<meta name="abstract" content="The user-defined macro command, $ITER can vary the contents of up to 60 user-specified variables. $ITER runs user-written macro(s) as the variables are varied. It uses these variables as input to perform operations, either within the macro language or as inputs to ASAP. The desired output is placed in user-specified function variables."/>
+<meta name="description" content="The user-defined macro command, $ITER can vary the contents of up to 60 user-specified variables. $ITER runs user-written macro(s) as the variables are varied. It uses these variables as input to perform operations, either within the macro language or as inputs to ASAP. The desired output is placed in user-specified function variables."/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_GM-ref.html#Reference_G_M"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRAB_macro_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="ITER_Macro_Overview"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>$ITER Macro Overview</title>
+</head>
+<body id="ITER_Macro_Overview"><a name="ITER_Macro_Overview"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>$ITER Macro Overview</h5></span>
+	
+	<div><p>The user-defined macro command, <b>$ITER</b> can vary the contents of up
+		to 60 user-specified variables. <b>$ITER</b> runs user-written macro(s) as the
+		variables are varied. It uses these variables as input to perform operations, either within
+		the macro language or as inputs to ASAP. The desired output is placed in user-specified
+		function variables.</p>
+
+		<div class="section" id="ITER_Macro_Overview__section_0533D21F37324DDCAFCB36E06D8ECD52"><a name="ITER_Macro_Overview__section_0533D21F37324DDCAFCB36E06D8ECD52"><!-- --></a><span style="color: #2b6eb5"><h5>NOTE</h5></span>
+			
+			<p>The <b>$GRAB</b> macro lets you to isolate and assign to a variable any
+				isolated numeric data printed by ASAP.</p>
+
+			<p>The optimization feature in ASAP is a general tool you can use to construct and solve
+				more general types of iterative problems. This feature is implemented differently
+				than the optimization capability in traditional lens design programs, where the goal
+				is to improve some measure of the image quality of the optical system.</p>
+
+			<p>General optimization in ASAP is implemented through the <b>$ITER</b>
+				macro language command. Since it is not an intrinsic ASAP command, it does not have
+				direct access to any ASAP data. The <b>$ITER</b> command communicates to
+				ASAP through the use of variables and functions whose values are assigned by you.</p>
+
+			<p><b>$ITER</b> has two modes of operation: </p>
+
+			<br/><a name="ITER_Macro_Overview__ul_874AD6A7CB2B48D1A08DC7C7CF103044"><!-- --></a><ul id="ITER_Macro_Overview__ul_874AD6A7CB2B48D1A08DC7C7CF103044">
+				<li id="ITER_Macro_Overview__li_522C7D13718B462085F3C77E98A9CE7E"><a name="ITER_Macro_Overview__li_522C7D13718B462085F3C77E98A9CE7E"><!-- --></a>In its simplest mode of operation,
+						<b>$ITER</b> generates a graphic file containing a plot of the
+					values of a single function as a function of a variable when the latter is
+					varied over a user-defined range. <b>$ITER</b> can also map out the
+					contents of a function as a function of two variables, thus allowing you to map
+					out the topography of the user-defined merit function. This mode is very useful
+					for parametric analysis of systems where the relationship between the variables
+					and the function are extremely complex, such as in an illumination system
+					design.</li>
+
+				<li id="ITER_Macro_Overview__li_7836AC5E7E404DDF864F4372C0B5E10C"><a name="ITER_Macro_Overview__li_7836AC5E7E404DDF864F4372C0B5E10C"><!-- --></a>In its more complex mode of operation
+						<b>$ITER</b> performs a single optimization iteration by varying
+					the contents of the variable to approach the minimum of the sum of squares of
+					the functions. <b>$ITER</b> increments each variable in turn to form
+					a change matrix and then solves the system of equations by a singular value
+					decomposition (SVD) technique. <b>$ITER</b> then updates the
+					contents of the variables with the solution of the matrix equations.</li>
+
+			</ul>
+
+			<p>If you are working on a linear problem, you arrive at the minimum in a single call to
+					<b>$ITER</b>. For nonlinear problems, you may have to call <b>$ITER</b> successively to reach a minimum.</p>
+
+		</div>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_GM-ref.html#Reference_G_M" title="Reference topics in this section begin with the letters &#34;G&#34; to &#34;M&#34;.">Reference (G-M)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/GRAB_macro_ASAP-cmdref.html" title="Grabs isolated numbers or literals from the output buffer.">$GRAB (ASAP Macro)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

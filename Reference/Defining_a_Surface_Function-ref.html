@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Defining a Surface or Function"/>
+<meta name="abstract" content="This topic lists the input arguments and return for defining an surface/function."/>
+<meta name="description" content="This topic lists the input arguments and return for defining an surface/function."/>
+<meta name="DC.subject" content="Defining a Surface or Function, USERFUNC arguments"/>
+<meta name="keywords" content="Defining a Surface or Function, USERFUNC arguments"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_DEF-ref.html#Reference_DEF"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/USERFUNC_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Defining_a_Surface_or_Function"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Defining a Surface or Function</title>
+</head>
+<body id="Defining_a_Surface_or_Function"><a name="Defining_a_Surface_or_Function"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Defining a Surface or Function</h5></span> 
+   
+   
+  <div><p>This topic lists the input arguments and return for defining an
+	 surface/function. 
+  </p>
+ 
+	 <div class="section" id="Defining_a_Surface_or_Function__section_9658F98CBCE3445BA569D718F81F6953"><a name="Defining_a_Surface_or_Function__section_9658F98CBCE3445BA569D718F81F6953"><!-- --></a> 
+		<p>REAL FUNCTION USERFUNC( P, PFCN, CFCN, MXNC, RMAT, KWAN, GRAD, ERRMSG)
+		  
+		</p>
+ 
+		<p>Input arguments: 
+		</p>
+ 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>P(1:3) = 
+			 </span></td><td><span>point in global coordinates</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>PFCN(1:3) = 
+			 </span></td><td><span>global coordinates of function reference point</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CFCN(1:MXNC) = 
+			 </span></td><td><span>array of function coefficients passed by ASAP from the
+				USERFUNC command</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RMAT(1:3, 1:3) =</span></td><td><span> rotation matrix for transforming from global to local
+				coordinates</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>KWAN &lt; 0 return</span></td><td><span/></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>gradient only = 
+			 </span></td><td><span>0 return function only; &gt; 0 return both</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ERRMSG = 
+			 </span></td><td><span>error message string (80 characters)</span></td></tr></tbody></table> 
+		<p>Return: 
+		</p>
+ 
+		<br/><a name="Defining_a_Surface_or_Function__ul_3A9B5C13D1DC481BB35A27CBA73194D3"><!-- --></a><ul id="Defining_a_Surface_or_Function__ul_3A9B5C13D1DC481BB35A27CBA73194D3"> 
+		  <li id="Defining_a_Surface_or_Function__li_BCE2B002678F408AAB5AD22EBDC78857"><a name="Defining_a_Surface_or_Function__li_BCE2B002678F408AAB5AD22EBDC78857"><!-- --></a>USERFUNC = value of
+			 function if KWAN &gt; 0 
+		  </li>
+ 
+		  <li id="Defining_a_Surface_or_Function__li_5C7AFCEDEBCC43659E7E71F6AB0FE1B9"><a name="Defining_a_Surface_or_Function__li_5C7AFCEDEBCC43659E7E71F6AB0FE1B9"><!-- --></a>USERFUNC = average surface
+			 curvature (1/radius) at point of KWAN = 0 
+		  </li>
+ 
+		  <li id="Defining_a_Surface_or_Function__li_2646D40A3B5848E685160B37E96880B7"><a name="Defining_a_Surface_or_Function__li_2646D40A3B5848E685160B37E96880B7"><!-- --></a>GRAD(1:3) = gradient of
+			 function if KWAN != 0 
+		  </li>
+ 
+		  <li id="Defining_a_Surface_or_Function__li_2371F797D5FC43D08F66868008D20D65"><a name="Defining_a_Surface_or_Function__li_2371F797D5FC43D08F66868008D20D65"><!-- --></a>error message in ERRMSG,
+			 otherwise ERRMSG remains blank. If ERRMSG is returned non-blank, ASAP stops
+			 running. 
+		  </li>
+ 
+		</ul>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_DEF-ref.html#Reference_DEF" title="Reference topics in this section begin with the letters &#34;D-E-F&#34;.">Reference (D-F)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/USERFUNC_ASAP-cmdref.html" title="Creates a surface specified by a user-defined function.">USERFUNC (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

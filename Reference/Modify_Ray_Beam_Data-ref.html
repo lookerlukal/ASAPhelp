@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Modify Ray/Beam Data"/>
+<meta name="abstract" content="This topic lists commands that are used to modify ray/ beam data."/>
+<meta name="description" content="This topic lists commands that are used to modify ray/ beam data."/>
+<meta name="DC.subject" content="Modify Ray/Beam Data, ray, modify data, beam, modify data"/>
+<meta name="keywords" content="Modify Ray/Beam Data, ray, modify data, beam, modify data"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Verifying_the_System_and_Sources-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Setup_Plots_and_Verify_System-ref.html#Setup_Plots_and_Verify_System"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Standard_Plot_Options-ref.html#Standard_Plot_Options"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Setup_Beam_Creation-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Plot_Menu-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ALIGN_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/BILATERAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FLUX_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/IMAGE_Ray_Positions_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MATRIX_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MOVE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLACE_Global_Coordinate_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REVERSE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ROTATE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SCALE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SELECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SHAPE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SHIFT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SKEW_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SUBSET_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/USERAPOD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/XEQ_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Modify_Ray_Beam_Data"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Modify Ray/Beam Data</title>
+</head>
+<body id="Modify_Ray_Beam_Data"><a name="Modify_Ray_Beam_Data"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Modify Ray/Beam Data</h5></span> 
+   
+   
+  <div><p>This topic lists commands that are used to modify ray/ beam data. 
+  </p>
+ 
+	 <div class="section" id="Modify_Ray_Beam_Data__section_4FBEA46CE44C41DFA0A076E030DEBA40"><a name="Modify_Ray_Beam_Data__section_4FBEA46CE44C41DFA0A076E030DEBA40"><!-- --></a> 
+		<br/><a name="Modify_Ray_Beam_Data__ul_F8E6DC1F03B84E3494722ED34C066BE0"><!-- --></a><ul id="Modify_Ray_Beam_Data__ul_F8E6DC1F03B84E3494722ED34C066BE0"> 
+		  <li id="Modify_Ray_Beam_Data__li_BE7534A2039D422C993F9189CEE6C87F"><a name="Modify_Ray_Beam_Data__li_BE7534A2039D422C993F9189CEE6C87F"><!-- --></a>A slash between entries
+			 indicates that only one of the entries is allowed at a time. 
+		  </li>
+ 
+		  <li id="Modify_Ray_Beam_Data__li_02FD279EE9B24D78A30183E8A9ADA0C0"><a name="Modify_Ray_Beam_Data__li_02FD279EE9B24D78A30183E8A9ADA0C0"><!-- --></a>Commas indicate that any
+			 combination of entries is acceptable. 
+		  </li>
+ 
+		  <li id="Modify_Ray_Beam_Data__li_4A85BBDDE86649418DAE28FC55AAC476"><a name="Modify_Ray_Beam_Data__li_4A85BBDDE86649418DAE28FC55AAC476"><!-- --></a>A semi-colon indicates
+			 that the commands must be grouped together. 
+		  </li>
+ 
+		</ul>
+ 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SELECT SOURCE/OBJECT 
+			 </span></td><td><span>Select ray group for future operations</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SUBSET ,RESET 
+			 </span></td><td><span>Create subset of current rays/beams</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>FLUX 
+			 </span></td><td><span>Assign total flux (power) in rays/beams</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SHAPE 
+			 </span></td><td><span>Specify shape and coherence of beams</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>REVERSE 
+			 </span></td><td><span>Reverse current ray/beam directions</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MOVE BY/TO, POINT/PLANE/SPHERE/FOCI 
+			 </span></td><td><span>Move to new positions on rays/beams</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>BILATERAL 
+			 </span></td><td><span>Flip ray/beam data about a plane</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>IMAGE 
+			 </span></td><td><span>Image ray points through a specified lens</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>APODIZE POS/DIR/ANG/BOTH 
+			 </span></td><td><span>User-programmable apodization</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MATRIX;ROTATE;SHIFT;SCALE;SKEW; PLACE;ALIGN;XEQ</span></td><td><span>Linear transformation of ray data</span></td></tr></tbody></table> 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Verifying_the_System_and_Sources-conc.html" title="Using ASAP, you verify the system and sources after building the geometry and sources.">Verifying the System and Sources</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Plot_Menu-task.html" title="When a Plot Viewer window is open, the main ASAP menu bar changes dynamically to include commands related to this window.">Plot Menu</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Setup_Plots_and_Verify_System-ref.html#Setup_Plots_and_Verify_System" title="This topic lists commands that are used when setting up plots and verifying the system.">Setup Plots and Verify System</a></div>
+<div><a href="../Reference/Standard_Plot_Options-ref.html#Standard_Plot_Options" title="This topic lists command arguments that are used when setting up standard plot options.">Standard Plot Options</a></div>
+<div><a href="../Reference/Setup_Beam_Creation-ref.html" title="This topic lists commands that are used when setting up beam creation.">Setup Beam Creation</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/ALIGN_ASAP-cmdref.html" title="Aligns a given direction vector with another general direction.">ALIGN (ASAP Command)</a></div>
+<div><a href="../Commands/BILATERAL_ASAP-cmdref.html" title="Folds data around a coordinate axis/axes to reduce the number of rays needed for a calculation where symmetry is expected.">BILATERAL (ASAP Command)</a></div>
+<div><a href="../Commands/FLUX_ASAP-cmdref.html" title="Modifies ray fluxes of currently selected ray data.">FLUX (ASAP Command)</a></div>
+<div><a href="../Commands/IMAGE_Ray_Positions_ASAP-cmdref.html" title="A ray modifier that finds the conjugates of ray coordinates through a LENS (images the current ray positions through a specified LENS entity).">IMAGE (Ray Positions) (ASAP Command)</a></div>
+<div><a href="../Commands/MATRIX_ASAP-cmdref.html" title="Specifies the transformation matrix that operates on the surface general transformation matrix.">MATRIX (ASAP Command)</a></div>
+<div><a href="../Commands/MOVE_ASAP-cmdref.html" title="Moves rays along their propagation direction to a new location.">MOVE (ASAP Command)</a></div>
+<div><a href="../Commands/PLACE_Global_Coordinate_ASAP-cmdref.html" title="Specifies the absolute placement of an entity in global coordinates.">PLACE (Global Coordinate) (ASAP Command)</a></div>
+<div><a href="../Commands/REVERSE_ASAP-cmdref.html" title="Reverses the propagation direction of all currently defined rays.">REVERSE (ASAP Command)</a></div>
+<div><a href="../Commands/ROTATE_ASAP-cmdref.html" title="Rotates an entity about a point.">ROTATE (ASAP Command)</a></div>
+<div><a href="../Commands/SCALE_ASAP-cmdref.html" title="Specifies arbitrary scaling of an entity.">SCALE (ASAP Command)</a></div>
+<div><a href="../Commands/SELECT_ASAP-cmdref.html" title="Isolates a ray set for further analysis.">SELECT (ASAP Command)</a></div>
+<div><a href="../Commands/SHAPE_ASAP-cmdref.html" title="Sets the beam shape of the individual rays of the currently selected rayset.">SHAPE (ASAP Command)</a></div>
+<div><a href="../Commands/SHIFT_ASAP-cmdref.html" title="Specifies a relative shift of an entity along the coordinate axes.">SHIFT (ASAP Command)</a></div>
+<div><a href="../Commands/SKEW_ASAP-cmdref.html" title="Specifies an arbitrary skewing of an entity.">SKEW (ASAP Command)</a></div>
+<div><a href="../Commands/SUBSET_ASAP-cmdref.html" title="Selects a subset of the current ray set and rejects remaining ray data.">SUBSET (ASAP Command)</a></div>
+<div><a href="../Commands/USERAPOD_ASAP-cmdref.html" title="Specifies a beam irradiance or intensity apodization.">USERAPOD (ASAP Command)</a></div>
+<div><a href="../Commands/XEQ_ASAP-cmdref.html" title="Specifies immediate application of current linear transformation.">XEQ (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

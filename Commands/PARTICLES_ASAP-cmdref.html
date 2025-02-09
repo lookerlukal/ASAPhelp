@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="PARTICLES (ASAP Command)"/>
+<meta name="abstract" content="Creates a particulate scatter model."/>
+<meta name="description" content="Creates a particulate scatter model."/>
+<meta name="DC.subject" content="PARTICLES (ASAP Command), scatter model, creating particulate, particulate scatter model, VOLUME, MIE, scatter model, particulate"/>
+<meta name="keywords" content="PARTICLES (ASAP Command), scatter model, creating particulate, particulate scatter model, VOLUME, MIE, scatter model, particulate"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_P-ref.html#Commands_and_Macros_P"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FCN_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MODELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Scatter_Models-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=24"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="PARTICLES_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>PARTICLES (ASAP Command)</title>
+</head>
+<body id="PARTICLES_ASAP_Command"><a name="PARTICLES_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>PARTICLES (ASAP Command)</h5></span>
+	
+	
+	<div><p>Creates a particulate scatter model. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+PARTICLES g q[`p] f
+VOLUME    MIE m a a' f  [  fcn n c c'  …  ]
+          r    s
+</pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>g</span></td><td><span>directional factor between -1 (perfect backscatter) to 1 (perfect forward
+					scatter) exclusive</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>q `p</span></td><td><span>scattering and absorption efficiency per particle (typically near or less
+					than one)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MIE</span></td><td><span>flag for exact MIE calculation</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m</span></td><td><span>MEDIA number or name</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a a'</span></td><td><span>particle radii (in wavelength units)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>f</span></td><td><span>overall fractional area obscuration at a normal incidence</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>r</span></td><td><span>intrinsic surface reflectivity</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>s</span></td><td><span>RMS surface roughness</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="PARTICLES_ASAP_Command__ul_C109AAF58C994A85BECB85EF484E41AE"><!-- --></a><ol id="PARTICLES_ASAP_Command__ul_C109AAF58C994A85BECB85EF484E41AE">
+			<li id="PARTICLES_ASAP_Command__li_E524DCE6402043FA8C14F7459C8E2C19"><a name="PARTICLES_ASAP_Command__li_E524DCE6402043FA8C14F7459C8E2C19"><!-- --></a>The surface/volume scatters as if it had a
+				uniform random distribution of particles on/in it. The three-entry short form is
+				based on the simple Henyey-Greenstein model (see option <b>g</b>). </li>
+
+			<li id="PARTICLES_ASAP_Command__li_988813CDA7354AE381AC05C8F1D040C7"><a name="PARTICLES_ASAP_Command__li_988813CDA7354AE381AC05C8F1D040C7"><!-- --></a>A <b>g</b> value of zero
+				corresponds to isotropic scatter. </li>
+
+			<li id="PARTICLES_ASAP_Command__li_F2604AB41F2749A6BC9CD3E0E00BDC86"><a name="PARTICLES_ASAP_Command__li_F2604AB41F2749A6BC9CD3E0E00BDC86"><!-- --></a> The <b>`p</b> allows for
+				optional entry of absorption efficiency per particle. If used, it should immediately
+				follow the scatter efficiency value <b>q</b> with only a backward tick
+				to separate the two numbers. Either number is typically near or less than one.
+				Entering <b>q</b> `0 is the same as entering <b>q</b> by
+				itself. <div class="note"><span class="notetitle">Note:</span> This entry may look like a complex number, but it is not treated
+					mathematically as such. It is only a convenient method to allow entry of the
+					optional value for <b>p.</b>
+				</div>
+</li>
+
+			<li id="PARTICLES_ASAP_Command__li_E433B70B5BBC45C4BF5F59C348742A7B"><a name="PARTICLES_ASAP_Command__li_E433B70B5BBC45C4BF5F59C348742A7B"><!-- --></a>The <b>f</b> option is
+				equivalent to the number of particles-per-unit-volume times the average particle
+				cross-sectional area. Therefore, it is usually a small number much less than one. </li>
+
+			<li id="PARTICLES_ASAP_Command__li_433CC9F36AA84D28B11CB1187D2587C9"><a name="PARTICLES_ASAP_Command__li_433CC9F36AA84D28B11CB1187D2587C9"><!-- --></a>For particles in a <b>VOLUME</b>, <b>f</b> is the overall fractional area obscuration
+				per unit length, and is equivalent to the number of particles per-unit-volume times
+				the average particle cross-sectional area. Whether the scattering is from actual
+				real particles or something else, only the product of <b>q</b> and
+					<b>f</b> is important, since it is just equal to the standard
+				"extinction" coefficient. </li>
+
+			<li id="PARTICLES_ASAP_Command__li_8D6EB1B404B446FA96FE34AC1E4E39B1"><a name="PARTICLES_ASAP_Command__li_8D6EB1B404B446FA96FE34AC1E4E39B1"><!-- --></a>Whether the scattering is from actual real
+				particles or something else, only the product of <b>q</b>+<b>p</b> and <b>f</b> really matters since this is just equal to the
+				standard "extinction" coefficient <b>(q</b> times <b>f</b>
+				is inversely proportional to the mean free path length). </li>
+
+			<li id="PARTICLES_ASAP_Command__li_CC79577CCF264CB0806BA6B1B835ECDF"><a name="PARTICLES_ASAP_Command__li_CC79577CCF264CB0806BA6B1B835ECDF"><!-- --></a> Two other models for single sphere
+				scattering are available: <br/><a name="PARTICLES_ASAP_Command__ol_E5B57CD4A33944B2BCEAAD12105CB98A"><!-- --></a><ul id="PARTICLES_ASAP_Command__ol_E5B57CD4A33944B2BCEAAD12105CB98A">
+					<li id="PARTICLES_ASAP_Command__li_35A4671C13AE4079BF4B81D4EE25E9B5"><a name="PARTICLES_ASAP_Command__li_35A4671C13AE4079BF4B81D4EE25E9B5"><!-- --></a>An exact time-consuming <b>MIE</b> calculation with particle refractive indices specified by
+							<b>MEDIA</b>
+						<b>m</b>. </li>
+
+					<li id="PARTICLES_ASAP_Command__li_917D576F2ABD481AB6204434CB079BBE"><a name="PARTICLES_ASAP_Command__li_917D576F2ABD481AB6204434CB079BBE"><!-- --></a>A fast approximation for large
+						(radii much greater than a wavelength), opaque (indices much greater than
+						one), rough (white Gaussian statistics) spheres with intrinsic surface
+						reflectivity <b>r</b> and RMS surface roughness <b>s</b> (relative to the sphere radius). </li>
+
+				</ul>
+<p>In both cases, the particle radii lie between <b>a a'</b> (in
+					wavelength units) corresponding to the one-over-e-squared-points of a default
+					Gaussian normal-size distribution. </p>
+</li>
+
+			<li id="PARTICLES_ASAP_Command__li_ECDF76C747124314833F79263402C723"><a name="PARTICLES_ASAP_Command__li_ECDF76C747124314833F79263402C723"><!-- --></a><b>PLOT</b> creates a plot of
+				the model. </li>
+
+			<li id="PARTICLES_ASAP_Command__li_A25B32374BB745ACA23E47CF4FABB3E6"><a name="PARTICLES_ASAP_Command__li_A25B32374BB745ACA23E47CF4FABB3E6"><!-- --></a> Optionally, any size distribution function
+					<b>fcn</b> can be defined via a previous <b>$FCN</b>
+				macro. The main "_" argument of the function is a normalized size between the
+				integration limits -1 to 1; that is, the main "_" argument is equal to <br/><img src="../Equations/PARTICLES_equation1.gif"/><br/><p>where <b>r</b> is the actual size (again in wavelength units). The
+						<b>n</b> is the number of integration samples to use in the
+					given size range (enter zero for a minimal default). The additional (and
+					optional) <b>c c’ .."</b> command parameters are passed in the "_1
+					_2 ..." registers (up to 66). For example, an equivalent to the default
+					distribution would be simply defined as follows:
+					</p>
+<pre class="codeblock">     
+$FCN E2GAUS EXP(-2*_^2)
+</pre>
+<p>Also, if the
+					distribution function is known in terms of actual size <b>R,</b>
+					define it in terms of the normalized radius "_"; that is,
+				</p>
+<pre class="codeblock">     
+$FCN PSDIST R=_*(_2-_1)/2+(_1+_2)/2 ...
+MODEL
+PARTICLE MIE m a a' f PSDIST a a' ...
+ </pre>
+</li>
+
+		</ol>
+
+		<p>
+			<a href="/example_scripts.html#PARTICLES">PARTICLES Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_P-ref.html#Commands_and_Macros_P" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “P”.">Commands and Macros (P)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Scatter_Models-ref.html" title="ASAP supports the scatter models listed in this topic for wide-angle (far from specular) scatter.">Scatter Models</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/FCN_macro_ASAP-cmdref.html" title="Defines new in-line math functions.">$FCN (ASAP Macro)</a></div>
+<div><a href="../Commands/MEDIA_ASAP-cmdref.html" title="Creates a single refractive material.">MEDIA (ASAP Command)</a></div>
+<div><a href="../Commands/MODELS_ASAP-cmdref.html" title="Creates a scattering model.">MODELS (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=24" target="_blank">See the Knowledge Base for the technical publication, Stray Light Analysis</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

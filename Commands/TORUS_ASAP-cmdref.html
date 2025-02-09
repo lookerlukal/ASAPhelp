@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="TORUS (ASAP Command)"/>
+<meta name="abstract" content="Creates a toroidal or doughnut surface."/>
+<meta name="description" content="Creates a toroidal or doughnut surface."/>
+<meta name="DC.subject" content="TORUS (ASAP Command), surface, toroidal or doughnut, toroidal surface, creating, doughnut surface, creating"/>
+<meta name="keywords" content="TORUS (ASAP Command), surface, toroidal or doughnut, toroidal surface, creating, doughnut surface, creating"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_T-ref.html#Commands_and_Macros_T"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="TORUS_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>TORUS (ASAP Command)</title>
+</head>
+<body id="TORUS_ASAP_Command"><a name="TORUS_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>TORUS (ASAP Command)</h5></span>
+	
+	
+	<div><p>Creates a toroidal or doughnut surface. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+TORUS X x h r [ r' [ q ] ]
+      Y y
+      Z z
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X, Y, or Z</span></td><td><span>axis of symmetry </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x, y, or z</span></td><td><span>location along coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>h</span></td><td><span>height to center of torus ring</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>r r'</span></td><td><span>semimajor lengths of the cross-sectional ellipse/rectangle at height
+				h</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>q</span></td><td><span>curve type control parameter (default is q=0, an ellipse)</span></td></tr></tbody></table>
+		<p><b>Reference Point</b>
+		</p>
+
+		<p>At the specified coordinate point (not on the surface of the torus). </p>
+
+		<p><b>Surface Normal</b>
+		</p>
+
+		<p>Outward from the surface. </p>
+
+		<p><b>Autolimiting</b>
+		</p>
+
+		<p>Yes </p>
+
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="TORUS_ASAP_Command__ul_3A38969F87B54E9C9C0AA90B252FF61C"><!-- --></a><ol id="TORUS_ASAP_Command__ul_3A38969F87B54E9C9C0AA90B252FF61C">
+			<li id="TORUS_ASAP_Command__li_185FD602ED1148AE8DADF68CB7B3EEC1"><a name="TORUS_ASAP_Command__li_185FD602ED1148AE8DADF68CB7B3EEC1"><!-- --></a> The <b>q</b> parameter
+				controls the shape of the cross-section in the following way: <br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>q</b>=0</span></td><td><span>elliptical (default)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>0&lt;<b>q</b>&lt;1</span></td><td><span>rounded rectangle</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>q</b>=1</span></td><td><span>rectangular</span></td></tr></tbody></table></li>
+
+			<li id="TORUS_ASAP_Command__li_0304FFE322054DD296345E534A1CB0F2"><a name="TORUS_ASAP_Command__li_0304FFE322054DD296345E534A1CB0F2"><!-- --></a><b>r</b> and <b>r'</b> are the (perpendicular to the axis and parallel to the axis,
+				respectively) semi-major widths. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#TORUS">TORUS Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_T-ref.html#Commands_and_Macros_T" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “T”.">Commands and Macros (T)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

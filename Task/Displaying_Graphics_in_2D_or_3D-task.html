@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Displaying Graphics in 2D or 3D"/>
+<meta name="abstract" content="ASAP has complete 2D and 3D graphics capabilities that include overlays, oblique views, annotation, static and dynamic rendering, zoom in/out, interactive point-and-shoot ray tracing, and many other features."/>
+<meta name="description" content="ASAP has complete 2D and 3D graphics capabilities that include overlays, oblique views, annotation, static and dynamic rendering, zoom in/out, interactive point-and-shoot ray tracing, and many other features."/>
+<meta name="DC.subject" content="Displaying Graphics in 2D or 3D, graphics, displaying in 2D or 3D, 2D graphics, displaying, 3D graphics, displaying"/>
+<meta name="keywords" content="Displaying Graphics in 2D or 3D, graphics, displaying in 2D or 3D, 2D graphics, displaying, 3D graphics, displaying"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_DEF-ref.html#Reference_DEF"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CONTOUR_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DIRECTIONAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DMAP_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ENCLOSED_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRAPH_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ISOMETRIC_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MESH_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OBLIQUE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OPDMAP_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT3D_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/RADIAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/RANGE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPOTS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WINDOW_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Data_Files_2D_Central_Plot_Routine_Protocol_ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Data_Files_3D_Protocol-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Dynamic_Rendering-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Static_Rendering-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Graphics_Files-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Isolating_Ray_Data-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Displaying_Graphics_in_2D_or_3D"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Displaying Graphics in 2D or 3D</title>
+</head>
+<body id="Displaying_Graphics_in_2D_or_3D"><a name="Displaying_Graphics_in_2D_or_3D"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Displaying Graphics in 2D or 3D</h5></span> 
+   
+   
+  <div><p>ASAP has complete 2D and 3D graphics capabilities that include
+	 overlays, oblique views, annotation, static and dynamic rendering, zoom in/out,
+	 interactive point-and-shoot ray tracing, and many other features. 
+  </p>
+ 
+	 <div class="section" id="Displaying_Graphics_in_2D_or_3D__context_8EF8464BBBF64386AA624C6F14D99AD0"><a name="Displaying_Graphics_in_2D_or_3D__context_8EF8464BBBF64386AA624C6F14D99AD0"><!-- --></a> 
+		<p>Graphics commands are divided into two broad categories: 
+		</p>
+ 
+		<br/><a name="Displaying_Graphics_in_2D_or_3D__ol_C7D6DDE8C9984E8F91BC8711E12B9588"><!-- --></a><ol id="Displaying_Graphics_in_2D_or_3D__ol_C7D6DDE8C9984E8F91BC8711E12B9588"> 
+		  <li id="Displaying_Graphics_in_2D_or_3D__li_C32296A92C104B56A6855B89BB78574F"><a name="Displaying_Graphics_in_2D_or_3D__li_C32296A92C104B56A6855B89BB78574F"><!-- --></a> Setting defaults,
+			 operating status, options (for example, 
+			 <b>PIXELS, WINDOW, OBLIQUE</b>).
+		  </li>
+ 
+		  <li id="Displaying_Graphics_in_2D_or_3D__li_E1D7961AA6D343B0873F2B69ADE8DA62"><a name="Displaying_Graphics_in_2D_or_3D__li_E1D7961AA6D343B0873F2B69ADE8DA62"><!-- --></a> Creating graphical output
+			 (for example, 
+			 <b>SPOTS, OPDMAP</b>).
+		  </li>
+ 
+		</ol>
+
+		<div class="note"><span class="notetitle">Note:</span> The key to creating sophisticated graphics in ASAP is to understand
+		  the relationship between the various types of graphics commands and the data
+		  itself. 
+		</div>
+ 
+		<p>Generally, you can follow this procedure to create graphics:
+		</p>
+ 
+		<br/><a name="Displaying_Graphics_in_2D_or_3D__ul_B86E78F3D4D045FBB36801A65788B56D"><!-- --></a><ul id="Displaying_Graphics_in_2D_or_3D__ul_B86E78F3D4D045FBB36801A65788B56D"> 
+		  <li id="Displaying_Graphics_in_2D_or_3D__li_4097EB2CDB3947CA8AD20110E1CFAACA"><a name="Displaying_Graphics_in_2D_or_3D__li_4097EB2CDB3947CA8AD20110E1CFAACA"><!-- --></a>Isolate your data (objects
+			 or ray data) using the 
+			 <b>CONSIDER</b> and/or 
+			 <b>SELECT</b> commands. 
+		  </li>
+ 
+		  <li id="Displaying_Graphics_in_2D_or_3D__li_D167D8C941264EDB9AA251134B78D4C9"><a name="Displaying_Graphics_in_2D_or_3D__li_D167D8C941264EDB9AA251134B78D4C9"><!-- --></a>Set windows orientation,
+			 sampling and others. 
+		  </li>
+ 
+		  <li id="Displaying_Graphics_in_2D_or_3D__li_C6B661BA7C1C4A709CCB469E1477066B"><a name="Displaying_Graphics_in_2D_or_3D__li_C6B661BA7C1C4A709CCB469E1477066B"><!-- --></a>Enter the specific
+			 graphics command: 
+			 <b>CONTOUR, DIRECTIONAL, DMAP, ENCLOSED, GRAPH, ISOMETRIC,
+				MESH, PLOT3D, RADIAL,</b> and/or 
+			 <b>RANGE</b>. 
+		  </li>
+ 
+		</ul>
+ 
+		<p>If the desired graphic is an overlay (or composite) of several
+		  individual graphics, repeat this process for each one. 
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_DEF-ref.html#Reference_DEF" title="Reference topics in this section begin with the letters &#34;D-E-F&#34;.">Reference (D-F)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Dynamic_Rendering-conc.html" title="The ASAP 3D Viewer is linked to the OpenGL libraries for real-time, dynamic rendering of systems and ray traces.">Dynamic Rendering</a></div>
+<div><a href="../Concept/Static_Rendering-conc.html" title="You can create a rendering of the system geometry by setting the appropriate WINDOW and PIXEL values (and optionally, LIGHT values), and then entering the RENDER command. The RENDER command traces a grid of rays whose density is determined by the PIXEL command through the viewing window.">Static Rendering</a></div>
+<div><a href="../Concept/Isolating_Ray_Data-conc.html">Isolating Ray Data</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Data_Files_2D_Central_Plot_Routine_Protocol_ref.html" title="The two-dimensional (2D) plot data follows very closely the CALCOMP protocol. Each line in the file corresponds to a call to the PLOT routine and contains essentially the calling arguments.">2D Data Files (Central Plot Routine Protocol)</a></div>
+<div><a href="../Reference/Data_Files_3D_Protocol-ref.html" title="The protocol for the three-dimensional (3D) data files is a simple one devised by BRO. Each line in the file corresponds to a coordinate in 3D space.">3D Data Files (Protocol)</a></div>
+<div><a href="../Reference/Graphics_Files-ref.html" title="The graphics archive contains a complete record of all plots produced in a given ASAP session. These files may be examined by opening the file from a plot window.">Graphics Files</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/CONTOUR_ASAP-cmdref.html" title="Creates a contour plot of the current distribution data file.">CONTOUR (ASAP Command)</a></div>
+<div><a href="../Commands/DIRECTIONAL_ASAP-cmdref.html" title="Produces a polar plot of the current angular distribution data file.">DIRECTIONAL (ASAP Command)</a></div>
+<div><a href="../Commands/DMAP_ASAP-cmdref.html" title="Creates a character map of the current distribution data file.">DMAP (ASAP Command)</a></div>
+<div><a href="../Commands/ENCLOSED_ASAP-cmdref.html" title="Calculates an encircled (ensquared) energy using a square array of points.">ENCLOSED (ASAP Command)</a></div>
+<div><a href="../Commands/GRAPH_ASAP-cmdref.html" title="Creates 1-D profile(s) of the current distribution data file.">GRAPH (ASAP Command)</a></div>
+<div><a href="../Commands/ISOMETRIC_ASAP-cmdref.html" title="Creates an isometric view of the current distribution data file.">ISOMETRIC (ASAP Command)</a></div>
+<div><a href="../Commands/MESH_ASAP-cmdref.html" title="Creates a 3D representation of the distribution in the system vector (*.VCR) file.">MESH (ASAP Command)</a></div>
+<div><a href="../Commands/OBLIQUE_ASAP-cmdref.html" title="Switches future graphical output between normal (orthogonal) projection and oblique (non-orthogonal) projection.">OBLIQUE (ASAP Command)</a></div>
+<div><a href="../Commands/OPDMAP_ASAP-cmdref.html" title="Creates a geometric wavefront map of the currently selected ray data.">OPDMAP (ASAP Command)</a></div>
+<div><a href="../Commands/PIXELS_ASAP-cmdref.html" title="Sets the resolution for graphics and calculations.">PIXELS (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT3D_ASAP-cmdref.html" title="Creates a 3D representation of the current distribution data file with 1D cross-sections.">PLOT3D (ASAP Command)</a></div>
+<div><a href="../Commands/RADIAL_ASAP-cmdref.html" title="Rotationally averages the current distribution data, and optionally computes the encircled energy.">RADIAL (ASAP Command)</a></div>
+<div><a href="../Commands/RANGE_ASAP-cmdref.html" title="Adjusts the vertical plotting scale of current distribution data.">RANGE (ASAP Command)</a></div>
+<div><a href="../Commands/SPOTS_ASAP-cmdref.html" title="Creates a geometric spot diagram for the currently selected ray data.">SPOTS (ASAP Command)</a></div>
+<div><a href="../Commands/WINDOW_ASAP-cmdref.html" title="Sets the plotting window for graphical output.">WINDOW (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

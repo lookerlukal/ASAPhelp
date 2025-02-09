@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="ASYM (ASAP Command)"/>
+<meta name="abstract" content="Modifies surfaces to make a cylindrical or anamorphic surface."/>
+<meta name="description" content="Modifies surfaces to make a cylindrical or anamorphic surface."/>
+<meta name="DC.subject" content="ASYM (ASAP Command), surface, cylindrical or anamorphic, cylindrical, anamorphic"/>
+<meta name="keywords" content="ASYM (ASAP Command), surface, cylindrical or anamorphic, cylindrical, anamorphic"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/AXICONIC_ASAP-cmdref.html#AXICONIC_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/BICONIC_ASAP-cmdref.html#BICONIC_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CARTOVAL_ASAP-cmdref.html#CARTOVAL_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CONDUIT_ASAP-cmdref.html#CONDUIT_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/HORN_ASAP-cmdref.html#HORN_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OPTICAL_ASAP-cmdref.html#OPTICAL_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REVOLUTION_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SUPERCONIC_ASAP-cmdref.html#SUPERCONIC_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TORUS_ASAP-cmdref.html#TORUS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_A-ref.html#Commands_and_Macros_A"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="ASYM_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>ASYM (ASAP Command)</title>
+</head>
+<body id="ASYM_ASAP_Command"><a name="ASYM_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>ASYM (ASAP Command)</h5></span>
+	
+	
+	<div><p>Modifies surfaces to make a cylindrical or anamorphic surface. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">ASYM u v</pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>u v</span></td><td><span>scale factors</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="ASYM_ASAP_Command__ul_171E1F95CE0743D5AD365FECB48C532C"><!-- --></a><ol id="ASYM_ASAP_Command__ul_171E1F95CE0743D5AD365FECB48C532C">
+			<li id="ASYM_ASAP_Command__li_5452272E7E3C4F42963352FBD996AC49"><a name="ASYM_ASAP_Command__li_5452272E7E3C4F42963352FBD996AC49"><!-- --></a>Allows the creation of a more general class
+				of surfaces such as anamorphic <b>OPTICAL</b> surfaces. </li>
+
+			<li id="ASYM_ASAP_Command__li_32076245DB4B4399B4166F881DE68840"><a name="ASYM_ASAP_Command__li_32076245DB4B4399B4166F881DE68840"><!-- --></a>
+				Can be used after <b>TUBE, OPTICAL, TORUS, REVOLUTION, HORN, CARTOVAL ,
+					AXICONIC, BICONIC, CONDUIT,</b> and <b>SUPERCONIC</b>
+				commands to essentially distort the rotational symmetry of the surfaces. For
+				example, if <b>Z</b> is the axis of symmetry, the surfaces are only a function
+				of the distance from the axis squared: 
+				<p>
+					<br/><a name="ASYM_ASAP_Command__image_4CACBCFA11CA4D64B05B4CC1E745563C"><!-- --></a><img id="ASYM_ASAP_Command__image_4CACBCFA11CA4D64B05B4CC1E745563C" src="../Equations/ASYM_equation1.gif" width="485" height="45"/><br/>
+				</p>
+
+			</li>
+
+			<li id="ASYM_ASAP_Command__li_FF15EF2366474D21AB17104C49E38BA9"><a name="ASYM_ASAP_Command__li_FF15EF2366474D21AB17104C49E38BA9"><!-- --></a>
+				Performs the above replacement so that a more general class of surfaces is
+				possible such as anamorphic <b>OPTICAL</b> surfaces. For example:
+				<pre class="codeblock">OPTICAL Z 2.8 3.7 ! radius of curvature in X = 3.7
+ASYM 1 3.7/4.6 ! radius of curvature in Y = 4.6</pre>
+
+			</li>
+
+			<li id="ASYM_ASAP_Command__li_5069243703B048F6AFEDF29FC3740A92"><a name="ASYM_ASAP_Command__li_5069243703B048F6AFEDF29FC3740A92"><!-- --></a>Set either <b>u</b> or <b>v</b> to zero so that a surface with cylindrical symmetry becomes an
+				infinite trough in the nonzero direction. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#ASYM">ASYM Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_A-ref.html#Commands_and_Macros_A" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “A”.">Commands and Macros (A)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/AXICONIC_ASAP-cmdref.html#AXICONIC_ASAP_Command" title="Creates a surface by spinning an arbitrarily oriented conic curve.">AXICONIC (ASAP Command)</a></div>
+<div><a href="../Commands/BICONIC_ASAP-cmdref.html#BICONIC_ASAP_Command" title="Creates a cubic or quartic biconic surface.">BICONIC (ASAP Command)</a></div>
+<div><a href="../Commands/CARTOVAL_ASAP-cmdref.html#CARTOVAL_ASAP_Command" title="Creates a Cartesian oval surface.">CARTOVAL (ASAP Command)</a></div>
+<div><a href="../Commands/CONDUIT_ASAP-cmdref.html#CONDUIT_ASAP_Command" title="Sweeps a circle along a planar explicit cubic.">CONDUIT (ASAP Command)</a></div>
+<div><a href="../Commands/HORN_ASAP-cmdref.html#HORN_ASAP_Command" title="Creates a generalized tube with polynomial profiles and elliptical/rectangular cross-sections.">HORN (ASAP Command)</a></div>
+<div><a href="../Commands/OPTICAL_ASAP-cmdref.html#OPTICAL_ASAP_Command" title="Creates aspheric surfaces normal to the axis of symmetry.">OPTICAL (ASAP Command)</a></div>
+<div><a href="../Commands/REVOLUTION_ASAP-cmdref.html" title="Creates a surface specified by spinning a 2D curve around a given axis.">REVOLUTION (ASAP Command)</a></div>
+<div><a href="../Commands/SUPERCONIC_ASAP-cmdref.html#SUPERCONIC_ASAP_Command" title="Superconic asphere used in optical design.">SUPERCONIC (ASAP Command)</a></div>
+<div><a href="../Commands/TORUS_ASAP-cmdref.html#TORUS_ASAP_Command" title="Creates a toroidal or doughnut surface.">TORUS (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

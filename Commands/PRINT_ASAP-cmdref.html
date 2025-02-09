@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="PRINT (ASAP Command)"/>
+<meta name="abstract" content="Prints out specific database information."/>
+<meta name="description" content="Prints out specific database information."/>
+<meta name="DC.subject" content="PRINT (ASAP Command), database, print"/>
+<meta name="keywords" content="PRINT (ASAP Command), database, print"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/COATINGS_MODELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EDGES_CURVES_ENTITIES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LENSES_ENTITIES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PRINT_Polarization_Models_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SURFACES_FUNCTIONS_ENTITIES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Media_Database_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/OBJECT_Command_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_P-ref.html#Commands_and_Macros_P"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="PRINT_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>PRINT (ASAP Command)</title>
+</head>
+<body id="PRINT_ASAP_Command"><a name="PRINT_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>PRINT (ASAP Command)</h5></span> 
+   
+  
+  <div><p>Prints out specific database information. 
+  </p>
+ 
+	 <p><b>Syntax</b>
+	 </p>
+ 
+	 <pre class="codeblock">
+PRINT     [  i  ]
+SPRINT    SURFACE   [ i ]
+QPRINT    EDGE
+          LENS
+          ALL
+          MEDIA
+          COATING
+          MODEL
+          OBJECT
+      </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>PRINT</span></td><td><span>prints out complete information for the specified
+			 database</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SPRINT</span></td><td><span>excludes the main geometry data (that is, coefficients,
+			 conicoids, points) from the print out</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>QPRINT</span></td><td><span>only one line per entity is printed out</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>i</span></td><td><span>entity number</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SURFACE, EDGE, LENS, ALL, MEDIA, COATING, MODEL,
+			 OBJECT</span></td><td><span>specific database</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b>
+	 </p>
+ 
+	 <br/><a name="PRINT_ASAP_Command__ul_710AB5EC8F71476DA9802F3B65DD299C"><!-- --></a><ol id="PRINT_ASAP_Command__ul_710AB5EC8F71476DA9802F3B65DD299C"> 
+		<li id="PRINT_ASAP_Command__li_835CBAB14A8245B09FB8A6C170852240"><a name="PRINT_ASAP_Command__li_835CBAB14A8245B09FB8A6C170852240"><!-- --></a>Prints database information.
+		</li>
+ 
+		<li id="PRINT_ASAP_Command__li_ED0674B9B5FB40E7AB49B21B2D643234"><a name="PRINT_ASAP_Command__li_ED0674B9B5FB40E7AB49B21B2D643234"><!-- --></a>If the entity number is
+		  omitted, all the information in the given database is printed.
+		</li>
+ 
+	 </ol>
+ 
+	 <p><b>Examples</b>
+	 </p>
+ 
+	 <p>1. Output for a Surface/Object
+	 </p>
+ 
+	 <pre class="codeblock">
+--- MEDIA
+ ---   4.03 'GERMANIUM'
+ --- COATING PROPERTIES
+ ---   0 1  'TRANS'
+ --- SURFACE
+ ---   PLANE Y -5 ELLIPSE 0.5
+ --- OBJECT 'LENS_SURF_1
+ ---   INTERFACE COATING TRANS AIR GERMANIUM
+ --- SURFACE
+ ---   OPTICAL Y -4.7 -1 -16.241 ELLIPSE 0.5
+ --- OBJECT 'LENS_SURF_2
+ ---   INTERFACE COATING TRANS AIR GERMANIUM
+ --- PRINT 2
+ SURFUNC    2: Degr=2x2(OPTICAL ) X  0.00000     Y -4.70000     Z  0.00000
+  Branch Test sign and direction  1.   0.00000        1.00000        0.00000
+  RefPt Ave Radius -1.0000     Normal   0.0000000      1.0000000      0.0000000
+  Local Box X -.5000    0.5000    Y -.7879E-1 0.5000E-3 Z -.5000    0.5000
+           width=  1.0000        width= 0.79291E-1     width=  1.0000
+         Cylindrical along Y axis with central ratio 0.00000
+  Parameterization -Y
+  This entity used by objects    2
+  Polynomial Coefficients:
+ x2     0.500000     y       1.00000     z2     0.500000     y2     -7.62050
+
+ OBJECT 2: LENS_SURF_2
+  Physical Surface 2 (OPTICAL )
+  Faceting (patch subdivision) -3 by -3
+        Box X -.5000    0.5000    Y -4.789    -4.689    Z -.5000    0.5000
+           width=  1.0000        width= 0.99291E-1     width=  1.0000
+        Bounding sphere 0.502459        0.00000       -4.73915        0.00000
+  Coating 1 at  0.000     wavelength
+            Transmission  1.0000     Media   0   1
+
+ MEDIA Index/Absorb  FUNC:  exponent   steplength  maxnum
+  0     1.000000        0  1.00000     0.100000E+16  1000 VACUUM|AIR
+  1     4.030000        0  1.00000     0.100000E+16  1000 GERMANIUM
+
+         Wavelengths     0.000
+ COATING Name           R  1  T
+  1 TRANS            0.0000 1.000
+      </pre>
+ 
+	 <p><b>KEY TO OUTPUT:</b>
+	 </p>
+ 
+	 <br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SURFUNC</span></td><td><span> = Entity identifier &amp; data base location</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Degr</span></td><td><span>= Order of the polynomial surface/function equation</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X, Y, Z</span></td><td><span>= Coordinates of reference point</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Local Ave</span></td><td><span>= Base radius of curvature</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Normal</span></td><td><span>= Surface/function normal direction vector in direction
+			 cosines</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Local Box</span></td><td><span>= Extents &amp; widths of the LOCAL box in local
+			 coordinates</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Polynomial</span></td><td><span>= Polynomial coefficients of surface/function</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>OBJECT</span></td><td><span>= Object data base location &amp; name</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Physical</span></td><td><span>= Entity number used by the object</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Box</span></td><td><span>= Extents &amp; widths of the LIMIT box in global
+			 coordinates</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Coating</span></td><td><span>= Coating number &amp; wavelength used by the INTERFACE
+			 command</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Trans</span></td><td><span>= R &amp; T coefficient values &amp; media surrounding the
+			 interface</span></td></tr></tbody></table> 
+	 <p><b>2. Output for Edge Objects</b>
+	 </p>
+ 
+	 <p><b>KEY TO OUTPUT:</b>
+	 </p>
+ 
+	 <br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CURVEDG</span></td><td><span>= Entity identifier &amp; data base location</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x, y, z</span></td><td><span>= Coordinate of curve/edge points</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>q</span></td><td><span>= Previous point to next point connection factor</span></td></tr></tbody></table> 
+	 <pre class="codeblock"> 
+--- COATING PROPERTIES
+ ---   0.05 0 'REFL'
+ --- EDGES
+ ---   RECTANGLE Y 4 1 .5
+ ---   RECTANGLE Y 12 3 1.5
+ --- OBJECT
+ ---   0.1 0.2 'FACETED_TUBE'
+ ---   INTERFACE COATING REFL
+ --- PRINT 1
+ CURVEDG    1: Pts=4 (RECTANGL) X  0.00000     Y  4.00000     Z  0.00000
+     4 segments of degree  1
+     4 total with     0 breaks
+  Sweep distance &amp; direction   0.000    0.00000        1.00000        0.00000
+                                        0.00000        4.00000        0.00000
+  This entity used by objects    1
+  Points and Connection Factors:
+     x         y         z         q         x         y         z         q
+ -0.500000  0.000000  1.000000   1.00000  0.500000  0.000000  1.000000   1.00000
+  0.500000  0.000000 -1.000000   1.00000 -0.500000  0.000000 -1.000000   1.00000
+
+ CURVEDG    2: Pts=4 (RECTANGL) X  0.00000     Y  12.0000     Z  0.00000
+     4 segments of degree  1
+     4 total with     0 breaks
+  Sweep distance &amp; direction   0.000    0.00000        1.00000        0.00000
+                                        0.00000        12.0000        0.00000
+  This entity used by objects    1
+  Points and Connection Factors:
+     x         y         z         q         x         y         z         q
+ -1.500000  0.000000  3.000000   1.00000  1.500000  0.000000  3.000000   1.00000
+  1.500000  0.000000 -3.000000   1.00000 -1.500000  0.000000 -3.000000   1.00000
+
+ OBJECT 1: FACETED_TUBE
+  Physical Surface 2 (RECTANGL) to 1 (RECTANGL)
+     1 segments of degree  1
+     1 total with     1 breaks
+  Faceting (patch subdivision) +1 by +1
+        Box X -1.580     1.580    Y  3.920     12.08    Z -3.080     3.080
+           width=  3.1600        width=  8.1600        width=  6.1600
+        Bounding sphere  5.35063       0.596046E-07    8.00000        0.00000
+  Coating 1 at  0.000     wavelength
+  Interface Reflectivity 0.50000E-01
+
+         Wavelengths     0.000
+ COATING Name           R  1  T
+      </pre>
+ 
+	 <p><b>3. Output for Lens Objects</b>
+	 </p>
+ 
+	 <pre class="codeblock">
+---  UNITS IN
+ ---  WAVELENGTHS 486 587 656 NM
+ ---  LENSES
+ ---    DOUBLET Z 0 1.5 2 SCHOTT_BK7 SCHOTT_F2 10 1 36.6/64.2
+  Dispersion (and power) ratio =  0.5700935
+ ---  OBJECT 'DOUBLET'
+ --- PRINT 1
+ LENS       1: Srfs=3 (DOUBLET ) X  0.00000     Y  0.00000     Z  0.00000
+  This entity used by objects    1
+  Conicoid Data:
+           X            Y            Z            A         B         C
+    1  0.00000      0.00000      0.00000      0.000000  0.000000  1.000000
+ APT= 2.000     CRV=0.231506     CON= 0.0000    OBS=.0000 MED= 1 schott_BK7
+    2  0.00000      0.00000      1.35000      0.000000  0.000000  1.000000
+ APT= 2.000     CRV=-.209587     CON= 0.0000    OBS=.0000 MED= 2 schott_F2
+    3  0.00000      0.00000      1.50000      0.000000  0.000000  1.000000
+ APT= 2.000     CRV= 0.00000     CON= 0.0000    OBS=.0000 MED= 0 VACUUM|AIR
+
+ OBJECT 1: DOUBLET
+  Physical Surface 1 (DOUBLET )
+  Faceting (patch subdivision) -3 by -3
+        Box X -2.040     2.040    Y -2.040     2.040    Z -.4000E-1  1.540
+           width=  4.0800        width=  4.0800        width=  1.5800
+        Bounding sphere  2.99120        0.00000        0.00000       0.750000
+  Interface Reflectivity  1.0000
+            Transmission  1.0000     Media   0   0
+
+ MEDIA Index/Absorb  FUNC:  exponent   steplength  maxnum
+  0     1.000000        0  1.00000     0.100000E+16  1000 VACUUM|AIR
+  1     1.522386        0  1.00000     0.100000E+16  1000 schott_BK7
+  2     1.632103        0  1.00000     0.100000E+16  1000 schott_F2
+
+         Wavelengths     486.0        587.0        656.0
+ MEDIA Name            Re  1  Im    Re  2  Im    Re  3  Im
+  1 schott_BK7        1.522386     1.516824     1.514331
+  2 schott_F2         1.632103     1.620089     1.615049
+      </pre>
+ 
+	 <p><b>KEY TO OUTPUT: 
+		</b>
+	 </p>
+ 
+	 <br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>LENS</span></td><td><span> = Entity identifier &amp; data base location</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Srfs</span></td><td><span>= Number of conicoids of lens</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X, Y, Z</span></td><td><span>= Coordinates of reference point 
+		  </span></td></tr></tbody></table> 
+	 <p><b>Conicoid Data:</b>
+	 </p>
+ 
+	 <br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X, Y, Z</span></td><td><span>= Coordinates of first conicoid</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>A, B, C</span></td><td><span>= Conicoid normal direction vector in direction
+			 cosines</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>APT</span></td><td><span>= Conicoid aperture semi-diameter</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CRV</span></td><td><span>= Conicoid base curvature</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CON</span></td><td><span>= Conicoid conic constant</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>OBS</span></td><td><span>= Conicoid obscuration ratio</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MED</span></td><td><span>= Media after conicoid</span></td></tr></tbody></table> 
+	 <p> 
+		<a href="../example_scripts.html#PRINT">PRINT
+		  Examples</a>
+	 </p>
+
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_P-ref.html#Commands_and_Macros_P" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “P”.">Commands and Macros (P)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Media_Database_Overview-conc.html">Media Database Overview</a></div>
+<div><a href="../Concept/OBJECT_Command_Overview-conc.html" title="In ASAP, an object is a bounded physical entity with optical properties. The OBJECT command associates information from the optical property databases with the system geometry databases (MEDIA, COATINGS, MODELS, SURFACES, EDGES, LENSES, and others). Objects are subsequently constructed from these databases.">OBJECT Command Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/COATINGS_MODELS_ASAP-cmdref.html" title="Specify angular properties for reflection and transmission.">COATINGS MODELS (ASAP Command)</a></div>
+<div><a href="../Commands/EDGES_CURVES_ENTITIES_ASAP-cmdref.html" title="Signals ASAP that edge definition commands follow.">EDGES/CURVES/ENTITIES (ASAP Command)</a></div>
+<div><a href="../Commands/LENSES_ENTITIES_ASAP-cmdref.html" title="Signals ASAP that lens definition commands follow.">LENSES ENTITIES (ASAP Command)</a></div>
+<div><a href="../Commands/PRINT_Polarization_Models_ASAP-cmdref.html" title="Print defined surface polarization modifiers.">PRINT (Polarization Models) (ASAP Command)</a></div>
+<div><a href="../Commands/SURFACES_FUNCTIONS_ENTITIES_ASAP-cmdref.html" title="Signals ASAP that surface definition commands follow.">SURFACES/FUNCTIONS/ENTITIES (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

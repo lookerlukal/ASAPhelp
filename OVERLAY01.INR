@@ -1,0 +1,25 @@
+!!++
+!! OVERLAY01.INR
+!! Title: OVERLAY to Combine Plots
+!! Category: Isolated Command
+!! Keywords: OVERLAY, plot
+!! Description: Examples of using OVERLAY
+!! to combine plots into a single plot. 
+!! Edit History: (latest first)
+!! 10/10/2000 - cp - modified format; added description
+!! 01/01/1996 - bro - creation
+!!-- 
+
+!! Probably the most common example of OVERLAY - 
+!! plotting the ray trace over the system profile.
+WINDOW Y Z
+PROFILES OVERLAY
+TRACE PLOT
+
+
+!! Overlays several plots to create a composite plot.
+WINDOW X Z
+PLOT LIMITS OVERLAY
+PROFILES OVERLAY
+TRACE PLOT OVERLAY PLOT BEAMS
+

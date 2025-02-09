@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Interactive Scripts - Variable Template"/>
+<meta name="abstract" content="To create a template file, you must first create an INR file in ASAP. Designate variables for the template with the following syntax."/>
+<meta name="description" content="To create a template file, you must first create an INR file in ASAP. Designate variables for the template with the following syntax."/>
+<meta name="DC.subject" content="Interactive Scripts - Variable Template, Variable Template, Interactive Scripts, template, variable"/>
+<meta name="keywords" content="Interactive Scripts - Variable Template, Variable Template, Interactive Scripts, template, variable"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Quick_Start_Toolbar_Interactive_Scripts-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Add_New_Dialog-task.html#Add_New_Dialog"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Interactive_Scripts_Geometry_Template_Dialog-task.html#Interactive_Scripts_Geometry_Template_Dialog"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Interactive_Scripts_Menu-task.html#Interactive_Scripts_Menu"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Interactive_Scripts_Procedure-task.html#Interactive_Scripts_Procedure"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Interactive_Scripts_Variable_Template"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Interactive Scripts - Variable Template</title>
+</head>
+<body id="Interactive_Scripts_Variable_Template"><a name="Interactive_Scripts_Variable_Template"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Interactive Scripts - Variable Template</h5></span> 
+   
+  
+  <div><p>To create a template file, you must first create an INR file in
+	 ASAP. Designate variables for the template with the following syntax. 
+  </p>
+ 
+	 <div class="section" id="Interactive_Scripts_Variable_Template__section_D3BFB111FA1247BFAF4DAE54EDA17275"><a name="Interactive_Scripts_Variable_Template__section_D3BFB111FA1247BFAF4DAE54EDA17275"><!-- --></a> 
+		<pre class="codeblock">&lt;|VariableName|&gt;</pre>
+ 
+		<br/><a name="Interactive_Scripts_Variable_Template__ul_E328013092F54E6F876FFF3E64F28C32"><!-- --></a><ul id="Interactive_Scripts_Variable_Template__ul_E328013092F54E6F876FFF3E64F28C32"> 
+		  <li id="Interactive_Scripts_Variable_Template__li_E757787023344FAD89D2BDD609C37252"><a name="Interactive_Scripts_Variable_Template__li_E757787023344FAD89D2BDD609C37252"><!-- --></a>The variable must start
+			 with “&lt;|”. 
+		  </li>
+ 
+		  <li id="Interactive_Scripts_Variable_Template__li_7F04DD975EFC40E58FCAA418BBF9748B"><a name="Interactive_Scripts_Variable_Template__li_7F04DD975EFC40E58FCAA418BBF9748B"><!-- --></a>The variable must end with
+			 “|&gt;”. 
+		  </li>
+ 
+		  <li id="Interactive_Scripts_Variable_Template__li_AC3E4921AF6C4E3FAA14F988FC4D2C9F"><a name="Interactive_Scripts_Variable_Template__li_AC3E4921AF6C4E3FAA14F988FC4D2C9F"><!-- --></a>The 
+			 <i>VariableName</i> can be any name you designate. 
+		  </li>
+ 
+		  <li id="Interactive_Scripts_Variable_Template__li_F8BC739CAC114EE98F46A22F91E27135"><a name="Interactive_Scripts_Variable_Template__li_F8BC739CAC114EE98F46A22F91E27135"><!-- --></a> No spaces can exist. 
+		  </li>
+ 
+		  <li id="Interactive_Scripts_Variable_Template__li_9D9EF6FE7D76420B848C816F300842C7"><a name="Interactive_Scripts_Variable_Template__li_9D9EF6FE7D76420B848C816F300842C7"><!-- --></a>No duplicate variable
+			 names can exist. 
+		  </li>
+ 
+		</ul>
+ 
+		<p>You can then add the template to the Interactive Scripts page on the
+		  Quick Start toolbar, using the methods described. When you drag and drop a
+		  template file to open it, you are prompted with a dialog to fill in the
+		  variables. 
+		</p>
+ 
+		<p><b>Example</b> - Template INR Script 
+		</p>
+ 
+		<pre class="codeblock">
+SYSTEM NEW
+RESET
+
+MEDIA
+  COATING PROPERTIES
+    1.0   0.0  'REFLECT'
+    0.0   1.0  'TRANSMIT'
+    0.5   0.5  'BEAMSPLITTER'
+
+!! Create geometry
+SURFACE
+  PLANE Z 0 RECT 10 10 
+OBJECT 'ELEMENT_1'
+  INTERFACE COATING REFLECT &lt;|MEDIA1|&gt; AIR
+SURFACE
+  PLANE Z 1 RECT 10 10 
+OBJECT 'ELEMENT_2'
+  INTERFACE COATING TRANSMIT &lt;|MEDIA2|&gt; AIR
+
+!! Verify the properties of the object
+PRINT OBJECTS
+
+!! Change the properties associated with the first object
+OBJECT 1
+  INTERFACE COATING BEAMSPLITTER &lt;|MEDIA3|&gt; AIR
+  
+!! Verify that the changed properties
+PRINT OBJECTS
+
+RETURN
+</pre>
+ 
+		<p>When you drag/drop the script, you are prompted to fill in the missing
+		  variables in the Interactive Scripts - Geometry Template dialog. 
+		</p>
+ 
+		<p>When you click 
+		  <b>OK</b>, you are prompted to save the file under a new name so that
+		  the original template file can be preserved. The new file is then opened as: 
+		</p>
+ 
+		<pre class="codeblock">
+SYSTEM NEW
+RESET
+
+MEDIA
+  COATING PROPERTIES
+    1.0   0.0  'REFLECT'
+    0.0   1.0  'TRANSMIT'
+    0.5   0.5  'BEAMSPLITTER'
+
+!! Create geometry
+SURFACE
+  PLANE Z 0 RECT 10 10
+OBJECT 'ELEMENT_1'
+  INTERFACE COATING REFLECT SCHOTT_BK7 AIR
+SURFACE
+  PLANE Z 1 RECT 10 10 
+OBJECT 'ELEMENT_2'
+  INTERFACE COATING TRANSMIT AIR AIR
+
+!! Verify the properties of the object
+PRINT OBJECTS
+
+!! Change the properties associated with the first object
+OBJECT 1
+  INTERFACE COATING BEAMSPLITTER AIR AIR
+  
+!! Verify that the changed properties
+PRINT OBJECTS
+
+RETURN
+</pre>
+ 
+		<p>To edit the actual template file, you can double-click it or
+		  right-click and select 
+		  <b>Edit</b> from the pop-up menu. 
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Task/Quick_Start_Toolbar_Interactive_Scripts-task.html" title="The Interactive Scripts button (formerly named the User INR Scripts) on the Quick Start toolbar, opens the tree view and gives you quick access to interactive and user-defined script files. You can add, remove, open, and run example interactive script files and user-defined script files.">Quick Start Toolbar - Interactive Scripts</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Add_New_Dialog-task.html#Add_New_Dialog" title="The Add New dialog box opens in the following situations from the Quick Start toolbar:">Add New Dialog</a></div>
+<div><a href="../Task/Interactive_Scripts_Geometry_Template_Dialog-task.html#Interactive_Scripts_Geometry_Template_Dialog" title="The Geometry Template (formerly User-Defined Geometry Template) dialog box opens when you drag and drop an INR file onto the Interactive Scripts page of the Quick Start toolbar for the purpose of creating a template. Fill in any missing variables for MEDIA in this dialog box.">Interactive Scripts - Geometry Template Dialog</a></div>
+<div><a href="../Task/Interactive_Scripts_Menu-task.html#Interactive_Scripts_Menu" title="When you right-click an interactive script file name on the Interactive Scripts tab of the Quick Start toolbar, a context menu displays these commands: Open, Run, Add New, Remove, Delete, and Properties.">Interactive Scripts Menu</a></div>
+<div><a href="../Task/Interactive_Scripts_Procedure-task.html#Interactive_Scripts_Procedure" title="The Interactive Scripts page on the Quick Start toolbar includes files under the categories of Bio-Optical Models, Array Enhancers, Lens Creation, and User-Defined.">Interactive Scripts - Uses</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

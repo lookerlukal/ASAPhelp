@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Ray Tracing Overview"/>
+<meta name="abstract" content="Ray tracing is accomplished by the RAY and TRACE commands. The fundamental difference between these commands is the permanence of the rays."/>
+<meta name="description" content="Ray tracing is accomplished by the RAY and TRACE commands. The fundamental difference between these commands is the permanence of the rays."/>
+<meta name="DC.subject" content="Ray Tracing Overview"/>
+<meta name="keywords" content="Ray Tracing Overview"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_OR-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Ray_Trace_Data-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Types_of_Ray_Tracing_Data_Saved_by_ASAP-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Ray_Tracing_Improving_Speed-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Ray_Tracing_Tips-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Ray_Tracing_Utility_Commands-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Types_of_Ray_Tracing_Data_Saved_by_ASAP-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/RAY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TRACE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Diffraction_Calculations-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Polarization_Ray_Tracing_Overview-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Ray_Tracing_Overview"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Ray Tracing Overview</title>
+</head>
+<body id="Ray_Tracing_Overview"><a name="Ray_Tracing_Overview"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Ray Tracing Overview</h5></span> 
+   
+   
+  <div><p>Ray tracing is accomplished by the 
+	 <b>RAY 
+	 </b> and 
+	 <b>TRACE 
+	 </b> commands. The fundamental difference between these commands is
+	 the permanence of the rays. 
+  </p>
+ 
+	 <div class="section"> 
+		<div class="note"><span class="notetitle">Note:</span> The 
+		  <b>RAY 
+		  </b> command is commonly used for diagnostic purposes, while the 
+		  <b>TRACE 
+		  </b> command is used more generally. 
+		</div>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="../Concept/Ray_Trace_Data-conc.html">Ray Trace Data</a></strong><br/>
+The STATS and LIST commands can provide you with specific ray trace information on an OBJECT by OBJECT basis or on a ray-by-ray basis, respectively, which may help you understand the propagation of energy within the opto-mechanical system under analysis.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Types_of_Ray_Tracing_Data_Saved_by_ASAP-ref.html">Ray Tracing Data Saved by ASAP</a></strong><br/>
+For each ray traced by ASAP, types of data can be saved in ASAP (in the virtual.pgs file), depending on the XMEMORY setting and your particular edition of ASAP. This topic lists these types of data.</li>
+<li class="ulchildlink"><strong><a href="../Task/Ray_Tracing_Improving_Speed-task.html">Ray Tracing - Improving Speed</a></strong><br/>
+The ray trace algorithm used in ASAP is optimized for speed and accuracy. This topic describes how you can speed up the process.</li>
+<li class="ulchildlink"><strong><a href="../Concept/Ray_Tracing_Tips-conc.html">Ray Tracing Tips</a></strong><br/>
+ASAP begins tracing rays from the point at which they were defined. Inappropriate starting points can give rise to unexpected results. This topic provides tips on ray tracing.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Ray_Tracing_Utility_Commands-ref.html">Ray Tracing Utility Commands</a></strong><br/>
+Commands that toggle flags for the ray trace algorithm, set options, thresholds and others, are referred to as utility commands. A list of these commands is included in this topic.</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_OR-ref.html" title="Reference topics in this section begin with the letters &#34;O&#34; to &#34;R&#34;.">Reference (O-R)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Diffraction_Calculations-conc.html" title="The technique ASAP uses for diffraction analysis is named beam superposition. While superposition theory is not an entirely new concept, the combination and implementation of it with real ray tracing is new. The ASAP technique is substantially enhanced to include: effects of higher-order Gaussian beam modes, polarization, and general electromagnetic wavefront propagation, including mixed coherent/incoherent spread functions.">Diffraction Calculations</a></div>
+<div><a href="../Concept/Polarization_Ray_Tracing_Overview-conc.html" title="FRESNEL BOTH initiates polarization calculations by instructing ASAP to calculate the appropriate reflection and transmission coefficients at an OBJECT INTERFACE for each ray as a function of polarization and angle of incidence.">Polarization Ray Tracing Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/RAY_ASAP-cmdref.html" title="Defines and traces a single ray.">RAY (ASAP Command)</a></div>
+<div><a href="../Commands/TRACE_ASAP-cmdref.html" title="Traces all currently selected rays in storage.">TRACE (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

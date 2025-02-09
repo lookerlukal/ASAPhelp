@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="User-Defined Macros"/>
+<meta name="abstract" content="User-defined macros can be defined and used within an ASAP input file (*.INR) or defined and placed within a macro library for later use. In either case the syntax is the same."/>
+<meta name="description" content="User-defined macros can be defined and used within an ASAP input file (*.INR) or defined and placed within a macro library for later use. In either case the syntax is the same."/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Macro_Language-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Calling_a_Macro-ref.html#Calling_a_Macro"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Defining_a_Macro_from_the_Input_Stream-ref.html#Defining_a_Macro_from_the_Input_Stream"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Internally_Defined_Macros-conc.html#Internally_Defined_Macros"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Increasing_Macro_Command_Execution_Speed-task.html#Increasing_Macro_Command_Execution_Speed"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Creating_a_Macro_Library_File-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Sharing_Library_Files-ref.html#Sharing_Library_Files"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/IO_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DOMACROS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/CAD_Library-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Defining_Interpolation_Functions-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="User_Defined_Macros"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>User-Defined Macros</title>
+</head>
+<body id="User_Defined_Macros"><a name="User_Defined_Macros"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>User-Defined Macros </h5></span>
+	
+	<div><p>User-defined macros can be defined and used within an ASAP input file (*.INR) or defined and placed within a macro library for later use. In either case the syntax is the same.</p>
+
+		<div class="section" id="User_Defined_Macros__section_8E0814F8B57D469590D39470743218FA"><a name="User_Defined_Macros__section_8E0814F8B57D469590D39470743218FA"><!-- --></a><span style="color: #2b6eb5"><h5>Syntax</h5></span>
+			
+			<p>The two formats are short or long, respectively: </p>
+
+			<p>Short format:</p>
+
+			<pre class="codeblock">
+name { [ n ] [ description ]
+    :
+    definition records
+    :
+}
+</pre>
+
+			<p>Long format:</p>
+
+			<pre class="codeblock">
+$$name  m  [ n ] ...
+    $&amp;    label
+    &amp;$
+    &amp;&amp;
+  : 
+    m records in macro definition or until "label" literal record reached
+     :
+[label]
+</pre>
+
+		<p>Long format macro definitions can be created from the input stream by prefixing the name with two macro prefix characters and entering on successive records the m records in the definition. </p>
+
+			<p>An alternative to specifying the integer number of records <b>m</b> in advance is to use a record starting with the given literal (for example, "_") after the last definition record (and before the n argument prompt definitions). The first prefix character determines whether the macro is defined and executed ($), or just defined (&amp;). </p>
+
+			<p>The second character determines whether the individual records in the macro are displayed ($) or not (&amp;). </p>
+
+		</div>
+
+		<div class="section" id="User_Defined_Macros__section_82CF3CEA8D8C469D885DBA3A37190C51"><a name="User_Defined_Macros__section_82CF3CEA8D8C469D885DBA3A37190C51"><!-- --></a><span style="color: #2b6eb5"><h5>Syntax</h5></span>
+			
+			<pre class="codeblock">
+               Prefix          Action
+               ------+------------------------- 
+                $$        Define, execute, and echo
+                $&amp;        Define and execute 
+                &amp;$        Define and echo                
+					           &amp;&amp;  Just define
+</pre>
+
+			<p>For example, to simply define a macro NAME using a meaningful label: </p>
+
+			<pre class="codeblock">
+                &amp;&amp;NAME EOM
+                    :
+                EOM
+</pre>
+
+		</div>
+
+		<div class="section" id="User_Defined_Macros__section_EE48ADFCBF344FD1A4B86D2226FA75FE"><a name="User_Defined_Macros__section_EE48ADFCBF344FD1A4B86D2226FA75FE"><!-- --></a>
+			<div class="note"><span class="notetitle">Note:</span> 
+				<p>As opposed to $GO and $ERR, <b>label</b> must be in the currently acceptable case (see $CASE). Actually, the above syntax can now also be in short format as follows:</p>
+
+				<pre class="codeblock">
+                NAME { 
+                   :
+                }
+</pre>
+</div>
+
+		</div>
+
+		<div class="section" id="User_Defined_Macros__section_BA7B73A60F944A8B8EA46B4467DF03DE"><a name="User_Defined_Macros__section_BA7B73A60F944A8B8EA46B4467DF03DE"><!-- --></a><span style="color: #2b6eb5"><h5>Remarks</h5></span>
+			
+			<br/><a name="User_Defined_Macros__ul_A4B8961E569448CEB5D9F8230525E83F"><!-- --></a><ul id="User_Defined_Macros__ul_A4B8961E569448CEB5D9F8230525E83F">
+				<li id="User_Defined_Macros__li_005855E5CB9C4C3892ADE2B658667EA4"><a name="User_Defined_Macros__li_005855E5CB9C4C3892ADE2B658667EA4"><!-- --></a><i>First record</i>: The first record of the macro definition contains the macro name and, optionally, the number of argument prompt arguments. This record is read in an unformatted manner starting in column 1. The numerical entries are separated by blanks.</li>
+
+				<li id="User_Defined_Macros__li_EF9B35076E5B4912857A5E7CB56EBDE6"><a name="User_Defined_Macros__li_EF9B35076E5B4912857A5E7CB56EBDE6"><!-- --></a><p><i>Macro names</i>: must start with a letter, and can be the same as a standard ASAP command without causing conflicts. (In this latter case, first enter a</p>
+
+					<p><b>DOMACROS FIRST</b> command to establish the search order for identifying the commands.) However, do not name your macro the same as any of the predefined macros, such as <b>$ASK, $IO, $SCR</b>, or a conflict will occur.</p>
+</li>
+
+				<li id="User_Defined_Macros__li_D78E8617AA454111B8AA2F8413104559"><a name="User_Defined_Macros__li_D78E8617AA454111B8AA2F8413104559"><!-- --></a><i>Argument prompt records</i>: optional, but are strongly recommended as a means of documenting variables.</li>
+
+				<li id="User_Defined_Macros__li_FAE1FF9A9798488B8A2CB41C15324216"><a name="User_Defined_Macros__li_FAE1FF9A9798488B8A2CB41C15324216"><!-- --></a><i>Macros defined in an *.INR file</i>: automatically stored in separate files called <b>name.mac</b>. The '<b>comments</b>' are replaced in the *.MAC file with a <b>!comments</b> header for documentation purposes.</li>
+
+				<li id="User_Defined_Macros__li_D1E227B38D0E4D248BAC2F14D65C6EE7"><a name="User_Defined_Macros__li_D1E227B38D0E4D248BAC2F14D65C6EE7"><!-- --></a><i>Macros stored in a macro library file</i> (libname.<b>lib</b>): any number of blank lines or comment lines (starting with an exclamation point "!" or asterisk "*") may be inserted before the start of each definition to enhance readability of the macro library file. Avoid placing comments within the macro definition, especially on the last line after the closing bracket. (Macros defined in a library file are not available until the macro library is attached to ASAP. Use the $IO command to do this. For example, to attach a macro library named UTILITY.LIB, you would enter <b>$IO LIBRARY UTILITY.LIB</b>; from that point on, all of the macros in this library are available.)</li>
+
+				<li id="User_Defined_Macros__li_4EDA0492C6B3424799DD19DC785CDFD7"><a name="User_Defined_Macros__li_4EDA0492C6B3424799DD19DC785CDFD7"><!-- --></a><i>Macro commands</i>: are unformatted, like all other commands. There can be only one user macro command per input record, and it should be the last command on the record. </li>
+
+				<li id="User_Defined_Macros__li_11B191DF57F14DB398D65FFCF45FDA64"><a name="User_Defined_Macros__li_11B191DF57F14DB398D65FFCF45FDA64"><!-- --></a><i>Printing commands</i>: prefixing the macro name with a dollar sign "<b>$</b>" causes ASAP to print the commands in the macro definition after the variables have been replaced by their corresponding arguments. Only the macro command itself is printed when the ampersand "<b>&amp;</b>" is used as the prefix.</li>
+
+				<li id="User_Defined_Macros__li_5B1E22D012EF4657A67C0C323204A8D2"><a name="User_Defined_Macros__li_5B1E22D012EF4657A67C0C323204A8D2"><!-- --></a><i>Referencing other user-defined macros</i>: User-defined macros may reference other user-defined macros up to nine levels. Predefined macros do not change the level of macro nesting. </li>
+
+				<li id="User_Defined_Macros__li_22DCC223D0B24CC69407FF8315FB05E9"><a name="User_Defined_Macros__li_22DCC223D0B24CC69407FF8315FB05E9"><!-- --></a><i>Passing variables</i>: Up to 99 variables may be passed to a macro. Variables may include literals as well as numbers. Within the macro, variables are referred to by a pound sign “#” followed by a one- or two-digit integer between 1 and 99, corresponding to the variable’s order when the macro is called. The “<b>#0</b>” indicates the number of arguments actually present.</li>
+
+				<li id="User_Defined_Macros__li_3937E67A718D4C159944AD5A02A9930C"><a name="User_Defined_Macros__li_3937E67A718D4C159944AD5A02A9930C"><!-- --></a><i>Variables within a macro</i> are replaced character for character with the input. An expanded macro record cannot exceed 128 characters.</li>
+
+				<li id="User_Defined_Macros__li_9741A7CD9F724415B7DE6D59037ABF5B"><a name="User_Defined_Macros__li_9741A7CD9F724415B7DE6D59037ABF5B"><!-- --></a><i>Arguments</i>: If an argument is not present on the macro command that is referenced in the macro definition, then ASAP prompts you for the argument (interactive mode), or the variable is replaced with a null entry (batch mode).</li>
+
+			</ul>
+
+		</div>
+
+
+	</div>
+ 
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/ASAP_Macro_Language-conc.html">ASAP Macro Language</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Internally_Defined_Macros-conc.html#Internally_Defined_Macros" title="The internally defined macros are contained within the parser (and therefore are always available). These macros give the program looping, input/output redirection, conditional (IF) processing, branching, and other advanced capabilities. Internally defined macros may be used freely in both user-defined macros and general input commands and may appear more than once in a given record.">Internally Defined Macros</a></div>
+<div><a href="../Concept/Defining_Interpolation_Functions-conc.html" title="The one- and two-dimensional interpolation functions (F1LINTERP and F2LINTERP) are found in the source code. These routines are used only locally (that is, by the user-definable routines), and you can modify them.">Defining Interpolation Functions</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Increasing_Macro_Command_Execution_Speed-task.html#Increasing_Macro_Command_Execution_Speed">Increasing Macro Command Execution Speed</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Calling_a_Macro-ref.html#Calling_a_Macro" title="A macro command is unformatted like all other commands. There can be only one user macro command per input record and it should be the last command on the record. The first entry of a macro command is either a dollar sign &#34;$&#34; or ampersand &#34;&amp;&#34; followed immediately by the macro name. The name can be of any length but only the first 32 characters are significant. The dollar sign &#34;$&#34; causes the program to print the commands in the macro definition after the variables have been replaced by their corresponding arguments. Only the macro command itself is printed when the ampersand &#34;&amp;&#34; is used.">Calling a Macro</a></div>
+<div><a href="../Reference/Defining_a_Macro_from_the_Input_Stream-ref.html#Defining_a_Macro_from_the_Input_Stream" title="Instead of defining macros in the library file, you can create individual macro files directly from the input stream. There are two formats, a short or long, respectively:">Defining a Macro from the Input Stream</a></div>
+<div><a href="../Reference/Creating_a_Macro_Library_File-ref.html" title="Multiple macro definitions are stored in a library on logical unit 24 by default. Definitions may be created either directly by an ASCII editor or during the decoding of the input by the program.">Creating a Macro Library File</a></div>
+<div><a href="../Reference/Sharing_Library_Files-ref.html#Sharing_Library_Files" title="In environments where multiple engineers work together, you may want to share ASAP library files (*.LIB). If the PC's running ASAP are connected via a LAN, two methods in which LIB files can be shared enable you to modify a LIB file so that other staff can use the information.">Sharing Library Files</a></div>
+<div><a href="../Reference/CAD_Library-ref.html" title="The BRO CAD library (cad.lib) contains macros for turning common ASAP surfaces into parameterized (EDGE/CURVE-based objects).">CAD Library</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/IO_macro_ASAP-cmdref.html" title="Controls I/O redirection.">$IO (ASAP Macro)</a></div>
+<div><a href="../Commands/DOMACROS_ASAP-cmdref.html" title="Controls when currently defined macros are executed relative to top-level ASAP commands.">DOMACROS (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

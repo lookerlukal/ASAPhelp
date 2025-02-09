@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="END (ASAP Command)"/>
+<meta name="abstract" content="Terminates program processing."/>
+<meta name="description" content="Terminates program processing."/>
+<meta name="DC.subject" content="END (ASAP Command), stop processing, ASAP, end processing"/>
+<meta name="keywords" content="END (ASAP Command), stop processing, ASAP, end processing"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_E-ref.html#Commands_and_Macros_E"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EXIT_macro_ASAP-cmdref.html#EXIT_ASAP_Macro"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/End_ASAP_Session-conc.html#End_ASAP_Session"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="END_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>END (ASAP Command)</title>
+</head>
+<body id="END_ASAP_Command"><a name="END_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>END (ASAP Command)</h5></span>
+	
+	
+	<div><p>Terminates program processing. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+END [ OFF ]
+      NOW
+
+     </pre>
+
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="END_ASAP_Command__ul_363B53FBB9084575AAF0BC6D54F8D828"><!-- --></a><ol id="END_ASAP_Command__ul_363B53FBB9084575AAF0BC6D54F8D828">
+			<li id="END_ASAP_Command__li_E95679AF17194D809F8D0518354F082A"><a name="END_ASAP_Command__li_E95679AF17194D809F8D0518354F082A"><!-- --></a> Immediately terminates the current session
+				of ASAP and does either of two things: <br/><ol type="a">
+					<li>f in batch mode, returns control to the operating system, or </li>
+
+					<li>If in interactive mode, executes a <b>SYSTEM NEW</b> and
+							<b>RESET</b>.</li>
+
+				</ol>
+</li>
+
+			<li id="END_ASAP_Command__li_53BF97583569482EA2BF3C16349A73F3"><a name="END_ASAP_Command__li_53BF97583569482EA2BF3C16349A73F3"><!-- --></a>The <b>OFF</b> option
+				temporarily turns off the processing of the <b>END</b> command. In other
+				words, any <b>END</b> command following an <b>END OFF</b>
+				command does not terminate the session but simply switches the input to interactive
+				mode. This is useful for executing input files in interactive mode that also work
+				properly in batch mode. To terminate the session under these conditions, enter an
+					<b>END </b><b>NOW</b> or <b>$EXIT</b>
+				command. </li>
+
+		</ol>
+
+		<p><b>Examples</b>
+		</p>
+
+		<pre class="codeblock">...(other ASAP commands entered in batch mode)...
+END OFF</pre>
+
+		<p>toggles input to interactive mode </p>
+
+		<pre class="codeblock">...(other ASAP commands entered in interactive mode)...
+END NOW </pre>
+
+		<p>terminates ASAP execution </p>
+
+		<pre class="codeblock">...(other ASAP commands entered in interactive mode)...
+END  </pre>
+
+		<p>terminates ASAP execution . </p>
+
+		<p>
+			<a href="../example_scripts.html#END">END Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_E-ref.html#Commands_and_Macros_E" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “E”.">Commands and Macros (E)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/End_ASAP_Session-conc.html#End_ASAP_Session" title="The END command immediately ends the current ASAP session and prepares for a new one by returning system settings to their default values.">End ASAP Session</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/EXIT_macro_ASAP-cmdref.html#EXIT_ASAP_Macro" title="Starts immediate program termination.">$EXIT (ASAP Macro)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

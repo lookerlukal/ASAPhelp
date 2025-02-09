@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Optimization - Defining Design Objectives"/>
+<meta name="abstract" content="This topic describes how to define and enable a design objective for optimization."/>
+<meta name="description" content="This topic describes how to define and enable a design objective for optimization."/>
+<meta name="DC.subject" content="Optimization - Defining Design Objectives, Defining Design Objectives, Optimization Setup Window, design objectives, optimization"/>
+<meta name="keywords" content="Optimization - Defining Design Objectives, Defining Design Objectives, Optimization Setup Window, design objectives, optimization"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Optimization_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Getting_Started_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Optimization_Setup_Summary_Window-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Design_Variables_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Design_Variable_Dialog-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Design_Objectives_Dialog-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Define_Objective_Constraint_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimize_Objective_Constraints_ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Define_Exit_Criteria_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Exit_Criteria_Dialog-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Optimization_Set_Method_Use_Case-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Method_Dialog-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Optimization_Results-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Grid_Display_Options_dialog-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Glossary-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optimization_Design_Variable_Messages-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Optimization_Use_Case_for_Defining_Design_Objectives"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Optimization - Defining Design Objectives</title>
+</head>
+<body id="Optimization_Use_Case_for_Defining_Design_Objectives"><a name="Optimization_Use_Case_for_Defining_Design_Objectives"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Optimization - Defining Design Objectives </h5></span> 
+   
+   
+  <div><p>This topic describes how to define and enable a design objective
+	 for optimization. 
+  </p>
+ 
+	 <div class="p" id="Optimization_Use_Case_for_Defining_Design_Objectives__prereq_FF334C95C0284A1CBCBFA0871C8A764D"><a name="Optimization_Use_Case_for_Defining_Design_Objectives__prereq_FF334C95C0284A1CBCBFA0871C8A764D"><!-- --></a> Pre-requisites: 
+	 </div>
+ 
+	 <div class="section" id="Optimization_Use_Case_for_Defining_Design_Objectives__context_698ECAADC6AA4DD2A2E52A10BEDE02C1"><a name="Optimization_Use_Case_for_Defining_Design_Objectives__context_698ECAADC6AA4DD2A2E52A10BEDE02C1"><!-- --></a> 
+		<p> An open INR file that contains optimization elements such as a scalar
+		  real variable must be open in the Editor window. 
+		</p>
+ 
+	 </div>
+ 
+	 <a name="Optimization_Use_Case_for_Defining_Design_Objectives__steps_06649E0A7B134802BD015EF9E5500E12"><!-- --></a><ol id="Optimization_Use_Case_for_Defining_Design_Objectives__steps_06649E0A7B134802BD015EF9E5500E12"> 
+		<li class="stepexpand" id="Optimization_Use_Case_for_Defining_Design_Objectives__step_42960B18D44E49E58ACDCFCC230BD1A0"><a name="Optimization_Use_Case_for_Defining_Design_Objectives__step_42960B18D44E49E58ACDCFCC230BD1A0"><!-- --></a> 
+		  <span>Select text in the script containing a scalar real variable. The
+			 selected text must be a valid expression in the form 
+			 <kbd class="userinput">name=value, 
+			 </kbd> where value usually contains defined design variable names that
+			 can be evaluated to create a design objective and target value. 
+		  </span> 
+		    
+		   
+		</li>
+ 
+		<li class="stepexpand" id="Optimization_Use_Case_for_Defining_Design_Objectives__step_A9FF83D7F44946998F17AF2C33CB4772"><a name="Optimization_Use_Case_for_Defining_Design_Objectives__step_A9FF83D7F44946998F17AF2C33CB4772"><!-- --></a> 
+		  <span>Right-click the selected text and select 
+			 <b>Define Design Objective 
+			 </b> from the context menu. Alternatively, from the Optimize
+			 menu on the ASAP toolbar, select 
+			 <b>Define Design Objective</b>.</span> 
+		   The design objective displays in the list on the Design
+			 Objectives tab of the Optimization Setup Summary window. The name and target
+			 value are filled in based on user selection in the script. 
+		  <br/><a name="Optimization_Use_Case_for_Defining_Design_Objectives__image_69FC8244641D4A56A06C0FFC2015BCAC"><!-- --></a><div class="imagecenter"><img id="Optimization_Use_Case_for_Defining_Design_Objectives__image_69FC8244641D4A56A06C0FFC2015BCAC" longdesc="Optimization Design Objectives tab" src="../Graphics/Optimization_SetupSumWindow_DesignObjectivesTab.jpg" width="544" height="491"/></div><br/> 
+		</li>
+ 
+		<li class="stepexpand" id="Optimization_Use_Case_for_Defining_Design_Objectives__step_F0951811A44A47CAB01B0908C45D8A72"><a name="Optimization_Use_Case_for_Defining_Design_Objectives__step_F0951811A44A47CAB01B0908C45D8A72"><!-- --></a> 
+		  <span>You may change the target value, weight, or enabled state of the
+			 objective. 
+		  </span> 
+		    
+		   
+		</li>
+ 
+	 </ol>
+ 
+	 <div class="section" id="Optimization_Use_Case_for_Defining_Design_Objectives__result_0689127A958B463C810BA906B79DBFAA"><a name="Optimization_Use_Case_for_Defining_Design_Objectives__result_0689127A958B463C810BA906B79DBFAA"><!-- --></a>Result: 
+		<p>The design objective is defined. ASAP validates the defined design
+		  objectives and displays them in the list on the Design Objective tab. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Optimization_Use_Case_for_Defining_Design_Objectives__postreq_DFE140A72FA342A0BBD6D4E14751B4DC"><a name="Optimization_Use_Case_for_Defining_Design_Objectives__postreq_DFE140A72FA342A0BBD6D4E14751B4DC"><!-- --></a>
+
+		Post-requisites: 
+		<p>Define design variables, design objectives, objective constraints,
+		  exit criteria, and optimization methods, and select 
+		  <a name="Optimization_Use_Case_for_Defining_Design_Objectives__image_1A0EB813590B4A4FBA63D80A627E50BF"><!-- --></a><img id="Optimization_Use_Case_for_Defining_Design_Objectives__image_1A0EB813590B4A4FBA63D80A627E50BF" longdesc="Start Optimization button" src="../Graphics/Optimization_StartButton.jpg" width="126" height="22"/> on the Optimization Method tab. 
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Optimization_Overview-conc.html" title="The Optimization feature in ASAP addresses your need to optimize optical systems under evaluation that were designed or analyzed with ASAP. This topic gives a frame of reference, focusing on criteria you need to satisfy, and the process of designating an optimization method before you can initiate an optimization run in ASAP via the user interface. Related topics are listed at the end of this and other topics for this feature.">Optimization - Overview</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Optimization_Setup_Summary_Window-conc.html" title="The Optimization Setup Summary window presents a multi-tabbed user interface for viewing and entering information that ASAP will use to optimize a system under evaluation (SUE).">Optimization - Setup Summary Window</a></div>
+<div><a href="../Concept/Optimization_Results-conc.html" title="This topic describes the Optimization Results interface, which displays the progress of the optimization process both graphically and as tabular data.">Optimization - Viewing Results</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Optimization_Getting_Started_Use_Case-task.html" title="This topic describes how to set up ASAP before you can initiate an optimization in the optimization user interface. It describes the connection between the script (INR) and the optimization user interface, which is the Optimization Setup Summary window.">Optimization - Setting Up ASAP</a></div>
+<div><a href="../Task/Optimization_Design_Variables_Use_Case-task.html" title="This topic describes how to define and enable a design variable for optimization.">Optimization - Defining Design Variables</a></div>
+<div><a href="../Task/Optimization_Define_Objective_Constraint_Use_Case-task.html" title="This topic describes how to define and enable objective constraints for optimization. It also describes how to define and assign penalty functions. Objective constraints and penalty functions are optional.">Optimization - Defining Objective Constraints</a></div>
+<div><a href="../Task/Optimization_Define_Exit_Criteria_Use_Case-task.html" title="This topic describes how to define exit criteria to use to determine completion of optimization.">Optimization - Defining Exit Criteria</a></div>
+<div><a href="../Task/Optimization_Set_Method_Use_Case-task.html" title="This topic describes how to set a predefined optimization method.">Optimization - Defining a Method</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Optimization_Design_Variable_Dialog-ref.html" title="The Design Variable tab on the Optimization Setup Summary window lists currently defined design variables for the optimization session. At least one variable must be defined to begin optimization.">Optimization Design Variable Tab</a></div>
+<div><a href="../Reference/Optimization_Design_Objectives_Dialog-ref.html" title="The Design Objectives tab on the Optimization Setup Summary window lists currently defined design objectives for the optimization session. At least one item in the list must be enabled to run optimization.">Optimization Design Objectives Tab</a></div>
+<div><a href="../Reference/Optimize_Objective_Constraints_ref.html" title="The Objective Constraints tab on the Optimization Setup Summary window displays the list of currently defined objective constraints and penalty functions for the current optimization session. Objective constraints and penalty functions are optional.">Optimization Objective Constraints Tab</a></div>
+<div><a href="../Reference/Optimization_Exit_Criteria_Dialog-ref.html" title="The Exit Criteria tab on the Optimization Setup Summary window lets you select the exit criteria that determines completion of optimization.">Optimization Exit Criteria Tab</a></div>
+<div><a href="../Reference/Optimization_Method_Dialog-ref.html" title="The Optimization Method tab on the Optimization Setup Summary window lets you select the method.">Optimization Method Tab</a></div>
+<div><a href="../Reference/Optimization_Grid_Display_Options_dialog-ref.html" title="The Grid Display Options dialog is displayed when you right-click the table in the Optimization Results window.">Optimization Results - Grid Display Options Dialog</a></div>
+<div><a href="../Reference/Optimization_Glossary-ref.html" title="This topic provides a glossary of terms for the optimization feature in ASAP.">Optimization - Glossary</a></div>
+<div><a href="../Reference/Optimization_Design_Variable_Messages-ref.html" title="This topic describes informational messages issued by ASAP when you are defining design variables, design objectives, and objective constrains for optimization. It recommends corrective action.">Optimization Informational Messages</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

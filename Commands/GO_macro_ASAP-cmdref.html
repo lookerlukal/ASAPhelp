@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="$GO (ASAP Macro)"/>
+<meta name="abstract" content="Branches to other records or skips over input records."/>
+<meta name="description" content="Branches to other records or skips over input records."/>
+<meta name="DC.subject" content="$GO (ASAP Macro), macros, branching or skipping, records, branching or skipping"/>
+<meta name="keywords" content="$GO (ASAP Macro), macros, branching or skipping, records, branching or skipping"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_G-ref.html#Commands_and_Macros_G"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CASE_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Macro_Language-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="GO_ASAP_Macro"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>$GO (ASAP Macro)</title>
+</head>
+<body id="GO_ASAP_Macro"><a name="GO_ASAP_Macro"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>$GO (ASAP Macro)</h5></span> 
+   
+   
+  <div><p>Branches to other records or skips over input records. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+$GO  m
+    +m
+    -m
+
+$GO label
+     :
+label
+     :
+      </pre>
+ 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="GO_ASAP_Macro__ul_981864D802A6409EAB8B6C3A81202644"><!-- --></a><ol id="GO_ASAP_Macro__ul_981864D802A6409EAB8B6C3A81202644"> 
+		<li id="GO_ASAP_Macro__li_E3182C1A7B16426283D2077769556F1D"><a name="GO_ASAP_Macro__li_E3182C1A7B16426283D2077769556F1D"><!-- --></a>Macro allows you to branch
+		  or skip records unconditionally. 
+		</li>
+ 
+		<li id="GO_ASAP_Macro__li_DE134C92055B45DD9EA301B9F0B54E1A"><a name="GO_ASAP_Macro__li_DE134C92055B45DD9EA301B9F0B54E1A"><!-- --></a>If 
+		  <b>m</b> is unsigned, the next record to be run is macro
+		  record 
+		  <b>m</b> 
+		</li>
+ 
+		<li id="GO_ASAP_Macro__li_C8103785442041258C4E9ED411D52FF7"><a name="GO_ASAP_Macro__li_C8103785442041258C4E9ED411D52FF7"><!-- --></a>If 
+		  <b>m</b> is signed, the next record to be run is the next
+		  record plus or minus 
+		  <b>m</b> 
+		</li>
+ 
+		<li id="GO_ASAP_Macro__li_C902BB8078774FE4BC3EB10346F95EC3"><a name="GO_ASAP_Macro__li_C902BB8078774FE4BC3EB10346F95EC3"><!-- --></a>If the target record goes
+		  beyond the end of the macro definition, the macro run is terminated after the
+		  current record is processed. 
+		</li>
+ 
+		<li id="GO_ASAP_Macro__li_B07FB33958F14941B89EFD3FDA7CED45"><a name="GO_ASAP_Macro__li_B07FB33958F14941B89EFD3FDA7CED45"><!-- --></a>If a 
+		  <b>label</b> is entered, ASAP skips over input records
+		  until it finds a record with the 
+		  <b>label</b> starting in column 1. Normal input processing
+		  begins on the next record. You must first rewind the file to branch back to a
+		  previous 
+		  <b>label</b> in the input file. 
+		</li>
+ 
+		<li id="GO_ASAP_Macro__li_7EC6E6A1625E49FBBC10C88CFB593E1A"><a name="GO_ASAP_Macro__li_7EC6E6A1625E49FBBC10C88CFB593E1A"><!-- --></a>The 
+		  <b>label</b> may be in opposite case letters from the
+		  current 
+		  <b>$CASE</b> input mode (default is 
+		  <b>$CASE UPPER</b>). This way the label is ignored if the 
+		  <b>$GO</b> is commented out or skipped by using a 
+		  <b>$IF</b> structure. If using lower case for the label, be
+		  sure not to include an underscore "_" character in the name, since this is
+		  treated as upper case and generates a parsing error. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#$GO">$GO
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+  <div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_G-ref.html#Commands_and_Macros_G" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “G”.">Commands and Macros (G)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/ASAP_Macro_Language-conc.html">ASAP Macro Language</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/CASE_macro_ASAP-cmdref.html" title="Specifies case sensitivity.">$CASE (ASAP Macro)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Predefined ASAP Macros</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Predefined
+		  Macros at http://www.breault.com/k-base.php 
+		</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

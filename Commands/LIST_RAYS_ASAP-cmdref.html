@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="LIST RAYS (ASAP Command)"/>
+<meta name="abstract" content="Lists ray data in EMITTING RAYS format."/>
+<meta name="description" content="Lists ray data in EMITTING RAYS format."/>
+<meta name="DC.subject" content="LIST RAYS (ASAP Command), ray data, list in EMITTING RAYS format, Jones vector form, polarization, list states, Stokes vector form"/>
+<meta name="keywords" content="LIST RAYS (ASAP Command), ray data, list in EMITTING RAYS format, Jones vector form, polarization, list states, Stokes vector form"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_L-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_RAYS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LIST_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LIST_ELLIPSE_ASAP-cmdref.html#LIST_ELLIPSE_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LIST_INTEGER_ASAP-cmdref.html#LIST_INTEGER_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LIST_Parabasal_Ray_Data_ASAP-cmdref.html#LIST_Parabasal_Ray_Data_ASAP_Command"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="LIST_RAYS_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>LIST RAYS (ASAP Command)</title>
+</head>
+<body id="LIST_RAYS_ASAP_Command"><a name="LIST_RAYS_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>LIST RAYS (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Lists ray data in 
+	 <b>EMITTING RAYS</b> format. 
+  </p>
+ 
+	 <p><b>Syntax 1 - Non-polarized</b> 
+	 </p>
+ 
+	 <pre class="codeblock">LIST RAYS</pre>
+ 
+	 <p><b>Syntax 2 - Polarized</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+LIST RAYS [POLARIZATION] [JONES|STOKES]</pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span> 
+			 <p>Option 
+			 </p>
+</span></th><th><span> 
+			 <p>Description 
+			 </p>
+</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> POLARIZATION 
+		  </span></td><td><span> Lists polarization states of the current ray set if
+			 the rays carry polarization state information. 
+		  </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> JONES|STOKES 
+		  </span></td><td><span> Lists the polarization state in a particular form. 
+			 <b>JONES</b> represents Jones vector form, and 
+			 <b>STOKES</b> represents Stokes vector form. 
+		  </span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="LIST_RAYS_ASAP_Command__ul_C1186D7F7D074D02BA03C13AA8F18DC1"><!-- --></a><ol id="LIST_RAYS_ASAP_Command__ul_C1186D7F7D074D02BA03C13AA8F18DC1"> 
+		<li id="LIST_RAYS_ASAP_Command__li_DF4D52C30D7840EF84C0BBA268A22C45"><a name="LIST_RAYS_ASAP_Command__li_DF4D52C30D7840EF84C0BBA268A22C45"><!-- --></a><b>LIST</b>s the
+		  position, direction, flux, size, and divergence of each ray/beam in a format
+		  compatible with the input to the 
+		  <b>EMITTING RAYS</b> command. 
+		</li>
+ 
+		<li id="LIST_RAYS_ASAP_Command__li_08B55F018DC9474183EC189DD93B1D65"><a name="LIST_RAYS_ASAP_Command__li_08B55F018DC9474183EC189DD93B1D65"><!-- --></a> Can print in local or
+		  global coordinate system, as in 
+		  <b>LIST</b> 
+		  <b>DIR</b> or 
+		  <b>POS</b> commands (controlled by 
+		  <b>AXIS</b> command). 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#LIST RAYS">LIST RAYS
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_L-ref.html" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letters &#34;J&#34; to &#34;L&#34;.">Commands and Macros (J-L)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/EMITTING_RAYS_ASAP-cmdref.html" title="Creates an arbitrary set of rays.">EMITTING RAYS (ASAP Command)</a></div>
+<div><a href="../Commands/LIST_ASAP-cmdref.html" title="Lists currently selected ray data by the second literal entry for the current ray set.">LIST (ASAP Command)</a></div>
+<div><a href="../Commands/LIST_ELLIPSE_ASAP-cmdref.html#LIST_ELLIPSE_ASAP_Command" title="Lists polarization parameters of currently selected ray data.">LIST ELLIPSE (ASAP Command)</a></div>
+<div><a href="../Commands/LIST_INTEGER_ASAP-cmdref.html#LIST_INTEGER_ASAP_Command" title="Lists ray database information.">LIST INTEGER (ASAP Command)</a></div>
+<div><a href="../Commands/LIST_Parabasal_Ray_Data_ASAP-cmdref.html#LIST_Parabasal_Ray_Data_ASAP_Command" title="Lists currently selected base and parabasal ray data.">LIST (Parabasal Ray Data) (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

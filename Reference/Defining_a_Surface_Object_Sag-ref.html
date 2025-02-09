@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Defining a Surface or Object Sag"/>
+<meta name="abstract" content="This topic lists the input arguments and return for defining an surface intersection."/>
+<meta name="description" content="This topic lists the input arguments and return for defining an surface intersection."/>
+<meta name="DC.subject" content="Defining a Surface/Object Sag, USERSAG arguments"/>
+<meta name="keywords" content="Defining a Surface/Object Sag, USERSAG arguments"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_DEF-ref.html#Reference_DEF"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/FORM_Dialog-task.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Defining_a_Surface_Object_Sag"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Defining a Surface or Object Sag</title>
+</head>
+<body id="Defining_a_Surface_Object_Sag"><a name="Defining_a_Surface_Object_Sag"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Defining a Surface or Object Sag</h5></span> 
+   
+   
+  <div><p>This topic lists the input arguments and return for defining an
+	 surface intersection. 
+  </p>
+ 
+	 <div class="section" id="Defining_a_Surface_Object_Sag__section_C05BDCD04AAB480EA67E308281CEF76C"><a name="Defining_a_Surface_Object_Sag__section_C05BDCD04AAB480EA67E308281CEF76C"><!-- --></a> 
+		<p>" \t " "FUNCTION USERSAG( R2, ASPH, N, ERRMSG ) 
+		</p>
+ 
+		<p>Input arguments: 
+		</p>
+ 
+		<p>R2 = X^2 + Y^2 where (X,Y) are coordinates of point of the surface 
+		</p>
+ 
+		<p>ASPH(1:N) = array of coefficients passed by ASAP from the DEFORM
+		  command 
+		</p>
+ 
+		<p>ERRMSG = error message string (80 characters) 
+		</p>
+ 
+		<p>Return: 
+		</p>
+ 
+		<br/><a name="Defining_a_Surface_Object_Sag__ul_698B66B38F3E41B68360678B7127ADCE"><!-- --></a><ul id="Defining_a_Surface_Object_Sag__ul_698B66B38F3E41B68360678B7127ADCE"> 
+		  <li id="Defining_a_Surface_Object_Sag__li_E57B1F5AD9C24AA78CFC1721331C2D68"><a name="Defining_a_Surface_Object_Sag__li_E57B1F5AD9C24AA78CFC1721331C2D68"><!-- --></a>additional sag to be added
+			 to OBJECT 
+		  </li>
+ 
+		  <li id="Defining_a_Surface_Object_Sag__li_0874CA58AF2542CBBF59B3CAED65670D"><a name="Defining_a_Surface_Object_Sag__li_0874CA58AF2542CBBF59B3CAED65670D"><!-- --></a>error message in ERRMSG,
+			 otherwise ERRMSG is left blank. If ERRMSG is returned non-blank, ASAP stops
+			 running. 
+		  </li>
+ 
+		</ul>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_DEF-ref.html#Reference_DEF" title="Reference topics in this section begin with the letters &#34;D-E-F&#34;.">Reference (D-F)</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/FORM_Dialog-task.html" title="Controls the form of the current distribution data to be plotted.">FORM Dialog</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

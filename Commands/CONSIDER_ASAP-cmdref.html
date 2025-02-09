@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="CONSIDER (ASAP Command)"/>
+<meta name="abstract" content="Selects a set of objects for ray tracing and plotting."/>
+<meta name="description" content="Selects a set of objects for ray tracing and plotting."/>
+<meta name="DC.subject" content="CONSIDER (ASAP Command), objects, selecting"/>
+<meta name="keywords" content="CONSIDER (ASAP Command), objects, selecting"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_C-ref.html#Commands_and_Macros_C"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GROUP_ASAP-cmdref.html#GROUP_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/NUMBERS_ASAP-cmdref.html#NUMBERS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OBJECT_ASAP-cmdref.html#OBJECT_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SELECT_ASAP-cmdref.html#SELECT_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Coherent_Incoherent_Analysis-conc.html#Coherent_Incoherent_Analysis"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Isolating_Ray_Data-conc.html#Isolating_Ray_Data"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="CONSIDER_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>CONSIDER (ASAP Command)</title>
+</head>
+<body id="CONSIDER_ASAP_Command"><a name="CONSIDER_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>CONSIDER (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Selects a set of objects for ray tracing and plotting. 
+  </p>
+ 
+	 <p><b>Syntax</b>
+	 </p>
+ 
+	 <pre class="codeblock">
+CONSIDER [ ALL  ]
+           NONE
+           ONLY   [ i i' ... ]
+           EXCEPT
+           ADD
+           REMOVE
+      </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ALL</span></td><td><span>consider all known objects</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>NONE</span></td><td><span>consider no objects</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ONLY</span></td><td><span>consider only the objects specified (default is the current 
+			 <b>GROUP</b>)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>i i' ...</span></td><td><span><b>OBJECT</b> numbers or names to be
+			 considered</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>EXCEPT</span></td><td><span>consider all objects except those specified (default is the
+			 current 
+			 <b>GROUP</b>)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ADD</span></td><td><span>adds the specified objects to the previous 
+			 <b>CONSIDER</b> command</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>REMOVE</span></td><td><span>removes the specified objects from the previous 
+			 <b>CONSIDER</b> command</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b>
+	 </p>
+ 
+	 <br/><a name="CONSIDER_ASAP_Command__ul_6644B5FD148346D0AF3A09957ED8678D"><!-- --></a><ol id="CONSIDER_ASAP_Command__ul_6644B5FD148346D0AF3A09957ED8678D"> 
+		<li id="CONSIDER_ASAP_Command__li_D5C276AA564E4754A917EBAA8DDEC776"><a name="CONSIDER_ASAP_Command__li_D5C276AA564E4754A917EBAA8DDEC776"><!-- --></a>Provides control over the
+		  current set of objects ASAP is to consider in all calculations and output. All
+		  objects remain in the database at all times (that is, even when they are
+		  temporarily ignored with options other than 
+		  <b>ALL</b>, they are not deleted).
+		</li>
+ 
+		<li id="CONSIDER_ASAP_Command__li_57CCCA4A7DCF41D6879CD9197975AE7C"><a name="CONSIDER_ASAP_Command__li_57CCCA4A7DCF41D6879CD9197975AE7C"><!-- --></a>A 
+		  <b>CONSIDER</b> command by itself (with no entries)
+		  produces a list of the currently considered objects.
+		</li>
+ 
+		<li id="CONSIDER_ASAP_Command__li_6815DCE351CE4E5686BC0828F8AC65E4"><a name="CONSIDER_ASAP_Command__li_6815DCE351CE4E5686BC0828F8AC65E4"><!-- --></a>By default all objects in
+		  the system database are used.
+		</li>
+ 
+		<li id="CONSIDER_ASAP_Command__li_3356170D15544B9FA3D17ACC69E8EB4E"><a name="CONSIDER_ASAP_Command__li_3356170D15544B9FA3D17ACC69E8EB4E"><!-- --></a>The 
+		  <b>EXCEPT</b> option restricts the current object set to
+		  all objects except those specified (default is the current 
+		  <b>GROUP</b>). All objects except those may be drawn or ray
+		  traced.
+		</li>
+ 
+		<li id="CONSIDER_ASAP_Command__li_B379C883127F47EB826AF34E087CF631"><a name="CONSIDER_ASAP_Command__li_B379C883127F47EB826AF34E087CF631"><!-- --></a> Particular object numbers
+		  (or names with "?" wildcards) can be either excluded with the 
+		  <b>EXCEPT</b> option or the 
+		  <b>ONLY</b> ones considered. If no object list is given,
+		  the last 
+		  <b>GROUP</b> is used. 
+		</li>
+ 
+		<li id="CONSIDER_ASAP_Command__li_06D552C299F144DB8936967D758BE39B"><a name="CONSIDER_ASAP_Command__li_06D552C299F144DB8936967D758BE39B"><!-- --></a>The 
+		  <b>ADD</b> option adds the specified objects to the
+		  previous 
+		  <b>CONSIDER</b> command.
+		</li>
+ 
+		<li id="CONSIDER_ASAP_Command__li_78B670E0489B40B7A9015277369CA9EA"><a name="CONSIDER_ASAP_Command__li_78B670E0489B40B7A9015277369CA9EA"><!-- --></a>The current state (that is,
+		  a previous 
+		  <b>CONSIDER</b> command) can be updated using 
+		  <b>ADD</b> or 
+		  <b>REMOVE</b> instead of 
+		  <b>ONLY</b> or 
+		  <b>EXCEPT</b>, respectively.
+		</li>
+ 
+		<li id="CONSIDER_ASAP_Command__li_B9321B728BAB445D933699F43BA73420"><a name="CONSIDER_ASAP_Command__li_B9321B728BAB445D933699F43BA73420"><!-- --></a>Ray data are initially
+		  referenced by 
+		  <b>OBJECT 0</b>. Before ray tracing, 
+		  <b>CONSIDER EXCEPT 0</b> effectively turns off the ray data
+		  just as it would any other object.
+		</li>
+ 
+		<li id="CONSIDER_ASAP_Command__li_71F168AE92EE4A47A1EB26B71517607D"><a name="CONSIDER_ASAP_Command__li_71F168AE92EE4A47A1EB26B71517607D"><!-- --></a>Ray data currently
+		  associated with a given object, that is, after a ray trace, are affected in
+		  exactly the same way as the object itself.
+		</li>
+ 
+		<li id="CONSIDER_ASAP_Command__li_A2C7B6871A5A4095958CDFCCD3AFEC29"><a name="CONSIDER_ASAP_Command__li_A2C7B6871A5A4095958CDFCCD3AFEC29"><!-- --></a>When using 
+		  <b>OBJECT</b> names that are allowed to be up to 344
+		  characters in length, you can use only 40 characters in the name when you 
+		  <b>CONSIDER</b> them. If you distinguish objects by a
+		  number past the last decimal point. You must limit the name to 40 characters or
+		  less including that number, or it cannot be seen. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#CONSIDER">CONSIDER
+		  Examples</a>
+	 </p>
+
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_C-ref.html#Commands_and_Macros_C" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “C”.">Commands and Macros (C)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Coherent_Incoherent_Analysis-conc.html#Coherent_Incoherent_Analysis">Coherent - Incoherent Analysis</a></div>
+<div><a href="../Concept/Isolating_Ray_Data-conc.html#Isolating_Ray_Data">Isolating Ray Data</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/GROUP_ASAP-cmdref.html#GROUP_ASAP_Command" title="Groups a collection of objects or sources as a single unit.">GROUP (ASAP Command)</a></div>
+<div><a href="../Commands/NUMBERS_ASAP-cmdref.html#NUMBERS_ASAP_Command" title="Displays current valid media, surfaces, edges, lenses, and object members.">NUMBERS (ASAP Command)</a></div>
+<div><a href="../Commands/OBJECT_ASAP-cmdref.html#OBJECT_ASAP_Command" title="Defines an object based upon previously defined entities.">OBJECT (ASAP Command)</a></div>
+<div><a href="../Commands/SELECT_ASAP-cmdref.html#SELECT_ASAP_Command" title="Isolates a ray set for further analysis.">SELECT (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

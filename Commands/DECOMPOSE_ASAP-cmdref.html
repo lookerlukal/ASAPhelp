@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="DECOMPOSE (ASAP Command)"/>
+<meta name="abstract" content="Decomposes an existing field into a new set of Gaussian beams."/>
+<meta name="description" content="Decomposes an existing field into a new set of Gaussian beams."/>
+<meta name="DC.subject" content="DECOMPOSE (ASAP Command), Gaussian decomposition"/>
+<meta name="keywords" content="DECOMPOSE (ASAP Command), Gaussian decomposition"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_D-ref.html#Commands_and_Macros_D"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FTSIZE_ASAP-cmdref.html#FTSIZE_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Babinets_Principle-conc.html#Babinets_Principle"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/DECOMPOSE_Command_Overview-conc.html#DECOMPOSE_Command_Overview"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/DECOMPOSE_with_a_Source-conc.html#DECOMPOSE_with_a_Source"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Gaussian_Beam_Superposition_Algorithm-conc.html#Gaussian_Beam_Superposition_Algorithm"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Ray_Distributions_Apodizing-ref.html#Ray_Distributions_Apodizing"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=35"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=26"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="DECOMPOSE_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>DECOMPOSE (ASAP Command)</title>
+</head>
+<body id="DECOMPOSE_ASAP_Command"><a name="DECOMPOSE_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>DECOMPOSE (ASAP Command)</h5></span>
+	
+	
+	<div><p>Decomposes an existing field into a new set of Gaussian beams. </p>
+
+		<p><b>Syntax 1</b>
+		</p>
+
+		<pre class="codeblock">
+DECOMPOSE [ u ]
+    n.e
+      </pre>
+
+		<p><b>Syntax 2</b>
+		</p>
+
+		<pre class="codeblock">
+DECOMPOSE  [ u ]   POSITION  [ x y z CON ]  [ ADJUST ]
+            n.e   -POSITION          DIV
+                  +POSITION    a,b,c PLA
+      </pre>
+
+		<p><b>Syntax 3</b>
+		</p>
+
+		<pre class="codeblock">
+DECOMPOSE  [ u ]   DIRECTION [ m  [ a  [ a' ]  [ RECT ]  ]  ]
+             n.e  -DIRECTION
+                  +DIRECTION
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x y z</span></td><td><span>center of the CONverging or DIVerging spherical reference
+				wavefront</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CON</span></td><td><span>specifies a converging spherical reference wavefront</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ADJUST</span></td><td><span>produces an accurate decomposition</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>DIV</span></td><td><span>specifies a diverging spherical reference wavefront</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a,b,c</span></td><td><span>direction of the PLAnar reference wavefront</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>PLA</span></td><td><span>specifies a planar reference wavefront</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m</span></td><td><span>number of Gaussian beams created</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a a'</span></td><td><span>limiting cone angles for the Gaussian directions (default 90
+				degrees)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RECT</span></td><td><span>specifies limiting cone angle pattern to be rectangular instead of the
+					elliptical default </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>DIRECTION</span></td><td><span>decomposition Fourier transform</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<p><b>Syntax 1</b>
+		</p>
+
+		<br/><a name="DECOMPOSE_ASAP_Command__ul_2153F1B6561846E7A2F88F60B55A8727"><!-- --></a><ol id="DECOMPOSE_ASAP_Command__ul_2153F1B6561846E7A2F88F60B55A8727">
+			<li id="DECOMPOSE_ASAP_Command__li_624DD0AE19644A5ABED95333A8122528"><a name="DECOMPOSE_ASAP_Command__li_624DD0AE19644A5ABED95333A8122528"><!-- --></a>The <b>DECOMPOSE</b> command
+				reads the complex coherent field stored in the distribution file (number or name
+				with extension). The default is 29 or BRO029.DAT, which is normally created by a
+					<b>FIELD</b> command. The field is then decomposed into a new set of
+				propagating Gaussian beams. </li>
+
+			<li id="DECOMPOSE_ASAP_Command__li_90B565622467427683BE0E6313AD6287"><a name="DECOMPOSE_ASAP_Command__li_90B565622467427683BE0E6313AD6287"><!-- --></a>If the field is a complex vector, that is
+					<b>FRESNEL BOTH</b> is set before the <b>FIELD</b>
+				calculation), only the component specified by the last <b>POLARIZATION</b> command is decomposed. </li>
+
+			<li id="DECOMPOSE_ASAP_Command__li_A7B6CD680F0A4CC7A877244530F6C020"><a name="DECOMPOSE_ASAP_Command__li_A7B6CD680F0A4CC7A877244530F6C020"><!-- --></a>Negligible beams are not created; that is,
+				their relative flux is below the <b>CUTOFF</b> command floating entry or
+				their relative flux is below <b>HALT</b>. </li>
+
+			<li id="DECOMPOSE_ASAP_Command__li_A5CF0FD9EEA746119E124C3D7F6A2DBC"><a name="DECOMPOSE_ASAP_Command__li_A5CF0FD9EEA746119E124C3D7F6A2DBC"><!-- --></a> For example, to decompose properly a
+				vector field propagating mostly in the Z direction:
+				<pre class="codeblock">     
+     RAYS 0
+     POLARIZ X; DECOMPOSE ...
+     POLARIZ Y; DECOMPOSE ...</pre>
+</li>
+
+			<li id="DECOMPOSE_ASAP_Command__li_861FE9984C5543E18B5A55A5183B530F"><a name="DECOMPOSE_ASAP_Command__li_861FE9984C5543E18B5A55A5183B530F"><!-- --></a>The new ray set is automatically added to
+				the current ray set, and a new source with the current <b>WAVELENGTH</b>
+				command is created. If, however, the <b>DECOMPOSE</b> command is
+				immediately preceded by a <b>RAYS 0</b> command, the current ray set is
+				deleted before the new ray set is created. </li>
+
+		</ol>
+
+		<p><b>Syntax 2</b>
+		</p>
+
+		<br/><a name="DECOMPOSE_ASAP_Command__ul_440657E1E4AD4627A0ACA1BB758F1855"><!-- --></a><ol id="DECOMPOSE_ASAP_Command__ul_440657E1E4AD4627A0ACA1BB758F1855">
+			<li id="DECOMPOSE_ASAP_Command__li_6C64E5E8A46C48EB980CE10D0F45E067"><a name="DECOMPOSE_ASAP_Command__li_6C64E5E8A46C48EB980CE10D0F45E067"><!-- --></a> The <b>POSITION</b>al
+				decomposition creates a straight forward spatial distribution of beams, one per
+				input field pixel (as defined by the last <b>PIXELS</b> command) and is
+				used only when the pixel size is a few wavelengths or larger. <p>The direction of
+					each beam in the new grid is adjusted to be normal to the local phase front.
+					</p>
+<p>To make this determination more robust, a <b>CON</b>verging
+					or <b>DIV</b>erging spherical (centered at <b>x y z</b>)
+					or <b>PLA</b>nar (with direction <b>a,b,c)</b> reference
+					wavefront can also be specified. </p>
+<p>The first setting on the last <b>WIDTH</b> command controls the overlap of beams. </p>
+</li>
+
+		</ol>
+
+		<p><b>Syntax 3</b>
+		</p>
+
+		<br/><a name="DECOMPOSE_ASAP_Command__ul_38A687C4DC2840279E3C24B2DE94B08E"><!-- --></a><ol id="DECOMPOSE_ASAP_Command__ul_38A687C4DC2840279E3C24B2DE94B08E">
+			<li id="DECOMPOSE_ASAP_Command__li_FCD0CA5E78324890901607DDBA2C0510"><a name="DECOMPOSE_ASAP_Command__li_FCD0CA5E78324890901607DDBA2C0510"><!-- --></a> The <b>DIRECTION</b>al
+				decomposition Fourier transforms the field and creates up to <b>m</b>
+				(actual integer number or floating point fraction of maximum possible, default 0.1)
+				Gaussian beams whose sum closely approximates the original field distribution. The
+				centers and waists of the beams are all located at the center of the original field
+				distribution. The beams all have the same widths (chosen such that they are
+				uniformly distributed in the far field), but different propagation directions. <p>The <b>a</b>'s are the limiting cone angles in degrees (default is
+					90, that is, a full hemisphere) for the Gaussian directions and should be set to
+					the acceptance cone of the subsequent optical system. </p>
+<p>When the <b>RECT</b> option is used this cone is rectangular instead of
+					elliptical. </p>
+<p>If you want the number of beams given to just fill the given
+					angular cone, then (assuming <b>a=a'</b> and a square <b>WINDOW</b>)
+					the spatial sampling interval of the original field must be: </p>
+<p>
+					<br/><a name="DECOMPOSE_ASAP_Command__image_CF9067D67DD340B086F28394B1A79819"><!-- --></a><img id="DECOMPOSE_ASAP_Command__image_CF9067D67DD340B086F28394B1A79819" src="../Equations/DECOMPOSE_equation1.gif" width="141" height="108"/><br/>
+				</p>
+<p>where λ is wavelength, N is the size of the FFT used (set by the last
+						<b>FTSIZE</b> command), and <b>c</b> is either 4 for
+						<b>RECT</b> or Π otherwise. Therefore, the <b>PIXEL</b> setting for the original field should be the <b>WINDOW</b> size divided by <b>d</b>. </p>
+<p>The overlap of
+					the beams in the far field is controlled by the first setting on the last
+						<b>WIDTH</b> command. The <b>ADJUST</b> option takes
+					into account this overlap and produces a more accurate decomposition in most
+					cases. </p>
+</li>
+
+			<li id="DECOMPOSE_ASAP_Command__li_5250A480DC3145C9B68251C40A5D0BC3"><a name="DECOMPOSE_ASAP_Command__li_5250A480DC3145C9B68251C40A5D0BC3"><!-- --></a>The accuracy of the decomposition is
+				related to the number of beams and their maximum far field angle. As a check, it is
+				a good idea to issue a <b>SPOTS DIRECTION</b> and a <b>SPREAD
+					NORMAL</b> command just after decomposing and before continuing to
+					<b>TRACE</b> the beam set to verify the source (beam set) fidelity.
+			</li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#DECOMPOSE">DECOMPOSE Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_D-ref.html#Commands_and_Macros_D" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “D”.">Commands and Macros (D)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Babinets_Principle-conc.html#Babinets_Principle" title="Babinet’s principle is for modeling difficult diffraction problems. Set the amplitudes of certain beams to be of opposite sign from other beams, so beam amplitudes are in effect subtracted from one another.">Babinet Principle</a></div>
+<div><a href="../Concept/DECOMPOSE_Command_Overview-conc.html#DECOMPOSE_Command_Overview" title="Aperture diffraction calculations made by ASAP are partly a function of the beam sampling of the aperture. The question is whether a suitable number of Gaussian beams clipped by the aperture so that the aperture apodization is represented in the subsequent diffraction pattern.">DECOMPOSE Command Overview</a></div>
+<div><a href="../Concept/DECOMPOSE_with_a_Source-conc.html#DECOMPOSE_with_a_Source" title="When using the DECOMPOSE command, treat it as a method for creating the spatial and angular properties of the source. You must, of course, still define the appropriate physical properties of the source.">DECOMPOSE with a Source</a></div>
+<div><a href="../Concept/Gaussian_Beam_Superposition_Algorithm-conc.html#Gaussian_Beam_Superposition_Algorithm" title="">Gaussian Beam Superposition Algorithm</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Ray_Distributions_Apodizing-ref.html#Ray_Distributions_Apodizing" title="APODIZE operates immediately on all the currently selected or considered rays and, therefore, can be used before or after a TRACE. USERAPOD applies only to rays when they are created and just for the combinations described in this topic.">Ray Distributions - Apodizing</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/FTSIZE_ASAP-cmdref.html#FTSIZE_ASAP_Command" title="Sets the Fourier Transform size to the default maximum.">FTSIZE (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=35" target="_blank">See the Knowledge Base for the technical publication, Wave Optics</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=26" target="_blank">See the Knowledge Base for the technical publication, Coupling Other Software Programs to ASAP for Modeling Nonlinear Optical Components</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

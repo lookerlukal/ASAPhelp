@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="CONTOUR (ASAP Command)"/>
+<meta name="abstract" content="Creates a contour plot of the current distribution data file."/>
+<meta name="description" content="Creates a contour plot of the current distribution data file."/>
+<meta name="DC.subject" content="CONTOUR (ASAP Command), plot, contour, distribution data file, contour plot"/>
+<meta name="keywords" content="CONTOUR (ASAP Command), plot, contour, distribution data file, contour plot"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_C-ref.html#Commands_and_Macros_C"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DISPLAY_ASAP-cmdref.html#DISPLAY_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REPLOT_ASAP-cmdref.html#REPLOT_ASAP_Command"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="CONTOUR_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>CONTOUR (ASAP Command)</title>
+</head>
+<body id="CONTOUR_ASAP_Command"><a name="CONTOUR_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>CONTOUR (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Creates a contour plot of the current distribution data file. 
+  </p>
+ 
+	 <p><b>Syntax</b>
+	 </p>
+ 
+	 <pre class="codeblock">
+CONTOUR n               [ LOW  ] [ TICS t [ t' ] ] [ VECTOR ] [ 'title' ]
+        c c' [ c" ... ]   HIGH     GRID
+</pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span>number of equally spaced contour levels</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>c c' c". . .</span></td><td><span>fractional contours relative to the full range of the function
+			 being plotted or absolute contours (see remarks below)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>LOW</span></td><td><span>produce a low resolution greyscale plot</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>HIGH</span></td><td><span>produce a high resolution color map plot</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>t t'</span></td><td><span>coordinate TIC mark spacing</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>VECTOR</span></td><td><span>writes contour plot to 3D vector file</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>'title'</span></td><td><span>optional title for plot (up to 64 characters)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>GRID</span></td><td><span>produces line spacing for vertical and grid horizontal
+			 lines</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b>
+	 </p>
+ 
+	 <br/><a name="CONTOUR_ASAP_Command__ul_9FC1D1326C2547149229AA9100E81788"><!-- --></a><ol id="CONTOUR_ASAP_Command__ul_9FC1D1326C2547149229AA9100E81788"> 
+		<li id="CONTOUR_ASAP_Command__li_2DDC331D779A40D7B97AF4542331DB35"><a name="CONTOUR_ASAP_Command__li_2DDC331D779A40D7B97AF4542331DB35"><!-- --></a>Generates a contour plot
+		  with fractional contours 
+		  <b>c c' ...</b> relative to the full range of the function
+		  being plotted (0=minimum, 1=maximum).
+		</li>
+ 
+		<li id="CONTOUR_ASAP_Command__li_302261EF27EB47D38C600592D815E567"><a name="CONTOUR_ASAP_Command__li_302261EF27EB47D38C600592D815E567"><!-- --></a>If any of the 
+		  <b>c's</b> are less than zero or greater than one, all 
+		  <b>c's</b> are assumed to be absolute.
+		</li>
+ 
+		<li id="CONTOUR_ASAP_Command__li_BE9226E199084C1D842C9125E109F789"><a name="CONTOUR_ASAP_Command__li_BE9226E199084C1D842C9125E109F789"><!-- --></a>Alternatively, 
+		  <b>n</b> equally spaced contours can be specified.
+		</li>
+ 
+		<li id="CONTOUR_ASAP_Command__li_2A138A76BE71455C9AB72BEA41F5D663"><a name="CONTOUR_ASAP_Command__li_2A138A76BE71455C9AB72BEA41F5D663"><!-- --></a>Also, a 
+		  <b>LOW-</b>resolution greyscale or 
+		  <b>HIGH</b>resolution color map plot can be produced
+		  instead of the line contour plot.
+		</li>
+ 
+		<li id="CONTOUR_ASAP_Command__li_DD95AF2526104210A6108D887367D50E"><a name="CONTOUR_ASAP_Command__li_DD95AF2526104210A6108D887367D50E"><!-- --></a>If the coordinate 
+		  <b>TIC</b> mark or 
+		  <b>GRID</b> line spacings 
+		  <b>t t'</b> (vertical, horizontal) are specified, the plot
+		  is slightly reduced in size and drawn with annotated coordinate scales.
+		</li>
+ 
+		<li id="CONTOUR_ASAP_Command__li_D89C056D96C147E4B7BD8968DE94F5E4"><a name="CONTOUR_ASAP_Command__li_D89C056D96C147E4B7BD8968DE94F5E4"><!-- --></a>If 
+		  <b>VECTOR</b> is specified, the contour plot is written to
+		  the 3D vector file. As an example, irradiance plots may be viewed with already
+		  existing system geometry plots by using the 
+		  <b>REPLOT</b> command.
+		</li>
+ 
+		<li id="CONTOUR_ASAP_Command__li_EDE847C4E08C486EBFE12D658B4BAF7E"><a name="CONTOUR_ASAP_Command__li_EDE847C4E08C486EBFE12D658B4BAF7E"><!-- --></a>The title is delimited by a
+		  single quote ( 
+		  <b>'</b> ), as shown.
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#CONTOUR">CONTOUR
+		  Examples</a>
+	 </p>
+
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_C-ref.html#Commands_and_Macros_C" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “C”.">Commands and Macros (C)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DISPLAY_ASAP-cmdref.html#DISPLAY_ASAP_Command" title="Reads previously created distribution data files so that they can be modified.">DISPLAY (ASAP Command)</a></div>
+<div><a href="../Commands/REPLOT_ASAP-cmdref.html#REPLOT_ASAP_Command" title="Plots data stored in the 3D vector file within the currently defined graphics window.">REPLOT (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="UNITS (ASAP Command)"/>
+<meta name="abstract" content="Defines the system units."/>
+<meta name="description" content="Defines the system units."/>
+<meta name="DC.subject" content="UNITS (ASAP Command), units, defining system, system, definit units, WAVELENGTH(S)"/>
+<meta name="keywords" content="UNITS (ASAP Command), units, defining system, system, definit units, WAVELENGTH(S)"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_U-ref.html#Commands_and_Macros_U"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CADEXPORT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WAVELENGTHS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Defining_WAVELENGTHS_and_Associated_Dispersive_MEDIA-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=35"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="UNITS_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>UNITS (ASAP Command)</title>
+</head>
+<body id="UNITS_ASAP_Command"><a name="UNITS_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>UNITS (ASAP Command)</h5></span>
+	
+	
+	<div><p>Defines the system units. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">UNITS [ length ] [ 'flux' ]</pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>length</span></td><td><span>length units of the system geometry</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>'flux'</span></td><td><span>label for the flux units</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="UNITS_ASAP_Command__ul_5231206AD946448EB05123D41C65D225"><!-- --></a><ol id="UNITS_ASAP_Command__ul_5231206AD946448EB05123D41C65D225">
+			<li id="UNITS_ASAP_Command__li_809399C3BB544045A4FF19B89FFC3827"><a name="UNITS_ASAP_Command__li_809399C3BB544045A4FF19B89FFC3827"><!-- --></a>After you enter the <b>UNITS</b> command, do not enter it again until the system geometry is
+				replaced by another system. Similarly, enter the <b>UNITS</b> option on
+				the <b>WAVELENGTH</b> command only once. </li>
+
+			<li id="UNITS_ASAP_Command__li_8B2F882E311F4090996A3E9F8F8A2B46"><a name="UNITS_ASAP_Command__li_8B2F882E311F4090996A3E9F8F8A2B46"><!-- --></a>Takes an optional flux label that is
+				printed on intensity, irradiance and radiance plots in <b>DISPLAY</b>. </li>
+
+			<li id="UNITS_ASAP_Command__li_F598D0FE97BE4802B9B9C21A10FED127"><a name="UNITS_ASAP_Command__li_F598D0FE97BE4802B9B9C21A10FED127"><!-- --></a> Sets the length units of the system
+				geometry to one of the following lengths: <br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>IN</span></td><td><span>or INCHES</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MM</span></td><td><span>or MILLIMETERS</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>YD</span></td><td><span>or YARDS</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>FT</span></td><td><span>or FEET</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MI</span></td><td><span>or MILES</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>M</span></td><td><span>or METERS</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>KM</span></td><td><span>or KILOMETERS</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MIL</span></td><td><span>or MILS</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>UM</span></td><td><span>or MICRONS</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CM</span></td><td><span>or CENTIMETERS</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>UIN</span></td><td><span>or MICROINCHES</span></td></tr></tbody></table></li>
+
+			<li id="UNITS_ASAP_Command__li_55695176C81D4A838E4822141F092A37"><a name="UNITS_ASAP_Command__li_55695176C81D4A838E4822141F092A37"><!-- --></a>The labeling of flux units can be set to
+				the given string (up to 11 arbitrary characters). Some typical ones would be
+					<b>WATTS</b>, <b>LUMENS</b> or <b>PHOTONS</b>/SEC. </li>
+
+			<li id="UNITS_ASAP_Command__li_8D9BE85297484BA28DD591C54DC81D72"><a name="UNITS_ASAP_Command__li_8D9BE85297484BA28DD591C54DC81D72"><!-- --></a>The <b>UNITS</b> command is
+				used in conjunction with the <b>WAVELENGTH</b> and <b>CAD</b> commands to associate units with the optical system. </li>
+
+			<li id="UNITS_ASAP_Command__li_2E0FD990B5E24CDC9CADED4FBB369AE2"><a name="UNITS_ASAP_Command__li_2E0FD990B5E24CDC9CADED4FBB369AE2"><!-- --></a>Also specifies system units in conjunction
+				with a <b>WAVELENGTH</b>
+				<b>UNITS</b> command to properly scale the optical path difference.
+			</li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#UNITS">UNITS Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_U-ref.html#Commands_and_Macros_U" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “U”.">Commands and Macros (U)</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Defining_WAVELENGTHS_and_Associated_Dispersive_MEDIA-task.html" title="This topic lists the input arguments and return for defining WAVELENGTH(S) and associated dispersive MEDIA.">Defining WAVELENGTHS and Associated Dispersive MEDIA</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/CADEXPORT_ASAP-cmdref.html" title="Writes out CAD-compatible system geometry file.">CADEXPORT (ASAP Command)</a></div>
+<div><a href="../Commands/WAVELENGTHS_ASAP-cmdref.html" title="Defines the wavelength(s) for different MEDIA and COATING definitions.">WAVELENGTH(S) (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=35" target="_blank">See the Knowledge Base for the technical publication, Wave Optics</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

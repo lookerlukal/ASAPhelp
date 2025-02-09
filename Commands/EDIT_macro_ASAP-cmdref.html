@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="$EDIT (ASAP Macro)"/>
+<meta name="abstract" content="Calls user-specified editor from within ASAP."/>
+<meta name="description" content="Calls user-specified editor from within ASAP."/>
+<meta name="DC.subject" content="$EDIT (ASAP Macro), editor, user-specified, macros, call editor"/>
+<meta name="keywords" content="$EDIT (ASAP Macro), editor, user-specified, macros, call editor"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_E-ref.html#Commands_and_Macros_E"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/RAYS_ASAP-cmdref.html#RAYS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/RAYSET_ASAP-cmdref.html#RAYSET_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SYSTEM_ASAP-cmdref.html#SYSTEM_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Macro_Language-conc.html#ASAP_Macro_Language"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="EDIT_ASAP_Macro"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>$EDIT (ASAP Macro)</title>
+</head>
+<body id="EDIT_ASAP_Macro"><a name="EDIT_ASAP_Macro"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>$EDIT (ASAP Macro)</h5></span>
+	
+	
+	<div><p>Calls user-specified editor from within ASAP. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+$EDIT filename.ext
+$EDIT macroname
+$EDIT [ 'string' ]
+      </pre>
+
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="EDIT_ASAP_Macro__ul_3EA1870C538043E886132D27269CF2A1"><!-- --></a><ol id="EDIT_ASAP_Macro__ul_3EA1870C538043E886132D27269CF2A1">
+			<li id="EDIT_ASAP_Macro__li_380A06E16E6548448597B0416C857635"><a name="EDIT_ASAP_Macro__li_380A06E16E6548448597B0416C857635"><!-- --></a>When editing an entire file, BRO recommends
+				reinitializing ASAP before the new file is loaded (or the result is a composite of
+				old and new data). You can initialize ASAP with the following commands: <b>SYSTEM NEW</b>, <b>RESET</b>, or <b>RAYS 0</b>. </li>
+
+			<li id="EDIT_ASAP_Macro__li_EC929F0758534236BAED52488A02F6ED"><a name="EDIT_ASAP_Macro__li_EC929F0758534236BAED52488A02F6ED"><!-- --></a><b>$EDIT </b><b>filename.ext</b> edits the given text file specification, which must
+				contain the period ".". If the file is already open, it is first closed, then
+				edited, reopened. ASAP prompts you before positioning the pointer at the end of the
+				file. </li>
+
+			<li id="EDIT_ASAP_Macro__li_6302D0B99E5F4CA3B35FB51068ECDA70"><a name="EDIT_ASAP_Macro__li_6302D0B99E5F4CA3B35FB51068ECDA70"><!-- --></a><b>$EDIT </b><b>macroname</b> edits the specified macro, extracting it from the current
+				library if necessary. After exiting the Editor, ASAP asks if you want to replace the
+				old macro definition with the new one, and if you want to run the macro immediately. </li>
+
+			<li id="EDIT_ASAP_Macro__li_5E9D18AE6F0744B3914D99A0651135BC"><a name="EDIT_ASAP_Macro__li_5E9D18AE6F0744B3914D99A0651135BC"><!-- --></a><b>$EDIT</b>
+				<b>'string'</b> edits the current input file (as specified on the last
+					<b>$IO</b> command) or only the part delimited by blank lines that
+				contains the given <b>'string'</b>. After exiting the editor, you are
+				asked if you want to replace the old part of the input file with the new one, and if
+				you want to run all of the input file, only the edited part, or none of it. Note
+				that no application initialization is automatically done before re-running the input
+				file. You must do this with the appropriate application commands. </li>
+
+			<li id="EDIT_ASAP_Macro__li_414CCF93E7554695A305BCBFBF2131D8"><a name="EDIT_ASAP_Macro__li_414CCF93E7554695A305BCBFBF2131D8"><!-- --></a>Select any editor available on your system
+				to do online editing by specifying the command line with the <b>EDITOR</b> switch or environmental variable. Otherwise, </li>
+
+		</ol>
+
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>OFF</span></td><td><span>Suppresses screen graphics</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ASK</span></td><td><span>Prompts at end of each screen for plotting and/or saving</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>EACH</span></td><td><span>Plots each screen without prompting</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>NORM</span></td><td><span>Restores default (screen graphics and no prompting)</span></td></tr></tbody></table>
+		<p>
+			<a href="../example_scripts.html#$EDIT">EDIT Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_E-ref.html#Commands_and_Macros_E" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “E”.">Commands and Macros (E)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/ASAP_Macro_Language-conc.html#ASAP_Macro_Language">ASAP Macro Language</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/RAYS_ASAP-cmdref.html#RAYS_ASAP_Command" title="Sets the total number of rays in the virtual memory paging.">RAYS (ASAP Command)</a></div>
+<div><a href="../Commands/RAYSET_ASAP-cmdref.html#RAYSET_ASAP_Command" title="Specifies an arbitrary set of rays.">RAYSET (ASAP Command)</a></div>
+<div><a href="../Commands/SYSTEM_ASAP-cmdref.html#SYSTEM_ASAP_Command" title="Stores and retrieves system information.">SYSTEM (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Predefined ASAP Macros</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="HARVEY (ASAP Command)"/>
+<meta name="abstract" content="Creates a Harvey (linear shift invariant) scatter model or simple specific model."/>
+<meta name="description" content="Creates a Harvey (linear shift invariant) scatter model or simple specific model."/>
+<meta name="DC.subject" content="HARVEY (ASAP Command), linear shift invariant, scatter model, Harvey"/>
+<meta name="keywords" content="HARVEY (ASAP Command), linear shift invariant, scatter model, Harvey"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_H-ref.html#Commands_and_Macros_H"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MINMAX_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MODELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SCATTER_RANDOM_MODEL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WAVELENGTHS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/BSDF_Fit_Utility_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Mathematical_Models_for_Isotropic_Surface_Scattering-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Scatter_Models-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=24"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="HARVEY_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>HARVEY (ASAP Command)</title>
+</head>
+<body id="HARVEY_ASAP_Command"><a name="HARVEY_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>HARVEY (ASAP Command)</h5></span>
+	
+	
+	<div><p>Creates a Harvey (linear shift invariant) scatter model or simple specific model. </p>
+
+		<p><b>Syntax 1 - isotropic model</b>
+		</p>
+
+		<pre class="codeblock">HARVEY b s [ l [ m [ n [ w ] ] ] ] [ PLOT [ a a' ... ] ]</pre>
+
+		<p><b>Syntax 2 - anisotropic model</b>
+		</p>
+
+		<pre class="codeblock">
+HARVEY X b s l l' [ w ]
+       Y
+       Z
+       :
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>b</span></td><td><span>BSDF at 0.01 radians (0.573 degrees) from specular; if l is used b is the
+					maximum BSDF (at specular).</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>s</span></td><td><span>asymptotic fall-off with angle (typically between -1 to -2.5)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>l and l' </span></td><td><span>A-Ao and B-Bo shoulder point in radians (see Remarks)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m, n</span></td><td><span>2 additional invariance parameters postulated for rough surfaces</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>w</span></td><td><span>wavelength (in current or eventual wavelength units)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>PLOT</span></td><td><span>plots the model in log(b-bo) and angle space</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a a' ...</span></td><td><span>user-defined degree specular angles</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="HARVEY_ASAP_Command__ul_AEC089C9111E4A428B2F29EED0A0D66A"><!-- --></a><ol id="HARVEY_ASAP_Command__ul_AEC089C9111E4A428B2F29EED0A0D66A">
+			<li id="HARVEY_ASAP_Command__li_9D7E8DBCCD034D009AC60D7D391EF02E"><a name="HARVEY_ASAP_Command__li_9D7E8DBCCD034D009AC60D7D391EF02E"><!-- --></a>The out-of-field analog to the <b>SCATTER BSDF</b> command. </li>
+
+			<li id="HARVEY_ASAP_Command__li_FB66471646AA41F19EA3A8FC17CEBE80"><a name="HARVEY_ASAP_Command__li_FB66471646AA41F19EA3A8FC17CEBE80"><!-- --></a>Use with importance area sampling. </li>
+
+			<li id="HARVEY_ASAP_Command__li_FB6800881628420497110B0DCC25B65D"><a name="HARVEY_ASAP_Command__li_FB6800881628420497110B0DCC25B65D"><!-- --></a>If <b>l</b> is used, <p>
+					<br/><img src="../Equations/HARVEY_equation1.gif"/><br/>
+				</p>
+</li>
+
+		</ol>
+
+		<p><b>Simple, specific (isotropic) models:</b>
+		</p>
+
+		<br/><a name="HARVEY_ASAP_Command__ul_7822D86AC44146BF80261106C69562E2"><!-- --></a><ol id="HARVEY_ASAP_Command__ul_7822D86AC44146BF80261106C69562E2">
+			<li id="HARVEY_ASAP_Command__li_F83E830BA41F47A8B91D555E2F8A15B4"><a name="HARVEY_ASAP_Command__li_F83E830BA41F47A8B91D555E2F8A15B4"><!-- --></a>If the optional b-bo shoulder point
+					<b>l</b> (in radians) is given, <b>b</b> is the maximum
+				BSDF (at specular). These parameters describe a shift-invariant generalized
+				Lorentzian function of B-Bo that normally fits the scatter from smooth surfaces (RMS
+				as well as wavelength) extremely well. </li>
+
+			<li id="HARVEY_ASAP_Command__li_F835653380114CDBA1E776870AE64664"><a name="HARVEY_ASAP_Command__li_F835653380114CDBA1E776870AE64664"><!-- --></a>The <b>m</b> and <b>n</b> are two additional invariance parameters postulated for rough surfaces;
+				that is, if: <p>
+					<br/><img src="../Equations/HARVEY_equation2.gif"/><br/>
+				</p>
+<p>where <b>B</b>, <b>C</b> are the sine, cosine of the scatter angle from
+					normal and <b>Bo</b>, <b>Co</b> are the sine, cosine of the specular angle. For
+					typical rough surfaces, <b>m</b> is approximately 2 and <b>n</b> around 1. </p>
+</li>
+
+			<li id="HARVEY_ASAP_Command__li_F8715039895C4AA2BF6413B3F81F4039"><a name="HARVEY_ASAP_Command__li_F8715039895C4AA2BF6413B3F81F4039"><!-- --></a>The <b>w</b> is the wavelength
+				(in current or eventual wavelength units) at which this model is defined (or was
+				measured). </li>
+
+		</ol>
+
+		<p><b>Elliptical (Anisotropic) Harvey model:</b>
+		</p>
+
+		<br/><a name="HARVEY_ASAP_Command__ul_61694A1FB18947A0A9325B357C5A539A"><!-- --></a><ol id="HARVEY_ASAP_Command__ul_61694A1FB18947A0A9325B357C5A539A">
+			<li id="HARVEY_ASAP_Command__li_FB34A9B285324FE49E1FD36664D0907D"><a name="HARVEY_ASAP_Command__li_FB34A9B285324FE49E1FD36664D0907D"><!-- --></a>Scattering from anisotropic surfaces is not
+				rotationally symmetric at normal incidence and not necessarily symmetric about the
+				plane of incidence otherwise. Therefore, the orientation of the model on the surface
+				is important and is generally specified by an axis for the second command entry. For
+				syntax information, see the command argument, <b>MODEL</b>. </li>
+
+			<li id="HARVEY_ASAP_Command__li_3DDF9DA21DED49228FCD635614A9C66C"><a name="HARVEY_ASAP_Command__li_3DDF9DA21DED49228FCD635614A9C66C"><!-- --></a>The <b>b</b> is the maximum
+				BSDF (at specular), <b>s</b> is the asymptotic fall-off with angle
+				(typically between -1 to -2.5). The <b>l and l'</b> are the <b>A-Ao</b>
+				and <b>B-Bo</b> shoulder points in radians. More precisely, <p>
+					<br/><img src="../Equations/HARVEY_equation3.gif"/><br/>
+				</p>
+<p>where <b>A</b>, <b>B</b> are the scatter direction cosines and <b>Ao</b>, <b>Bo</b> are the specular. </p>
+</li>
+
+		</ol>
+
+		<p><b>Both models</b>
+		</p>
+
+		<br/><a name="HARVEY_ASAP_Command__ul_EA6C204C19B24BB5AD6BA1EBD4FDB6C5"><!-- --></a><ol id="HARVEY_ASAP_Command__ul_EA6C204C19B24BB5AD6BA1EBD4FDB6C5">
+			<li id="HARVEY_ASAP_Command__li_4DFEA153D2074BD49D76FBEB783F6402"><a name="HARVEY_ASAP_Command__li_4DFEA153D2074BD49D76FBEB783F6402"><!-- --></a>The <b>w</b> is the wavelength
+				(in current or eventual wavelength units) at which this model is defined (or was
+				measured). The default is the current value from the last <b>WAVELENGTH</b> command. If it is greater than zero, any ray whose wavelength
+				is different automatically has its scatter scaled according to the smooth surface
+				approximation. </li>
+
+			<li id="HARVEY_ASAP_Command__li_4C840E351A144F56948B517F3BFE2BF0"><a name="HARVEY_ASAP_Command__li_4C840E351A144F56948B517F3BFE2BF0"><!-- --></a>Command argument, <b>PLOT</b>
+				plots the model (common base 10 logarithm of the BSDF) for up to seven specular
+				angles in ascending order (default 0, 15, 30, 45, 60, 75, 89.9 degrees). The current
+					<b>PIXELS</b> setting controls the resolution of these plots in
+				direction cosine space. Also, creates a distribution file name_angle.dis for each of
+				these angles. </li>
+
+			<li id="HARVEY_ASAP_Command__li_30F908194D6C4DBDA10E09FC0BA568D4"><a name="HARVEY_ASAP_Command__li_30F908194D6C4DBDA10E09FC0BA568D4"><!-- --></a>The command argument, <b>MINMAX</b> may be used to set the minimum and maximum values of the BSDF for
+				this specific model. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#HARVEY">HARVEY Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_H-ref.html#Commands_and_Macros_H" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “H”.">Commands and Macros (H)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/BSDF_Fit_Utility_Overview-conc.html" title="In most instances where it is appropriate to apply the Harvey model or the Polynomial Fit model, you can use the BSDF Fitting utility, which is integrated with ASAP.">BSDF Fit Utility Overview</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Mathematical_Models_for_Isotropic_Surface_Scattering-ref.html" title="Scattering from an isotropic surface must be symmetric with regard to the plane of incidence and surface normal; that is, that scatter pattern does not change when the surface element is rotated about its normal. If the BSDF is only a function of the following variables, these symmetry properties are guaranteed.">Mathematical Models for Isotropic-Surface Scattering</a></div>
+<div><a href="../Reference/Scatter_Models-ref.html" title="ASAP supports the scatter models listed in this topic for wide-angle (far from specular) scatter.">Scatter Models</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/MINMAX_arg_ASAP-cmdref.html" title="Sets BSDF bounding.">MINMAX (ASAP Command Argument)</a></div>
+<div><a href="../Commands/MODELS_ASAP-cmdref.html" title="Creates a scattering model.">MODELS (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_arg_ASAP-cmdref.html" title="Plots current model.">PLOT (ASAP Command Argument)</a></div>
+<div><a href="../Commands/SCATTER_RANDOM_MODEL_ASAP-cmdref.html" title="Assigns a scattering interface to an object.">SCATTER RANDOM/MODEL (ASAP Command)</a></div>
+<div><a href="../Commands/WAVELENGTHS_ASAP-cmdref.html" title="Defines the wavelength(s) for different MEDIA and COATING definitions.">WAVELENGTH(S) (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=24" target="_blank">See the Knowledge Base for the technical publication, Stray Light Analysis</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

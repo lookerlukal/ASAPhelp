@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="BSDFDATA (ASAP Command)"/>
+<meta name="abstract" content="Indirectly or directly interpolates from entered BSDF values."/>
+<meta name="description" content="Indirectly or directly interpolates from entered BSDF values."/>
+<meta name="DC.subject" content="BSDFDATA (ASAP Command), BSDF interpolation"/>
+<meta name="keywords" content="BSDFDATA (ASAP Command), BSDF interpolation"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=35"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_B-ref.html#Commands_and_Macros_B"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="BSDFDATA_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>BSDFDATA (ASAP Command)</title>
+</head>
+<body id="BSDFDATA_ASAP_Command"><a name="BSDFDATA_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>BSDFDATA (ASAP Command)</h5></span>
+	
+	
+	<div><p>Indirectly or directly interpolates from entered BSDF values. </p>
+
+		<p><b>Syntax 1 - Indirect (isotropic) interpolation </b>
+		</p>
+
+		<pre class="codeblock">
+BSDFDATA [ n ] [ d ][options…] [ PLOT [ a a' ... ] ] 
+RAWDATA
+ data…
+  : 
+      </pre>
+
+		<p><b>Syntax 2 - Direct (anisotropic) interpolation</b>
+		</p>
+
+		<pre class="codeblock">
+BSDFDATA  X [ d ] [ options ... ]
+RAWDATA   Y
+          Z
+          :
+  data ...
+   :
+       </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span>collapsed 4D direction space</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>d</span></td><td><span>small directional distance (default 0.001 radians)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>PLOT</span></td><td><span>plots the model in log(b-bo) and angle space</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a a' ...</span></td><td><span>user-defined degree specular angles</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X,Y,Z</span></td><td><span>see the command argument, <b>MODEL</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>options...</span></td><td><span> The command argument, <b>ANGLES</b> specifies data input in
+					polar and azimuthal angles <p>COS provides a cosine correction to a data set
+					</p>
+</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>data...</span></td><td><span>see Remarks for this option</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="BSDFDATA_ASAP_Command__ol_8F74522C6F0343EDA9D7D021C0B526E4"><!-- --></a><ol id="BSDFDATA_ASAP_Command__ol_8F74522C6F0343EDA9D7D021C0B526E4">
+			<li id="BSDFDATA_ASAP_Command__li_34685A181BFC41188DCFEBFC8A0542DA"><a name="BSDFDATA_ASAP_Command__li_34685A181BFC41188DCFEBFC8A0542DA"><!-- --></a> In general, a BSDF is a 4D
+				(four-dimensional) function, and is the function of incident angles, <p>
+					<br/><a name="BSDFDATA_ASAP_Command__image_DBD8BB575D634FBEB624232EE8852F49"><!-- --></a><img id="BSDFDATA_ASAP_Command__image_DBD8BB575D634FBEB624232EE8852F49" src="../Equations/BSDFDATA_equation1.gif" width="102" height="37"/><br/>
+				</p>
+<p>and the scattering angles </p>
+<p>
+					<br/><a name="BSDFDATA_ASAP_Command__image_AD38794917BB44AFA52A7F69A88323FA"><!-- --></a><img id="BSDFDATA_ASAP_Command__image_AD38794917BB44AFA52A7F69A88323FA" src="../Equations/BSDFDATA_equation2.gif" width="412" height="391"/><br/>
+				</p>
+<p>For isotropic models, it is assumed that </p>
+<p>
+					<br/><a name="BSDFDATA_ASAP_Command__image_C71FA38899954560B2F78474770B66CA"><!-- --></a><img id="BSDFDATA_ASAP_Command__image_C71FA38899954560B2F78474770B66CA" src="../Equations/BSDFDATA_equation3.gif" width="208" height="37"/><br/>
+				</p>
+<p>Note variables T, U, V, and W are used in ASAP <b>BSDFDATA</b>
+					models. </p>
+</li>
+
+			<li id="BSDFDATA_ASAP_Command__li_194AC3E10ADE43E9B93A4B3960D8BF53"><a name="BSDFDATA_ASAP_Command__li_194AC3E10ADE43E9B93A4B3960D8BF53"><!-- --></a> Indirect (isotropic) interpolation: <br/><a name="BSDFDATA_ASAP_Command__ul_549BAD1B9EF14CF9A7F95585E71926EB"><!-- --></a><ul id="BSDFDATA_ASAP_Command__ul_549BAD1B9EF14CF9A7F95585E71926EB">
+					<li id="BSDFDATA_ASAP_Command__li_63E1DB072771441BACF24CD5DDE267DF"><a name="BSDFDATA_ASAP_Command__li_63E1DB072771441BACF24CD5DDE267DF"><!-- --></a> The four-dimensional direction
+						space is collapsed to just <b>n</b> (default 2) dimensions that
+						enforce isotropic-surface symmetry and reciprocity (see the <b>BINOMIAL</b> model). <div class="note"><span class="notetitle">Note:</span> ASAP does not automatically enforce
+							isotropic symmetry and reciprocity. You must assure such properties for
+							the supplied BSDF data. </div>
+</li>
+
+					<li id="BSDFDATA_ASAP_Command__li_6B6F106546A24E25836F852C5DF0030D"><a name="BSDFDATA_ASAP_Command__li_6B6F106546A24E25836F852C5DF0030D"><!-- --></a> The <b>d</b> is a
+						small directional distance (default 0.001 radians) in each collapsed
+						dimension that is used to determine if two input data points have collapsed
+						to the same <b>n</b>D point. The BSDF or log(BSDF) (<b>RAWDATA</b> or <b>BSDFDATA</b>, respectively) is then
+						interpolated as a function of these <b>n</b> directional
+						coordinates: <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>n</span></th><th><span>Coordinates</span></th><th><span>Interpolation</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>1</span></td><td><span>sqrt(T)</span></td><td><span>linear</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>2</span></td><td><span>sqrt(T), V</span></td><td><span>bilinear triangular</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>3</span></td><td><span>U,V,W</span></td><td><span>nearest point or reciprocal point</span></td></tr></tbody></table><p>For isotropic models, </p>
+<p>
+							<br/><a name="BSDFDATA_ASAP_Command__image_B17994F0429844CB98036C6D364ECF00"><!-- --></a><img id="BSDFDATA_ASAP_Command__image_B17994F0429844CB98036C6D364ECF00" src="../Equations/BSDFDATA_equation4.gif" width="339" height="125"/><br/>
+						</p>
+<p>The φ<sub>s</sub> and θ<sub>s</sub> correspond to the scatter angles
+							around (azimuthal) and from (polar) the normal, and θ<sub>0</sub> is the
+							specular angle from the normal. </p>
+</li>
+
+					<li id="BSDFDATA_ASAP_Command__li_51524ACA0AA34C61BEC1045A88DDE4DB"><a name="BSDFDATA_ASAP_Command__li_51524ACA0AA34C61BEC1045A88DDE4DB"><!-- --></a> ASAP uses the data point check
+						procedure shown below. For instance, to collapse into a 2D data set, if both
+							<p>
+							<br/><a name="BSDFDATA_ASAP_Command__image_9783A5A9615249F28246CD6687B14F48"><!-- --></a><img id="BSDFDATA_ASAP_Command__image_9783A5A9615249F28246CD6687B14F48" src="../Equations/BSDFDATA_equation5.gif" width="322" height="50"/><br/>
+						</p>
+<p>where subscript <b>c</b> and <b>i</b> mean
+							current data point and data points stored in the BSDF database, ASAP
+							assumes that the current data entry is the same as the ith point in the
+							data points. </p>
+</li>
+
+					<li id="BSDFDATA_ASAP_Command__li_50D5DE67EC774537BC5AB21998B069B4"><a name="BSDFDATA_ASAP_Command__li_50D5DE67EC774537BC5AB21998B069B4"><!-- --></a>If ASAP determines that the
+						user-supplied data set has multiple entry BSDF values for the same point in
+						the collapsed space, ASAP uses the averaged BSDF value among these multiple
+						entries as the BSDF value for that point. </li>
+
+					<li id="BSDFDATA_ASAP_Command__li_DF0A82F8C2344AC6BCCAD59002D7F4AC"><a name="BSDFDATA_ASAP_Command__li_DF0A82F8C2344AC6BCCAD59002D7F4AC"><!-- --></a>The use of a negative value for
+							<b>d</b> (d&lt;0) disables the same data point check so that
+						all user input data is stored in the database. </li>
+
+				</ul>
+</li>
+
+			<li id="BSDFDATA_ASAP_Command__li_CD18F5A045D34DECB263361759093904"><a name="BSDFDATA_ASAP_Command__li_CD18F5A045D34DECB263361759093904"><!-- --></a>Direct (anisotropic) interpolation: <br/><a name="BSDFDATA_ASAP_Command__ul_B63A438E3A8A4F5EAE6E8760C71F076B"><!-- --></a><ul id="BSDFDATA_ASAP_Command__ul_B63A438E3A8A4F5EAE6E8760C71F076B">
+					<li id="BSDFDATA_ASAP_Command__li_247215519CA3404F93BD483A487D0C17"><a name="BSDFDATA_ASAP_Command__li_247215519CA3404F93BD483A487D0C17"><!-- --></a>Creates a model that directly
+						interpolates from the entered BSDF data. The option <b>d</b> is
+						a small directional distance (default .001 radians for <b>BSDFDATA</b>, .000001 for RAWDATA) used to determine if two input
+						data points are reciprocal. The BSDF or log(BSDF) (<b>RAWDATA</b> or <b>BSDFDATA</b>, respectively) is then
+						interpolated as a function of the four directional coordinates. </li>
+
+					<li id="BSDFDATA_ASAP_Command__li_AB6EB729B8714FE09CFB002037F06DA3"><a name="BSDFDATA_ASAP_Command__li_AB6EB729B8714FE09CFB002037F06DA3"><!-- --></a>Since no assumptions concerning
+						symmetry are made, data must be provided over most of the output hemisphere
+						for most of the input hemisphere. </li>
+
+					<li id="BSDFDATA_ASAP_Command__li_8F3A7F116E8F4D4F8207C2410A86F2E8"><a name="BSDFDATA_ASAP_Command__li_8F3A7F116E8F4D4F8207C2410A86F2E8"><!-- --></a>Scattering from anisotropic
+						surfaces (for example, brushed, diamond-turned) is not rotationally
+						symmetric at normal incidence, and not necessarily symmetric about the plane
+						of incidence otherwise. Therefore, the orientation of the model on the
+						surface is important and is generally specified by an axis for the second
+						command entry. For syntax information, see the command argument, <b>MODEL</b>. </li>
+
+					<li id="BSDFDATA_ASAP_Command__li_0E30F676183A4961B6FD99F9351D3D22"><a name="BSDFDATA_ASAP_Command__li_0E30F676183A4961B6FD99F9351D3D22"><!-- --></a>If the entered data is not from an
+						isotropic surface or if it violates reciprocity, the interpolation may not
+						sufficiently match the original data (that is, it may be noisy). </li>
+
+					<li id="BSDFDATA_ASAP_Command__li_256D067C9DA14D089487B5DB7202217B"><a name="BSDFDATA_ASAP_Command__li_256D067C9DA14D089487B5DB7202217B"><!-- --></a>Small data sets (&lt;95 points) are
+						placed in main memory storage. </li>
+
+					<li id="BSDFDATA_ASAP_Command__li_AD17D69CE2A64881A534512541E902FE"><a name="BSDFDATA_ASAP_Command__li_AD17D69CE2A64881A534512541E902FE"><!-- --></a>This model uses an internal
+						10000-point buffer. If the final number of data points the model needs to
+						store exceeds this, a disk file is used and runtimes can increase
+						dramatically. In this case, use a larger value of <b>d</b> to
+						further collapse the input data to fewer than 10000 final data points. </li>
+
+				</ul>
+</li>
+
+			<li id="BSDFDATA_ASAP_Command__li_87B3AD93E1614EBEB5B7ABEE446CB33A"><a name="BSDFDATA_ASAP_Command__li_87B3AD93E1614EBEB5B7ABEE446CB33A"><!-- --></a>Both Indirect and Direct interpolations:
+					<br/><a name="BSDFDATA_ASAP_Command__ul_85627A0AB7C04291A112A6BF38C1BD5A"><!-- --></a><ul id="BSDFDATA_ASAP_Command__ul_85627A0AB7C04291A112A6BF38C1BD5A">
+					<li id="BSDFDATA_ASAP_Command__li_07E7372079B846AFB8A246790EBB1761"><a name="BSDFDATA_ASAP_Command__li_07E7372079B846AFB8A246790EBB1761"><!-- --></a> The option, data... is a
+						placeholder. For applications of scatter models, data is formatted: <p>
+							<br/><a name="BSDFDATA_ASAP_Command__image_35CABF831EB2421CA9BBAF959BE854F3"><!-- --></a><img id="BSDFDATA_ASAP_Command__image_35CABF831EB2421CA9BBAF959BE854F3" src="../Equations/BSDFDATA_equation6.gif" width="45" height="104"/><br/>
+						</p>
+<p>For applications of coating models, data is formatted: </p>
+<p>
+							<br/><a name="BSDFDATA_ASAP_Command__image_39EB6465A47348E896BDA9F7B6D7CC58"><!-- --></a><img id="BSDFDATA_ASAP_Command__image_39EB6465A47348E896BDA9F7B6D7CC58" src="../Equations/BSDFDATA_equation7.gif" width="43" height="66"/><br/>
+						</p>
+</li>
+
+					<li id="BSDFDATA_ASAP_Command__li_3E620C4A1D06402AB1D3FF0E78650964"><a name="BSDFDATA_ASAP_Command__li_3E620C4A1D06402AB1D3FF0E78650964"><!-- --></a>For isotropic BSDF scatter models,
+							<a name="BSDFDATA_ASAP_Command__image_37785514B33F4378B2B82BD052E5E6B0"><!-- --></a><img id="BSDFDATA_ASAP_Command__image_37785514B33F4378B2B82BD052E5E6B0" src="../Equations/BSDFDATA_equation8.gif" width="25" height="37"/> must
+						be 0. </li>
+
+					<li id="BSDFDATA_ASAP_Command__li_2136562E4E144B278A2A1288EBA1574A"><a name="BSDFDATA_ASAP_Command__li_2136562E4E144B278A2A1288EBA1574A"><!-- --></a>Several BSDF models allow fitting
+						to or interpolation from actual data. See the command argument, <b>ANGLES</b> for common options and format. </li>
+
+					<li id="BSDFDATA_ASAP_Command__li_14F015E365E54CF083767780FC66A6A1"><a name="BSDFDATA_ASAP_Command__li_14F015E365E54CF083767780FC66A6A1"><!-- --></a>The <b>PLOT</b> option
+						plots the model (common base 10 logarithm of the BSDF) for up to seven
+						specular angles in ascending order (default 0, 15, 30, 45, 60, 75, 89.9
+						degrees). The current <b>PIXELS</b> setting controls the
+						resolution of these plots in direction cosine space. </li>
+
+					<li id="BSDFDATA_ASAP_Command__li_ADFC52D3F9E441B0B165F906BBE5E5F3"><a name="BSDFDATA_ASAP_Command__li_ADFC52D3F9E441B0B165F906BBE5E5F3"><!-- --></a>Creates a distribution file
+						name_angle.dis for each of these angles. </li>
+
+					<li id="BSDFDATA_ASAP_Command__li_0CBE4F5593D74DB1A719704DA7AE7DB4"><a name="BSDFDATA_ASAP_Command__li_0CBE4F5593D74DB1A719704DA7AE7DB4"><!-- --></a>The command argument, <b>MINMAX</b> may be used to set the minimum and maximum values of
+						the BSDF for this specific model. </li>
+
+					<li id="BSDFDATA_ASAP_Command__li_3B903CC69DCD43F493BEF8330D0517DE"><a name="BSDFDATA_ASAP_Command__li_3B903CC69DCD43F493BEF8330D0517DE"><!-- --></a>Works with a single
+						normal-incidence scan. </li>
+
+					<li id="BSDFDATA_ASAP_Command__li_96124B77FA9B4F0789857FC1160A6E41"><a name="BSDFDATA_ASAP_Command__li_96124B77FA9B4F0789857FC1160A6E41"><!-- --></a>Processed points are written TO and
+						read FROM SYSTEM file. </li>
+
+				</ul>
+</li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#BSDFDATA">BSDFDATA Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_B-ref.html#Commands_and_Macros_B" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “B”.">Commands and Macros (B)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=35" target="_blank">See the Knowledge Base for the technical publication, Stray Light Analysis</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

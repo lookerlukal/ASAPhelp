@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="CODE V to ASAP Translation, Step 1"/>
+<meta name="abstract" content="The first step in the translation process involves selecting an *.SEQ file written by CODE V. You can either type the name of the file in the box below Select CODEV Lens (sequence) File, or click BROWSE. Either of these actions will display a FILE OPEN dialog, from which you can select an SEQ file."/>
+<meta name="description" content="The first step in the translation process involves selecting an *.SEQ file written by CODE V. You can either type the name of the file in the box below Select CODEV Lens (sequence) File, or click BROWSE. Either of these actions will display a FILE OPEN dialog, from which you can select an SEQ file."/>
+<meta name="DC.subject" content="CODE V to ASAP Translation, Step 1, translation, CODE V to ASAP, SEQ files, CODE V translation"/>
+<meta name="keywords" content="CODE V to ASAP Translation, Step 1, translation, CODE V to ASAP, SEQ files, CODE V translation"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/CODE_V_File_Conversion-task.html#CODE_V_File_Conversion"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/CODE_V_to_ASAP_Translation_Step_2-task.html#CODE_V_to_ASAP_Translation_Step_2"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/CODE_V_to_ASAP_Translation_Step_3-task.html#CODE_V_to_ASAP_Translation_Step_3"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/CODE_V_to_ASAP_Translator_Restrictions-ref.html#CODE_V_to_ASAP_Translator_Restrictions"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Glass_Catalogs_for_Refractive_Media-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Glass_Catalogs_for_Refractive_Media-task.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="CODE_V_to_ASAP_Translation_Step_1"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>CODE V to ASAP Translation, Step 1</title>
+</head>
+<body id="CODE_V_to_ASAP_Translation_Step_1"><a name="CODE_V_to_ASAP_Translation_Step_1"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>CODE V to ASAP Translation, Step 1</h5></span> 
+   
+   
+  <div><p>The first step in the translation process involves selecting an
+	 *.SEQ file written by CODE V. You can either type the name of the file in the
+	 box below Select 
+	 <b>CODEV Lens (sequence) File</b>, or click BROWSE. Either of these actions
+	 will display a FILE OPEN dialog, from which you can select an SEQ file. 
+  </p>
+ 
+	 <div class="section" id="CODE_V_to_ASAP_Translation_Step_1__context_8EF8464BBBF64386AA624C6F14D99AD0"><a name="CODE_V_to_ASAP_Translation_Step_1__context_8EF8464BBBF64386AA624C6F14D99AD0"><!-- --></a> 
+		<div class="note"><span class="notetitle">Note:</span> The translator supports only SEQ files for translation. CODE V also
+		  writes *.LEN files, which are binary files using ORA’s proprietary format.
+		  These files cannot be translated. User-generated SEQ files may be translated
+		  provided the data is arranged in a similar fashion to a CODE V-generated SEQ
+		  file. )
+		</div>
+ 
+		<p>The translator confirms the file’s existence by attempting to open it.
+		  If it is successful, the name of the selected file appears in the edit box, and
+		  the translator creates a default name for the ASAP file. (In this example, the
+		  default name for the ASAP file is 
+		  <b>wideangle.inr</b>.) If the translator cannot open the SEQ file, it
+		  displays a message box. 
+		  <i>The translator cannot move to the next dialog without a valid
+			 filename</i>.
+		</p>
+ 
+		<p>After you select the CODE V SEQ file, the translator reads the file
+		  for compatibility with ASAP and displays a summary in the scrolling list box.
+		  The list box has four columns of adjustable width so that you can read any text
+		  that might be truncated. The columns are:
+		</p>
+ 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>Surface</b>	
+			 </span></td><td><span>The surface number for which the translator is
+				commenting.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>Command</b>	
+			 </span></td><td><span>The exact text of the CODE V command that the translator
+				read.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>Message</b>	
+			 </span></td><td><span>A brief message summarizing the translator’s response to the
+				CODE V command. 
+			 </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>Explanation</b>	
+			 </span></td><td><span>If the command is an unsupported CODE V command, this column
+				describes the command.</span></td></tr></tbody></table> 
+		<div class="note"><span class="notetitle">Note:</span> Messages do not necessarily indicate that a problem exists. These
+		  messages are intended to alert you to features and capabilities present in one
+		  program that may be imprecisely translated into the other. 
+		</div>
+ 
+		<p>After creating the list, the translator writes out a summary
+		  recommendation or warning. The five possibilities are:
+		</p>
+ 
+		<p><b>Unknown material encountered; correct SEQ file or manually add to
+			 ASAP INR file 
+		  </b>
+		</p>
+ 
+		<p>The translator searches through the ASAP glass catalogs to locate
+		  materials found in the SEQ file. However, since the CODE V materials database
+		  contains catalogs and materials that are different from those in ASAP, the
+		  translator may not find a given material. CODE V also supports an alternate
+		  glass name syntax (for example, 517642_SCHOTT is equivalent to BK7_SCHOTT) that
+		  the translator does not recognize. 
+		</p>
+ 
+		<p>CAUTION: The above message is serious and indicates that the
+		  translated file will most likely not run successfully in ASAP. 
+		</p>
+ 
+		<p><b>Special surface types and/or materials were found; check ASAP model
+			 
+		  </b>
+		</p>
+ 
+		<p>The translator noted these surface types while reading the SEQ file.
+		  Carefully review the notes in the list box and the ASAP model for potential
+		  problems.
+		</p>
+ 
+		<p><b>Missing apertures on some surfaces; correct SEQ file or set default
+			 in next dialog 
+		  </b>
+		</p>
+ 
+		<p>Since precise aperture information is essential to ASAP, you must
+		  supply this information to perform the translation. While it is probably best
+		  if you return to CODE V and properly set the aperture(s), you can also assign
+		  default apertures or ask to be prompted for apertures in the second translation
+		  dialog.
+		</p>
+ 
+		<p><b>Unsupported commands were found and could affect translation
+			 accuracy 
+		  </b>
+		</p>
+ 
+		<p>The translator noted these commands while reading the SEQ file.
+		  Carefully review the notes in the list box and the ASAP model for potential
+		  problems.
+		</p>
+ 
+		<p><b>CODE V lens is ready for translation 
+		  </b>
+		</p>
+ 
+		<p>No warnings of any type were issued.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>At the completion of this dialog, click NEXT to continue to the next
+		  dialog, or CANCEL to exit the translator.
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Task/CODE_V_File_Conversion-task.html#CODE_V_File_Conversion" title="ASAP OPTICAL+ and ASAP ADVANCED include the fully integrated capability of importing CODE V® files.">CODE V File Conversion</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/CODE_V_to_ASAP_Translation_Step_2-task.html#CODE_V_to_ASAP_Translation_Step_2" title="The second step in the translation process is to select the ASAP filename, and to set several translation options.">CODE V to ASAP Translation, Step 2</a></div>
+<div><a href="../Task/CODE_V_to_ASAP_Translation_Step_3-task.html#CODE_V_to_ASAP_Translation_Step_3" title="The final step in the translation process is to choose the zoom position(s) to translate and, optionally, the surface for the origin of the global coordinate system.">CODE V to ASAP Translation, Step 3</a></div>
+<div><a href="../Task/Glass_Catalogs_for_Refractive_Media-task.html" title="The glass databases accessible in ASAP include: French, Hikari, Hoya, Hoya New, Ohara, Schott, Schott New, Sumita, and Unusual. The catalogs are in text files named *.CAT. The data for a specific glass consists of the glass name and six interpolation constants. No transmission, absorption, cost, staining data are contained in this database.">Glass Catalogs for Refractive Media</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/CODE_V_to_ASAP_Translator_Restrictions-ref.html#CODE_V_to_ASAP_Translator_Restrictions" title="While this translator supports most of the optical system modeling capabilities of CODE V, there are inevitable differences in the database structure and intended applications, so that a precise translation is not always possible. In most cases, the equivalent functionality can be accomplished in ASAP with user intervention. Specific features and limitations of this translator are described in this topic.">CODE V to ASAP Translator Restrictions</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

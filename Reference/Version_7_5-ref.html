@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Version 7.5"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Release_Notes-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_8_0.html#Version_8_0"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_7_1-ref.html#Version_7_1"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Version_7_5"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Version 7.5</title>
+</head>
+<body id="Version_7_5"><a name="Version_7_5"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Version 7.5</h5></span> 
+  <div> 
+	 <div class="section" id="Version_7_5__section_B06E9B3F5B434BC0892FFE596B220C5B"><a name="Version_7_5__section_B06E9B3F5B434BC0892FFE596B220C5B"><!-- --></a><span style="color: #2b6eb5"><h5>Release Notes for ASAP 7.5 Kernel as of January 06, 2002.</h5></span> 
+		 
+	 </div>
+ 
+	 <div class="section" id="Version_7_5__section_766E39ABF5D343419EB251FD5994A900"><a name="Version_7_5__section_766E39ABF5D343419EB251FD5994A900"><!-- --></a><span style="color: #2b6eb5"><h5>Changed commands (affects backward compatibility)</h5></span> 
+		 
+		<p>EMITTING
+			 OBJECT default is now total ray number instead of rays per facet.
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Version_7_5__section_AFD125B70A8545238D9A96FDF2CDA36B"><a name="Version_7_5__section_AFD125B70A8545238D9A96FDF2CDA36B"><!-- --></a><span style="color: #2b6eb5"><h5>Renamed Commands (but with backward compatibility)</h5></span> 
+		 
+		<p>CAD extended to more
+		  descriptive CADEXPORT (abbreviation will still work).
+		</p>
+ 
+		<p>FIELD split into 
+		  FIELDSUM and 
+		  FIELDBPM (abbreviation
+		  still works for both).
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Version_7_5__section_0C050927779D412F8CF5F3BD6FF32CDD"><a name="Version_7_5__section_0C050927779D412F8CF5F3BD6FF32CDD"><!-- --></a><span style="color: #2b6eb5"><h5>New Commands</h5></span> 
+		 
+		<pre class="codeblock">
+  DISPLAY
+    HISTOGRAM plot (number of values in each of specified number of intervals).
+  SURFACE
+    SUPERCONIC rotationally symmetric asphere used in optical design.
+  MEDIA scatter USERprog routine can even change wavelength (e.g. fluorescence).</pre>
+ 
+	 </div>
+ 
+	 <div class="section" id="Version_7_5__section_8D7F938271814EA0A14092CFDD9804DB"><a name="Version_7_5__section_8D7F938271814EA0A14092CFDD9804DB"><!-- --></a><span style="color: #2b6eb5"><h5>Enhanced Geometry Commands</h5></span> 
+		 
+		<pre class="codeblock">
+  "CADEXPORT_ASAP-cmdref.html"&gt;CADEXPORT
+    Improved ACCURACY of IGES rotationally symmetric SURFACES.
+    Can call VECT2DXF utility to create DXF version of current VCR file.
+  SURFACE
+    ARRAY
+      Now has simpler alternative syntax for orthogonal case.
+      New SEARCH option can dramatically speedup tracing of "tiled" surfaces.
+    CORNER cube can now have a HEXAGONAL aperture.
+  CURVE
+    USERCURVE can produce smooth rational or non-rational cubic SPLINE curve.
+    SPLINE with CURVatures will use rational quadratic segments when possible.
+  LENS
+    SINGLET MANGIN aberration elimination for any bending and conjugate factors.
+    ABERRATIONS solve to maintain back focal distance (last conicoid to focus).
+  VUFACETS can also LIST the number of facets created for each object.
+  PLOT FACETS can limit, if possible, the total number of facets on any object.</pre>
+ 
+	 </div>
+ 
+	 <div class="section" id="Version_7_5__section_7949018A9D5F435AB702FA207A5B6F95"><a name="Version_7_5__section_7949018A9D5F435AB702FA207A5B6F95"><!-- --></a><span style="color: #2b6eb5"><h5>Enhanced Properties Commands</h5></span> 
+		 
+		<pre class="codeblock">
+  OBJECT
+    ROUGHNESS has additional probability distributions to select from.
+    SCATTER cone can now be back TOWARDS incidence direction (retro-reflection).
+  FUNCTION
+    USERFUNC passed current WAVELENGTH (or associated ray/beam's wavelength).
+  MODELS
+    RAWDATA default collapse threshold changed from .001 to .000001.
+</pre>
+ 
+	 </div>
+ 
+	 <div class="section" id="Version_7_5__section_22AEFE1DFDB4495E9778D3442213B897"><a name="Version_7_5__section_22AEFE1DFDB4495E9778D3442213B897"><!-- --></a><span style="color: #2b6eb5"><h5>Enhanced Analysis Commands</h5></span> 
+		 
+		<pre class="codeblock">
+  DISPLAY
+    Also prints out RMS variance and widths of data.
+    GRAPH DISCRETE option displays data as vertical bars of controllable width.
+    MESH now defaults to monochrome but also accepts standard COLOR option.
+    Automatically calls BMP2DIS utility if given file has a .BMP extension.
+  SELECT by previous OBJECT now accepts wildcards in specified name.
+ AXIS LOCAL can refer to a specific object not just a ray/beam's current one.
+  SPOTS/OPDMAP/SPREAD/FIELDSUM/RADIANT can be in local coordinates of an entity.
+  SAMPLED/MESH/DECOMPOSE/EMIT DATA can process local coordinate distributions.
+  FIELDBPM Finite Difference Beam Propagation Method (FD-BPM).
+    BC option
+      Expanded to asymmetric computational window boundary conditions.
+      Easy option for (and defaulted to) physically absorbing region at edges.
+      Size of absorbing regions can be specified as fraction of total samples.
+    Ordering INTERFACE media allows "mismatch" errors to be fixed automatically.
+    Semi-vectorial version of wide-angle algorithm added for polarized fields.
+  GROUP/CONSIDER special case of ".?" wildcard added.
+  CLIP POS followed by a BOUNDS\RBOUNDS command allows complex ray bounding.
+  DECOMPOSE accepts any complex distribution file not just BRO029.DAT.
+  STATS ALL option also lists objects with no rays and zero flux on them.
+  FIELD COUPLE more easily to fundamental mode of step or gradient index fiber.
+</pre>
+ 
+	 </div>
+ 
+	 <div class="section" id="Version_7_5__section_697D600D7D824EB89A765E593E448A5C"><a name="Version_7_5__section_697D600D7D824EB89A765E593E448A5C"><!-- --></a><span style="color: #2b6eb5"><h5>Macro Language</h5></span> 
+		 
+		<pre class="codeblock">
+  &amp;GUI parses any expression results into their string equivalents.
+  Added ability to access a macro in a library other than current $IO LIB one.
+  Higher-order Bessel functions added (BJn and BKn for n up to 9).
+  RAN function generates random numbers with various probability distributions.
+  $RAN option for default DEC generator or new BEST one.
+  $TIC option allows user to set the time units for this and all future output.
+  $ITER/$EVAL new form that generates random perturbations of given variables.
+  &amp;GRAB strings instead of numbers from output buffer.
+  $GRAB can now also find numbers that immediately follow an equal sign (=).
+		</pre>
+ 
+	 </div>
+ 
+	 <div class="section" id="Version_7_5__section_0C00883119234FAE9A4740F85B3AF3D1"><a name="Version_7_5__section_0C00883119234FAE9A4740F85B3AF3D1"><!-- --></a><span style="color: #2b6eb5"><h5>Other Changes</h5></span> 
+		 
+		<pre class="codeblock">
+  As usual, *.SYS files are incompatible with previous versions.
+  Spatial distribution files can now have an arbitrary global orientation.
+  IGES Import
+    When possible will use wildcard on GROUPs instead of number.
+    Can now handle (very rare) case of nested COMPOSITE curves.
+  Ray selection flags increased (SELECT still works on any number of rays!)
+    Pro from 32 to 100 million, Basic from 9.6 to 10 million.
+  Faster tracing of semi-quadratic patches (e.g. IGES imported surfaces).
+  Experimental code for "intelligently" setting the default FACETing on objects.</pre>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Release_Notes-ref.html" title="Topics in this section include all known release notes for ASAP up to the last version. Release notes for the current version can be viewed in the ASAP Command Output window, or opened from your ASAP installation root folder.">Release Notes</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a href="../Reference/Version_8_0.html#Version_8_0" title="Release Notes for ASAP 8.0 Kernel as of October 23, 2003.">Version 8.0</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a href="../Reference/Version_7_1-ref.html#Version_7_1">Version 7.1</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

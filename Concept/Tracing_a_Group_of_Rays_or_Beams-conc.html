@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Tracing a Group of Rays or Beams"/>
+<meta name="abstract" content="Any number of rays or beams may be traced at one time. The procedure involves initializing the ray and beam data (coordinates, directions, and sizes) at a plane in the system, which the program designates as object zero."/>
+<meta name="description" content="Any number of rays or beams may be traced at one time. The procedure involves initializing the ray and beam data (coordinates, directions, and sizes) at a plane in the system, which the program designates as object zero."/>
+<meta name="DC.subject" content="Tracing a Group of Rays or Beams, rays, tracing a group, beams, tracing a group"/>
+<meta name="keywords" content="Tracing a Group of Rays or Beams, rays, tracing a group, beams, tracing a group"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Tracing_the_Rays_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Setup_Trace-ref.html#Setup_Trace"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Types_of_Ray_Tracing_Data_Saved_by_ASAP-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Trace_Ray_Beams-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FIELD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FLUX_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_OBJECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/RAYSET_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SOURCE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPOTS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPREAD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/STATS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TRACE_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Tracing_a_Group_of_Rays_or_Beams"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Tracing a Group of Rays or Beams</title>
+</head>
+<body id="Tracing_a_Group_of_Rays_or_Beams"><a name="Tracing_a_Group_of_Rays_or_Beams"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Tracing a Group of Rays or Beams</h5></span> 
+   
+  
+  <div><p>Any number of rays or beams may be traced at one time. The
+	 procedure involves initializing the ray and beam data (coordinates, directions,
+	 and sizes) at a plane in the system, which the program designates as object
+	 zero. 
+  </p>
+ 
+	 <p>The commands RAYSET and GRID set the coordinates and sizes while the
+		SOURCE command then sets the directions and starting optical path lengths. 
+	 </p>
+ 
+	 <p>The FLUX command initializes the energy flux per ray or beam. 
+	 </p>
+ 
+	 <p>Actual performance of the ray/beam trace is accomplished with the TRACE
+		command. 
+	 </p>
+ 
+	 <p>At any time the new ray data may be analyzed using the STATS and SPOTS
+		commands. 
+	 </p>
+ 
+	 <p>Coherent beam data is analyzed using the SPREAD and FIELD commands.
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Tracing_the_Rays_Overview-conc.html" title="Ray tracing is probably the most basic operation in ASAP since all information regarding system performance is obtained with it.">Tracing the Rays Overview</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Setup_Trace-ref.html#Setup_Trace" title="This topic lists commands that are used when setting up a ray trace.">Setup Trace</a></div>
+<div><a href="../Reference/Types_of_Ray_Tracing_Data_Saved_by_ASAP-ref.html" title="For each ray traced by ASAP, types of data can be saved in ASAP (in the virtual.pgs file), depending on the XMEMORY setting and your particular edition of ASAP. This topic lists these types of data.">Ray Tracing Data Saved by ASAP</a></div>
+<div><a href="../Reference/Trace_Ray_Beams-ref.html" title="This topic lists commands that are used when performing a ray/beam trace.">Trace Ray and Beams</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/FIELD_ASAP-cmdref.html" title="Calculates the exact complex field distribution.">FIELD (ASAP Command)</a></div>
+<div><a href="../Commands/FLUX_ASAP-cmdref.html" title="Modifies ray fluxes of currently selected ray data.">FLUX (ASAP Command)</a></div>
+<div><a href="../Commands/GRID_OBJECT_ASAP-cmdref.html" title="Generates a uniform grid of rays on an object.">GRID OBJECT (ASAP Command)</a></div>
+<div><a href="../Commands/RAYSET_ASAP-cmdref.html" title="Specifies an arbitrary set of rays.">RAYSET (ASAP Command)</a></div>
+<div><a href="../Commands/SOURCE_ASAP-cmdref.html" title="Specifies sources for the rays/beams.">SOURCE (ASAP Command)</a></div>
+<div><a href="../Commands/SPOTS_ASAP-cmdref.html" title="Creates a geometric spot diagram for the currently selected ray data.">SPOTS (ASAP Command)</a></div>
+<div><a href="../Commands/SPREAD_ASAP-cmdref.html" title="Calculates the exact coherent/incoherent energy distribution.">SPREAD (ASAP Command)</a></div>
+<div><a href="../Commands/STATS_ASAP-cmdref.html" title="Lists statistics of the currently selected ray data.">STATS (ASAP Command)</a></div>
+<div><a href="../Commands/TRACE_ASAP-cmdref.html" title="Traces all currently selected rays in storage.">TRACE (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

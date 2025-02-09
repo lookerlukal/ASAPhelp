@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Graphics Driver - Directly Accessing the Immediate"/>
+<meta name="abstract" content="You can directly access the graphics drivers in ASAP for faster, more interactive displays."/>
+<meta name="description" content="You can directly access the graphics drivers in ASAP for faster, more interactive displays."/>
+<meta name="DC.subject" content="Graphics Driver - Directly Accessing, graphics, accessing driver directly"/>
+<meta name="keywords" content="Graphics Driver - Directly Accessing, graphics, accessing driver directly"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_GM-ref.html#Reference_G_M"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Graphics_Driver_Directly_Accessing_the_Immediate"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Graphics Driver - Directly Accessing the Immediate</title>
+</head>
+<body id="Graphics_Driver_Directly_Accessing_the_Immediate"><a name="Graphics_Driver_Directly_Accessing_the_Immediate"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Graphics Driver - Directly Accessing the Immediate </h5></span> 
+   
+  
+  <div><p>You can directly access the graphics drivers in ASAP for faster,
+	 more interactive displays. 
+  </p>
+ 
+	 <div class="section" id="Graphics_Driver_Directly_Accessing_the_Immediate__context_8EF8464BBBF64386AA624C6F14D99AD0"><a name="Graphics_Driver_Directly_Accessing_the_Immediate__context_8EF8464BBBF64386AA624C6F14D99AD0"><!-- --></a>
+		<p>The main graphics driver routine is used primarily for writing to the
+		  display: CALL GDRIVR(X,Y,IP). 
+		</p>
+ 
+		<p>The coordinates are again assumed to be approximately equivalent to
+		  inches on a standard page; that is,.
+		</p>
+ 
+		<p>0. &lt; X &lt; 10. (Horizontal, across)
+		</p>
+ 
+		<p>0. &lt; Y &lt; 7.5 (Vertical, up)
+		</p>
+ 
+		<p>However, both coordinates are automatically scaled by the driver to
+		  fill the device’s display. The third argument is a mode value that specifies
+		  the action to be taken and is similar to but not exactly equivalent to the IPEN
+		  value of the previous section.
+		</p>
+ 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>IP</b></span></td><td><span><b>Action</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>&lt; 0</span></td><td><span>Enters graphics mode, initialize device, and clear display.
+				If IP returns positive, the device is not the console or user's terminal, and
+				IP is the logical unit number associated with it.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>0</span></td><td><span>Sets character size to X (default = .125) and rotation to Y
+				degrees.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>1</span></td><td><span>Moves to X,Y and write point.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>2</span></td><td><span>Moves to X,Y with writing (draw line).</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>3</span></td><td><span>Moves to X,Y with no writing (simple move).</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>4</span></td><td><span>Fills a rectangle from last point to diagonal corner at
+				X,Y.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>5-31</span></td><td><span>Changes writing attribute* to IP-4, and move to
+				X,Y.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>32-126</span></td><td><span>Writes corresponding ASCII character at X,Y (lower left
+				corner).</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>127</span></td><td><span>Prepares device to write a text string starting at X,Y and
+				returns required string terminator ASCII code in IP. The application program
+				can then write a string directly to device.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>128-899</span></td><td><span>Reserved for other attributes and/or character
+				fonts.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>900</span></td><td><span>Immediately exit graphics mode.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>999</span></td><td><span>Beep, wait for Enter, and exit graphics mode.</span></td></tr></tbody></table> 
+		<p>*The writing attribute is assumed to be a color number from 1 to 27
+		  with 1 being completely opposite the devices background color (the default),
+		  and 27 being the SAME as the background (for erasing).
+		</p>
+ 
+		<p>The second graphics driver routine is used to get information back
+		  from the display in the form of the coordinates of a user-positioned pointer;
+		  that is: CALL GINPUT (X,Y,IP)
+		</p>
+ 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>Input IP</b></span></td><td><span><b>Meaning</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> &lt; -31</span></td><td><span>Define home position to be X,Y and activation key to be
+				-IP.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>&lt; 0</span></td><td><span>Enter interactive graphics pointer mode -IP at position
+				X,Y.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>= 0</span></td><td><span>Enter interactive graphics pointer mode at position
+				X,Y.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span> &gt; 0</span></td><td><span>Enter interactive graphics pointer mode IP at current
+				position.</span></td></tr></tbody></table> 
+		<p>The currently allowed pointer modes are:
+		</p>
+ 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>1</span></td><td><span>Small crosshair pointer at interactive point</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>2</span></td><td><span>Straight line dragged from start to interactive
+				point</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>3</span></td><td><span>Full window crosshair at interactive point</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>4</span></td><td><span>Rectangle (box) dragged from start to interactive
+				point</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>5</span></td><td><span>Inscribed ellipse dragged from start to interactive
+				point</span></td></tr></tbody></table> 
+		<p>The values returned by GINPUT are shown below:
+		</p>
+ 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>Return IP</b></span></td><td><span><b>Meaning</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>&lt; 0</span></td><td><span>Device does not have interactive graphics pointer
+				capability.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>0</span></td><td><span>Enter key was pressed at X,Y.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>32-127</span></td><td><span>ASCII code of key presses at X,Y.</span></td></tr></tbody></table> 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_GM-ref.html#Reference_G_M" title="Reference topics in this section begin with the letters &#34;G&#34; to &#34;M&#34;.">Reference (G-M)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

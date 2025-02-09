@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="MEDIA GRIN (ASAP Command)"/>
+<meta name="abstract" content="Creates a GRIN refractive material."/>
+<meta name="description" content="Creates a GRIN refractive material."/>
+<meta name="DC.subject" content="MEDIA GRIN (ASAP Command), GRIN, create refractive material, refractive, create GRIN material"/>
+<meta name="keywords" content="MEDIA GRIN (ASAP Command), GRIN, create refractive material, refractive, create GRIN material"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_M-ref.html#Commands_and_Macros_M"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_ABSORB_ASAP-cmdref.html#MEDIA_ABSORB_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_CRYSTAL_ASAP-cmdref.html#MEDIA_CRYSTAL_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_SCATTER_ASAP-cmdref.html#MEDIA_SCATTER_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/GRIN_Overview-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="MEDIA_GRIN_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>MEDIA GRIN (ASAP Command)</title>
+</head>
+<body id="MEDIA_GRIN_ASAP_Command"><a name="MEDIA_GRIN_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>MEDIA GRIN (ASAP Command)</h5></span>
+	
+	
+	<div><p>Creates a GRIN refractive material. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+MEDIA [ m ]
+n  [ n' n" . . . ]  GRIN k p t [ l ] [ 'name' ]
+             :
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m</span></td><td><span>starting media number</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span>real (or complex) refractive index</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>k</span></td><td><span><b>GRIN</b> function number</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>p</span></td><td><span>exponent of <b>GRIN</b> function</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>t</span></td><td><span>step length to be used during ray trace</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>l</span></td><td><span>maximum number of ray steps in medium; default is 1000</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>name</span></td><td><span>descriptive name that can be assigned to this medium (only the first 24
+					characters after the comment delimiter are stored).</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="MEDIA_GRIN_ASAP_Command__ul_9498CBFFEDBA410782147819A209A24D"><!-- --></a><ol id="MEDIA_GRIN_ASAP_Command__ul_9498CBFFEDBA410782147819A209A24D">
+			<li id="MEDIA_GRIN_ASAP_Command__li_1E05FAAD9D0D4355A9CF5006155A0441"><a name="MEDIA_GRIN_ASAP_Command__li_1E05FAAD9D0D4355A9CF5006155A0441"><!-- --></a>
+				<b>GRIN</b> specifies that the medium consists of Gradient index (GRIN)
+				materials. The square of the refractive index is given by: <p>
+					<img src="../Equations/MEDIA_GRIN_equation1.gif"/></p>
+<p>where </p>
+<p>
+					<img src="../Equations/GRIN_Overview_equation4.gif"/></p>
+<p>is a general
+					polynomial function and </p>
+<p>
+					<img src="../Equations/GRIN_Overview_equation3.gif"/></p>
+<p>is the refractive
+					index entered on the <b>MEDIA</b> command. The technique for
+					modeling dispersive gradients is to define a separate <b>GRIN</b>
+					function for each <b>WAVELENGTH</b> and to update the object data
+					between individual ray traces. </p>
+</li>
+
+			<li id="MEDIA_GRIN_ASAP_Command__li_875B8206977049DFA8F6D0CB73E287B1"><a name="MEDIA_GRIN_ASAP_Command__li_875B8206977049DFA8F6D0CB73E287B1"><!-- --></a>The <b>k</b> refers to the
+					<b>SURFACE/FUNCTION</b> that defines the index variation. </li>
+
+			<li id="MEDIA_GRIN_ASAP_Command__li_7FF57EF5A9B84237ACE2AC52F67DCF1D"><a name="MEDIA_GRIN_ASAP_Command__li_7FF57EF5A9B84237ACE2AC52F67DCF1D"><!-- --></a> If the constant coefficient of the
+				function <p>
+					<br/><img src="../Equations/GRIN_Overview_equation4.gif"/><br/>
+				</p>
+<p>is unity, the refractive indices entered after the <b>MEDIA</b>
+					command corresponds to those at the function's reference point. </p>
+<p>The
+						<b>t</b> is the step length in systems units used by ASAP while
+					tracing a ray in this inhomogeneous medium. </p>
+</li>
+
+			<li id="MEDIA_GRIN_ASAP_Command__li_51E903B3B9D14606B3147E6C2D7F23F2"><a name="MEDIA_GRIN_ASAP_Command__li_51E903B3B9D14606B3147E6C2D7F23F2"><!-- --></a>The <b>GRIN</b> function is
+				defined in global coordinates. This is of little consequence if the gradients are
+				radial (there is no position dependence along the axis), but if the desired gradient
+				is axial, you may have to <b>SHIF</b>T the gradient to the correct
+				global coordinates to align the gradient with the object. </li>
+
+			<li id="MEDIA_GRIN_ASAP_Command__li_9C403DAA2633437D9AF6B1DFA954E5A6"><a name="MEDIA_GRIN_ASAP_Command__li_9C403DAA2633437D9AF6B1DFA954E5A6"><!-- --></a>The function can be <b>ARRAY</b>ed. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#MEDIA">MEDIA Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_M-ref.html#Commands_and_Macros_M" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “M”.">Commands and Macros (M)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/GRIN_Overview-ref.html" title="Gradient Index (GRIN) materials have indices of refraction that vary as a function of position within the material. Consequently, light does not necessarily follow a straight line while propagating through the material.">GRIN Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/MEDIA_ASAP-cmdref.html" title="Creates a single refractive material.">MEDIA (ASAP Command)</a></div>
+<div><a href="../Commands/MEDIA_ABSORB_ASAP-cmdref.html#MEDIA_ABSORB_ASAP_Command" title="Creates an absorbing refractive material.">MEDIA ABSORB (ASAP Command)</a></div>
+<div><a href="../Commands/MEDIA_CRYSTAL_ASAP-cmdref.html#MEDIA_CRYSTAL_ASAP_Command" title="Defines birefringent media.">MEDIA CRYSTAL (ASAP Command)</a></div>
+<div><a href="../Commands/MEDIA_SCATTER_ASAP-cmdref.html#MEDIA_SCATTER_ASAP_Command" title="Assigns to medium a GENERAL polynomial or USERFUNC function in the global coordinates X, Y, Z.">MEDIA SCATTER (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

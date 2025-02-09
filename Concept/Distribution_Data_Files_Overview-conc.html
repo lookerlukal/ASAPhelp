@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Distribution Data Files Overview"/>
+<meta name="abstract" content="ASAP has several commands for calculating the irradiance, intensity, radiance etc., for a set of files, some of which produce immediate results of these calculations in the form of plots directly on the screen."/>
+<meta name="description" content="ASAP has several commands for calculating the irradiance, intensity, radiance etc., for a set of files, some of which produce immediate results of these calculations in the form of plots directly on the screen."/>
+<meta name="DC.subject" content="Distribution Data Files Overview, plots from calculations"/>
+<meta name="keywords" content="Distribution Data Files Overview, plots from calculations"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_DEF-ref.html#Reference_DEF"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DISPLAY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OBJECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WINDOW_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Files_Produced_by_ASAP-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Distribution_Data_Files_Overview"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Distribution Data Files Overview</title>
+</head>
+<body id="Distribution_Data_Files_Overview"><a name="Distribution_Data_Files_Overview"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Distribution Data Files Overview</h5></span> 
+   
+   
+  <div><p>ASAP has several commands for calculating the irradiance,
+	 intensity, radiance etc., for a set of files, some of which produce immediate
+	 results of these calculations in the form of plots directly on the screen. 
+  </p>
+ 
+	 <p>For example, geometric spot diagrams display plotted points representing
+		the geometric location of rays in a spatial or angular coordinate system. 
+	 </p>
+ 
+	 <p>As this display occurs, ASAP simultaneously creates data files called
+		distribution data files. These files contain more information from the
+		calculation than the information displayed on the screen. Furthermore, some
+		ASAP commands only produce output contained in the distribution data files that
+		must be displayed with other graphical tools. 
+	 </p>
+ 
+	 <p>Distribution data files can be read into a special graphical viewing
+		area in ASAP called DISPLAY, which is a keyword-like SURFACE or OBJECT that has
+		its own set of commands. These commands are for general plotting, editing, and
+		analysis of the data contained in a distribution data file. 
+	 </p>
+ 
+	 <p>Distribution data files are referenced by LOGICAL unit numbers or file
+		names for some of the commands. The default distribution file is BRO009.DAT.
+		This file defaults to overwrite each time a calculation is performed. You can
+		control how the information is accumulated in the distribution data files by
+		the sign of the unit number. If the unit number has a negative sign in front of
+		it, any data previously stored in the file is overwritten. If the unit number
+		is positive, the newly generated data is added pixel by pixel to the current
+		contents of the data file. 
+	 </p>
+ 
+	 <p>The 
+		<b>WINDOW 
+		</b> command sets the physical area over which the irradiance,
+		intensity and others, is computed. The PIXEL command sets the resolution of the
+		calculation and hence the number of data values in the distribution data files.
+		For example: 
+	 </p>
+ 
+	 <br/><a name="Distribution_Data_Files_Overview__ul_E93B769905EC4D568427DB5E975D0D01"><!-- --></a><ul id="Distribution_Data_Files_Overview__ul_E93B769905EC4D568427DB5E975D0D01"> 
+		<li id="Distribution_Data_Files_Overview__li_F07165DA45704B029BF3E810B5D73028"><a name="Distribution_Data_Files_Overview__li_F07165DA45704B029BF3E810B5D73028"><!-- --></a>If the 
+		  <b>WINDOW 
+		  </b> command defines a square area, the data file is an 
+		  <b>nxn</b> array where 
+		  <b>n</b> is set with the 
+		  <b>PIXEL 
+		  </b> command. The pixels are square in size. 
+		</li>
+ 
+		<li id="Distribution_Data_Files_Overview__li_2362021DA541494FA83E0BF65149C74B"><a name="Distribution_Data_Files_Overview__li_2362021DA541494FA83E0BF65149C74B"><!-- --></a>If the 
+		  <b>WINDOW</b> command defines a rectangular area, the data
+		  file is 
+		  <b>n</b> pixels across (as set with the 
+		  <b>PIXEL 
+		  </b> command) and 
+		  <b>αn</b> pixels down (where 
+		  <b>α</b> is the ratio of the down direction (horizontal screen
+		  dimension) to the across direction (vertical screen dimension) of the current
+		  window settings). In the situation where 
+		  <b>αn</b> is not an integer, the size of the pixels in the horizontal
+		  screen dimension will be scaled in order to accommodate the smallest integer
+		  number of pixels that fit the window. 
+		</li>
+ 
+	 </ul>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_DEF-ref.html#Reference_DEF" title="Reference topics in this section begin with the letters &#34;D-E-F&#34;.">Reference (D-F)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Files_Produced_by_ASAP-ref.html" title="Lists the file types that ASAP produces and uses.">Files Produced by ASAP</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DISPLAY_ASAP-cmdref.html" title="Reads previously created distribution data files so that they can be modified.">DISPLAY (ASAP Command)</a></div>
+<div><a href="../Commands/OBJECT_ASAP-cmdref.html" title="Defines an object based upon previously defined entities.">OBJECT (ASAP Command)</a></div>
+<div><a href="../Commands/PIXELS_ASAP-cmdref.html" title="Sets the resolution for graphics and calculations.">PIXELS (ASAP Command)</a></div>
+<div><a href="../Commands/WINDOW_ASAP-cmdref.html" title="Sets the plotting window for graphical output.">WINDOW (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

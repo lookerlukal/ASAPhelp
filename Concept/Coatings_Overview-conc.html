@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Coatings Overview"/>
+<meta name="abstract" content="Coatings are used in ASAP to define the specular properties (reflection and transmission) of an interface; as such, they are related to the MEDIA database. The index information from the MEDIA database is used to construct optical coatings. Optical INTERFACE COATings can be specified (and optionally assigned 'name' of up to 16 characters), either in terms of their wavelength PROPERTIES, angular MODELS, or their actual LAYER structure."/>
+<meta name="description" content="Coatings are used in ASAP to define the specular properties (reflection and transmission) of an interface; as such, they are related to the MEDIA database. The index information from the MEDIA database is used to construct optical coatings. Optical INTERFACE COATings can be specified (and optionally assigned 'name' of up to 16 characters), either in terms of their wavelength PROPERTIES, angular MODELS, or their actual LAYER structure."/>
+<meta name="DC.Relation" scheme="URI" content="COATINGS_LAYERS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="COATINGS_MODELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="COATINGS_PROPERTIES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="FRESNEL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="MEDIA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="Builder_Window_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="Coating_Storage-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Coatings_Overview"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Coatings Overview</title>
+</head>
+<body id="Coatings_Overview"><a name="Coatings_Overview"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Coatings Overview</h5></span>
+	
+	<div><p>Coatings are used in ASAP to define the specular properties (reflection and transmission) of an interface; as such, they are related to the MEDIA database. The index information from the MEDIA database is used to construct optical coatings. Optical INTERFACE COATings can be specified (and optionally assigned 'name' of up to 16 characters), either in terms of their wavelength PROPERTIES, angular MODELS, or their actual LAYER structure.</p>
+
+		<p>Two ways to define the COATINGS database are:</p>
+
+		<br/><ul>
+			<li>Specifying a table of reflection and transmission coefficients as a function of wavelength. ASAP linearly interpolates to obtain the reflection and transmission coefficients at intermediate wavelengths. These reflection and transmission coefficients are applied to every ray regardless of the incident angles unless the FRESNEL command is entered before the ray trace. In this case, ASAP constructs a simple quarter wave coating, based on the reflection and transmission coefficients of the specified wavelength, to simulate the behavior of the reflection/transmission coefficients as a function of angle.</li>
+
+			<li>Specifying the actual coating prescription on a layer-by-layer basis. As with the first technique, ASAP calculates the normally incident Fresnel coefficients and apply these coefficients to each ray regardless of angle of incidence unless the FRESNEL command is first executed.</li>
+
+		</ul>
+
+	</div>
+ 
+	<div><div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="COATINGS_LAYERS_ASAP-cmdref.html">COATINGS LAYERS (ASAP Command)</a></div>
+<div><a href="COATINGS_MODELS_ASAP-cmdref.html">COATINGS MODELS (ASAP Command)</a></div>
+<div><a href="COATINGS_PROPERTIES_ASAP-cmdref.html">COATINGS PROPERTIES (ASAP Command)</a></div>
+<div><a href="FRESNEL_ASAP-cmdref.html">FRESNEL (ASAP Command)</a></div>
+<div><a href="MEDIA_ASAP-cmdref.html">MEDIA (ASAP Command)</a></div>
+<div><a href="Builder_Window_Overview-conc.html">Builder Window Overview for defining coatings</a></div>
+<div><a href="Coating_Storage-ref.html">Coating Storage</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

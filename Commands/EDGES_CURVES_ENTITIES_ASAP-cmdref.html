@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="EDGES/CURVES/ENTITIES (ASAP Command)"/>
+<meta name="abstract" content="Signals ASAP that edge definition commands follow."/>
+<meta name="description" content="Signals ASAP that edge definition commands follow."/>
+<meta name="DC.subject" content="EDGES/CURVES/ENTITIES (ASAP Command), edges, definitions"/>
+<meta name="keywords" content="EDGES/CURVES/ENTITIES (ASAP Command), edges, definitions"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_E-ref.html#Commands_and_Macros_E"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LENSES_ENTITIES_ASAP-cmdref.html#LENSES_ENTITIES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SURFACES_FUNCTIONS_ENTITIES_ASAP-cmdref.html#SURFACES_FUNCTIONS_ENTITIES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Cartesian_Coordinate_System_in_ASAP-ref.html#Cartesian_Coordinate_System_in_ASAP"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Data_Storage_for_Entities-ref.html#Data_Storage_for_Entities"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Edges_and_Curves_Overview-ref.html#Edges_and_Curves_Overview"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Geometric_Entities-conc.html#Geometric_Entities"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="EDGES_CURVES_ENTITIES_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>EDGES/CURVES/ENTITIES (ASAP Command)</title>
+</head>
+<body id="EDGES_CURVES_ENTITIES_ASAP_Command"><a name="EDGES_CURVES_ENTITIES_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>EDGES/CURVES/ENTITIES (ASAP Command)</h5></span>
+	
+	
+	<div><p>Signals ASAP that edge definition commands follow. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+EDGES   [ i ]
+CURVES
+ENTITIES
+</pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>i</span></td><td><span>starting number for defining EDGES/CURVES</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="EDGES_CURVES_ENTITIES_ASAP_Command__ul_82770D5536E94A11BF0A3F8A49FC1567"><!-- --></a><ol id="EDGES_CURVES_ENTITIES_ASAP_Command__ul_82770D5536E94A11BF0A3F8A49FC1567">
+			<li id="EDGES_CURVES_ENTITIES_ASAP_Command__li_F9793685C3E34F878AB991FE42FD50E3"><a name="EDGES_CURVES_ENTITIES_ASAP_Command__li_F9793685C3E34F878AB991FE42FD50E3"><!-- --></a>The default value for <b>i</b>
+				is one more than the highest edge number previously defined. The <b>i</b> is initialized to one at start of program processing. </li>
+
+			<li id="EDGES_CURVES_ENTITIES_ASAP_Command__li_35911F2FC9CA47A8BD362906313127F6"><a name="EDGES_CURVES_ENTITIES_ASAP_Command__li_35911F2FC9CA47A8BD362906313127F6"><!-- --></a><b>EDGE</b>, <b>LENS</b>, and <b>SURFACE</b> data currently reside in the same
+				internal storage locations. Therefore, an <b>EDGE</b> number cannot be
+				the same as an already defined <b>LENSES</b> or <b>SURFACE</b> number. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#EDGES">EDGES Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_E-ref.html#Commands_and_Macros_E" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “E”.">Commands and Macros (E)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Geometric_Entities-conc.html#Geometric_Entities">Geometric Entities</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Cartesian_Coordinate_System_in_ASAP-ref.html#Cartesian_Coordinate_System_in_ASAP" title="ASAP uses a single, global, right-handed, Cartesian coordinate system with components x, y, and z. &#34;Edges&#34;, &#34;lenses&#34;, and &#34;surfaces&#34; are the basic geometrical entities of the program.">Cartesian Coordinate System in ASAP</a></div>
+<div><a href="../Reference/Data_Storage_for_Entities-ref.html#Data_Storage_for_Entities" title="SURFACE/FUNCTION , EDGE/CURVE and LENS data currently share the same array for internal storage. In fact, they have equivalent storage locations.">Data Storage for Entities</a></div>
+<div><a href="../Reference/Edges_and_Curves_Overview-ref.html#Edges_and_Curves_Overview" title="Edges and curves are made up of a series of connected points in space that form a parametric representation of an entity.">Edges and Curves Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/LENSES_ENTITIES_ASAP-cmdref.html#LENSES_ENTITIES_ASAP_Command" title="Signals ASAP that lens definition commands follow.">LENSES ENTITIES (ASAP Command)</a></div>
+<div><a href="../Commands/SURFACES_FUNCTIONS_ENTITIES_ASAP-cmdref.html#SURFACES_FUNCTIONS_ENTITIES_ASAP_Command" title="Signals ASAP that surface definition commands follow.">SURFACES/FUNCTIONS/ENTITIES (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Edges in ASAP</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

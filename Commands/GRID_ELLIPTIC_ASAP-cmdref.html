@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="GRID ELLIPTIC (ASAP Command)"/>
+<meta name="abstract" content="Generates a rectangular grid of rays inside an elliptical aperture."/>
+<meta name="description" content="Generates a rectangular grid of rays inside an elliptical aperture."/>
+<meta name="DC.subject" content="GRID ELLIPTIC (ASAP Command), rays, rectangular grid, elliptical aperture with rectangular grid of rays"/>
+<meta name="keywords" content="GRID ELLIPTIC (ASAP Command), rays, rectangular grid, elliptical aperture with rectangular grid of rays"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_G-ref.html#Commands_and_Macros_G"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_ELLIPTIC_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_HEX_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_OBJECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_POLAR_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_RECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_WINDOW_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/POLARIZ_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SOURCE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPOTS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/GRID_Command_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="GRID_ELLIPTIC_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>GRID ELLIPTIC (ASAP Command)</title>
+</head>
+<body id="GRID_ELLIPTIC_ASAP_Command"><a name="GRID_ELLIPTIC_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>GRID ELLIPTIC (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Generates a rectangular grid of rays inside an elliptical
+	 aperture. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+GRID ELLIPTIC X x y y' z z' n n' [ c ] [ RANDOM f ]
+              Y y z z' x x'
+              Z z x x' y y'
+      </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X, Y, or Z</span></td><td><span>coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x, y, or z</span></td><td><span>location of plane on the coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>y y', z z', or x x'z z', x x', or y y'</span></td><td><span>minimum and maximum extent of the plane in the given
+			 direction</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n n'</span></td><td><span>number of rays in each direction on the plane</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>c</span></td><td><span>fraction height of a central hole in the grid</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RANDOM f</span></td><td><span>randomization factor</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="GRID_ELLIPTIC_ASAP_Command__ul_65024532D30C432D8077C9B04A62F507"><!-- --></a><ol id="GRID_ELLIPTIC_ASAP_Command__ul_65024532D30C432D8077C9B04A62F507"> 
+		<li id="GRID_ELLIPTIC_ASAP_Command__li_8E7BFB7585324B988181A0EA042D97D1"><a name="GRID_ELLIPTIC_ASAP_Command__li_8E7BFB7585324B988181A0EA042D97D1"><!-- --></a>Generates a uniform
+		  rectangular grid of rays on the given plane, which is then clipped by an
+		  inscribed elliptical aperture. 
+		</li>
+ 
+		<li id="GRID_ELLIPTIC_ASAP_Command__li_7F7A80D53D8640CF8BA328199409CE7C"><a name="GRID_ELLIPTIC_ASAP_Command__li_7F7A80D53D8640CF8BA328199409CE7C"><!-- --></a>The flux of each ray is
+		  adjusted to give unit irradiance (flux/area) to the entire 
+		  <b>GRID</b>. 
+		</li>
+ 
+		<li id="GRID_ELLIPTIC_ASAP_Command__li_248AAEDB12D14B4683A056248F755579"><a name="GRID_ELLIPTIC_ASAP_Command__li_248AAEDB12D14B4683A056248F755579"><!-- --></a>Rays are equally spaced in
+		  the two directions only if the extents and the number of rays in each direction
+		  are identical. 
+		</li>
+ 
+		<li id="GRID_ELLIPTIC_ASAP_Command__li_D5B1F3E814F94027A66CE43FC1FBEE78"><a name="GRID_ELLIPTIC_ASAP_Command__li_D5B1F3E814F94027A66CE43FC1FBEE78"><!-- --></a>The values for 
+		  <b>n</b> and 
+		  <b>n'</b> set the number of rays of the full rectangular
+		  grid. The number of rays contained in the inscribed elliptical aperture is
+		  usually less than the number in a full rectangular grid. 
+		</li>
+ 
+		<li id="GRID_ELLIPTIC_ASAP_Command__li_E0F4DC12EC3E4C11B9EDD8509F1A5BB8"><a name="GRID_ELLIPTIC_ASAP_Command__li_E0F4DC12EC3E4C11B9EDD8509F1A5BB8"><!-- --></a>The optional 
+		  <b>c</b> entry specifies a fractional height for a central
+		  hole in the grid. 
+		</li>
+ 
+		<li id="GRID_ELLIPTIC_ASAP_Command__li_8E900128C8D84A1B818CDA079BDB4CE7"><a name="GRID_ELLIPTIC_ASAP_Command__li_8E900128C8D84A1B818CDA079BDB4CE7"><!-- --></a>Each position on the grid
+		  can be uniformly 
+		  <b>RANDOM</b>ized within a region 
+		  <b>f</b> times the local grid spacing. 
+		</li>
+ 
+		<li id="GRID_ELLIPTIC_ASAP_Command__li_5EDC9E1816A9419BBEAF9547B2AFBC0D"><a name="GRID_ELLIPTIC_ASAP_Command__li_5EDC9E1816A9419BBEAF9547B2AFBC0D"><!-- --></a>Used in conjunction with the
+		  
+		  <b>SOURCE</b> command, 
+		  <b>GRID ELLIPTIC</b> creates ray data that can be traced in
+		  ASAP. 
+		</li>
+ 
+		<li id="GRID_ELLIPTIC_ASAP_Command__li_A42550AF78AE4316A6FAA4D5B3D6D38C"><a name="GRID_ELLIPTIC_ASAP_Command__li_A42550AF78AE4316A6FAA4D5B3D6D38C"><!-- --></a>When in doubt about the
+		  exact distribution that is created by 
+		  <b>GRID ELLIPTIC</b> use the 
+		  <b>SPOTS POSITION</b> command to display the grid. 
+		</li>
+ 
+		<li id="GRID_ELLIPTIC_ASAP_Command__li_933A3D32719C44F29FE088075E43F0C5"><a name="GRID_ELLIPTIC_ASAP_Command__li_933A3D32719C44F29FE088075E43F0C5"><!-- --></a>ASAP modifies the
+		  polarization of rays as needed to avoid the creation of axial fields, and warns
+		  when this occurs. Modifications do not permanently change the 
+		  <b>POLARIZ</b> settings. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#GRID">GRID
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+  <div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_G-ref.html#Commands_and_Macros_G" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “G”.">Commands and Macros (G)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/GRID_Command_Overview-conc.html" title="The GRID command generates a planar distribution of rays, which, in conjunction with the SOURCE command, creates ray data that can be traced in ASAP.">GRID Command Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/GRID_ELLIPTIC_ASAP-cmdref.html" title="Generates a rectangular grid of rays inside an elliptical aperture.">GRID ELLIPTIC (ASAP Command)</a></div>
+<div><a href="../Commands/GRID_HEX_ASAP-cmdref.html" title="Generates a hexagonal grid of rays.">GRID HEX (ASAP Command)</a></div>
+<div><a href="../Commands/GRID_OBJECT_ASAP-cmdref.html" title="Generates a uniform grid of rays on an object.">GRID OBJECT (ASAP Command)</a></div>
+<div><a href="../Commands/GRID_POLAR_ASAP-cmdref.html" title="Generates a circular grid of rays.">GRID POLAR (ASAP Command)</a></div>
+<div><a href="../Commands/GRID_RECT_ASAP-cmdref.html" title="Generates a rectangular grid of rays inside a rectangular aperture.">GRID RECT (ASAP Command)</a></div>
+<div><a href="../Commands/GRID_WINDOW_ASAP-cmdref.html" title="Creates a rectangular raster-type ray grid.">GRID WINDOW (ASAP Command)</a></div>
+<div><a href="../Commands/POLARIZ_ASAP-cmdref.html" title="Sets the polarization properties for future ray creation.">POLARIZ (ASAP Command)</a></div>
+<div><a href="../Commands/SOURCE_ASAP-cmdref.html" title="Specifies sources for the rays/beams.">SOURCE (ASAP Command)</a></div>
+<div><a href="../Commands/SPOTS_ASAP-cmdref.html" title="Creates a geometric spot diagram for the currently selected ray data.">SPOTS (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Wave Optics in ASAP</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Wave Optics in
+		  ASAP, at http://www.breault.com/k-base.php 
+		</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

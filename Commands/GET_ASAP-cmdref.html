@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="GET (ASAP Command)"/>
+<meta name="abstract" content="Retrieves ray data and copies it into variables."/>
+<meta name="description" content="Retrieves ray data and copies it into variables."/>
+<meta name="DC.subject" content="GET (ASAP Command), ray data, retrieving and copying"/>
+<meta name="keywords" content="GET (ASAP Command), ray data, retrieving and copying"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_G-ref.html#Commands_and_Macros_G"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PUT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SECTION_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="GET_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>GET (ASAP Command)</title>
+</head>
+<body id="GET_ASAP_Command"><a name="GET_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>GET (ASAP Command)</h5></span>
+	
+	
+	<div><p>Retrieves ray data and copies it into variables. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">GET [ k [ k' ] ]</pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>k k'</span></td><td><span>number of a given ray or range of rays</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="GET_ASAP_Command__ul_817FEF8DF9E64B6E9D459BA473114C9D"><!-- --></a><ol id="GET_ASAP_Command__ul_817FEF8DF9E64B6E9D459BA473114C9D">
+			<li id="GET_ASAP_Command__li_030116E556214AB585CF6D5D990683FB"><a name="GET_ASAP_Command__li_030116E556214AB585CF6D5D990683FB"><!-- --></a>Get the current data for all rays, ray
+					<b>k,</b> or rays <b>k</b> to <b>k'</b> and
+				place it into the input registers. This data can then be used in any future commands
+				and can even be modified if the <b>PUT</b> command is used. </li>
+
+			<li id="GET_ASAP_Command__li_F3069FFCE43045459D06CC7B9166D315"><a name="GET_ASAP_Command__li_F3069FFCE43045459D06CC7B9166D315"><!-- --></a>If more than one ray is selected, then
+				registers contain flux-weighted averages (except total flux). </li>
+
+			<li id="GET_ASAP_Command__li_B19FD39D777B431B8697589BD225F8CB"><a name="GET_ASAP_Command__li_B19FD39D777B431B8697589BD225F8CB"><!-- --></a>The register assignments are as follows:
+					<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Register</span></th><th><span>Literal</span></th><th><span>Ray/Beam Data</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>A0,B0,C0</span></td><td><span>X,Y,Z_DIR_B</span></td><td><span>Absolute X,Y,Z direction cosines of base ray</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Ai,Bi,Ci</span></td><td><span>X,Y,Z_DIR_i</span></td><td><span>Relative direction vector of ith parabasal ray</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>D0</span></td><td><span>OPL</span></td><td><span>Optical path length from start of base ray</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>E1,E2,E3</span></td><td><span>X,Y,Z_EPOL</span></td><td><span>Components of unit polarization vector</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>F0</span></td><td><span>FLUX</span></td><td><span>Total flux in ray/beam</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>G0</span></td><td><span>DIVERG</span></td><td><span>Average divergence angle of beam</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>H0</span></td><td><span>HEIGHT</span></td><td><span>Average height of beam centered on base ray</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Ii</span></td><td><span>PREV_O_i</span></td><td><span>ith previous split object for ray/beam</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>J0</span></td><td><span>SOURCE</span></td><td><span>Source number from which ray/beam originated</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>K0</span></td><td><span>CURR_OBJ</span></td><td><span>Current object at which ray/beam is located</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>L0</span></td><td><span>HITS</span></td><td><span>Total number of surfaces ray has hit (intersected)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>M0</span></td><td><span>MEDIUM</span></td><td><span> Medium that ray/beam is in</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>N0</span></td><td><span>SPLITS</span></td><td><span>Number of times ray/beam has been split</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>N1</span></td><td><span>LEVELS</span></td><td><span>Number of times ray/beam has been scattered</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>P0</span></td><td><span>POLAR_0</span></td><td><span>Relative modulus of fundamental beam mode</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>P1,P2</span></td><td><span>POLAR_1,2</span></td><td><span>Relative moduli of polarization components</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Q0</span></td><td><span>NUM_RAYS</span></td><td><span>Total number of ray/beams</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Q1</span></td><td><span>NSOURCES</span></td><td><span>Total number of original sources</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>R0</span></td><td><span>PARENT</span></td><td><span>Number of ray from which this ray was split (parent)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>S0</span></td><td><span>SHAPE</span></td><td><span>Beam shape number (see SHAPES command)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>S1</span></td><td><span>FACTOR</span></td><td><span>Beam shape factor or number of higher modes</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>T0</span></td><td><span>PHASE_0</span></td><td><span>Relative phase angles of fundamental beam mode</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>T1,T2</span></td><td><span>PHASE_1,2</span></td><td><span>Relative phase angles of polarization components</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>U0,V0</span></td><td><span>U,VPARAMB</span></td><td><span>Parametric coordinates of base ray position</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>W0</span></td><td><span>WAVELEN</span></td><td><span>Wavelength of ray/beam</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Wi</span></td><td><span>WAVLNS_i</span></td><td><span>Wavelength for ith source</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X0,Y0,Z0</span></td><td><span>X,Y,Z_POS_B</span></td><td><span>Global X,Y,Z coordinates of base ray</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Xi,Yi,Zi</span></td><td><span>X,Y,Z_POS_i</span></td><td><span>Relative coordinates of ith parabasal ray</span></td></tr></tbody></table></li>
+
+			<li id="GET_ASAP_Command__li_476395997CA24E858806A6E5F4974FC8"><a name="GET_ASAP_Command__li_476395997CA24E858806A6E5F4974FC8"><!-- --></a> Some of the variables defined with the
+					<b>GET </b>command relate to the polarization state of a coherent
+				ray: <br/><a name="GET_ASAP_Command__ol_468303EBAE89454FABCB1948FB03523B"><!-- --></a><ul id="GET_ASAP_Command__ol_468303EBAE89454FABCB1948FB03523B">
+					<li id="GET_ASAP_Command__li_2B3D40BBF927456DAEFF97C7111B198F"><a name="GET_ASAP_Command__li_2B3D40BBF927456DAEFF97C7111B198F"><!-- --></a>If <i>U</i> describes the complex
+						scalar wave function of the beam, the addition of a coherent polarization
+						state causes the description to be: <p>
+							<br/><a name="GET_ASAP_Command__image_A036845C3EBE41ECBD352A1A830BF770"><!-- --></a><img id="GET_ASAP_Command__image_A036845C3EBE41ECBD352A1A830BF770" src="../Equations/GET_equation1.gif" width="127" height="41"/><br/>
+						</p>
+</li>
+
+					<li id="GET_ASAP_Command__li_3956BA7C3F4543AD8E686D4853077766"><a name="GET_ASAP_Command__li_3956BA7C3F4543AD8E686D4853077766"><!-- --></a>When the beam is first created, <p>
+							<br/><a name="GET_ASAP_Command__image_F4BCC0D1430F43DEA641A7FC814603D3"><!-- --></a><img id="GET_ASAP_Command__image_F4BCC0D1430F43DEA641A7FC814603D3" src="../Equations/GET_equation2.gif" width="131" height="33"/><br/>
+						</p>
+<p>are determined by the parameter of the current <b>POLARIZ</b> command. During the refraction operation, as the ray
+							propagates, the quantities, <a name="GET_ASAP_Command__image_365DA4E302014CCAB0858E3A76FF5802"><!-- --></a><img id="GET_ASAP_Command__image_365DA4E302014CCAB0858E3A76FF5802" src="../Equations/GET_equation3.gif" width="20" height="33"/>are
+							re-computed so that <a name="GET_ASAP_Command__image_8ED974BD56904C96B4239FD2FE2F7427"><!-- --></a><img id="GET_ASAP_Command__image_8ED974BD56904C96B4239FD2FE2F7427" src="../Equations/GET_equation3.gif" width="20" height="33"/> is
+							the local s-polarization direction, and <a name="GET_ASAP_Command__image_7071CA2398FF48F19F3735FC9FABC6FE"><!-- --></a><img id="GET_ASAP_Command__image_7071CA2398FF48F19F3735FC9FABC6FE" src="../Equations/GET_equation4.gif" width="89" height="29"/> are
+							determined by the <i>s</i> and <i>p</i> Fresnel equations. </p>
+</li>
+
+				</ul>
+</li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#GET">GET Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_G-ref.html#Commands_and_Macros_G" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “G”.">Commands and Macros (G)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/PUT_ASAP-cmdref.html" title="Copies variable data into the current ray data.">PUT (ASAP Command)</a></div>
+<div><a href="../Commands/SECTION_ASAP-cmdref.html" title="Prints or transfers the current distribution data to/from variables.">SECTION (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

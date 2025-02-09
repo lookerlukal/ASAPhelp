@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="BEND (ASAP Command)"/>
+<meta name="abstract" content="Bends the last surface along a parabolic curve."/>
+<meta name="description" content="Bends the last surface along a parabolic curve."/>
+<meta name="DC.subject" content="BEND (ASAP Command), surface, parabolic curve, bend"/>
+<meta name="keywords" content="BEND (ASAP Command), surface, parabolic curve, bend"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_B-ref.html#Commands_and_Macros_B"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REPEAT_ASAP-cmdref.html#REPEAT_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Bending_Factor-conc.html#Bending_Factor"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="BEND_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>BEND (ASAP Command)</title>
+</head>
+<body id="BEND_ASAP_Command"><a name="BEND_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>BEND (ASAP Command)</h5></span>
+	
+	
+	<div><p>Bends the last surface along a parabolic curve. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+BEND X c [ c' ]
+     Y
+     Z
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X Y or Z</span></td><td><span>axis which is bent</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>c c'</span></td><td><span>curvature coefficients of the bending</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="BEND_ASAP_Command__ul_B011920AD9574C71B443A086266E1F1A"><!-- --></a><ol id="BEND_ASAP_Command__ul_B011920AD9574C71B443A086266E1F1A">
+			<li id="BEND_ASAP_Command__li_462EEF90689D4A5D8FF06B0932F57215"><a name="BEND_ASAP_Command__li_462EEF90689D4A5D8FF06B0932F57215"><!-- --></a> Bends the surface (relative to its
+				reference point) by replacing the given coordinate in its polynomial function with a
+				quadratic in the other two coordinates, for example, for a <b>BEND</b>
+				<b>Z:</b>
+				<p>
+					<br/><a name="BEND_ASAP_Command__image_0A98F9F0A2654319AFA65BCF4CA268AD"><!-- --></a><div class="imagecenter"><img id="BEND_ASAP_Command__image_0A98F9F0A2654319AFA65BCF4CA268AD" longdesc="BEND equation" src="../Equations/BEND_equation1.gif" width="270" height="53"/></div><br/>
+				</p>
+</li>
+
+			<li id="BEND_ASAP_Command__li_E7189C4A0ADF42D8B8460657EB2661DB"><a name="BEND_ASAP_Command__li_E7189C4A0ADF42D8B8460657EB2661DB"><!-- --></a>The <b>c</b> coefficients are
+				the curvatures (inverse radii) of the bending. <div class="note"><span class="notetitle">Note:</span> This operation may double the
+					order of the polynomial. </div>
+</li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#BEND">BEND Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_B-ref.html#Commands_and_Macros_B" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “B”.">Commands and Macros (B)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Bending_Factor-conc.html#Bending_Factor">Bending Factor</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/REPEAT_ASAP-cmdref.html#REPEAT_ASAP_Command" title="Repeats previously defined entity data.">REPEAT (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

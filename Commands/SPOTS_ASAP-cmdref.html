@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="SPOTS (ASAP Command)"/>
+<meta name="abstract" content="Creates a geometric spot diagram for the currently selected ray data."/>
+<meta name="description" content="Creates a geometric spot diagram for the currently selected ray data."/>
+<meta name="DC.subject" content="SPOTS (ASAP Command), spot diagram, creating geometric, ray data, geometric spot diagram for"/>
+<meta name="keywords" content="SPOTS (ASAP Command), spot diagram, creating geometric, ray data, geometric spot diagram for"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_S-ref.html#Commands_and_Macros_S"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/AXIS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CLIP_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/COLORS_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CONSIDER_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/COPY_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DISPLAY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FIELD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/IRRADIANCE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OPDMAP_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OVERLAY_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SELECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPREAD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WINDOW_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/XYZ_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Calculating_Geometrical_MTFs-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Distribution_Data_Files_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Plotting_Commands-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="SPOTS_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>SPOTS (ASAP Command)</title>
+</head>
+<body id="SPOTS_ASAP_Command"><a name="SPOTS_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>SPOTS (ASAP Command)</h5></span>
+	
+	
+	<div><p>Creates a geometric spot diagram for the currently selected ray data. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+SPOTS POSITION  [ u ] [ ATTRIBUTE i ] [ OBJECT ] [ NUMBER [s] ] [ EVERY n ] [ 'title' ]
+      Pc          ADD
+      DIRECTION
+      Dc
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>POSITION</span></td><td><span>spot diagram of positional ray data</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>DIRECTION</span></td><td><span>spot diagram of directional ray data</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>u</span></td><td><span>FORTRAN unit number for distribution data file</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Pc</span></td><td><span> spot diagram of positional ray data for the base ray and/or particular
+					parabasal rays (see Remarks)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Dc</span></td><td><span>spot diagram of directional ray data for the base ray and/or particular
+					parabasal rays (see Remarks)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ADD</span></td><td><span>adds flux data to existing distribution data file</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ATTRIBUTE i</span></td><td><span> output format control (see Remarks)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>OBJECT</span></td><td><span>output color control</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>NUMBER</span></td><td><span>draw the rays number on the plot</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>s</span></td><td><span>optional scale factor for the character size</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>EVERY n</span></td><td><span>plot only every <b>n</b>th ray instead of all the currently
+					selected ones</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>'title'</span></td><td><span>optional title for plot (up to 64 characters)</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="SPOTS_ASAP_Command__ul_2DC774BCBE5A4502A1424C5C2A8D9446"><!-- --></a><ol id="SPOTS_ASAP_Command__ul_2DC774BCBE5A4502A1424C5C2A8D9446">
+			<li id="SPOTS_ASAP_Command__li_31BF6311B4854BC698B54B4167D53925"><a name="SPOTS_ASAP_Command__li_31BF6311B4854BC698B54B4167D53925"><!-- --></a>For the current ray set, <b>SPOTS</b> produces a spot diagram of the ray data of the specified type, in
+				coordinate directions specified by the last WINDOW command. By default, the
+				positions or directions of each base ray are used. </li>
+
+			<li id="SPOTS_ASAP_Command__li_CC8119358A414F7F93496580DD01F7C8"><a name="SPOTS_ASAP_Command__li_CC8119358A414F7F93496580DD01F7C8"><!-- --></a><b>SPOTS</b> may be calculated
+				at any time to examine the ray distribution. ASAP projects all <b>SPOTS</b> into the plotting window regardless of third coordinate location. </li>
+
+			<li id="SPOTS_ASAP_Command__li_B80B75C685184F7E964721D7EBEFBFFD"><a name="SPOTS_ASAP_Command__li_B80B75C685184F7E964721D7EBEFBFFD"><!-- --></a>To calculate <b>SPOTS</b> (or
+					<b>FIELD</b> or <b>SPREAD</b> or <b>OPDMAP</b>) on a tilted surface, use the <b>AXIS LOCAL</b> and
+					<b>IRRADIANCE</b> commands followed by the long form of the <b>SPOTS</b>. </li>
+
+			<li id="SPOTS_ASAP_Command__li_E6E15033137543BF98B917E0999C1312"><a name="SPOTS_ASAP_Command__li_E6E15033137543BF98B917E0999C1312"><!-- --></a>The <b>WINDOW</b> settings, if
+				not specified, are automatically adjusted for either position or direction cosine
+				data. The <b>SPOTS</b> calculation is faster if the <b>WINDOW</b> is preset, as opposed to ASAP autoscaling the <b>WINDOW</b>. ASAP cannot autoscale a finite <b>WINDOW</b> size
+				from just 1 ray. You must explicitly set the <b>WINDOW</b>. </li>
+
+			<li id="SPOTS_ASAP_Command__li_14BF065AFB4C4B80BB0073ED1F544B99"><a name="SPOTS_ASAP_Command__li_14BF065AFB4C4B80BB0073ED1F544B99"><!-- --></a>Use the <b>CONSIDER</b> and
+					<b>SELECT</b> commands to isolate the object(s) and sources whose
+				ray distributions are to be examined. </li>
+
+			<li id="SPOTS_ASAP_Command__li_9DD7B15B4C23443389AE544990850081"><a name="SPOTS_ASAP_Command__li_9DD7B15B4C23443389AE544990850081"><!-- --></a>The default distribution file is
+				BRO009.DAT. The flux data for each pixel written to logical unit <b>u</b> in unformatted direct access binary records whose length is the same as
+				the current <b>PIXELS</b> setting. If <b>u</b> is negative,
+				then any previous data on the specified unit is overwritten. Otherwise, the flux
+				data is added pixel by pixel to what is already in the file. The default value of
+					<b>u</b> is -9. <b>ADD </b>is equivalent to +9. This
+				file can be manipulated, plotted, and named with the <b>DISPLAY</b>
+				command and its associated subcommands. </li>
+
+			<li id="SPOTS_ASAP_Command__li_541737F4AB5747DABCDB975E5B0C365A"><a name="SPOTS_ASAP_Command__li_541737F4AB5747DABCDB975E5B0C365A"><!-- --></a> For the <b>Pc</b> and <b>Dc</b> options, the c entry can be used to select the following specific
+				data: <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>c</span></th><th><span>Coordinates Plotted</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span/></td><td><span>Current base ray (default)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>S</span></td><td><span>All the current parabasals</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>0</span></td><td><span>Initial base ray</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>1</span></td><td><span>First parabasal only</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>2</span></td><td><span>Second parabasal only</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>:</span></td><td><span>:</span></td></tr></tbody></table></li>
+
+			<li id="SPOTS_ASAP_Command__li_8C91CCE9C3284992BA8F81DC2DD5DF9B"><a name="SPOTS_ASAP_Command__li_8C91CCE9C3284992BA8F81DC2DD5DF9B"><!-- --></a> ASAP produces a distribution file of
+				accumulated ray fluxes at each pixel location. The <b>ATTRIBUTE</b>
+				option offers other options, other than the default dots, to indicate where each ray
+				strikes, as shown by the following table. <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>ATTRIBUTE</span></th><th><span>Symbol</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>-1</span></td><td><span>Connecting line</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>0</span></td><td><span>No plot generated</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>1</span></td><td><span>Plus sign</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>2</span></td><td><span>X cross</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>3</span></td><td><span>Up triangle</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>4</span></td><td><span>Down triangle</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>5</span></td><td><span> Square</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>6</span></td><td><span>Diamond</span></td></tr></tbody></table></li>
+
+			<li id="SPOTS_ASAP_Command__li_6B5705A647DE4D3F9A1A651290CF0147"><a name="SPOTS_ASAP_Command__li_6B5705A647DE4D3F9A1A651290CF0147"><!-- --></a> Since the <b>SPOTS</b> command
+				always creates a new distribution file and overlays the old file, you must save the
+				old file before running a new <b>SPOTS</b> command, if the old file will
+				be needed for further analysis. This can be done, for example, with the <b>$COPY</b> command. <p><b>$COPY BRO009.DAT NEWFILENAME.DIS</b>
+				</p>
+</li>
+
+			<li id="SPOTS_ASAP_Command__li_A38FC8EA865C47F39602689AF9B632D5"><a name="SPOTS_ASAP_Command__li_A38FC8EA865C47F39602689AF9B632D5"><!-- --></a>With the <b>OBJECT</b> option,
+				the color associated with the ray's current object, instead of the ray's source, is
+				used for plotting the <b>SPOT</b>. In addition, the distribution file
+				contains object number information and not flux information. </li>
+
+			<li id="SPOTS_ASAP_Command__li_E1AC8ECA1B3F48B7A1D180506231D378"><a name="SPOTS_ASAP_Command__li_E1AC8ECA1B3F48B7A1D180506231D378"><!-- --></a>Optionally, the ray's <b>NUMBER</b> can also be drawn on the plot. The s is an optional scale factor
+				for the character size to be used. </li>
+
+			<li id="SPOTS_ASAP_Command__li_A0537C775E484DAA90E16FB8A483E09D"><a name="SPOTS_ASAP_Command__li_A0537C775E484DAA90E16FB8A483E09D"><!-- --></a>Also, only <b>EVERY</b>
+				<b>n</b>th ray can be plotted instead of all the currently selected ones (which are
+				still summed in the distribution file). </li>
+
+			<li id="SPOTS_ASAP_Command__li_D4091382D7EB4CD7870AF5C834442B05"><a name="SPOTS_ASAP_Command__li_D4091382D7EB4CD7870AF5C834442B05"><!-- --></a>The title is delimited by a single quote <b>'</b> , as shown. </li>
+
+			<li id="SPOTS_ASAP_Command__li_08F511C5ACEC43C99383135A36FB24D2"><a name="SPOTS_ASAP_Command__li_08F511C5ACEC43C99383135A36FB24D2"><!-- --></a>The command argument, <b>CLIP</b> can be used to specify an object <b>(i)</b> or edge
+				number <b>(j)</b> whose bounds and limits clips the distribution. If
+					<b>i</b> is not given, it is defaulted to the current object number
+				of the first valid ray. If <b>j</b> is negative the interior of the
+				closed edge is used, if <b>j</b> is positive, the exterior of the closed
+				edge is used. </li>
+
+			<li id="SPOTS_ASAP_Command__li_BD389C0E3DEB45A1BCB5DD3F19E58FA7"><a name="SPOTS_ASAP_Command__li_BD389C0E3DEB45A1BCB5DD3F19E58FA7"><!-- --></a>The command argument, <b>OVERLAY</b> tells ASAP not to issue an end of plot so that the next plot
+				created is overlaid with the current plot. This is useful for combining system plots
+				with ray trace plots (assuming that the <b>WINDOW</b> is the same for
+				all plots), multiple spot diagrams, and so on. </li>
+
+			<li id="SPOTS_ASAP_Command__li_8736221DE30C4D4FBDE262929DBA2B4D"><a name="SPOTS_ASAP_Command__li_8736221DE30C4D4FBDE262929DBA2B4D"><!-- --></a>The command argument, <b>COLORS</b>
+				<b>n</b> can set one of 27 colors to the spots, overriding the ASAP
+				default color. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#SPOTS">SPOTS Examples</a>
+		</p>
+
+	</div>
+
+	<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_S-ref.html#Commands_and_Macros_S" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “S”.">Commands and Macros (S)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Distribution_Data_Files_Overview-conc.html" title="ASAP has several commands for calculating the irradiance, intensity, radiance etc., for a set of files, some of which produce immediate results of these calculations in the form of plots directly on the screen.">Distribution Data Files Overview</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Calculating_Geometrical_MTFs-ref.html" title="In optical systems where the residual aberrations are large, the diffraction MTF can be difficult to compute. Consequently, an analogous measure of performance, the MTF is defined. Whereas, the diffraction Modulation Transfer Function (MTF) is the Fourier transform of the Point Spread Function (PSF), the geometrical MTF is a Fourier transform of the spot diagram.">Calculating Geometrical MTFs</a></div>
+<div><a href="../Reference/Plotting_Commands-ref.html" title="The PLOT command is a general command for plotting virtually any aspect of system geometry and selected ray data.">Plotting Commands</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/AXIS_ASAP-cmdref.html" title="Selects the coordinate system in which future ray trace data is printed.">AXIS (ASAP Command)</a></div>
+<div><a href="../Commands/CLIP_arg_ASAP-cmdref.html" title="Clips the distribution data according to an object or edge.">CLIP (ASAP Command Argument)</a></div>
+<div><a href="../Commands/COLORS_arg_ASAP-cmdref.html" title="Sets color for current graphics commands.">COLORS (ASAP Command Argument)</a></div>
+<div><a href="../Commands/CONSIDER_ASAP-cmdref.html" title="Selects a set of objects for ray tracing and plotting.">CONSIDER (ASAP Command)</a></div>
+<div><a href="../Commands/COPY_macro_ASAP-cmdref.html" title="Performs a raw, byte-for-byte copy of the source file to a destination file.">$COPY (ASAP Macro)</a></div>
+<div><a href="../Commands/DISPLAY_ASAP-cmdref.html" title="Reads previously created distribution data files so that they can be modified.">DISPLAY (ASAP Command)</a></div>
+<div><a href="../Commands/FIELD_ASAP-cmdref.html" title="Calculates the exact complex field distribution.">FIELD (ASAP Command)</a></div>
+<div><a href="../Commands/IRRADIANCE_ASAP-cmdref.html" title="Selects the axis that energy or peak flux density is computed relative to a given fixed direction for all sample points.">IRRADIANCE (ASAP Command)</a></div>
+<div><a href="../Commands/OPDMAP_ASAP-cmdref.html" title="Creates a geometric wavefront map of the currently selected ray data.">OPDMAP (ASAP Command)</a></div>
+<div><a href="../Commands/OVERLAY_arg_ASAP-cmdref.html" title="Overlays plots (that is, places them on top of each other).">OVERLAY (ASAP Command Argument)</a></div>
+<div><a href="../Commands/PIXELS_ASAP-cmdref.html" title="Sets the resolution for graphics and calculations.">PIXELS (ASAP Command)</a></div>
+<div><a href="../Commands/SELECT_ASAP-cmdref.html" title="Isolates a ray set for further analysis.">SELECT (ASAP Command)</a></div>
+<div><a href="../Commands/SPREAD_ASAP-cmdref.html" title="Calculates the exact coherent/incoherent energy distribution.">SPREAD (ASAP Command)</a></div>
+<div><a href="../Commands/WINDOW_ASAP-cmdref.html" title="Sets the plotting window for graphical output.">WINDOW (ASAP Command)</a></div>
+<div><a href="../Commands/XYZ_arg_ASAP-cmdref.html" title="Sets the window to the given directions and size for only the currently active plot.">XY[Z] and Other Plot Window Overrides (ASAP Command Argument)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Radiometric Analysis</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Radiometric Analysis, at
+				http://www.breault.com/k-base.php </a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

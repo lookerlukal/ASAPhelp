@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="GRID POLAR (ASAP Command)"/>
+<meta name="abstract" content="Generates a circular grid of rays."/>
+<meta name="description" content="Generates a circular grid of rays."/>
+<meta name="DC.subject" content="GRID POLAR (ASAP Command), polar, circular grid"/>
+<meta name="keywords" content="GRID POLAR (ASAP Command), polar, circular grid"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_G-ref.html#Commands_and_Macros_G"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_ELLIPTIC_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_HEX_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_OBJECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_POLAR_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_RECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_WINDOW_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/POLARIZ_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SOURCE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPOTS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/USERAPOD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/GRID_Command_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="GRID_POLAR_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>GRID POLAR (ASAP Command)</title>
+</head>
+<body id="GRID_POLAR_ASAP_Command"><a name="GRID_POLAR_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>GRID POLAR (ASAP Command)</h5></span>
+	
+	
+	<div><p>Generates a circular grid of rays. </p>
+
+		<p><b>Syntax 1</b>
+		</p>
+
+		<pre class="codeblock">
+GRID POLAR X x r r' a a' n n' [ w ] [ RANDOM f ]
+           Y y
+           Z z
+      </pre>
+
+		<p><b>Syntax 2</b>
+		</p>
+
+		<pre class="codeblock">
+GRID POLAR X x r' n [ RANDOM f ]
+           Y y
+           Z z</pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X, Y, or Z</span></td><td><span>coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x, y, or z</span></td><td><span>location of plane on the coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>r r'</span></td><td><span>minimum and maximum extent in the radial direction</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a a'</span></td><td><span>minimum and maximum extent in the angular direction</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span>number of rays in the radial direction</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n'</span></td><td><span>number of rays in the first nonzero radial ring</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>w</span></td><td><span>weighting factor</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RANDOM f</span></td><td><span>randomization factor</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="GRID_POLAR_ASAP_Command__ul_BB8EDE93A9C04391B146255CF8D48462"><!-- --></a><ol id="GRID_POLAR_ASAP_Command__ul_BB8EDE93A9C04391B146255CF8D48462">
+			<li id="GRID_POLAR_ASAP_Command__li_ACC6A5692CF6461D8285544AB091FA57"><a name="GRID_POLAR_ASAP_Command__li_ACC6A5692CF6461D8285544AB091FA57"><!-- --></a>Generates a circular grid of rays centered
+				on the coordinate axis when <b>w</b> is not unity. </li>
+
+			<li id="GRID_POLAR_ASAP_Command__li_D5D28C79C77E4B298E5CB7FE749B8078"><a name="GRID_POLAR_ASAP_Command__li_D5D28C79C77E4B298E5CB7FE749B8078"><!-- --></a>The angular arguments <b>a</b>
+				and <b>a'</b> are entered in degrees. </li>
+
+			<li id="GRID_POLAR_ASAP_Command__li_00C33E6BA9E04A879956420ACF262FF4"><a name="GRID_POLAR_ASAP_Command__li_00C33E6BA9E04A879956420ACF262FF4"><!-- --></a> The sign of <b>n</b>
+				determines how the range entries are to be used: <br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>+n</span></td><td><span>divide <b>r</b> to <b>r'</b> into <b>n</b> rings</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>-n</span></td><td><span>divide 0 to <b>r'</b> into <b>n</b> rings,
+							eliminate rings inside <b>r</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>+n'</span></td><td><span>divide <b>a</b> to <b>a'</b> into <b>n</b> sectors (first ring)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>-n'</span></td><td><span>divide 0 to 360 into <b>n</b> sectors, eliminate
+							sectors outside <b>a</b> to <b>a'</b></span></td></tr></tbody></table></li>
+
+			<li id="GRID_POLAR_ASAP_Command__li_91018808A0ED49B595DDDECDAFA80AA2"><a name="GRID_POLAR_ASAP_Command__li_91018808A0ED49B595DDDECDAFA80AA2"><!-- --></a>For <b>r</b>=0 or <b>n</b>&lt;0, the rays are distributed radially according to the formula <b>R(i) = r'(i/n)^w</b>
+			</li>
+
+			<li id="GRID_POLAR_ASAP_Command__li_8C1074B846404C1B9908DDB56BD57712"><a name="GRID_POLAR_ASAP_Command__li_8C1074B846404C1B9908DDB56BD57712"><!-- --></a>The rays are distributed evenly in the
+				angular direction with the number in each ring chosen so that all rays represent an
+				equal area on the plane. Therefore, when <b>w=</b>1 (the default), the
+				grid is equipolar; when <b>w</b>=.5, the grid is a standard straight
+				spokes distribution. </li>
+
+			<li id="GRID_POLAR_ASAP_Command__li_4A2A88A6D0DA4404AB6479A9B1873A3B"><a name="GRID_POLAR_ASAP_Command__li_4A2A88A6D0DA4404AB6479A9B1873A3B"><!-- --></a>If <b>r</b> is equal to zero,
+				there is a ray/beam at the center of the grid. </li>
+
+			<li id="GRID_POLAR_ASAP_Command__li_D2E5D292169A4D0F9A0FEBAB8C5987C7"><a name="GRID_POLAR_ASAP_Command__li_D2E5D292169A4D0F9A0FEBAB8C5987C7"><!-- --></a>The flux of each ray is adjusted to give
+				unit irradiance (flux/area) to the entire grid. <b>GRID POLAR</b> (in
+				the final sequence) in coherent mode, using a central hole, does not produce an
+				irradiance of near 1, but actually much higher. </li>
+
+			<li id="GRID_POLAR_ASAP_Command__li_8DA8159C356340D8BAD06707B814E9EE"><a name="GRID_POLAR_ASAP_Command__li_8DA8159C356340D8BAD06707B814E9EE"><!-- --></a>Each ray position on the grid can be
+				uniformly <b>RANDOM</b>ized within a region <b>f</b> times
+				the local grid spacing. </li>
+
+			<li id="GRID_POLAR_ASAP_Command__li_FDA3FFC2F1294C3DB49E8B848E418C36"><a name="GRID_POLAR_ASAP_Command__li_FDA3FFC2F1294C3DB49E8B848E418C36"><!-- --></a> The second syntax is an alternate shorter
+				form is available that creates a full circular (of radius <b>r')</b>
+				hexapolar grid (with <b>n</b> rings):
+				<pre class="codeblock">
+GRID POLAR X x r' n [ RANDOM f ]
+           Y y
+           Z z
+         </pre>
+</li>
+
+			<li id="GRID_POLAR_ASAP_Command__li_BCE080673AF34B31B6A8B43EE46B3CA0"><a name="GRID_POLAR_ASAP_Command__li_BCE080673AF34B31B6A8B43EE46B3CA0"><!-- --></a>Only a rotationally symmetric apodization
+				may be entered with <b>USERAPOD</b>. </li>
+
+			<li id="GRID_POLAR_ASAP_Command__li_25A60F37239649A79FB0112BBCC6FD9E"><a name="GRID_POLAR_ASAP_Command__li_25A60F37239649A79FB0112BBCC6FD9E"><!-- --></a>Used in conjunction with the <b>SOURCE</b> command, <b>GRID POLAR </b>creates ray data that
+				can be traced in ASAP. </li>
+
+			<li id="GRID_POLAR_ASAP_Command__li_36EFE779F00B4AA195C21B129DBF8D3B"><a name="GRID_POLAR_ASAP_Command__li_36EFE779F00B4AA195C21B129DBF8D3B"><!-- --></a>When in doubt about the exact distribution
+				that is created by <b>GRID POLAR</b> use the <b>SPOTS
+				POSITION</b> command to display the grid. </li>
+
+			<li id="GRID_POLAR_ASAP_Command__li_0FD32DAE314A4A99A5341852BFA17D98"><a name="GRID_POLAR_ASAP_Command__li_0FD32DAE314A4A99A5341852BFA17D98"><!-- --></a>ASAP modifies the polarization of rays as
+				needed to avoid the creation of axial fields, and warns when this occurs.
+				Modifications do not permanently change the <b>POLARIZ</b> settings.
+			</li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#GRID">GRID Examples</a>
+		</p>
+
+	</div>
+
+	<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_G-ref.html#Commands_and_Macros_G" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “G”.">Commands and Macros (G)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/GRID_Command_Overview-conc.html" title="The GRID command generates a planar distribution of rays, which, in conjunction with the SOURCE command, creates ray data that can be traced in ASAP.">GRID Command Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/GRID_ELLIPTIC_ASAP-cmdref.html" title="Generates a rectangular grid of rays inside an elliptical aperture.">GRID ELLIPTIC (ASAP Command)</a></div>
+<div><a href="../Commands/GRID_HEX_ASAP-cmdref.html" title="Generates a hexagonal grid of rays.">GRID HEX (ASAP Command)</a></div>
+<div><a href="../Commands/GRID_OBJECT_ASAP-cmdref.html" title="Generates a uniform grid of rays on an object.">GRID OBJECT (ASAP Command)</a></div>
+<div><a href="../Commands/GRID_POLAR_ASAP-cmdref.html" title="Generates a circular grid of rays.">GRID POLAR (ASAP Command)</a></div>
+<div><a href="../Commands/GRID_RECT_ASAP-cmdref.html" title="Generates a rectangular grid of rays inside a rectangular aperture.">GRID RECT (ASAP Command)</a></div>
+<div><a href="../Commands/GRID_WINDOW_ASAP-cmdref.html" title="Creates a rectangular raster-type ray grid.">GRID WINDOW (ASAP Command)</a></div>
+<div><a href="../Commands/POLARIZ_ASAP-cmdref.html" title="Sets the polarization properties for future ray creation.">POLARIZ (ASAP Command)</a></div>
+<div><a href="../Commands/SOURCE_ASAP-cmdref.html" title="Specifies sources for the rays/beams.">SOURCE (ASAP Command)</a></div>
+<div><a href="../Commands/SPOTS_ASAP-cmdref.html" title="Creates a geometric spot diagram for the currently selected ray data.">SPOTS (ASAP Command)</a></div>
+<div><a href="../Commands/USERAPOD_ASAP-cmdref.html" title="Specifies a beam irradiance or intensity apodization.">USERAPOD (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Wave Optics in ASAP</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Wave Optics in ASAP, at
+				http://www.breault.com/k-base.php </a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

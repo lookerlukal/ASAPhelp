@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="TOWARDS (ASAP Command)"/>
+<meta name="abstract" content="Specifies importance area or direction sampling for scattered rays. Required when specifying a SCATTER MODEL."/>
+<meta name="description" content="Specifies importance area or direction sampling for scattered rays. Required when specifying a SCATTER MODEL."/>
+<meta name="DC.subject" content="TOWARDS (ASAP Command), importance area, specifying, direction sampling, specifying, SCATTER MODEL, using TOWARDS"/>
+<meta name="keywords" content="TOWARDS (ASAP Command), importance area, specifying, direction sampling, specifying, SCATTER MODEL, using TOWARDS"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_T-ref.html#Commands_and_Macros_T"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SCATTER_RANDOM_MODEL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPLIT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/SCATTER_MODEL_and_TOWARDS_Overview-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="TOWARDS_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>TOWARDS (ASAP Command)</title>
+</head>
+<body id="TOWARDS_ASAP_Command"><a name="TOWARDS_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>TOWARDS (ASAP Command)</h5></span>
+	
+	
+	<div><p>Specifies importance area or direction sampling for scattered rays. Required when
+		specifying a SCATTER MODEL. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+TOWARDS [ EDGE ] i    [ n f t  ]
+Importance Direction  Modifiers:
+TOWARDS      X
+             Y
+             Z
+            -X
+            -Y
+            -Z
+           SPEC
+           REFL
+           TRAN
+
+     POINT
+</pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>EDGE</span></td><td><span>optional edge modifier</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X, Y, Z, -X, -Y, -Z</span></td><td><span>importance coordinate direction</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SPEC</span></td><td><span>specular direction</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>REFL</span></td><td><span>reflected direction</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>TRAN</span></td><td><span>transmitted direction</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>POINT</span></td><td><span>direction from ray point to entity I reference point</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>I</span></td><td><span>importance area EDGE number or name</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span>number of randomly distributed scatter rays to be generated (default value
+					is 1)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>f</span></td><td><span>
+					<p>as an EDGE modifier: fractional lower importance area or direction band
+						(default is 0) </p>
+
+					<p>as a Direction modifier: cone half-angle in radians </p>
+
+				</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>t</span></td><td><span>
+					<p>as an EDGE modifier: fractional upper importance area or direction band
+						(default is 1) </p>
+
+					<p>as a Direction modifier: scattering directional parameter (default value is
+						1) </p>
+
+				</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="TOWARDS_ASAP_Command__ul_A2174F86A99440D7B69C4D35244EBFBF"><!-- --></a><ol id="TOWARDS_ASAP_Command__ul_A2174F86A99440D7B69C4D35244EBFBF">
+			<li id="TOWARDS_ASAP_Command__li_6DC15308425548469541A2F0F07CA3B6"><a name="TOWARDS_ASAP_Command__li_6DC15308425548469541A2F0F07CA3B6"><!-- --></a>To produce scattered rays, <b>SCATTER MODEL
+					m</b> must be followed by the <b>TOWARDS</b> modifier. </li>
+
+			<li id="TOWARDS_ASAP_Command__li_123403E0016248D883C6A84BE446759C"><a name="TOWARDS_ASAP_Command__li_123403E0016248D883C6A84BE446759C"><!-- --></a>If reflective <b>m</b> and
+				transmissive <b>m'</b> scatter models are different, specify both. </li>
+
+			<li id="TOWARDS_ASAP_Command__li_18EA22B0E2954FEE9F096809CC4AE105"><a name="TOWARDS_ASAP_Command__li_18EA22B0E2954FEE9F096809CC4AE105"><!-- --></a>The <b>TOWARDS</b> modifier specifies an
+				importance edge or direction towards which rays are scattered. Up to 20 <b>TOWARDS</b> commands can be associated with one object </li>
+
+			<li id="TOWARDS_ASAP_Command__li_C973C86206CE43B2A26E616E4A7E2322"><a name="TOWARDS_ASAP_Command__li_C973C86206CE43B2A26E616E4A7E2322"><!-- --></a>If an <b>EDGE</b> or a number
+				follows the <b>TOWARDS</b> option, <b>I</b> specifies the <b>EDGE</b> number (relative or absolute) used as importance areas. If <b>I</b> is entered as a positive number, radiation is scattered towards the
+				designated real area; if <b>I</b> is negative, radiation is scattered
+				away from the designated virtual area. For best results, use only rectangular or
+				elliptical <b>EDGEs.</b>
+			</li>
+
+			<li id="TOWARDS_ASAP_Command__li_6DCE5AEB0664401F8C58179B7A86349D"><a name="TOWARDS_ASAP_Command__li_6DCE5AEB0664401F8C58179B7A86349D"><!-- --></a>The entry <b>n</b> is the
+				number of randomly directed rays scattered into the importance area or importance
+				direction by each <b>TOWARDS</b> command. </li>
+
+			<li id="TOWARDS_ASAP_Command__li_DD05DB58456142EB8467DE64F6F23117"><a name="TOWARDS_ASAP_Command__li_DD05DB58456142EB8467DE64F6F23117"><!-- --></a>For <b>EDGE</b> scattering,
+					<b>f</b> and <b>t</b> are the fractional lower and upper
+				bounds (default 0 to 1) of the importance area relative to the defining edge. </li>
+
+			<li id="TOWARDS_ASAP_Command__li_028283B5133F4EF68E646421865FEA3B"><a name="TOWARDS_ASAP_Command__li_028283B5133F4EF68E646421865FEA3B"><!-- --></a>For directional scattering, <b>f</b> is the cone angle in radians into which rays are scattered. This angle
+				is measured from the surface normal (<b>t</b>=0) or from the specular direction (<b>t</b>=1). </li>
+
+			<li id="TOWARDS_ASAP_Command__li_AB0BCB55CF794FF2A99B3F4DC6E9D853"><a name="TOWARDS_ASAP_Command__li_AB0BCB55CF794FF2A99B3F4DC6E9D853"><!-- --></a>For directional scattering, <b>t</b> is a parameter that varies the scattering direction from the surface
+				normal (<b>t</b>=0) to the specified direction (<b>t</b>=1, default). A value of <b>t</b>=-1 corresponds to the retroreflection. </li>
+
+			<li id="TOWARDS_ASAP_Command__li_04BE381AD3D14DF18CEC945402010D1C"><a name="TOWARDS_ASAP_Command__li_04BE381AD3D14DF18CEC945402010D1C"><!-- --></a>Attempting to scatter below the horizon may
+				lead to an incorrect calculation of scattered flux. This situation occurs when some
+				portion of an importance <b>EDGE</b> or angular cone specification forms
+				an angle greater than π/2 with the local surface normal. </li>
+
+			<li id="TOWARDS_ASAP_Command__li_6A97E6CD067A4D02962CC30E645340F1"><a name="TOWARDS_ASAP_Command__li_6A97E6CD067A4D02962CC30E645340F1"><!-- --></a>ASAP does not take into account importance
+				areas whose solid angles overlap to maintain conservation of energy. </li>
+
+			<li id="TOWARDS_ASAP_Command__li_1506B3501B344B6EAB235F98A92CCD6F"><a name="TOWARDS_ASAP_Command__li_1506B3501B344B6EAB235F98A92CCD6F"><!-- --></a>
+				Flux assigned to each scattered ray is computed from the formula
+				<p><a name="TOWARDS_ASAP_Command__image_5AAFCE3DE80844E8AF9C1712E27EA82E"><!-- --></a><img id="TOWARDS_ASAP_Command__image_5AAFCE3DE80844E8AF9C1712E27EA82E" src="../Equations/TOWARDS_equation1.gif" width="351" height="53"/>
+				</p>
+
+				<p>where F1 is the incident flux, BSDF is the bidirectional scatter distribution
+					function, A is the importance edge area, R is the distance from scattering
+					surface to importance edge measured along the scattered ray trajectory, θ and φ
+					are polar and azimuthal angles, and the subscript I, s, and e indicate incident
+					angle, scatter angle and the angle between scattered ray and importance edge
+					normal, respectively. </p>
+
+			</li>
+
+			<li id="TOWARDS_ASAP_Command__li_9DC49DBEA2C84640BC6C57EE27246FB4"><a name="TOWARDS_ASAP_Command__li_9DC49DBEA2C84640BC6C57EE27246FB4"><!-- --></a>The number of scattered rays per incident
+				ray <b>n</b> affects both accuracy and raytrace time. A single scattered
+				ray per incident ray (<b>n</b>=1) is sufficient when the angle φ subtended by the
+				importance edge or importance direction is less than 0.1 radians. for φ&gt;0.1, the
+				scattered flux will quickly converge towards a stable value as <b>n</b>
+				approaches 100Γ/π where Γ is the solid angle subtended by the importance edge or
+				importance direction. Use <b>n</b>&gt;1 also in cases where the probability of a
+				scattered ray reaching the target is low, that is, when significant aberrations are
+				present. Finer sampling of the scattering surface is always recommended over
+				increasing the value of <b>n</b> in an effort to raise signal-to-noise
+				ratio. </li>
+
+			<li id="TOWARDS_ASAP_Command__li_5CA62E09CFAF435F9CDC7424E082F9F6"><a name="TOWARDS_ASAP_Command__li_5CA62E09CFAF435F9CDC7424E082F9F6"><!-- --></a>
+				When the <b>MONTECARLO</b> option is used with <b>SPLIT</b>, the
+				following guidelines should be applied: 
+				<br/><a name="TOWARDS_ASAP_Command__ol_28D9DB94DEFB41259D221B6B81C37A26"><!-- --></a><ul id="TOWARDS_ASAP_Command__ol_28D9DB94DEFB41259D221B6B81C37A26">
+					<li id="TOWARDS_ASAP_Command__li_309C1937EE0148DF982BEE2FFCDF39CE"><a name="TOWARDS_ASAP_Command__li_309C1937EE0148DF982BEE2FFCDF39CE"><!-- --></a>If the scattering surface has a
+						Lambertian model, then the entry for the number of rays <b>n</b>
+						should be 1. Entering a larger value of <b>n</b> will only slow
+						down the ray trace without improving the accuracy of the calculation. </li>
+
+					<li id="TOWARDS_ASAP_Command__li_D90C358A3AB24607BFBC9158C128D54F"><a name="TOWARDS_ASAP_Command__li_D90C358A3AB24607BFBC9158C128D54F"><!-- --></a>For surfaces that have a
+						non-Lambertian scatter model, the accuracy of the calculation improves as
+						the entry for the number of rays <b>n</b> increases. </li>
+
+					<li id="TOWARDS_ASAP_Command__li_F2FFD3ABC4A04B4D96BDD0BC33690ACB"><a name="TOWARDS_ASAP_Command__li_F2FFD3ABC4A04B4D96BDD0BC33690ACB"><!-- --></a>For non-Lambertian BRDFs, if the
+						maximum BRDF over all relevant angles of incidence and scatter is <a name="TOWARDS_ASAP_Command__image_253D9D29E6D24268AAACCD66BE84BEF9"><!-- --></a><img id="TOWARDS_ASAP_Command__image_253D9D29E6D24268AAACCD66BE84BEF9" src="../Equations/SPLIT_equation1.gif" width="38" height="30" longdesc="reuse: TOWARDS command"/>, then the
+						number of scattered rays <b>n</b> should be greater than <a name="TOWARDS_ASAP_Command__image_2BE17F746DCB4751AE063B765AD38B4C"><!-- --></a><img id="TOWARDS_ASAP_Command__image_2BE17F746DCB4751AE063B765AD38B4C" src="../Equations/SPLIT_equation2.gif" width="48" height="30" longdesc="reuse: TOWARDS command"/>. </li>
+
+					<li id="TOWARDS_ASAP_Command__li_4354E31173FB4440B3418C5C548EC3D2"><a name="TOWARDS_ASAP_Command__li_4354E31173FB4440B3418C5C548EC3D2"><!-- --></a>In most cases, the <b>SPEC</b> option should be used with scatter into the hemisphere above
+						the surface rather than an importance <b>EDGE.</b>
+					</li>
+
+				</ul>
+
+			</li>
+
+			<li id="TOWARDS_ASAP_Command__li_41552D2C40E24C24AA571AA441E40C74"><a name="TOWARDS_ASAP_Command__li_41552D2C40E24C24AA571AA441E40C74"><!-- --></a>If <b>MONTECARLO</b> is in effect, the
+					<b>n</b> parameter of the <b>TOWARDS</b> command specifies the
+				number of Monte Carlo trial rays for each scattered ray and should be chosen to be 1
+				if the scattering is Lambertian and otherwise at least π times the maximum value of
+				the BSDF over the solid angle of interest for scattering. </li>
+
+		</ol>
+
+		<p>
+			<a href="/example_scripts.html#TOWARDS">TOWARDS Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_T-ref.html#Commands_and_Macros_T" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “T”.">Commands and Macros (T)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/SCATTER_MODEL_and_TOWARDS_Overview-conc.html" title="This topic gives several tips for scattering rays towards a specified small area.">SCATTER MODEL and TOWARDS Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/SCATTER_RANDOM_MODEL_ASAP-cmdref.html" title="Assigns a scattering interface to an object.">SCATTER RANDOM/MODEL (ASAP Command)</a></div>
+<div><a href="../Commands/SPLIT_ASAP-cmdref.html" title="Controls the number of times a ray may be split into specular components.">SPLIT (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

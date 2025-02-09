@@ -1,0 +1,57 @@
+!!++
+!! FOLD01.INR
+!! Title: Use of the FOLD command
+!! Category: Isolated Command
+!! Keywords: FOLD, DISPLAY 
+!! Description: FOLD command with first element of Cooke Triplet 
+!! Edit History: (latest first) 
+!! 09/04/2007 - cp - reformatted
+!! 04/12/2007 - bf - creation
+!!-- 
+
+SYSTEM NEW
+RESET
+
+UNITS MM
+
+MEDIA
+  1.613  'SK4'
+
+SURFACE
+  OPTICAL Z 0 44.55 ELLIPSE 16.9 16.9
+OBJECT 'L1.FRONT'    
+  INTERFACE 0 1 AIR SK4
+  
+SURFACE
+  OPTICAL Z 5 -436.6 ELLIPSE 16.9 16.9
+OBJECT 'L1.BACK'    
+  INTERFACE 0 1 AIR SK4
+
+SURFACE
+  TUBE Z 0 16.9 16.9   5 16.9 16.9
+OBJECT 'L1.EDGE'
+  BOUNDS  +.3  -.2
+
+SURFACE
+  PLANE Z  65.12    RECT 5
+OBJECT 'DETECTOR'  
+
+GRID ELLIPSE Z -1 -4@16 101  101
+SOURCE DIRECTION 0 0 1
+FLUX TOTAL 100
+
+WINDOW Y Z
+PLOT FACETS 7 7 0   OVERLAY
+TRACE PLOT  111
+
+CONSIDER ONLY DETECTOR
+WINDOW X  Y  
+PIXELS 101
+
+SPOTS POSITION
+
+DISPLAY
+FOLD  !! Average data about center pixel in both X and Y
+AVERAGE
+PICTURE
+RETURN

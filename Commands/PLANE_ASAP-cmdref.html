@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="PLANE (ASAP Command)"/>
+<meta name="abstract" content="Creates a plane normal to the axis of symmetry, at the value given by the third entry."/>
+<meta name="description" content="Creates a plane normal to the axis of symmetry, at the value given by the third entry."/>
+<meta name="DC.subject" content="PLANE (ASAP Command), axis of symmetry, creating a plane normal to"/>
+<meta name="keywords" content="PLANE (ASAP Command), axis of symmetry, creating a plane normal to"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_P-ref.html#Commands_and_Macros_P"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LOCAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLANE_NORMAL_ASAP-cmdref.html#PLANE_NORMAL_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLANE_POINTS_ASAP-cmdref.html#PLANE_POINTS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/PLANE_Command_Overview-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="PLANE_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>PLANE (ASAP Command)</title>
+</head>
+<body id="PLANE_ASAP_Command"><a name="PLANE_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>PLANE (ASAP Command)</h5></span>
+	
+	
+	<div><p>Creates a plane normal to the axis of symmetry, at the value given by the third
+		entry. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+PLANE X x  [ aperture ... ]
+      Y y   
+      Z z
+    </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X, Y or Z</span></td><td><span>axis of symmetry </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x, y or z</span></td><td><span>location along coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>aperture</span></td><td><span>ELLIPSE, RECTANGLE, or HEXAGONAL</span></td></tr></tbody></table>
+		<p><b>Reference Point</b>
+		</p>
+
+		<p>At intersection of surface and coordinate axis </p>
+
+		<p><b>Surface Normal</b>
+		</p>
+
+		<p>Along positive coordinate direction </p>
+
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="PLANE_ASAP_Command__ul_BA715569133E4F8794058080229E6305"><!-- --></a><ol id="PLANE_ASAP_Command__ul_BA715569133E4F8794058080229E6305">
+			<li id="PLANE_ASAP_Command__li_664BDCD9539744C3BB496C540A1A7531"><a name="PLANE_ASAP_Command__li_664BDCD9539744C3BB496C540A1A7531"><!-- --></a>Creates a planar surface. </li>
+
+			<li id="PLANE_ASAP_Command__li_34FABCDA1A80480794A9079A7C0BA751"><a name="PLANE_ASAP_Command__li_34FABCDA1A80480794A9079A7C0BA751"><!-- --></a>The normal vector points along the positive
+				coordinate direction. </li>
+
+			<li id="PLANE_ASAP_Command__li_CFB2FC90CD974F63B4371645FAE82562"><a name="PLANE_ASAP_Command__li_CFB2FC90CD974F63B4371645FAE82562"><!-- --></a> This surface can extend to infinity unless
+				a LOCAL command follows, or a trailing aperture option of the following form is
+				specified:
+				<pre class="codeblock">
+ELLIPSE   a [ a' [ o [ s [ s' ] ] ] ]
+RECTANGLE
+HEXAGONAL a [ o [ s [ s' ] ] ]
+      </pre>
+</li>
+
+			<li id="PLANE_ASAP_Command__li_67095B6EB1F3477590086D372571CF14"><a name="PLANE_ASAP_Command__li_67095B6EB1F3477590086D372571CF14"><!-- --></a> For the <b>HEXAGONAL</b> form,
+					<b>a</b> is the center-to-vertex distance (maximum height). </li>
+
+			<li id="PLANE_ASAP_Command__li_EFA60642AD4A42E0A737E450A541E171"><a name="PLANE_ASAP_Command__li_EFA60642AD4A42E0A737E450A541E171"><!-- --></a><b>o</b> is an optional central
+				hole ratio. </li>
+
+			<li id="PLANE_ASAP_Command__li_387C2FE46FEA4BA4A60447D2C07A6DA8"><a name="PLANE_ASAP_Command__li_387C2FE46FEA4BA4A60447D2C07A6DA8"><!-- --></a><b>s s'</b> are the transverse
+				coordinates of the center of the aperture. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#PLANE">PLANE Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_P-ref.html#Commands_and_Macros_P" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “P”.">Commands and Macros (P)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/PLANE_Command_Overview-conc.html" title="This topic describes the three SURFACE/FUNCTION commands in ASAP that directly define a planar surface.">PLANE Command Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/LOCAL_ASAP-cmdref.html" title="Assigns a local bounding box to the surface/function.">LOCAL (ASAP Command)</a></div>
+<div><a href="../Commands/PLANE_NORMAL_ASAP-cmdref.html#PLANE_NORMAL_ASAP_Command" title="Creates a plane specified by its surface normal and a point.">PLANE NORMAL (ASAP Command)</a></div>
+<div><a href="../Commands/PLANE_POINTS_ASAP-cmdref.html#PLANE_POINTS_ASAP_Command" title="Creates a plane specified by three points.">PLANE POINTS (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

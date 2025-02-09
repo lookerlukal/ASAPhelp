@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Static Rendering"/>
+<meta name="abstract" content="You can create a rendering of the system geometry by setting the appropriate WINDOW and PIXEL values (and optionally, LIGHT values), and then entering the RENDER command. The RENDER command traces a grid of rays whose density is determined by the PIXEL command through the viewing window."/>
+<meta name="description" content="You can create a rendering of the system geometry by setting the appropriate WINDOW and PIXEL values (and optionally, LIGHT values), and then entering the RENDER command. The RENDER command traces a grid of rays whose density is determined by the PIXEL command through the viewing window."/>
+<meta name="DC.subject" content="Static Rendering, rendering, static"/>
+<meta name="keywords" content="Static Rendering, rendering, static"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OBLIQUE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/RENDER_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WINDOW_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Distribution_Data_Files_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Rendering-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Static_Rendering"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Static Rendering</title>
+</head>
+<body id="Static_Rendering"><a name="Static_Rendering"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Static Rendering</h5></span> 
+   
+  
+  <div><p>You can create a rendering of the system geometry by setting the
+	 appropriate WINDOW and PIXEL values (and optionally, LIGHT values), and then
+	 entering the RENDER command. The RENDER command traces a grid of rays whose
+	 density is determined by the PIXEL command through the viewing window.
+  </p>
+ 
+	 <p>If a ray intersects an object, ASAP computes the angle from the surface
+		normal and sets the value of the corresponding pixel of the distribution data
+		file to the proper color and intensity. In this way, the rendering is built up
+		from essentially a raster sampling of rays. The distribution data file is like
+		the film for the rendering photograph. 
+	 </p>
+ 
+	 <p>View the resulting rendering using any of the methods for viewing
+		distribution data files. The Display window is most commonly used.
+	 </p>
+ 
+	 <p>The advantage of this approach is that every object is correctly
+		rendered regardless of its complexity, including objects based upon
+		user-defined surfaces/functions. Since the rays follow physically realizable
+		trajectories, complicated bounds, holes, and obscurations are also properly
+		rendered regardless of their placement or orientation.
+	 </p>
+ 
+	 <p>To render the ray trace, you must first issue the 
+		<b>SAVE</b> command so that ASAP saves the intersection
+		coordinates of each ray with each object in a file. The 
+		<b>RAYS</b> option on the 
+		<b>RENDER</b> command adds the ray trace to the rendering by
+		creating small diameter tubes around each ray. In a sense, each ray is actually
+		a tube object. 
+	 </p>
+ 
+	 <p>View the complete rendering with the Display window. (The 
+		<b>RENDER</b> command produces a black background if there
+		are no objects with which to intersect the rays. Since large amounts of black
+		have a tendency to smudge when printed, you may want to change the background
+		color from black to white before importing it. Use the isotropic option in the
+		Display window to view the rendering at the proper scale.)
+	 </p>
+ 
+	 <div class="section" id="Static_Rendering__section_0B541C9BCB7047F69C41E66AA754F0E3"><a name="Static_Rendering__section_0B541C9BCB7047F69C41E66AA754F0E3"><!-- --></a> 
+		<div class="note"><span class="notetitle">Note:</span> In general, static rendering is a more powerful rendering technique
+		  than dynamic rendering. However, for all of its generality and power, static
+		  rendering suffers from two weaknesses: 
+		</div>
+ 
+		<br/><a name="Static_Rendering__ol_5CA4DE4A5BE4440FBA4CE1A68FA0DA0C"><!-- --></a><ol id="Static_Rendering__ol_5CA4DE4A5BE4440FBA4CE1A68FA0DA0C"> 
+		  <li id="Static_Rendering__li_1D3BEC74AC0E49AF83B4D2B77DC618FF"><a name="Static_Rendering__li_1D3BEC74AC0E49AF83B4D2B77DC618FF"><!-- --></a>The rendering is not
+			 dynamic; that is, the view cannot be changed in real time. Instead you must
+			 rotate the window using the 
+			 <b>OBLIQUE</b> and 
+			 <b>WINDOW</b> commands, and then regenerate the rendering
+			 by retracing all of the rays to create a new distribution data file.
+		  </li>
+ 
+		  <li id="Static_Rendering__li_442E3B30B1FE47E6A0D09BAFB6B94E14"><a name="Static_Rendering__li_442E3B30B1FE47E6A0D09BAFB6B94E14"><!-- --></a>A high density of rays
+			 (that is, high 
+			 <b>PIXEL</b> value) is needed to generate a high fidelity
+			 picture. The higher the 
+			 <b>PIXEL</b> setting, the longer the rendering takes.
+		  </li>
+ 
+		</ol>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Rendering-conc.html" title="The two types of rendering supported in ASAP are described in this topic.">Rendering</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Distribution_Data_Files_Overview-conc.html" title="ASAP has several commands for calculating the irradiance, intensity, radiance etc., for a set of files, some of which produce immediate results of these calculations in the form of plots directly on the screen.">Distribution Data Files Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/OBLIQUE_ASAP-cmdref.html" title="Switches future graphical output between normal (orthogonal) projection and oblique (non-orthogonal) projection.">OBLIQUE (ASAP Command)</a></div>
+<div><a href="../Commands/PIXELS_ASAP-cmdref.html" title="Sets the resolution for graphics and calculations.">PIXELS (ASAP Command)</a></div>
+<div><a href="../Commands/RENDER_ASAP-cmdref.html" title="Creates rendered graphics of the system geometry and ray trace.">RENDER (ASAP Command)</a></div>
+<div><a href="../Commands/WINDOW_ASAP-cmdref.html" title="Sets the plotting window for graphical output.">WINDOW (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Polar Intensity Plot Dialog"/>
+<meta name="abstract" content="The Polar Intensity Plot dialog defines parameters for creating the radial plot intersection plane and y axis direction in the 3D Viewer."/>
+<meta name="description" content="The Polar Intensity Plot dialog defines parameters for creating the radial plot intersection plane and y axis direction in the 3D Viewer."/>
+<meta name="DC.subject" content="Polar Intensity Plot Dialog, 3D Viewer, Polar Intensity Plot dialog, radial plot, defining parameters, intersection plane, polar intensity plot"/>
+<meta name="keywords" content="Polar Intensity Plot Dialog, 3D Viewer, Polar Intensity Plot dialog, radial plot, defining parameters, intersection plane, polar intensity plot"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Polar_Plot_Window_in_3D_Viewer-task.html#Polar_Plot_Window_in_3D_Viewer"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Rayset_Optional_Properties_Dialog-task.html#Rayset_Optional_Properties_Dialog"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Polar_Intensity_Plot_Dialog"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>radial plot in 3D Viewer</title>
+</head>
+<body id="Polar_Intensity_Plot_Dialog"><a name="Polar_Intensity_Plot_Dialog"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Polar Intensity Plot Dialog</h5></span> 
+  
+   
+   
+  <div><p>The Polar Intensity Plot dialog defines parameters for creating
+	 the radial plot intersection plane and y axis direction in the 3D Viewer. 
+  </p>
+ 
+	 <div class="section" id="Polar_Intensity_Plot_Dialog__context_8EF8464BBBF64386AA624C6F14D99AD0"><a name="Polar_Intensity_Plot_Dialog__context_8EF8464BBBF64386AA624C6F14D99AD0"><!-- --></a> 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>Intersection Plane</b></span></td><td><span/></td><td><span><b>Parameters for the intersection plane</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span/></td><td><span>Angle from Axis</span></td><td><span>Default = 0</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span/></td><td><span>Angle Around Axis</span></td><td><span>Default = 0</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Reference Direction</span></td><td><span/></td><td><span>Definition of the parameter for the x axis
+				direction</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span/></td><td><span>Angle About Intersection Plane</span></td><td><span>Default = 0</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>OK</span></td><td><span/></td><td><span>Click to accept the parameters. A polar plot of the data is
+				generated. 
+			 </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Cancel</span></td><td><span/></td><td><span>Click to close the dialog without generating the
+				plot</span></td></tr></tbody></table> 
+		<p>Radial data on the polar plot represent flux values at
+		  plane/radiant-sphere intersection points,. Angular data are the angle the
+		  intersection points make with the x axis direction. 
+		</p>
+ 
+		<div class="note"><span class="notetitle">Note:</span>  
+		  <p>The default position of the intersection plane and the x axis is the
+			 Y-X plane, and the x axis = (1,0,0). This corresponds to Angle From Axis = 0,
+			 Angle Around Axis = 0 and Angle About Intersection Plane = 0. 
+		  </p>
+ 
+		  <p>The definition of the intersection plane is equivalent to first
+			 rotating the default intersection plane about the x axis (1,0,0), (Angle From
+			 Axis), followed by a rotation about the z axis (0,0,1), (Angle Around Axis). 
+		  </p>
+ 
+		  <p>The definition of the reference direction is equivalent to drawing a
+			 line on the X-Y plane prior to rotation of the plane, and then rotating this
+			 line about the normal of the rotated plane (Angle About Intersection Plane). 
+		  </p>
+ 
+		  <p>See the figure and examples below. 
+		  </p>
+ 
+		  <p><br/><a name="Polar_Intensity_Plot_Dialog__image_71A2D756DA6E48059D1516A7FAAF99F3"><!-- --></a><div class="imagecenter"><img id="Polar_Intensity_Plot_Dialog__image_71A2D756DA6E48059D1516A7FAAF99F3" src="../Graphics/3DViewer_PolarPlot_drawing.jpg" width="369" height="299" longdesc="3D Viewer - Polar Intensity Plot Dialog - illustrates planes and directions"/></div><br/> 
+		  </p>
+ 
+		</div>
+ 
+		<p><b>Example</b> 
+		</p>
+ 
+		<p>To create a plane with a local x axis = (0,1,0), y axis = (0,0,1) and
+		  normal to the plane = (1,0,0), enter the following parameters in the Polar Plot
+		  Intensity dialog: 
+		</p>
+ 
+		<p>Angle From Axis = 90, Angle Around Axis = 90, and Angle About
+		  Intersection Plane = 0 
+		</p>
+ 
+		<p>To create a plane with a local X axis = (0,0,1), y axis = ( -1,0,0),
+		  and normal to the plane = (0,-1,0), enter the following parameters in the Polar
+		  Plot Intensity dialog: 
+		</p>
+ 
+		<p>Angle From Axis = 90, Angle Around Axis = 0, and Angle About
+		  Intersection Plane = 90 
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Task/Polar_Plot_Window_in_3D_Viewer-task.html#Polar_Plot_Window_in_3D_Viewer" title="Right-click the file name in the Tree pane of the 3D Viewer window, and select Polar Intensity Plot to open the Polar Intensity Plot dialog.">Polar Plot Window in 3D Viewer</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Rayset_Optional_Properties_Dialog-task.html#Rayset_Optional_Properties_Dialog" title="Sets the sphere size and position, polar reference grid, and color for specific *.dis files. To access this dialog box, right-click in the left tree pane of the 3D Viewer and select Optional Properties.">Rayset Optional Properties Dialog</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

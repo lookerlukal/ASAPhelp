@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="GENERAL (ASAP Command)"/>
+<meta name="abstract" content="Creates a general surface defined by polynomial coefficients."/>
+<meta name="description" content="Creates a general surface defined by polynomial coefficients."/>
+<meta name="DC.subject" content="GENERAL (ASAP Command), surface, general"/>
+<meta name="keywords" content="GENERAL (ASAP Command), surface, general"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_G-ref.html#Commands_and_Macros_G"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FCN_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Axial_GRIN_Singlet-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/GRIN_Overview-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="GENERAL_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>GENERAL (ASAP Command)</title>
+</head>
+<body id="GENERAL_ASAP_Command"><a name="GENERAL_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>GENERAL (ASAP Command)</h5></span>
+	
+	
+	<div><p>Creates a general surface defined by polynomial coefficients. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+GENERAL      [ X ] [ x y z [ c c' c" ... ] ]
+COEFFICIENTS   Y
+               Z
+              -X
+              -Y
+              -Z
+             EXPLICIT
+XiYjZk  c     [ c' c" ... ]
+  :
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X, Y, Z, -X, -Y, or -Z</span></td><td><span>axis for order-doubled polynomial</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x y z</span></td><td><span>reference point</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>c c' c" ...</span></td><td><span>polynomial coefficients</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>COEFFICIENTS</span></td><td><span>synonym for <b>GENERAL</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>EXPLICIT</span></td><td><span>explicit function option</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>XiYjZk</span></td><td><span>coefficient term representation</span></td></tr></tbody></table>
+		<p><b>Reference Point</b>
+		</p>
+
+		<p>As given </p>
+
+		<p><b>Surface Normal</b>
+		</p>
+
+		<p>As defined </p>
+
+		<p><b>Autolimiting</b>
+		</p>
+
+		<p>No </p>
+
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="GENERAL_ASAP_Command__ul_941ACB2606AC41BA811FA3FB074890E9"><!-- --></a><ol id="GENERAL_ASAP_Command__ul_941ACB2606AC41BA811FA3FB074890E9">
+			<li id="GENERAL_ASAP_Command__li_7B296EC5339E469FB86ECBE5CEB2E03B"><a name="GENERAL_ASAP_Command__li_7B296EC5339E469FB86ECBE5CEB2E03B"><!-- --></a>An entirely general surface may be created
+				by directly entering a reference point and any of the up to 286 single-precision
+				polynomial coefficients. This can be done either on the <b>GENERAL</b>
+				command starting with the lowest-order coefficient, or on successive commands that
+				begin with the coefficient of the term represented by <b>XiYjZk,</b>
+				where <b>i,j,k</b> are integer powers. Any coefficients that are not
+				entered are set to zero. </li>
+
+			<li id="GENERAL_ASAP_Command__li_D8E0E644F4E142318410C83F57E0C9A0"><a name="GENERAL_ASAP_Command__li_D8E0E644F4E142318410C83F57E0C9A0"><!-- --></a>In effect, all other <b>SURFACE</b> definition commands are shorthand for GENERAL, since ASAP saves
+				surface data only in this form. The surface may be written as a 10th-order
+				polynomial in the three Cartesian coordinates as shown in the following equation.
+					<br/><img src="../Equations/GENERAL_equation1.gif"/><br/><p> where (x<sub>0</sub>,y<sub>0</sub>,z<sub>0</sub>) defines the reference
+					point of the function. </p>
+</li>
+
+			<li id="GENERAL_ASAP_Command__li_DAD6B62082424A94A1898FB1B2C2E8A0"><a name="GENERAL_ASAP_Command__li_DAD6B62082424A94A1898FB1B2C2E8A0"><!-- --></a> The <b>c</b> entries are the
+				coefficients of the 286-term function defining polynomial. These polynomials are
+				ordered as shown in the table (numbers in the Terms column are powers): <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Order</span></th><th><span>Terms</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>0 Constant</span></td><td><span>C</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>1 Linear</span></td><td><span>X Y Z</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>2 Quadric</span></td><td><span>X2 XY XZ Y2 YZ Z2</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>3 Cubic</span></td><td><span>X3 X2Y X2Z XY2 XYZ XZ2 Y3 Y2Z YZ2 Z3</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>4 Quartic</span></td><td><span>
+							<p>X4 X3Y X3Z X2Y2 X2YZ X2Z2 XY3 XY2Z XYZ2 </p>
+
+							<p> XZ3 Y4 Y3Z Y2Z2 YZ3 Z4 </p>
+
+						</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>5 th-order</span></td><td><span>
+							<p>X5 X4Y X4Z X3Y2 X3YZ X3Z2 X2Y3 X2Y2Z X2YZ2 </p>
+
+							<p>X2Z3 XY4 XY3Z XY2Z2 XYZ3 XZ4 Y5 Y4Z Y3Z2 </p>
+
+							<p> Y2Z3 YZ4 Z5 </p>
+
+						</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>6 th-order</span></td><td><span>
+							<p>X6 X5Y X5Z X4Y2 X4YZ X4Z2 X3Y3 X3Y2Z X3YZ2 </p>
+
+							<p>X3Z3 X2Y4 X2Y3Z X2Y2Z2 X2YZ3 X2Z4 XY5 XY4Z XY3Z2 </p>
+
+							<p> XY2Z3 XYZ4 XZ5 Y6 Y5Z Y4Z2 Y3Z3 Y2Z4 YZ5 Z6 </p>
+
+						</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>7 th-order</span></td><td><span>
+							<p>X7 X6Y X6Z X5Y2 X5YZ X5Z2 X4Y3 X4Y2Z X4YZ2 </p>
+
+							<p> X4Z3 X3Y4 X3Y3Z X3Y2Z2 X3YZ3 X3Z4 X2Y5 X2Y4Z X2Y3Z2 </p>
+
+							<p> X2Y2Z3 X2YZ4 X2Z5 XY6 XY5Z XY4Z2 XY3Z3 XY2Z4 </p>
+
+							<p> XYZ5 XZ6 Y7 Y6Z Y5Z2 Y4Z3 Y3Z4 Y2Z5 YZ6 Z7 </p>
+
+						</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>8 th-order</span></td><td><span>X8 ...</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>9 th-order</span></td><td><span>X9 ...</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>10 th order</span></td><td><span>X10 ...</span></td></tr></tbody></table></li>
+
+			<li id="GENERAL_ASAP_Command__li_3E77768691644A448980C4AA9E152FA3"><a name="GENERAL_ASAP_Command__li_3E77768691644A448980C4AA9E152FA3"><!-- --></a>In the 10th-order polynomial equation, <b>fcn</b> is the name of an optional macro function (intrinsic; for example, SIN
+				or user-defined <b>$FCN</b>). </li>
+
+			<li id="GENERAL_ASAP_Command__li_14AEE5E2CE8C4C9796804CD499B79C97"><a name="GENERAL_ASAP_Command__li_14AEE5E2CE8C4C9796804CD499B79C97"><!-- --></a>The optional coordinate axis is a flag for
+				ASAP to create a surface/function with symmetry about some plane or axis.
+				Substituting one or two of the coordinates in the functional equation with their
+				squares, effectively doubling the order of the polynomial, does this. </li>
+
+			<li id="GENERAL_ASAP_Command__li_A184B4D169804D02B17B4158D9229527"><a name="GENERAL_ASAP_Command__li_A184B4D169804D02B17B4158D9229527"><!-- --></a> The mathematical effect of order doubling
+				is: <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Entry</span></th><th><span>Mathematical Effect</span></th><th><span>Geometrical Effect</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X</span></td><td><span><img src="../Equations/GENERAL_equation_inline1.gif"/> is replaced by <p><img src="../Equations/GENERAL_equation_inline2.gif"/></p>
+</span></td><td><span> symmetry about local x plane</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>-X</span></td><td><span><img src="../Equations/GENERAL_equation_inline3.gif"/> is replaced by <p><img src="../Equations/GENERAL_equation_inline4.gif"/></p>
+<p><img src="../Equations/GENERAL_equation_inline5.gif"/> is replaced by</p>
+<p><img src="../Equations/GENERAL_equation_inline6.gif"/></p>
+</span></td><td><span> symmetry about local x axis</span></td></tr></tbody></table></li>
+
+			<li id="GENERAL_ASAP_Command__li_81F3BD5525264B9493D3B720A6F335B6"><a name="GENERAL_ASAP_Command__li_81F3BD5525264B9493D3B720A6F335B6"><!-- --></a>The alternate <b>EXPLICIT</b>
+				entry removes all <b>Z</b>-dependent terms from the polynomial except an implied
+				linear z coefficient of -1 as shown in the following equation. <p>
+					<br/><a name="GENERAL_ASAP_Command__image_45042BB93D3A4CA79EA01CD7235ABFAA"><!-- --></a><img id="GENERAL_ASAP_Command__image_45042BB93D3A4CA79EA01CD7235ABFAA" src="../Equations/GENERAL_equation4.gif" width="391" height="79"/><br/>
+				</p>
+</li>
+
+			<li id="GENERAL_ASAP_Command__li_06521A202E604A50ACF7833D22500931"><a name="GENERAL_ASAP_Command__li_06521A202E604A50ACF7833D22500931"><!-- --></a>This general 2D polynomial can go as high
+				as the 20th order in <b>X</b> and <b>Y</b>. </li>
+
+		</ol>
+
+		<p><b>Example</b>
+		</p>
+
+		<p>A sphere of radius 5 centered at 0,0,2 could be defined in the following ways: </p>
+
+		<pre class="codeblock">
+GENERAL 0 0 2 -25 0 0 0 1 0 0 1 0 1
+GENERAL 0 0 2; C -25; X2 1; Y2 1; Z2 1
+GENERAL -Z 0 0 2; C -25; X2 1; Y2 1; Z2 1
+      </pre>
+
+		<p>
+			<a href="../example_scripts.html#GENERAL">GENERAL Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_G-ref.html#Commands_and_Macros_G" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “G”.">Commands and Macros (G)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Axial_GRIN_Singlet-ref.html" title="The example of Axial Gradient Index (GRIN) shows an axial GRIN singlet lens. This lens was actually designed in ASAP but only its GRIN properties are examined. The gradient function is simply a linear function of z coordinate in the singlet.">Axial GRIN Singlet</a></div>
+<div><a href="../Reference/GRIN_Overview-ref.html" title="Gradient Index (GRIN) materials have indices of refraction that vary as a function of position within the material. Consequently, light does not necessarily follow a straight line while propagating through the material.">GRIN Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/FCN_macro_ASAP-cmdref.html" title="Defines new in-line math functions.">$FCN (ASAP Macro)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

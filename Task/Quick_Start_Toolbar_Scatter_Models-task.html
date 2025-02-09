@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Quick Start Toolbar - Scatter"/>
+<meta name="abstract" content="The Scatter button on the Quick Start toolbar opens the Scatter page—a list of available scatter and roughness models that you can apply to objects."/>
+<meta name="description" content="The Scatter button on the Quick Start toolbar opens the Scatter page—a list of available scatter and roughness models that you can apply to objects."/>
+<meta name="DC.subject" content="Quick Start Toolbar - Scatter Models, scatter models, Quick Start toolbar, models, scatter, diffuser sheets, roughness models, models, roughness"/>
+<meta name="keywords" content="Quick Start Toolbar - Scatter Models, scatter models, Quick Start toolbar, models, scatter, diffuser sheets, roughness models, models, roughness"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Quick_Start_Toolbar_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Quick_Start_Toolbar_Sources-task.html#Quick_Start_Toolbar_Sources"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Quick_Start_Toolbar_Glass_Catalog-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Quick_Start_Toolbar_Example_Scripts-task.html#Quick_Start_Toolbar_Example_Scripts"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Quick_Start_Toolbar_Interactive_Scripts-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Quick_Start_Toolbar_Lenses-task.html#Quick_Start_Toolbar_Lenses"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Quick_Start_toolbar_Drag_Objects_to_ASAP_Editor-task.html#Quick_Start_toolbar_Drag_Objects_to_ASAP_Editor"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Quick_Start_toolbar_Drag_Objects_to_ASAP_Workspace-task.html#Quick_Start_toolbar_Drag_Objects_to_ASAP_Workspace"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SCATTER_RANDOM_MODEL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TOWARDS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/ASAP_Configurations-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/SCATTER_MODEL_and_TOWARDS_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SCATTER_RANDOM_MODEL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TOWARDS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/ASAP_Configurations-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/SCATTER_MODEL_and_TOWARDS_Overview-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Quick_Start_Toolbar_Scatter_Models"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Quick Start Toolbar - Scatter</title>
+</head>
+<body id="Quick_Start_Toolbar_Scatter_Models"><a name="Quick_Start_Toolbar_Scatter_Models"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Quick Start Toolbar - Scatter</h5></span>
+	
+	
+	<div><p>The Scatter button on the Quick Start toolbar opens the <b>Scatter</b> page—a list of
+		available scatter and roughness models that you can apply to objects. </p>
+
+		<div class="section" id="Quick_Start_Toolbar_Scatter_Models__context_8EF8464BBBF64386AA624C6F14D99AD0"><a name="Quick_Start_Toolbar_Scatter_Models__context_8EF8464BBBF64386AA624C6F14D99AD0"><!-- --></a>
+			<p><b>Other</b>:</p>
+
+			<p><b>Diffuse black </b>surfaces are typically Lambertian at normal incidence, but their
+				BRDF increases dramatically in the forward scatter direction at high angles of
+				incidence. This model of a diffuse black assumes a diffuse reflectance of 5% at
+				normal incidence. The BRDF is much larger than 1 in the forward scattered direction
+				when the angle of incidence is high. </p>
+
+			<p><b>Diffuse white</b> surfaces, such as paper, flat white paints, and materials used
+				for integrating spheres, typically maintain their Lambertian character over a wide
+				range of incident angles. This model of a diffuse white surface assumes a diffuse
+				reflectance of 97%, and is Lambertian for all angles of incidence. Note that
+				Lambertian character of diffuse white surfaces will fail at very high angles of
+				incidence. </p>
+
+			<p><b>Polished Mirror (visible wavelengths).</b> The BRDF of polished mirrors almost
+				always follows a Harvey scatter model. The parameters of the model used here are
+				typical of good quality, clean, polished mirrors at visible wavelengths. </p>
+
+			<p><b>Polished Mirror (infrared wavelengths). </b>The BRDF of polished mirrors almost
+				always follows a Harvey scatter model. The parameters of the model used here are
+				typical of good quality, clean, polished mirrors at infrared wavelengths. Be aware
+				that even a small amount of dust (particulate contamination) on a mirror’s surface
+				will greatly increase its BRDF at infrared wavelengths. Therefore, this model is
+				valid only for pristine surfaces. </p>
+
+			<p><b>E60L</b> is a microvoided, white film with low specific gravity and high
+				reflectivity, and is designed as a reflector plate for LCD backlighting. (Lumirror
+				E60L is a registered trademark of Toray Industries, Inc.) </p>
+
+			<p><b>POC LSD Diffuser Sheets. </b>To apply Diffuser Sheet models to objects, you must
+				right-click a model and select <b>Apply Models.</b> You can drag and drop a diffuser
+				sheet onto the Builder. However, unlike other models in ASAP, <i>diffuser sheets
+					cannot be dragged and dropped onto the ASAP Object Tree. </i>
+			</p>
+
+			<p><b>Diffuse Metal.</b> Scatter from diffuse metal surfaces often follows a
+				three-parameter Harvey model. The total integrated scatter of the model used here is
+				75% at normal incidence. The angular width (half-width) of the scattered light is
+				approximately 10 <i>degrees</i>. </p>
+
+			<p><b>Vacuum Metalized Reflector.</b> A Harvey model is used to describe the scattered
+				light from a vacuum metalized reflector. The model used here assumes that most of
+				the light from the surface is reflected, as the total integrated scatter of this
+				model is only 0.25%. </p>
+
+			<p><b>Etched Plastic.</b> The Harvey model that is used here is for transmissive
+				diffusers. The BTDF of diffusers varies widely from one diffuser to another, so this
+				model should only be used for rough calculations in the early stages of a design.
+				The width of the scatter distribution is about 8 <i>degrees</i> (half width), and
+				the total integrated scatter is 90%. </p>
+
+			<p><b>Alanod, MoldTec, Tenebac.</b> Data from selected texture samples from these
+				manufacturers is included.</p>
+
+			<p><b>Notes on Scatter Models</b>
+			</p>
+
+			<br/><a name="Quick_Start_Toolbar_Scatter_Models__ul_3D6DA6ED103E440AB680A6674DE22EA5"><!-- --></a><ul id="Quick_Start_Toolbar_Scatter_Models__ul_3D6DA6ED103E440AB680A6674DE22EA5">
+				<li id="Quick_Start_Toolbar_Scatter_Models__li_0789F8DA4E944E1AA6C16C222E552F5B"><a name="Quick_Start_Toolbar_Scatter_Models__li_0789F8DA4E944E1AA6C16C222E552F5B"><!-- --></a>With the exception of the Diffuser
+					models, you can drag and drop a scatter model onto an object (or parent) in the
+					ASAP Workspace window after creating a system. This applies the selected scatter
+					model using a <b>TOWARDS SPEC</b> scattering into the full
+					hemisphere. </li>
+
+				<li id="Quick_Start_Toolbar_Scatter_Models__li_B083A388B492441AAFE4BCC669B90F3D"><a name="Quick_Start_Toolbar_Scatter_Models__li_B083A388B492441AAFE4BCC669B90F3D"><!-- --></a>When a model is applied via the ASAP
+					Workspace window, the Command Output window shows the commands that ASAP is
+					using to apply the scatter model to the selected object(s). </li>
+
+				<li id="Quick_Start_Toolbar_Scatter_Models__li_E8914AE9DC5248D3BF7CF5F182DA545D"><a name="Quick_Start_Toolbar_Scatter_Models__li_E8914AE9DC5248D3BF7CF5F182DA545D"><!-- --></a>All scatter models can be dragged and
+					dropped onto Editor or Builder windows. In this case, only the <b>MODEL</b> is inserted at the cursor location. Users need to apply an
+					object using the <b>SCATTER MODEL; TOWARDS</b> commands. </li>
+
+				<li id="Quick_Start_Toolbar_Scatter_Models__li_18D805B90CC54ADC85CAF06FD1486582"><a name="Quick_Start_Toolbar_Scatter_Models__li_18D805B90CC54ADC85CAF06FD1486582"><!-- --></a>The Command Output window shows the
+					commands that ASAP is using to apply the scatter model to the selected
+					object(s). </li>
+
+				<li id="Quick_Start_Toolbar_Scatter_Models__li_0EB4074E2DAB4DD7BA5AB5A1231D568A"><a name="Quick_Start_Toolbar_Scatter_Models__li_0EB4074E2DAB4DD7BA5AB5A1231D568A"><!-- --></a>If the scatter model is dropped on an
+					object that has an interface coating, a message notifies you that an interface
+					coating will interfere with scatter model properties. You may choose to continue
+					or cancel the operation. </li>
+
+				<li id="Quick_Start_Toolbar_Scatter_Models__li_58402AEAE1D940639D9E5543327E6B7E"><a name="Quick_Start_Toolbar_Scatter_Models__li_58402AEAE1D940639D9E5543327E6B7E"><!-- --></a>If you try to apply a model, and the
+					maximum number of models has been reached, you are notified and the model will
+					not be applied. See the reference topic, <i>ASAP Configurations</i> for
+					information on the maximum models supported. </li>
+
+				<li id="Quick_Start_Toolbar_Scatter_Models__li_F0334FF5EF734676B394FFDA3CF59271"><a name="Quick_Start_Toolbar_Scatter_Models__li_F0334FF5EF734676B394FFDA3CF59271"><!-- --></a>The roughness models that are available
+					from the Quick Start toolbar are basic. They do not implement the <b>TOWARDS</b> command; therefore, ASAP assumes that the rays will
+					scatter in a hemisphere. </li>
+
+				<li id="Quick_Start_Toolbar_Scatter_Models__li_313743B96D64424882EC69BA7C829200"><a name="Quick_Start_Toolbar_Scatter_Models__li_313743B96D64424882EC69BA7C829200"><!-- --></a>If the roughness model is dropped on an
+					object that does not have an interface coating, a message notifies you that a
+					lack of an interface coating will interfere with roughness model properties. You
+					may choose to continue or cancel the operation. </li>
+
+			</ul>
+
+		</div>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Quick_Start_Toolbar_Overview-conc.html" title="The Quick Start toolbar in the ASAP Window gives you quick access to catalogs in ASAP.">Quick Start Toolbar Overview</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/SCATTER_MODEL_and_TOWARDS_Overview-conc.html" title="This topic gives several tips for scattering rays towards a specified small area.">SCATTER MODEL and TOWARDS Overview</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Quick_Start_Toolbar_Sources-task.html#Quick_Start_Toolbar_Sources" title="The Sources button on the Quick Start toolbar opens the Sources page--a catalog of all the sources available on your system.">Quick Start Toolbar - Sources</a></div>
+<div><a href="../Task/Quick_Start_Toolbar_Glass_Catalog-task.html" title="The Glass Catalog button on the Quick Start toolbar opens the Glass page—a list of all the available glass catalogs: French, Hikari, Hoya, Hoya New, Ohara, Schott, Schott New, Sumita, and Unusual. You can also add your own glass definitions to the User catalog.">Quick Start Toolbar - Glass Catalog</a></div>
+<div><a href="../Task/Quick_Start_Toolbar_Example_Scripts-task.html#Quick_Start_Toolbar_Example_Scripts" title="The Example Files button on the Quick Start toolbar opens the Example Files page—a tree list of examples for ASAP commands. Example files are stored in your ASAP installation folder under projects\Examples.">Quick Start Toolbar - Example Files</a></div>
+<div><a href="../Task/Quick_Start_Toolbar_Interactive_Scripts-task.html" title="The Interactive Scripts button (formerly named the User INR Scripts) on the Quick Start toolbar, opens the tree view and gives you quick access to interactive and user-defined script files. You can add, remove, open, and run example interactive script files and user-defined script files.">Quick Start Toolbar - Interactive Scripts</a></div>
+<div><a href="../Task/Quick_Start_Toolbar_Lenses-task.html#Quick_Start_Toolbar_Lenses" title="The Lenses button on the Quick Start toolbar opens the Lenses page—a catalog of pre-defined lenses available in ASAP. Hovering the mouse pointer over a lens displays a brief description of the lens, such as focal length, shape, and diameter.">Quick Start Toolbar - Lenses</a></div>
+<div><a href="../Task/Quick_Start_toolbar_Drag_Objects_to_ASAP_Editor-task.html#Quick_Start_toolbar_Drag_Objects_to_ASAP_Editor" title="This topic describes how to drag objects from the Quick Start toolbar onto the Editor or Builder window.">Quick Start Toolbar - Dragging Objects onto ASAP Editor</a></div>
+<div><a href="../Task/Quick_Start_toolbar_Drag_Objects_to_ASAP_Workspace-task.html#Quick_Start_toolbar_Drag_Objects_to_ASAP_Workspace" title="This topic describes how to drag objects from the Quick Start toolbar onto ASAP Workspace.">Quick Start Toolbar - Dragging Objects onto ASAP Workspace</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/ASAP_Configurations-ref.html" title="BRO offers several ASAP versions and toolkits to match your needs, which are listed in this topic, and described in detail on the BRO Web site. This topic also provides tips on memory-resident ray tracing, array dimensions, total geometry storage, and maximum Fast Fourier Transform size for ASAP versions.">ASAP Versions</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/SCATTER_RANDOM_MODEL_ASAP-cmdref.html" title="Assigns a scattering interface to an object.">SCATTER RANDOM/MODEL (ASAP Command)</a></div>
+<div><a href="../Commands/TOWARDS_ASAP-cmdref.html" title="Specifies importance area or direction sampling for scattered rays. Required when specifying a SCATTER MODEL.">TOWARDS (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

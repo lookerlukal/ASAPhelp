@@ -1,0 +1,37 @@
+!!++
+!! LSQFIT01.INR
+!! Title: Least Squares Fit Control
+!! Category: Isolated Command
+!! Keywords: LSQFIT, REVOLUTION, $DO, $FCN, SURFACE
+!! Description: Using LSQFIT to modify the singular value
+!! decomposition method used by the REVOLUTION command's
+!! least squares fitting algorythm.
+!! Note the use of $FCN to create
+!! the data for REVOLUTION.  If the fits are not
+!! good then consider breaking the OBJECT into
+!! many piecewise OBJECTS for fits over smaller
+!! divisions.
+!! Edit History: (latest first)
+!! 10/09/2000 - cp - modified format; added description
+!! 01/01/1996 - bro - creation
+!!--
+
+SYSTEM NEW
+RESET
+
+LSQFIT LIST
+ 
+$FCN REVO LOG(2*_)*(2*_)
+ 
+SURFACE
+$DO 1 98; REVOLUTION Z 3RD,
+  REVO(?/100) ?/100,
+  REVO(99/100) 99/100
+  LOCAL -4@0.5 -2@1 Z 0.25
+  OBJECT 'SURF_OF_REV_1'
+ 
+WINDOW X -2@0.6 Z -0.5 0.75
+PIXELS 127
+PROFILES 'A LOGARITHMIC CURVE'
+RETURN
+

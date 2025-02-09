@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="DOE Lens"/>
+<meta name="abstract" content="The surfaces created by the MULTIPLE command are the key to modeling diffractive optical elements (DOE). You must create a multiple surface whose intersection with the base surface specifies the grating lines."/>
+<meta name="description" content="The surfaces created by the MULTIPLE command are the key to modeling diffractive optical elements (DOE). You must create a multiple surface whose intersection with the base surface specifies the grating lines."/>
+<meta name="DC.subject" content="DOE Lens, lens, DOE, diffractive optical elements"/>
+<meta name="keywords" content="DOE Lens, lens, DOE, diffractive optical elements"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=31"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_DEF-ref.html#Reference_DEF"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="DOE_Lens"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>DOE Lens</title>
+</head>
+<body id="DOE_Lens"><a name="DOE_Lens"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>DOE Lens</h5></span> 
+   
+   
+  <div><p>The surfaces created by the 
+	 <b>MULTIPLE</b> command are the key to modeling diffractive
+	 optical elements (DOE). You must create a multiple surface whose intersection
+	 with the base surface specifies the grating lines. 
+  </p>
+ 
+	 <div class="section" id="DOE_Lens__section_1"><a name="DOE_Lens__section_1"><!-- --></a> 
+		<p>These grating lines represent 2 
+		  <a name="DOE_Lens__image_1320EB8ED3AA489CA2CEF26CEA3F0CD5"><!-- --></a><img id="DOE_Lens__image_1320EB8ED3AA489CA2CEF26CEA3F0CD5" src="file:///C:/Documents and Settings/gburns/My Documents/Proj/HTML Help/DITA_ASAP/DITA_Maps/Equations/symbol_pi.gif" width="18" height="18"/>phase steps. Since these
+		  grating lines are created by the 
+		  <b>MULTIPLE</b> command, they must be defined by the
+		  equation 
+		</p>
+ 
+		<p><br/><a name="DOE_Lens__image_70FBEEC627BC4288A50AB6760C44E19C"><!-- --></a><img id="DOE_Lens__image_70FBEEC627BC4288A50AB6760C44E19C" src="../Equations/DOE_Lens_equation1.gif" width="172" height="37"/><br/> 
+		</p>
+ 
+		<p>where 
+		  <b>j</b> and 
+		  <b>p</b> are integers and f' is a constant. 
+		</p>
+ 
+		<p>This process requires converting the phase surface into an equivalent
+		  equation describing the grating line spacing. 
+		</p>
+ 
+		<p>As an example, suppose you want to model a DOE lens that produces a
+		  simple quadratic phase function such that the element has a paraxial focal
+		  length f. Assuming the z axis is the propagation axis, the field produced by
+		  the DOE may be written in general as: 
+		</p>
+ 
+		<p><br/><a name="DOE_Lens__image_71F5856B647A4495824DD82BE8D7C48B"><!-- --></a><img id="DOE_Lens__image_71F5856B647A4495824DD82BE8D7C48B" src="../Equations/DOE_Lens_equation2alt.gif" width="191" height="37"/><br/> 
+		</p>
+ 
+		<p>where 
+		  <a name="DOE_Lens__image_9E23A302AD044403A0E8849C435D1DA3"><!-- --></a><img id="DOE_Lens__image_9E23A302AD044403A0E8849C435D1DA3" src="../Equations/DOE_Lens_inline_equation1.gif" width="85" height="41"/> is the phase function expressed in waves. In this
+		  particular case, the phase function is a simple quadratic so that 
+		  <br/><a name="DOE_Lens__image_A7ACA248C5514A55B572B00EA46A16FF"><!-- --></a><img id="DOE_Lens__image_A7ACA248C5514A55B572B00EA46A16FF" src="../Equations/DOE_Lens_equation3alt.gif" width="204" height="60"/><br/> 
+		</p>
+ 
+		<p>where 
+		  <a name="DOE_Lens__image_968439D81C474AF38526AD1F8BBA5496"><!-- --></a><img id="DOE_Lens__image_968439D81C474AF38526AD1F8BBA5496" src="../Equations/symbol_lambda.gif" width="22" height="29"/> is the
+		  construction wavelength and 
+		  <b>f</b> is the focal length. 
+		</p>
+ 
+		<p>A grating line occurs every time the exponential goes through 2 
+		  <a name="DOE_Lens__image_F0940B690276487BB1D548D4979930C2"><!-- --></a><img id="DOE_Lens__image_F0940B690276487BB1D548D4979930C2" src="../Equations/symbol_pi.gif" width="22" height="22"/>and so the
+		  general equation of the grating lines is given by 
+		  <br/><a name="DOE_Lens__image_B7CEB07872454501B8E5F04BF4649DBD"><!-- --></a><img id="DOE_Lens__image_B7CEB07872454501B8E5F04BF4649DBD" src="../Equations/DOE_Lens_equation4a.gif" width="120" height="72"/><br/> 
+		</p>
+ 
+		<p>where 
+		  <b>j</b> is a positive or negative integer. By writing 
+		  <br/><a name="DOE_Lens__image_543F927845454313931075EE7E88B02A"><!-- --></a><img id="DOE_Lens__image_543F927845454313931075EE7E88B02A" src="../Equations/DOE_Lens_equation5.gif" width="208" height="147"/><br/> 
+		</p>
+ 
+		<p>you now have all the information necessary to define this element in
+		  ASAP. In general, an arbitrary DOE may be modeled by simply setting the phase
+		  function equal to 
+		  <b>j</b>. 
+		</p>
+ 
+		<p>Other equally valid equations describing the grating line spacing may
+		  be obtained by rearranging terms as follows: 
+		  <br/><a name="DOE_Lens__image_4C834C7AE5024330BAE569E4930327F7"><!-- --></a><img id="DOE_Lens__image_4C834C7AE5024330BAE569E4930327F7" src="../Equations/DOE_Lens_equation6.gif" width="320" height="291"/><br/>
+		</p>
+ 
+		<p>Alternatively, you can define a radial spatial frequency function 
+		  <br/><a name="DOE_Lens__image_2935AFA5E5F74A88820496BE1731D123"><!-- --></a><img id="DOE_Lens__image_2935AFA5E5F74A88820496BE1731D123" src="../Equations/DOE_Lens_equation2alt.gif" width="191" height="37"/><br/> and integrate it to get 
+		  <br/><a name="DOE_Lens__image_31BFADB305E94CDCB4C123B167315AFE"><!-- --></a><img id="DOE_Lens__image_31BFADB305E94CDCB4C123B167315AFE" src="../Equations/DOE_Lens_equation3alt.gif" width="204" height="60"/><br/> 
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+  <div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_DEF-ref.html#Reference_DEF" title="Reference topics in this section begin with the letters &#34;D-E-F&#34;.">Reference (D-F)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=31" target="_blank">See the Knowledge Base for the technical publication, Diffraction Gratings and DOEs ASAP</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Diffraction
+		  Gratings and DOEs, at http://www.breault.com/k-base.php 
+		</a></div>
+</div>
+</div> 
+
+</body>
+</html></body></html>

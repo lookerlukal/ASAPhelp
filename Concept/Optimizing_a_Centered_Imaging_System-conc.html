@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Optimizing a Centered Imaging System"/>
+<meta name="abstract" content="A lens can be optimized using a brute-force algorithm that finds either the nearest minimum or (given enough time) the global minimum, without requiring the merit function to be continuous (that is, no derivatives are used)."/>
+<meta name="description" content="A lens can be optimized using a brute-force algorithm that finds either the nearest minimum or (given enough time) the global minimum, without requiring the merit function to be continuous (that is, no derivatives are used)."/>
+<meta name="DC.subject" content="Optimizing a Centered Imaging System, RMS spot size, determining, merit functions"/>
+<meta name="keywords" content="Optimizing a Centered Imaging System, RMS spot size, determining, merit functions"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_OR-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ABERRATIONS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ITER_macro_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Optimizing_a_Centered_Imaging_System"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Optimizing a Centered Imaging System</title>
+</head>
+<body id="Optimizing_a_Centered_Imaging_System"><a name="Optimizing_a_Centered_Imaging_System"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Optimizing a Centered Imaging System</h5></span> 
+   
+  
+  <div><p>A lens can be optimized using a brute-force algorithm that finds
+	 either the nearest minimum or (given enough time) the global minimum, without
+	 requiring the merit function to be continuous (that is, no derivatives are
+	 used). 
+  </p>
+ 
+	 <p>This technique also allows constraints to be handled in a
+		straightforward and exact manner. This is made possible by an extremely fast
+		method for determining the RMS spot size at any field location (that is, it
+		does not have to do iterative ray-aiming to hit the internal stop surface of a
+		wide angle lens). On a typical system, over a million-merit function
+		evaluations per minute can be achieved, independent of the number of fields. 
+	 </p>
+ 
+	 <p>ASAP also allows programming of a range of variables and user-defined
+		merit functions for custom optimization of imaging or non-imaging systems. This
+		can be accomplished either by the grid search method, or automatically using
+		Singular Value Decomposition (SVD) techniques. In this way, it is possible to
+		alter an optical design, and analyze the results in the context of the larger
+		system.
+	 </p>
+ 
+	 <p>The local or global optimization feature in ASAP is not intended to
+		replace a full-blown lens-design program. The feature is currently limited to
+		unvignetted, centered, focal systems (the vast majority of manufactured units),
+		and does not have any built-in multi-configuration or tolerancing capability.
+		However, these and other advanced capabilities can be easily emulated with some
+		additional macro-language programming (for example, $ITER). At the very least,
+		this specific optimization feature can be used to quickly find (possibly
+		unique) designs that may then be tweaked (if necessary) elsewhere.
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_OR-ref.html" title="Reference topics in this section begin with the letters &#34;O&#34; to &#34;R&#34;.">Reference (O-R)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/ABERRATIONS_ASAP-cmdref.html" title="Displays the image aberrations of all the current lens or conicoids l through l' (up to 120 total). This command can be applied only to ASAP lens-based objects, not to surface- or edge-based objects.">ABERRATIONS (ASAP Command)</a></div>
+<div><a href="../Commands/ITER_macro_ASAP-cmdref.html" title="Iterates input records and a set of variables.">$ITER (ASAP Macro)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

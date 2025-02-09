@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Macro Formatting - Quick Reference"/>
+<meta name="abstract" content="Macro format for both library (filename.LIB) and on-the-fly macro definitions: use the $IO LIBRARY filename to associate that macro library with an ASAP session."/>
+<meta name="description" content="Macro format for both library (filename.LIB) and on-the-fly macro definitions: use the $IO LIBRARY filename to associate that macro library with an ASAP session."/>
+<meta name="DC.subject" content="Macro Formatting - Quick Reference, commands, quick reference to macro formatting"/>
+<meta name="keywords" content="Macro Formatting - Quick Reference, commands, quick reference to macro formatting"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Quick_Reference_Guide-ref.html#Quick_Reference_Guide"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/ASAP_Syntax_Quick_Reference-ref.html#ASAP_Syntax_Quick_Reference"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optical_System_Model_Quick_Reference-ref.html#Optical_System_Model_Quick_Reference"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Verifying_Optical_System_Model_Quick_Reference-ref.html#Verifying_Optical_System_Model_Quick_Reference"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Source_Models_Quick_Reference.html#Source_Models_Quick_Reference"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Verifying_Source_Model_Quick_Reference-ref.html#Verifying_Source_Model_Quick_Reference"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Ray_Tracing_and_Analysis_Quick_Reference-ref.html#Ray_Tracing_and_Analysis_Quick_Reference"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Miscellaneous_Useful_Commands_Quick_Reference-ref.html#Miscellaneous_Useful_Commands_Quick_Reference"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/IO_macro_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Macro_Formatting_Quick_Reference"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Macro Formatting - Quick Reference</title>
+</head>
+<body id="Macro_Formatting_Quick_Reference"><a name="Macro_Formatting_Quick_Reference"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Macro Formatting - Quick Reference</h5></span> 
+   
+  
+  <div><p>Macro format for both library (filename.LIB) and on-the-fly macro
+	 definitions: use the $IO LIBRARY filename to associate that macro library with
+	 an ASAP session.
+  </p>
+ 
+	 <div class="section" id="Macro_Formatting_Quick_Reference__section_A28E9B3D73754540BF9A2A046B1E6C2B"><a name="Macro_Formatting_Quick_Reference__section_A28E9B3D73754540BF9A2A046B1E6C2B"><!-- --></a> 
+		<p><b>n</b> is the number of prompts following the macro : prompt 1
+		  corresponds to macro argument #1, macro prompt 2 corresponds to macro argument
+		  #2. 
+		</p>
+ 
+		<p>$macroname echoes contents of macro. 
+		</p>
+ 
+		<p>&amp;macroname does not echo contents of macro.
+		</p>
+ 
+		<pre class="codeblock">macroname { n	
+:
+:
+}
+n prompts
+
+SYSRAY { 1
+RAYS 0; EMITTING DISK Z 0 2@1 #1
+}
+ENTER NUMBER OF RAYS&gt;</pre>
+ 
+	 </div>
+ 
+  </div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Quick_Reference_Guide-ref.html#Quick_Reference_Guide" title="The Quick Reference Guide is a group of topics that summarizes key commands and user interface locations.">Quick Reference Guide</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/ASAP_Syntax_Quick_Reference-ref.html#ASAP_Syntax_Quick_Reference" title="This topic provides a reference for commonly used ASAP syntax.">ASAP Syntax - Quick Reference</a></div>
+<div><a href="../Reference/Optical_System_Model_Quick_Reference-ref.html#Optical_System_Model_Quick_Reference" title="The following information is based on starting a new Builder line, or entering command syntax in the Command Input window.">Optical System Model - Quick Reference</a></div>
+<div><a href="../Reference/Verifying_Optical_System_Model_Quick_Reference-ref.html#Verifying_Optical_System_Model_Quick_Reference" title="This topic provides a list of commonly used commands for verifying an optical system model.">Verifying Optical System Model - Quick Reference</a></div>
+<div><a href="../Reference/Source_Models_Quick_Reference.html#Source_Models_Quick_Reference" title="This topic provides a list of commonly used commands for verifying an optical system model.">Source Models - Quick Reference</a></div>
+<div><a href="../Reference/Verifying_Source_Model_Quick_Reference-ref.html#Verifying_Source_Model_Quick_Reference">Verifying Source Model - Quick Reference</a></div>
+<div><a href="../Reference/Ray_Tracing_and_Analysis_Quick_Reference-ref.html#Ray_Tracing_and_Analysis_Quick_Reference" title="This topic provides a list of commonly used commands for ray tracing and analysis.">Ray Tracing and Analysis - Quick Reference</a></div>
+<div><a href="../Reference/Miscellaneous_Useful_Commands_Quick_Reference-ref.html#Miscellaneous_Useful_Commands_Quick_Reference" title="This topic provides a list of commonly used commands for re-initializing system databases and the virtual.pgs file, as well as for restoroing an ASAP session.">Miscellaneous Useful Commands - Quick Reference</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/IO_macro_ASAP-cmdref.html" title="Controls I/O redirection.">$IO (ASAP Macro)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

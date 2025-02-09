@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="MODELS (ASAP Command)"/>
+<meta name="abstract" content="Creates a scattering model."/>
+<meta name="description" content="Creates a scattering model."/>
+<meta name="DC.subject" content="MODELS (ASAP Command), model, create scattering, scatttering model, create"/>
+<meta name="keywords" content="MODELS (ASAP Command), model, create scattering, scatttering model, create"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_M-ref.html#Commands_and_Macros_M"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/COATINGS_MODELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/COATINGS_PROPERTIES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/INTERFACE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MINMAX_arg_ASAP-cmdref.html#MINMAX_ASAP_Command_Argument"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/NONLINEAR_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OBJECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PARTICLES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/BSDF_Fit_Utility_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Scatter_Models-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=25"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="MODELS_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>MODELS (ASAP Command)</title>
+</head>
+<body id="MODELS_ASAP_Command"><a name="MODELS_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>MODELS (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Creates a scattering model. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">MODELS [ i [ PLOT [ a a'...] ] ]</pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>i</span></td><td><span>beginning model number</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>PLOT</span></td><td><span>plots the model in log (b-bo) and angle space</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a a' ...</span></td><td><span>user-defined degree specular angles</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="MODELS_ASAP_Command__ul_D578109008024B86846AD43534496A0E"><!-- --></a><ol id="MODELS_ASAP_Command__ul_D578109008024B86846AD43534496A0E"> 
+		<li id="MODELS_ASAP_Command__li_2895F84C1AD543AAA58037A79B357FA5"><a name="MODELS_ASAP_Command__li_2895F84C1AD543AAA58037A79B357FA5"><!-- --></a>Defines a specific scatter
+		  model from a general set of Bi-directional Scattering Distribution Function
+		  (BSDF) scattering models. 
+		</li>
+ 
+		<li id="MODELS_ASAP_Command__li_2CF243157D9C4700A1DE770443E91AA7"><a name="MODELS_ASAP_Command__li_2CF243157D9C4700A1DE770443E91AA7"><!-- --></a>Begin defining scatter 
+		  <b>MODELS</b> at number 
+		  <b>i</b> (the default model number is one more than the
+		  highest defined). 
+		</li>
+ 
+		<li id="MODELS_ASAP_Command__li_6085963DF0A84D98B056669262C957F5"><a name="MODELS_ASAP_Command__li_6085963DF0A84D98B056669262C957F5"><!-- --></a>Similar to the 
+		  <b>MEDIA</b> and the 
+		  <b>COATING</b> commands, it constructs a database for use
+		  in the construction of an 
+		  <b>OBJECT</b>. 
+		</li>
+ 
+		<li id="MODELS_ASAP_Command__li_D7F0CA239A0A4C2F8150927A970FD79F"><a name="MODELS_ASAP_Command__li_D7F0CA239A0A4C2F8150927A970FD79F"><!-- --></a>Creates a distribution file
+		  name_angle.dis for each of these angles. 
+		</li>
+ 
+		<li id="MODELS_ASAP_Command__li_D5DAECBB112E4E80AD52FD839DEB299A"><a name="MODELS_ASAP_Command__li_D5DAECBB112E4E80AD52FD839DEB299A"><!-- --></a>Both the 
+		  <b>r</b> and 
+		  <b>t</b> values on the 
+		  <b>INTERFACE</b> command must be non-zero. 
+		</li>
+ 
+		<li id="MODELS_ASAP_Command__li_8AA210CF911F4FB9937C4ED986F5351B"><a name="MODELS_ASAP_Command__li_8AA210CF911F4FB9937C4ED986F5351B"><!-- --></a>The command argument, 
+		  <b>MINMAX</b> may be used to set the minimum and maximum
+		  values of the BSDF for this specific model. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#MODELS">MODELS
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_M-ref.html#Commands_and_Macros_M" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “M”.">Commands and Macros (M)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/BSDF_Fit_Utility_Overview-conc.html" title="In most instances where it is appropriate to apply the Harvey model or the Polynomial Fit model, you can use the BSDF Fitting utility, which is integrated with ASAP.">BSDF Fit Utility Overview</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Scatter_Models-ref.html" title="ASAP supports the scatter models listed in this topic for wide-angle (far from specular) scatter.">Scatter Models</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/COATINGS_MODELS_ASAP-cmdref.html" title="Specify angular properties for reflection and transmission.">COATINGS MODELS (ASAP Command)</a></div>
+<div><a href="../Commands/COATINGS_PROPERTIES_ASAP-cmdref.html" title="Creates a coating specified by its transmissive and reflective properties.">COATINGS PROPERTIES (ASAP Command)</a></div>
+<div><a href="../Commands/INTERFACE_ASAP-cmdref.html" title="Assigns a reflective, refractive or diffractive interface to objects.">INTERFACE (ASAP Command)</a></div>
+<div><a href="../Commands/MEDIA_ASAP-cmdref.html" title="Creates a single refractive material.">MEDIA (ASAP Command)</a></div>
+<div><a href="../Commands/MINMAX_arg_ASAP-cmdref.html#MINMAX_ASAP_Command_Argument" title="Sets BSDF bounding.">MINMAX (ASAP Command Argument)</a></div>
+<div><a href="../Commands/NONLINEAR_ASAP-cmdref.html" title="Creates a scatter model based on the combination of the Phong and Harvey models.">NONLINEAR (ASAP Command)</a></div>
+<div><a href="../Commands/OBJECT_ASAP-cmdref.html" title="Defines an object based upon previously defined entities.">OBJECT (ASAP Command)</a></div>
+<div><a href="../Commands/PARTICLES_ASAP-cmdref.html" title="Creates a particulate scatter model.">PARTICLES (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_arg_ASAP-cmdref.html" title="Plots current model.">PLOT (ASAP Command Argument)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=25" target="_blank">See the Knowledge Base for the technical publication, Using VOXELS in ASAP for Modeling Fluorescence and Volume Scatter</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

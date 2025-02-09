@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="SCATTER MODEL and TOWARDS Overview"/>
+<meta name="abstract" content="This topic gives several tips for scattering rays towards a specified small area."/>
+<meta name="description" content="This topic gives several tips for scattering rays towards a specified small area."/>
+<meta name="DC.subject" content="SCATTER MODEL and TOWARDS Overview, TOWARDS, tips, stray light analysis"/>
+<meta name="keywords" content="SCATTER MODEL and TOWARDS Overview, TOWARDS, tips, stray light analysis"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Scatter_Models-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Scattering_with_ROUGHNESS_RANDOM-conc.html#Scattering_with_ROUGHNESS_RANDOM"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="SCATTER_MODEL_and_TOWARDS_Overview"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>SCATTER MODEL and TOWARDS Overview</title>
+</head>
+<body id="SCATTER_MODEL_and_TOWARDS_Overview"><a name="SCATTER_MODEL_and_TOWARDS_Overview"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>SCATTER MODEL and TOWARDS Overview</h5></span> 
+   
+  
+  <div><p>This topic gives several tips for scattering rays towards a
+	 specified small area.
+  </p>
+ 
+	 <div class="section"><span style="color: #2b6eb5"><h5>Tips</h5></span> 
+		 
+		<br/><ul> 
+		  <li>Useful for performing stray light analysis.
+		  </li>
+ 
+		  <li>The specified area toward which rays are scattered is defined with
+			 one or more elliptical or rectangular edges. Scattering into a cone that is
+			 centered on the specular direction or the surface normal is also possible.
+		  </li>
+ 
+		  <li><b>SCATTER MODEL</b> and 
+			 <b>TOWARDS</b> follow an 
+			 <b>OBJECT</b> command.
+		  </li>
+ 
+		  <li>A model and any important edges must be defined before using these
+			 commands (there are no forward references).
+		  </li>
+ 
+		  <li>ASAP scales the flux of the scattered ray, taking into account the
+			 flux of the incident ray, solid angle of the important edge, BRDF model, angles
+			 of incidence and scatter, and cosine obliquity factors of the surface and
+			 important edges.
+		  </li>
+ 
+		  <li>To obtain correct results in most cases, the diameter of the
+			 important edge must be small compared to the distance to the important edge.
+		  </li>
+ 
+		  <li>The 
+			 <b>TOWARDS SPEC</b> command, with a small cone angle and
+			 appropriate BRDF model, may be used to simulate variations in reflectivity with
+			 angle of incidence. Make the object ABSORBing and scatter only a single ray.
+		  </li>
+ 
+		</ul>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Scatter_Models-ref.html" title="ASAP supports the scatter models listed in this topic for wide-angle (far from specular) scatter.">Scatter Models</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Scattering_with_ROUGHNESS_RANDOM-conc.html#Scattering_with_ROUGHNESS_RANDOM" title="This topic gives several tips for using ROUGHNESS RANDOM, which simulates scatter from a rough surface by randomly perturbing the direction of a reflected or refracted ray. The actual surface of the object is not altered.">Scattering with ROUGHNESS RANDOM</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

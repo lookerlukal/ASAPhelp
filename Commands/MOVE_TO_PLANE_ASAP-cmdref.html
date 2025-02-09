@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="MOVE TO PLANE (ASAP Command)"/>
+<meta name="abstract" content="Moves rays along their propagation direction to a specified reference plane."/>
+<meta name="description" content="Moves rays along their propagation direction to a specified reference plane."/>
+<meta name="DC.subject" content="MOVE TO PLANE (ASAP Command), ray, move to plane, plane, move rays to"/>
+<meta name="keywords" content="MOVE TO PLANE (ASAP Command), ray, move to plane, plane, move rays to"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MOVE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MOVE_PARABASALS_ASAP-cmdref.html#MOVE_PARABASALS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MOVE_TO_FOCI_ASAP-cmdref.html#MOVE_TO_FOCI_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MOVE_TO_POINT_ASAP-cmdref.html#MOVE_TO_POINT_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MOVE_TO_SPHERE_ASAP-cmdref.html#MOVE_TO_SPHERE_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_M-ref.html#Commands_and_Macros_M"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="MOVE_TO_PLANE_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>MOVE TO PLANE (ASAP Command)</title>
+</head>
+<body id="MOVE_TO_PLANE_ASAP_Command"><a name="MOVE_TO_PLANE_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>MOVE TO PLANE (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Moves rays along their propagation direction to a specified
+	 reference plane. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">MOVE TO PLANE [ x y z ] [ a,b,c ]</pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x y z</span></td><td><span>global coordinate of a reference plane</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a,b,c</span></td><td><span>global direction vector of the surface normal of the
+			 plane</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="MOVE_TO_PLANE_ASAP_Command__ul_9607DE97944543E1929173A45F1FD9EB"><!-- --></a><ol id="MOVE_TO_PLANE_ASAP_Command__ul_9607DE97944543E1929173A45F1FD9EB"> 
+		<li id="MOVE_TO_PLANE_ASAP_Command__li_E698937B794C47EDAE474E0A3104E15E"><a name="MOVE_TO_PLANE_ASAP_Command__li_E698937B794C47EDAE474E0A3104E15E"><!-- --></a>Transfers the current
+		  ray/beam set to a plane with normal 
+		  <b>(a,b,c)</b> through the point 
+		  <b>(x,y,z).</b> 
+		</li>
+ 
+		<li id="MOVE_TO_PLANE_ASAP_Command__li_66D25124F9874C77B17ED3B1418E65CF"><a name="MOVE_TO_PLANE_ASAP_Command__li_66D25124F9874C77B17ED3B1418E65CF"><!-- --></a>The default point is the
+		  average of the current base ray coordinates. 
+		</li>
+ 
+		<li id="MOVE_TO_PLANE_ASAP_Command__li_06081B49E5964DDEB4CF93209C313A01"><a name="MOVE_TO_PLANE_ASAP_Command__li_06081B49E5964DDEB4CF93209C313A01"><!-- --></a>The default for the normal
+		  to the plane is the average of the current base ray directions. 
+		</li>
+ 
+		<li id="MOVE_TO_PLANE_ASAP_Command__li_F7B2BB549AA046069ECB08B026EEE4AF"><a name="MOVE_TO_PLANE_ASAP_Command__li_F7B2BB549AA046069ECB08B026EEE4AF"><!-- --></a>The peak-to-valley optical
+		  path difference on this surface is also printed so that normally it represents
+		  the reference plane of an afocal system. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#MOVE TO PLANE">MOVE TO
+		  PLANE Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_M-ref.html#Commands_and_Macros_M" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “M”.">Commands and Macros (M)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/MOVE_ASAP-cmdref.html" title="Moves rays along their propagation direction to a new location.">MOVE (ASAP Command)</a></div>
+<div><a href="../Commands/MOVE_PARABASALS_ASAP-cmdref.html#MOVE_PARABASALS_ASAP_Command" title="Moves the parabasal rays for each ray/beam to its base ray plane.">MOVE PARABASALS (ASAP Command)</a></div>
+<div><a href="../Commands/MOVE_TO_FOCI_ASAP-cmdref.html#MOVE_TO_FOCI_ASAP_Command" title="Moves rays or beams along the propagation direction to a focus with the given parabasal rays and the base ray.">MOVE TO FOCI (ASAP Command)</a></div>
+<div><a href="../Commands/MOVE_TO_POINT_ASAP-cmdref.html#MOVE_TO_POINT_ASAP_Command" title="Moves rays along their trajectories to their closest approach to the given point x y z.">MOVE TO POINT (ASAP Command)</a></div>
+<div><a href="../Commands/MOVE_TO_SPHERE_ASAP-cmdref.html#MOVE_TO_SPHERE_ASAP_Command" title="Moves rays along their propagation direction to a specified different sphere.">MOVE TO SPHERE (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

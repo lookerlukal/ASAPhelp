@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="WRITE (ASAP Command)"/>
+<meta name="abstract" content="Writes the current distribution data file to disk file."/>
+<meta name="description" content="Writes the current distribution data file to disk file."/>
+<meta name="DC.subject" content="WRITE (ASAP Command), distribution data file, writing to file"/>
+<meta name="keywords" content="WRITE (ASAP Command), distribution data file, writing to file"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_W-ref.html#Commands_and_Macros_W"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TEXTFILE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Distribution_Data_Files_Data_Manipulation-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="WRITE_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>WRITE (ASAP Command)</title>
+</head>
+<body id="WRITE_ASAP_Command"><a name="WRITE_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>WRITE (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Writes the current distribution data file to disk file. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+WRITE [  u    ]            [ 'title' ]
+         name   [ DIS ]
+                  DIN
+      </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>u</span></td><td><span>write current data to Fortran unit number 
+			 <b>u</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>name</span></td><td><span>name of the binary and/or text file</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>DIS</span></td><td><span>flag to only create a binary file</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>DIN</span></td><td><span>flag to only create a text file</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>'title'</span></td><td><span>comment string (up to 24 characters) that overrides the title
+			 record in the resulting file</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="WRITE_ASAP_Command__ul_999503D6F01042C8A7937A7C7B244A4E"><!-- --></a><ol id="WRITE_ASAP_Command__ul_999503D6F01042C8A7937A7C7B244A4E"> 
+		<li id="WRITE_ASAP_Command__li_A674F18FD6FD43EEA7198FA092BF9893"><a name="WRITE_ASAP_Command__li_A674F18FD6FD43EEA7198FA092BF9893"><!-- --></a>Writes the current data to
+		  the current file, logical unit number 
+		  <b>u,</b> binary file 
+		  <b>name.dis</b>, or text file 
+		  <b>name.din</b> (default is both). An optional comment string can be
+		  used to override the 
+		  <b>'title'</b> record in the resulting file. 
+		</li>
+ 
+		<li id="WRITE_ASAP_Command__li_85A8FF0E4151464B82400D56511BF7D0"><a name="WRITE_ASAP_Command__li_85A8FF0E4151464B82400D56511BF7D0"><!-- --></a>The filename, if specified
+		  explicitly, is normally written without an extension. If an extension is
+		  specified as part of the filename, it must be either 
+		  <b>DIS</b> or 
+		  <b>DIN.</b> 
+		</li>
+ 
+		<li id="WRITE_ASAP_Command__li_F201264B837F4563A689F9AB03E2219C"><a name="WRITE_ASAP_Command__li_F201264B837F4563A689F9AB03E2219C"><!-- --></a>With 
+		  <b>DIN,</b> ASAP limits the column output per line to 10,
+		  writes a comma to the end of the line, and continues any further numbers on the
+		  next line. 
+		</li>
+ 
+		<li id="WRITE_ASAP_Command__li_403B43221E7745D6BDF11BA4A18100E5"><a name="WRITE_ASAP_Command__li_403B43221E7745D6BDF11BA4A18100E5"><!-- --></a>The title is delimited by a
+		  single quote 
+		  <b>'</b> , as shown. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#WRITE">WRITE
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_W-ref.html#Commands_and_Macros_W" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “W”.">Commands and Macros (W)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Distribution_Data_Files_Data_Manipulation-conc.html" title="ASAP supports a rich set of data processing commands that act on the distribution data files.">Distribution Data Files - Data Manipulation</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/TEXTFILE_ASAP-cmdref.html" title="Writes the current data to a user-definable text file.">TEXTFILE (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

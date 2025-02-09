@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Anisotropic Polarizing Elements Overview"/>
+<meta name="abstract" content="Retardance (sometimes called birefringence) is the property of an interface, where the Optical Path Length (OPL) or phase change between the orthonormal components, which mathematically describe the polarization state, is a function of the incident polarization state. Many polarizing optical elements, including waveplates and some polarizers, work on this basis."/>
+<meta name="description" content="Retardance (sometimes called birefringence) is the property of an interface, where the Optical Path Length (OPL) or phase change between the orthonormal components, which mathematically describe the polarization state, is a function of the incident polarization state. Many polarizing optical elements, including waveplates and some polarizers, work on this basis."/>
+<meta name="DC.subject" content="Anisotropic Polarizing Elements Overview, birefringence, retardance"/>
+<meta name="keywords" content="Anisotropic Polarizing Elements Overview, birefringence, retardance"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_ABC-ref.html#Reference_AC"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FIELD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/IDEAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_CRYSTAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_POLARIZATION_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPLIT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Polarization_Ray_Tracing_Overview-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Anisotropic_Polarizing_Elements_Overview"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Anisotropic Polarizing Elements Overview</title>
+</head>
+<body id="Anisotropic_Polarizing_Elements_Overview"><a name="Anisotropic_Polarizing_Elements_Overview"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Anisotropic Polarizing Elements Overview</h5></span> 
+   
+   
+  <div><p>Retardance (sometimes called birefringence) is the property of an
+	 interface, where the Optical Path Length (OPL) or phase change between the
+	 orthonormal components, which mathematically describe the polarization state,
+	 is a function of the incident polarization state. Many polarizing optical
+	 elements, including waveplates and some polarizers, work on this basis. 
+  </p>
+ 
+	 <p>Stress-induced birefringence is another example of retardance. In these
+		cases the electric field components experience a different index of refraction
+		depending upon the propagation direction of the optical field within the
+		material. Such materials are called anisotropic. 
+	 </p>
+ 
+	 <p>ASAP has the ability to simulate anisotropic materials that are
+		uniaxial; that is, the materials have two different indices of refraction that
+		depend on the propagation direction of the optical field within the material.
+		The indices are typically referred to as ordinary and extraordinary. The
+		ordinary and extraordinary indices are defined using the data base modifier, 
+		<b>MEDIA CRYSTAL</b>. 
+	 </p>
+ 
+	 <p>The 
+		<b>IDEAL</b> lens command is for modeling polarizing elements
+		in a macroscopic sense with the Jones calculus format. 
+	 </p>
+ 
+	 <p>In many situations, the birefringence introduces a spatially dependent,
+		electric field apodization that is not easily plotted with the PLOT
+		POLARIZATION command. This difficulty occurs because ASAP actually splits a ray
+		at these interfaces, thereby creating an extraordinary ray in addition to the
+		ordinary ray. 
+	 </p>
+ 
+	 <p><b>SPLIT</b> may be used to control the number of
+		extraordinary rays created. 
+	 </p>
+ 
+	 <p>Although 
+		<b>FIELD</b> automatically accounts for the vector nature of
+		the optical field in such things as PSF calculations, you can use the 
+		<b>FIELD. . .DELTA 
+		</b> option to plot the electric field vectors as a function of
+		time in these situations. 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_ABC-ref.html#Reference_AC" title="Reference topics in this section begin with the letters &#34;A&#34; to &#34;C&#34;.">Reference (A-C)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Polarization_Ray_Tracing_Overview-conc.html" title="FRESNEL BOTH initiates polarization calculations by instructing ASAP to calculate the appropriate reflection and transmission coefficients at an OBJECT INTERFACE for each ray as a function of polarization and angle of incidence.">Polarization Ray Tracing Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/FIELD_ASAP-cmdref.html" title="Calculates the exact complex field distribution.">FIELD (ASAP Command)</a></div>
+<div><a href="../Commands/IDEAL_ASAP-cmdref.html" title="Creates an idealized optical element (ABCD and Jones matrices).">IDEAL (ASAP Command)</a></div>
+<div><a href="../Commands/MEDIA_CRYSTAL_ASAP-cmdref.html" title="Defines birefringent media.">MEDIA CRYSTAL (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_POLARIZATION_ASAP-cmdref.html" title="Plots polarization state ellipses.">PLOT POLARIZATION (ASAP Command)</a></div>
+<div><a href="../Commands/SPLIT_ASAP-cmdref.html" title="Controls the number of times a ray may be split into specular components.">SPLIT (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

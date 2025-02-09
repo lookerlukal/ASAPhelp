@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="ABERRATIONS (ASAP Command)"/>
+<meta name="abstract" content="Displays the image aberrations of all the current lens or conicoids l through l' (up to 120 total). This command can be applied only to ASAP lens-based objects, not to surface- or edge-based objects."/>
+<meta name="description" content="Displays the image aberrations of all the current lens or conicoids l through l' (up to 120 total). This command can be applied only to ASAP lens-based objects, not to surface- or edge-based objects."/>
+<meta name="DC.subject" content="ABERRATIONS (ASAP Command), image aberrations, object, lens-based, chromatic aberration, spherical aberration, coma, astigmatism, field curvature, distortion, defocus, Seidel, RMS spot size"/>
+<meta name="keywords" content="ABERRATIONS (ASAP Command), image aberrations, object, lens-based, chromatic aberration, spherical aberration, coma, astigmatism, field curvature, distortion, defocus, Seidel, RMS spot size"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ANALYZE_ASAP-cmdref.html#ANALYZE_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../commands/IMPORT_ASAP-cmdref.html#IMPORT_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MINIMIZE_ASAP-cmdref.html#MINIMIZE_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/STORE_ASAP-cmdref.html#STORE_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/VARIABLES_ASAP-cmdref.html#VARIABLES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Optimizing_a_Centered_Imaging_System-conc.html#Optimizing_a_Centered_Imaging_System"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_A-ref.html#Commands_and_Macros_A"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="ABERRATIONS_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>ABERRATIONS (ASAP Command)</title>
+</head>
+<body id="ABERRATIONS_ASAP_Command"><a name="ABERRATIONS_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>ABERRATIONS (ASAP Command)</h5></span>
+	
+	
+	<div><p>Displays the image aberrations of all the current lens or conicoids <b>l</b> through <b>l'</b> (up to 120 total). This command can be applied
+		only to ASAP lens-based objects, not to surface- or edge-based objects. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">ABERRATIONS [ l l' ] [ LIST ] [ PLOT [ k ] ] [ datum d ] [ datum' d' ] ...</pre>
+
+		<p><b>Remarks</b>
+		</p>
+
+		<div class="note"><span class="notetitle">Note:</span> 
+			<p>Since the analysis is valid only for centered lens systems, the conicoids must have a
+				common axis. If not, the lens is temporarily "unfolded" to make it so. </p>
+
+		</div>
+
+		<br/><a name="ABERRATIONS_ASAP_Command__ul_33E90F3D9F494BDC85F53640E5C67A40"><!-- --></a><ol id="ABERRATIONS_ASAP_Command__ul_33E90F3D9F494BDC85F53640E5C67A40">
+			<li id="ABERRATIONS_ASAP_Command__li_9439E8DC0D5344B780683CFEFEB337F5"><a name="ABERRATIONS_ASAP_Command__li_9439E8DC0D5344B780683CFEFEB337F5"><!-- --></a>The first-order operating data must be
+				supplied with the additional entries, which is the data for the marginal axial ray
+				from the center of the "object" through the edge of the limiting aperture stop, and
+				the chief ray from the edge of the "object" to the center of this stop. </li>
+
+			<li id="ABERRATIONS_ASAP_Command__li_F2634552FBD34BA482C3E63AC0B572A8"><a name="ABERRATIONS_ASAP_Command__li_F2634552FBD34BA482C3E63AC0B572A8"><!-- --></a>First-order data defines the marginal and
+				chief heights and angles relative to the object location and the limiting aperture
+				stop. </li>
+
+			<li id="ABERRATIONS_ASAP_Command__li_ECED193EBBB047ED99928946A730EBFF"><a name="ABERRATIONS_ASAP_Command__li_ECED193EBBB047ED99928946A730EBFF"><!-- --></a>
+				Object Space (before first conicoid): 
+				<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Datum</span></th><th><span>Default</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>U0</span></td><td><span>0</span></td><td><span> Marginal ray slope (tangent of angle)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>UB0</span></td><td><span>.01</span></td><td><span>Chief ray slope (tangent of semi-field angle)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>H0</span></td><td><span>1st aperture</span></td><td><span>Marginal ray height at entrance pupil plane</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>H1</span></td><td><span>1st aperture</span></td><td><span>Marginal ray height at first conicoid</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>HB1</span></td><td><span>0</span></td><td><span>Chief ray height at first conicoid</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>TH0</span></td><td><span>0</span></td><td><span>Distance from entrance pupil to first conicoid</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>KTH0</span></td><td><span>none</span></td><td><span>Conicoid number of actual aperture stop (0 to vary, .1 for
+							telecentric in image space)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>FB</span></td><td><span>0</span></td><td><span>Fractional evaluation fields (up to 5; for example,
+						0,.5,.7,.866,1)</span></td></tr></tbody></table>
+			</li>
+
+			<li id="ABERRATIONS_ASAP_Command__li_7BE7054D08E345FDA678B3FB8EDD09FA"><a name="ABERRATIONS_ASAP_Command__li_7BE7054D08E345FDA678B3FB8EDD09FA"><!-- --></a>
+				Image space (after last conicoid):
+				<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Datum</span></th><th><span>Default</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>KUF</span></td><td><span>last</span></td><td><span>Conicoid on which to put image solves</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>UF</span></td><td><span>initial </span></td><td><span>Marginal ray slope after last conicoid (curvature solve)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>BKF</span></td><td><span>NA</span></td><td><span>Fix back focal distance (last conicoid to paraxial focus)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>THF</span></td><td><span>0</span></td><td><span>Distance from paraxial focus to desired focal surface</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CVF</span></td><td><span>0</span></td><td><span>Curvature of focal surface</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CCF</span></td><td><span>0</span></td><td><span>Conic constant of focal surface</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>KTHF</span></td><td><span>NA</span></td><td><span>Solve for best axial position of focal surface</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>KCVF</span></td><td><span>NA</span></td><td><span>Solve for best curvature of focal surface</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>KCCF</span></td><td><span>NA</span></td><td><span>Solve for best conic constant of focal surface</span></td></tr></tbody></table>
+			</li>
+
+			<li id="ABERRATIONS_ASAP_Command__li_1B06C1FF107D44229D825139A61F6450"><a name="ABERRATIONS_ASAP_Command__li_1B06C1FF107D44229D825139A61F6450"><!-- --></a> If the <b>LIST</b> option is
+				present, the following surface-by-surface tables are produced: Paraxial marginal and
+				chief ray traces. <br/><a name="ABERRATIONS_ASAP_Command__ul_D296678A67D14F739BEB223A40A7101F"><!-- --></a><ul id="ABERRATIONS_ASAP_Command__ul_D296678A67D14F739BEB223A40A7101F">
+					<li id="ABERRATIONS_ASAP_Command__li_1F3779B739254C52A52FA446C4C63AEB"><a name="ABERRATIONS_ASAP_Command__li_1F3779B739254C52A52FA446C4C63AEB"><!-- --></a>Paraxial marginal and chief ray
+						traces </li>
+
+					<li>Seidel primary/secondary aberrations (3rd-order, axial/lateral color) </li>
+
+					<li id="ABERRATIONS_ASAP_Command__li_98E93FF938A44700AABADA7EC4EE0DF3"><a name="ABERRATIONS_ASAP_Command__li_98E93FF938A44700AABADA7EC4EE0DF3"><!-- --></a>Real marginal and chief ray traces </li>
+
+					<li id="ABERRATIONS_ASAP_Command__li_F6D57D9F18474BB2AAD00B98A6A288DC"><a name="ABERRATIONS_ASAP_Command__li_F6D57D9F18474BB2AAD00B98A6A288DC"><!-- --></a>Glass and conicoid data (after
+						solves) </li>
+
+				</ul>
+</li>
+
+			<li id="ABERRATIONS_ASAP_Command__li_38825AFFC3FA4911B963817F9809DFE1"><a name="ABERRATIONS_ASAP_Command__li_38825AFFC3FA4911B963817F9809DFE1"><!-- --></a> In any case, the final 1st-order (primary
+				color), 3rd-order, 5th-order, and selected 7th/9th-order aberration coefficients (in
+				waves) are listed for actual stop plane coordinates and relative to the ideal
+				paraxial focus. These coefficients are computed using both analytical formulas and
+				real-ray data matching. </li>
+
+			<li id="ABERRATIONS_ASAP_Command__li_5BBFE0C99CB4401291F953FD3DC22F5C"><a name="ABERRATIONS_ASAP_Command__li_5BBFE0C99CB4401291F953FD3DC22F5C"><!-- --></a>All ASAP products except ASAP lite carry
+				out all these calculations in double precision. </li>
+
+			<li>
+				<div class="note"><span class="notetitle">Note:</span>  Since ASAP lite uses only single precision here, accuracy may suffer for
+					either a large number of surfaces or delicately balanced configurations. </div>
+
+			</li>
+
+			<li id="ABERRATIONS_ASAP_Command__li_B6A0718D09694DE3BEDB902605E81CE2"><a name="ABERRATIONS_ASAP_Command__li_B6A0718D09694DE3BEDB902605E81CE2"><!-- --></a> The optional <b>PLOT</b>
+				displays (full-window or starting in quadrant <b>k</b>) the traced lens
+				and the following graphs: <br/><a name="ABERRATIONS_ASAP_Command__ol_C4EEDFDC7D4C46E3BFB814A78698FB48"><!-- --></a><ul id="ABERRATIONS_ASAP_Command__ol_C4EEDFDC7D4C46E3BFB814A78698FB48">
+					<li id="ABERRATIONS_ASAP_Command__li_C5ABA87915A54044AA635E6F3309BB91"><a name="ABERRATIONS_ASAP_Command__li_C5ABA87915A54044AA635E6F3309BB91"><!-- --></a>Ray fans (image deviation versus
+						aperture) for each evaluation field. </li>
+
+					<li id="ABERRATIONS_ASAP_Command__li_08E55BE455E44770A8A042A7BE2FBC12"><a name="ABERRATIONS_ASAP_Command__li_08E55BE455E44770A8A042A7BE2FBC12"><!-- --></a>Chief ray sagittal (S) and
+						tangential (T) foci as a function of field. </li>
+
+					<li id="ABERRATIONS_ASAP_Command__li_4A186233B53E498696B23B47F6682C31"><a name="ABERRATIONS_ASAP_Command__li_4A186233B53E498696B23B47F6682C31"><!-- --></a>Chief ray (D) and spot centroid ©)
+						fractional distortion versus field. </li>
+
+					<li id="ABERRATIONS_ASAP_Command__li_26B6FC3F80394276998E3F75F613EBDD"><a name="ABERRATIONS_ASAP_Command__li_26B6FC3F80394276998E3F75F613EBDD"><!-- --></a>Polychromatic (A)ctual and
+						monochromatic (B)est-focused RMS spot vs. field. </li>
+
+				</ul>
+</li>
+
+			<li id="ABERRATIONS_ASAP_Command__li_8EF5EF95EBF248559BAA3846B6040DD6"><a name="ABERRATIONS_ASAP_Command__li_8EF5EF95EBF248559BAA3846B6040DD6"><!-- --></a>Except for the RMS spot size graphs, solid
+				curves are computed from the approximate aberration coefficients (with color terms)
+				while dotted curves are center-wavelength real-ray points. </li>
+
+			<li id="ABERRATIONS_ASAP_Command__li_A26EE1E73EBE4E29872A755AADDD7E23"><a name="ABERRATIONS_ASAP_Command__li_A26EE1E73EBE4E29872A755AADDD7E23"><!-- --></a>The <b>ABERRATIONS</b> command
+				can be followed by any number and combination of the commands listed below under
+				"Related information". </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#ABERRATIONS">ABERRATIONS
+			Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_A-ref.html#Commands_and_Macros_A" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “A”.">Commands and Macros (A)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Optimizing_a_Centered_Imaging_System-conc.html#Optimizing_a_Centered_Imaging_System" title="A lens can be optimized using a brute-force algorithm that finds either the nearest minimum or (given enough time) the global minimum, without requiring the merit function to be continuous (that is, no derivatives are used).">Optimizing a Centered Imaging System</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/ANALYZE_ASAP-cmdref.html#ANALYZE_ASAP_Command" title="Changes first-order conditions and re-evaluates the lens.">ANALYZE (ASAP Command)</a></div>
+<div><a href="../commands/IMPORT_ASAP-cmdref.html#IMPORT_ASAP_Command" title="Import a lens from a ZEMAX file.">IMPORT (ASAP Command)</a></div>
+<div><a href="../Commands/MINIMIZE_ASAP-cmdref.html#MINIMIZE_ASAP_Command" title="Minimizes the RMS spot size or the average of the previously specified fields, weighted by the w's.">MINIMIZE (ASAP Command)</a></div>
+<div><a href="../Commands/STORE_ASAP-cmdref.html#STORE_ASAP_Command" title="Stores the current state of the lens in the ASAP internal database, or optionally in the following file types: ASAP input , macro, CODE V SEQuence, Zemax, or OSLO.">STORE (ASAP Command)</a></div>
+<div><a href="../Commands/VARIABLES_ASAP-cmdref.html#VARIABLES_ASAP_Command" title="Declares which lens construction parameters are to be varied during optimization.">VARIABLES (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Optical Properties"/>
+<meta name="abstract" content="Using ASAP, you can build optical system models by first creating optical property and system geometry databases. The databases have additional commands for direct data entry and commands called modifiers that allow you to alter the databases. As you build an object, you associate data from these databases to the object for ray tracing."/>
+<meta name="description" content="Using ASAP, you can build optical system models by first creating optical property and system geometry databases. The databases have additional commands for direct data entry and commands called modifiers that allow you to alter the databases. As you build an object, you associate data from these databases to the object for ray tracing."/>
+<meta name="DC.subject" content="Optical Properties, database, optical property"/>
+<meta name="keywords" content="Optical Properties, database, optical property"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/BEAMS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Builder_Window_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Coatings_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/INTERFACE_Command_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Media_Database_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_OR-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Optical_Properties"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Optical Properties</title>
+</head>
+<body id="Optical_Properties"><a name="Optical_Properties"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Optical Properties</h5></span> 
+   
+  
+  <div><p>Using ASAP, you can build optical system models by first creating
+	 optical property and system geometry databases. The databases have additional
+	 commands for direct data entry and commands called modifiers that allow you to
+	 alter the databases. As you build an object, you associate data from these
+	 databases to the object for ray tracing.
+  </p>
+ 
+	 <p>ASAP supports the modeling of four types of optical properties on any
+		object:
+	 </p>
+ 
+	 <br/><a name="Optical_Properties__ul_BBAE3D8D4EE049ADBB07747772F158FB"><!-- --></a><ul id="Optical_Properties__ul_BBAE3D8D4EE049ADBB07747772F158FB"> 
+		<li id="Optical_Properties__li_44CFE99E3B3D4A10BC044108CC410798"><a name="Optical_Properties__li_44CFE99E3B3D4A10BC044108CC410798"><!-- --></a><b>Transmission</b>
+		  according to Snell's law (this includes extraordinary ray propagation within a
+		  uniaxial birefringent material).
+		</li>
+ 
+		<li id="Optical_Properties__li_4C6C3C254B884E82A65AA8780FCBD6B1"><a name="Optical_Properties__li_4C6C3C254B884E82A65AA8780FCBD6B1"><!-- --></a><b>Reflection</b> according
+		  to the law of reflection.
+		</li>
+ 
+		<li id="Optical_Properties__li_015DE2BD3911443CA9F7C63ABD581066"><a name="Optical_Properties__li_015DE2BD3911443CA9F7C63ABD581066"><!-- --></a><b>Grating</b> 
+		  <b>diffraction</b> according to the grating equation.
+		</li>
+ 
+		<li id="Optical_Properties__li_B67E6650124E48C88F3FFC41093D1011"><a name="Optical_Properties__li_B67E6650124E48C88F3FFC41093D1011"><!-- --></a><b>Scatter</b> according to
+		  the BSDF assigned to the object.
+		</li>
+ 
+	 </ul>
+ 
+	 <p>Any number of these optical properties may be assigned to an object
+		simultaneously using the I<b>INTERFACE</b> command for
+		transmission, reflection, and grating diffraction, and the 
+		<b>SCATTER</b> command for scatter.
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_OR-ref.html" title="Reference topics in this section begin with the letters &#34;O&#34; to &#34;R&#34;.">Reference (O-R)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Builder_Window_Overview-conc.html" title="The Builder offers a simple approach to building your system. Designed for both new and experienced ASAP users, the Builder introduces you to the concepts of using ASAP to create your geometry, including sources. The entire system’s geometry is created in one window, using most standard spreadsheet navigation features, and saved with the file extension, .enx (an XML file), or .enz (a compressed XML file). You can also use the Builder for tracing rays and analyzing your system.">Builder Window Overview</a></div>
+<div><a href="../Concept/Coatings_Overview-conc.html" title="Coatings are used in ASAP to define the specular properties (reflection and transmission) of an interface; as such, they are related to the MEDIA database. The index information from the MEDIA database is used to construct optical coatings. Optical INTERFACE COATings can be specified (and optionally assigned 'name' of up to 16 characters), either in terms of their wavelength PROPERTIES, angular MODELS, or their actual LAYER structure.">Coatings Overview</a></div>
+<div><a href="../Concept/INTERFACE_Command_Overview-conc.html">INTERFACE Command Overview</a></div>
+<div><a href="../Concept/Media_Database_Overview-conc.html">Media Database Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/BEAMS_ASAP-cmdref.html" title="Sets the default coherence, propagation, and shape characteristics for future ray creation.">BEAMS (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

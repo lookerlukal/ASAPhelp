@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="RADIAL (ASAP Command)"/>
+<meta name="abstract" content="Rotationally averages the current distribution data, and optionally computes the encircled energy."/>
+<meta name="description" content="Rotationally averages the current distribution data, and optionally computes the encircled energy."/>
+<meta name="DC.subject" content="RADIAL (ASAP Command), distribution data, rotationally average, distribution data, computing encircled energy, encircled energy, computing"/>
+<meta name="keywords" content="RADIAL (ASAP Command), distribution data, rotationally average, distribution data, computing encircled energy, encircled energy, computing"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_R-ref.html#Commands_and_Macos_R"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/AVERAGE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DISPLAY_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="RADIAL_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>RADIAL (ASAP Command)</title>
+</head>
+<body id="RADIAL_ASAP_Command"><a name="RADIAL_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>RADIAL (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Rotationally averages the current distribution data, and
+	 optionally computes the encircled energy. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+RADIAL [ i j ]  [ FUNCTION  [ REPLACE ] ] [ 'title' ]
+         MAX      INTEGRAL  [ p ]
+                  BOTH
+      </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>i j</span></td><td><span>rotationally average the distribution data about the pixel (i
+			 j)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MAX</span></td><td><span>rotationally average the distribution data about the maximum
+			 point</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>FUNCTION</span></td><td><span>plot out a cross-section of the radially averaged
+			 function</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>INTEGRAL</span></td><td><span>plot out the cross-section of the encircled energy</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>BOTH</span></td><td><span>plot the cross-sections of the radially averaged function and
+			 the encircled energy</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>REPLACE</span></td><td><span>replace the current distribution data with the radially
+			 averaged data</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>p</span></td><td><span>print the radius of p percent encircled integral</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>'title'</span></td><td><span>optional title for plot (up to 64 characters)</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="RADIAL_ASAP_Command__ul_774B940893DB4D598DDD29EE4DE27C55"><!-- --></a><ol id="RADIAL_ASAP_Command__ul_774B940893DB4D598DDD29EE4DE27C55"> 
+		<li id="RADIAL_ASAP_Command__li_89516E4ABE834AA29EFC0C192AA95B4B"><a name="RADIAL_ASAP_Command__li_89516E4ABE834AA29EFC0C192AA95B4B"><!-- --></a>Rotationally averages the
+		  distribution data about the centroid (default) and then replaces the current
+		  distribution data. 
+		</li>
+ 
+		<li id="RADIAL_ASAP_Command__li_1AA7C3E08CA145D480F39508E25DA21E"><a name="RADIAL_ASAP_Command__li_1AA7C3E08CA145D480F39508E25DA21E"><!-- --></a><b>RADIAL</b><b> i
+			 j</b> causes ASAP to rotationally average the distribution data about the
+		  pixel 
+		  <b>(i j).</b> 
+		</li>
+ 
+		<li id="RADIAL_ASAP_Command__li_619A5484412C4266A9B433483F8D0A41"><a name="RADIAL_ASAP_Command__li_619A5484412C4266A9B433483F8D0A41"><!-- --></a><b>RADIAL</b> 
+		  <b>MAX</b> causes ASAP to rotationally average the
+		  distribution data about the maximum point. 
+		</li>
+ 
+		<li id="RADIAL_ASAP_Command__li_5446D670DF7C4BEEA0F2AC17ECE051E5"><a name="RADIAL_ASAP_Command__li_5446D670DF7C4BEEA0F2AC17ECE051E5"><!-- --></a>In all cases, the resulting
+		  distribution is radially symmetric about the given point. 
+		</li>
+ 
+		<li id="RADIAL_ASAP_Command__li_A88E7F18A3904377A358BD98A963CE04"><a name="RADIAL_ASAP_Command__li_A88E7F18A3904377A358BD98A963CE04"><!-- --></a><b>FUNCTION</b>
+		  plots out a cross-section of the radially averaged function,<i> but does not
+			 replace the current distribution data</i>. 
+		</li>
+ 
+		<li id="RADIAL_ASAP_Command__li_E48A1684F33E4A89BD58696383F9987E"><a name="RADIAL_ASAP_Command__li_E48A1684F33E4A89BD58696383F9987E"><!-- --></a><b>INTEGRAL</b>
+		  plots out the cross-section of the encircled energy, 
+		  <i>but does not replace the current distribution data</i>. 
+		</li>
+ 
+		<li id="RADIAL_ASAP_Command__li_1E801C12582743CFBD451C06D199E2EB"><a name="RADIAL_ASAP_Command__li_1E801C12582743CFBD451C06D199E2EB"><!-- --></a><b>BOTH</b>
+		  plots the cross-sections of the radially averaged function and the encircled
+		  energy, 
+		  <i>but does not replace the current distribution data</i>. 
+		</li>
+ 
+		<li id="RADIAL_ASAP_Command__li_02BBF2E7FB3843D2B79902FF15472ED3"><a name="RADIAL_ASAP_Command__li_02BBF2E7FB3843D2B79902FF15472ED3"><!-- --></a><b>RADIAL</b> 
+		  <b>BOTH</b> and 
+		  <b>RADIAL</b> 
+		  <b>INTEGRAL</b> should not be used after the 
+		  <b>ANGLES</b> command when averaging directional
+		  distributions. 
+		  <b>ANGLES</b> remapping will distort the coordinate system,
+		  making the radial average invalid. 
+		</li>
+ 
+		<li id="RADIAL_ASAP_Command__li_256E5B87FB374A5390B3DC69998686FB"><a name="RADIAL_ASAP_Command__li_256E5B87FB374A5390B3DC69998686FB"><!-- --></a><b>REPLACE</b>
+		  replaces the current distribution data with the radially averaged data. 
+		</li>
+ 
+		<li id="RADIAL_ASAP_Command__li_7508B759841B4E499956ACAAF0261D55"><a name="RADIAL_ASAP_Command__li_7508B759841B4E499956ACAAF0261D55"><!-- --></a>If 
+		  <b>p</b> is specified, the radius of 
+		  <b>p</b> percent encircled integral is printed. 
+		</li>
+ 
+		<li id="RADIAL_ASAP_Command__li_4BB5055890584DB9B281F7C6BD18EE38"><a name="RADIAL_ASAP_Command__li_4BB5055890584DB9B281F7C6BD18EE38"><!-- --></a><b>RADIAL</b>
+		  should only be used when rotational symmetry is expected; in most cases use the
+		  
+		  <b>AVERAGE</b> command, which assumes no symmetry. 
+		</li>
+ 
+		<li id="RADIAL_ASAP_Command__li_0C160B68C4C140D2BA3E021DF632BF24"><a name="RADIAL_ASAP_Command__li_0C160B68C4C140D2BA3E021DF632BF24"><!-- --></a>The title is delimited by a
+		  single quote 
+		  <b>'</b> , as shown. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#RADIAL">RADIAL
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_R-ref.html#Commands_and_Macos_R" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “R”.">Commands and Macros (R)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/AVERAGE_ASAP-cmdref.html" title="Smoothes current distribution data by averaging adjacent pixels.">AVERAGE (ASAP Command)</a></div>
+<div><a href="../Commands/DISPLAY_ASAP-cmdref.html" title="Reads previously created distribution data files so that they can be modified.">DISPLAY (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

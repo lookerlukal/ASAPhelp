@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="EXPLODE (ASAP Command)"/>
+<meta name="abstract" content="Explodes lens conicoids into separate surface objects."/>
+<meta name="description" content="Explodes lens conicoids into separate surface objects."/>
+<meta name="DC.subject" content="EXPLODE (ASAP Command), lens conicoid, explode, lens entities, explode"/>
+<meta name="keywords" content="EXPLODE (ASAP Command), lens conicoid, explode, lens entities, explode"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_E-ref.html#Commands_and_Macros_E"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="EXPLODE_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>EXPLODE (ASAP Command)</title>
+</head>
+<body id="EXPLODE_ASAP_Command"><a name="EXPLODE_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>EXPLODE (ASAP Command)</h5></span>
+	
+	
+	<div><p>Explodes lens conicoids into separate surface objects. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+EXPLODE  +l [ macro ]
+         -l [ macro ]
+         +ALL
+         -ALL
+       </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>+l or -1</span></td><td><span>specifies lens to explode into separate surface objects</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>macro</span></td><td><span>name of the created macro file (default extension *.MAC)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>+ALL or -ALL</span></td><td><span>apply to all lens entities, not just one at a time</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="EXPLODE_ASAP_Command__ul_FB1B7F2F842641D6893F487C07A861BD"><!-- --></a><ol id="EXPLODE_ASAP_Command__ul_FB1B7F2F842641D6893F487C07A861BD">
+			<li id="EXPLODE_ASAP_Command__li_BA1A3B67729E42E6B9A513BB7A75A11B"><a name="EXPLODE_ASAP_Command__li_BA1A3B67729E42E6B9A513BB7A75A11B"><!-- --></a>Explodes the <b>+ l</b>th or
+					<b>-l</b>th <b>LENS</b> or <b>+ALL</b> or
+					<b>-ALL</b> lens entities into separate <b>SURFACE</b>-based objects (or <b>CURVE</b>-based objects if the
+				current macro library is the standard CADEQUIV.LIB). </li>
+
+			<li id="EXPLODE_ASAP_Command__li_03360C9A6C65402384CCDFABAF8EA573"><a name="EXPLODE_ASAP_Command__li_03360C9A6C65402384CCDFABAF8EA573"><!-- --></a>Creates glass inner edge, Mangin outer
+				edge, and mirror back. </li>
+
+			<li id="EXPLODE_ASAP_Command__li_D6032ED3AAD94188BFE35A7857ED52ED"><a name="EXPLODE_ASAP_Command__li_D6032ED3AAD94188BFE35A7857ED52ED"><!-- --></a>When a sign precedes the entry, additional
+				objects are created that represent mirror backs and the baffle, mounting, or edge
+				surfaces that connect each coaxial lens surface. </li>
+
+			<li id="EXPLODE_ASAP_Command__li_D6FB8F91044E4B0BA17AE7FDD2DF6863"><a name="EXPLODE_ASAP_Command__li_D6FB8F91044E4B0BA17AE7FDD2DF6863"><!-- --></a>Use - for direct sloped cones or + for
+				right cylinders. The resulting input commands either go into the file macro.MAC or
+				are immediately run from an internal buffer. </li>
+
+			<li id="EXPLODE_ASAP_Command__li_2DD8D2B00A394BA392C9D5D41329A7F8"><a name="EXPLODE_ASAP_Command__li_2DD8D2B00A394BA392C9D5D41329A7F8"><!-- --></a> The interfaces for the surfaces are preset
+				as follows: <br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Refractive</span></td><td><span>Last primarily transmissive COATING PROPERTY or BARE</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Reflective</span></td><td><span>Last primarily reflective COATING PROPERTY or Unit
+						reflectivity</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Back/Edges</span></td><td><span>Totally absorbing</span></td></tr></tbody></table></li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#EXPLODE">EXPLODE Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_E-ref.html#Commands_and_Macros_E" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “E”.">Commands and Macros (E)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

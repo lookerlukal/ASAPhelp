@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="RENDER (ASAP Command)"/>
+<meta name="abstract" content="Creates rendered graphics of the system geometry and ray trace."/>
+<meta name="description" content="Creates rendered graphics of the system geometry and ray trace."/>
+<meta name="DC.subject" content="RENDER (ASAP Command), graphics, rendered, geometry, rendered graphics of"/>
+<meta name="keywords" content="RENDER (ASAP Command), graphics, rendered, geometry, rendered graphics of"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_R-ref.html#Commands_and_Macos_R"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DISPLAY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LIGHTS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/RAYS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SAVE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TRACE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WINDOW_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Dynamic_Rendering-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Static_Rendering-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=36"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="RENDER_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>RENDER (ASAP Command)</title>
+</head>
+<body id="RENDER_ASAP_Command"><a name="RENDER_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>RENDER (ASAP Command)</h5></span>
+	
+	
+	<div><p>Creates rendered graphics of the system geometry and ray trace. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+RENDER [   d   ] [ DEPTH [ d' [ d"] ] ] [ RAYS [ s ] ] [MODEL [ m ] ]
+       x y z
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>d</span></td><td><span>distance of the observation point in front of the scene</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x y z</span></td><td><span>coordinates (global) of the observation point</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>DEPTH d' d"</span></td><td><span>cuts in the depth direction at the near and far coordinate planes <b>d'</b> and <b>d"</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RAYS</span></td><td><span>flag to add a ray trace to the rendering</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>s</span></td><td><span>scale factor for the width of the rays</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MODEL</span></td><td><span>any reflective <b>SCATTER MODELS</b> assigned to objects are
+					used in rendering</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m</span></td><td><span>defaults objects with no <b>SCATTER MODELS</b> to given
+						<b>MODEL</b>
+					<b>m</b></span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="RENDER_ASAP_Command__ul_DF2B8954250F4C0589E0715374CB5B92"><!-- --></a><ol id="RENDER_ASAP_Command__ul_DF2B8954250F4C0589E0715374CB5B92">
+			<li id="RENDER_ASAP_Command__li_DFB2F5A27AC7412FA1A8582B1A702C2D"><a name="RENDER_ASAP_Command__li_DFB2F5A27AC7412FA1A8582B1A702C2D"><!-- --></a>Creates a 3D shaded view (rendering) of the
+				system geometry as seen through the current plot window, and as determined by the
+					<b>WINDOW</b>, <b>PIXELS</b>, and <b>LIGHT</b> commands. <b>RENDER</b> works for all types of entities
+				with complex bounds and obscurations. </li>
+
+			<li id="RENDER_ASAP_Command__li_F51FF6B5453B4E9F9459C0F20CA40357"><a name="RENDER_ASAP_Command__li_F51FF6B5453B4E9F9459C0F20CA40357"><!-- --></a>The observation (eye/camera) point is
+				either given absolutely as <b>(x,y,z)</b> or as a distance <b>d</b> (default 10 times maximum scene span) in front of the scene. </li>
+
+			<li id="RENDER_ASAP_Command__li_0BD262D1986E4711875D54D5E483C06F"><a name="RENDER_ASAP_Command__li_0BD262D1986E4711875D54D5E483C06F"><!-- --></a>The scene is always illuminated by a light
+				source of unit irradiance emanating from the observation point (for example, a
+				camera-mounted flash bulb). Therefore, unless a second <b>LIGHTS</b>
+				source is specified, no shadowing is visible. </li>
+
+			<li id="RENDER_ASAP_Command__li_22FC90448CFE4625B14EABC24B3F36D0"><a name="RENDER_ASAP_Command__li_22FC90448CFE4625B14EABC24B3F36D0"><!-- --></a>Normally, only the outside of the objects
+				is visible. However, the outside can be cut away in the <b>DEPTH</b>
+				direction at the hither (near) and yon (far) coordinate planes <b>d'</b>
+				and <b>d".</b>
+			</li>
+
+			<li id="RENDER_ASAP_Command__li_4CA8C6AAE3D44F51B06EFF93B2B671A5"><a name="RENDER_ASAP_Command__li_4CA8C6AAE3D44F51B06EFF93B2B671A5"><!-- --></a>The rendered plot is written to the
+				distribution data file BRO009.DAT. See the <b>DISPLAY</b> command for
+				more information about reading and displaying the data distribution file. A somewhat
+				crude representation of the scene is written to the 2D plot device during the
+				rendering process. </li>
+
+			<li id="RENDER_ASAP_Command__li_6A9135F8D9BF4DE08F79F7CF43FFF0F2"><a name="RENDER_ASAP_Command__li_6A9135F8D9BF4DE08F79F7CF43FFF0F2"><!-- --></a><b>RAYS</b> can be added to the
+				rendering if <b>SAVE</b> was turned on before the last <b>TRACE</b> command. Only those portions of the ray paths not hidden by any
+				part of any object (whether it is transmissive or not) is visible. </li>
+
+			<li id="RENDER_ASAP_Command__li_33182CFFF88449B79B8812B6A1BD8F6C"><a name="RENDER_ASAP_Command__li_33182CFFF88449B79B8812B6A1BD8F6C"><!-- --></a>The addition of rays can significantly
+				increase the time to render a scene; therefore, the number of rays should be kept to
+				a minimum. The <b>s</b> is an optional scale factor for the width of the
+				rays (default is 1, that is one pixel). If s is entered as a negative number, each
+				ray segment is rendered as a smooth cylinder (that is, anti-aliasing). </li>
+
+			<li id="RENDER_ASAP_Command__li_D25879637E584259B552163FAB9C5FB9"><a name="RENDER_ASAP_Command__li_D25879637E584259B552163FAB9C5FB9"><!-- --></a>Normally all object surfaces are considered
+				to be perfect 100% Lambertian diffuse reflectors. With the <b>MODEL</b>
+				option, any reflective <b>SCATTER</b>
+				<b>MODELS</b> assigned to objects are used in the rendering. Objects
+				with no <b>SCATTER</b>
+				<b>MODELS</b> assigned to them will either default to 100% Lambertian or
+				the given <b>MODEL</b>
+				<b>m.</b>
+			</li>
+
+			<li id="RENDER_ASAP_Command__li_ABCDA3F3F5B546A4961D6F89F9A51AD1"><a name="RENDER_ASAP_Command__li_ABCDA3F3F5B546A4961D6F89F9A51AD1"><!-- --></a>Each pixel point is a single floating point
+				value where the integer part is a color number and the fractional part its intensity
+				(shade). A standard <b>COLORS</b> command argument can be used to set
+				the background color to something different from the default black. </li>
+
+			<li id="RENDER_ASAP_Command__li_6E0D46415F64435B9DCEF990B4DECCFD"><a name="RENDER_ASAP_Command__li_6E0D46415F64435B9DCEF990B4DECCFD"><!-- --></a>Previously, a separate utility program
+				(such as DIS2PS or DIS2VGA) was required to display this file on a device capable of
+				representing many intensities of the colors. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#RENDER">RENDER Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_R-ref.html#Commands_and_Macos_R" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “R”.">Commands and Macros (R)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Dynamic_Rendering-conc.html" title="The ASAP 3D Viewer is linked to the OpenGL libraries for real-time, dynamic rendering of systems and ray traces.">Dynamic Rendering</a></div>
+<div><a href="../Concept/Static_Rendering-conc.html" title="You can create a rendering of the system geometry by setting the appropriate WINDOW and PIXEL values (and optionally, LIGHT values), and then entering the RENDER command. The RENDER command traces a grid of rays whose density is determined by the PIXEL command through the viewing window.">Static Rendering</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DISPLAY_ASAP-cmdref.html" title="Reads previously created distribution data files so that they can be modified.">DISPLAY (ASAP Command)</a></div>
+<div><a href="../Commands/LIGHTS_ASAP-cmdref.html" title="Sets up optional light sources for the RENDER command.">LIGHTS (ASAP Command)</a></div>
+<div><a href="../Commands/PIXELS_ASAP-cmdref.html" title="Sets the resolution for graphics and calculations.">PIXELS (ASAP Command)</a></div>
+<div><a href="../Commands/RAYS_ASAP-cmdref.html" title="Sets the total number of rays in the virtual memory paging.">RAYS (ASAP Command)</a></div>
+<div><a href="../Commands/SAVE_ASAP-cmdref.html" title="Writes future ray trace data to a file for post-processing.">SAVE (ASAP Command)</a></div>
+<div><a href="../Commands/TRACE_ASAP-cmdref.html" title="Traces all currently selected rays in storage.">TRACE (ASAP Command)</a></div>
+<div><a href="../Commands/WINDOW_ASAP-cmdref.html" title="Sets the plotting window for graphical output.">WINDOW (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=36" target="_blank">See the Knowledge Base for the technical publication, IGES Import</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

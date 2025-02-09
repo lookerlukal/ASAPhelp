@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="REDEFINE (ASAP Command)"/>
+<meta name="abstract" content="Adds options to an object."/>
+<meta name="description" content="Adds options to an object."/>
+<meta name="DC.subject" content="REDEFINE (ASAP Command), object, adding options"/>
+<meta name="keywords" content="REDEFINE (ASAP Command), object, adding options"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_R-ref.html#Commands_and_Macos_R"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/COLORS_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="REDEFINE_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>REDEFINE (ASAP Command)</title>
+</head>
+<body id="REDEFINE_ASAP_Command"><a name="REDEFINE_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>REDEFINE (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Adds options to an object. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+REDEFINE [ SURFACE [ j ] [ THICKNESS t ] [ COLOR k ] [ 'name' ]
+           NORMAL
+      </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SURFACE</span></td><td><span>transfers to alternate surface</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>j</span></td><td><span>surface number</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>NORMAL</span></td><td><span>uses alternate surface normal</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>THICKNESS</span></td><td><span>flag to thicken the object surface(s)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>t</span></td><td><span>distance by which object surface(s) are thickened</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>COLOR k</span></td><td><span>assigns a specific color number to the object</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>'name'</span></td><td><span>descriptive name to be assigned to this object</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="REDEFINE_ASAP_Command__ul_CFCEFA368348420F8EE42DE76FA5632B"><!-- --></a><ol id="REDEFINE_ASAP_Command__ul_CFCEFA368348420F8EE42DE76FA5632B"> 
+		<li id="REDEFINE_ASAP_Command__li_01347028EAB64ACC8BAD57E05453B3DC"><a name="REDEFINE_ASAP_Command__li_01347028EAB64ACC8BAD57E05453B3DC"><!-- --></a>The 
+		  <b>SURFACE</b> option forces ASAP to move any intersection
+		  points on a non-lens object to a nearby continuous surface 
+		  <b>j</b> after first intersecting the original object
+		  surface. The 
+		  <b>j</b> is also then used to calculate the normal for
+		  refraction and/or reflection. 
+		</li>
+ 
+		<li id="REDEFINE_ASAP_Command__li_194C347612584E92B5284C696B9C9F9C"><a name="REDEFINE_ASAP_Command__li_194C347612584E92B5284C696B9C9F9C"><!-- --></a>The 
+		  <b>NORMAL</b> option allows the user to designate a
+		  continuous surface number 
+		  <b>j</b> to be used for calculating just the normal to the
+		  object that is different than the actual object normal. 
+		</li>
+ 
+		<li id="REDEFINE_ASAP_Command__li_205A4FB924DD40C4A1688FACF2EDF745"><a name="REDEFINE_ASAP_Command__li_205A4FB924DD40C4A1688FACF2EDF745"><!-- --></a>The 
+		  <b>SURFACE</b> and 
+		  <b>NORMAL</b> options are useful for modeling Fresnel
+		  optics and more accurately tracing rays/beams through discrete faceted
+		  approximations to objects. 
+		</li>
+ 
+		<li id="REDEFINE_ASAP_Command__li_02BB50A833524A1883DC5BCA7F4213E9"><a name="REDEFINE_ASAP_Command__li_02BB50A833524A1883DC5BCA7F4213E9"><!-- --></a>The default for 
+		  <b>j</b> is the object's base entity; that is, it turns off
+		  either option. 
+		</li>
+ 
+		<li id="REDEFINE_ASAP_Command__li_A0C5D11CB9754F6BAC479098DB3E222F"><a name="REDEFINE_ASAP_Command__li_A0C5D11CB9754F6BAC479098DB3E222F"><!-- --></a>The 
+		  <b>THICKNESS</b> option is used to thicken the object
+		  surface(s); that is, effectively turn it into two surfaces spaced a small
+		  distance 
+		  <b>t</b> apart (default 0). The sign of 
+		  <b>t</b> determines in which direction along the surface
+		  normal the second surface is located. 
+		</li>
+ 
+		<li id="REDEFINE_ASAP_Command__li_67130F34ACA043DB9BE837B4306EF745"><a name="REDEFINE_ASAP_Command__li_67130F34ACA043DB9BE837B4306EF745"><!-- --></a>The 
+		  <b>COLOR</b> option assigns a specific color number 
+		  <b>k</b> to the object, which is used in all subsequent
+		  graphical displays, unless overridden by the global 
+		  <b>COLORS</b> command. The default for 
+		  <b>k</b> is the number of the object. 
+		</li>
+ 
+		<li id="REDEFINE_ASAP_Command__li_6F593F86E06A4192BE84DB5E166D3588"><a name="REDEFINE_ASAP_Command__li_6F593F86E06A4192BE84DB5E166D3588"><!-- --></a>Although 
+		  <b>REDEFINE</b> may be used with objects based upon lenses
+		  with its full options, the most common usage is for 
+		  <b>COLOR</b> remapping of a lens object. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#REDEFINE">REDEFINE
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_R-ref.html#Commands_and_Macos_R" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “R”.">Commands and Macros (R)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/COLORS_ASAP-cmdref.html" title="Reassigns the color used to display each object.">COLORS (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

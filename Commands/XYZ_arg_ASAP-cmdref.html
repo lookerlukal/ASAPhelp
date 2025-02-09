@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="XY[Z] and Other Plot Window Overrides (ASAP Command Argument)"/>
+<meta name="abstract" content="Sets the window to the given directions and size for only the currently active plot."/>
+<meta name="description" content="Sets the window to the given directions and size for only the currently active plot."/>
+<meta name="DC.subject" content="XY[Z] and Other Plot Window Overrides (ASAP Command Argument), plot window, temporary override, command arguments, XY[Z]"/>
+<meta name="keywords" content="XY[Z] and Other Plot Window Overrides (ASAP Command Argument), plot window, temporary override, command arguments, XY[Z]"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_XYZ-ref.html#Commands_and_Macros_X_Y_Z"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="XYZ_and_Other_Plot_Window_Overrides_ASAP_Command_Argument"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>XY[Z] and Other Plot Window Overrides (ASAP Command Argument)</title>
+</head>
+<body id="XYZ_and_Other_Plot_Window_Overrides_ASAP_Command_Argument"><a name="XYZ_and_Other_Plot_Window_Overrides_ASAP_Command_Argument"><!-- --></a>
+
+
+  <span style="color: #2b6eb5"><h5>XY[Z] and Other Plot Window Overrides (ASAP Command Argument)</h5></span>
+  
+  
+  <div><p>Sets the window to the given directions and size for only the currently active plot. </p>
+
+    <p><b>Syntax</b>
+    </p>
+
+    <pre class="codeblock">
+XY[Z] [ m ]
+YZ[X] a a' d d' 
+ZX[Y]
+YX[Z]
+ZY[X]
+XZ[Y]
+      </pre>
+
+    <p><b>Remarks</b>
+    </p>
+
+    <br/><a name="XYZ_and_Other_Plot_Window_Overrides_ASAP_Command_Argument__ul_E2382C965E6F4F87A0FD2D891B59B81C"><!-- --></a><ol id="XYZ_and_Other_Plot_Window_Overrides_ASAP_Command_Argument__ul_E2382C965E6F4F87A0FD2D891B59B81C">
+      <li id="XYZ_and_Other_Plot_Window_Overrides_ASAP_Command_Argument__li_A184C160AA8C473A81A32948882E0638"><a name="XYZ_and_Other_Plot_Window_Overrides_ASAP_Command_Argument__li_A184C160AA8C473A81A32948882E0638"><!-- --></a> ASAP command arguments are optional and must
+        follow a command. </li>
+
+      <li id="XYZ_and_Other_Plot_Window_Overrides_ASAP_Command_Argument__li_92B049CD31EC4460B0B9B62CB2BF659E"><a name="XYZ_and_Other_Plot_Window_Overrides_ASAP_Command_Argument__li_92B049CD31EC4460B0B9B62CB2BF659E"><!-- --></a> If the third direction is given, an <b>OBLIQUE</b> plot is generated. </li>
+
+      <li id="XYZ_and_Other_Plot_Window_Overrides_ASAP_Command_Argument__li_093BBD01995C474EA6A9D9E555C31246"><a name="XYZ_and_Other_Plot_Window_Overrides_ASAP_Command_Argument__li_093BBD01995C474EA6A9D9E555C31246"><!-- --></a> If the plot ranges, <b>a a' d d'</b>
+        are not given, the plot is autoscaled (and then the window optionally magnified by a factor
+          <b>m</b>). A good use of the option is for controlling the direction cosine
+        space window without affecting the current spatial <b>WINDOW</b> command. For
+        example,</li>
+
+    </ol>
+
+    <pre class="codeblock">SPOTS DIR YX -4@1</pre>
+
+    <p>
+      <a href="/example_scripts.html#XY">XY[Z] Examples</a>
+    </p>
+
+  </div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_XYZ-ref.html#Commands_and_Macros_X_Y_Z" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letters “X, Y, Z”.">Commands and Macros (XYZ)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

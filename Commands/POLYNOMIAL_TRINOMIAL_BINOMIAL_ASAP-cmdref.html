@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="POLYNOMIAL/TRINOMIAL/BINOMIAL (ASAP Command)"/>
+<meta name="abstract" content="Creates a scatter model based on user-supplied data or polynomial coefficients."/>
+<meta name="description" content="Creates a scatter model based on user-supplied data or polynomial coefficients."/>
+<meta name="DC.subject" content="POLYNOMIAL/TRINOMIAL/BINOMIAL (ASAP Command), scatter model, creating, polynomial coefficients, creating scatter model with, FIT, SVD, coefficients"/>
+<meta name="keywords" content="POLYNOMIAL/TRINOMIAL/BINOMIAL (ASAP Command), scatter model, creating, polynomial coefficients, creating scatter model with, FIT, SVD, coefficients"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_P-ref.html#Commands_and_Macros_P"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DIMENSIONS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MINMAX_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MODELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Scatter_Models-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=24"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>POLYNOMIAL/TRINOMIAL/BINOMIAL (ASAP Command)</title>
+</head>
+<body id="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command"><a name="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>POLYNOMIAL/TRINOMIAL/BINOMIAL (ASAP Command)</h5></span>
+	
+	
+	<div><p>Creates a scatter model based on user-supplied data or polynomial coefficients. </p>
+
+		<p><b>Syntax 1 (polynomial coefficients)</b>
+		</p>
+
+		<pre class="codeblock">
+POLYNOMIAL n m [ l [ l' [ d ] ] ] [ PLOT [ a a' ... ] ]
+TRINOMIAL
+BINOMIAL
+  c [ c' c" ... ]
+</pre>
+
+		<p><b>Syntax 2 (data fitting)</b>
+		</p>
+
+		<pre class="codeblock">
+POLYNOMIAL n m [ l [ l' [ d ] ] ]  FIT [ k ] [ options…]
+TRINOMIAL                          SVD
+BINOMIAL
+  data...
+     :
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n m l l'</span></td><td><span>summing indices</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>d</span></td><td><span>logarithmic coefficient</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>c c' c" ...</span></td><td><span>polynomial coefficients</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>PLOT</span></td><td><span>plots the model in log(b-bo) and angle space</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>FIT</span></td><td><span>FIT the BSDF values to the polynomial model</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>k</span></td><td><span>use every kth value in the FIT (default is to use every BSDF value
+				entered)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SVD</span></td><td><span>using the singular value decomposition (SVD) algorithm, FIT the BSDF values
+					to the polynomial model</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>f [f' ...]</span></td><td><span>either actual BSDF values or the common LOG of the BSDF</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__ul_626FC64DDB7F452AAC82D1D89F96E21E"><!-- --></a><ol id="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__ul_626FC64DDB7F452AAC82D1D89F96E21E">
+			<li id="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_7CCC6EB365F5453BA934AF3B9D5390E9"><a name="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_7CCC6EB365F5453BA934AF3B9D5390E9"><!-- --></a> Models scattering described by a general
+				polynomial of three symmetry variables. In this formalism, scattering from an
+				isotropic surface must be symmetric with regard to the plane of incidence and
+				surface normal. Symmetry properties are guaranteed if the BSDF is only a function of
+				the following variables: </li>
+
+			<li id="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_03E65D82778C4A3D8048B209A6C4716B"><a name="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_03E65D82778C4A3D8048B209A6C4716B"><!-- --></a> The α and β are the direction cosine
+				coordinates of scatter direction; the (0,βo) is the specular direction. Note that
+				the distance squared (in direction cosines) from specular is given by <br/><img src="../Equations/POLYNOMIAL_equation1.gif"/><br/><br/><img src="../Equations/POLYNOMIAL_equation2.gif"/><br/></li>
+
+			<li id="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_C22BDF065E2447868C69435C85C6D8E9"><a name="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_C22BDF065E2447868C69435C85C6D8E9"><!-- --></a> The scattering is modeled by a general
+				polynomial of 2 or 3 symmetry variables with coefficients <b>c ...</b>
+				(up to 286); that is, <p><b>POLYNOMIAL</b>
+				</p>
+<br/><img src="../Equations/POLYNOMIAL_Polynomial.gif"/><br/><p><b>TRINOMIAL</b>
+					<br/><img src="../Equations/POLYNOMIAL_Trinomial.gif"/><br/></p>
+<p><b>BINOMIAL</b>
+				</p>
+<br/><img src="../Equations/POLYNOMIAL_Binomial.gif"/><br/></li>
+
+			<li id="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_0A26374736324D209749A3D4C19E5482"><a name="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_0A26374736324D209749A3D4C19E5482"><!-- --></a>If <b>m</b> is entered as a
+				negative number, then the upper limit of the second sum becomes <i>|m|-k</i>. The
+				coefficients are entered in the order in which they appear in the previous equations
+				for the given <b>n m l l'.</b>
+			</li>
+
+			<li id="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_41AD7C5187BC4555A088FA4517E17946"><a name="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_41AD7C5187BC4555A088FA4517E17946"><!-- --></a>Note that if <b>d</b> is zero,
+				then all the Lorentzian (log specular) terms vanish. </li>
+
+			<li id="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_E90210AC31954A1BB346514F6EA1ECA0"><a name="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_E90210AC31954A1BB346514F6EA1ECA0"><!-- --></a>If <b>FIT</b> or <b>SVD</b> is entered, ASAP fits the user-supplied BSDF data to the specified
+				polynomial form. Under the <b>SVD</b> option, a limited number of data
+				points can be fitted. (See <b>DIMENSIONS</b> command output.) </li>
+
+			<li id="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_4022465604C348BDAFE4A8EA5D04C559"><a name="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_4022465604C348BDAFE4A8EA5D04C559"><!-- --></a>By default, every BSDF value entered (above
+				1.E-9, -9 LOG) is used in the fit. Optionally, only every <b>k</b>th value can be
+				used. </li>
+
+			<li id="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_F4610371926C4732953212AACF6DF982"><a name="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_F4610371926C4732953212AACF6DF982"><!-- --></a>The restricted variables used in the <b>BINOMIAL</b> form and the term symmetry in the <b>POLYNOMIAL</b> form assure
+				that the resulting BSDF exactly obeys reciprocity. The <b>TRINOMIAL</b> form is not
+				by definition reciprocal but during a <b>FIT</b> it replicates each
+				input point by interchanging the specular and scatter directions. This in effect
+				tries to force the resulting BSDF to obey reciprocity. </li>
+
+			<li id="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_C8A63EA7EFA74EEC86D822541E0210BC"><a name="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_C8A63EA7EFA74EEC86D822541E0210BC"><!-- --></a> If the peak of the BSDF remains nearly
+				centered on all specular directions (as is the case for relatively smooth or glossy
+				surfaces) or only in-plane data is available, then try the following Lorentzian-only
+				fit:
+				<pre class="codeblock">
+POLYNOMIAL n 0 14 -4 2. FIT
+TRINOMIAL
+BINOMIAL
+         </pre>
+
+				where <b>n</b> is less than or equal to the number of non-normal
+				incident directions in the data. This generates a model with 20(<b>n</b>+1)
+				coefficients. Confirm that there are at least as many BSDF values (a few times more
+				is better). </li>
+
+			<li id="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_C85CB0E07080434DBC5681796A5932AA"><a name="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_C85CB0E07080434DBC5681796A5932AA"><!-- --></a> Another more general technique is to use
+					<b>$ITER</b> to do a "regressive" fit. For example:
+				<pre class="codeblock">
+$ITER N 1 5 -5, M 1 5 -5, E
+ { MODEL 1
+   BINOMIAL INT[N] INT[M] SVD
+   :
+   data
+   :
+   RETURN
+   $GRAB 'RMS=' E }
+   </pre>
+</li>
+
+			<li id="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_F990A6D1DC2C4EE9B8A5B332060C874D"><a name="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_F990A6D1DC2C4EE9B8A5B332060C874D"><!-- --></a>The <b>PLOT</b> option plots
+				the model (common base 10 logarithm of the BSDF) for up to seven specular angles in
+				ascending order (default 0, 15, 30, 45, 60, 75, 89.9 degrees). The current PIXELS
+				setting controls the resolution of these plots in direction cosine space. </li>
+
+			<li id="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_0E812DB966224631A5B9A94DC3FF4AB8"><a name="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_0E812DB966224631A5B9A94DC3FF4AB8"><!-- --></a>Creates a distribution file <b>name_angle.dis</b> for each of these angles. </li>
+
+			<li id="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_00104B99D0804B35A92432BD5DAC6A6E"><a name="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_00104B99D0804B35A92432BD5DAC6A6E"><!-- --></a>The command argument, <b>MINMAX</b> may be used to set the minimum and maximum values of the BSDF for
+				this specific model. </li>
+
+			<li id="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_6EECE776CA5246059D8301ACBDB85614"><a name="POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP_Command__li_6EECE776CA5246059D8301ACBDB85614"><!-- --></a>Use with importance area sampling. </li>
+
+		</ol>
+
+		<p>
+			<a href="/example_scripts.html#POLYNOMIAL_TRINOMIAL_BINOMIAL">POLYNOMIAL
+				Examples</a>
+			<a href="/example_scripts.html#POLYNOMIAL_TRINOMIAL_BINOMIAL">BINOMIAL
+				Examples</a>
+			<a href="/example_scripts.html#POLYNOMIAL_TRINOMIAL_BINOMIAL">TRINOMIAL
+				Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_P-ref.html#Commands_and_Macros_P" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “P”.">Commands and Macros (P)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Scatter_Models-ref.html" title="ASAP supports the scatter models listed in this topic for wide-angle (far from specular) scatter.">Scatter Models</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DIMENSIONS_ASAP-cmdref.html" title="Displays a table of maximum array dimensions for the most important program arrays.">DIMENSIONS (ASAP Command)</a></div>
+<div><a href="../Commands/MINMAX_arg_ASAP-cmdref.html" title="Sets BSDF bounding.">MINMAX (ASAP Command Argument)</a></div>
+<div><a href="../Commands/MODELS_ASAP-cmdref.html" title="Creates a scattering model.">MODELS (ASAP Command)</a></div>
+<div><a href="../Commands/PIXELS_ASAP-cmdref.html" title="Sets the resolution for graphics and calculations.">PIXELS (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=24" target="_blank">See the Knowledge Base for the technical publication, Stray Light Analysis</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

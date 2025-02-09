@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="PostScript File Utility (PSCRIP) (ASAP Command)"/>
+<meta name="abstract" content="The PSCRIP.exe utility reads ASAP PLR (plot) files and creates PostScript files for printing. The utility is stored in your ASAP installation area under the \bin folder."/>
+<meta name="description" content="The PSCRIP.exe utility reads ASAP PLR (plot) files and creates PostScript files for printing. The utility is stored in your ASAP installation area under the \bin folder."/>
+<meta name="DC.subject" content="PostScript File Utility (PSCRIP) (ASAP Command), PSCRIP utility, creating postscript files, graphics, creating postscript files"/>
+<meta name="keywords" content="PostScript File Utility (PSCRIP) (ASAP Command), PSCRIP utility, creating postscript files, graphics, creating postscript files"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Importing_Exporting-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_P-ref.html#Commands_and_Macros_P"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="PostScript_File_Utility_PSCRIP_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>PostScript File Utility (PSCRIP) (ASAP Command)</title>
+</head>
+<body id="PostScript_File_Utility_PSCRIP_ASAP_Command"><a name="PostScript_File_Utility_PSCRIP_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>PostScript File Utility (PSCRIP) (ASAP Command)</h5></span> 
+   
+   
+  <div><p>The PSCRIP.exe utility reads ASAP PLR (plot) files and creates
+	 PostScript files for printing. The utility is stored in your ASAP installation
+	 area under the 
+	 <kbd class="userinput">\bin</kbd> folder. 
+  </p>
+ 
+	 <p><b>Syntax 1</b> 
+	 </p>
+ 
+	 <pre class="codeblock">PSCRIP </pre>
+ 
+	 <p><b>Syntax 2</b> 
+	 </p>
+ 
+	 <pre class="codeblock">PSCRIP &lt;‘file’&gt;</pre>
+ 
+	 <p>‘file’ is an input text file of six lines with the following contents: 
+	 </p>
+
+	 <p>plrname<br/>
+</p>
+ 
+	 <p>s</p>
+ 
+	 <p>‘printer’ <br/>
+	 </p>
+ 
+	 <p>c <br/>
+	 </p>
+ 
+	 <p>p</p>
+ 
+	 <p>[blank line]</p>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>plrname</span></td><td><span>name of a file with an extension .plr that contains the plots
+			 stored in asaptemp.plr</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>s</span></td><td><span>scaling factor (1 = 1 plot on a printed page; .5 creates 2 x 2
+			 plots on a page, and so on)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>‘printer’</span></td><td><span>network name of a PostScript printer or name of a directly
+			 attached printer</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>c</span></td><td><span> 
+			 <p>colors: 
+			 </p>
+ 
+			 <p>1 = Different thicknesses instead of colors 
+			 </p>
+ 
+			 <p>2 = Old BRO colors 
+			 </p>
+ 
+			 <p>3 = Colors from xtermc utility 
+			 </p>
+ 
+			 <p>4 = New BRO colors 
+			 </p>
+</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>p</span></td><td><span>page orientation (L = landscape, P = portrait)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>[blank line]</span></td><td><span>a blank line is required at the end of the file</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="PostScript_File_Utility_PSCRIP_ASAP_Command__ul_88A17E3DD59941B78F41622BBD8783D4"><!-- --></a><ol id="PostScript_File_Utility_PSCRIP_ASAP_Command__ul_88A17E3DD59941B78F41622BBD8783D4"> 
+		<li id="PostScript_File_Utility_PSCRIP_ASAP_Command__li_621EA22E430A43B7A61C633ADB266508"><a name="PostScript_File_Utility_PSCRIP_ASAP_Command__li_621EA22E430A43B7A61C633ADB266508"><!-- --></a>In Syntax 1, you are
+		  prompted for input to satisfy the same options in 
+		  <b>file</b>. 
+		</li>
+ 
+		<li id="PostScript_File_Utility_PSCRIP_ASAP_Command__li_A90494FB1AB34FC5A0C7DC94895FF850"><a name="PostScript_File_Utility_PSCRIP_ASAP_Command__li_A90494FB1AB34FC5A0C7DC94895FF850"><!-- --></a>In Syntax 2, the options are
+		  all given in the text file, 
+		  <b>file</b>. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#PSCRIP">PSCRIP
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Importing_Exporting-conc.html" title="You can import or export several types of files, either those generated by ASAP or those used as inputs to ASAP.">Importing/Exporting</a></div>
+</div>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_P-ref.html#Commands_and_Macros_P" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “P”.">Commands and Macros (P)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

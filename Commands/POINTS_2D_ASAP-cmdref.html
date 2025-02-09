@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="POINTS (2D) (ASAP Command)"/>
+<meta name="abstract" content="Creates a generalized planar edge."/>
+<meta name="description" content="Creates a generalized planar edge."/>
+<meta name="DC.subject" content="POINTS (2D) (ASAP Command), edge, creating planar, planar edge, creating"/>
+<meta name="keywords" content="POINTS (2D) (ASAP Command), edge, creating planar, planar edge, creating"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_P-ref.html#Commands_and_Macros_P"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GENERAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/POINTS_3D_ASAP-cmdref.html#POINTS_3D_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REPEAT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SEQUENCE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SWEEP_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Edges_and_Curves_Overview-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Translator_Dialog_for_IGES_and_XML-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=29"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="POINTS_2D_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>POINTS (2D) (ASAP Command)</title>
+</head>
+<body id="POINTS_2D_ASAP_Command"><a name="POINTS_2D_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>POINTS (2D) (ASAP Command)</h5></span>
+	
+	
+	<div><p>Creates a generalized planar edge. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+POINTS X x  y z  q [ y' z' q' ... ]
+       Y y  z x      z' x'
+       Z z  x y      x' y'
+ :
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X, Y or Z</span></td><td><span>specifies coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x, y or z</span></td><td><span>specifies location along coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>y z (z x or x y), y' z' ...</span></td><td><span>coordinates of point in orthogonal axes</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>q q' ...</span></td><td><span>connection parameters</span></td></tr></tbody></table>
+		<p><b>Reference Point</b>
+		</p>
+
+		<p>Origin of the coordinates </p>
+
+		<p><b>Autolimiting</b>
+		</p>
+
+		<p>Yes </p>
+
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="POINTS_2D_ASAP_Command__ul_256673EEFD294979BEE89253F2D6EBA8"><!-- --></a><ol id="POINTS_2D_ASAP_Command__ul_256673EEFD294979BEE89253F2D6EBA8">
+			<li id="POINTS_2D_ASAP_Command__li_6715C23F5DFE407EBF7473BD5FED5B71"><a name="POINTS_2D_ASAP_Command__li_6715C23F5DFE407EBF7473BD5FED5B71"><!-- --></a>Edges consist of coplanar straight line
+				and/or higher-order curved segments. </li>
+
+			<li id="POINTS_2D_ASAP_Command__li_7168A154CE3045C39D75985EDD831E94"><a name="POINTS_2D_ASAP_Command__li_7168A154CE3045C39D75985EDD831E94"><!-- --></a>Initially, the reference point is the
+				specified axial location and, therefore, not necessarily on the edge. </li>
+
+			<li id="POINTS_2D_ASAP_Command__li_B89B00270AFB41D19CAAA83D9BA21D4D"><a name="POINTS_2D_ASAP_Command__li_B89B00270AFB41D19CAAA83D9BA21D4D"><!-- --></a>Directly inputs the coordinates of a
+				collection of planar points. </li>
+
+			<li id="POINTS_2D_ASAP_Command__li_A51D7B32EB2F4EF49C1457AA76B304F8"><a name="POINTS_2D_ASAP_Command__li_A51D7B32EB2F4EF49C1457AA76B304F8"><!-- --></a> The <b>q</b> parameters
+				control how each edge point is connected to the next, as described in the following
+				table. <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>q PARAMETER</span></th><th><span>EDGE POINT CONNECTION</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>q=0</span></td><td><span>Not connected to the next point (open)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>q=1</span></td><td><span>Connected by a straight line to the next point</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>q=2</span></td><td><span>
+							<p>Connected by a quadratic rational Bezier (conic) curve to the point
+								after next. The next point is the intermediate control vertex. The
+								next <b>q</b> is the intermediate weighting factor and
+								is always positive: </p>
+
+							<p>0 straight line </p>
+
+							<p>&lt;1 ellipse </p>
+
+							<p>1 parabola </p>
+
+							<p>&gt;1 hyperbola </p>
+
+						</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>q=-2</span></td><td><span>Connected by an elliptical arc to the point after next. The next
+							point is the center of the parent ellipse. The next <b>q</b>
+							is the angular subtense (in degrees) of the arc and must be less than
+							180 degrees.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>q=n</span></td><td><span>Connected by an <b>n</b>th (up to 10th) degree rational
+							Bezier curve. The intermediate <b>n</b>-1 points are control
+							vertices with given (positive) weight factors.</span></td></tr></tbody></table></li>
+
+			<li id="POINTS_2D_ASAP_Command__li_6ABE092D3FEC45E3BFC18F276F507FD6"><a name="POINTS_2D_ASAP_Command__li_6ABE092D3FEC45E3BFC18F276F507FD6"><!-- --></a>A nonzero <b>q</b> for the last
+				point tells ASAP to connect this point to the first point making a closed curve.
+				However, if the first <b>q</b> entry is a literal, the second point
+				entered is the first point on the edge. All other points are measured either <b>ABS</b>olutely or <b>REL</b>atively from the reference point. </li>
+
+			<li id="POINTS_2D_ASAP_Command__li_3735B1F7834F408E94BD70D9433261F2"><a name="POINTS_2D_ASAP_Command__li_3735B1F7834F408E94BD70D9433261F2"><!-- --></a>The first point entered is always the
+				reference point for the edge and is normally the first point on the actual edge. </li>
+
+			<li id="POINTS_2D_ASAP_Command__li_17F2F50D4D634E6FBAF89BE78FEBD3B3"><a name="POINTS_2D_ASAP_Command__li_17F2F50D4D634E6FBAF89BE78FEBD3B3"><!-- --></a>The <b>POINT</b> command,
+				analogous to the <b>GENERAL</b> and <b>SEQUENCE</b>
+				commands, is the most general implementation of ASAP edges. Although the <b>POINT</b> command is useful for modeling simple systems, especially when
+				used with the <b>SWEEP</b> command, its primary purpose is to serve as
+				an input form for the output of the IGES to ASAP translator. </li>
+
+			<li id="POINTS_2D_ASAP_Command__li_20348D2EB5DB428FAA2C32959BB908C0"><a name="POINTS_2D_ASAP_Command__li_20348D2EB5DB428FAA2C32959BB908C0"><!-- --></a>Edge objects ray trace slower than surface
+				or lens objects because of the parametric nature of the edge objects. This edge is a
+				combination of coplanar straight line and higher-order curved segments. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#POINTS">POINTS Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_P-ref.html#Commands_and_Macros_P" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “P”.">Commands and Macros (P)</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Translator_Dialog_for_IGES_and_XML-task.html" title="The translator window for IGES and GTX opens when you initiate an IGES-to-ASAP or GTX-to-ASAP file translation.">Translator Window for IGES and GTX Files</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Edges_and_Curves_Overview-ref.html" title="Edges and curves are made up of a series of connected points in space that form a parametric representation of an entity.">Edges and Curves Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/GENERAL_ASAP-cmdref.html" title="Creates a general surface defined by polynomial coefficients.">GENERAL (ASAP Command)</a></div>
+<div><a href="../Commands/POINTS_3D_ASAP-cmdref.html#POINTS_3D_ASAP_Command" title="Creates a generalized edge.">POINTS (3D) (ASAP Command)</a></div>
+<div><a href="../Commands/REPEAT_ASAP-cmdref.html" title="Repeats previously defined entity data.">REPEAT (ASAP Command)</a></div>
+<div><a href="../Commands/SEQUENCE_ASAP-cmdref.html" title="Creates a lens composed of a sequence of conicoid surfaces.">SEQUENCE (ASAP Command)</a></div>
+<div><a href="../Commands/SWEEP_ASAP-cmdref.html" title="Specifies the optional sweeping of a curve into a surface.">SWEEP (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=29" target="_blank">See the Knowledge Base for the technical publication, Edges in ASAP</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

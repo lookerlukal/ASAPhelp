@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="UPDATE (ASAP Command)"/>
+<meta name="abstract" content="Controls the entity storage updating."/>
+<meta name="description" content="Controls the entity storage updating."/>
+<meta name="DC.subject" content="UPDATE (ASAP Command), entity, updating storage, SURFACE coefficients, updating, LENS conicoids, updating data, EDGE points, updating data"/>
+<meta name="keywords" content="UPDATE (ASAP Command), entity, updating storage, SURFACE coefficients, updating, LENS conicoids, updating data, EDGE points, updating data"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_U-ref.html#Commands_and_Macros_U"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="UPDATE_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>UPDATE (ASAP Command)</title>
+</head>
+<body id="UPDATE_ASAP_Command"><a name="UPDATE_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>UPDATE (ASAP Command)</h5></span> 
+   
+  
+  <div><p>Controls the entity storage updating.
+  </p>
+ 
+	 <p><b>Syntax</b>
+	 </p>
+ 
+	 <pre class="codeblock">UPDATE [ OFF ]</pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>OFF</span></td><td><span>overwrites data in storage</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b>
+	 </p>
+ 
+	 <br/><a name="UPDATE_ASAP_Command__ul_41A092FBB8E54238B70A36587B33768B"><!-- --></a><ol id="UPDATE_ASAP_Command__ul_41A092FBB8E54238B70A36587B33768B"> 
+		<li id="UPDATE_ASAP_Command__li_604CFFA74CFE47A78F56D7FA36CDF251"><a name="UPDATE_ASAP_Command__li_604CFFA74CFE47A78F56D7FA36CDF251"><!-- --></a>Controls how basic
+		  geometrical entity data (that is, 
+		  <b>SURFACE</b> coefficients, 
+		  <b>LENS</b> conicoids, 
+		  <b>EDGE</b> points) is updated in storage.
+		</li>
+ 
+		<li id="UPDATE_ASAP_Command__li_D79C1BD7D42E4C7A9791A57A07408106"><a name="UPDATE_ASAP_Command__li_D79C1BD7D42E4C7A9791A57A07408106"><!-- --></a>Normally when an already
+		  defined entity is updated at a later time, the new data overwrites the old.
+		  This overwrite presents no problems as long as the amount of new data is less
+		  than or equal to the amount of old data. However if the new data occupies more
+		  storage space, then the data for the next entity can become corrupted.
+		</li>
+ 
+		<li id="UPDATE_ASAP_Command__li_877AC78A473E42FA9F7D86C5726DF800"><a name="UPDATE_ASAP_Command__li_877AC78A473E42FA9F7D86C5726DF800"><!-- --></a>The 
+		  <b>UPDATE</b> command tells ASAP to place all future entity data at the
+		  end of storage. The old data is not deleted, but it is never used again.
+		</li>
+ 
+		<li id="UPDATE_ASAP_Command__li_6DC7987DCB9D4B77AC3F0030E353CD84"><a name="UPDATE_ASAP_Command__li_6DC7987DCB9D4B77AC3F0030E353CD84"><!-- --></a>To return to the default
+		  overwrite mode, use the 
+		  <b>OFF</b> option. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#UPDATE">UPDATE
+		  Examples</a>
+	 </p>
+
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_U-ref.html#Commands_and_Macros_U" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “U”.">Commands and Macros (U)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

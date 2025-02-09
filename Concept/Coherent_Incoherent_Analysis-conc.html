@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Coherent - Incoherent Analysis"/>
+<meta name="DC.Relation" scheme="URI" content="CONSIDER_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="DISPLAY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="FIELD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="MEDIA_CRYSTAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="PARABASAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="SELECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="SPREAD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="WAVELENGTHS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="EMITTING_Source_Overview-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="GRID_Command_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="SOURCE_Command_Overview-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Coherent_Incoherent_Analysis"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Coherent - Incoherent Analysis</title>
+</head>
+<body id="Coherent_Incoherent_Analysis"><a name="Coherent_Incoherent_Analysis"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Coherent - Incoherent Analysis</h5></span>
+	<div>
+		<p>While most optical design programs have the ability to display a spot diagram or plot of ray coordinates on some plane, ASAP has the unique capability to compute the actual optical field (irradiance, intensity, phase and others) produced by an opto-mechanical system at any position or in any direction.</p>
+
+		<p>Since ASAP accounts for the flux propagated in each ray during interactions with objects, and since the fundamental ray trace algorithm is nonsequential, ASAP can easily compute the distribution of energy produced by a lamp and reflector or another incoherent source.</p>
+
+		<p>Depending upon the source characteristics and system geometry, ASAP can coherently sum the optical field of each individual ray to compute the Point Spread Function (PSF) of an imaging system or the fringe pattern produced by an interferometer.</p>
+
+		<p>These advanced features give ASAP a wide application to virtually any illumination, imaging, or interferometric problem.</p>
+
+		<div class="section" id="Coherent_Incoherent_Analysis__section_96985EF72FBF4140A19A66030C82DF2D"><a name="Coherent_Incoherent_Analysis__section_96985EF72FBF4140A19A66030C82DF2D"><!-- --></a><span style="color: #2b6eb5"><h5>Incoherent Calculations</h5></span>
+			
+			<p>An incoherent calculation usually begins with the specification of an EMITTING source with the appropriate apodization characteristics. After ray tracing, the user typically SELECTs rays with certain properties and CONSIDERs a final object of choice. After computing the spot diagram at some spatial resolution set by the PIXEL command, the intensity distribution may be viewed or analyzed with the DISPLAY commands.</p>
+
+		</div>
+
+		<div class="section" id="Coherent_Incoherent_Analysis__section_C41B7CD885C945538C2D4D349C5F0450"><a name="Coherent_Incoherent_Analysis__section_C41B7CD885C945538C2D4D349C5F0450"><!-- --></a><span style="color: #2b6eb5"><h5>Coherent Calculations</h5></span>
+			
+			<p>A coherent calculation usually begins with the specification of a WAVELENGTH, PARABASAL rays, and a GRID and SOURCE combination. If the source is Gaussian, it requires an apodization. After tracing through the system, a user typically selects rays with certain properties and considers a final object of choice. After computing the SPREAD or FIELD at some spatial resolution set by the PIXEL command, the irradiance and/or phase information may be viewed or analyzed with the DISPLAY commands.</p>
+
+		</div>
+
+		<div class="section" id="Coherent_Incoherent_Analysis__section_514C803D8E7C4680B18778A8D1ACBAD7"><a name="Coherent_Incoherent_Analysis__section_514C803D8E7C4680B18778A8D1ACBAD7"><!-- --></a><span style="color: #2b6eb5"><h5>Coherent/Incoherent Field/Energy Distributions from Current Beams</h5></span>
+			
+			<p>Using a (usually Gaussian) beam summation technique, the coherent/incoherent field/energy can be calculated on one or more uniform planar grids. The beams and grid points are always assumed to lie in the same homogeneous (no GRIN) and isotropic (no CRYSTAL) medium.</p>
+
+		</div>
+
+	</div>
+ 
+	<div><div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="CONSIDER_ASAP-cmdref.html">CONSIDER (ASAP Command)</a></div>
+<div><a href="DISPLAY_ASAP-cmdref.html">DISPLAY (ASAP Command)</a></div>
+<div><a href="FIELD_ASAP-cmdref.html">FIELD (ASAP Command)</a></div>
+<div><a href="MEDIA_CRYSTAL_ASAP-cmdref.html">MEDIA CRYSTAL (ASAP Command)</a></div>
+<div><a href="PARABASAL_ASAP-cmdref.html">PARABASAL (ASAP Command)</a></div>
+<div><a href="PIXELS_ASAP-cmdref.html">PIXELS (ASAP Command)</a></div>
+<div><a href="SELECT_ASAP-cmdref.html">SELECT (ASAP Command)</a></div>
+<div><a href="SPREAD_ASAP-cmdref.html">SPREAD (ASAP Command)</a></div>
+<div><a href="WAVELENGTHS_ASAP-cmdref.html">WAVELENGTH(S) (ASAP Command)</a></div>
+<div><a href="EMITTING_Source_Overview-ref.html">EMITTING Source Overview</a></div>
+<div><a href="GRID_Command_Overview-conc.html">GRID Command Overview</a></div>
+<div><a href="SOURCE_Command_Overview-conc.html">SOURCE Command Overview</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="FITTED (ASAP Command)"/>
+<meta name="abstract" content="Creates a surface specified by curve fitting an arbitrary set of points."/>
+<meta name="description" content="Creates a surface specified by curve fitting an arbitrary set of points."/>
+<meta name="DC.subject" content="FITTED (ASAP Command), surface, fitting points"/>
+<meta name="keywords" content="FITTED (ASAP Command), surface, fitting points"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_F-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DIMENSIONS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DRAWING_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FCN_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GENERAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LOCAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LSQFIT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REPLOT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/VIEW_macro_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="FITTED_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>FITTED (ASAP Command)</title>
+</head>
+<body id="FITTED_ASAP_Command"><a name="FITTED_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>FITTED (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Creates a surface specified by curve fitting an arbitrary set of
+	 points. 
+  </p>
+ 
+	 <p><b>Syntax 1:</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+FITTED [ X ] [ k ] [ t ] [ SVD [ m ] ] [ FIXTERM [n] ] [ EDGES -n      ] [ VECTOR c ]
+         Y                                                                      i i' i"
+         Z
+        -X
+        -Y
+        -Z
+       EXPLICIT
+  [        fcn          ]
+     coord coord' coord" 
+x y z [ ABS ] x' y' z' x" y" z" ...
+        REL
+x y z x' y' z' x" y" z" ...
+  :
+      </pre>
+ 
+	 <p><b>Syntax 2:</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+FITTED PLANE       [ EDGES -n       ] [ VECTOR c ] ]
+       PARABOLOID           i i' i"
+       SPHERE
+       ELLIPSOID
+          fcn
+  [ coord coord' coord" ]
+  x y z [ ABS ] x' y' z' x" y" z" ...
+          REL
+  x y z x' y' z' x" y" z" ...
+    :
+      </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X, Y, Z, -X, -Y or -Z</span></td><td><span>axis for order doubled polynomial</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>k</span></td><td><span>degree of polynomial surface fit (default 2)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>t</span></td><td><span>coefficient threshold (default 1.E-5)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SVD m</span></td><td><span>singular value decomposition option</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>FIXTERM n</span></td><td><span>number of the term to be normalized to 1 (see Remarks for
+			 default)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>EDGES -n</span></td><td><span>uses points on last n EDGES for fit</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>EDGES i i' i"</span></td><td><span>uses points on EDGES i through i' incremented by i" for
+			 fit</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>VECTOR c</span></td><td><span>puts each data point in the current 3D file as a dot of color
+			 c (default 1) for later plotting</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>EXPLICIT</span></td><td><span>explicit function option</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>coord coord' coord"</span></td><td><span>specifies data coordinate order 
+		  </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x y z x' y' z' x" y" z" ...</span></td><td><span>points for fit</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ABS REL</span></td><td><span>specifies how data is referenced</span></td></tr></tbody></table> 
+	 <p><b>Reference Point</b> 
+	 </p>
+ 
+	 <p>See Remarks 
+	 </p>
+ 
+	 <p><b>Surface Normal</b> 
+	 </p>
+ 
+	 <p>Along negative coordinate axis 
+	 </p>
+ 
+	 <p><b>Autolimiting</b> 
+	 </p>
+ 
+	 <p>See Syntax and Options 
+	 </p>
+ 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="FITTED_ASAP_Command__ul_E75A08D764D4449E93B230C69F391498"><!-- --></a><ol id="FITTED_ASAP_Command__ul_E75A08D764D4449E93B230C69F391498"> 
+		<li id="FITTED_ASAP_Command__li_5AF0B719FBBD47ACA7F85A8F91D97E93"><a name="FITTED_ASAP_Command__li_5AF0B719FBBD47ACA7F85A8F91D97E93"><!-- --></a>Fits a polynomial surface of
+		  degree 
+		  <b>k</b> (default 2) in a least squares sense to the set of
+		  points given on successive commands. The points on the last 
+		  <b>n</b> 
+		  <b>EDGES</b>, or 
+		  <b>EDGES i</b> through 
+		  <b>i'</b> are incremented by 
+		  <b>i".</b> 
+		</li>
+ 
+		<li id="FITTED_ASAP_Command__li_54F5919C10774ADAA8B6DDE43C78D76F"><a name="FITTED_ASAP_Command__li_54F5919C10774ADAA8B6DDE43C78D76F"><!-- --></a>The optional literal entries
+		  
+		  <b>(X, Y, Z, -X, -Y, -Z)</b> are the same as the ones on
+		  the 
+		  <b>GENERAL</b> command, and specify some required symmetry.
+		  
+		</li>
+ 
+		<li id="FITTED_ASAP_Command__li_19E068AAB1F3490EAECCC7BBB041F363"><a name="FITTED_ASAP_Command__li_19E068AAB1F3490EAECCC7BBB041F363"><!-- --></a> ASAP saves the maximum
+		  extents in each coordinate direction, and uses these as the default 
+		  <b>LOCAL</b> box modifier. 
+		</li>
+ 
+		<li id="FITTED_ASAP_Command__li_66D2BA7B95D6438BA41AF91D1A6B6FDF"><a name="FITTED_ASAP_Command__li_66D2BA7B95D6438BA41AF91D1A6B6FDF"><!-- --></a> The 
+		  <b>t</b> is an optional threshold between 1.E-8 and 1.E-2
+		  (default 1.E-5), below which the relative contribution of a surface coefficient
+		  is assumed to be negligible, so that it is reset to zero. If the highest order
+		  surface coefficients are all zero, the degree of the surface is reduced
+		  accordingly. 
+		</li>
+ 
+		<li id="FITTED_ASAP_Command__li_DFFC15F0C1B24EC39A13F451A08D03C4"><a name="FITTED_ASAP_Command__li_DFFC15F0C1B24EC39A13F451A08D03C4"><!-- --></a>The rarely needed 
+		  <b>FIXTERM</b> option specifies the number of the term to
+		  be fixed or normalized to 1. The default is the largest component of the normal
+		  to the surface through the first point (if the point lies on the surface) or
+		  zero (constant term). 
+		</li>
+ 
+		<li id="FITTED_ASAP_Command__li_E4CB25FDF7A2418CBEE013FE1EA5500F"><a name="FITTED_ASAP_Command__li_E4CB25FDF7A2418CBEE013FE1EA5500F"><!-- --></a> By default, the 
+		  <b>EXPLICIT</b> solution is a Cholesky decomposition of the
+		  normal matrix, which can accept any number of data points. You can elect to do
+		  a more robust SVD solution, but the maximum number of data points it accepts is
+		  limited (see output from the DIMENSION command). If m is given, then only every
+		  mth point is used, which may be necessary to get below this limit. 
+		</li>
+ 
+		<li id="FITTED_ASAP_Command__li_AED4EBF792EC410EA2BD7F697937BC72"><a name="FITTED_ASAP_Command__li_AED4EBF792EC410EA2BD7F697937BC72"><!-- --></a>When entering points
+		  directly, the first point always becomes the reference point of the surfaces
+		  and, by default, ASAP assumes that the surface also passes exactly through this
+		  point; that is, the constant coefficient of the surface function is set to
+		  zero. However, if the literal option is placed after the first three entries,
+		  this reference point is not on the surface (constant coefficient nonzero), and
+		  all other points entered are either measured 
+		  <b>ABS</b>olutely or 
+		  <b>REL</b>atively from it. 
+		</li>
+ 
+		<li id="FITTED_ASAP_Command__li_CD426EDA61F74660BC0D8AF7EDD19D03"><a name="FITTED_ASAP_Command__li_CD426EDA61F74660BC0D8AF7EDD19D03"><!-- --></a>The 
+		  <b>VECTOR</b> options puts each data point in the current
+		  3D file as a dot of color c (default 1) for later plotting by a 
+		  <b>REPLOT</b>, 
+		  <b>DRAW</b> or 
+		  <b>$VIEW</b> command. 
+		</li>
+ 
+		<li id="FITTED_ASAP_Command__li_8E9098743D2C41908A8DC5C544445980"><a name="FITTED_ASAP_Command__li_8E9098743D2C41908A8DC5C544445980"><!-- --></a>By default, the ordering of
+		  a triplet of numbers describing a point is 
+		  <b>(x,y,z).</b> You may specify a different order by
+		  listing the coordinate order. For example, to specify data as 
+		  <b>(z,x,y),</b> enter 
+		  <b>(Z,X,Y).</b> 
+		</li>
+ 
+	 </ol>
+ 
+	 <p><b>Remarks for Syntax #2</b> 
+	 </p>
+ 
+	 <br/><a name="FITTED_ASAP_Command__ul_A4B7047DD8A0495582169A49A53B34C3"><!-- --></a><ol id="FITTED_ASAP_Command__ul_A4B7047DD8A0495582169A49A53B34C3"> 
+		<li id="FITTED_ASAP_Command__li_960A787E40894F51B5A7E033DBE2C938"><a name="FITTED_ASAP_Command__li_960A787E40894F51B5A7E033DBE2C938"><!-- --></a>The given specific surface
+		  type is fitted in a least squares sense to the set of points given on
+		  successive commands, the points on the last 
+		  <b>n EDGES</b>, or 
+		  <b>EDGES i</b> through 
+		  <b>i'</b> by 
+		  <b>i".</b> 
+		</li>
+ 
+		<li id="FITTED_ASAP_Command__li_EB2632FC94554625BDBC957785F8018B"><a name="FITTED_ASAP_Command__li_EB2632FC94554625BDBC957785F8018B"><!-- --></a>When entering points
+		  directly, the first point always becomes the surface’s reference point.
+		  However, if the literal option is placed after the first three entries, this
+		  reference point is not on the surface (constant coefficient non-zero), and all
+		  other points entered are either measured 
+		  <b>ABS</b>olutely or 
+		  <b>REL</b>atively from it. The 
+		  <b>VECTOR</b> options puts each data point in the current
+		  3D file as a dot of color c (default 1) for later plotting by a 
+		  <b>REPLOT</b>, 
+		  <b>DRAW</b> or 
+		  <b>$VIEW</b> command. 
+		</li>
+ 
+		<li id="FITTED_ASAP_Command__li_5AAE5EA3D9D1427F9298240AD09D21C1"><a name="FITTED_ASAP_Command__li_5AAE5EA3D9D1427F9298240AD09D21C1"><!-- --></a>The input points can be
+		  remapped by specifying the coordinate (X, Y, or Z) that each triplet value
+		  actually corresponds to. Alternatively, you can remap each input triplet using
+		  a previously defined 
+		  <b>$FCN</b> 
+		  <b>fcn</b> that takes _1,_2,_3 as the entered values and
+		  returns three results. This latter capability could be used to convert input
+		  points in cylindrical or spherical coordinates to their required Cartesian
+		  equivalents. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#FITTED">FITTED
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_F-ref.html" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “F”.">Commands and Macros (F)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DIMENSIONS_ASAP-cmdref.html" title="Displays a table of maximum array dimensions for the most important program arrays.">DIMENSIONS (ASAP Command)</a></div>
+<div><a href="../Commands/DRAWING_ASAP-cmdref.html" title="Plots a four-view drawing of the current system geometry.">DRAWING (ASAP Command)</a></div>
+<div><a href="../Commands/FCN_macro_ASAP-cmdref.html" title="Defines new in-line math functions.">$FCN (ASAP Macro)</a></div>
+<div><a href="../Commands/GENERAL_ASAP-cmdref.html" title="Creates a general surface defined by polynomial coefficients.">GENERAL (ASAP Command)</a></div>
+<div><a href="../Commands/LOCAL_ASAP-cmdref.html" title="Assigns a local bounding box to the surface/function.">LOCAL (ASAP Command)</a></div>
+<div><a href="../Commands/LSQFIT_ASAP-cmdref.html" title="Controls the singular value decomposition least squares fitting algorithm.">LSQFIT (ASAP Command)</a></div>
+<div><a href="../Commands/REPLOT_ASAP-cmdref.html" title="Plots data stored in the 3D vector file within the currently defined graphics window.">REPLOT (ASAP Command)</a></div>
+<div><a href="../Commands/VIEW_macro_ASAP-cmdref.html" title="Immediately processes the system geometry in the current 3D vector file (*.vcr) using the operating system command defined with the VIEWER switch or environment variable.">$VIEW (ASAP Macro)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

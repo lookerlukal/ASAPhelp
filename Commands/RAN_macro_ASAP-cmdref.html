@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="$RAN (ASAP Macro)"/>
+<meta name="abstract" content="Resets the random number seed for the &#34;~&#34; operator to the integer i (default 2000000001)."/>
+<meta name="description" content="Resets the random number seed for the &#34;~&#34; operator to the integer i (default 2000000001)."/>
+<meta name="DC.subject" content="$RAN (ASAP Macro), macros, $RAN, random number seed, resetting"/>
+<meta name="keywords" content="$RAN (ASAP Macro), macros, $RAN, random number seed, resetting"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_R-ref.html#Commands_and_Macos_R"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GRID_DATA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ROUGHNESS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SEED_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Macro_Language-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=33"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="RAN_ASAP_Macro"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>$RAN (ASAP Macro)</title>
+</head>
+<body id="RAN_ASAP_Macro"><a name="RAN_ASAP_Macro"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>$RAN (ASAP Macro)</h5></span>
+	
+	
+	<div><p>Resets the random number seed for the "~" operator to the integer <span class="option">i</span>
+		(default 2000000001). </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+$RAN [ i ] [DEC]
+      BEST
+      </pre>
+
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="RAN_ASAP_Macro__ul_F96637138F014EFE9F34F2C5810F6B88"><!-- --></a><ol id="RAN_ASAP_Macro__ul_F96637138F014EFE9F34F2C5810F6B88">
+			<li id="RAN_ASAP_Macro__li_15A7928177784E299533EE6171EC4387"><a name="RAN_ASAP_Macro__li_15A7928177784E299533EE6171EC4387"><!-- --></a>The default uniform random number generator
+				(upon which all others are based) is identical to that used on the DEC (Digital
+				Equipment Corporation) systems. You can switch to the <b>BEST</b>
+				possible generator based on the same algorithm but using different numerical
+				constants and thus a different seed sequence. </li>
+
+			<li id="RAN_ASAP_Macro__li_546C16F0C001447888D354FFF8788CCC"><a name="RAN_ASAP_Macro__li_546C16F0C001447888D354FFF8788CCC"><!-- --></a><b>$RAN</b> affects only the ~
+				(tilde) operator. Use <b>SEED</b> to reset the seed for random numbers
+				for all other random number generation; for example for <b>GRID</b>
+				<b>RANDOM</b> and <b>EMITTER</b> commands. </li>
+
+		</ol>
+
+		<p>
+			<a href="/example_scripts.html#$RAN">$RAN (ASAP Macro)</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_R-ref.html#Commands_and_Macos_R" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “R”.">Commands and Macros (R)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/ASAP_Macro_Language-conc.html">ASAP Macro Language</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/EMITTING_ASAP-cmdref.html" title="Creates a composite single-source emitter from several EMITTING volume commands.">EMITTING (ASAP Command)</a></div>
+<div><a href="../Commands/GRID_DATA_ASAP-cmdref.html" title="Creates a rectangular grid of rays.">GRID DATA (ASAP Command)</a></div>
+<div><a href="../Commands/ROUGHNESS_ASAP-cmdref.html" title="Assigns a roughness to the entity of an object, and conserves energy between specular and scattered beams.">ROUGHNESS (ASAP Command)</a></div>
+<div><a href="../Commands/SEED_ASAP-cmdref.html" title="Initializes the seed for the random number generator.">SEED (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=33" target="_blank">See the Knowledge Base for the technical publication, Predefined Macros</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

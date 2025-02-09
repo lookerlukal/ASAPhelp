@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Sharing Library Files"/>
+<meta name="abstract" content="In environments where multiple engineers work together, you may want to share ASAP library files (*.LIB). If the PC's running ASAP are connected via a LAN, two methods in which LIB files can be shared enable you to modify a LIB file so that other staff can use the information."/>
+<meta name="description" content="In environments where multiple engineers work together, you may want to share ASAP library files (*.LIB). If the PC's running ASAP are connected via a LAN, two methods in which LIB files can be shared enable you to modify a LIB file so that other staff can use the information."/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Macro_Language-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Calling_a_Macro-ref.html#Calling_a_Macro"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Defining_a_Macro_from_the_Input_Stream-ref.html#Defining_a_Macro_from_the_Input_Stream"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Internally_Defined_Macros-conc.html#Internally_Defined_Macros"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/User_Defined_Macros-ref.html#User_Defined_Macros"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Increasing_Macro_Command_Execution_Speed-task.html#Increasing_Macro_Command_Execution_Speed"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Creating_a_Macro_Library_File-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Sharing_Library_Files"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Sharing Library Files</title>
+</head>
+<body id="Sharing_Library_Files"><a name="Sharing_Library_Files"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Sharing Library Files</h5></span>
+	
+	<div><p>In environments where multiple engineers work together, you may want to share ASAP library files (*.LIB). If the PC's running ASAP are connected via a LAN, two methods in which LIB files can be shared enable you to modify a LIB file so that other staff can use the information.</p>
+
+		<div class="section" id="Sharing_Library_Files__section_57F28FA461014F6DB9CC099DDA4F6483"><a name="Sharing_Library_Files__section_57F28FA461014F6DB9CC099DDA4F6483"><!-- --></a><span style="color: #2b6eb5"><h5>Method 1 </h5></span>
+			
+			<p>From a performance standpoint this method is not the best choice, but it does demonstrate that files can live almost anywhere. The <b>$IO LIBRARY</b> command can specify a drive and subdirectory to where a library file is located:</p>
+
+			<pre class="codeblock">
+$IO LIBRARY "u:\asap_lib\SOURCES.lib"
+</pre>
+
+			<br/><a name="Sharing_Library_Files__ul_0574510EF03E465B9333BCA0DEA39A45"><!-- --></a><ul id="Sharing_Library_Files__ul_0574510EF03E465B9333BCA0DEA39A45">
+				<li id="Sharing_Library_Files__li_F0008985D0AA4D9CAC5E52E63EE58C19"><a name="Sharing_Library_Files__li_F0008985D0AA4D9CAC5E52E63EE58C19"><!-- --></a>Note that double quotes are used to delimit the long path name. The quotes are necessary because of the special characters typical of a DOS path, which ASAP would otherwise interpret incorrectly.</li>
+
+				<li id="Sharing_Library_Files__li_B134F54134C64545BE65C206D5CA4D54"><a name="Sharing_Library_Files__li_B134F54134C64545BE65C206D5CA4D54"><!-- --></a>The performance issue is that when a macro from a library is called, this file is read in order (from the top, down) to locate the requested macro. Since the drive is a network drive, this takes more time than if the file is located on the local PC. </li>
+
+				<li id="Sharing_Library_Files__li_F0D9417B29624F489F73BAB1F840ABDD"><a name="Sharing_Library_Files__li_F0D9417B29624F489F73BAB1F840ABDD"><!-- --></a>Depending on your LAN environment you may not be able to have multiple people accessing the LIB file simultaneously. Also, it is important to remember to close the library file at the end of the INR file with the <b>$IO LIBRARY CLOSE </b>command.</li>
+
+			</ul>
+
+		</div>
+
+		<div class="section" id="Sharing_Library_Files__section_CDBB45C13B664F2AB37E774F1A8470AE"><a name="Sharing_Library_Files__section_CDBB45C13B664F2AB37E774F1A8470AE"><!-- --></a><span style="color: #2b6eb5"><h5>Method 2 </h5></span>
+			
+			<p>The goal is for you to have access to the latest version of the library files each time you run your INR files. Within the ASAP scripting language, the <b>$SYS</b> command runs a DOS-level command. Prior to opening the LIB file, the main running INR file can copy the LIB file from the LAN to the local PC. </p>
+
+			<pre class="codeblock">
+$SYS "COPY U:\USR\ASAP_LIB\SOURCES.LIB *.*"
+$IO LIB "SOURCES.lib"
+</pre>
+
+			<p>When the INR is run, a DOS box appears briefly.</p>
+
+			<p> A variation is the "Default Setup File" option. </p>
+
+			<br/><a name="Sharing_Library_Files__ul_608FF899DDD9444EB21FF39C5E4586D3"><!-- --></a><ul id="Sharing_Library_Files__ul_608FF899DDD9444EB21FF39C5E4586D3">
+				<li id="Sharing_Library_Files__li_0D329482EB534287912A984E730A4A87"><a name="Sharing_Library_Files__li_0D329482EB534287912A984E730A4A87"><!-- --></a><p>Open the ASAP Preferences dialog from the Settings menu. Click the "Default Setup File" tab. For example, create a new file in an ASAP editor window called SETUP.INR.  Place the following command in this file:</p>
+
+					<pre class="codeblock">
+$SYS "COPY U:\USR\ASAP_LIB\SOURCES.LIB C:\ASAP_LIB\*.*"
+</pre>
+</li>
+
+				<li id="Sharing_Library_Files__li_19CF4C4DD2B148628DC6B597A83949EE"><a name="Sharing_Library_Files__li_19CF4C4DD2B148628DC6B597A83949EE"><!-- --></a>Save this SETUP.INR file before you run another INR file. </li>
+
+				<li id="Sharing_Library_Files__li_029D9676B1BC449596D7FF7B2496EAB3"><a name="Sharing_Library_Files__li_029D9676B1BC449596D7FF7B2496EAB3"><!-- --></a><p>Open the ASAP Preferences dialog from the Settings menu. Click "Default Setup File" tab. You can either browse to the location of the SETUP.INR file you just created, or type the drive, directory, and SETUP.INR in the space provided. Click OK to close the dialog. ASAP runs this file when you start ASAP as well as any time you click on the END toolbar button or an END command is issued. You can then use the $IO LIBRARY command as usual:</p>
+
+					<pre class="codeblock">
+$IO LIB "c:\asap_lib\SOURCES.lib"
+</pre>
+</li>
+
+				<li id="Sharing_Library_Files__li_404E50D78A204CEAAFDA72E81BAE4DF1"><a name="Sharing_Library_Files__li_404E50D78A204CEAAFDA72E81BAE4DF1"><!-- --></a>Virtually any DOS command can be used in with <b>$SYS</b>. Even a .BAT file, which gives you another level of flexibility and power.</li>
+
+			</ul>
+
+		</div>
+
+	</div>
+ 
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/ASAP_Macro_Language-conc.html">ASAP Macro Language</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Internally_Defined_Macros-conc.html#Internally_Defined_Macros" title="The internally defined macros are contained within the parser (and therefore are always available). These macros give the program looping, input/output redirection, conditional (IF) processing, branching, and other advanced capabilities. Internally defined macros may be used freely in both user-defined macros and general input commands and may appear more than once in a given record.">Internally Defined Macros</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Increasing_Macro_Command_Execution_Speed-task.html#Increasing_Macro_Command_Execution_Speed">Increasing Macro Command Execution Speed</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Calling_a_Macro-ref.html#Calling_a_Macro" title="A macro command is unformatted like all other commands. There can be only one user macro command per input record and it should be the last command on the record. The first entry of a macro command is either a dollar sign &#34;$&#34; or ampersand &#34;&amp;&#34; followed immediately by the macro name. The name can be of any length but only the first 32 characters are significant. The dollar sign &#34;$&#34; causes the program to print the commands in the macro definition after the variables have been replaced by their corresponding arguments. Only the macro command itself is printed when the ampersand &#34;&amp;&#34; is used.">Calling a Macro</a></div>
+<div><a href="../Reference/Defining_a_Macro_from_the_Input_Stream-ref.html#Defining_a_Macro_from_the_Input_Stream" title="Instead of defining macros in the library file, you can create individual macro files directly from the input stream. There are two formats, a short or long, respectively:">Defining a Macro from the Input Stream</a></div>
+<div><a href="../Reference/User_Defined_Macros-ref.html#User_Defined_Macros" title="User-defined macros can be defined and used within an ASAP input file (*.INR) or defined and placed within a macro library for later use. In either case the syntax is the same.">User-Defined Macros</a></div>
+<div><a href="../Reference/Creating_a_Macro_Library_File-ref.html" title="Multiple macro definitions are stored in a library on logical unit 24 by default. Definitions may be created either directly by an ASCII editor or during the decoding of the input by the program.">Creating a Macro Library File</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Calculating Phase Transfer Functions"/>
+<meta name="abstract" content="While Modulation Transfer Function (MTF) calculations are by far the more common of the two, there are instances when the Phase Transfer function (PTF) is also needed to completely characterize the imaging properties of an optical system."/>
+<meta name="description" content="While Modulation Transfer Function (MTF) calculations are by far the more common of the two, there are instances when the Phase Transfer function (PTF) is also needed to completely characterize the imaging properties of an optical system."/>
+<meta name="DC.subject" content="Calculating Phase Transfer Functions, phase transfer functions, calculating, PTF"/>
+<meta name="keywords" content="Calculating Phase Transfer Functions, phase transfer functions, calculating, PTF"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_ABC-ref.html#Reference_AC"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FFT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TRANSPOSE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Calculating_Geometrical_MTFs-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Calculating_Modulation_Transfer_Functions-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Calculating_Phase_Transfer_Functions"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Calculating Phase Transfer Functions</title>
+</head>
+<body id="Calculating_Phase_Transfer_Functions"><a name="Calculating_Phase_Transfer_Functions"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Calculating Phase Transfer Functions</h5></span> 
+   
+  
+  <div><p>While Modulation Transfer Function (MTF) calculations are by far
+	 the more common of the two, there are instances when the Phase Transfer
+	 function (PTF) is also needed to completely characterize the imaging properties
+	 of an optical system.
+  </p>
+ 
+	 <div class="section"> 
+		<p>By definition, the OTF is defined as the Fourier transform of the
+		  point spread function. The OTF is in general a complex function that may be
+		  written in the form:
+		</p>
+ 
+		<p>OTF(v_x,v_y) = MTF(v_x, v_y)EXP[iPTF(v_x,v_y)]
+		</p>
+ 
+		<p>The FFT command by default extracts the MTF from the OTF and places it
+		  into the distribution data file. The 
+		  <b>FFT WAVEFRONT 
+		  </b> and 
+		  <b>FFT PHASE 
+		  </b> commands extract the PTF from the OTF and place it into the
+		  distribution data file. The 
+		  <b>FFT WAVEFRONT 
+		  </b> command attempts to remove the 
+		  <b>2π</b> phase steps (or jumps) by integrating in the across direction
+		  as set by the WINDOW command. When doing both tangential and radial PTF
+		  calculations, it may be necessary to re-enter DISPLAY and TRANSPOSE the data
+		  prior to calling 
+		  <b>FFT WAVEFRONT 
+		  </b> a second time.
+		</p>
+ 
+		<p>To select the center of the PTF curve for plotting, it is usually
+		  necessary to use 
+		  <b>GRAPH 0.5</b> rather than the default since the maximum value of the
+		  PTF is not likely to be coincident with the maximum of the data.
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_ABC-ref.html#Reference_AC" title="Reference topics in this section begin with the letters &#34;A&#34; to &#34;C&#34;.">Reference (A-C)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Calculating_Geometrical_MTFs-ref.html" title="In optical systems where the residual aberrations are large, the diffraction MTF can be difficult to compute. Consequently, an analogous measure of performance, the MTF is defined. Whereas, the diffraction Modulation Transfer Function (MTF) is the Fourier transform of the Point Spread Function (PSF), the geometrical MTF is a Fourier transform of the spot diagram.">Calculating Geometrical MTFs</a></div>
+<div><a href="../Reference/Calculating_Modulation_Transfer_Functions-ref.html" title="The Modulation Transfer Function (MTF) characterizes the contrast performance of an optical system as a function of spatial frequencies. It is the modulus of the Optical Transfer Function (OTF).">Calculating Modulation Transfer Functions</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/FFT_ASAP-cmdref.html" title="Calculates the spatial frequency spectrum of current distribution data.">FFT (ASAP Command)</a></div>
+<div><a href="../Commands/TRANSPOSE_ASAP-cmdref.html" title="Rotates the current distribution data by 90 degrees.">TRANSPOSE (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

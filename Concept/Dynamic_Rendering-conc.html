@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Dynamic Rendering"/>
+<meta name="abstract" content="The ASAP 3D Viewer is linked to the OpenGL libraries for real-time, dynamic rendering of systems and ray traces."/>
+<meta name="description" content="The ASAP 3D Viewer is linked to the OpenGL libraries for real-time, dynamic rendering of systems and ray traces."/>
+<meta name="DC.subject" content="Dynamic Rendering, 3D Viewer, dynamic rendering, OpenGL libraries, dynamic rendering"/>
+<meta name="keywords" content="Dynamic Rendering, 3D Viewer, dynamic rendering, OpenGL libraries, dynamic rendering"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_DEF-ref.html#Reference_DEF"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OPTICAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_EDGES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_FACETS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TORUS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TRACE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/VIEW_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Rendering-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Static_Rendering-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Rendering-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Dynamic_Rendering"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Dynamic Rendering</title>
+</head>
+<body id="Dynamic_Rendering"><a name="Dynamic_Rendering"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Dynamic Rendering</h5></span> 
+   
+  
+  <div><p>The ASAP 3D Viewer is linked to the OpenGL libraries for
+	 real-time, dynamic rendering of systems and ray traces.
+  </p>
+ 
+	 <p>Typically, this is done with the 
+		<b>PLOT FACETS</b> command, which is capable of generating
+		polygon facets for most types of objects. (<b>PLOT EDGES</b> is
+		effective for edge-based objects.) This information, like all 3D data, is
+		stored in the BRO030.dat or *.vcr file. Any ray trace data generated with the 
+		<b>TRACE PLOT</b> command is also stored in these files. By
+		issuing a series of 
+		<b>PLOT</b> and 
+		<b>TRACE</b> commands, you can generate enough 3D information
+		for sophisticated renderings.
+	 </p>
+ 
+	 <p>Once 3D data are generated, the preferred way to view the rendering is
+		to enter the 
+		<b>$VIEW</b> macro command from the Command Input window, or
+		select 
+		<b>3D View</b> from the Graphics menu. This flushes the output buffer,
+		closes the *.vcr file, opens a 3D Viewer (render) window, and opens the *.vcr
+		file as input to the 3D Viewer window. Alternatively, you can open a 3D Viewer
+		window from 
+		<i>View &gt; 3D View</i>.
+	 </p>
+ 
+	 <p>With a series of 
+		<b>PLOT 
+		</b> and 
+		<b>TRACE</b> commands, ASAP can generate enough 3-D
+		information for sophisticated renderings.
+	 </p>
+ 
+	 <div class="section" id="Dynamic_Rendering__section_F8973258A58F49559FA8C247656FF0F8"><a name="Dynamic_Rendering__section_F8973258A58F49559FA8C247656FF0F8"><!-- --></a><span style="color: #2b6eb5"><h5>Tips</h5></span> 
+		 
+		<br/><a name="Dynamic_Rendering__ul_1255320E5750442A909230FD6AC11E30"><!-- --></a><ul id="Dynamic_Rendering__ul_1255320E5750442A909230FD6AC11E30"> 
+		  <li id="Dynamic_Rendering__li_FEFEBCD63F084D28A74B83FFA4811061"><a name="Dynamic_Rendering__li_FEFEBCD63F084D28A74B83FFA4811061"><!-- --></a>When issuing a series of 
+			 <b>TRACE PLOT 
+			 </b> commands, ASAP cannot always generate polygon information
+			 for objects based upon surfaces/functions, and therefore some objects may be
+			 missing from the rendering. For example, nearly planar objects constructed with
+			 the OPTICAL command will be rendered properly; a steeply curved one may not.
+		  </li>
+ 
+		  <li id="Dynamic_Rendering__li_7747E413F8F64780A78C82C0D2A43CF5"><a name="Dynamic_Rendering__li_7747E413F8F64780A78C82C0D2A43CF5"><!-- --></a>The TORUS surface/function
+			 can present problems for the rendering. Depending upon the local and global
+			 limits boxes and any bounds that might be present, a torus object may not be
+			 rendered either. If objects are missing from your rendering, use the static
+			 rendering technique to visualize your system.
+		  </li>
+ 
+		  <li id="Dynamic_Rendering__li_9BEC2584DC6C46C793E9E0AB7D08C192"><a name="Dynamic_Rendering__li_9BEC2584DC6C46C793E9E0AB7D08C192"><!-- --></a>Shaded renderings often
+			 require the display of many colors at once. If the X-windows palette does not
+			 have sufficient colors, image quality may suffer. To get the best results with
+			 the 3D Viewer window, use a display mode with 65556 colors or true color
+			 (24-bit).
+		  </li>
+ 
+		</ul>
+ 
+	 </div>
+ 
+	 <div class="section" id="Dynamic_Rendering__section_14D46F05537F47928EC563B135C353AB"><a name="Dynamic_Rendering__section_14D46F05537F47928EC563B135C353AB"><!-- --></a> 
+		<div class="note"><span class="notetitle">Note:</span> The 3D Viewer window may not work properly if the display is in
+		  256-color mode.
+		</div>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_DEF-ref.html#Reference_DEF" title="Reference topics in this section begin with the letters &#34;D-E-F&#34;.">Reference (D-F)</a></div>
+</div>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Rendering-conc.html" title="The two types of rendering supported in ASAP are described in this topic.">Rendering</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Rendering-conc.html" title="The two types of rendering supported in ASAP are described in this topic.">Rendering</a></div>
+<div><a href="../Concept/Static_Rendering-conc.html" title="You can create a rendering of the system geometry by setting the appropriate WINDOW and PIXEL values (and optionally, LIGHT values), and then entering the RENDER command. The RENDER command traces a grid of rays whose density is determined by the PIXEL command through the viewing window.">Static Rendering</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/OPTICAL_ASAP-cmdref.html" title="Creates aspheric surfaces normal to the axis of symmetry.">OPTICAL (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_EDGES_ASAP-cmdref.html" title="Plots a wireframe outline of edges in the currently specified graphics window.">PLOT EDGES (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_FACETS_ASAP-cmdref.html" title="Plots parametric mesh representation of objects in the currently specified graphics window.">PLOT FACETS (ASAP Command)</a></div>
+<div><a href="../Commands/TORUS_ASAP-cmdref.html" title="Creates a toroidal or doughnut surface.">TORUS (ASAP Command)</a></div>
+<div><a href="../Commands/TRACE_ASAP-cmdref.html" title="Traces all currently selected rays in storage.">TRACE (ASAP Command)</a></div>
+<div><a href="../Commands/VIEW_ASAP-cmdref.html" title="Make all future plots a true perspective view.">VIEW (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

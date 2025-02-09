@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Version 6.0"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Release_Notes-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_6_5-ref.html#Version_6_5"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_5_1.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Version_6_0"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Version 6.0</title>
+</head>
+<body id="Version_6_0"><a name="Version_6_0"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Version 6.0</h5></span>
+	<div>
+		<div class="section">
+			<p>Release Notes for ASAP 6.0 Kernel as of May 21, 1998</p>
+
+		</div>
+
+		<div class="section"><span style="color: #2b6eb5"><h5>Important Changes (NO BACKWARD COMPATABILITY!) </h5></span>
+			
+			<pre class="codeblock">
+LENS conicoid with 0 curvature treats "conic" entry as 4th-order deformation.
+DEFORM no longer accesses a user-programmable Fortran routine.
+POLYNOMIAL scatter model redefined to guarantee reciprocity.</pre>
+
+		</div>
+
+		<div class="section"><span style="color: #2b6eb5"><h5>New Commands</h5></span>
+			
+			<pre class="codeblock">
+BRANCH changes default (current) position in object name hierarchy.
+TREE displays indented object name (and optionally entity) hierarchy.
+CURVE/EDGE
+PATCHES makes current data actually define a rational Bezier surface mesh.
+UVSPACE tags current curve to be defined in parametric-space of an object.
+COARSEN converts edge to a coarser (less dense) piecewise linear curve.
+BEZIER converts explicit polynomial to the equivalent-order Bezier segment.
+USERCURVE piecewise linear parametric curve or surface from $FCN definition.
+LENS
+TELESCOPE one/two mirrors with/without corrector and/or field flattener.
+DISPLAY
+ABEL transform (or INVERSE) of current distribution.
+THRESHOLD can be used to reset the floor and/or ceiling of data values.
+PLOT CURVES same as EDGES except control points are also displayed.
+GRID
+WINDOW creates a rectangular grid of rays that fills the current window.
+DATA creates rectangular grid of rays weighted by distribution in file.
+VUFACETS shortcut for facetting and viewing current objects.
+SURFACE/FUNCTION
+USERSAG creates a surface with a user-defined radial or toric profile.
+EXPLICIT converts current function to explicit form (e.g. for DEFORM).
+DUMP currently selected rays to a binary file (DIS format).
+EMITTING DATA creates rays from data in given binary distribution file.
+Linear Transformations
+SCALE FROM given length units to the current system UNITS.
+MODEL
+NONLINEAR in free parameters (generalizes combination of Phong and Harvey).</pre>
+
+		</div>
+
+		<div class="section"><span style="color: #2b6eb5"><h5>Enhanced Commands </h5></span>
+			
+			<pre class="codeblock">
+LENS
+SINGLET...APLANAT option bends and aspherizes to remove spherical and coma.
+IDEAL
+RANdomize output azimuthally (e.g. incoherent fiber optic simulation).
+Specify $FCN function for radial position and direction apodization.
+CAD IGES
+Now exports COLOR index information.
+Upgraded to ANSI 5.3 standard (e.g. year 2000 dates).
+System UNITS don’t have to be specified in advance anymore.
+TRACE STATS also displays any flux absorbed by MEDIA.
+PATH
+Output can now be controlled with SHORT/MEDIUM/LONG option.
+Suppress listing paths containing less than a specified number of rays.
+CURVE/EDGE
+SMOOTH can now do cubic interpolation in addition to quadratic.
+COMPOSITE can now also contain closed edges like RACETRACK.
+INTERFACE
+DIFFRACT function can now be ARRAYed (holographic lens arrays).
+REPEAT can also reset/remove current properties.
+OBJECT
+...NORMAL/SURFACE alternate function can now be ARRAYed.
+FACETS can specify either minimum, fixed, or maximum number.
+ROUGHNESS allows for only a FRACTION of the incident rays to be RANDOMized.
+SPOTS
+Can now also mark each ray with its NUMBER.
+Only EVERY nth ray can be plotted without affecting distribution file.
+CONSIDER now has ADD/REMOVE forms for updating current state.
+NUMBERS can now show current storage usage with new SUMMARY option.
+FLUX can now alter ray fluxes to give desired TOTAL flux.
+SCATTER
+REPEAT copies a previous object’s or removes current scatter properties.
+MODELS for specifying separate reflective and transmissive BSDFs.
+TOWARDS SPECular can be just for REFLected or TRANsmitted rays.
+SELECT
+Split or scatter GENERATION number.
+If ray was split at a certain object.
+Those paths not listed in last PATH command.
+USERAPOD ANGLES has a new short form with no angle clipping entries.
+VUFACETS and PLOT FACETS can minimize facetting on some objects when possible.
+APODIZE POS/DIR can set apodization axis (default is average axis of rays).
+SURFACE/FUNCTION
+REVOLUTION can now do a better fit on up to 1000 coordinate pairs.
+ZERNIKE default aperture is unit circle but can be reset to RECT or ELLIP.
+FITTED FIXTERM option no longer needed in most circumstances.
+DISPLAY
+FOLD can now take an optional pixel number.
+CONTOUR LOW/HIGH and VECTOR options can now be used together.
+GRAPH can now AUTOscale the specified data subset.
+DECOMPOSE
+POS can optionally use a nearby wavefront to avoid phase ambiguity.
+Overall beam direction can be set by sign in front of POS or DIR entry.
+SELECT ray flags has been increased in number by a factor of 4.
+MODEL
+BSDFDATA internal buffer increased from 2000 to 10000 BSDF values.
+Number of PLOTted incident/specular directions increased from 5 to 7.
+SUM is now fully recursive, i.e. it can reference other SUM models.
+USERBSDF now also passes wavelength to user-defined function.
+SYSTEM now stores and recalls any required user $FCN definitions.
+SHAPE of a beam can be the fundamental mode of a circular step-index FIBRe.
+FIELD can now COUPLE or MULTIPLY the current distribution with a previous one.
+Option to temporarily override window directions and size on any plot.
+MATRIX can recall the orientation (or inverse) of a given surface entity.
+EMITTING
+OBJECT/ENTITY can direct rays parallel to local surface normal.
+DISK/RECT can now be of zero size (point source).
+SEED QUASI with zero seed value implements a special non-random case.
+PLOT ENTI/SURF/EDGE/CURV/LENS now autoscale on the given set of entities.
+REPLOT interrogation coordinates also put in output buffer for $GRAB and $PLAY.</pre>
+
+		</div>
+
+		<div class="section"><span style="color: #2b6eb5"><h5>Macro Language</h5></span>
+			
+			<pre class="codeblock">
+&amp;STO/&amp;RCL write/read variables to a portable text version of REG file.
+&amp;REG with no text string now outputs numeric values in assignment format.
+$FAST can now handle complex number input and scaling.
+$GUI sends window-related commands to the GUI front-end.
+$IO OUTPUT file ... now has complement to ONLY action called BOTH.
+New math functions
+BK0 and BK1 modified Bessel functions.
+$PLOT EACH option added.
+$READ input from a file and automatically return to calling macro or file.
+$ITER
+Can act as a simple nested loop structure when no function is specified.
+&amp;ITER same but automatically cancels output during execution.
+$UNVAR controls uninitialized variable/register messages.
+$ABORT returns (from any depth and as soon as possible) to the command prompt.
+$LEAVE can optionally specify the number of construct levels.</pre>
+
+		</div>
+
+		<div class="section"><span style="color: #2b6eb5"><h5>Other Improvements or Changes</h5></span>
+			
+			<pre class="codeblock">
+*.REG and (as usual) *.SYS files are incompatible with previous versions.
+Added option to stop or resume an interrupted (paused) calculation.
+ASAP-Pro changes in maximum numbers:
+Objects 2,000 ==&gt; 3,000
+Pixels 1,000 ==&gt; 1,600
+Paths 50,000 ==&gt; 160,000
+SVD fit 3,484 ==&gt; 8,919
+FFT size 512 ==&gt; 1024
+Ray Flags 8M ==&gt; 32M (SELECT still works with any number of rays)
+All timing outputs display both elapsed and CPU times.
+USERPROG user-programmable Fortran routines
+Compile with Digital Visual Fortran (Microsoft Powerstation discontinued).
+Additional arguments have been added to apodization routines.
+USERSAG use and meaning has completely changed.
+Default USERANGS and USERBOTH can now access data files of any size.
+SAVE file record length increased from 11 to 12 words (44 to 48 bytes).
+Some source code takes advantage of the latest Fortran-95 features.
+Eliminated all use of the "config.bro" file.
+Superfluous EMIT, ROUGH, and TOWARDS calls to random number generator removed.
+Bezier division of full circles (ARC and SWEEP AXIS) increased from 3 to 4.
+Old DIS file format (version 5.0 and lower) no longer supported.
+Outputs adjusted to handle ray numbers greater than 100 million.</pre>
+
+		</div>
+
+		<div class="section"><span style="color: #2b6eb5"><h5>IGES to ASAP Translator</h5></span>
+			
+			<pre class="codeblock">
+Now imports COLOR index information.
+Added new (command line) options:
+Bring in ALL independent geometry not just visible surfaces.
+Set maximum degree-product of any PATCHES.
+Suppress ASAP plot commands near end of file.
+Route messages to a LOG file instead of the console.
+Plot denser MESH for spline surfaces.
+Specify ROOT name for object hierarchy.
+Create specific SURFace-based objects when possible.
+Use parameteric space TRIMming instead of model space bounds.
+Use a looser spatial tolerance than global section Model Space Resolution.
+Uses Levels and Groups to form object name hierarchy.
+Automatically simplifies piecewise linear curves.
+Very dense higher-order splines are automatically sub-sampled.
+Simplifies spline surfaces that are actually extruded or revolved curves.
+More intelligently sets the SWEEP point for trimming curves.
+Automatically scales IGES units to ASAP system UNITS at time of import.</pre>
+
+		</div>
+
+	</div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Release_Notes-ref.html" title="Topics in this section include all known release notes for ASAP up to the last version. Release notes for the current version can be viewed in the ASAP Command Output window, or opened from your ASAP installation root folder.">Release Notes</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a href="../Reference/Version_6_5-ref.html#Version_6_5" title="This topic outlines addition and changes to the kernel and to the user interface.">Version 6.5</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a href="../Reference/Version_5_1.html">Version 5.1</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

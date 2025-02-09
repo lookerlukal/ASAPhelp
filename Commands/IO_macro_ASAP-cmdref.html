@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="$IO (ASAP Macro)"/>
+<meta name="abstract" content="Controls I/O redirection."/>
+<meta name="description" content="Controls I/O redirection."/>
+<meta name="DC.subject" content="$IO (ASAP Macro), macros, $IO, input/output, controlling redirection, redirecting input/output"/>
+<meta name="keywords" content="$IO (ASAP Macro), macros, $IO, input/output, controlling redirection, redirecting input/output"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_I-ref.html#Commands_and_Macros_I"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SEARCH_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="IO_ASAP_Macro"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>$IO (ASAP Macro)</title>
+</head>
+<body id="IO_ASAP_Macro"><a name="IO_ASAP_Macro"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>$IO (ASAP Macro)</h5></span>
+	
+	
+	<div><p>Controls I/O redirection. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+$IO iotype n           iotype' ...
+           literal
+           file [ n ]
+$IO [ n ]
+      </pre>
+
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="IO_ASAP_Macro__ul_63E6F4FCC3F94D22B346F87CDF3A6593"><!-- --></a><ol id="IO_ASAP_Macro__ul_63E6F4FCC3F94D22B346F87CDF3A6593">
+			<li id="IO_ASAP_Macro__li_A67DC8D78A8B4D4D85EAD3BB9E65A432"><a name="IO_ASAP_Macro__li_A67DC8D78A8B4D4D85EAD3BB9E65A432"><!-- --></a>Redirects the ASCII I/O specified by the
+					<b>iotype</b> to another <b>file</b> or logical unit
+				number <b>n</b>
+			</li>
+
+			<li id="IO_ASAP_Macro__li_6357A1F2C9C146B1B8CA2D5C22A92DB2"><a name="IO_ASAP_Macro__li_6357A1F2C9C146B1B8CA2D5C22A92DB2"><!-- --></a>The significance and defaults are described
+				in the following table. <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span><i>Input/Output Type </i></span></th><th><span><i>N </i></span></th><th><span><i>DefaultName(*.DAT) </i></span></th><th><span><i>Extension </i></span></th><th><span><i>Description</i>
+						</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>INPUT</span></td><td><span>1</span></td><td><span>BRO001</span></td><td><span>INR</span></td><td><span>Default command input</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>LIBRARY</span></td><td><span>24</span></td><td><span>BRO024</span></td><td><span>LIB</span></td><td><span>Macro library (new precedence expressions). See Note.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>MACRO</span></td><td><span>24</span></td><td><span>BRO 024</span></td><td><span>MAC</span></td><td><span>Macro library (old left-right expressions). See Note.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>OUTPUT</span></td><td><span>6</span></td><td><span>BRO 006</span></td><td><span>OUT</span></td><td><span>Default nongraphical text output</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>GRAPHICS</span></td><td><span>6</span></td><td><span>BRO 006</span></td><td><span>OUT</span></td><td><span>Character graphics output (off by default)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>USER</span></td><td><span>7</span></td><td><span>BRO 007</span></td><td><span>USR</span></td><td><span>Archive of interactively entered commands</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>*</span></td><td><span>8</span></td><td><span>BRO 008</span></td><td><span/></td><td><span>virtual.pgs</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>*</span></td><td><span>9</span></td><td><span>BRO 009</span></td><td><span/></td><td><span>Default distribution data file</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>PLOT</span></td><td><span>20</span></td><td><span>BRO 020</span></td><td><span>PLR</span></td><td><span>Default 2-D plot instruction output</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>LIBRARY</span></td><td><span>24</span></td><td><span>BRO 024</span></td><td><span>LIB</span></td><td><span>Macro library command input (new expression parser)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>*</span></td><td><span>29</span></td><td><span>BRO 029</span></td><td><span/></td><td><span>Complex optical field data from <b>FIELD</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>VECTOR</span></td><td><span>30</span></td><td><span>BRO 030</span></td><td><span>VCR</span></td><td><span>Default 3D vector instruction output</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>FILE</span></td><td><span>-</span></td><td><span/></td><td><span/></td><td><span>
+							<p>Arbitrary file (user must specify <b>n</b>)* </p>
+
+							<p>* I/O cannot be redirected </p>
+
+						</span></td></tr></tbody></table><div class="note"><span class="notetitle">Note:</span> 
+					<p>Library files specified with the <b>$IO LIBRARY</b> syntax is
+						searched for in the following locations, in this order: </p>
+
+					<br/><a name="IO_ASAP_Macro__ol_D1626BE3277F4582BD5C447312AE79B4"><!-- --></a><ul id="IO_ASAP_Macro__ol_D1626BE3277F4582BD5C447312AE79B4">
+						<li id="IO_ASAP_Macro__li_3B878020212D408D8EF56BDFB0E26B7B"><a name="IO_ASAP_Macro__li_3B878020212D408D8EF56BDFB0E26B7B"><!-- --></a>working directory, </li>
+
+						<li id="IO_ASAP_Macro__li_6ACB799A81E648A6B9BC36C1E6C422B9"><a name="IO_ASAP_Macro__li_6ACB799A81E648A6B9BC36C1E6C422B9"><!-- --></a><b>$SEARCH</b> path
+							elements, in the order assigned, </li>
+
+						<li id="IO_ASAP_Macro__li_CD04F6CA7AEB48C197D7CE9B23409D0D"><a name="IO_ASAP_Macro__li_CD04F6CA7AEB48C197D7CE9B23409D0D"><!-- --></a>directory containing the last
+							library specified with <b>$IO LIBRARY</b>, if any, and </li>
+
+						<li id="IO_ASAP_Macro__li_CED60E87354A43C0980E97AF66A93663"><a name="IO_ASAP_Macro__li_CED60E87354A43C0980E97AF66A93663"><!-- --></a>directory specified by the
+								<b>FILES</b> environment variable, on platforms
+							supporting environment variables. </li>
+
+					</ul>
+
+				</div>
+</li>
+
+			<li id="IO_ASAP_Macro__li_FE467125344C40688893AEC785674876"><a name="IO_ASAP_Macro__li_FE467125344C40688893AEC785674876"><!-- --></a>An <b>iotype</b> entry without
+				any trailing arguments simply closes that unit; to reopen it, type
+				<pre class="codeblock">
+$IO iotype n</pre>
+ where <b>n</b> is the file unit
+				number. </li>
+
+			<li id="IO_ASAP_Macro__li_2633D49CFD97444C8CDEA02B8FFBD75C"><a name="IO_ASAP_Macro__li_2633D49CFD97444C8CDEA02B8FFBD75C"><!-- --></a>If no entries are present, <b>$IO</b> toggles the program input between your console and the current input
+				unit assignment. This allows you to insert interactive breakpoints in the input
+				file. </li>
+
+			<li id="IO_ASAP_Macro__li_C36A600F1C684C4290BE33713F177E93"><a name="IO_ASAP_Macro__li_C36A600F1C684C4290BE33713F177E93"><!-- --></a>When directing <b>OUTPUT</b> to
+				a file, it is by default also echoed to the Command Output window. If the word
+					<b>ONLY</b> is placed after the file name instead of the unit
+				number, nothing is sent to the console. For example,
+				<pre class="codeblock">
+$IO OUTPUT file n      !both to file and console
+$IO OUTPUT file BOTH   !same
+$IO OUTPUT file ONLY   !just to file
+         </pre>
+</li>
+
+			<li id="IO_ASAP_Macro__li_AE085F2AD3FA408BA6C2494045D3231F"><a name="IO_ASAP_Macro__li_AE085F2AD3FA408BA6C2494045D3231F"><!-- --></a>A prefix character for each number or a
+				literal determines which of the following operations are performed before the unit
+				is used: </li>
+
+		</ol>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span><i>Literal</i>
+				</span></th><th><span><i>Numeric Form </i></span></th><th><span><i>Operation</i></span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>APPEND</span></td><td><span>+n</span></td><td><span>Unit <b>n</b> is positioned at the end of the file</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CANCEL</span></td><td><span>0</span></td><td><span>Output to <b>iotype (GRAPHICS, PLOT, VECTOR</b>) is suppressed</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CHANGE</span></td><td><span>n</span></td><td><span>Current position of unit <b>n</b> is not changed</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CLOSE</span></td><td><span>None</span></td><td><span>Unit associated with <b>iotype</b> is closed</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>DELETE</span></td><td><span>0n</span></td><td><span>Unit <b>n</b> is closed and the associated file is
+				deleted</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>REWIND</span></td><td><span>-n</span></td><td><span>Unit <b>n</b> is positioned at the beginning of the
+				file</span></td></tr></tbody></table>
+		<p><b>Example</b>
+		</p>
+
+		<p>To understand the relationship between unit number and file name, consider the following
+			example. </p>
+
+		<pre class="codeblock"><b>
+$IO OUTPUT JOE 2 </b>
+is equivalent to the Fortran expression:
+OPEN (unit=<b>2</b>, file="<b>JOE.OUT</b>",. . .). 
+      </pre>
+
+		<p>In this special case, text is directed to the file JOE.OUT and to the screen. Without the
+			unit number, text is directed only to the file. </p>
+
+		<p>
+			<a href="../example_scripts.html#$IO">$IO Examples</a>
+		</p>
+
+	</div>
+
+	<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_I-ref.html#Commands_and_Macros_I" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “I”.">Commands and Macros (I)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/SEARCH_macro_ASAP-cmdref.html" title="Provides user control of which paths are searched, and also the order in which paths are searched. These paths are defined and associated with symbolic names. $SEARCH specifies up to 20 paths to be searched for screen (*.scr), macro (*.mac), and macro library (*.lib) files.">$SEARCH (ASAP Macro)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Predefined ASAP Macros</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Predefined Macros at
+				http://www.breault.com/k-base.php </a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

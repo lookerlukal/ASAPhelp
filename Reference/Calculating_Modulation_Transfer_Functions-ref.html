@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Calculating Modulation Transfer Functions"/>
+<meta name="abstract" content="The Modulation Transfer Function (MTF) characterizes the contrast performance of an optical system as a function of spatial frequencies. It is the modulus of the Optical Transfer Function (OTF)."/>
+<meta name="description" content="The Modulation Transfer Function (MTF) characterizes the contrast performance of an optical system as a function of spatial frequencies. It is the modulus of the Optical Transfer Function (OTF)."/>
+<meta name="DC.subject" content="Calculating Modulation Transfer Functions, modulation transfer function, calculating, MTF"/>
+<meta name="keywords" content="Calculating Modulation Transfer Functions, modulation transfer function, calculating, MTF"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_ABC-ref.html#Reference_AC"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DIMENSIONS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DISPLAY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FIELD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPREAD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WINDOW_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Calculating_Modulation_Transfer_Functions-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Calculating_Phase_Transfer_Functions-ref.html#Calculating_Phase_Transfer_Functions"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Distribution_Data_Files_Overview-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Calculating_Modulation_Transfer_Functions"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Calculating Modulation Transfer Functions</title>
+</head>
+<body id="Calculating_Modulation_Transfer_Functions"><a name="Calculating_Modulation_Transfer_Functions"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Calculating Modulation Transfer Functions</h5></span> 
+   
+   
+  <div><p>The Modulation Transfer Function (MTF) characterizes the contrast
+	 performance of an optical system as a function of spatial frequencies. It is
+	 the modulus of the Optical Transfer Function (OTF). 
+  </p>
+ 
+	 <div class="section" id="Calculating_Modulation_Transfer_Functions__section_87CAC8B705534B5FB1DACF93E62CCD3B"><a name="Calculating_Modulation_Transfer_Functions__section_87CAC8B705534B5FB1DACF93E62CCD3B"><!-- --></a> 
+		<p>Two commonly used methods for calculating the MTF of a system are: 
+		</p>
+ 
+		<br/><a name="Calculating_Modulation_Transfer_Functions__ul_6B71C5CC4985461BB7A75FB28D5B02E1"><!-- --></a><ul id="Calculating_Modulation_Transfer_Functions__ul_6B71C5CC4985461BB7A75FB28D5B02E1"> 
+		  <li id="Calculating_Modulation_Transfer_Functions__li_E6C417F2E6FE4DB99E0481DC7F768943"><a name="Calculating_Modulation_Transfer_Functions__li_E6C417F2E6FE4DB99E0481DC7F768943"><!-- --></a><b>Computing the
+				autocorrelation of the pupil function</b>. The pupil function is appropriately
+			 sampled with a grid of rays and then correlated and properly normalized. The
+			 process is repeated for various wavelengths, and the composite is the desired
+			 transfer function. 
+		  </li>
+ 
+		  <li id="Calculating_Modulation_Transfer_Functions__li_E7C59499796A4DB0A5156F4BA3285AAB"><a name="Calculating_Modulation_Transfer_Functions__li_E7C59499796A4DB0A5156F4BA3285AAB"><!-- --></a><b>Using Fourier,
+				transforming the PSF</b>. This method follows from linear systems theory since
+			 the Point Spread Function (PSF) is the optical equivalent of the impulse
+			 response of the system. This is the technique used by ASAP. There is, however,
+			 no single command in the program for this calculation. It is performed by a
+			 series of commands that set the window and pixel relationships for the Fourier
+			 transform after the appropriate ray trace is done. 
+		  </li>
+ 
+		</ul>
+ 
+	 </div>
+ 
+	 <div class="section" id="Calculating_Modulation_Transfer_Functions__section_A37F207CC90C4FADB5CA7E10D7797AD8"><a name="Calculating_Modulation_Transfer_Functions__section_A37F207CC90C4FADB5CA7E10D7797AD8"><!-- --></a><span style="color: #2b6eb5"><h5>Tips for Using Fourier</h5></span> 
+		 
+		<br/><a name="Calculating_Modulation_Transfer_Functions__ul_5984698C99A64166BC24320B876956EF"><!-- --></a><ul id="Calculating_Modulation_Transfer_Functions__ul_5984698C99A64166BC24320B876956EF"> 
+		  <li id="Calculating_Modulation_Transfer_Functions__li_13560F1DA8B648A6A9E74139E9E2D391"><a name="Calculating_Modulation_Transfer_Functions__li_13560F1DA8B648A6A9E74139E9E2D391"><!-- --></a>ASAP can compute the PSF
+			 of complex systems regardless whether or not it has well defined entrance and
+			 exit pupils. This feature lends itself to computing the MTF of systems without
+			 well-defined entrance and exit pupils. 
+		  </li>
+ 
+		  <li id="Calculating_Modulation_Transfer_Functions__li_D7A699256E334C93916E0A4588CF408A"><a name="Calculating_Modulation_Transfer_Functions__li_D7A699256E334C93916E0A4588CF408A"><!-- --></a>Since an Fast Fourier
+			 Transform (FFT) is used to calculate the MTF, the sampling rate (number of
+			 pixels) and window size must be made commensurate. This means that the area
+			 over which the PSF is calculated must map into the transfer function space with
+			 the correct spatial frequency cutoff. While the word diffraction is used in the
+			 following derivation, the arguments are equally valid in the geometrical
+			 regime. These cutoffs are determined according to the following rationale. 
+		  </li>
+ 
+		</ul>
+ 
+	 </div>
+ 
+	 <div class="section" id="Calculating_Modulation_Transfer_Functions__section_8A5CC6FD4924430695FB3B18E7EFE82A"><a name="Calculating_Modulation_Transfer_Functions__section_8A5CC6FD4924430695FB3B18E7EFE82A"><!-- --></a><span style="color: #2b6eb5"><h5>Spatial Cutoff Frequency</h5></span> 
+		 
+		<br/><a name="Calculating_Modulation_Transfer_Functions__ul_FCC34B4128684B25946A590809405C2A"><!-- --></a><ul id="Calculating_Modulation_Transfer_Functions__ul_FCC34B4128684B25946A590809405C2A"> 
+		  <li id="Calculating_Modulation_Transfer_Functions__li_80BCFBBF895648A3967AA3EB5C084763"><a name="Calculating_Modulation_Transfer_Functions__li_80BCFBBF895648A3967AA3EB5C084763"><!-- --></a> 
+			 <p>The spatial frequency cutoff of a diffraction-limited system is
+				given by: 
+			 </p>
+ 
+			 <p><br/><a name="Calculating_Modulation_Transfer_Functions__image"><!-- --></a><div class="imagecenter"><img id="Calculating_Modulation_Transfer_Functions__image" src="../Equations/CalculatingMTF_equation1.gif" width="110" height="55"/></div><br/> 
+			 </p>
+ 
+			 <p>where 
+				<b>λ</b> is the wavelength and 
+				<b>F#</b> is the F/number of the optical system. In a polychromatic
+				case, 
+				<b>λ</b> is usually taken as the shortest wavelength since it has
+				the highest spatial frequency cutoff. 
+			 </p>
+ 
+		  </li>
+ 
+		  <li id="Calculating_Modulation_Transfer_Functions__li_FBF61C8DA02C4A09861182A318242356"><a name="Calculating_Modulation_Transfer_Functions__li_FBF61C8DA02C4A09861182A318242356"><!-- --></a> 
+			 <p>Assuming that the 
+				<b>WINDOW</b> area is square and has a half-width of 
+				<b>w</b>, the spacing 
+				<b>s</b> between data points in real space is given by 
+			 </p>
+ 
+			 <p><br/><a name="Calculating_Modulation_Transfer_Functions__image"><!-- --></a><div class="imagecenter"><img id="Calculating_Modulation_Transfer_Functions__image" src="../Equations/CalculatingMTF_equation2.gif" width="65" height="55"/></div><br/> 
+			 </p>
+ 
+			 <p>where 
+				<b>p</b> is the number of pixels across the window. After Fourier
+				transforming the data, the separation 
+				<b>s'</b> of the output data in frequency space is given by 
+			 </p>
+ 
+			 <p><br/><a name="Calculating_Modulation_Transfer_Functions__image"><!-- --></a><div class="imagecenter"><img id="Calculating_Modulation_Transfer_Functions__image" src="../Equations/CalculatingMTF_equation3.gif" width="83" height="51"/></div><br/> 
+			 </p>
+ 
+		  </li>
+ 
+		  <li id="Calculating_Modulation_Transfer_Functions__li_54DDC354A18C4F678700631FDAECA4E0"><a name="Calculating_Modulation_Transfer_Functions__li_54DDC354A18C4F678700631FDAECA4E0"><!-- --></a>The 256 corresponds to the
+			 FFT size for ASAP. See the DIMENSIONS command to determine the FFT size for
+			 your version of ASAP. 
+		  </li>
+ 
+		  <li id="Calculating_Modulation_Transfer_Functions__li_7569331862684DD58D9ED7705C490CC5"><a name="Calculating_Modulation_Transfer_Functions__li_7569331862684DD58D9ED7705C490CC5"><!-- --></a> 
+			 <p>The half-width of the window in transformed space is simply equal
+				to the spatial frequency cutoff. The two equations are equated in order to
+				obtain 
+			 </p>
+ 
+			 <p><br/><a name="Calculating_Modulation_Transfer_Functions__image"><!-- --></a><div class="imagecenter"><img id="Calculating_Modulation_Transfer_Functions__image" src="../Equations/CalculatingMTF_equation4.gif" width="105" height="110"/></div><br/> 
+			 </p>
+ 
+		  </li>
+ 
+		  <li id="Calculating_Modulation_Transfer_Functions__li_F7B4708327C249C4A7BF5CB2E2858242"><a name="Calculating_Modulation_Transfer_Functions__li_F7B4708327C249C4A7BF5CB2E2858242"><!-- --></a> 
+			 <p>Solving for 
+				<b>s'</b> yields 
+			 </p>
+ 
+			 <p><br/><a name="Calculating_Modulation_Transfer_Functions__image"><!-- --></a><div class="imagecenter"><img id="Calculating_Modulation_Transfer_Functions__image" src="../Equations/CalculatingMTF_equation5.gif" width="100" height="58"/></div><br/> 
+			 </p>
+ 
+		  </li>
+ 
+		  <li id="Calculating_Modulation_Transfer_Functions__li_5E271A2E6F29446284E32A0A6C12293B"><a name="Calculating_Modulation_Transfer_Functions__li_5E271A2E6F29446284E32A0A6C12293B"><!-- --></a> 
+			 <p>Equating expressions for 
+				<b>s'</b> yields 
+			 </p>
+ 
+			 <p><br/><a name="Calculating_Modulation_Transfer_Functions__image"><!-- --></a><div class="imagecenter"><img id="Calculating_Modulation_Transfer_Functions__image" src="../Equations/CalculatingMTF_equation6.gif" width="131" height="58"/></div><br/> 
+			 </p>
+ 
+		  </li>
+ 
+		  <li id="Calculating_Modulation_Transfer_Functions__li_F7AFC282B4814464A0627C289ECB53EA"><a name="Calculating_Modulation_Transfer_Functions__li_F7AFC282B4814464A0627C289ECB53EA"><!-- --></a> 
+			 <p>Solving for 
+				<b>w</b> 
+			 </p>
+ 
+			 <p><br/><a name="Calculating_Modulation_Transfer_Functions__image"><!-- --></a><div class="imagecenter"><img id="Calculating_Modulation_Transfer_Functions__image" src="../Equations/CalculatingMTF_equation7.gif" width="111" height="55"/></div><br/> 
+			 </p>
+ 
+		  </li>
+ 
+		  <li id="Calculating_Modulation_Transfer_Functions__li_FF97D02E150B4006AFE2EBDABEE151F5"><a name="Calculating_Modulation_Transfer_Functions__li_FF97D02E150B4006AFE2EBDABEE151F5"><!-- --></a>The relationship must be
+			 maintained for MTF curves to come out with the correct cutoff frequency. 
+		  </li>
+ 
+		</ul>
+ 
+	 </div>
+ 
+	 <div class="section" id="Calculating_Modulation_Transfer_Functions__section_15E32D0E2E58464893EBF69B8623CB2E"><a name="Calculating_Modulation_Transfer_Functions__section_15E32D0E2E58464893EBF69B8623CB2E"><!-- --></a><span style="color: #2b6eb5"><h5>MTF Calculations in ASAP</h5></span> 
+		 
+		<p>Recognizing that the 
+		  <b>WINDOW</b> and 
+		  <b>PIXEL</b> commands must be properly set is essential to
+		  doing MTF calculations in ASAP. The remaining question has to do with
+		  resolution: how many pixels are needed to sample the window area to give
+		  meaningful results? 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Calculating_Modulation_Transfer_Functions__section_98292F1DEE9D4A1FB61B8B743F2B5314"><a name="Calculating_Modulation_Transfer_Functions__section_98292F1DEE9D4A1FB61B8B743F2B5314"><!-- --></a><span style="color: #2b6eb5"><h5>Tips for MTF Calculations</h5></span> 
+		 
+		<br/><a name="Calculating_Modulation_Transfer_Functions__ul_95F15B08D094413DA4632962FE1E3F0E"><!-- --></a><ul id="Calculating_Modulation_Transfer_Functions__ul_95F15B08D094413DA4632962FE1E3F0E"> 
+		  <li id="Calculating_Modulation_Transfer_Functions__li_4CA6B20D101340158209E9DC69B99E50"><a name="Calculating_Modulation_Transfer_Functions__li_4CA6B20D101340158209E9DC69B99E50"><!-- --></a>The basic rule for MTF
+			 calculations is that the window area should enclose a major fraction of the
+			 total energy contained in the PSF. By concentrating on diffraction PSFs, it is
+			 known that 84 percent of the total energy is contained in the central core of
+			 an ideal Airy pattern. Referring to the equation, Solving for w, a window the
+			 size of the core requires about 35 pixels for an F/2 system at 0.5 microns.
+			 Ideally, you should use a somewhat higher sampling, particularly if the system
+			 suffers from a small amount of aberration. In the presence of aberration,
+			 energy is taken from the central core and distributed to the ring structure. 
+		  </li>
+ 
+		  <li id="Calculating_Modulation_Transfer_Functions__li_0BDACB3E0D8B4195B1571C5A1C0C19DB"><a name="Calculating_Modulation_Transfer_Functions__li_0BDACB3E0D8B4195B1571C5A1C0C19DB"><!-- --></a>Another recommendation is
+			 to use an odd number of pixels for these calculations to ensure the presence of
+			 a pixel at the center of the PSF/MTF. Using this recommendation avoids a
+			 non-aesthetic shift in the patterns when there is no central pixel. 
+		  </li>
+ 
+		  <li id="Calculating_Modulation_Transfer_Functions__li_8DC0C9EB07BB476E9A0005088208833C"><a name="Calculating_Modulation_Transfer_Functions__li_8DC0C9EB07BB476E9A0005088208833C"><!-- --></a>Once system parameters are
+			 configured properly and the ray trace is completed, you must calculate the
+			 system PSF with 
+			 <b>SPREAD NORMAL</b> or FIELD ENERGY. The resulting
+			 distribution file is entered into 
+			 <b>DISPLAY</b> where the actual FFT is computed with the
+			 DISPLAY command FFT. 
+		  </li>
+ 
+		</ul>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_ABC-ref.html#Reference_AC" title="Reference topics in this section begin with the letters &#34;A&#34; to &#34;C&#34;.">Reference (A-C)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Distribution_Data_Files_Overview-conc.html" title="ASAP has several commands for calculating the irradiance, intensity, radiance etc., for a set of files, some of which produce immediate results of these calculations in the form of plots directly on the screen.">Distribution Data Files Overview</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Calculating_Modulation_Transfer_Functions-ref.html" title="The Modulation Transfer Function (MTF) characterizes the contrast performance of an optical system as a function of spatial frequencies. It is the modulus of the Optical Transfer Function (OTF).">Calculating Modulation Transfer Functions</a></div>
+<div><a href="../Reference/Calculating_Phase_Transfer_Functions-ref.html#Calculating_Phase_Transfer_Functions" title="While Modulation Transfer Function (MTF) calculations are by far the more common of the two, there are instances when the Phase Transfer function (PTF) is also needed to completely characterize the imaging properties of an optical system.">Calculating Phase Transfer Functions</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DIMENSIONS_ASAP-cmdref.html" title="Displays a table of maximum array dimensions for the most important program arrays.">DIMENSIONS (ASAP Command)</a></div>
+<div><a href="../Commands/DISPLAY_ASAP-cmdref.html" title="Reads previously created distribution data files so that they can be modified.">DISPLAY (ASAP Command)</a></div>
+<div><a href="../Commands/FIELD_ASAP-cmdref.html" title="Calculates the exact complex field distribution.">FIELD (ASAP Command)</a></div>
+<div><a href="../Commands/PIXELS_ASAP-cmdref.html" title="Sets the resolution for graphics and calculations.">PIXELS (ASAP Command)</a></div>
+<div><a href="../Commands/SPREAD_ASAP-cmdref.html" title="Calculates the exact coherent/incoherent energy distribution.">SPREAD (ASAP Command)</a></div>
+<div><a href="../Commands/WINDOW_ASAP-cmdref.html" title="Sets the plotting window for graphical output.">WINDOW (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

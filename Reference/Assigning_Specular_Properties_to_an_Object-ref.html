@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Assigning Specular Properties to an Object"/>
+<meta name="abstract" content="In conventional optical codes, an optical element is either reflecting or refracting. In ASAP, an object may be both simultaneously."/>
+<meta name="description" content="In conventional optical codes, an optical element is either reflecting or refracting. In ASAP, an object may be both simultaneously."/>
+<meta name="DC.subject" content="Assigning Specular Properties to an Object, object, assigning specular properties, specular properties, assigning to an object"/>
+<meta name="keywords" content="Assigning Specular Properties to an Object, object, assigning specular properties, specular properties, assigning to an object"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_ABC-ref.html#Reference_AC"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/COATINGS_PROPERTIES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SURFACES_FUNCTIONS_ENTITIES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Builder_Window_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/INTERFACE_Command_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Optical_Properties-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Surface_Function_Modifiers-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Assigning_Specular_Properties_to_an_Object"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Assigning Specular Properties to an Object</title>
+</head>
+<body id="Assigning_Specular_Properties_to_an_Object"><a name="Assigning_Specular_Properties_to_an_Object"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Assigning Specular Properties to an Object</h5></span> 
+   
+  
+  <div><p>In conventional optical codes, an optical element is either
+	 reflecting or refracting. In ASAP, an object may be both simultaneously.
+  </p>
+ 
+	 <div class="section" id="Assigning_Specular_Properties_to_an_Object__section_80342C149E124C6E81F4C53A57D41F92"><a name="Assigning_Specular_Properties_to_an_Object__section_80342C149E124C6E81F4C53A57D41F92"><!-- --></a> 
+		<p>Since ASAP calculates the power in each ray/beam, the reflection and
+		  transmission coefficients must be given at each interface in addition to the
+		  interface media.
+		</p>
+ 
+		<p>The 
+		  <b>INTERFACE</b> command is used to assign specular optical properties
+		  (transmission, reflection, and diffraction) to objects. 
+		  <b>INTERFACE</b> assigns specular optical properties (transmission,
+		  reflection, and diffraction) to objects.
+		</p>
+ 
+		<p><b>INTERFACE</b> draws upon previously defined databases:
+		</p>
+ 
+		<br/><a name="Assigning_Specular_Properties_to_an_Object__ul_35C806C568304737BAD0D6EA86456500"><!-- --></a><ul id="Assigning_Specular_Properties_to_an_Object__ul_35C806C568304737BAD0D6EA86456500"> 
+		  <li id="Assigning_Specular_Properties_to_an_Object__li_D308AB2DA5D74F2B82ED061E8182B6DF"><a name="Assigning_Specular_Properties_to_an_Object__li_D308AB2DA5D74F2B82ED061E8182B6DF"><!-- --></a>MEDIA for refractive index
+			 data
+		  </li>
+ 
+		  <li id="Assigning_Specular_Properties_to_an_Object__li_CA7E68EFAD584D208987A5DAD2C9C5D0"><a name="Assigning_Specular_Properties_to_an_Object__li_CA7E68EFAD584D208987A5DAD2C9C5D0"><!-- --></a>COATING for multilayer
+			 stack prescription/properties
+		  </li>
+ 
+		  <li id="Assigning_Specular_Properties_to_an_Object__li_E4BA28B881FA42C4B2C6CBCDF6DCBF10"><a name="Assigning_Specular_Properties_to_an_Object__li_E4BA28B881FA42C4B2C6CBCDF6DCBF10"><!-- --></a>SURFACES/FUNCTIONS for
+			 gradient index functions or for diffraction grating/HOE spacing
+		  </li>
+ 
+		</ul>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_ABC-ref.html#Reference_AC" title="Reference topics in this section begin with the letters &#34;A&#34; to &#34;C&#34;.">Reference (A-C)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Builder_Window_Overview-conc.html" title="The Builder offers a simple approach to building your system. Designed for both new and experienced ASAP users, the Builder introduces you to the concepts of using ASAP to create your geometry, including sources. The entire system’s geometry is created in one window, using most standard spreadsheet navigation features, and saved with the file extension, .enx (an XML file), or .enz (a compressed XML file). You can also use the Builder for tracing rays and analyzing your system.">Builder Window Overview</a></div>
+<div><a href="../Concept/INTERFACE_Command_Overview-conc.html">INTERFACE Command Overview</a></div>
+<div><a href="../Concept/Optical_Properties-conc.html" title="Using ASAP, you can build optical system models by first creating optical property and system geometry databases. The databases have additional commands for direct data entry and commands called modifiers that allow you to alter the databases. As you build an object, you associate data from these databases to the object for ray tracing.">Optical Properties</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Surface_Function_Modifiers-ref.html" title="Categories of surface/function modifiers are listed in this topic.">Surface or Function Modifiers</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/COATINGS_PROPERTIES_ASAP-cmdref.html" title="Creates a coating specified by its transmissive and reflective properties.">COATINGS PROPERTIES (ASAP Command)</a></div>
+<div><a href="../Commands/MEDIA_ASAP-cmdref.html" title="Creates a single refractive material.">MEDIA (ASAP Command)</a></div>
+<div><a href="../Commands/SURFACES_FUNCTIONS_ENTITIES_ASAP-cmdref.html" title="Signals ASAP that surface definition commands follow.">SURFACES/FUNCTIONS/ENTITIES (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

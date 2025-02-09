@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="SPLINE, GENERAL 3D (ASAP Command)"/>
+<meta name="abstract" content="General 3D piecewise, cubic, spline curve with given reference point (default origin), and defined in terms of subsequent relative points and tangent directions (and optional inverse radii of CURVatures)."/>
+<meta name="description" content="General 3D piecewise, cubic, spline curve with given reference point (default origin), and defined in terms of subsequent relative points and tangent directions (and optional inverse radii of CURVatures)."/>
+<meta name="DC.subject" content="SPLINE, GENERAL 3D (ASAP Command), curve, 3D general"/>
+<meta name="keywords" content="SPLINE, GENERAL 3D (ASAP Command), curve, 3D general"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_S-ref.html#Commands_and_Macros_S"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/POINTS_3D_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SMOOTH_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPLINE_EXPLICIT_2D_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="SPLINE_GENERAL_3D_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>SPLINE, GENERAL 3D (ASAP Command)</title>
+</head>
+<body id="SPLINE_GENERAL_3D_ASAP_Command"><a name="SPLINE_GENERAL_3D_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>SPLINE, GENERAL 3D (ASAP Command)</h5></span> 
+   
+   
+  <div><p>General 3D piecewise, cubic, spline curve with given reference
+	 point (default origin), and defined in terms of subsequent relative points and
+	 tangent directions (and optional inverse radii of CURVatures). 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+SPLINE [ x y z ]
+         x  y  z  a, b, c
+         x' y' z' a',b',c'
+       [ x" y" z" a",b" c" ] ]
+            :
+      </pre>
+ 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="SPLINE_GENERAL_3D_ASAP_Command__ul_01F52CF9CEBF49BA8AB9AB7C0722D56F"><!-- --></a><ol id="SPLINE_GENERAL_3D_ASAP_Command__ul_01F52CF9CEBF49BA8AB9AB7C0722D56F"> 
+		<li id="SPLINE_GENERAL_3D_ASAP_Command__li_7FE9197615254E36A5662381077FA859"><a name="SPLINE_GENERAL_3D_ASAP_Command__li_7FE9197615254E36A5662381077FA859"><!-- --></a>If a tangent direction is
+		  not provided for any point, one is calculated by finite differences using the
+		  adjacent points. Therefore, this command can also be used as an (often better)
+		  alternative to 
+		  <b>POINTS</b> followed by 
+		  <b>SMOOTH 3</b> (although it does create a curve with three
+		  times as many Bezier points). 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#SPLINE">SPLINE
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_S-ref.html#Commands_and_Macros_S" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “S”.">Commands and Macros (S)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/POINTS_3D_ASAP-cmdref.html" title="Creates a generalized edge.">POINTS (3D) (ASAP Command)</a></div>
+<div><a href="../Commands/SMOOTH_ASAP-cmdref.html" title="Quadratically (or cubically) smoothes the current curve.">SMOOTH (ASAP Command)</a></div>
+<div><a href="../Commands/SPLINE_EXPLICIT_2D_ASAP-cmdref.html" title="Explicit 2D curvature (G2) continuous, piecewise cubic spline curve in the given plane (default 0).">SPLINE, EXPLICIT 2D (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

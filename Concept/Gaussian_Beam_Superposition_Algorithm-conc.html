@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Gaussian Beam Superposition Algorithm"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_GM-ref.html#Reference_G_M"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DECOMPOSE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FIELD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPREAD_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Gaussian_Beam_Superposition_Algorithm"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Gaussian Beam Superposition Algorithm</title>
+</head>
+<body id="Gaussian_Beam_Superposition_Algorithm"><a name="Gaussian_Beam_Superposition_Algorithm"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Gaussian Beam Superposition Algorithm</h5></span>
+	
+	<div><p/>
+
+		<p>The Gaussian beam superposition algorithm performs a variety of different types of
+			analyses on general optical systems. <b>NOTE</b>: These techniques should not be used
+			when the wavelength of your source is on the order of the size of your object
+			structures.</p>
+
+		<p>Most of the limitations of the algorithm to correctly predict the optical field can be
+			traced to parabasal ray violations of the paraxial wave equation. This problem occurs
+			when the parabasal rays diverge significantly from the trajectory of the base ray and
+			therefore no longer model the local field. The solution to this problem may be to
+			DECOMPOSE the field into a new rayset.</p>
+
+		<p>ASAP tolerates a certain amount of departure of the parabasal rays from the base ray
+			before a warning occurs. However, it is entirely possible that, even after several
+			warnings, the resultant calculation is still correct.</p>
+
+		<div class="section"><span style="color: #2b6eb5"><h5>Warning Messages</h5></span>
+			
+			<p>The three warning messages that ASAP can print while performing the <b>SPREAD</b> or <b>FIELD</b> calculations are listed below. These
+				are warnings, not errors - the analyses may still be valid but should be viewed with
+				some caution.</p>
+
+			<br/><ul>
+				<li>
+					<p><b>DEPARTURE FROM PARAXIAL APPROXIMATION FOR BEAM xxx IS yyy WAVES</b></p>
+
+					<p>The complex paraxial optical invariant should be equal to zero if the
+						parabasal rays remain in a linear region about the base ray. As it sometimes
+						happens for a variety of reasons, the parabasal rays begin to diverge and
+						are no longer linear. This message is printed whenever the complex paraxial
+						invariant exceeds 0.1 waves. This message is also documented on the
+						Knowledge Base.</p>
+
+				</li>
+
+				<li>
+					<p><b>MAXIMUM DEPARTURE FROM ORTHOGONAL RAY SET FOR BEAM xxx IS yyy WAVES </b></p>
+
+					<p>In addition to the complex paraxial optical invariant, there are several
+						orthogonal invariants that should also be equal to zero if the parabasal
+						rays remain in a linear region about the base ray. This message is printed
+						whenever any of these invariants exceeds 0.1 waves.</p>
+
+				</li>
+
+				<li>
+					<p><b>POSITIVITY VIOLATION AT SAMPLE ORIGIN FOR BEAM xxx: </b></p>
+
+					<p>The irradiance of the Gaussian beam should fall off as a function of radial
+						distance from the center of the base ray. There are instances when the
+						Gaussian irradiance increases with radial distance, which is not a physical
+						situation.</p>
+
+				</li>
+
+			</ul>
+
+		</div>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_GM-ref.html#Reference_G_M" title="Reference topics in this section begin with the letters &#34;G&#34; to &#34;M&#34;.">Reference (G-M)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DECOMPOSE_ASAP-cmdref.html" title="Decomposes an existing field into a new set of Gaussian beams.">DECOMPOSE (ASAP Command)</a></div>
+<div><a href="../Commands/FIELD_ASAP-cmdref.html" title="Calculates the exact complex field distribution.">FIELD (ASAP Command)</a></div>
+<div><a href="../Commands/SPREAD_ASAP-cmdref.html" title="Calculates the exact coherent/incoherent energy distribution.">SPREAD (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

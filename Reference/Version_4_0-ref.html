@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Version 4.0"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Release_Notes-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_4_1-ref.html#Version_4_1"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_3_3-ref.html#Version_3_3"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Version_4_0"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Version 4.0</title>
+</head>
+<body id="Version_4_0"><a name="Version_4_0"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Version 4.0</h5></span>
+	<div>
+		<div class="section" id="Version_4_0__section_69B2FD10DE59447B81AD895B2540701A"><a name="Version_4_0__section_69B2FD10DE59447B81AD895B2540701A"><!-- --></a>
+			<p>ASAP 4.0 features as of 30-Nov-1994</p>
+
+		</div>
+
+		<div class="section" id="Version_4_0__section_19D43D3ECC5643ED901229BD4D4E8459"><a name="Version_4_0__section_19D43D3ECC5643ED901229BD4D4E8459"><!-- --></a><span style="color: #2b6eb5"><h5>Macro Language </h5></span>
+			
+			<pre class="codeblock">  Old MACRO files now called LIBRARY files
+    $IO MACRO name[.MAC] ==&gt; $IO LIBRARY name[.LIB] (new expression syntax)
+                          or $IO  MACRO  name[.LIB] (old     "        "   )
+ *New simplified MACro files contain just one macro of same name (no header)
+  On-the-fly macros put into individual files, current library not touched
+  Curly braces {} can no longer be used in expressions (use square brackets [])
+ *Macro definitions can use curly braces {} to delimit body
+  $MENU and $SCR now take an optional title
+  Register storage increased to approximately 300 fixed plus 600 variable.
+ *Variable and $FCN names can now be up to 16 characters
+  $SHOW displays current states
+  $FAST can be used in a macro and take optional label and/or scaling factor
+  $ITER now has two different ways to step through variables
+  $ARGS SCR pops up an editable argument template when a macro is called
+  $GRAB now issues a non-fatal warning and zeros register when number not found
+  $PAGE sets page size for pausing output
+  $PLOT can now suppress screen graphics and control immediate plot prompting
+ *Nested $IF .. THEN, $ELSEIF .. THEN, $ELSE, $END structures have been added
+ *$EXP selects OLD left-right or NEW operator-precedence expression syntax
+  $ASK can prompt for more than one numeric input
+  $FCN definitions can now be recursive  i.e. call each other
+ *Multi-record blocks for $DO and $ITER delimited by curly braces {}
+  $LEAVE forces immediate exit from DO loop, macro, or input file.</pre>
+
+		</div>
+
+		<div class="section" id="Version_4_0__section_2F6BB745B39D4F858D6128CB5DB70512"><a name="Version_4_0__section_2F6BB745B39D4F858D6128CB5DB70512"><!-- --></a><span style="color: #2b6eb5"><h5>ASAP changed commands (no backward compatibility) </h5></span>
+			
+			<pre class="codeblock">
+  SURFACE;OPTICAL semi-diameter "a" entry removed (use aperture option)
+  EMIT FILAMENT function ($FCN) must return an additional apodization value
+  USERAPOD BOTH direction cosine clipping moved to new CLIP DIR command
+  OBJECT by default uses only last entity (not last two EDGES)
+  TRACE and RAY no longer automatically PLOT if a previous ...OVERLAY
+  FRESNEL command no longer has any effect on INTERFACE command</pre>
+
+		</div>
+
+		<div class="section" id="Version_4_0__section_FFD31159EF304576949D3D0DDABBB113"><a name="Version_4_0__section_FFD31159EF304576949D3D0DDABBB113"><!-- --></a><span style="color: #2b6eb5"><h5>ASAP new commands </h5></span>
+			
+			<pre class="codeblock">
+  MODEL;SUM defines a model that is the sum of previous ones
+ *ENTITIES [OBJECTS] for simple input without SURFACE/EDGE/LENS/OBJECT commands
+  MAP scans objects and produces depth (and optionally SLOPES) map
+  CURVE
+    ARC defines a portion or all of a circle
+   *SWEEP last curve into a surface for a single entity object
+    COMPOSITE combines a set of previously defined curves into one
+    SMOOTH a piecewise linear curve
+    RACETRACK ... SPLIT option added for backward compatibility
+    INVERT reverses a curve's parametric direction
+    CONIC creates single quadratic segment from implicit coefficients of conic
+  SURFACE
+   *SAMPLED explicit surface by interpolating deformation (and slope) data
+    BICONIC creates a surface from two distinct conic profiles
+     *ARRAY is a 2D version of MULTIPLE, i.e. planar arrays of surfaces
+     SOLID sets up surface and its local box for use as a BOUNDing volume
+ *EMITTING RAYS accepts an arbitrary table of rays
+           IES uses data from an IES Standard Photometric file
+           HELIX creates a helical curve (coiled wire)
+  PLOT LOCAL limit boxes for surfaces
+       MESH/FACETS also handles new SURFACE;SAMPLED objects
+ *CLIP POSitional and/or DIRectional ray coordinates during creation
+  LENS;COMPOSITE combines a set of previously defined lenses into one
+  OBJECT
+    FACETS sets number of facet subdivisions per mesh patch
+    REDEFINE basic options (SURFACE/NORMAL, THICKNESS, COLOR, name)
+ *RADIANT calculates pattern in full spherical angles (and spatial MAP)
+  UNITS set the length units (e.g. INCHES, MM) for the system geometry
+  DISPLAY;FOLD averages the data about one or both centers
+ *GAUSSIAN creates the ray/beam set for a coherent astigmatic Gaussian mode
+  UPDATE controls how geometrical entities are update in new storage scheme
+  BEAMS sets default coherence, propagation, and shape characteristics</pre>
+
+		</div>
+
+		<div class="section" id="Version_4_0__section_C84FB953B40A4944AE5C95C11DC3833F"><a name="Version_4_0__section_C84FB953B40A4944AE5C95C11DC3833F"><!-- --></a><span style="color: #2b6eb5"><h5>ASAP enhanced commands </h5></span>
+			
+			<pre class="codeblock">
+  SURFACE
+   *PLANE,OPTICAL can take RECTANG or ELLIPSE aperture option
+    TORUS cross-section can vary from elliptical to rectangular
+    REVOLUTION can take optional DECENTER before revolving
+    FITTED can remap the order of coordinate data
+    OPTICAL can take a optional second surface (e.g. both sides of a lens)
+  LIST ELLIPS displays polarization ellipse information
+       RAYS outputs basic ray/beam data in EMITTING RAYS input format
+  FIELD DELTA can plot polarization ellipses when FRESNEL BOTH set
+  INTERFACE command can take explicit refractive index and define media name
+  MODEL;POLYNOMIAL FIT/SVD direction input can be optionally in spherical ANGLES
+                           also generates plot of given raw in-plane data
+  DISPLAY;VALUES can optionally place results directly in specified registers
+  ACCURACY setting not overridden anymore (was on some calculations)
+  RAYS can now properly restart from an XMEMORY MIN paging file.
+  ...COLOR option can now be used to temporarily redefine the set of colors
+  PLOT EDGES/LENSES/LOCALS can take a specific range of entities
+  FFAD also prints best-fit planar/curved focal surface (center,normal,radius)
+  STATS with no argument produces a one line per object summary
+  PLOT RAYS can optionally plot every nth ray
+  CURVE
+    POINTS has shorter planar version
+    CHARACTER can take complete strings instead of just one character
+    SAG to surface can be either ABSolute or RELative
+  PROFILE can do a QUICK plot with no exact boundary clipping
+  SURFACE;TEST can now be perpendicular vector from any given AXIS
+  LENS;WEDGE now takes an optional thickness
+ *EMITTING FILAMENT can reference a CURVE instead of a $FCN definition
+  EMITTING DISK/RECT surfaces can optionally radiate ISOtropically
+ *SELECT test pairs take the logical operators AND,OR between them
+         also issues message if ray flag storage exceeded
+  OBJECT
+    DEFORM can be combination of two explicit surface functions
+    ROUGHNESS RANDOM slope error can select from several distribution functions
+             *MODEL for random normal deviations that match any scatter model
+    BOUNDS can use the interior or exterior of SOLID volumes
+  CAD can now do a basic IGES export of curve, lens, and sample based objects
+  WAVELENGTH...UNITS can be set by name (e.g. ANGSTROMS, MICRONS)
+ *EMITTING can produce a single-source weighted composite of individual emitters
+  SOURCE DIR GRID now takes into account USERAPOD DIR (and new CLIP DIR)
+  TRACE GRAPH now allows control of maximum magnitude
+  GRID OBJECT now takes standard RANDOM option
+  MODEL ... PLOT creates an additional plot of log BSDF versus angle from normal
+  EXPLODE can optionally store commands in a macro.
+  SCATTER; TOWARDS can designate virtual edges for important areas</pre>
+
+		</div>
+
+		<div class="section" id="Version_4_0__section_C44F48A170CC47749A1CA991CDF675C2"><a name="Version_4_0__section_C44F48A170CC47749A1CA991CDF675C2"><!-- --></a><span style="color: #2b6eb5"><h5>ASAP general enhancements </h5></span>
+			
+			<pre class="codeblock">
+  Implicit polynomial surfaces and rational Bezier curves can go to 10th order
+    (explicit and order-doubled polynomial surfaces to 20th)
+ *New much more efficient memory management for object surface data
+  Replaced Bezier intersection algorithm with a new more-robust one
+  Built-in interactive run/edit loop with file menu</pre>
+
+			</div>
+
+			<div class="section" id="Version_4_0__section_6EBBBC8D3F1C4F5C9F459DE3BCDAB137"><a name="Version_4_0__section_6EBBBC8D3F1C4F5C9F459DE3BCDAB137"><!-- --></a><span style="color: #2b6eb5"><h5>ASAP specific enhancements </h5></span>
+				
+				<pre class="codeblock">
+ *The following are virtually unlimited in number now:
+     Conicoids per LENS
+     Points per CURVE/EDGE
+     Entities per OBJECT
+     SURFACE;FITTED EXPLICIT points
+     MODEL;POLYNOMIAL FIT values
+ *Plot can be sent directly to PLOTTER and/or file at end of screen drawing
+  BOUND "outer" entities now used in default LIMITS and plot autoscaling
+  SCHOTT.CAT has been updated with new Sellmeier coefficients
+  COATINGS can be named and then referenced by that name</pre>
+
+			</div>
+
+			<div class="section" id="Version_4_0__section_CF4AED0C673144AAA795A2E59BC603BA"><a name="Version_4_0__section_CF4AED0C673144AAA795A2E59BC603BA"><!-- --></a><span style="color: #2b6eb5"><h5>ASAP code changes </h5></span>
+				
+				<pre class="codeblock">
+  VIRTUAL.PGS, *.SYS, and *.REG files are incompatible with previous versions
+  Old character graphics are now suppressed by default (except for DISPLAY;DMAP)
+  User-programmable Fortran routines (now in USERPROG.FOR) have been redone.
+  Some new code written entirely in Fortran-90 syntax</pre>
+
+			</div>
+
+			<div class="section" id="Version_4_0__section_7C1B64E0869F455F8AFEC0024F136FFB"><a name="Version_4_0__section_7C1B64E0869F455F8AFEC0024F136FFB"><!-- --></a><span style="color: #2b6eb5"><h5>Utilities </h5></span>
+				
+				<pre class="codeblock">
+  Plot utilities now start at top when putting more than one plot on a page
+  Color PostScript support has been added to PSCRIP and DIS2PS
+  AutoCAD importer (DXF2ASAP) upgraded to make use of new ASAP 4.0 capabilities
+  New utility (IGS2ASAP) for importing all IGES parametric surfaces</pre>
+
+			</div>
+
+	</div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Release_Notes-ref.html" title="Topics in this section include all known release notes for ASAP up to the last version. Release notes for the current version can be viewed in the ASAP Command Output window, or opened from your ASAP installation root folder.">Release Notes</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a href="../Reference/Version_4_1-ref.html#Version_4_1">Version 4.1</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a href="../Reference/Version_3_3-ref.html#Version_3_3">Version 3.3</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

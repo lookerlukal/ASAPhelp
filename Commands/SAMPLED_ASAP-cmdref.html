@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="SAMPLED (ASAP Command)"/>
+<meta name="abstract" content="Creates an explicit surface interpolated from sampled data."/>
+<meta name="description" content="Creates an explicit surface interpolated from sampled data."/>
+<meta name="DC.subject" content="SAMPLED (ASAP Command), surface, explicit, data distribution file, sampled"/>
+<meta name="keywords" content="SAMPLED (ASAP Command), surface, explicit, data distribution file, sampled"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ACCURACY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DO_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ITER_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LIMITS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LOCAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MAP_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SAMPLED_Cylindrical_ASAP-cmdref.html#SAMPLED_Cylindrical_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/DEFORM_with_Arrayed_Sampled_Surface-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_S-ref.html#Commands_and_Macros_S"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="SAMPLED_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>SAMPLED (ASAP Command)</title>
+</head>
+<body id="SAMPLED_ASAP_Command"><a name="SAMPLED_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>SAMPLED (ASAP Command)</h5></span>
+	
+	
+	<div><p>Creates an explicit surface interpolated from sampled data. </p>
+
+		<p><b>Syntax 1 - use an existing data distribution file</b>
+		</p>
+
+		<pre class="codeblock">
+SAMPLED [ name ]
+      </pre>
+
+		<p><b>Syntax 2 - create the file directly</b>
+		</p>
+
+		<pre class="codeblock">
+SAMPLED name X x y y' z z' [ SLOPES ]
+             Y y z z' x x'   DIFFS
+             Z z x x' y y'
+d [ s' s" ] d' ...
+   :
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>name</span></td><td><span>distribution file name of sampled data; see Remarks below</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X, Y or Z</span></td><td><span>specifies axis of symmetry</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x, y or z</span></td><td><span>location along axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>y y', z z', or x x'z z', x x', or y y'</span></td><td><span>maximum data extents in specified direction</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>d d' ...</span></td><td><span>deformation values</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SLOPES</span></td><td><span>specifies slope data </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>s' s"</span></td><td><span>slope values in direction of maximum data extents</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>DIFFS</span></td><td><span>estimates slopes based on finite differences from finite deformations
+				only</span></td></tr></tbody></table>
+		<p><b>Reference Point</b>
+		</p>
+
+		<p>If read from a distribution file, <b>name.dis</b> file (default BRO009.DAT), point is at
+				(<b>0,0</b>) depth coordinate. </p>
+
+		<p>If created directly, point is at the intersection of reference plane and coordinate axis. </p>
+
+		<p><b>Surface Normal</b>
+		</p>
+
+		<p>Along positive coordinate direction </p>
+
+		<p><b>Autolimiting</b>
+		</p>
+
+		<p>Yes, see Remarks </p>
+
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="SAMPLED_ASAP_Command__ol_440A189AD4444A5DAD6A5A387EA84E17"><!-- --></a><ol id="SAMPLED_ASAP_Command__ol_440A189AD4444A5DAD6A5A387EA84E17">
+			<li id="SAMPLED_ASAP_Command__li_7ABFBF6469274F399E0D263503DF9504"><a name="SAMPLED_ASAP_Command__li_7ABFBF6469274F399E0D263503DF9504"><!-- --></a> Creates an explicit surface defined as
+				follows: <br/><a name="SAMPLED_ASAP_Command__ul_835D83B4FA6E45D2A2B12A65763DA619"><!-- --></a><ul id="SAMPLED_ASAP_Command__ul_835D83B4FA6E45D2A2B12A65763DA619">
+					<li id="SAMPLED_ASAP_Command__li_3BA62FFA1D1443DE8B2E64501103B199"><a name="SAMPLED_ASAP_Command__li_3BA62FFA1D1443DE8B2E64501103B199"><!-- --></a>By reading deformation samples
+						found in the binary distribution file name.dis (default BRO009.DAT) external
+						file. </li>
+
+					<li id="SAMPLED_ASAP_Command__li_DAEF6CE117D6448999C5ED290F83BCE8"><a name="SAMPLED_ASAP_Command__li_DAEF6CE117D6448999C5ED290F83BCE8"><!-- --></a>By entering the sample points
+						following the command description. </li>
+
+				</ul>
+</li>
+
+			<li id="SAMPLED_ASAP_Command__li_E19BFCFBC68F4DB7905CBEE9D4170764"><a name="SAMPLED_ASAP_Command__li_E19BFCFBC68F4DB7905CBEE9D4170764"><!-- --></a>The deformation and slopes for ray tracing,
+				if specified in the distribution file, are linearly interpolated between data
+				points. Up to 1000 data points are allowed in the across direction and an unlimited
+				number in the down direction. </li>
+
+			<li id="SAMPLED_ASAP_Command__li_6A428383DA0C43D99A318DE601A4ECD8"><a name="SAMPLED_ASAP_Command__li_6A428383DA0C43D99A318DE601A4ECD8"><!-- --></a> Each directly created <b>SAMPLED</b>
+				surface must be given a distinct distribution file name. <p><b>WARNING:</b> Attempts
+					to re-use a distribution file name for directly created <b>SAMPLED</b> data results in an error. ASAP generates the error message,
+					"The named distribution file already exists." ASAP will not crash, but execution
+					of the script will stop. </p>
+<p>This situation is particularly important for the
+					direct creation of more than one <b>SAMPLED</b> surface with a loop.
+					Direct creation of multiple surfaces in a <b>$DO</b> loop can be
+					accomplished by incorporating the loop variable <b>?</b> into the file name.
+					Creating unique names for each iteration of a <b>$ITER</b> is
+					somewhat more complex, and requires that the file name depend uniquely on each
+					of the <b>$ITER</b> variables. </p>
+</li>
+
+			<li id="SAMPLED_ASAP_Command__li_77961A20FC23438DA7A0C608AA095363"><a name="SAMPLED_ASAP_Command__li_77961A20FC23438DA7A0C608AA095363"><!-- --></a>The file header of the distribution file
+				should contain directional labels <b>(X, Y, and Z)</b> and data ranges
+				that determine the orientation and size of the surface in its local coordinate
+				system. If not specified, ASAP assumes a <b>z(x,y)</b> surface located
+				at the origin. </li>
+
+			<li id="SAMPLED_ASAP_Command__li_907D31F543EC4DC9B9009BA344A0F331"><a name="SAMPLED_ASAP_Command__li_907D31F543EC4DC9B9009BA344A0F331"><!-- --></a>The distribution file can be created by an
+				external user program, a <b>$ITER</b> command, or by a <b>MAP</b> command. </li>
+
+			<li id="SAMPLED_ASAP_Command__li_7A2884296A4540C3BC125CCFDBC3306B"><a name="SAMPLED_ASAP_Command__li_7A2884296A4540C3BC125CCFDBC3306B"><!-- --></a>If the sample points are entered directly
+				in ASAP, then (using <b>X</b> as an example) <b>name.dis</b> is the name of the
+				distribution file created from the sample points, <b>X</b> is the axis of symmetry,
+				and <b>x</b> is the location of the reference plane along the axis. The <b>y,y'</b>
+				and <b>z,z'</b> are the maximum extents of the sample points. The subsequent lines
+				specify the deformation values that cover the given area uniformly up to (and
+				including) the given extents. </li>
+
+			<li id="SAMPLED_ASAP_Command__li_5E732BE2E6924628983DE55C9AFCC446"><a name="SAMPLED_ASAP_Command__li_5E732BE2E6924628983DE55C9AFCC446"><!-- --></a>If the <b>SLOPES</b> option is
+				included, each sample point has a deformation value and the slopes in the two other
+				directions associated with it. </li>
+
+			<li id="SAMPLED_ASAP_Command__li_28BB3619E30D4E3D91691C95B5DA0828"><a name="SAMPLED_ASAP_Command__li_28BB3619E30D4E3D91691C95B5DA0828"><!-- --></a>Uses smooth positional interpolation with
+				slopes and <b>ACCURACY</b>
+				<b>HIGH</b>. </li>
+
+			<li id="SAMPLED_ASAP_Command__li_61ADC79EBDEE40C2B5DF7127C14C0BE5"><a name="SAMPLED_ASAP_Command__li_61ADC79EBDEE40C2B5DF7127C14C0BE5"><!-- --></a>If <b>DIFFS</b> is specified,
+				the slopes are estimated from the deformation values by finite differences. </li>
+
+			<li id="SAMPLED_ASAP_Command__li_451474A6563B4A88BCD124C977F7265A"><a name="SAMPLED_ASAP_Command__li_451474A6563B4A88BCD124C977F7265A"><!-- --></a>The <b>SAMPLE</b> entity is autolimiting,
+				but only in a rectangular sense because of the data file structure. If an elliptical
+				aperture is desired, you must use a <b>LOCAL</b> or <b>LIMITS</b> modifier. </li>
+
+		</ol>
+
+		<p><b>Example </b>
+		</p>
+
+		<p>For defining an approximation to a shallow conical surface: </p>
+
+		<pre class="codeblock">
+$ITER  X -1. 1. -11  Y -1. 1. -11  Z !!negative sample numbers required
+  Z=.1*SQRT(X^2+Y^2)                 !!z proportional to radial value
+SURFACE; SAMPLED ITER     !!default file name when $ITER not in a macro
+  LOCAL AXIS Z    !!convert box from default rectangular to cylindrical
+  SHIFT Z ...     !!move it into global position
+      </pre>
+
+		<p>
+			<a href="../example_scripts.html#SAMPLED">SAMPLED Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_S-ref.html#Commands_and_Macros_S" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “S”.">Commands and Macros (S)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/DEFORM_with_Arrayed_Sampled_Surface-ref.html" title="The example, Deforming to an Arrayed Sampled Surface, demonstrates not only the DEFORM command, but also several other commands and useful techniques for modeling complicated objects.">DEFORM with Arrayed Sampled Surface</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/ACCURACY_ASAP-cmdref.html" title="Controls the accuracy of the ray trace algorithm.">ACCURACY (ASAP Command)</a></div>
+<div><a href="../Commands/DO_macro_ASAP-cmdref.html" title="Loops through input record(s).">$DO (ASAP Macro)</a></div>
+<div><a href="../Commands/ITER_macro_ASAP-cmdref.html" title="Iterates input records and a set of variables.">$ITER (ASAP Macro)</a></div>
+<div><a href="../Commands/LIMITS_ASAP-cmdref.html" title="Assigns a global bounding box to the object.">LIMITS (ASAP Command)</a></div>
+<div><a href="../Commands/LOCAL_ASAP-cmdref.html" title="Assigns a local bounding box to the surface/function.">LOCAL (ASAP Command)</a></div>
+<div><a href="../Commands/MAP_ASAP-cmdref.html" title="Produces a depth map of the currently defined object surfaces.">MAP (ASAP Command)</a></div>
+<div><a href="../Commands/SAMPLED_Cylindrical_ASAP-cmdref.html#SAMPLED_Cylindrical_ASAP_Command" title="Creates a deformed cylindrical surface interpolated from sampled data.">SAMPLED (Cylindrical) (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

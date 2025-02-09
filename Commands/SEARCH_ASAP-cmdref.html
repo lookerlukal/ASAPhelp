@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="SEARCH (ASAP Command)"/>
+<meta name="abstract" content="Sets the local and global object intersection strategy."/>
+<meta name="description" content="Sets the local and global object intersection strategy."/>
+<meta name="DC.subject" content="SEARCH (ASAP Command), object, setting intersection strategy, intersection, setting local and global for object"/>
+<meta name="keywords" content="SEARCH (ASAP Command), object, setting intersection strategy, intersection, setting local and global for object"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_S-ref.html#Commands_and_Macros_S"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ALLOWED_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CONSIDER_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TRACE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Referencing_Entities-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="SEARCH_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>SEARCH (ASAP Command)</title>
+</head>
+<body id="SEARCH_ASAP_Command"><a name="SEARCH_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>SEARCH (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Sets the local and global object intersection strategy. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+SEARCH [ LIST ]
+       [ ALL             FORWARD  ]
+         SEQUENTIAL BACKWARD
+   i         j         j'         j"
+   :
+      </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>LIST</span></td><td><span>lists 
+			 <b>SEARCH</b> settings</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ALL</span></td><td><span>all objects are candidates for intersection</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SEQUENTIAL</span></td><td><span>searches objects sequentially</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>FORWARD</span></td><td><span>searches objects forward</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>BACKWARD</span></td><td><span>searches objects backward</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>i j j' j"</span></td><td><span>on object i, searches objects j through j' in steps of
+			 j"</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <p>The 
+		<b>SEARCH</b> command provides another method to control the
+		way rays are traced by the 
+		<b>TRACE</b> command. Normally, ASAP traces rays along all
+		physically realizable paths. The 
+		<b>SEARCH</b> command provides per-object 
+		<i>search rules</i>. These rules explicitly specify which objects will be
+		considered directly "visible" to rays originating from any given object.
+		Namely, a search rule specifies the 
+		<i>only</i> "target" objects that are accessible from a given
+		"originating" object. The 
+		<b>SEARCH</b> command is useful, for example, to restrict
+		raytracing to selected paths, and may accelerate raytracing for important paths
+		through the system. 
+	 </p>
+ 
+	 <p><b>Caution</b> 
+	 </p>
+ 
+	 <p>Objects that are not included as "targets" in the search rule for an
+		"originating" object effectively do not exist for raytracing purposes. Rays
+		pass through such objects unaffected. This can lead to unexpected results, such
+		as rays "passing through" opaque objects that are not explicitly specified as
+		targets. 
+	 </p>
+ 
+	 <p>The first element of a search rule specifies the object number 
+		<b>i</b> of an originating object. The arguments in the
+		following table specify the range and increment of target objects in which 
+		<b>m</b> represents the highest object number defined in the
+		system. Any number of search rules can be specified, with one rule per line. 
+	 </p>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Input</span></th><th><span/></th><th><span/></th><th><span>Object Range and Increment</span></th><th><span/></th><th><span/></th><th><span/></th><th><span/></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>j</span></td><td><span>j'</span></td><td><span>j"</span></td><td><span>j</span></td><td><span>to</span></td><td><span>j'</span></td><td><span>by</span></td><td><span>j"</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ALL</span></td><td><span/></td><td><span/></td><td><span>1</span></td><td><span/></td><td><span>m</span></td><td><span/></td><td><span>1</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ALL</span></td><td><span>FORWARD</span></td><td><span/></td><td><span>i</span></td><td><span/></td><td><span>m</span></td><td><span/></td><td><span>1</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ALL</span></td><td><span>BACKWARD</span></td><td><span/></td><td><span>i</span></td><td><span/></td><td><span>1</span></td><td><span/></td><td><span>-1</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SEQUENTIAL</span></td><td><span/></td><td><span/></td><td><span>i-1</span></td><td><span/></td><td><span>i+1</span></td><td><span/></td><td><span>2</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SEQUENTIAL</span></td><td><span>FORWARD</span></td><td><span/></td><td><span>i+1</span></td><td><span/></td><td><span>i+1</span></td><td><span/></td><td><span/></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SEQUENTIAL</span></td><td><span>BACKWARD</span></td><td><span/></td><td><span>i-1</span></td><td><span/></td><td><span>i-1</span></td><td><span/></td><td><span/></td></tr></tbody></table> 
+	 <p><b>SEARCH</b> recognizes four special words: 
+	 </p>
+ 
+	 <br/><a name="SEARCH_ASAP_Command__ol_91603B75D2CE469AAD3429A50EB388A1"><!-- --></a><ol id="SEARCH_ASAP_Command__ol_91603B75D2CE469AAD3429A50EB388A1"> 
+		<li id="SEARCH_ASAP_Command__li_0A608DAE4A944C2D87B454B6A205D727"><a name="SEARCH_ASAP_Command__li_0A608DAE4A944C2D87B454B6A205D727"><!-- --></a><b>ALL</b>
+		  refers to all objects, including the originating object i. This is important
+		  when an object can reflect or scatter light onto itself. 
+		</li>
+ 
+		<li id="SEARCH_ASAP_Command__li_CBAFB2D0095A4660AF51CD75F9BDC97C"><a name="SEARCH_ASAP_Command__li_CBAFB2D0095A4660AF51CD75F9BDC97C"><!-- --></a><b>SEQUENTIAL</b> alone
+		  limits tracing to the objects numbered one higher or one lower than the
+		  originating object 
+		  <b>i.</b> 
+		</li>
+ 
+		<li id="SEARCH_ASAP_Command__li_CC52D9A4BF5C4DD98A09733931CF560D"><a name="SEARCH_ASAP_Command__li_CC52D9A4BF5C4DD98A09733931CF560D"><!-- --></a><b>FORWARD</b>
+		  further limits tracing to objects numbered higher than the originating object. 
+		</li>
+ 
+		<li id="SEARCH_ASAP_Command__li_474C5D79745E416EB953B8DA0A256113"><a name="SEARCH_ASAP_Command__li_474C5D79745E416EB953B8DA0A256113"><!-- --></a><b>BACKWARD</b>
+		  further limits tracing to objects numbered lower than the originating object 
+		  <b>i.</b> 
+		</li>
+ 
+	 </ol>
+ 
+	 <p>The effect of multiple 
+		<b>SEARCH</b> commands is cumulative. 
+	 </p>
+ 
+	 <p>Invoking 
+		<b>SEARCH LIST</b> produces a list of all search rules in
+		effect. 
+	 </p>
+ 
+	 <p>Normal raytracing rules can be reinstated by issuing the special
+		command, 
+		<b>SEARCH ALL</b>. 
+	 </p>
+ 
+	 <p> 
+		<a href="../example_scripts.html#SEARCH">SEARCH
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_S-ref.html#Commands_and_Macros_S" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “S”.">Commands and Macros (S)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Referencing_Entities-ref.html" title="Databases of surfaces, edges, objects, media (including coatings), rays, and sources may be referenced absolutely or relatively. Objects, media, and coatings also may be referenced literally.">Referencing Entities</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/ALLOWED_ASAP-cmdref.html" title="Controls whether a ray is allowed to proceed after intersecting an object.">ALLOWED (ASAP Command)</a></div>
+<div><a href="../Commands/CONSIDER_ASAP-cmdref.html" title="Selects a set of objects for ray tracing and plotting.">CONSIDER (ASAP Command)</a></div>
+<div><a href="../Commands/TRACE_ASAP-cmdref.html" title="Traces all currently selected rays in storage.">TRACE (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

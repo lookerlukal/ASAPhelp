@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="EMITTING RAYS (ASAP Command)"/>
+<meta name="abstract" content="Creates an arbitrary set of rays."/>
+<meta name="description" content="Creates an arbitrary set of rays."/>
+<meta name="DC.subject" content="EMITTING RAYS (ASAP Command), rays, create arbitray set, rays, emitting"/>
+<meta name="keywords" content="EMITTING RAYS (ASAP Command), rays, create arbitray set, rays, emitting"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_E-ref.html#Commands_and_Macros_E"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_BOX_SPHEROID_ASAP-cmdref.html#EMITTING_BOX_SPHEROID_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_CONE_PYRAMID_ASAP-cmdref.html#EMITTING_CONE_PYRAMID_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_DATA_ASAP-cmdref.html#EMITTING_DATA_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_DISK_RECTANGLE_ASAP-cmdref.html#EMITTING_DISK_RECTANGLE_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_ENTITY_or_OBJECT_ASAP-cmdref.html#EMITTING_ENTITY_or_OBJECT_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_FILAMENT_ASAP-cmdref.html#EMITTING_FILAMENT_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_HELIX_ASAP-cmdref.html#EMITTING_HELIX_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_IES_ASAP-cmdref.html#EMITTING_IES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Creating_Rays_to_Simulate_Random_Emitter-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/LIST_Command_Overview-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="EMITTING_RAYS_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>EMITTING RAYS (ASAP Command)</title>
+</head>
+<body id="EMITTING_RAYS_ASAP_Command"><a name="EMITTING_RAYS_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>EMITTING RAYS (ASAP Command)</h5></span> 
+   
+  
+  <div><p>Creates an arbitrary set of rays. 
+  </p>
+ 
+	 <p><b>Syntax</b>
+	 </p>
+ 
+	 <pre class="codeblock">
+EMITTING RAYS [ n dx dy dz da db dc ]
+x y z  a,b,c  f s d
+x' [ y' z' a',b',c' f' s' d' ]
+  :
+      </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span>number of random rays per input ray</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>dx dy dz</span></td><td><span>differential spatial volume over which the rays are
+			 created</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>da db dc</span></td><td><span>differential direction cosine over which the rays are
+			 created</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x y z</span></td><td><span>global spatial coordinate of an arbitrary ray</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a,b,c</span></td><td><span>global direction vectors of an arbitrary ray</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>f</span></td><td><span>flux of an arbitrary ray</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>s d</span></td><td><span>size and divergence of an arbitrary ray</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b>
+	 </p>
+ 
+	 <br/><a name="EMITTING_RAYS_ASAP_Command__ul_067438C0F534468F9079C3F86DE4E657"><!-- --></a><ol id="EMITTING_RAYS_ASAP_Command__ul_067438C0F534468F9079C3F86DE4E657"> 
+		<li id="EMITTING_RAYS_ASAP_Command__li_03280A0A6E284A0E98D11FAA0AD8E183"><a name="EMITTING_RAYS_ASAP_Command__li_03280A0A6E284A0E98D11FAA0AD8E183"><!-- --></a>Creates an arbitrary set of
+		  rays (one line of following input per ray) in terms of their positions,
+		  directions, fluxes, sizes, and divergences. Any trailing entries that are
+		  omitted take their value from the previous ray.
+		</li>
+ 
+		<li id="EMITTING_RAYS_ASAP_Command__li_14392A25B11145B4B225B70D7F3CDA87"><a name="EMITTING_RAYS_ASAP_Command__li_14392A25B11145B4B225B70D7F3CDA87"><!-- --></a>Optionally, instead of each
+		  of these defined rays, 
+		  <b>n</b> rays randomly distributed within the given
+		  half-intervals about each defined ray can be created.
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#EMITTING">EMITTING
+		  Examples</a>
+	 </p>
+
+  </div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_E-ref.html#Commands_and_Macros_E" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “E”.">Commands and Macros (E)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Creating_Rays_to_Simulate_Random_Emitter-conc.html" title="The EMITTING commands simultaneously set the ray positions and directions in a random manner to simulate natural emitters; for example, blackbody radiators.">Creating Rays to Simulate Random Emitter</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/LIST_Command_Overview-ref.html" title="While a graphical representation is generally the only way to look at large amounts of data (such as a spot diagram), numerical data is frequently needed for requirements verification/compliance, and comparisons.">LIST Command Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/EMITTING_ASAP-cmdref.html" title="Creates a composite single-source emitter from several EMITTING volume commands.">EMITTING (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_BOX_SPHEROID_ASAP-cmdref.html#EMITTING_BOX_SPHEROID_ASAP_Command" title="Creates a ray set uniformly distributed within a box or spheroid of an emitting volume.">EMITTING BOX/SPHEROID (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_CONE_PYRAMID_ASAP-cmdref.html#EMITTING_CONE_PYRAMID_ASAP_Command" title="Creates a rayset uniformly distributed within a cone or pyramid.">EMITTING CONE/PYRAMID (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_DATA_ASAP-cmdref.html#EMITTING_DATA_ASAP_Command" title="Creates rays from data in given binary distribution file.">EMITTING DATA (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_DISK_RECTANGLE_ASAP-cmdref.html#EMITTING_DISK_RECTANGLE_ASAP_Command" title="Creates random emitting surfaces.">EMITTING DISK/RECTANGLE (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_ENTITY_or_OBJECT_ASAP-cmdref.html#EMITTING_ENTITY_or_OBJECT_ASAP_Command" title="Randomly distributes rays over the faceted surface(s) of SURFACE/EDGE entities or SURFACE/EDGE OBJECTS (entity number k or object k (number or name)).">EMITTING ENTITY or OBJECT (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_FILAMENT_ASAP-cmdref.html#EMITTING_FILAMENT_ASAP_Command" title="Creates a randomly generated ray set that is uniformly distributed along a predefined or arbitrary curve.">EMITTING FILAMENT (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_HELIX_ASAP-cmdref.html#EMITTING_HELIX_ASAP_Command" title="Creates a volume emitter with randomly generated rays, uniformly distributed along a helical curve.">EMITTING HELIX (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_IES_ASAP-cmdref.html#EMITTING_IES_ASAP_Command" title="Creates a ray set that emits according to Illuminating Engineering Society (IES) data.">EMITTING IES (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Sources in ASAP</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Modeling Incoherent Extended Sources in ASAP, at http://www.breault.com/k-base.php 
+ </a></div>
+</div>
+</div> 
+
+</body>
+</html></body></html>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Version 6.5"/>
+<meta name="abstract" content="This topic outlines addition and changes to the kernel and to the user interface."/>
+<meta name="description" content="This topic outlines addition and changes to the kernel and to the user interface."/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Release_Notes-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_6_6-ref.html#Version_6_6"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_6_0-ref.html#Version_6_0"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Version_6_5"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Version 6.5</title>
+</head>
+<body id="Version_6_5"><a name="Version_6_5"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Version 6.5</h5></span>
+	
+	<div><p>This topic outlines addition and changes to the kernel and to the user interface. </p>
+
+		<div class="section" id="Version_6_5__section_48BC98ABF38047E496F3AD0140CA753D"><a name="Version_6_5__section_48BC98ABF38047E496F3AD0140CA753D"><!-- --></a><span style="color: #2b6eb5"><h5>Kernel Enhancements as of February 19, 1999</h5></span>
+			
+		</div>
+
+		<div class="section" id="Version_6_5__section_35639075C04849ACB3294493BE751964"><a name="Version_6_5__section_35639075C04849ACB3294493BE751964"><!-- --></a><span style="color: #2b6eb5"><h5>New Commands</h5></span>
+			
+			<pre class="codeblock">
+  DISPLAY
+    HEADER information can be selectively redefined.
+    REPLICATE distribution one or more times with or without "mirroring".
+  MOVE PARABASALS to base ray plane of each beam.
+  MODEL
+    RMS, autocorrelation length, and fall-off of surface variations.
+  COATING MODELS specify angular properties for reflection and transmission.
+  VIOLATION controls SPREAD and FIELD paraxial and positivity messages.</pre>
+
+		</div>
+
+		<div class="section" id="Version_6_5__section_A2004D4C65F64F32AFDEA4368F668EAC"><a name="Version_6_5__section_A2004D4C65F64F32AFDEA4368F668EAC"><!-- --></a><span style="color: #2b6eb5"><h5>Enhanced Commands</h5></span>
+			
+			<pre class="codeblock">
+  SAVE
+    File now always uses short records when XMEMORY set to MIN.
+    Maximum record number increased from 2^24 (16 million) to 2^31 (2 billion).
+  OBJECT
+    ROUGHNESS
+      MODEL resolution changed from 1 to .2 milliradians in Pro version.
+      Optional correlation length of micro-roughness for high angle shadowing.
+    SCATTER
+      TOWARDS
+        Center direction can now be parallel to surface.
+        Default beam half-angle is now 90 degrees when PARABASAL number is 0.
+        Simple solid angle towards an entity's reference POINT.
+    INTERFACE DIFFRACT has short form for efficiencies given by a COATING MODEL.
+  DISPLAY
+    GRAPH axes numbering changed from multiples of 2 decades to 3.
+    COMBINE
+      Record buffer increased to 10,000 pixels per line.
+      Added ability to do an arbitrary combination with a $FCN definition.
+    RADIAL averaging of center pixel and first ring improved slightly.
+    AVERAGE can be WEIGHTed by estimated error in each pixel.
+    NORMALIZE now allows different scale factors for the two coordinate ranges.
+    DIRECTION/ANGLES can output RADIANCE instead of default radiant intensity.
+  MODEL
+    BSDFDATA
+      Now works with just a single normal-incidence scan.
+      Processed points now written TO and read FROM SYSTEM file.
+      Small data sets (&lt;95 points) always kept in main memory storage.
+    Any measured data values can be BSDF times COSine of angle from normal.
+    ...PLOT will take an additional OVERLAY option.
+    HARVEY
+      Extended with 2 additional parameters postulated for rough surfaces.
+      Wavelength scaling (smooth surface approximation) done automatically.
+    PARTICLE
+      New short form based on simple Henyey-Greenstein model.
+      Particle size distribution can be user-specified via a $FCN definition.
+  EMIT
+    OBJECT can also take total number of evenly distributed rays.
+    FILAMENT parametric $FCN weight is now optional (default 1).
+  FIELD/SPREAD
+    Now calculates axial pathlength phase much more accurately.
+    Positivity violations no longer abort program (just current calculation).
+  LENS
+    IDEAL Jones matrix behavior is now virtually independent of incidence angle.
+  WIDTH...EDGE now produces much sharper edges on coherent GRID RECT or POLAR.
+  OPDMAP defaults have changed to make them better for most applications.
+  EXPLODE
+    Can now create glass inner edge, Mangin outer edge, and mirror back.
+    Added option to do ALL lens entities, not just one at a time.
+    Automatically creates CURVE-based objects if standard CADEQUIV.LIB loaded.
+  PLOT BEAMS no longer uses a crude approximation for skew beams.
+  SURFACE    
+ USERFUNC
+      Gradient done by finite-differences if $FCN returns only function value.
+      Default routine now handles isotropic SCALE transformation.
+    SAMPLED uses smooth positional interpolation with slopes and ACCURACY HIGH.
+    AXICONIC can specify other end of curve with LENGTH or HEIGHT option.
+    USERSAG can optionally shift the given profile along a conic curve.
+  GRID POLAR does better job of creating equal area beams for non-unity weight.
+  TRACE also lists warning summary for suppressed child rays.
+  WARNINGS
+    Limit now only terminates current TRACE not entire program.
+    Default is now unlimited warnings instead of number of ray selection flags.
+  MEDIA;...CRYSTAL
+    Reflected extraordinary beam now created along with ordinary.
+    Interface reflectivity/transmissivity values handled more accurately. 
+  PATHS default output format is now MEDIUM instead of LONG.
+  SPLIT...MONTECARLO for probabilistic "one ray in, one ray out" tracing.
+  DUMP now works with "+" entry after an END command reinitialization.</pre>
+
+		</div>
+
+		<div class="section" id="Version_6_5__section_3055AE47D23F461A8F8C1153E7799AAC"><a name="Version_6_5__section_3055AE47D23F461A8F8C1153E7799AAC"><!-- --></a><span style="color: #2b6eb5"><h5>Macro Language</h5></span>
+			
+			<pre class="codeblock">
+  $RAN sets "~" random operator seed.
+  $FCN uses separate instances of any locally initialized intrinsic registers.
+  Math functions added:
+    FACT returns factorial of argument (actually continuous Gamma function).
+    STEP and RECT binary functions.
+    ERF error function and its complement.</pre>
+
+		</div>
+
+		<div class="section" id="Version_6_5__section_A90B345BA38040D8B3C08A8389334EA1"><a name="Version_6_5__section_A90B345BA38040D8B3C08A8389334EA1"><!-- --></a><span style="color: #2b6eb5"><h5>Other Changes</h5></span>
+			
+			<pre class="codeblock">
+  As usual, *.SYS files are incompatible with previous versions.
+  Eliminated most null length "for###.dat" files and renamed rest "bro###.dat".
+  Allow reading of input file lines with "extra" CRs and/or LFs.</pre>
+
+		</div>
+
+		<div class="section" id="Version_6_5__section_458672813EBF401EBB92593E14D32D13"><a name="Version_6_5__section_458672813EBF401EBB92593E14D32D13"><!-- --></a><span style="color: #2b6eb5"><h5>  Increases in ASAP/PRO version</h5></span>
+			
+			<pre class="codeblock">
+    Simultaneous grating orders per object  9 ==&gt; 99
+    Important scattering areas per object     9 ==&gt; 20
+  USERSURF subroutine in USERPROG library changed to a logical function.
+  Virtual.pgs file no longer limited to 2GB (33 million XMEMORY MIN rays).</pre>
+
+		</div>
+
+		<div class="section" id="Version_6_5__section_09F985E62D71403AA2D354479651B5C3"><a name="Version_6_5__section_09F985E62D71403AA2D354479651B5C3"><!-- --></a><span style="color: #2b6eb5"><h5>  New IGES import options</h5></span>
+			
+			<pre class="codeblock">
+     Use uniform non-rational splines instead of non-uniform rational.
+     Display debug information (first Parameter record of used entities).
+  IGES trimmed planar spline surface imported as more efficient ASAP object.
+  UVSPACE BOUNDing has been sped up considerably.</pre>
+
+		</div>
+
+		<div class="section" id="Version_6_5__section_A6E5B5CDDC04469AA1D0C3DDF5C8760F"><a name="Version_6_5__section_A6E5B5CDDC04469AA1D0C3DDF5C8760F"><!-- --></a><span style="color: #2b6eb5"><h5>User Interface and General Additions to ASAP 6.5</h5></span>
+			
+			<p>The ASAP 6.5 release contains 54 improvements and advances the efficiency, accuracy, and usability of ASAP, while addressing specific requests from our customers.</p>
+
+			<p/>
+
+			<p><b>Ray Tracing</b></p>
+
+			<p>Improves ray trace efficiency and lets you model coatings without knowledge of the coating prescription. </p>
+
+			<p><b>Exterior Lighting Test Module – ASAP/ELTM</b></p>
+
+			<p>The new Windows-based ASAP Exterior Lighting Test Module (ELTM) facilitates the process of testing automotive exterior lighting. Analyze and test illumination patterns of reflector and sources for determining compliance with government requirements. An intuitive wizard-like interface walks you through the testing steps with a few easy-to-use dialog boxes.</p>
+
+			<p>With ASAP/ELTM, over 30 SAE requirements and an entire testing environment are ready to use, allowing you to focus on developing the optical system itself, such as a headlamp reflector. Test criteria are based on the SAE Ground Vehicle Lighting Standards Manual, SAE HS-34, from the Society for Automotive Engineering.</p>
+
+			<p><b>Visualization: Data Viewer</b></p>
+
+			<p>The Data Viewer includes several enhancements for creating plots of ray spots. You now have control over contours, palettes, pointers, and labeling. New control options mean many more ways to view and analyze your data.</p>
+
+			<p><b>Performance Control</b></p>
+
+			<p>You can now select computation CPU consumption setting. Via the ASAP Preferences, select how much of the CPU will be allocated to ASAP to compute intensive tasks (kernel tasks). This is useful if you do a lot of short computing-intensive tasks. You can set ASAP to consume the CPU, so your task (ray trace) would complete more quickly.</p>
+
+			<p><b>New Runtime</b></p>
+
+			<p>Due to the new Fortran (V6.0) and the new VC++ (6.0) programs, some performance gains in handling large PLR and DIS files is now possible.</p>
+
+			<p/>
+
+			<p><b>Builder</b></p>
+
+			<p>The ASAP™ Geometry and Source Builder now provides quick access to several key system design settings, including: </p>
+
+			<p><b>Support for POINTS-based Geometry</b>: add any two-dimensional or three-dimensional shape to your system quickly and easily using the Points Editor. </p>
+
+			<p><b>Preview Faceting Control</b>: control the level of intra-faceting and inter-faceting used when previewing your Builder geometry. Increase the level of faceting for a more precise rendering of your system; decrease the level of faceting for a faster rendering. </p>
+
+			<p><b>Append or Replace System Geometry</b>: choose to add your Builder geometry to your system, or replace the system geometry entirely. You can work on your system in a single Builder and replace the geometry as you need to, or work on each unique portion of your geometry in separate Builders and append each part of the system as you need it. </p>
+
+			<p><b>Localized Units Settings</b>: temporarily override the ASAP system units settings for your Builder geometry when you need to. </p>
+
+			<p><b>Automatic Entities</b>: create objects from entities automatically - without applying the OBJECT command. Define any single entity object implicitly while retaining the use of all entity and object modifiers. </p>
+
+			<p><b>New Context-Specific Coloring</b>: find your geometry definitions faster with color-coded Builder rows. Each type of geometry is optionally associated with a unique color. </p>
+
+			<p/>
+
+			<p><b>BRO Bulb Library</b></p>
+
+			<p>The BRO Bulb Library now includes over 30 industry bulbs, from which you can import a bulb model directly into your ASAP system geometry.</p>
+
+		</div>
+
+	</div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Release_Notes-ref.html" title="Topics in this section include all known release notes for ASAP up to the last version. Release notes for the current version can be viewed in the ASAP Command Output window, or opened from your ASAP installation root folder.">Release Notes</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a href="../Reference/Version_6_6-ref.html#Version_6_6" title="ASAP 6.6 Kernel Enhancements as of August 24, 1999">Version 6.6</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a href="../Reference/Version_6_0-ref.html#Version_6_0">Version 6.0</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="USERSURF (ASAP Command)"/>
+<meta name="abstract" content="Creates a user-defined surface with a user-defined surface intersection."/>
+<meta name="description" content="Creates a user-defined surface with a user-defined surface intersection."/>
+<meta name="DC.subject" content="USERSURF (ASAP Command), surface, creating user-defined"/>
+<meta name="keywords" content="USERSURF (ASAP Command), surface, creating user-defined"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_U-ref.html#Commands_and_Macros_U"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ARRAY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/BEND_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/BOUNDS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FCN_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FMAP_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MULTIPLE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SCALE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SKEW_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TEST_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="USERSURF_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>USERSURF (ASAP Command)</title>
+</head>
+<body id="USERSURF_ASAP_Command"><a name="USERSURF_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>USERSURF (ASAP Command)</h5></span>
+	
+	
+	<div><p>Creates a user-defined surface with a user-defined surface intersection. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">USERSURF x y z c [ c' c" ... ]</pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x y z</span></td><td><span>reference point</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>c c' c" ...</span></td><td><span>double precision coefficients</span></td></tr></tbody></table>
+		<p><b>Reference Point</b>
+		</p>
+
+		<p>As specified </p>
+
+		<p><b>Surface Normal</b>
+		</p>
+
+		<p>As specified </p>
+
+		<p><b>Autolimiting</b>
+		</p>
+
+		<p>Depends on definition </p>
+
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="USERSURF_ASAP_Command__ul_855937FB03E441A4B4B5306C21A52A19"><!-- --></a><ol id="USERSURF_ASAP_Command__ul_855937FB03E441A4B4B5306C21A52A19">
+			<li id="USERSURF_ASAP_Command__li_DC46BDC6D15842248A69654118348C0D"><a name="USERSURF_ASAP_Command__li_DC46BDC6D15842248A69654118348C0D"><!-- --></a>A user-programmable surface with reference
+				point <b>(x,y,z)</b> and double precision coefficients whose
+				intersection with an arbitrary ray can be coded by the user in the Fortran function,
+					<b>USERSURF</b>.</li>
+
+			<li id="USERSURF_ASAP_Command__li_330767DF90254E088FA8024A450727B7"><a name="USERSURF_ASAP_Command__li_330767DF90254E088FA8024A450727B7"><!-- --></a> The following restrictions apply to this
+				surface: <p>A ray is not allowed to intersect the surface more than once
+					consecutively. </p>
+<p>The <b>FCN, BEND, FMAP, MULTIPLE, ARRAY</b>,
+					and <b>TEST</b> commands cannot be used in conjunction with this
+					command. </p>
+<p>Non-orthogonal transformations are not allowed (<b>SCALE</b> or <b>SKEW</b>). </p>
+<p>They cannot be used later
+					as <b>BOUND, GRIN</b>, or alternate surfaces/normals. </p>
+</li>
+
+			<li id="USERSURF_ASAP_Command__li_C58B605D1DDB45C1A36095225F09D2E3"><a name="USERSURF_ASAP_Command__li_C58B605D1DDB45C1A36095225F09D2E3"><!-- --></a>The default definition is a conicoid with
+				vertex at <b>x,y,z</b> and normal direction <b>c,c',c".</b>
+				The fourth and fifth coefficients are the vertex curvature (inverse radius) and the
+				conic constant (0=sphere, -1=parabola), respectively. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#USERSURF">USERSURF Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_U-ref.html#Commands_and_Macros_U" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “U”.">Commands and Macros (U)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/ARRAY_ASAP-cmdref.html" title="Turns the last surface into a set of identical surfaces.">ARRAY (ASAP Command)</a></div>
+<div><a href="../Commands/BEND_ASAP-cmdref.html" title="Bends the last surface along a parabolic curve.">BEND (ASAP Command)</a></div>
+<div><a href="../Commands/BOUNDS_ASAP-cmdref.html" title="Assigns surfaces and edges as boundaries to objects.">BOUNDS (ASAP Command)</a></div>
+<div><a href="../Commands/FCN_ASAP-cmdref.html" title="Specifies a function to wrap around the function of the previous surface.">FCN (ASAP Command)</a></div>
+<div><a href="../Commands/FMAP_ASAP-cmdref.html" title="Creates a contour slice map of a 3D surface.">FMAP (ASAP Command)</a></div>
+<div><a href="../Commands/MULTIPLE_ASAP-cmdref.html" title="Converts the surface into multiple sheets.">MULTIPLE (ASAP Command)</a></div>
+<div><a href="../Commands/SCALE_ASAP-cmdref.html" title="Specifies arbitrary scaling of an entity.">SCALE (ASAP Command)</a></div>
+<div><a href="../Commands/SKEW_ASAP-cmdref.html" title="Specifies an arbitrary skewing of an entity.">SKEW (ASAP Command)</a></div>
+<div><a href="../Commands/TEST_ASAP-cmdref.html" title="Selects a particular branch of a surface.">TEST (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

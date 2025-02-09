@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="IMAGE (Global Point) (ASAP Command)"/>
+<meta name="abstract" content="Images a global point through a specified LENS entity."/>
+<meta name="description" content="Images a global point through a specified LENS entity."/>
+<meta name="DC.subject" content="IMAGE (Global Point) (ASAP Command), imaging a global point, lens entity, imaging global point through"/>
+<meta name="keywords" content="IMAGE (Global Point) (ASAP Command), imaging a global point, lens entity, imaging global point through"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_I-ref.html#Commands_and_Macros_I"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/IMAGE_Curve_Edge_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/IMAGE_Ray_Positions_ASAP-cmdref.html#IMAGE_Ray_Positions_ASAP_Command"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="IMAGE_Global_Point_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>IMAGE (Global Point) (ASAP Command)</title>
+</head>
+<body id="IMAGE_Global_Point_ASAP_Command"><a name="IMAGE_Global_Point_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>IMAGE (Global Point) (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Images a global point through a specified LENS entity. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">IMAGE k x y z k'</pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>k k'</span></td><td><span>starting/ending spaces</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x y z</span></td><td><span>global point</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="IMAGE_Global_Point_ASAP_Command__ul_5D51817625154EB89D9273C2CF2BB0F7"><!-- --></a><ol id="IMAGE_Global_Point_ASAP_Command__ul_5D51817625154EB89D9273C2CF2BB0F7"> 
+		<li id="IMAGE_Global_Point_ASAP_Command__li_CA2BDDD264B54305A737FDEAD05F1CB3"><a name="IMAGE_Global_Point_ASAP_Command__li_CA2BDDD264B54305A737FDEAD05F1CB3"><!-- --></a>Images the given point 
+		  <b>x y z</b> in space 
+		  <b>k</b> of the current lens into space 
+		  <b>k'</b> and displays the coordinates. 
+		</li>
+ 
+		<li id="IMAGE_Global_Point_ASAP_Command__li_D2E0A455EE5042B39C1442BAEB2C0590"><a name="IMAGE_Global_Point_ASAP_Command__li_D2E0A455EE5042B39C1442BAEB2C0590"><!-- --></a>The spaces are numbered from
+		  1 (before the first conicoid) to N+1 (after the last conicoid N). 
+		</li>
+ 
+		<li id="IMAGE_Global_Point_ASAP_Command__li_335FCFBB675449A1BAECDEFC3BF34FF7"><a name="IMAGE_Global_Point_ASAP_Command__li_335FCFBB675449A1BAECDEFC3BF34FF7"><!-- --></a>Uses the auxiliary axis
+		  technique that steps the image through the centers of curvature of the
+		  conicoids (the aperture semi-diameters, conic constants and obscuration ratios
+		  of the conicoids do not affect the imaging) and always produces an image even
+		  if it is virtual or unphysical. The resulting imaging transform is stigmatic
+		  (points go into points) but not necessarily collinear (lines go into lines).
+		  Therefore, it is only an approximation since in any real optical system, the
+		  image is aberrated (not a perfect point focus). 
+		</li>
+ 
+		<li id="IMAGE_Global_Point_ASAP_Command__li_7C409ED77F35468D89FC9257024E0249"><a name="IMAGE_Global_Point_ASAP_Command__li_7C409ED77F35468D89FC9257024E0249"><!-- --></a>The 
+		  <b>IMAGE</b> command used in pre-ASAP 5.1 versions is now
+		  named PICTURE. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#IMAGE">IMAGE
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_I-ref.html#Commands_and_Macros_I" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “I”.">Commands and Macros (I)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/IMAGE_Curve_Edge_ASAP-cmdref.html" title="Images a curve/edge through a specified LENS entity.">IMAGE Curve/Edge (ASAP Command)</a></div>
+<div><a href="../Commands/IMAGE_Ray_Positions_ASAP-cmdref.html#IMAGE_Ray_Positions_ASAP_Command" title="A ray modifier that finds the conjugates of ray coordinates through a LENS (images the current ray positions through a specified LENS entity).">IMAGE (Ray Positions) (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Parabasal Ray Tips"/>
+<meta name="abstract" content="This topic discusses parabasal rays with respect to base ray trajectory, clipping, and ray intersection."/>
+<meta name="description" content="This topic discusses parabasal rays with respect to base ray trajectory, clipping, and ray intersection."/>
+<meta name="DC.subject" content="Parabasal Ray Tips, ray, parabasal"/>
+<meta name="keywords" content="Parabasal Ray Tips, ray, parabasal"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Parabasal_Ray_Overview-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/BOUNDS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LIMITS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PARABASAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Application_Messages-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Parabasal_Ray_Tips"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Parabasal Ray Tips</title>
+</head>
+<body id="Parabasal_Ray_Tips"><a name="Parabasal_Ray_Tips"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Parabasal Ray Tips</h5></span> 
+  
+  
+  <div><p>This topic discusses parabasal rays with respect to base ray
+	 trajectory, clipping, and ray intersection.
+  </p>
+ 
+	 <div class="section" id="Parabasal_Ray_Tips__section_7D62035FA1C04FE19C118D3F42324F11"><a name="Parabasal_Ray_Tips__section_7D62035FA1C04FE19C118D3F42324F11"><!-- --></a><span style="color: #2b6eb5"><h5>Following the Base Ray Trajectory</h5></span> 
+		 
+		<p>Parabasal rays must follow the same trajectory through the system as
+		  the base ray about which they are defined. In other words, the rays must
+		  intersect the same objects in the same order. Once a base ray has intersected
+		  an object, ASAP tries to force the parabasal rays to intersect the same object
+		  as well.
+		</p>
+ 
+		<p>Ideally, parabasal rays always intersect the same objects as the base
+		  ray and always do so inside the physical limits of the objects. When this
+		  sequence does not happen, ASAP only performs the LIMITS and BOUNDS checking on
+		  the base ray - the parabasal rays are NOT subject to these tests, unless the
+		  PARABASAL. . .CLIP option is used. Consequently the parabasal rays cannot
+		  intersect anywhere on the base entity used to define the object intersected by
+		  the base ray.
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Parabasal_Ray_Tips__section_6483D053EB02424EAD866339FD18F7A8"><a name="Parabasal_Ray_Tips__section_6483D053EB02424EAD866339FD18F7A8"><!-- --></a><span style="color: #2b6eb5"><h5>Clipping</h5></span> 
+		 
+		<p>The parabasal rays cannot be clipped off the base ray. If the base ray
+		  misses an object, the parabasal rays also miss the object regardless of the
+		  physical geometry of the system.
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Parabasal_Ray_Tips__section_EEA0C3AACAD043A3918597A325BD5F52"><a name="Parabasal_Ray_Tips__section_EEA0C3AACAD043A3918597A325BD5F52"><!-- --></a><span style="color: #2b6eb5"><h5>Parabasal Ray Intersections</h5></span> 
+		 
+		<p>When parabasal rays cannot intersect a given object because of the
+		  functional form of the base entity, ASAP propagates the parabasal rays to the
+		  point of closest approach to the object and use that point to determine the
+		  local entity normal. There is no guarantee that the parabasal rays are heading
+		  in a useful direction after this happens.
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Parabasal_Ray_Overview-ref.html" title="This topic describes two types of parabasal rays.">Parabasal Ray Overview</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Application_Messages-conc.html" title="ASAP issues a variety of application messages to warn, alert, or inform you of any problems or situations it encounters. To learn what these messages mean, consult the BRO Knowledge Base first to determine if an explanation is posted.">Application Messages</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/BOUNDS_ASAP-cmdref.html" title="Assigns surfaces and edges as boundaries to objects.">BOUNDS (ASAP Command)</a></div>
+<div><a href="../Commands/LIMITS_ASAP-cmdref.html" title="Assigns a global bounding box to the object.">LIMITS (ASAP Command)</a></div>
+<div><a href="../Commands/PARABASAL_ASAP-cmdref.html" title="Sets the number of parabasal rays.">PARABASAL (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

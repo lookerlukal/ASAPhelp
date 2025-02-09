@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Linear Transformations for Edges and Curves"/>
+<meta name="abstract" content="Linear transformations change the shape, scaling, or orientation of a geometrical entity (surface, edge, lens, object, group, or rays) by applying a general 4x4 transformation matrix (linear transformations change only the orientation of lenses). Linear transformations that change the location of a geometrical entity are applied to the reference point (see table) of the entity."/>
+<meta name="description" content="Linear transformations change the shape, scaling, or orientation of a geometrical entity (surface, edge, lens, object, group, or rays) by applying a general 4x4 transformation matrix (linear transformations change only the orientation of lenses). Linear transformations that change the location of a geometrical entity are applied to the reference point (see table) of the entity."/>
+<meta name="DC.subject" content="Linear Transformations for Edges/Curves, edges, linear transformations for, curves, linear transformations for"/>
+<meta name="keywords" content="Linear Transformations for Edges/Curves, edges, linear transformations for, curves, linear transformations for"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_GM-ref.html#Reference_G_M"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CVF_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Coordinate_Transformations_in_ASAP-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Edge_Curve_Modifiers-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Linear_Transformations_for_Edges_Curves"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Linear Transformations for Edges and Curves</title>
+</head>
+<body id="Linear_Transformations_for_Edges_Curves"><a name="Linear_Transformations_for_Edges_Curves"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Linear Transformations for Edges and Curves</h5></span> 
+   
+  
+  <div><p>Linear transformations change the shape, scaling, or orientation
+	 of a geometrical entity (surface, edge, lens, object, group, or rays) by
+	 applying a general 4x4 transformation matrix (linear transformations change
+	 only the orientation of lenses). Linear transformations that change the
+	 location of a geometrical entity are applied to the reference point (see table)
+	 of the entity.
+  </p>
+ 
+	 <div class="section" id="Linear_Transformations_for_Edges_Curves__section_AF9EBF3E70024B9883869CFF37305354"><a name="Linear_Transformations_for_Edges_Curves__section_AF9EBF3E70024B9883869CFF37305354"><!-- --></a> 
+		<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>EDGES/CURVES</b></span></td><td><span><b>Reference
+				  Point</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>ELLIPSE</b></span></td><td><span>at intersection
+				of edge plane and coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>RECTANGLE</b></span></td><td><span>at
+				intersection of edge plane and coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>ROUNDED</b></span></td><td><span>at intersection
+				of edge plane and coordinate axis</span></td></tr></tbody></table> 
+	 </div>
+ 
+	 <div class="section" id="Linear_Transformations_for_Edges_Curves__section_10EB79ACC2984B78894A95F2BC7A4F80"><a name="Linear_Transformations_for_Edges_Curves__section_10EB79ACC2984B78894A95F2BC7A4F80"><!-- --></a><span style="color: #2b6eb5"><h5>Tips</h5></span> 
+		 
+		<br/><a name="Linear_Transformations_for_Edges_Curves__ul_57244FA10100483797F88501D790DFA4"><!-- --></a><ul id="Linear_Transformations_for_Edges_Curves__ul_57244FA10100483797F88501D790DFA4"> 
+		  <li id="Linear_Transformations_for_Edges_Curves__li_4944EE9A9CA3489598C4B853C45EF119"><a name="Linear_Transformations_for_Edges_Curves__li_4944EE9A9CA3489598C4B853C45EF119"><!-- --></a>Any number of linear
+			 transformation commands can be used to build up the complete transformation.
+			 The order in which these transformation commands are entered is exactly the
+			 order in which they will be applied to the entity. 
+		  </li>
+ 
+		  <li id="Linear_Transformations_for_Edges_Curves__li_A46D5FB5808B4B44BF6557E5D4C316EE"><a name="Linear_Transformations_for_Edges_Curves__li_A46D5FB5808B4B44BF6557E5D4C316EE"><!-- --></a>The transformation does
+			 not have to be orthonormal; this setup permits scaling and skewing of the
+			 entity. 
+		  </li>
+ 
+		  <li id="Linear_Transformations_for_Edges_Curves__li_BB422E25E5D544AA81E5D6482DC91E9B"><a name="Linear_Transformations_for_Edges_Curves__li_BB422E25E5D544AA81E5D6482DC91E9B"><!-- --></a>For the transformation of
+			 a direction vector, the dummy row contains all zeros. Ray data may also be
+			 transformed by these commands.
+		  </li>
+ 
+		  <li id="Linear_Transformations_for_Edges_Curves__li_B18E35F1CD934B4CBAFA8A4194F14071"><a name="Linear_Transformations_for_Edges_Curves__li_B18E35F1CD934B4CBAFA8A4194F14071"><!-- --></a>For more information, see
+			 Coordinate Transformations in ASAP.
+		  </li>
+ 
+		</ul>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_GM-ref.html#Reference_G_M" title="Reference topics in this section begin with the letters &#34;G&#34; to &#34;M&#34;.">Reference (G-M)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Edge_Curve_Modifiers-conc.html" title="Edge/curve modifiers fall into four categories, which are listed in this topic.">Edge and Curve Modifiers</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Coordinate_Transformations_in_ASAP-ref.html" title="The coordinate transformations used in ASAP are applicable both to explicit transformations (for example, SHIFT, ROTATE) and implicit transformations (for example, AXIS LOCAL in combination with FIELD or CVF).">Coordinate Transformations in ASAP</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/CVF_ASAP-cmdref.html" title="The CVF (Complex Vector Field) command provides a bidirectional translation facility between ASAP and FDTD Solutions™ by Lumerical.">CVF (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

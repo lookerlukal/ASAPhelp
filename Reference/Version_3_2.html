@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Version 3.2"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Release_Notes-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_3_3-ref.html#Version_3_3"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_3_0-ref.html#Version_3_0"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Version_3_2"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Version 3.2</title>
+</head>
+<body id="Version_3_2"><a name="Version_3_2"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Version 3.2</h5></span>
+	<div>
+		<div class="section" id="Version_3_2__section_49D4B18462C749198DAE856C1F5B20E8"><a name="Version_3_2__section_49D4B18462C749198DAE856C1F5B20E8"><!-- --></a>
+			<p>March 1993 </p>
+
+			<p>Changes to Macro Language: </p>
+
+			<pre class="codeblock">
+  Number of lines entry on macro call eliminated (remove dummy ALL)
+  FBI Fractional Blackbody Integral function added
+  $PLAY replays previous output or input
+  $GRAB reads numbers from output buffer into registers
+  Up to 16-character macro names now allowed
+  Maximum number of lines per macro now 9999
+  Optional end-of-macro literal for in-line and file definition
+  $ITER for plotting or minimizing registers as a function of other registers
+  literal:literal construct
+  $DATIM command turns ON or OFF date and/or clock time outputs
+  $IO OUTPUT redirection can send output to screen and a file simultaneously
+  $LOOK and $SCR now allow user to control attributes (colors) of display
+  $BEEP beeps!
+  $EDIT for on-line editing of macros and selected portions of input file
+  $PLOT and $VIEW for on-line processing 2D and 3D graphics files
+  Numerical entries can start with a parentheses (leading + not needed)
+  Comments can no longer be delimited with parentheses
+  &amp;MENU allows user to select a macro for execution with the graphics cursor</pre>
+
+		</div>
+
+		<div class="section" id="Version_3_2__section_2F6C0807AB774FC5933F5F90824505D3"><a name="Version_3_2__section_2F6C0807AB774FC5933F5F90824505D3"><!-- --></a><span style="color: #2b6eb5"><h5>Renamed ASAP Commands: </h5></span>
+			
+			<pre class="codeblock">  CURVE ==&gt; REVOLUTION (CURVE is now an alias for EDGE)</pre>
+
+		</div>
+
+		<div class="section" id="Version_3_2__section_D43BA46B36E34097A8DC7B131F125F98"><a name="Version_3_2__section_D43BA46B36E34097A8DC7B131F125F98"><!-- --></a><span style="color: #2b6eb5"><h5>Moved ASAP Commands: </h5></span>
+			
+			<pre class="codeblock">
+  OBJECT;...RANDOM option moved to new ROUGHNESS command
+  DEFORM moved from a SURFACE to an OBJECT modifier</pre>
+
+		</div>
+
+		<div class="section" id="Version_3_2__section_9F68E7053D4B49B5A7D3EF6AF7E416DA"><a name="Version_3_2__section_9F68E7053D4B49B5A7D3EF6AF7E416DA"><!-- --></a><span style="color: #2b6eb5"><h5>New ASAP Commands:</h5></span>
+			
+			<pre class="codeblock">
+  MISSED controls missed ray plotting
+  DECOMPOSE field into a POSITION or DIRECTION grid of beams
+  SURFACE;FCN defines a macro "wrapping" function
+  ACCURACY of calculations can be traded off against speed
+  LIGHT a scene for rendering
+  RENDER the current system geometry from an arbitrary camera point
+  COLORS can be reassigned to group or objects by interface properties
+  ALLOWED same as SEARCH but applied after finding next intersection
+  EMITTING FILAMENT creates an arbitrary "wire" of rays
+  SUBSET reduces the rayset to only the currently active rays
+  CAD command creates Autocad DXF file of EDGE and LENS objects
+  OBJECT;ROUGHNESS for micro and/or macro RMS roughness
+  SURFACE;ZERNIKE polynomial sag
+  DISPLAY
+    TABLE displays or transfers to registers a section of data
+    ANGLES converts direction cosine space data to spherical angle space
+    VALUES list specific functional values given actual coordinate pairs
+    OFFSET shifts origin of distribution
+  EXPLODE lens conicoids into separate object surfaces
+  RESET program settings to startup values
+  EDGE; ALTER coordinates and/or connection factor of points
+  GRID HEX creates a hexagonal grid of rays</pre>
+
+		</div>
+
+		<div class="section" id="Version_3_2__section_ECFBEA5F7FAA4F46A7F9004B60093D54"><a name="Version_3_2__section_ECFBEA5F7FAA4F46A7F9004B60093D54"><!-- --></a><span style="color: #2b6eb5"><h5>Changed ASAP Commands: </h5></span>
+			
+			<pre class="codeblock">
+  EDGE;POINTS uses quadratic rational Bezier (conic) segments instead of ellipse
+  PLOT FACETS entries have different meaning
+  SPOTS...ATTRIBUTE 0  suppresses all plotting now
+  			</pre>
+
+		</div>
+
+		<div class="section" id="Version_3_2__section_1404C7A04081425697E5888839BEC5B1"><a name="Version_3_2__section_1404C7A04081425697E5888839BEC5B1"><!-- --></a><span style="color: #2b6eb5"><h5>Enhanced ASAP Commands: </h5></span>
+			
+			<pre class="codeblock">
+  RAY now creates a GALOP input file for the sequence of surfaces encountered
+  FIELD/SPREAD/SPOTS/OPDMAP distributions with object or edge CLIPping
+  DISPLAY;FFT absolute output size added to relative
+  SOURCE WAVEFUNC can be actual wavefront surface
+  SHAPE and RAYSET allow literal beam shape names in addition to integer
+  USERAPOD with GRID RECT or ELLIP improved
+  SURFACE;FITTED has several addition options
+  Direction specification can be in LOCal system or NORmal at limits box center
+  ROTATE ABOUT an arbitrary 3D axis added
+  OBJECT can reference up to 60 edges or surfaces to form meshes or solids
+  PLOT MESH and OBJECTS options added
+  FFAD can add a REFERENCE box to plot
+  LENS;IDEAL takes a complex 2x2 Jones matrix for altering polarization
+  NUMBERS [ NAMES ] lists numbers and names of media and objects
+  PARABASAL can now take override table of transverse heights and angles
+  DISPLAY;MODIFY can now use a macro function for non-linear operations
+  OBJECT;INTERFACE takes multiple DIFFRACTs for multiplexed HOEs
+  MEDIA;...CRYSTAL for uniaxial birefringent materials
+  FIELD...DELTA will plot vector E-field if FRESNEL BOTH set
+  SELECT has new PATH and radial options
+  USERAPOD BOTH for 3d apodization of random emitting volumes
+   MODEL;VANES with DIFFRACTion form serrated edges
+  SURFACE;GENERAL EXPLICIT surface definition (sag equation to 14th order)
+  OBJECT;DEFORM with user-defined macro or explicit surface function
+  DISPLAY;WRITE also generates editable/portable ASCII *.DIN file
+  MODEL;HARVEY can take additional shoulder entry
+  DISPLAY;CONTOUR can do absolute levels and tic marks
+  OBJECT;INTERFACE COAT 0 handles polychromatic properties of bare surfaces better
+  SURFACE;TUBE can optionally create INNER or OUTER right cylinder
+  DISPLAY;REDUCE by default will "crop" a distribution
+  SEED allows selection of QUASI random number for EMITTERS
+  XMEMORY now controls 3 different VIRTUAL.PGS file sizes
+  CONTOUR...VECTOR option writes contours into 3D vector file
+  USER.... commands can optionally use a $FCN definition</pre>
+
+		</div>
+
+		<div class="section" id="Version_3_2__section_D43DF683C0D34933AFD3086BE8A644CB"><a name="Version_3_2__section_D43DF683C0D34933AFD3086BE8A644CB"><!-- --></a><span style="color: #2b6eb5"><h5>ASAP Code Changes: </h5></span>
+			
+			<pre class="codeblock">
+  VIRTUAL.PGS, *.SYS, and *.DIS files are incompatible with previous releases
+  Maximum number of objects increased from 200 to 300
+           Coefficients per Surfunc          84    120
+           Conicoids per Lens                 10     12
+           Points per Edge                     30    999
+           Parabasals per Beam               8      9
+           Pixels per line                     256   1000
+           Pixel map                   256x256  362x362
+  Linear transformations carried out in double precision now
+  Distribution file headers now slightly larger for better labeling
+  Source code now uses Fortran-90 DO [WHILE] ... ENDDO through out
+  Ray/beams now properly SCALE and/or SKEW to maintain wavefront invariants
+  VIRTUAL.PGS deleted before creating new ray set
+  XMEMORY OFF now startup default and reset by PARABASAL
+  Faster more compact SAVE for HISTORY (but not STRAP)
+  SAVE record pointer now first number instead of eighth
+  TEST POINT now translated with MULTIPLE surfaces  DISPLAY.DEF and CONFIG.CFG files replaced by CONFIG.BRO file
+  SOURCE POS/FOC now adjusts fluxes for isotropic point source
+  Control-C will now interrupt most calculations without exiting program</pre>
+
+			</div>
+
+			<div class="section" id="Version_3_2__section_65C2667763974B5BA93E050D4EEB5646"><a name="Version_3_2__section_65C2667763974B5BA93E050D4EEB5646"><!-- --></a><span style="color: #2b6eb5"><h5>New Utilities </h5></span>
+				
+				<pre class="codeblock">
+  DXF2RBT utility creates ASAP surface input from an AutoCAD DXF file
+  DIS2VGA displays distribution files with shading on VGA adapters
+  HEADER converts old distribution file headers to new format</pre>
+
+			</div>
+
+			<div class="section" id="Version_3_2__section_46ABE7B427FA45C7AB15528F59A66441"><a name="Version_3_2__section_46ABE7B427FA45C7AB15528F59A66441"><!-- --></a><span style="color: #2b6eb5"><h5>Platform Specifics </h5></span>
+				
+				<pre class="codeblock">
+  Extended DOS version will run in foreground or background under WINDOWS 3.1
+  Workstation versions have new multi-window color graphics driver</pre>
+
+			</div>
+
+	</div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Release_Notes-ref.html" title="Topics in this section include all known release notes for ASAP up to the last version. Release notes for the current version can be viewed in the ASAP Command Output window, or opened from your ASAP installation root folder.">Release Notes</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a href="../Reference/Version_3_3-ref.html#Version_3_3">Version 3.3</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a href="../Reference/Version_3_0-ref.html#Version_3_0">Version 3.0</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

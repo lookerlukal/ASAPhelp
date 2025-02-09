@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Verifying Source Model - Quick Reference"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Quick_Reference_Guide-ref.html#Quick_Reference_Guide"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/ASAP_Syntax_Quick_Reference-ref.html#ASAP_Syntax_Quick_Reference"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Optical_System_Model_Quick_Reference-ref.html#Optical_System_Model_Quick_Reference"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Verifying_Optical_System_Model_Quick_Reference-ref.html#Verifying_Optical_System_Model_Quick_Reference"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Source_Models_Quick_Reference.html#Source_Models_Quick_Reference"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Ray_Tracing_and_Analysis_Quick_Reference-ref.html#Ray_Tracing_and_Analysis_Quick_Reference"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Miscellaneous_Useful_Commands_Quick_Reference-ref.html#Miscellaneous_Useful_Commands_Quick_Reference"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Macro_Formatting_Quick_Reference-ref.html#Macro_Formatting_Quick_Reference"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DISPLAY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FIELD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FOCUS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OPDMAP_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/RADIANT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPOTS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPREAD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Builder_Window_Overview-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Verifying_Source_Model_Quick_Reference"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Verifying Source Model - Quick Reference</title>
+</head>
+<body id="Verifying_Source_Model_Quick_Reference"><a name="Verifying_Source_Model_Quick_Reference"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Verifying Source Model - Quick Reference</h5></span>
+	<div>
+		<div class="section" id="Verifying_Source_Model_Quick_Reference__section_EA6330A4B0C4420FABFC3F3773A1DC02"><a name="Verifying_Source_Model_Quick_Reference__section_EA6330A4B0C4420FABFC3F3773A1DC02"><!-- --></a>
+			<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>
+						<p><b>Radiometric:</b></p>
+
+						<p><b>Photometric Units</b></p>
+
+					</span></td><td><span/></td><td><span>
+						<p><b>Most Commom</b></p>
+
+						<p><b>Units</b></p>
+
+					</span></td><td><span><b>ASAP Commands</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Power</span></td><td><span>Φ</span></td><td><span>Watts(W):Lumens(L)</span></td><td><span>STATS /POS/DIR; LIST</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>
+						<p>Intensity:</p>
+
+						<p>Luminous Intensity</p>
+
+					</span></td><td><span><p>LI=</p>
+
+						<img src="../Equations/VerifySourceModel_inline_equation1.gif" width="35" height="51"/>
+					</span></td><td><span>W/sr:L/sr</span></td><td><span>
+						<p>1) WINDOW; PIXEL; SPOTS DIR ATT 0; DISPLAY; ANGLE display commands
+							(computation is in direction cosine space)</p>
+
+						<p>2) RADIANT; $IO VECTOR REWIND DISPLAY; AVE; MESH; $VIEW (computation is
+							in angle space)</p>
+
+					</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>
+						<p>Irradiance:</p>
+
+						<p>Illuminance</p>
+
+					</span></td><td><span><p>E,M=</p>
+
+						<img src="../Equations/VerifySourceModel_inline_equation2.gif" width="30" height="51"/>
+					</span></td><td><span>W/m²:L/m²</span></td><td><span>
+						<p>WINDOW; PIXEL; SPOTS POS ATTRI 0 (incoherent) or</p>
+
+						<p>SPREAD NORM (coherent/incoherent)</p>
+
+						<p>DISPLAY; display commands</p>
+
+					</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>
+						<p>Radiance:</p>
+
+						<p>Luminance</p>
+
+					</span></td><td><span><p>L=</p>
+<br/><img src="../Equations/VerifySourceModel_inline_equation3.gif"/><br/>(radiant intensity as a f[spatial
+						position]) <p>(radiance:luminance)</p>
+</span></td><td><span>W/m²sr:L/m²sr</span></td><td><span> 1) <img src="../Equations/VerifySourceModel_inline_equation5.gif" width="43" height="31"/>-WINDOW; PIXEL (pixel&lt;5)
+						RADIANT…..MAP; $VIEW <p>2) <img src="../Equations/VerifySourceModel_inline_equation5.gif" width="43" height="31"/>-WINDOW; PIXEL (pixel&gt;5)
+							RADIANT…..AREA (angle res=1); DISPLAY; display commands</p>
+</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Complex Field Components</span></td><td><span/></td><td><span/></td><td><span>WINDOW; PIXEL; FIELD…;DISPLAY 29…</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Geometric Wavefront</span></td><td><span/></td><td><span/></td><td><span>FOCUS MOVE r; WINDOW; PIXEL; OPDMAP; DISPLAY</span></td></tr></tbody></table>
+		</div>
+
+		<div class="section" id="Verifying_Source_Model_Quick_Reference__section_B4DDFA013D324FC6BEC55DDB65EAC65E"><a name="Verifying_Source_Model_Quick_Reference__section_B4DDFA013D324FC6BEC55DDB65EAC65E"><!-- --></a><span style="color: #2b6eb5"><h5>Verification Commands </h5></span>
+			
+			<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span><b>Command</b></span></td><td><span><b>ASAP Menu</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>STATS/LIST</span></td><td><span>Analysis&gt; Calculate Flux</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Preview</span></td><td><span>Preview (when Builder is active and for SPOT POSITION only)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>FOCUS</span></td><td><span>Analysis&gt; Focus Rays</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SPOTS</span></td><td><span>Analysis&gt; Calculate Flux Distribution</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SPREAD</span></td><td><span>Analysis&gt; Calculate Field Energy Distribution</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>FIELD</span></td><td><span>Analysis&gt; Analyze Beams&gt; Calculate Field Properties</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RADIANT</span></td><td><span>Analysis&gt; Radiant&gt; Incoherent Radiant Calculation</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>OPDMAP</span></td><td><span>Analysis&gt; Make OPD Map</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>DISPLAY</span></td><td><span>Display&gt; File, Display&gt; Graphics, Display&gt;
+					Processing</span></td></tr></tbody></table>
+		</div>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Quick_Reference_Guide-ref.html#Quick_Reference_Guide" title="The Quick Reference Guide is a group of topics that summarizes key commands and user interface locations.">Quick Reference Guide</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Builder_Window_Overview-conc.html" title="The Builder offers a simple approach to building your system. Designed for both new and experienced ASAP users, the Builder introduces you to the concepts of using ASAP to create your geometry, including sources. The entire system’s geometry is created in one window, using most standard spreadsheet navigation features, and saved with the file extension, .enx (an XML file), or .enz (a compressed XML file). You can also use the Builder for tracing rays and analyzing your system.">Builder Window Overview</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/ASAP_Syntax_Quick_Reference-ref.html#ASAP_Syntax_Quick_Reference" title="This topic provides a reference for commonly used ASAP syntax.">ASAP Syntax - Quick Reference</a></div>
+<div><a href="../Reference/Optical_System_Model_Quick_Reference-ref.html#Optical_System_Model_Quick_Reference" title="The following information is based on starting a new Builder line, or entering command syntax in the Command Input window.">Optical System Model - Quick Reference</a></div>
+<div><a href="../Reference/Verifying_Optical_System_Model_Quick_Reference-ref.html#Verifying_Optical_System_Model_Quick_Reference" title="This topic provides a list of commonly used commands for verifying an optical system model.">Verifying Optical System Model - Quick Reference</a></div>
+<div><a href="../Reference/Source_Models_Quick_Reference.html#Source_Models_Quick_Reference" title="This topic provides a list of commonly used commands for verifying an optical system model.">Source Models - Quick Reference</a></div>
+<div><a href="../Reference/Ray_Tracing_and_Analysis_Quick_Reference-ref.html#Ray_Tracing_and_Analysis_Quick_Reference" title="This topic provides a list of commonly used commands for ray tracing and analysis.">Ray Tracing and Analysis - Quick Reference</a></div>
+<div><a href="../Reference/Miscellaneous_Useful_Commands_Quick_Reference-ref.html#Miscellaneous_Useful_Commands_Quick_Reference" title="This topic provides a list of commonly used commands for re-initializing system databases and the virtual.pgs file, as well as for restoroing an ASAP session.">Miscellaneous Useful Commands - Quick Reference</a></div>
+<div><a href="../Reference/Macro_Formatting_Quick_Reference-ref.html#Macro_Formatting_Quick_Reference" title="Macro format for both library (filename.LIB) and on-the-fly macro definitions: use the $IO LIBRARY filename to associate that macro library with an ASAP session.">Macro Formatting - Quick Reference</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DISPLAY_ASAP-cmdref.html" title="Reads previously created distribution data files so that they can be modified.">DISPLAY (ASAP Command)</a></div>
+<div><a href="../Commands/FIELD_ASAP-cmdref.html" title="Calculates the exact complex field distribution.">FIELD (ASAP Command)</a></div>
+<div><a href="../Commands/FOCUS_ASAP-cmdref.html" title="Determines the best 3D focal point of currently selected ray data.">FOCUS (ASAP Command)</a></div>
+<div><a href="../Commands/OPDMAP_ASAP-cmdref.html" title="Creates a geometric wavefront map of the currently selected ray data.">OPDMAP (ASAP Command)</a></div>
+<div><a href="../Commands/RADIANT_ASAP-cmdref.html" title="Calculates the far-field incoherent intensity or radiance of the currently selected ray data.">RADIANT (ASAP Command)</a></div>
+<div><a href="../Commands/SPOTS_ASAP-cmdref.html" title="Creates a geometric spot diagram for the currently selected ray data.">SPOTS (ASAP Command)</a></div>
+<div><a href="../Commands/SPREAD_ASAP-cmdref.html" title="Calculates the exact coherent/incoherent energy distribution.">SPREAD (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

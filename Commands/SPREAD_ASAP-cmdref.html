@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="SPREAD (ASAP Command)"/>
+<meta name="abstract" content="Calculates the exact coherent/incoherent energy distribution."/>
+<meta name="description" content="Calculates the exact coherent/incoherent energy distribution."/>
+<meta name="DC.subject" content="SPREAD (ASAP Command), energy distribution, calculating with SPREAD, coherent energy distribution, calculating with SPREAD, incoherent energy distribution, calculating with SPREAD"/>
+<meta name="keywords" content="SPREAD (ASAP Command), energy distribution, calculating with SPREAD, coherent energy distribution, calculating with SPREAD, incoherent energy distribution, calculating with SPREAD"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_S-ref.html#Commands_and_Macros_S"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CLIP_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DISPLAY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FIELD_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/IRRADIANCE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PARABASAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SHAPE_ASAP-cmdref.html#SHAPE_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/VIOLATION_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WAVELENGTHS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WINDOW_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Calculating_Geometrical_MTFs-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Calculating_Modulation_Transfer_Functions-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Gaussian_Beam_Superposition_Algorithm-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Ghost_Image_Analysis-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Slicing_the_Irradiance_Pattern_with_SPREAD-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/SPREAD_and_FIELD_Command_Differences-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/SPREAD_FIELD_Calculations_Point_Sources-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="SPREAD_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>SPREAD (ASAP Command)</title>
+</head>
+<body id="SPREAD_ASAP_Command"><a name="SPREAD_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>SPREAD (ASAP Command)</h5></span>
+	
+	
+	<div><p>Calculates the exact coherent/incoherent energy distribution. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+SPREAD DIRECTION [ u ] [ DOWN d d' ] [ COLENGTH l ]
+       POSITION    ADD
+       APPROX
+       NORMAL
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>DIRECTION, POSITION, APPROX, or NORMAL</span></td><td><span>calculation to use (see Remarks)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>u</span></td><td><span>logical unit number for the distribution data file</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>DOWN d d'</span></td><td><span>restricts the calculation to a fractional range given by <b>d</b> to <b>d'</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>COLENGTH l</span></td><td><span>incoherently sums any beam whose optical path length is different from that
+					of the first valid beam by the coherence length l</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ADD</span></td><td><span>add the calculated distribution to the existing BRO009.DAT file</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="SPREAD_ASAP_Command__ul_251ACF2CB8154C86988289684FA654BC"><!-- --></a><ol id="SPREAD_ASAP_Command__ul_251ACF2CB8154C86988289684FA654BC">
+			<li id="SPREAD_ASAP_Command__li_BD3030BCFCDB41D88ECC465D91E5DF6E"><a name="SPREAD_ASAP_Command__li_BD3030BCFCDB41D88ECC465D91E5DF6E"><!-- --></a>Calculates the coherent/incoherent energy
+				distribution for the current beam set in the directions given by the last <b>WINDOW</b> command. </li>
+
+			<li id="SPREAD_ASAP_Command__li_CDF481FD874E432B990351CB75E8362D"><a name="SPREAD_ASAP_Command__li_CDF481FD874E432B990351CB75E8362D"><!-- --></a> The particular calculation is selected by
+				the <b>DIRECTION, POSITION, APPROX</b> or <b>NORMAL</b>
+				entry (listed from fastest to slowest): <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Functional Coordinates</span></th><th><span>Optical Method</span></th><th><span>Assumed Coherence</span></th><th><span>Units</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>DIRECTION</span></td><td><span>d-cosines</span></td><td><span>rough geom</span></td><td><span>incoherent</span></td><td><span>Flux/Ster</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>POSITION</span></td><td><span>positions</span></td><td><span>rough geom</span></td><td><span>incoherent</span></td><td><span>Flux/Area</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>APPROX</span></td><td><span>positions</span></td><td><span>rough wave</span></td><td><span>coh/incoh</span></td><td><span>Flux/Area</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>NORMAL</span></td><td><span>positions</span></td><td><span>exact wave</span></td><td><span>coh/incoh</span></td><td><span>Flux/Area</span></td></tr></tbody></table></li>
+
+			<li id="SPREAD_ASAP_Command__li_B1C1E397341E4997B154369135882DF8"><a name="SPREAD_ASAP_Command__li_B1C1E397341E4997B154369135882DF8"><!-- --></a>For the <b>SPREAD</b>
+				calculation to take place, a <b>WAVELENGTH</b> (and possibly a <b>PARABASAL</b>) command must be entered before any ray definitions. </li>
+
+			<li id="SPREAD_ASAP_Command__li_D1D0377857614B699CD352B6BA409820"><a name="SPREAD_ASAP_Command__li_D1D0377857614B699CD352B6BA409820"><!-- --></a>ASAP performs this calculation with four or
+				eight parabasal rays. To accurately model astigmatic effects in the Gaussian beams,
+				four or eight parabasal rays are required. </li>
+
+			<li id="SPREAD_ASAP_Command__li_7F51930107594E76BD9B23BD14938E3E"><a name="SPREAD_ASAP_Command__li_7F51930107594E76BD9B23BD14938E3E"><!-- --></a>The <b>WINDOW</b> and <b>PIXELS</b> commands affect the sampling used. <b>WINDOW</b>
+				sets up the area in space over which the calculation is to be performed. <b>PIXEL</b> defines the number of resolution points that are to be
+				contained within the current <b>WINDOW</b> setting. </li>
+
+			<li id="SPREAD_ASAP_Command__li_4D9B5F1C7A9A4B8FA33EE1C69136D964"><a name="SPREAD_ASAP_Command__li_4D9B5F1C7A9A4B8FA33EE1C69136D964"><!-- --></a><b>DOWN</b> may be used to
+				select only a piece of the <b>WINDOW</b> setting in the down
+				(horizontal) direction. This piece is determined from the <b>d</b> and
+					<b>d'</b> entries. For example, for <b>d</b>=.25 and
+					<b>d'</b>=.75, the central 50 percent of the window is selected.
+				However, if <b>d</b>=<b>d'</b>=.5, a 1-D profile of the
+				energy pattern along the centerline of the current <b>WINDOW</b> is
+				calculated. </li>
+
+			<li id="SPREAD_ASAP_Command__li_6AA429FC453045439DB7968E0B57ABCC"><a name="SPREAD_ASAP_Command__li_6AA429FC453045439DB7968E0B57ABCC"><!-- --></a>The maximum resolution (number of pixels)
+				across the window is dependent on your version of the software. There is no limit to
+				the number of pixels down the window, but the distribution data file is truncated
+				past the maximum number of pixels. </li>
+
+			<li id="SPREAD_ASAP_Command__li_83F57EE9171A4AD9B372BCAFB59C9C7C"><a name="SPREAD_ASAP_Command__li_83F57EE9171A4AD9B372BCAFB59C9C7C"><!-- --></a>The default distribution file is
+				BRO009.DAT. This file can be manipulated, plotted, and named with the <b>DISPLAY</b> command and its associated subcommands. </li>
+
+			<li id="SPREAD_ASAP_Command__li_DDD11715527D4D8D9DBF976034C76671"><a name="SPREAD_ASAP_Command__li_DDD11715527D4D8D9DBF976034C76671"><!-- --></a>If the <b>ADD</b> option is
+				present, the calculated distribution is added to the existing BRO009.DAT file. </li>
+
+			<li id="SPREAD_ASAP_Command__li_CF46CFF8B74A464DA8109E22A7BDAE28"><a name="SPREAD_ASAP_Command__li_CF46CFF8B74A464DA8109E22A7BDAE28"><!-- --></a><b>SPREAD</b> automatically
+				sums over multiple wavelengths incoherently and only uses beams located in the same
+				medium. </li>
+
+			<li id="SPREAD_ASAP_Command__li_235022D92F954064BB2915A6E034E35B"><a name="SPREAD_ASAP_Command__li_235022D92F954064BB2915A6E034E35B"><!-- --></a>If <b>SPREAD APPROX</b> is
+				selected or the number of <b>PARABASAL</b> rays is 0, only symmetric
+				beams are used, that is, individual astigmatic effects are ignored. </li>
+
+			<li id="SPREAD_ASAP_Command__li_42FE844E85F84D4D8378400323E1F00F"><a name="SPREAD_ASAP_Command__li_42FE844E85F84D4D8378400323E1F00F"><!-- --></a><b>SPREAD NORMAL</b> is exact
+				only if at least four <b>PARABASAL</b> rays were created and/or traced.
+				If there are multiple wavelengths in the current ray set, ASAP automatically cycles
+				through each distinct wavelength and incoherently (intensity) sums it with any other
+				wavelengths. </li>
+
+			<li id="SPREAD_ASAP_Command__li_A180A5E0CACF41C3A72A5ED565DF6AE9"><a name="SPREAD_ASAP_Command__li_A180A5E0CACF41C3A72A5ED565DF6AE9"><!-- --></a><b>SPREAD NORMAL</b> does <i>not</i> calculate polarization effects. </li>
+
+			<li id="SPREAD_ASAP_Command__li_4ACF0D1200C74F42B4680169F97E4B59"><a name="SPREAD_ASAP_Command__li_4ACF0D1200C74F42B4680169F97E4B59"><!-- --></a><b>SPREAD NORMAL</b> is
+				nominally equivalent to <b>FIELD ENERGY</b>. </li>
+
+			<li id="SPREAD_ASAP_Command__li_22D5FA903D9C45C7A27F668DDF9297F7"><a name="SPREAD_ASAP_Command__li_22D5FA903D9C45C7A27F668DDF9297F7"><!-- --></a>The <b>COLENGTH</b> option may
+				be used to incoherently sum a subset of beams that would normally be coherently
+				summed. Any beam whose optical path length is different from that of the first valid
+				beam by the coherence length l is incoherently summed. The default for l is a very
+				large number; beams with <b>SHAPE</b> factors that are less than or
+				equal to zero are coherently summed. </li>
+
+			<li id="SPREAD_ASAP_Command__li_E2F0944AB4734C75BBF4145F44850E00"><a name="SPREAD_ASAP_Command__li_E2F0944AB4734C75BBF4145F44850E00"><!-- --></a>The command argument, <b>CLIP</b> can be used to specify an object <b>i</b> or edge number
+					<b>j</b> whose bounds and limits clip the distribution. If <b>i</b> is not given, it is defaulted to the current object number of the
+				first valid ray. If <b>j</b> is negative the interior of the closed edge
+				is used, if <b>j</b> is positive, the exterior of the closed edge is
+				used. </li>
+
+			<li id="SPREAD_ASAP_Command__li_4FC2F0783FF7476F91FC06640F222574"><a name="SPREAD_ASAP_Command__li_4FC2F0783FF7476F91FC06640F222574"><!-- --></a>The flux data for each pixel is written to
+				logical unit <b>u</b> in unformatted direct access binary records whose
+				length is the current <b>PIXEL</b> setting. If <b>u</b> is
+				negative, then any previous data on the specified unit is overwritten. Otherwise,
+				the flux data is added pixel by pixel to what is already in the file. The default
+				value of <b>u</b> is -9. </li>
+
+			<li id="SPREAD_ASAP_Command__li_3CA834FEB9C64216812C89953F4086F1"><a name="SPREAD_ASAP_Command__li_3CA834FEB9C64216812C89953F4086F1"><!-- --></a><b>ADD</b> is equivalent to +9.
+				This file can be manipulated, plotted, and named with the <b>DISPLAY</b>
+				command and its associated subcommands. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#SPREAD">SPREAD Examples</a>
+		</p>
+
+	</div>
+
+	<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_S-ref.html#Commands_and_Macros_S" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “S”.">Commands and Macros (S)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Gaussian_Beam_Superposition_Algorithm-conc.html" title="">Gaussian Beam Superposition Algorithm</a></div>
+<div><a href="../Concept/Ghost_Image_Analysis-conc.html" title="Ghost images are produced by inter-reflections of light from optical element surfaces that have nonzero reflection and transmission coefficients. Some of the incident light is transmitted at a surface of the element while some is reflected at the same surface. The reflected light propagates back to another element surface, is reflected there, and eventually propagates to the image plane or detector. The culmination of these reflections results in a ghost image.">Ghost Image Analysis</a></div>
+<div><a href="../Concept/Slicing_the_Irradiance_Pattern_with_SPREAD-conc.html" title="If you do not need to calculate the entire 3D energy distribution, such as when symmetry is expected, it is more expedient and less time consuming to calculate only a slice of the irradiance pattern.">Slicing the Irradiance Pattern with SPREAD</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/SPREAD_FIELD_Calculations_Point_Sources-task.html" title="Prior to defining the rays, specify the input listed in this topic.">SPREAD and FIELD Calculations (Point Sources)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Calculating_Geometrical_MTFs-ref.html" title="In optical systems where the residual aberrations are large, the diffraction MTF can be difficult to compute. Consequently, an analogous measure of performance, the MTF is defined. Whereas, the diffraction Modulation Transfer Function (MTF) is the Fourier transform of the Point Spread Function (PSF), the geometrical MTF is a Fourier transform of the spot diagram.">Calculating Geometrical MTFs</a></div>
+<div><a href="/../Reference/Calculating_Modulation_Transfer_Functions-ref.xml">Calculating Modulation Transfer Functions</a></div>
+<div><a href="../Reference/SPREAD_and_FIELD_Command_Differences-ref.html" title="The two field/energy distribution commands, SPREAD and FIELD, appear to perform similar calculations (and in fact can perform many of the same calculations), but there are differences described in this topic.">SPREAD and FIELD Command Differences</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/CLIP_arg_ASAP-cmdref.html" title="Clips the distribution data according to an object or edge.">CLIP (ASAP Command Argument)</a></div>
+<div><a href="../Commands/DISPLAY_ASAP-cmdref.html" title="Reads previously created distribution data files so that they can be modified.">DISPLAY (ASAP Command)</a></div>
+<div><a href="../Commands/FIELD_ASAP-cmdref.html" title="Calculates the exact complex field distribution.">FIELD (ASAP Command)</a></div>
+<div><a href="../Commands/IRRADIANCE_ASAP-cmdref.html" title="Selects the axis that energy or peak flux density is computed relative to a given fixed direction for all sample points.">IRRADIANCE (ASAP Command)</a></div>
+<div><a href="../Commands/PARABASAL_ASAP-cmdref.html" title="Sets the number of parabasal rays.">PARABASAL (ASAP Command)</a></div>
+<div><a href="../Commands/PIXELS_ASAP-cmdref.html" title="Sets the resolution for graphics and calculations.">PIXELS (ASAP Command)</a></div>
+<div><a href="../Commands/SHAPE_ASAP-cmdref.html#SHAPE_ASAP_Command" title="Sets the beam shape of the individual rays of the currently selected rayset.">SHAPE (ASAP Command)</a></div>
+<div><a href="../Commands/VIOLATION_ASAP-cmdref.html" title="Controls the handling of paraxial departure and positivity violations during future SPREAD and FIELD commands.">VIOLATION (ASAP Command)</a></div>
+<div><a href="../Commands/WAVELENGTHS_ASAP-cmdref.html" title="Defines the wavelength(s) for different MEDIA and COATING definitions.">WAVELENGTH(S) (ASAP Command)</a></div>
+<div><a href="../Commands/WINDOW_ASAP-cmdref.html" title="Sets the plotting window for graphical output.">WINDOW (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Wave Optics</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Wave Optics in ASAP, at
+				http://www.breault.com/k-base.php </a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

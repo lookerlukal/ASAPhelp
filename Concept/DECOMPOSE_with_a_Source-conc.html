@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="DECOMPOSE with a Source"/>
+<meta name="abstract" content="When using the DECOMPOSE command, treat it as a method for creating the spatial and angular properties of the source. You must, of course, still define the appropriate physical properties of the source."/>
+<meta name="description" content="When using the DECOMPOSE command, treat it as a method for creating the spatial and angular properties of the source. You must, of course, still define the appropriate physical properties of the source."/>
+<meta name="DC.subject" content="DECOMPOSE with a Source, source, decomposing, distribution file, decomposing"/>
+<meta name="keywords" content="DECOMPOSE with a Source, source, decomposing, distribution file, decomposing"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_DEF-ref.html#Reference_DEF"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DISPLAY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FIELD_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="DECOMPOSE_with_a_Source"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>DECOMPOSE with a Source</title>
+</head>
+<body id="DECOMPOSE_with_a_Source"><a name="DECOMPOSE_with_a_Source"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>DECOMPOSE with a Source</h5></span>
+	
+	
+	<div><p>When using the <b>DECOMPOSE</b> command, treat it as a method for
+		creating the spatial and angular properties of the source. You must, of course, still define
+		the appropriate physical properties of the source. </p>
+
+		<p><b>DECOMPOSE </b> operates on the complex distribution file of a <b>FIELD</b> calculation to create the new beam set. Nothing prevents you from
+			creating a complex distribution file of your own and then using <b>DECOMPOSE</b> to create a corresponding beam set (see distribution data files
+			overview). How might you use this information? </p>
+
+		<p>As an example, consider an optical system that contains a single mode optical fiber. ASAP
+			cannot model the propagation of an optical field through a single mode optical fiber.
+			However, you could use ASAP to propagate the optical field up to the fiber, then perform
+			a <b>FIELD</b> calculation thereby creating a complex distribution file of
+			the optical field at that point. This distribution file may be used in another external
+			program specifically written to model the optical field propagation in the fiber (via
+			the complex matrix technique). The external program would in turn produce a distribution
+			file describing the complex optical field at the fiber output. This file could then be
+				<b>FIELD</b> to create a ray set that may be further propagated in ASAP.
+			The ASAP command string might look something like this: </p>
+
+		<p>...rays traced up to plane of interest </p>
+
+		<p>: </p>
+
+		<p><b>FIELD ENERGY</b> ...create complex distribution file </p>
+
+		<p><b>$SYS</b> ...to run external program </p>
+
+		<p><b>RAYS 0</b> ...zero out the old ray set </p>
+
+		<p><b>BEAMS COHERENT</b> ...set up physical properties of the new beam set </p>
+
+		<p>: </p>
+
+		<p><b>DECOMPOSE</b> ...create the spatial and angular properties of the new beam
+			set </p>
+
+		<p>: </p>
+
+		<p><b>TRACE</b> ...continue the analysis in ASAP </p>
+
+		<p>
+		</p>
+
+		<p>As an example of a user-defined complex distribution file the <b>DISPLAY</b>
+			command is used to input the letters BRO into an ASAP.INR file. If the first number of
+			data entered into this file is complex, the entire file will be treated as complex. A
+			beam set is then created with <b>DECOMPOSE POSITION </b> and the optical
+			field is examined at three different locations. Because of the file size you only see a
+			portion of the total <b>DISPLAY </b> data, but you do see all of the ASAP
+			commands used in the analysis. </p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_DEF-ref.html#Reference_DEF" title="Reference topics in this section begin with the letters &#34;D-E-F&#34;.">Reference (D-F)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DISPLAY_ASAP-cmdref.html" title="Reads previously created distribution data files so that they can be modified.">DISPLAY (ASAP Command)</a></div>
+<div><a href="../Commands/FIELD_ASAP-cmdref.html" title="Calculates the exact complex field distribution.">FIELD (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

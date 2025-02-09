@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="EMITTING HELIX (ASAP Command)"/>
+<meta name="abstract" content="Creates a volume emitter with randomly generated rays, uniformly distributed along a helical curve."/>
+<meta name="description" content="Creates a volume emitter with randomly generated rays, uniformly distributed along a helical curve."/>
+<meta name="DC.subject" content="EMITTING HELIX (ASAP Command), emitter, volume, helical curve, emitting"/>
+<meta name="keywords" content="EMITTING HELIX (ASAP Command), emitter, volume, helical curve, emitting"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_E-ref.html#Commands_and_Macros_E"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_BOX_SPHEROID_ASAP-cmdref.html#EMITTING_BOX_SPHEROID_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_CONE_PYRAMID_ASAP-cmdref.html#EMITTING_CONE_PYRAMID_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_DATA_ASAP-cmdref.html#EMITTING_DATA_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_DISK_RECTANGLE_ASAP-cmdref.html#EMITTING_DISK_RECTANGLE_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_ENTITY_or_OBJECT_ASAP-cmdref.html#EMITTING_ENTITY_or_OBJECT_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_FILAMENT_ASAP-cmdref.html#EMITTING_FILAMENT_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_IES_ASAP-cmdref.html#EMITTING_IES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_RAYS_ASAP-cmdref.html#EMITTING_RAYS_ASAP_Command"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="EMITTING_HELIX_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>EMITTING HELIX (ASAP Command)</title>
+</head>
+<body id="EMITTING_HELIX_ASAP_Command"><a name="EMITTING_HELIX_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>EMITTING HELIX (ASAP Command)</h5></span>
+	
+	
+	<div><p>Creates a volume emitter with randomly generated rays, uniformly distributed along a
+		helical curve. </p>
+
+		<p><b>Syntax #1 (short format)</b>
+		</p>
+
+		<pre class="codeblock">
+EMITTING HELIX X x x' t h r n [ ISO ]
+               Y y y'
+               Z z z'
+      </pre>
+
+		<p><b>Syntax #2 (long format)</b>
+		</p>
+
+		<pre class="codeblock">
+EMITTING HELIX  X x y z x' y' z' t r n [ ISO ]
+                Y y z x y' z' x'
+                Z z x y z' x' y'
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>X, Y or Z</span></td><td><span>coordinate axis</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x x', y y' or z z'</span></td><td><span>the initial and final coordinate along the axis (x-x')=length</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>t</span></td><td><span>number of turns (not necessarily integer)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>h</span></td><td><span>outside radius of the helix</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>r</span></td><td><span>radius (semi-thickness) of the wire</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n</span></td><td><span>number of rays</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ISO</span></td><td><span>specifies isotropic emission</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x y z, y z x, or z x y</span></td><td><span>first elliptical shape (second syntax)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x' y' z', y' z' x', or z' x' y'</span></td><td><span>second elliptical shape (second syntax)</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="EMITTING_HELIX_ASAP_Command__ul_1500DF3C4320486F80AE4DEA8930013B"><!-- --></a><ol id="EMITTING_HELIX_ASAP_Command__ul_1500DF3C4320486F80AE4DEA8930013B">
+			<li id="EMITTING_HELIX_ASAP_Command__li_6E627131C202468A9DDEE2E478BE166C"><a name="EMITTING_HELIX_ASAP_Command__li_6E627131C202468A9DDEE2E478BE166C"><!-- --></a>Creates <b>n</b> random rays
+				that follow a helical (spiral, spring, coil) curve. </li>
+
+			<li id="EMITTING_HELIX_ASAP_Command__li_44EBAB31740244808802881C0F78FBFB"><a name="EMITTING_HELIX_ASAP_Command__li_44EBAB31740244808802881C0F78FBFB"><!-- --></a>The <b>t</b> is the number of
+				turns (not necessarily an integer). </li>
+
+			<li id="EMITTING_HELIX_ASAP_Command__li_F7B610EED1BC4923A8A9BD1BEA91FF01"><a name="EMITTING_HELIX_ASAP_Command__li_F7B610EED1BC4923A8A9BD1BEA91FF01"><!-- --></a>The <b>h</b> is the outside
+				radius, and <b>r</b> the radius of the wire. </li>
+
+			<li id="EMITTING_HELIX_ASAP_Command__li_2418D5E0DF0F4D70AA08EF471E41E34F"><a name="EMITTING_HELIX_ASAP_Command__li_2418D5E0DF0F4D70AA08EF471E41E34F"><!-- --></a>Normally, each segment of the helix emits
+				like a Lambertian cylinder. </li>
+
+			<li id="EMITTING_HELIX_ASAP_Command__li_6310B69F88C04C53B7597BB197A68E61"><a name="EMITTING_HELIX_ASAP_Command__li_6310B69F88C04C53B7597BB197A68E61"><!-- --></a>The <b>ISO</b> option forces
+				each point to radiate isotropically. </li>
+
+			<li id="EMITTING_HELIX_ASAP_Command__li_82FCAFB5E8584EBF946D19A4834825AE"><a name="EMITTING_HELIX_ASAP_Command__li_82FCAFB5E8584EBF946D19A4834825AE"><!-- --></a> In addition to a true helix, <b>EMITTING HELIX</b> can also be used for some special cases of
+					interest:<br/><ol type="a">
+					<li>Torus: set the two axial coordinates to be equal and t to one.</li>
+
+					<li>Hollow Cylinder: set <b>t</b> to a high number and <b>r</b> to |x'-x|/2t (X case).</li>
+
+				</ol>
+</li>
+
+			<li id="EMITTING_HELIX_ASAP_Command__li_21D35C78D71C42D1BA949F746BAD34B9"><a name="EMITTING_HELIX_ASAP_Command__li_21D35C78D71C42D1BA949F746BAD34B9"><!-- --></a>The second syntax (long format) is more
+				flexible since it lets the helix vary from one elliptical shape (unprimed
+				coordinates) to another (primed). </li>
+
+			<li id="EMITTING_HELIX_ASAP_Command__li_6B8CD57007144DD7A73848C512831C74"><a name="EMITTING_HELIX_ASAP_Command__li_6B8CD57007144DD7A73848C512831C74"><!-- --></a>To get a planar spiral, set the two axial
+				coordinates in the second syntax (long format) to be equal. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#EMITTING">EMITTING Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_E-ref.html#Commands_and_Macros_E" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “E”.">Commands and Macros (E)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/EMITTING_ASAP-cmdref.html" title="Creates a composite single-source emitter from several EMITTING volume commands.">EMITTING (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_BOX_SPHEROID_ASAP-cmdref.html#EMITTING_BOX_SPHEROID_ASAP_Command" title="Creates a ray set uniformly distributed within a box or spheroid of an emitting volume.">EMITTING BOX/SPHEROID (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_CONE_PYRAMID_ASAP-cmdref.html#EMITTING_CONE_PYRAMID_ASAP_Command" title="Creates a rayset uniformly distributed within a cone or pyramid.">EMITTING CONE/PYRAMID (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_DATA_ASAP-cmdref.html#EMITTING_DATA_ASAP_Command" title="Creates rays from data in given binary distribution file.">EMITTING DATA (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_DISK_RECTANGLE_ASAP-cmdref.html#EMITTING_DISK_RECTANGLE_ASAP_Command" title="Creates random emitting surfaces.">EMITTING DISK/RECTANGLE (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_ENTITY_or_OBJECT_ASAP-cmdref.html#EMITTING_ENTITY_or_OBJECT_ASAP_Command" title="Randomly distributes rays over the faceted surface(s) of SURFACE/EDGE entities or SURFACE/EDGE OBJECTS (entity number k or object k (number or name)).">EMITTING ENTITY or OBJECT (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_FILAMENT_ASAP-cmdref.html#EMITTING_FILAMENT_ASAP_Command" title="Creates a randomly generated ray set that is uniformly distributed along a predefined or arbitrary curve.">EMITTING FILAMENT (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_IES_ASAP-cmdref.html#EMITTING_IES_ASAP_Command" title="Creates a ray set that emits according to Illuminating Engineering Society (IES) data.">EMITTING IES (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_RAYS_ASAP-cmdref.html#EMITTING_RAYS_ASAP_Command" title="Creates an arbitrary set of rays.">EMITTING RAYS (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

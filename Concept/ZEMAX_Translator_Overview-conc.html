@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="ZEMAX Translator Overview"/>
+<meta name="abstract" content="ASAP OPTICAL+ and ASAP ADVANCED include a ZEMAX-to-ASAP translator for opening ZEMAX files in ASAP."/>
+<meta name="description" content="ASAP OPTICAL+ and ASAP ADVANCED include a ZEMAX-to-ASAP translator for opening ZEMAX files in ASAP."/>
+<meta name="DC.subject" content="ZEMAX Translator Overview, translating ZEMAX files, ASAP OPTICAL+, ASAP ADVANCED"/>
+<meta name="keywords" content="ZEMAX Translator Overview, translating ZEMAX files, ASAP OPTICAL+, ASAP ADVANCED"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Importing_Exporting-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/ZEMAX_Translator_Startup_Dialog-task.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/ZEMAX_Error_Message-task.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="ZEMAX_Translator_Overview"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>ZEMAX Translator Overview</title>
+</head>
+<body id="ZEMAX_Translator_Overview"><a name="ZEMAX_Translator_Overview"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>ZEMAX Translator Overview</h5></span>
+	
+	
+	<div><p>ASAP OPTICAL+ and ASAP ADVANCED include a ZEMAX-to-ASAP translator for opening ZEMAX files in ASAP. </p>
+
+		<p>When you open a ZEMAX file (File&gt; Open), the Open Files dialog box displays. Choose
+				<b>zemax files (*.zmx, *.zmax)</b> from the drop-down list next to
+				<b>Files of type</b>. Locate the ZEMAX file and click Open. The
+			startup dialog is displayed, from which you designate names of input/output files and
+			set Preferences. </p>
+
+		<div class="section"><span style="color: #2b6eb5"><h5>Overview </h5></span>
+			
+			<p>In ASAP, each surface is placed in a global coordinate system. To find the
+				coordinate, ASAP performs these steps for each surface. </p>
+
+			<br/><ol>
+				<li>From the ZEMAX data, ASAP calculates the location and orientation of each
+					surface in a single global coordinate system. </li>
+
+				<li>ASAP determines the transformation matrix for each surface required to transform
+					the surface from its local coordinate system to the global coordinate system. </li>
+
+				<li>ASAP decomposes the transformation matrix into the angles and positioning
+					variables required by ASAP. </li>
+
+			</ol>
+
+		</div>
+
+		<div class="section">
+			<div class="note"><span class="notetitle">Note:</span> 
+				<p>ZEMAX has a special “tilted” surface to tilt a surface with respect to the
+					previous surface, but does not change the coordinate system of the previous
+					surface. This type of surface is taken into account when computing the ZEMAX
+					global coordinate system and the transformation matrices to transform each
+					surface from its local coordinate system to the global coordinate system. </p>
+
+			</div>
+
+		</div>
+
+		<div class="section"><span style="color: #2b6eb5"><h5>Differences in ZEMAX and ASAP</h5></span>
+			
+			<p>The following table highlights the major differences between ZEMAX and ASAP, and is
+				for information purposes only. </p>
+
+			<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span/></td><td><span><b>ZEMAX</b></span></td><td><span><b>ASAP</b></span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Defining Geometry</span></td><td><span>
+						<p>Defines surfaces with respect to the previous surface. </p>
+
+						<p>Uses an artificial surface (call a “coordbrk” surface) to define changes
+							in the decentration and orientation of surfaces following the “coordbrk”
+							surface. Coordinate transformations are always defined with respect to
+							the coordinate system of the previous surface. </p>
+
+					</span></td><td><span>
+						<p>Defines surfaces in a Global Coordinate System. </p>
+
+						<p>Uses transformation variables (x, y, and z shifts, and x, y, and z
+							rotations to define the position and orientation of a surface in the
+							global coordinate system. </p>
+
+					</span></td></tr></tbody></table>
+			<p>Defining Optical Media </p>
+
+			<br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Standard optical glasses</span></td><td><span>Computes the index of refraction for each wavelength form glass
+						dispersion formulas given in a glass catalog. If a user of ZEMAX changes a
+						wavelength or wavelengths, ZEMAX recalculates the new indices of refraction
+						from the dispersion formulas.</span></td><td><span>For standard glass, ASAP uses a table of indices of refraction. The
+						table can either be explicitly defined computed from the ASAP glass
+						catalogs. ASAP glass catalogs may not be identical to ZEMAX glass catalogs.
+						If a user changes to a wavelength not defined in the wavelength-index table,
+						ASAP linearly interpolates the index of refraction for the new
+					wavelength.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Birefringent (crystals) mediums</span></td><td><span>Uses a special glass catalog “birefringent” to get the dispersion
+						formulas for the extraordinary rays. The glass name for the extraordinary
+						ray has an “-e” appended to the glass name for the ordinary ray. The axis of
+						the crystal is stored in the surface data matrix. ZEMAX uses a
+						multi-configuration system containing two configurations to define the ray
+						tracing properties for a crystal. One configuration, called mode one, traces
+						the ordinary ray. The other configuration, call mode two, traces the
+						extraordinary ray.</span></td><td><span>For birefringent (crystal) mediums, ASAP defines a <b>CRYSTAL</b> medium, including the indices of refraction for the
+						extraordinary rays, the crystal axis, and a “pointer” to the medium that
+						defines the indices of refraction for the ordinary ray. ASAP can define and
+						trace both the ordinary and extraordinary components of an incident ray at
+						the same time. ASAP correctly distributes the flux of the incident ray
+						between the ordinary and extraordinary refracted ray.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Beam splitters – type 1</span></td><td><span>Type 1 is partially reflecting and partially transmitting. Two cases
+						for this type of beam splitter exist. First, a ray traveling in one
+						direction (for example, left to right) transmits through the surface,
+						intersects a mirror, and returns to the beam splitter surface traveling in
+						the opposite direction (for example, right to left) and reflects off the
+						surface. Because ZEMAX is a sequential ray-tracing program, the beam
+						splitter surface must be entered twice in the lens design data, once for the
+						transmitting surface and once for the reflecting surface. These two surfaces
+						are located in different positions in the lens design sequence and,
+						therefore, ZEMAX has no ambiguity as to when to transmit or when to reflect
+						the incident ray. This type of beam splitter is defined in a single
+						configuration of the lens design. </span></td><td><span>The user defines a “coating” that gives the reflectance and
+						transmittance properties for each wavelength. Ray splitting is used to split
+						the ray into its reflected and transmitted components. Type 1 beam splitters
+						are typically 50% reflecting and 50% transmitting.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Beam splitters – type 2</span></td><td><span>This type of beam splitter is used to transmit or reflect rays
+						according to their wavelength. In ZEMAX, this requires a multi-configuration
+						system with two configurations. One configuration is defined for the
+						transmitting path. The other configuration defines the reflection path.</span></td><td><span>The user defines a “coating” that gives the reflectance and
+						transmittance properties for each wavelength. The difference is that for the
+						wavelengths that transmit the ray, the coating has a zero (or a very small)
+						reflectance component and a one- (or very nearly one) transmission
+						component. For the wavelengths that reflect the ray, the coating has a one-
+						(or very nearly one) reflectance component and a zero (or very nearly zero)
+						transmittance component.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Ray Tracing Technique</span></td><td><span>A sequential ray tracing program. Does have a non-sequential block</span></td><td><span>A non-sequential ray tracing program.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Duplicate Surfaces</span></td><td><span>Causes no problems. In certain situations, they are required.</span></td><td><span>
+						<p>Causes problems with non-sequential ray tracing. Therefore, there should
+							be no duplicate surfaces in ASAP. </p>
+
+						<p>ASAP partial reflecting-transmitting coating eliminates the need for
+							duplicate surfaces. </p>
+
+					</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Artificial Surfaces</span></td><td><span>
+						<p>Uses “coordbrk” surfaces to define decentered and rotated surfaces. </p>
+
+						<p>Uses “standard” surfaces with the same glass type as the previous
+							surface. A lens designer using ZEMAX may use an artificial surface in
+							ZEMAX for several reasons. For example, in a Cassegrain telescope the
+							user may place an artificial surface after the secondary mirror at the
+							location of the primary mirror. This surface can serve two purposes: to
+							calculate the size of the central hole needed in the primary mirror, and
+							to calculate the back focal length of the system. </p>
+
+					</span></td><td><span>Avoid using artificial surfaces in ASAP, except where necessary to
+						define mechanical constraints.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Zoom Lenses</span></td><td><span>Uses a multi-configuration design to define zoom lenses. Each zoom
+						position is a separate configuration of the design.</span></td><td><span>Define a separate ASAP inr file for each zoom position. To distinguish
+						one zoom position from another, the translator appends the letters _zp#
+						(where # is replaced by the ZEMAX zoom position #) to the end of the ASAP
+						base file name.</span></td></tr></tbody></table>
+		</div>
+
+	</div>
+
+<div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="../Task/ZEMAX_Translator_Startup_Dialog-task.html">ZEMAX Translator Startup Dialog</a></strong><br/>
+The ZEMAX to ASAP Translator dialog box first displays when you open a ZEMAX file.</li>
+<li class="ulchildlink"><strong><a href="../Task/ZEMAX_Error_Message-task.html">ZEMAX Error Message</a></strong><br/>
+An ASAP message box is displayed during a ZEMAX-to-ASAP translation when ASAP encounters a lens design error condition and stops the translation. See the message box content for specific error information.</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Importing_Exporting-conc.html" title="You can import or export several types of files, either those generated by ASAP or those used as inputs to ASAP.">Importing/Exporting</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="PLOT3D (ASAP Command)"/>
+<meta name="abstract" content="Creates a 3D representation of the current distribution data file with 1D cross-sections."/>
+<meta name="description" content="Creates a 3D representation of the current distribution data file with 1D cross-sections."/>
+<meta name="DC.subject" content="PLOT3D (ASAP Command), distribution data, 3D representation"/>
+<meta name="keywords" content="PLOT3D (ASAP Command), distribution data, 3D representation"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_P-ref.html#Commands_and_Macros_P"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/DISPLAY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ISOMETRIC_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_BEAMS_ASAP-cmdref.html#PLOT_BEAMS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_CURVES_ASAP-cmdref.html#PLOT_CURVES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_EDGES_ASAP-cmdref.html#PLOT_EDGES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_ENTITIES_ASAP-cmdref.html#PLOT_ENTITIES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_FACETS_ASAP-cmdref.html#PLOT_FACETS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_LENSES_ASAP-cmdref.html#PLOT_LENSES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_LIMITS_ASAP-cmdref.html#PLOT_LIMITS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_LOCAL_ASAP-cmdref.html#PLOT_LOCAL_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_MESHES_ASAP-cmdref.html#PLOT_MESHES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_POLARIZATION_ASAP-cmdref.html#PLOT_POLARIZATION_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_RAYS_ASAP-cmdref.html#PLOT_RAYS_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_SURFACES_ASAP-cmdref.html#PLOT_SURFACES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OVERLAY_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Plotting_Commands-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PROFILES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/REPLOT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/XYZ_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WINDOW_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="PLOT3D_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>PLOT3D (ASAP Command)</title>
+</head>
+<body id="PLOT3D_ASAP_Command"><a name="PLOT3D_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>PLOT3D (ASAP Command)</h5></span>
+	
+	
+	<div><p>Creates a 3D representation of the current distribution data file with 1D
+		cross-sections. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">PLOT3D [ s ] [ t [ r ] ]</pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>s</span></td><td><span>readjusts the vertical scale</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>t</span></td><td><span>tilt (default 18) (see Remarks)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>r</span></td><td><span>rotation (default 33) (see Remarks)</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="PLOT3D_ASAP_Command__ul_AAE2630BEFF54C18AED5E4526379EFEE"><!-- --></a><ol id="PLOT3D_ASAP_Command__ul_AAE2630BEFF54C18AED5E4526379EFEE">
+			<li id="PLOT3D_ASAP_Command__li_D70CD73F52184CA397D276E3F202ECAE"><a name="PLOT3D_ASAP_Command__li_D70CD73F52184CA397D276E3F202ECAE"><!-- --></a>Produces a 3D hidden line representation of
+				the data and a set of 1D (one-dimensional) cross-sections on the same plot. </li>
+
+			<li id="PLOT3D_ASAP_Command__li_7E9AC5DB2FE94B1996E1349A2FB99E91"><a name="PLOT3D_ASAP_Command__li_7E9AC5DB2FE94B1996E1349A2FB99E91"><!-- --></a>The <b>s</b> can be used to
+				readjust the vertical scale of the plot downward (that is, <b>s</b> less
+				1). </li>
+
+			<li id="PLOT3D_ASAP_Command__li_B3030CE09F064FA3AC83B0502CA738ED"><a name="PLOT3D_ASAP_Command__li_B3030CE09F064FA3AC83B0502CA738ED"><!-- --></a>The actual view is controlled by the tilt
+					<b>t</b> and rotation <b>r</b> angles in degrees
+				(defaults 18 and 33). Both these angles should be greather than 1.5 degrees and less
+				than 90. </li>
+
+			<li id="PLOT3D_ASAP_Command__li_F0441DC66AA043D18ACB95C53A7BF1A1"><a name="PLOT3D_ASAP_Command__li_F0441DC66AA043D18ACB95C53A7BF1A1"><!-- --></a>The <b>OVERLAY</b> command
+				argument tells ASAP not to issue an end of plot so that the next plot created is
+				overlaid with the current plot. This is useful for combining system plots with ray
+				trace plots (assuming that the <b>WINDOW</b> is the same for all plots),
+				multiple spot diagrams, and so on. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#PLOT3D">PLOT3D Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_P-ref.html#Commands_and_Macros_P" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “P”.">Commands and Macros (P)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Plotting_Commands-ref.html" title="The PLOT command is a general command for plotting virtually any aspect of system geometry and selected ray data.">Plotting Commands</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/DISPLAY_ASAP-cmdref.html" title="Reads previously created distribution data files so that they can be modified.">DISPLAY (ASAP Command)</a></div>
+<div><a href="../Commands/ISOMETRIC_ASAP-cmdref.html" title="Creates an isometric view of the current distribution data file.">ISOMETRIC (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_BEAMS_ASAP-cmdref.html#PLOT_BEAMS_ASAP_Command" title="Plots extent of each Gaussian beam within the currently specified graphics window.">PLOT BEAMS (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_CURVES_ASAP-cmdref.html#PLOT_CURVES_ASAP_Command" title="Plots a wire-frame outline of curves, with the control points displayed, in the currently specified graphics window.">PLOT CURVES (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_EDGES_ASAP-cmdref.html#PLOT_EDGES_ASAP_Command" title="Plots a wireframe outline of edges in the currently specified graphics window.">PLOT EDGES (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_ENTITIES_ASAP-cmdref.html#PLOT_ENTITIES_ASAP_Command" title="Plots surface, edge, and lens entities in the currently specified graphics window.">PLOT ENTITIES (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_FACETS_ASAP-cmdref.html#PLOT_FACETS_ASAP_Command" title="Plots parametric mesh representation of objects in the currently specified graphics window.">PLOT FACETS (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_LENSES_ASAP-cmdref.html#PLOT_LENSES_ASAP_Command" title="Plots lenses in the currently specified graphics window.">PLOT LENSES (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_LIMITS_ASAP-cmdref.html#PLOT_LIMITS_ASAP_Command" title="Plots a wireframe box denoting the extent of the specified objects limits box in the currently specified graphics window.">PLOT LIMITS (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_LOCAL_ASAP-cmdref.html#PLOT_LOCAL_ASAP_Command" title="Plots local boxes of surface entities.">PLOT LOCAL (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_MESHES_ASAP-cmdref.html#PLOT_MESHES_ASAP_Command" title="Plots all currently specified objects using a wireframe mesh.">PLOT MESHES (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_POLARIZATION_ASAP-cmdref.html#PLOT_POLARIZATION_ASAP_Command" title="Plots polarization state ellipses.">PLOT POLARIZATION (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_RAYS_ASAP-cmdref.html#PLOT_RAYS_ASAP_Command" title="Plots vectors along the direction of each ray contained within the currently specified graphics window.">PLOT RAYS (ASAP Command)</a></div>
+<div><a href="../Commands/PLOT_SURFACES_ASAP-cmdref.html#PLOT_SURFACES_ASAP_Command" title="Plots surfaces in the currently specified graphics window.">PLOT SURFACES (ASAP Command)</a></div>
+<div><a href="../Commands/OVERLAY_arg_ASAP-cmdref.html" title="Overlays plots (that is, places them on top of each other).">OVERLAY (ASAP Command Argument)</a></div>
+<div><a href="../Commands/PIXELS_ASAP-cmdref.html" title="Sets the resolution for graphics and calculations.">PIXELS (ASAP Command)</a></div>
+<div><a href="../Commands/PROFILES_ASAP-cmdref.html" title="Plots slices through objects contained within the specified graphics window.">PROFILES (ASAP Command)</a></div>
+<div><a href="../Commands/REPLOT_ASAP-cmdref.html" title="Plots data stored in the 3D vector file within the currently defined graphics window.">REPLOT (ASAP Command)</a></div>
+<div><a href="../Commands/XYZ_arg_ASAP-cmdref.html" title="Sets the window to the given directions and size for only the currently active plot.">XY[Z] and Other Plot Window Overrides (ASAP Command Argument)</a></div>
+<div><a href="../Commands/WINDOW_ASAP-cmdref.html" title="Sets the plotting window for graphical output.">WINDOW (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

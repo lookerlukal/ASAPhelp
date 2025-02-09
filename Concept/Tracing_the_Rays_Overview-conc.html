@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Tracing the Rays Overview"/>
+<meta name="abstract" content="Ray tracing is probably the most basic operation in ASAP since all information regarding system performance is obtained with it."/>
+<meta name="description" content="Ray tracing is probably the most basic operation in ASAP since all information regarding system performance is obtained with it."/>
+<meta name="DC.subject" content="Tracing the Rays Overview, rays, tracing"/>
+<meta name="keywords" content="Tracing the Rays Overview, rays, tracing"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Commands_by_Function-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Building_the_Geometry-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Building_the_Source-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Verifying_the_System_and_Sources-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Analysis_Commands-conc.html#Analysis_Commands"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Tracing_a_Group_of_Rays_or_Beams-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Setup_Trace-ref.html#Setup_Trace"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Types_of_Ray_Tracing_Data_Saved_by_ASAP-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Trace_Ray_Beams-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Tracing_the_Rays_Overview"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Tracing the Rays Overview</title>
+</head>
+<body id="Tracing_the_Rays_Overview"><a name="Tracing_the_Rays_Overview"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Tracing the Rays Overview</h5></span> 
+   
+   
+  <div><p>Ray tracing is probably the most basic operation in ASAP since all
+	 information regarding system performance is obtained with it. 
+  </p>
+ 
+	 <p>In ASAP, rays are points in space that propagate from object to object
+		until they are absorbed or there are no other objects to intersect. 
+	 </p>
+ 
+	 <p>Rays start on object zero, a fictitious object. At the end of a ray
+		trace, the rays are on the last object that they intersected. 
+	 </p>
+ 
+	 <p>Rays are traced only once, and new rays must be defined if a retrace is
+		desired. They are traced nonsequentially, where rays intersect objects in the
+		physically correct order, regardless of the order the objects are entered into
+		the program. 
+	 </p>
+ 
+	 <div class="section" id="Tracing_the_Rays_Overview__section_E19F4A7EBFC24D05BB9A5F72983F4638"><a name="Tracing_the_Rays_Overview__section_E19F4A7EBFC24D05BB9A5F72983F4638"><!-- --></a><span style="color: #2b6eb5"><h5>Preparation Steps</h5></span> 
+		 
+		<p>Ray tracing can involve several preparation steps, depending upon the
+		  type of analysis to be done, beam characteristics, and the complexity of the
+		  system geometry. Most analyses require these steps: 
+		</p>
+ 
+		<br/><a name="Tracing_the_Rays_Overview__ul_7678C92EA71D4EB78E04021686CA07B7"><!-- --></a><ul id="Tracing_the_Rays_Overview__ul_7678C92EA71D4EB78E04021686CA07B7"> 
+		  <li id="Tracing_the_Rays_Overview__li_DEC262DB3FD94250BF6A6AE369FCF364"><a name="Tracing_the_Rays_Overview__li_DEC262DB3FD94250BF6A6AE369FCF364"><!-- --></a>Initializing settings used
+			 during ray generation (<b>WAVELENGTH</b>, 
+			 <b>PARABASAL</b>, 
+			 <b>POLARIZ</b> and others) 
+		  </li>
+ 
+		  <li id="Tracing_the_Rays_Overview__li_898846AE1CFB4A77874EF73CA3EE66CB"><a name="Tracing_the_Rays_Overview__li_898846AE1CFB4A77874EF73CA3EE66CB"><!-- --></a>Ray generation
+			 (<b>GRID, SOURCE, EMITTING</b>) 
+		  </li>
+ 
+		  <li id="Tracing_the_Rays_Overview__li_ED8EAA80116B44CD88F3C41F6FB2177F"><a name="Tracing_the_Rays_Overview__li_ED8EAA80116B44CD88F3C41F6FB2177F"><!-- --></a>Post-ray generation
+			 modifications (<b>FLUX, SHAPE</b> and others) 
+		  </li>
+ 
+		  <li id="Tracing_the_Rays_Overview__li_94DE71F5D052470FBBB00326D0481E4B"><a name="Tracing_the_Rays_Overview__li_94DE71F5D052470FBBB00326D0481E4B"><!-- --></a>Ray tracing settings
+			 (<b>SPLIT, LEVEL, AXIS, FRESNEL</b> and others) 
+		  </li>
+ 
+		  <li id="Tracing_the_Rays_Overview__li_2D1DC49FB2A944EAAA5AB2571F23D6CD"><a name="Tracing_the_Rays_Overview__li_2D1DC49FB2A944EAAA5AB2571F23D6CD"><!-- --></a>Ray tracing
+			 (<b>RAY</b> or 
+			 <b>TRACE</b>) 
+		  </li>
+ 
+		</ul>
+ 
+		<p>During ray tracing, rays follow physically 
+		  <i>realizable</i> trajectories unless overridden by the 
+		  <b>SEARCH</b> command. This means that rays intersect
+		  objects regardless of the order in which the objects were entered, and that
+		  rays intersect objects as many times as physically necessary. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Tracing_the_Rays_Overview__section_35E87DADB3264DE1B9CB13F2AE76AC1B"><a name="Tracing_the_Rays_Overview__section_35E87DADB3264DE1B9CB13F2AE76AC1B"><!-- --></a><span style="color: #2b6eb5"><h5>Completing a Ray Trace</h5></span> 
+		 
+		<p>Tracing a ray is completed when the flux of the ray has dropped below
+		  a certain threshold (set absolutely or relatively), or the ray has: 
+		</p>
+ 
+		<br/><a name="Tracing_the_Rays_Overview__ul_597E9B9D8A454AD991708B2A82BF8307"><!-- --></a><ul id="Tracing_the_Rays_Overview__ul_597E9B9D8A454AD991708B2A82BF8307"> 
+		  <li id="Tracing_the_Rays_Overview__li_B7AFB772B2904F86A39C6629CAB36FD6"><a name="Tracing_the_Rays_Overview__li_B7AFB772B2904F86A39C6629CAB36FD6"><!-- --></a>intersected an absorbing
+			 object 
+		  </li>
+ 
+		  <li id="Tracing_the_Rays_Overview__li_10817ED1F8B44006976B514EE4540FC2"><a name="Tracing_the_Rays_Overview__li_10817ED1F8B44006976B514EE4540FC2"><!-- --></a>intersected an object, but
+			 cannot find another object along its trajectory 
+		  </li>
+ 
+		  <li id="Tracing_the_Rays_Overview__li_4F8C2748854D4F66A0A4B0EE829A10C9"><a name="Tracing_the_Rays_Overview__li_4F8C2748854D4F66A0A4B0EE829A10C9"><!-- --></a>encountered too many
+			 objects 
+		  </li>
+ 
+		  <li id="Tracing_the_Rays_Overview__li_8862F74850B54103B983C15B33672C44"><a name="Tracing_the_Rays_Overview__li_8862F74850B54103B983C15B33672C44"><!-- --></a>encountered the same
+			 object too many times 
+		  </li>
+ 
+		  <li id="Tracing_the_Rays_Overview__li_34CB7AB7F57F497E8E71C1A31B5A6656"><a name="Tracing_the_Rays_Overview__li_34CB7AB7F57F497E8E71C1A31B5A6656"><!-- --></a>encountered a total
+			 internal reflection condition but 
+			 <b>SPLIT</b> has not been set 
+		  </li>
+ 
+		  <li id="Tracing_the_Rays_Overview__li_48DDC663434E4FE7B0409CB52DC9A792"><a name="Tracing_the_Rays_Overview__li_48DDC663434E4FE7B0409CB52DC9A792"><!-- --></a>begun to propagate in an
+			 undesirable direction or the ray is not 
+			 <b>ALLOWED</b> to propagate 
+		  </li>
+ 
+		</ul>
+ 
+	 </div>
+ 
+	 <div class="section" id="Tracing_the_Rays_Overview__section_25AC4FBE19ED4B4BA0ED8D63D6F861F0"><a name="Tracing_the_Rays_Overview__section_25AC4FBE19ED4B4BA0ED8D63D6F861F0"><!-- --></a><span style="color: #2b6eb5"><h5>Tip</h5></span> 
+		 
+		<p>When a ray intersects an object, the object’s interface properties
+		  determine which trajectory it will follow. Also, depending upon your choice of
+		  interface properties, ASAP can split an incoming ray into transmitted,
+		  reflected, diffracted (by the grating equation), and scattered components. A
+		  single ray can potentially generate thousands of child rays. Energy
+		  conservation is determined by your inputs. 
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="../Concept/Tracing_a_Group_of_Rays_or_Beams-conc.html">Tracing a Group of Rays or Beams</a></strong><br/>
+Any number of rays or beams may be traced at one time. The procedure involves initializing the ray and beam data (coordinates, directions, and sizes) at a plane in the system, which the program designates as object zero.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Setup_Trace-ref.html#Setup_Trace">Setup Trace</a></strong><br/>
+This topic lists commands that are used when setting up a ray trace.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Types_of_Ray_Tracing_Data_Saved_by_ASAP-ref.html">Ray Tracing Data Saved by ASAP</a></strong><br/>
+For each ray traced by ASAP, types of data can be saved in ASAP (in the virtual.pgs file), depending on the XMEMORY setting and your particular edition of ASAP. This topic lists these types of data.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Trace_Ray_Beams-ref.html">Trace Ray and Beams</a></strong><br/>
+This topic lists commands that are used when performing a ray/beam trace.</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Commands_by_Function-conc.html" title="ASAP commands can be grouped by function. The functional categories are in the approximate order that you would follow in a typical workflow to build your system.">Building Your System</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Building_the_Geometry-conc.html" title="Using ASAP, you build optical system models by first creating optical property and system geometry databases.">Building the Geometry</a></div>
+<div><a href="../Concept/Building_the_Source-conc.html" title="A grid of rays with assigned directions or a collection of rays generated by an EMITTING command is referred to as a source.">Building the Source</a></div>
+<div><a href="../Concept/Verifying_the_System_and_Sources-conc.html" title="Using ASAP, you verify the system and sources after building the geometry and sources.">Verifying the System and Sources</a></div>
+<div><a href="../Concept/Analysis_Commands-conc.html#Analysis_Commands">Analyzing the Data</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

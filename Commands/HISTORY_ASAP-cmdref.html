@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="HISTORY (ASAP Command)"/>
+<meta name="abstract" content="Recalls ray data from a previously saved binary file for plotting or listing. The first syntax is for compatibility. The second syntax is for the Path Explorer."/>
+<meta name="description" content="Recalls ray data from a previously saved binary file for plotting or listing. The first syntax is for compatibility. The second syntax is for the Path Explorer."/>
+<meta name="DC.subject" content="HISTORY (ASAP Command), ray data, recalling"/>
+<meta name="keywords" content="HISTORY (ASAP Command), ray data, recalling"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_H-ref.html#Commands_and_Macros_H"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OVERLAY_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SAVE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TRACE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WINDOW_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Path_Explorer_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Plotting_Commands-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Statistics_for_SUMMARY-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="HISTORY_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>HISTORY (ASAP Command)</title>
+</head>
+<body id="HISTORY_ASAP_Command"><a name="HISTORY_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>HISTORY (ASAP Command)</h5></span>
+	
+	
+	<div><p>Recalls ray data from a previously saved binary file for plotting or listing. The
+		first syntax is for compatibility. The second syntax is for the Path Explorer. </p>
+
+		<p><b> Syntax 1</b>
+		</p>
+
+		<pre class="codeblock">
+HISTORY [ k ] [ PLOT  [ m ] ]
+                SPOTS [ m ] ]
+      </pre>
+
+		<p><b>Syntax 2 - Path Explorer</b>
+		</p>
+
+		<pre class="codeblock">
+HISTORY [ k ] PX</pre>
+
+		<br/><a name="HISTORY_ASAP_Command__ul_65580B6846E34AFCA801D122F5E2AEFD"><!-- --></a><ul id="HISTORY_ASAP_Command__ul_65580B6846E34AFCA801D122F5E2AEFD">
+			<li id="HISTORY_ASAP_Command__li_A2DEECC6E84A4CAF890FAF93F3EB439C"><a name="HISTORY_ASAP_Command__li_A2DEECC6E84A4CAF890FAF93F3EB439C"><!-- --></a>
+				<p><b>Elementary Tests</b>
+				</p>
+
+				<pre class="codeblock">
+...NONE                                 [ setname ]
+...ALL                                  [ setname ]
+...STARTS             object            [ setname ]
+...ENDS               object 	          [ setname ]
+...SCATTER            object            [ setname ]
+...DIVIDE             object            [ setname ]
+...ESCAPES                              [ setname ]
+...INTERSECTS       volume 	[ comp_type comp_val ] 	[ setname ] 
+                    object 	[ comp_type comp_val ] 	[ setname ]
+...SPLITS           comp_type 	comp_val 	[ setname ]
+...LEVELS           comp_type 	comp_val 	[ setname ]
+...GENERATION       comp_type 	comp_val 	[ setname ]
+...HITS             comp_type 	comp_val    [ setname ]
+...FLUX  [ object ] comp_type  comp_val
+...ANGLE [ object ] comp_type  comp_val
+      </pre>
+
+			</li>
+
+			<li id="HISTORY_ASAP_Command__li_6C9E8CCD2BA84A169601A72D494EDF1B"><a name="HISTORY_ASAP_Command__li_6C9E8CCD2BA84A169601A72D494EDF1B"><!-- --></a>
+				<p><b>Modifier for Elementary Tests</b>
+				</p>
+
+				<pre class="codeblock">
+...GLOBAL...
+      </pre>
+
+			</li>
+
+			<li id="HISTORY_ASAP_Command__li_319FFE271EB34856ABC8F928EF96AC88"><a name="HISTORY_ASAP_Command__li_319FFE271EB34856ABC8F928EF96AC88"><!-- --></a>
+				<p><b>Logical Tests</b>
+				</p>
+
+				<pre class="codeblock">
+...AND set1  set2   setname
+...OR  set1  set2   setname
+...NOT set1         setname
+      </pre>
+
+			</li>
+
+			<li id="HISTORY_ASAP_Command__li_E5A736D237B745CEA836087024104D8F"><a name="HISTORY_ASAP_Command__li_E5A736D237B745CEA836087024104D8F"><!-- --></a>
+				<p><b>Analysis Functions</b>
+				</p>
+
+				<pre class="codeblock">
+...LIST         [ setname ]	[ m ]
+...PLOT         [ setname ]	[ m ]
+...SPOTS        [ setname ]	[ m ]
+...WINDOW...
+...REFRESH
+...SUMMARY      [ setname ]
+      </pre>
+
+			</li>
+
+			<li id="HISTORY_ASAP_Command__li_9DFD737A759149D888FE02CB23C69A7C"><a name="HISTORY_ASAP_Command__li_9DFD737A759149D888FE02CB23C69A7C"><!-- --></a>
+				<p><b>Session Management</b>
+				</p>
+
+				<pre class="codeblock">
+...STORE    setname
+...RECALL	[ setname ]
+...RETURN
+      </pre>
+
+			</li>
+
+		</ul>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>k</span></td><td><span><b>SAVE</b> file number from the last <b>TRACE</b>
+					command</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>LIST</span></td><td><span><b>LIST</b> the trajectories in the selected path-set</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>PLOT</span></td><td><span><b>PLOT</b> paths graphically for the selected
+				path-set</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SPOTS</span></td><td><span>Display a spots diagram for the selected path-set</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m</span></td><td><span>Stride (default 1) with which to choose paths output by <b>PLOT,
+						SPOTS</b> or <b>LIST</b>; that is, every mth
+				ray.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>WINDOW</span></td><td><span>Set window parameters for plotting paths; see main <b>WINDOW</b> command</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>REFRESH</span></td><td><span>Refresh the 3D graphics file for plotting paths</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SUMMARY</span></td><td><span>Report statistics on the selected path-set</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>GLOBAL</span></td><td><span>Modifier that can appear only at the end of any Elementary Test and
+					specifies that the test applies to the entire ray history file (not the ACTIVE
+					path-set)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>NONE</span></td><td><span>Creates a path-set containing no paths and makes this the active
+				set</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ALL</span></td><td><span>Creates a path-set containing all paths and makes this the active
+				set</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>STARTS</span></td><td><span>Creates a path-set containing all paths in the active set starting on a
+					specified object </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ENDS</span></td><td><span>Creates a path-set containing all paths in the active set ending on a
+					specified object </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SCATTER</span></td><td><span>Creates a path-set containing all paths in the active set scattering from
+					the specified object</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>DIVIDE</span></td><td><span>Creates a path-set containing all paths in the active set splitting from
+					the specified object</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ESCAPES</span></td><td><span>Creates a path-set containing all paths in the active set that escaped;
+					that is, missed rays.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>INTERSECTS</span></td><td><span>Creates a path-set containing all paths in the active set intersecting a
+					specified object or volume</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SPLITS</span></td><td><span>Creates a path-set containing all paths in the active set including a
+					specified number of, or upper bound or lower bound on, split events</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>LEVELS</span></td><td><span>Creates a path-set containing all paths in the active set including a
+					specified number of, or upper bound or lower bound on, scatter events</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>GENERATION</span></td><td><span>Creates a path-set containing all paths in the active set including a
+					specified number of, or upper bound or lower bound on, the sum of split and
+					scattering events</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>HITS</span></td><td><span>Creates a path-set containing all paths in the active set including a
+					specified number of, or upper bound or lower bound on, hits; that is,
+					intersection events</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>comp_type</span></td><td><span>Comparison typeEQ – equal to…LT – less than…LE – less than or equal to…GT –
+					greater than…GE – greater than or equal to…</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>comp_val</span></td><td><span>Integer value for comparison</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>AND</span></td><td><span>Chooses paths that are present in both set1 and set2
+				(intersection)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>OR</span></td><td><span>Chooses paths that are present in either set1 or set2 (union)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>NOT</span></td><td><span>Chooses rays not in set1 (exclusion)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>STORE</span></td><td><span>Stores the active path-set as setname </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RECALL</span></td><td><span>Resets the active set to the set of all paths or, optionally, a named
+					path-set</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RETURN</span></td><td><span>Closes the Path Explorer session</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>object</span></td><td><span>Specifies an existing object by name or number</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>volume</span></td><td><span>Specifies a volume as an infinite rectangular slab (ASLAB), an infinite
+					rectangular tube (ATUBE), or a finite box (ABOX) as described in the Remarks
+					below.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>setname</span></td><td><span>A name to assign to the resulting path-set; defaults to active set when
+					optional and not specified</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>set1, set2</span></td><td><span>Specifies an existing path-set by name or number</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>FLUX </span></td><td><span>Creates a path-set containing all paths for which the flux incident on
+					'object' satisfies the comparison. If 'object' is omitted, the comparison is
+					applied to the terminal flux, which is either the flux on the object on which a
+					path ends or, in the case of a missed ray, the flux escaping the
+				system.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ANGLE</span></td><td><span>Creates a path-set containing all paths intersecting 'object' at an angle
+					satisfying the comparison, which is expressed in degrees. If 'object' is
+					omitted, the comparison is applied to all objects.</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="HISTORY_ASAP_Command__ul_7E83BEB3E660484B94AE00AF4A624BA4"><!-- --></a><ol id="HISTORY_ASAP_Command__ul_7E83BEB3E660484B94AE00AF4A624BA4">
+			<li id="HISTORY_ASAP_Command__li_73E725CA829546E48D495DBB13CC834B"><a name="HISTORY_ASAP_Command__li_73E725CA829546E48D495DBB13CC834B"><!-- --></a>The Elementary Tests, <b>FLUX</b> and <b>ANGLE</b>, introduced in ASAP 2006, are available
+				only as a script command, not in the Query Builder user interface. </li>
+
+			<li id="HISTORY_ASAP_Command__li_D7190370A3D24AB58D28C968C6C8DA63"><a name="HISTORY_ASAP_Command__li_D7190370A3D24AB58D28C968C6C8DA63"><!-- --></a>If a <b>SAVE</b> file number
+					<b>k</b> exists from the last <b>TRACE</b>, the <b>HISTORY</b> command can be used to <b>LIST</b> or <b>PLOT</b> the reverse trajectories of the current ray set. </li>
+
+			<li id="HISTORY_ASAP_Command__li_6C610AEE174048558508F7CE32CECE5A"><a name="HISTORY_ASAP_Command__li_6C610AEE174048558508F7CE32CECE5A"><!-- --></a>Alternatively, just the <b>SPOTS</b> where the rays struck the objects can be plotted instead of the
+				trajectory lines. </li>
+
+			<li id="HISTORY_ASAP_Command__li_13F016FD44FC432C9BDBF6CE28EA07B1"><a name="HISTORY_ASAP_Command__li_13F016FD44FC432C9BDBF6CE28EA07B1"><!-- --></a>Volumes are specified as rectangular
+				axis-aligned structures in the global coordinates. </li>
+
+			<li id="HISTORY_ASAP_Command__li_45D976799F494BB8BBB6D8C28CDF7129"><a name="HISTORY_ASAP_Command__li_45D976799F494BB8BBB6D8C28CDF7129"><!-- --></a>A volume bounded in one dimension may be
+				specified by ASLAB as follows: <p>ASLAB axis c_min c_max </p>
+<p>where axis is one of
+					X, Y or Z </p>
+<p>c_min and c_max are the coordinates of the intersections of
+					axis with the slab faces </p>
+</li>
+
+			<li id="HISTORY_ASAP_Command__li_640A832DB3B94E86BE7CCBEDD32669E0"><a name="HISTORY_ASAP_Command__li_640A832DB3B94E86BE7CCBEDD32669E0"><!-- --></a>A volume bounded in two dimensions may be
+				specified by ATUBE as follows: <p>ATUBE axis c1_min c1_max c2_min c2_max </p>
+<p>where axis is one of X, Y or Z </p>
+<p>c1_min and c1_max are the coordinates of
+					the intersections of the tube faces with the coordinate axis that comes next in
+					cyclic permutation order after axis. </p>
+<p>c2_min and c2_max are the
+					coordinates of the intersections of the tube faces with the coordinate axis that
+					comes second in cyclic permutation order after axis. </p>
+</li>
+
+			<li id="HISTORY_ASAP_Command__li_97704AEB34E743BFA75BFDAFBF100B39"><a name="HISTORY_ASAP_Command__li_97704AEB34E743BFA75BFDAFBF100B39"><!-- --></a>A volume bounded in three dimensions may be
+				specified by ABOX as follows: <p>ABOX axis c0_min c0_max c1_min c1_max c2_min c2_max
+					</p>
+<p>where axis is one of X, Y or Z </p>
+<p>c0_min and c0_max are the
+					coordinates of the intersections of the box faces with axis. </p>
+<p>c1_min and
+					c1_max are the coordinates of the intersections of the box faces with the
+					coordinate axis that comes next in cyclic permutation order after axis. </p>
+<p>c2_min and c2_max are the coordinates of the intersections of the box faces
+					with the coordinate axis that comes second in cyclic permutation order after
+					axis. </p>
+</li>
+
+			<li id="HISTORY_ASAP_Command__li_5CA8A59D528B4E838D040A9E8F91E674"><a name="HISTORY_ASAP_Command__li_5CA8A59D528B4E838D040A9E8F91E674"><!-- --></a>If c_max = c_min for any axis, an error is
+				generated. </li>
+
+			<li id="HISTORY_ASAP_Command__li_374124FC5269467BA701F929A6C52053"><a name="HISTORY_ASAP_Command__li_374124FC5269467BA701F929A6C52053"><!-- --></a>If c_max&lt;c_min for any axes, ASAP
+				reverses the values and proceed normally. </li>
+
+			<li id="HISTORY_ASAP_Command__li_0F0CB9A22B5E4D328BA5B6BC8CB0561D"><a name="HISTORY_ASAP_Command__li_0F0CB9A22B5E4D328BA5B6BC8CB0561D"><!-- --></a>By default, Elementary Tests apply only to
+				the ACTIVE path-set. </li>
+
+			<li id="HISTORY_ASAP_Command__li_296D2678025E459EAA50FBB0EA66B9C3"><a name="HISTORY_ASAP_Command__li_296D2678025E459EAA50FBB0EA66B9C3"><!-- --></a>The <b>GLOBAL</b> modifier may
+				appear at the end of any Elementary Test and makes the test apply to the entire ray
+				history. </li>
+
+			<li id="HISTORY_ASAP_Command__li_0CE7FC47448A473D8C99EF8ADFAA2717"><a name="HISTORY_ASAP_Command__li_0CE7FC47448A473D8C99EF8ADFAA2717"><!-- --></a>The result of the latest Elementary Test is
+				stored by default in the active path-set, upon which additional tests act. This
+				behavior can be overridden by specifying a setname for the result, which leaves the
+				active path-set unchanged. </li>
+
+			<li id="HISTORY_ASAP_Command__li_79E2EAEBA1A6454CBF589C5C5F3781A4"><a name="HISTORY_ASAP_Command__li_79E2EAEBA1A6454CBF589C5C5F3781A4"><!-- --></a>A setname is required for the results of
+				Logical Tests, to prevent accidental overwriting of the active path-set (which could
+				be frustrating). </li>
+
+			<li id="HISTORY_ASAP_Command__li_9144AD967E3B45D0BED883178947ED00"><a name="HISTORY_ASAP_Command__li_9144AD967E3B45D0BED883178947ED00"><!-- --></a>The <b>RETURN</b> option is the
+				usual way to end processing of <b>HISTORY </b>commands. </li>
+
+			<li id="HISTORY_ASAP_Command__li_273A5DC55CED47FD86C153DD49646412"><a name="HISTORY_ASAP_Command__li_273A5DC55CED47FD86C153DD49646412"><!-- --></a>The command argument, <b>OVERLAY</b> tells ASAP not to issue an end of plot so that the next plot
+				created is overlaid with the current plot. This is useful for combining system plots
+				with ray trace plots (assuming that the <b>WINDOW</b> is the same for
+				all plots), multiple spot diagrams, and so on. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#HISTORY">HISTORY Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_H-ref.html#Commands_and_Macros_H" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “H”.">Commands and Macros (H)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Path_Explorer_Overview-conc.html" title="The Path Explorer renders a three-dimensional, interactive visualization of specifically selected ray trajectories, or paths, computed in the course of ASAP simulations. This feature is useful for isolating rays that are doing particular things, such as scattering or ending on a selected object(s).">Path Explorer Overview</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Plotting_Commands-ref.html" title="The PLOT command is a general command for plotting virtually any aspect of system geometry and selected ray data.">Plotting Commands</a></div>
+<div><a href="../Reference/Statistics_for_SUMMARY-ref.html" title="The SUMMARY command, a subcommand of HISTORY, is described in this topic.">Statistics for SUMMARY</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/OVERLAY_arg_ASAP-cmdref.html" title="Overlays plots (that is, places them on top of each other).">OVERLAY (ASAP Command Argument)</a></div>
+<div><a href="../Commands/SAVE_ASAP-cmdref.html" title="Writes future ray trace data to a file for post-processing.">SAVE (ASAP Command)</a></div>
+<div><a href="../Commands/TRACE_ASAP-cmdref.html" title="Traces all currently selected rays in storage.">TRACE (ASAP Command)</a></div>
+<div><a href="../Commands/WINDOW_ASAP-cmdref.html" title="Sets the plotting window for graphical output.">WINDOW (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

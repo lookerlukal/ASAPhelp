@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Version 2005 V1R3"/>
+<meta name="abstract" content="ASAP 2005 (September 2005) Release Notes File"/>
+<meta name="description" content="ASAP 2005 (September 2005) Release Notes File"/>
+<meta name="DC.subject" content="release notes, 2005 V1R3"/>
+<meta name="keywords" content="release notes, 2005 V1R3"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Release_Notes-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_2005_V2R2-ref.html#Version_2005_V2R2"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Version_2005_V1R2-ref.html#Version_2005_V1R2"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Version_2005_V1R3"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Version 2005 V1R3</title>
+</head>
+<body id="Version_2005_V1R3"><a name="Version_2005_V1R3"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Version 2005 V1R3</h5></span> 
+  
+  
+  <div><p>ASAP 2005 (September 2005) Release Notes File 
+  </p>
+ 
+	 <div class="section" id="Version_2005_V1R3__section_8FEBBF93D28646B5A3A481E5D2D6B636"><a name="Version_2005_V1R3__section_8FEBBF93D28646B5A3A481E5D2D6B636"><!-- --></a> 
+		<p>(c) 1982-2005 Breault Research Organization, Inc. All rights reserved.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>Late-breaking information about this release of BRO ASAP™.
+		</p>
+ 
+		<p>Build 05V1R3 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Version_2005_V1R3__section_2AFF394AAA3E4C429A7B5DE96A0434C6"><a name="Version_2005_V1R3__section_2AFF394AAA3E4C429A7B5DE96A0434C6"><!-- --></a><span style="color: #2b6eb5"><h5>KERNEL</h5></span> 
+		 
+		<p>VERSION
+		</p>
+ 
+		<p>ASAP now provides the VERSION command which writes the ASAP Kernel
+		  version message to the console.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>ARRAY
+		</p>
+ 
+		<p>The ARRAY command now recognizes common variants of the option RAN,
+		  such as RANDOM.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>WIDTHS
+		</p>
+ 
+		<p>WIDTHS now defaults to a value of 1.0 for BEAMS INCOHERENT and a value
+		  of 1.6 for BEAMS COHERENT. Non-default values of WIDTHS therefore must be
+		  explicitly set after the BEAMS command.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>SAMPLED
+		</p>
+ 
+		<p>ASAP no longer abnormally terminates during direct creation of SAMPLED
+		  data, as happened in all earlier versions if the distribution filename were
+		  already in use.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>Resource Release
+		</p>
+ 
+		<p>ASAP no longer abnormally terminates during a rare scenario of Kernel
+		  resources release.
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Version_2005_V1R3__section_EDBDC36FF31C440E940E055FB4F15479"><a name="Version_2005_V1R3__section_EDBDC36FF31C440E940E055FB4F15479"><!-- --></a><span style="color: #2b6eb5"><h5>GUI</h5></span> 
+		 
+		<p>CATIA
+		</p>
+ 
+		<p>ASAP now supports import of CATIA Catpart and Catproduct files created
+		  within CATIA releases V5R13, V5R14 and V5R15.
+		</p>
+ 
+		<p>
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Version_2005_V1R3__section_B4261D02C5974514A210E04E156F1FF5"><a name="Version_2005_V1R3__section_B4261D02C5974514A210E04E156F1FF5"><!-- --></a><span style="color: #2b6eb5"><h5>BUILDER</h5></span> 
+		 
+		<p>ASAP limits the inclusion of Builder (*.enz and *.enx) file extensions
+		  from the ASAP projects.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>ASAP no longer abnormally terminates when using Ctrl+C and Ctrl+V on
+		  blank lines
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Version_2005_V1R3__section_B98D4794E33449ECBCEFDFEFD1ECEBCE"><a name="Version_2005_V1R3__section_B98D4794E33449ECBCEFDFEFD1ECEBCE"><!-- --></a><span style="color: #2b6eb5"><h5>User interface fixes include updating default values,
+		  clarification and re-positioning of column for the following commands:</h5></span> 
+		 
+		<p>WINDOW
+		</p>
+ 
+		<p>TUBE
+		</p>
+ 
+		<p>GRID POLAR
+		</p>
+ 
+		<p>COATINGS LAYERS
+		</p>
+ 
+		<p>COATING MODELS
+		</p>
+ 
+		<p>COATINGS PROPERTIES
+		</p>
+ 
+		<p>COATING
+		</p>
+ 
+		<p>MEDIA
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>Calculate Flux Distribution 
+		</p>
+ 
+		<p>ASAP now generates correct script for the Calculate Flux Distribution
+		  dialog.
+		</p>
+ 
+		<p>
+		</p>
+ 
+		<p>Light Source Library Wizard
+		</p>
+ 
+		<p>The Wizard page, Source Geometry Setup - Create Raysets, now correctly
+		  accepts user input and creates raysets.
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Release_Notes-ref.html" title="Topics in this section include all known release notes for ASAP up to the last version. Release notes for the current version can be viewed in the ASAP Command Output window, or opened from your ASAP installation root folder.">Release Notes</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a href="../Reference/Version_2005_V2R2-ref.html#Version_2005_V2R2" title="ASAP 2005 V2R2 (January 2006) Release Notes File">Version 2005 V2R2</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a href="../Reference/Version_2005_V1R2-ref.html#Version_2005_V1R2" title="ASAP 2005 V1R2 (June 2005) Release Notes File">Version 2005 V1R2</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

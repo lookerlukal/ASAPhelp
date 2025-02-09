@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="STATS (ASAP Command)"/>
+<meta name="abstract" content="Lists statistics of the currently selected ray data."/>
+<meta name="description" content="Lists statistics of the currently selected ray data."/>
+<meta name="DC.subject" content="STATS (ASAP Command), ray data, listing statistics, statistics, listing for ray data"/>
+<meta name="keywords" content="STATS (ASAP Command), ray data, listing statistics, statistics, listing for ray data"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_S-ref.html#Commands_and_Macros_S"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CONSIDER_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EXTREMES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GET_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PUT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SELECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/STATS_TRACE_ASAP-cmdref.html#STATS_TRACE_ASAP_Command"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="STATS_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>STATS (ASAP Command)</title>
+</head>
+<body id="STATS_ASAP_Command"><a name="STATS_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>STATS (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Lists statistics of the currently selected ray data. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+STATS [ ALL      ]  [ p ]
+        SOURCES
+        POSITION
+        P#
+        DIRECTION
+        D#
+      </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ALL</span></td><td><span>object summary for all considered objects</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>p</span></td><td><span>sort by total flux and truncate list below this
+			 percentage</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SOURCES</span></td><td><span> lists current number of rays and total flux from each
+			 source</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>POSITION</span></td><td><span>statistical analysis of positional ray data</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>DIRECTION</span></td><td><span>statistical analysis of directional ray data</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>P#</span></td><td><span>statistical analysis of positional ray data of the base ray or
+			 a particular parabasal ray</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>D#</span></td><td><span>statistical analysis of directional ray data of the base ray
+			 or a particular parabasal ray</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="STATS_ASAP_Command__ul_EC0BB147DF844C4A856F16A80A0208BB"><!-- --></a><ol id="STATS_ASAP_Command__ul_EC0BB147DF844C4A856F16A80A0208BB"> 
+		<li id="STATS_ASAP_Command__li_654EB98B6BF848ED835FBE53428E74F1"><a name="STATS_ASAP_Command__li_654EB98B6BF848ED835FBE53428E74F1"><!-- --></a>By default produces a one
+		  line per object summary of the flux and number of rays on each object 
+		  <b>(ALL</b> considered objects, even those with no rays and
+		  zero flux on them). 
+		</li>
+ 
+		<li id="STATS_ASAP_Command__li_A9BD6CF5C71B47F5BBD06791C1CBB302"><a name="STATS_ASAP_Command__li_A9BD6CF5C71B47F5BBD06791C1CBB302"><!-- --></a>If a second entry is
+		  specified, it either lists the current number or rays and total flux from each 
+		  <b>SOURCE</b>, or produces a statistical analysis of the 
+		  <b>POSITION</b>al or 
+		  <b>DIRECTION</b>al ray data including centroids, full
+		  variances (RMS deviations), and maximum spreads in each coordinate direction on
+		  each object. 
+		</li>
+ 
+		<li id="STATS_ASAP_Command__li_1392BC12339F46CAA268CFDDFD04DE2F"><a name="STATS_ASAP_Command__li_1392BC12339F46CAA268CFDDFD04DE2F"><!-- --></a>By default the positions or
+		  directions of each base ray is used. 
+		</li>
+ 
+		<li id="STATS_ASAP_Command__li_5789FC327F3546CD807F5337CF7589E0"><a name="STATS_ASAP_Command__li_5789FC327F3546CD807F5337CF7589E0"><!-- --></a>Any particular parabasal ray
+		  may be selected by specifying its number #, for example, 
+		  <b>P0</b> means base ray position, 
+		  <b>D1</b> first parabasal ray direction, etc. 
+		</li>
+ 
+		<li id="STATS_ASAP_Command__li_63C4FEEEE1FC4730A86DB88D7113EA4B"><a name="STATS_ASAP_Command__li_63C4FEEEE1FC4730A86DB88D7113EA4B"><!-- --></a>The actual objects analyzed
+		  may be controlled by the 
+		  <b>CONSIDER</b> command. 
+		</li>
+ 
+		<li id="STATS_ASAP_Command__li_3A7B3776F068475085A7C7C2A9D22655"><a name="STATS_ASAP_Command__li_3A7B3776F068475085A7C7C2A9D22655"><!-- --></a>Optionally, the list can be
+		  sorted and truncated below a percentage 
+		  <b>p</b> of the total flux. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#STATS">STATS
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_S-ref.html#Commands_and_Macros_S" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “S”.">Commands and Macros (S)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/CONSIDER_ASAP-cmdref.html" title="Selects a set of objects for ray tracing and plotting.">CONSIDER (ASAP Command)</a></div>
+<div><a href="../Commands/EXTREMES_ASAP-cmdref.html" title="Lists the minimum and maximum information regarding position, direction, flux, or optical path length in currently selected ray data.">EXTREMES (ASAP Command)</a></div>
+<div><a href="../Commands/GET_ASAP-cmdref.html" title="Retrieves ray data and copies it into variables.">GET (ASAP Command)</a></div>
+<div><a href="../Commands/PUT_ASAP-cmdref.html" title="Copies variable data into the current ray data.">PUT (ASAP Command)</a></div>
+<div><a href="../Commands/SELECT_ASAP-cmdref.html" title="Isolates a ray set for further analysis.">SELECT (ASAP Command)</a></div>
+<div><a href="../Commands/STATS_TRACE_ASAP-cmdref.html#STATS_TRACE_ASAP_Command" title="Prints statistics of a previous TRACE.">STATS TRACE (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

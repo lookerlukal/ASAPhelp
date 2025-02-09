@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="PLANE POINTS (ASAP Command)"/>
+<meta name="abstract" content="Creates a plane specified by three points."/>
+<meta name="description" content="Creates a plane specified by three points."/>
+<meta name="DC.subject" content="PLANE POINTS (ASAP Command), points, creating a plane"/>
+<meta name="keywords" content="PLANE POINTS (ASAP Command), points, creating a plane"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_P-ref.html#Commands_and_Macros_P"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LIMITS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LOCAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLANE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLANE_NORMAL_ASAP-cmdref.html#PLANE_NORMAL_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/PLANE_Command_Overview-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="PLANE_POINTS_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>PLANE POINTS (ASAP Command)</title>
+</head>
+<body id="PLANE_POINTS_ASAP_Command"><a name="PLANE_POINTS_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>PLANE POINTS (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Creates a plane specified by three points. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">PLANE POINTS x y z x' y' z' x" y" z"</pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>x y z x' y' z' x" y" z"</span></td><td><span>global coordinates of the three points on the
+			 surface</span></td></tr></tbody></table> 
+	 <p><b>Reference Point</b> 
+	 </p>
+ 
+	 <p>At second specified point 
+	 </p>
+ 
+	 <p><b>Surface Normal</b> 
+	 </p>
+ 
+	 <p>By right-hand rule 
+	 </p>
+ 
+	 <p><b>Autolimiting</b> 
+	 </p>
+ 
+	 <p>No, requires 
+		<b>LOCAL</b> or 
+		<b>LIMITS</b> modifiers. 
+	 </p>
+ 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="PLANE_POINTS_ASAP_Command__ul_1731EF3FD9E3418AB9B760A0383AC3FE"><!-- --></a><ol id="PLANE_POINTS_ASAP_Command__ul_1731EF3FD9E3418AB9B760A0383AC3FE"> 
+		<li id="PLANE_POINTS_ASAP_Command__li_24FF50117E7144FAB0248BB5F8CB3CCB"><a name="PLANE_POINTS_ASAP_Command__li_24FF50117E7144FAB0248BB5F8CB3CCB"><!-- --></a>Creates a planar surface
+		  that contains the three points 
+		  <b>(x y z),</b><b> (x' y' z'), 
+		  </b> and 
+		  <b>(x" y" z").</b> 
+		</li>
+ 
+		<li id="PLANE_POINTS_ASAP_Command__li_691CB1AAC05641AEBFEF3DA3161B6899"><a name="PLANE_POINTS_ASAP_Command__li_691CB1AAC05641AEBFEF3DA3161B6899"><!-- --></a>The positive side of the
+		  plane is found by applying the right-hand rule to the three points in the order
+		  they are entered. 
+		</li>
+ 
+		<li id="PLANE_POINTS_ASAP_Command__li_C051016688DF499DACFDEBE2F7304721"><a name="PLANE_POINTS_ASAP_Command__li_C051016688DF499DACFDEBE2F7304721"><!-- --></a>The second point becomes the
+		  surface's reference point. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#PLANE">PLANE
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_P-ref.html#Commands_and_Macros_P" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “P”.">Commands and Macros (P)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/PLANE_Command_Overview-conc.html" title="This topic describes the three SURFACE/FUNCTION commands in ASAP that directly define a planar surface.">PLANE Command Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/LIMITS_ASAP-cmdref.html" title="Assigns a global bounding box to the object.">LIMITS (ASAP Command)</a></div>
+<div><a href="../Commands/LOCAL_ASAP-cmdref.html" title="Assigns a local bounding box to the surface/function.">LOCAL (ASAP Command)</a></div>
+<div><a href="../Commands/PLANE_ASAP-cmdref.html" title="Creates a plane normal to the axis of symmetry, at the value given by the third entry.">PLANE (ASAP Command)</a></div>
+<div><a href="../Commands/PLANE_NORMAL_ASAP-cmdref.html#PLANE_NORMAL_ASAP_Command" title="Creates a plane specified by its surface normal and a point.">PLANE NORMAL (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

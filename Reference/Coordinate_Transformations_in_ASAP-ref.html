@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Coordinate Transformations in ASAP"/>
+<meta name="abstract" content="The coordinate transformations used in ASAP are applicable both to explicit transformations (for example, SHIFT, ROTATE) and implicit transformations (for example, AXIS LOCAL in combination with FIELD or CVF)."/>
+<meta name="description" content="The coordinate transformations used in ASAP are applicable both to explicit transformations (for example, SHIFT, ROTATE) and implicit transformations (for example, AXIS LOCAL in combination with FIELD or CVF)."/>
+<meta name="DC.subject" content="Coordinate Transformations in ASAP, transformations, coordinate"/>
+<meta name="keywords" content="Coordinate Transformations in ASAP, transformations, coordinate"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_ABC-ref.html#Reference_AC"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ALIGN_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CVF_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MATRIX_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLACE_Global_Coordinate_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ROTATE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SCALE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SHIFT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SKEW_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/XEQ_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Linear_Transformations_for_Edges_Curves-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Coordinate_Transformations_in_ASAP"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Coordinate Transformations in ASAP</title>
+</head>
+<body id="Coordinate_Transformations_in_ASAP"><a name="Coordinate_Transformations_in_ASAP"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Coordinate Transformations in ASAP</h5></span> 
+   
+   
+  <div><p>The coordinate transformations used in ASAP are applicable both to
+	 explicit transformations (for example, 
+	 <b>SHIFT</b>, 
+	 <b>ROTATE</b>) and implicit transformations (for example, AXIS
+	 LOCAL in combination with 
+	 <b>FIELD</b> or 
+	 <b>CVF</b>). 
+  </p>
+ 
+	 <div class="section" id="Coordinate_Transformations_in_ASAP__section_FAF44942179342AAB72EB84F5B532438"><a name="Coordinate_Transformations_in_ASAP__section_FAF44942179342AAB72EB84F5B532438"><!-- --></a> 
+		<p>The unitary transformation of a point 
+		  <b>P</b> in the local coordinates of a geometrical entity to a point 
+		  <b>P’</b> in global coordinates may be effected by an arbitrary
+		  sequence of elementary translations and rotations and as such does not have a
+		  unique prescription. ASAP, therefore, represents the aggregate effect of all
+		  elementary transformations with a single, combined 4x4 matrix multiplication
+		  comprising both the net translation and the net rotation: 
+		</p>
+ 
+		<p><br/><a name="Coordinate_Transformations_in_ASAP__image_A0C2542BA06B47248377726A93314081"><!-- --></a><img id="Coordinate_Transformations_in_ASAP__image_A0C2542BA06B47248377726A93314081" src="../Equations/Coordinate_Transformations_equation1.gif" width="539" height="627"/><br/> 
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_ABC-ref.html#Reference_AC" title="Reference topics in this section begin with the letters &#34;A&#34; to &#34;C&#34;.">Reference (A-C)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Linear_Transformations_for_Edges_Curves-ref.html" title="Linear transformations change the shape, scaling, or orientation of a geometrical entity (surface, edge, lens, object, group, or rays) by applying a general 4x4 transformation matrix (linear transformations change only the orientation of lenses). Linear transformations that change the location of a geometrical entity are applied to the reference point (see table) of the entity.">Linear Transformations for Edges and Curves</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/ALIGN_ASAP-cmdref.html" title="Aligns a given direction vector with another general direction.">ALIGN (ASAP Command)</a></div>
+<div><a href="../Commands/CVF_ASAP-cmdref.html" title="The CVF (Complex Vector Field) command provides a bidirectional translation facility between ASAP and FDTD Solutions™ by Lumerical.">CVF (ASAP Command)</a></div>
+<div><a href="../Commands/MATRIX_ASAP-cmdref.html" title="Specifies the transformation matrix that operates on the surface general transformation matrix.">MATRIX (ASAP Command)</a></div>
+<div><a href="../Commands/PLACE_Global_Coordinate_ASAP-cmdref.html" title="Specifies the absolute placement of an entity in global coordinates.">PLACE (Global Coordinate) (ASAP Command)</a></div>
+<div><a href="../Commands/ROTATE_ASAP-cmdref.html" title="Rotates an entity about a point.">ROTATE (ASAP Command)</a></div>
+<div><a href="../Commands/SCALE_ASAP-cmdref.html" title="Specifies arbitrary scaling of an entity.">SCALE (ASAP Command)</a></div>
+<div><a href="../Commands/SHIFT_ASAP-cmdref.html" title="Specifies a relative shift of an entity along the coordinate axes.">SHIFT (ASAP Command)</a></div>
+<div><a href="../Commands/SKEW_ASAP-cmdref.html" title="Specifies an arbitrary skewing of an entity.">SKEW (ASAP Command)</a></div>
+<div><a href="../Commands/XEQ_ASAP-cmdref.html" title="Specifies immediate application of current linear transformation.">XEQ (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

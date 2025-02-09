@@ -1,0 +1,31 @@
+!!++
+!! BUMPY_TUBE.INR
+!! Title: Bumpy Tube made with User-defined Curve
+!! Category: Simple Problem
+!! Keywords: Geometry, USERCURV, bumpy, $FCN, SMOOTH, SWEEP, corrugated
+!! Description: This creates a squiggly curve edge by calling
+!! a sine function from USERCURV.  It is then swept in direction 
+!! to make a bumpy tube. 
+!! Edit History: (latest first)
+!! 09/30/2003 - cp - extended USERCURVE range slightly
+!! 02/03/2000 - cp - creation
+!!--
+
+SYSTEM NEW
+RESET
+
+PI=ACOS(-1)
+
+$FCN SQUIGGLE A=2*PI*_ R=1+.1*SIN(10*A),
+              x R*COS(A) y R*SIN(A) z 0
+
+EDGE
+  USERCURVE SQUIGGLE 0 1.001 100
+    SMOOTH
+    SWEEP DIRECTION 5 0 0 1
+OBJECT 'CRAZY_TUBE'
+
+PLOT FACETS 9 9 
+$VIEW 
+RETURN
+

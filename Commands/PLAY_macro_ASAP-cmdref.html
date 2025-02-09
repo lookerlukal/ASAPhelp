@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="$PLAY (ASAP Macro)"/>
+<meta name="abstract" content="Replays current output buffer."/>
+<meta name="description" content="Replays current output buffer."/>
+<meta name="DC.subject" content="$PLAY (ASAP Macro), macros, $PLAY, buffer, replaying current output, replay current output buffer"/>
+<meta name="keywords" content="$PLAY (ASAP Macro), macros, $PLAY, buffer, replaying current output, replay current output buffer"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_P-ref.html#Commands_and_Macros_P"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Macro_Language-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=33"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="PLAY_ASAP_Macro"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>$PLAY (ASAP Macro)</title>
+</head>
+<body id="PLAY_ASAP_Macro"><a name="PLAY_ASAP_Macro"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>$PLAY (ASAP Macro)</h5></span>
+	
+	
+	<div><p>Replays current output buffer. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+$PLAY [ n ] [ INPUT ] [ ’string’ ]
+           ON
+           OFF
+    </pre>
+
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="PLAY_ASAP_Macro__ul_10643F06CB56455BBCE56805BEFB70F4"><!-- --></a><ol id="PLAY_ASAP_Macro__ul_10643F06CB56455BBCE56805BEFB70F4">
+			<li id="PLAY_ASAP_Macro__li_13B478D0C6CD499FA428618579F0F0A6"><a name="PLAY_ASAP_Macro__li_13B478D0C6CD499FA428618579F0F0A6"><!-- --></a>Replays the current output buffer (up to
+				10,000 lines), or just the output starting from the last occurrence of <b>’string’</b> The replayed output pauses for a carriage return key every
+					<b>n</b>th (default 12th) line. </li>
+
+			<li id="PLAY_ASAP_Macro__li_0F50CBCA183E4B24A7CE208F839ABA93"><a name="PLAY_ASAP_Macro__li_0F50CBCA183E4B24A7CE208F839ABA93"><!-- --></a>To exit the replay, enter an EOF character
+				(Ctrl-Z or Ctrl-D) at the pause. </li>
+
+			<li id="PLAY_ASAP_Macro__li_1A2D8C10B3D249F3A79661D09C860D11"><a name="PLAY_ASAP_Macro__li_1A2D8C10B3D249F3A79661D09C860D11"><!-- --></a>The <b>INPUT</b> option
+				displays only previously echoed input records. The program will then ask for a range
+				of lines to re-execute. Press Return for none. </li>
+
+			<li id="PLAY_ASAP_Macro__li_C5003E15B2C54183A4284901C6E3B2C7"><a name="PLAY_ASAP_Macro__li_C5003E15B2C54183A4284901C6E3B2C7"><!-- --></a>Alternatively, the capturing of output in
+				the replay buffer can be turned <b>OFF</b> or <b>ON</b> (the
+				default). </li>
+
+		</ol>
+
+		<p>
+			<a href="/example_scripts.html#$PLAY">$PLAY Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_P-ref.html#Commands_and_Macros_P" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “P”.">Commands and Macros (P)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/ASAP_Macro_Language-conc.html">ASAP Macro Language</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=33" target="_blank">See the Knowledge Base for the technical publication, Predefined Macros</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

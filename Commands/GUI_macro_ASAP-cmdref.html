@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="$GUI (ASAP Macro)"/>
+<meta name="abstract" content="Sends the given command strings to the graphical user interface (GUI)."/>
+<meta name="description" content="Sends the given command strings to the graphical user interface (GUI)."/>
+<meta name="DC.subject" content="$GUI (ASAP Macro), macros, $GUI, user interface commands"/>
+<meta name="keywords" content="$GUI (ASAP Macro), macros, $GUI, user interface commands"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_G-ref.html#Commands_and_Macros_G"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Remote_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="GUI_ASAP_Macro"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>$GUI (ASAP Macro)</title>
+</head>
+<body id="GUI_ASAP_Macro"><a name="GUI_ASAP_Macro"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>$GUI (ASAP Macro)</h5></span>
+	
+	
+	<div><p>Sends the given command strings to the graphical user interface (GUI). </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">
+$GUI command  [ command' ... ]
+&amp;GUI
+      </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>command</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>EXPLORER_ON</span></td><td><span>Turns ON the Explorer pane </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>EXPLORER_OFF</span></td><td><span>Turns ON or OFF the Explorer pane</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RemoteStart <b>ComputerName</b> [<b>workdir</b>]</span></td><td><span>Starts a remote kernel session on the named computer. </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RemoteEnd <b>ComputerName</b></span></td><td><span>Ends a previously started kernel session on the named computer.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RemoteCommand <b>ComputerName</b></span></td><td><span>ASAPcommand Issues an <b>ASAPcommand</b> to the remote computer.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RemoteSendFile <b>ComputerName</b>
+					<b>Filename</b></span></td><td><span>Sends the file(s) from the local computer to the named remote
+				computer.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RemoteGetFile <b>ComputerName</b>
+					<b>Filename</b></span></td><td><span>Transfers the file corresponding to <b>Filename</b> in the working
+					directory of the remote machine to the subdirectory named <b>ComputerName</b>
+					within the working directory of the local computer.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RemoteBusy <b>ComputerName</b>
+					<b>regname</b></span></td><td><span>Tests whether the kernel session on the named remote computer is busy
+					executing a command, or if it is idle, waiting for input.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RemoteSetPriority <b>ComputerName</b>
+					<b>priority</b></span></td><td><span>
+					<p>Changes the process priority for the kernel session on the named computer
+						while it is busy executing commands. </p>
+
+					<p><b>priority</b> is Low, Normal, High, or Realtime. </p>
+
+				</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>RemoteSetCPU <b>ComputerName</b>
+					<b>cpu</b></span></td><td><span>Sets the ideal <b>cpu</b> on which the kernel will run on the remote
+					computer.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>
+					<p>RemoteProps <b>ComputerName</b>
+					</p>
+
+					<p>RemoteProps <b>ComputerName</b>
+						<b>-d</b>
+					</p>
+
+				</span></td><td><span>Gets information from the remote machine (see Remarks). The extension <b>–d</b> displays information in the Properties dialog.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>
+					<p>RemoteOpenFile <b>ComputerName</b>
+						<b>Filename</b>
+					</p>
+
+					<p>RemoteOpenFile <b>Filename</b>
+					</p>
+
+				</span></td><td><span>Transfers, if necessary, the requested <b>Filename</b> to the local
+					machine, and then opens it in the applicable document window.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>DisplayRange <b>fMin</b>
+					<b>fMax</b></span></td><td><span> Changes the minimum (<b>fMin</b>) and maximum (<b>fMax</b>) range for the
+					last opened Display Viewer window.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Plot Link</span></td><td><span>Forces all plot windows that are created by the kernel to become links that
+					can be clicked in the Command Output window.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Plot Off</span></td><td><span>Disables all dynamic plot creation by the kernel.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Plot On</span></td><td><span>Restores the dynamic plot creation ability of the kernel.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Echo Off</span></td><td><span>Turns off the echoing of information from the kernel to the GUI.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Echo On</span></td><td><span>Restores the echoing of information from the kernel to the GUI.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ClearConsole</span></td><td><span>Clears the text from the Command Output window.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ClearWarnings</span></td><td><span>Sets to zero the Warnings counter on the ASAP status bar.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ClearAll</span></td><td><span>Performs both the ClearConsole and ClearCounter options.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>CalculateCIE</span></td><td><span>Performs color analyses to quantify the chromaticity and lightness of
+					photometric values using CIE standard observer models and CIELAB 1976 color
+					appearance models. This is intended to test the uniformity of the projected
+					light on an anysis object, using CIE standsards. </span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Charts_Off</span></td><td><span>Turns off the Chart Viewer</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>APPLYCHARTTEMPLATE</span></td><td><span>Applies the current template to al subsequent and similar chart types, as
+					specfied in the SETCHARTTEMPLATE command.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>APPLYCHARTTEMPLATE DEFAULT</span></td><td><span>Turns off the application of a template.</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>SET CHARTTEMPLATE GRAPH <b>templateName</b></span></td><td><span>Sets the current template for any graph chart that will be used with $GUI
+					APPLYCHARTTEMPLATE command.</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="GUI_ASAP_Macro__ol_725E5CF757A64A1BA3413E632A9D02E8"><!-- --></a><ol id="GUI_ASAP_Macro__ol_725E5CF757A64A1BA3413E632A9D02E8">
+			<li id="GUI_ASAP_Macro__li_1FEC0266BFCD4CA7BC576014BDA4419A"><a name="GUI_ASAP_Macro__li_1FEC0266BFCD4CA7BC576014BDA4419A"><!-- --></a><b>$GUI</b> sends the string
+				exactly as entered </li>
+
+			<li id="GUI_ASAP_Macro__li_85B8E960AC4041259C88B5AD68C7ACA3"><a name="GUI_ASAP_Macro__li_85B8E960AC4041259C88B5AD68C7ACA3"><!-- --></a><b>&amp;GUI</b> parses any
+				expressions and replaces their results with string equivalents. </li>
+
+			<li id="GUI_ASAP_Macro__li_AA198E7D88394D1CA033AD2BC7097546"><a name="GUI_ASAP_Macro__li_AA198E7D88394D1CA033AD2BC7097546"><!-- --></a>Remote options are available with ASAP
+				OPTICAL+. </li>
+
+			<li id="GUI_ASAP_Macro__li_51228D4C1ACB4D4CA3714FE032CA9007"><a name="GUI_ASAP_Macro__li_51228D4C1ACB4D4CA3714FE032CA9007"><!-- --></a> Four forms of <b>ComputerName</b> can be
+				used: <p>a. Computer </p>
+<p>b. \\computer </p>
+<p>c. computer.domain.com </p>
+<p>d. IP
+					address (for example, 125.0.156.120) </p>
+<p>Note: The reserved character
+					‘$’cannot be part of <b>ComputerName.</b>
+				</p>
+</li>
+
+			<li id="GUI_ASAP_Macro__li_325417E153964C21A92202B8892987F0"><a name="GUI_ASAP_Macro__li_325417E153964C21A92202B8892987F0"><!-- --></a><b>$GUI EXPLORER_OFF</b>: In
+				the ON mode, you can view files in the current working directory. The ON mode is
+				currently the default when used with Remote. </li>
+
+			<li id="GUI_ASAP_Macro__li_D4FBC38A6E6146E180B3D93DD6F1F39D"><a name="GUI_ASAP_Macro__li_D4FBC38A6E6146E180B3D93DD6F1F39D"><!-- --></a><b>$GUI</b> RemoteStart: An
+				output tab for this named computer is added to the Command Input window. When this
+				tab is selected, all commands typed from the Command Input window are directed to
+				its kernel. In the following example, the remote computer name is “tut1”: $GUI
+				RemoteStart \\tut1 “C:\foo”. If the optional working directory is specified, this
+				directory is used for the remote session. The default working directory is located
+				in Documents and Settings\All Users\Application Data. Once the working directory is
+				set for a remote session, it cannot be changed. This restriction limits potential
+				conflict with other remote kernels running on one machine. </li>
+
+			<li id="GUI_ASAP_Macro__li_B464643A77C24A93A5CE70F4F70119EF"><a name="GUI_ASAP_Macro__li_B464643A77C24A93A5CE70F4F70119EF"><!-- --></a><b>$GUI</b> RemoteEnd <b>ComputerName</b>: Its Command Input window tab is deleted and some final status
+				from the kernel is posted to the local computer’s Command Input window. In the
+				example, the remote kernel is ended on the computer named, “tut1”. For example:
+					<b>$GUI</b> RemoteEnd \\tut1 </li>
+
+			<li id="GUI_ASAP_Macro__li_EB8FF7BD8D9A4D6EB07F3D0680CB6E62"><a name="GUI_ASAP_Macro__li_EB8FF7BD8D9A4D6EB07F3D0680CB6E62"><!-- --></a>
+				<b>$GUI</b> RemoteCommand <b>ComputerName</b>
+				<b>ASAPCommand</b>: Commands are placed in a queue on the remote session. In the
+				following example, the remote ASAP seed is set to a value that is different from the
+				default value with the <b>SEED</b> command, using the QUASI option:
+				<pre class="codeblock">
+$GUI RemoteCommand \\tut1 SEED 987654321 QUASI
+            </pre>
+</li>
+
+			<li id="GUI_ASAP_Macro__li_3AB79AB2DA7B46EFBCD2F1E2D00E62CD"><a name="GUI_ASAP_Macro__li_3AB79AB2DA7B46EFBCD2F1E2D00E62CD"><!-- --></a>
+				<b>$GUI </b>RemoteSendFile<b> ComputerName Filename</b>: If this command
+				is used from a remote computer, and also a period is used in place of a computer
+				name, the file(s) are transferred from the remote computer to the local computer.
+				Transferring files from one remote session to another remote session is not
+				possible. Full wildcard use is supported, although it cannot recursively act upon
+				subdirectories. Files sent from a remote computer to the local computer are placed
+				in a subdirectory with the same name as the remote computer. For example:
+				<pre class="codeblock">
+$GUI RemoteSendFile \\tut1 “*.lib”
+            </pre>
+<pre class="codeblock">
+$GUI RemoteSendFile . “*.dis”
+            </pre>
+</li>
+
+			<li id="GUI_ASAP_Macro__li_50C54F00933A493F9BC16399C04F2E7F"><a name="GUI_ASAP_Macro__li_50C54F00933A493F9BC16399C04F2E7F"><!-- --></a><b>$GUI</b> RemoteGetFile:
+				Absolute paths for <b>Filename</b> are not permitted. </li>
+
+			<li id="GUI_ASAP_Macro__li_1321BD706FD54E97AF6688196016F5D1"><a name="GUI_ASAP_Macro__li_1321BD706FD54E97AF6688196016F5D1"><!-- --></a><b>$GUI</b> RemoteBusy <b>ComputerName</b>
+				<b>regname</b>: The result, 1 or 0, is placed in the register <b>regname</b>. The <b>regname</b> register must have been previously declared. </li>
+
+			<li id="GUI_ASAP_Macro__li_63BB6BFCEA014ED6A015F705A46B219B"><a name="GUI_ASAP_Macro__li_63BB6BFCEA014ED6A015F705A46B219B"><!-- --></a>
+				<b>$GUI</b> RemoteSetPriority <b>ComputerName</b>
+				<b>priority</b>: A <b>priority</b> of Low ensures that the kernel uses only CPU
+				cycles when other processes are are idle. A <b>priority</b> of Normal puts the
+				kernel session on the same level as all other processes. A High <b>priority</b>
+				causes the kernel session to have a slightly higher average amount of CPU time as
+				compared to all other processes. A Realtime <b>priority</b> causes the kernel
+				session to become the most imortant task for the operating system. All other
+				processes get only idle time processing, which due to the nature of the kernel, is
+				almost never. Setting the <b>priority</b> to Low is the most typical use, so that a
+				remote computer is not burdened with extensive CPU cycles, which a kernel session
+				may require when running in a normal <b>priority</b>. Normal Windows usage can
+				therefore be expected by the typical user. For example:
+				<pre class="codeblock">
+$GUI RemoteSetPriority \\tut1 Low
+            </pre>
+</li>
+
+			<li id="GUI_ASAP_Macro__li_024AC0C3EE404C9783A498C5AC9A6A78"><a name="GUI_ASAP_Macro__li_024AC0C3EE404C9783A498C5AC9A6A78"><!-- --></a><b>$GUI</b> RemoteSetCPU <b>ComputerName</b>
+				<b>cpu</b>: This setting does not guarantee that the process will run only on the
+				selected CPU, but that it is the preferred CPU. <b>cpu</b> are numbered starting
+				with zero. For example: <pre class="codeblock">
+$GUI RemoteSetCPU 1
+         </pre>
+</li>
+
+			<li id="GUI_ASAP_Macro__li_3E1A39AD07674D13817CF78A4AB4D494"><a name="GUI_ASAP_Macro__li_3E1A39AD07674D13817CF78A4AB4D494"><!-- --></a><b>$GUI</b> RemoteProps <b>ComputerName</b>
+				<b>-d</b>: Gets number of remote kernel processes currently occurring, number of
+				ASAP processes currently occurring, and available disk space. ComputerName is the
+				name of the remote machine. If you select the –d option, the information is
+				displayed in the Properties dialog.
+				<pre class="codeblock">
+$GUI RemoteProps <b>ComputerName</b>
+            </pre>
+</li>
+
+			<li id="GUI_ASAP_Macro__li_BC4D77BF5EED41A4BA867077EC3C87D6"><a name="GUI_ASAP_Macro__li_BC4D77BF5EED41A4BA867077EC3C87D6"><!-- --></a>
+				<b>$GUI</b> RemoteOpenFile <b>ComputerName</b>
+				<b>Filename</b>
+				<p>$GUI RemoteOpenFile . <b>Filename</b>. For example: </p>
+<div class="p">
+					<pre class="codeblock">
+$GUI RemoteOpenFile \\computer “somefile.dis”
+         </pre>
+
+				</div>
+<p>This string causes the “somefile.dis” on the remote <b>ComputerName</b> to be
+					transferred to a temporary file on the local machine, and the opened in the
+					Display Viewer. </p>
+<div class="p">
+					<pre class="codeblock">
+$GUI RemoteOpenFile . “somefile.dis”
+         </pre>
+
+				</div>
+<p>This string causes the file, “somefile.dis” to be opened on the local
+					machine. </p>
+</li>
+
+			<li id="GUI_ASAP_Macro__li_BAF3637674074D1FAA43E621AACA1139"><a name="GUI_ASAP_Macro__li_BAF3637674074D1FAA43E621AACA1139"><!-- --></a>
+				<b>$GUI</b> DisplayRange <b>fMin</b>
+				<b>fMax</b>: No error checking is done to ensure that the minimum is less than the
+				maximum. For example:
+				<pre class="codeblock">
+$GUI DisplayRange -5.25 10.25
+         </pre>
+</li>
+
+			<li id="GUI_ASAP_Macro__li_5FFF7CD5C9C9425C9BCE59CD8BFD55CA"><a name="GUI_ASAP_Macro__li_5FFF7CD5C9C9425C9BCE59CD8BFD55CA"><!-- --></a><b>$GUI</b> CalculateCIE:
+				Intended to test the uniformity of the projected light on an analysis object, using
+				CIE standards. </li>
+
+			<li id="GUI_ASAP_Macro__li_CE3FAD81DADF40DC94798868E2488452"><a name="GUI_ASAP_Macro__li_CE3FAD81DADF40DC94798868E2488452"><!-- --></a><b>$GUI</b> SETCHARTEMPLATE
+				GRAPH <b>templateName</b>: Apply only to similar chart types (in this case GRAPH).
+				Affects the Chart Viewer for the current session of ASAP. The Plot Viewer is used in
+				place of the Chart Viewer for viewing plots. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#$GUI">$GUI Examples</a>
+		</p>
+
+	</div>
+
+	<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_G-ref.html#Commands_and_Macros_G" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “G”.">Commands and Macros (G)</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/ASAP_Remote_Overview-conc.html" title="Remote is a feature of all ASAP products except ASAP Lite. To use it on a client machine, you must have a valid license.">ASAP Remote Overview</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Predefined ASAP Macros</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, Predefined Macros at
+				http://www.breault.com/k-base.php </a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

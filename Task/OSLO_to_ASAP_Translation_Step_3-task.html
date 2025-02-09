@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="OSLO to ASAP Translation Step 3"/>
+<meta name="abstract" content="The final step in the translation process is to choose how the translator deal with refractive indices. (In the following discussion, the term “glass” refers to any refractive material including glass, plastics, crystals, and other refractive materials.)"/>
+<meta name="description" content="The final step in the translation process is to choose how the translator deal with refractive indices. (In the following discussion, the term “glass” refers to any refractive material including glass, plastics, crystals, and other refractive materials.)"/>
+<meta name="DC.subject" content="OSLO to ASAP Translation Step 3, translating OSLO files, step 3"/>
+<meta name="keywords" content="OSLO to ASAP Translation Step 3, translating OSLO files, step 3"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/OSLO_to_ASAP_Translation-conc.html#OSLO_to_ASAP_Translation"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/OSLO_to_ASAP_Translation_Step_1-task.html#OSLO_to_ASAP_Translation_Step_1"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/OSLO_to_ASAP_Translation_Step_2-task.html#OSLO_to_ASAP_Translation_Step_2"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/OSLO_Restrictions-ref.html#OSLO_Restrictions"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Media_Database_Overview-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Media_Database_Overview-conc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="OSLO_to_ASAP_Translation_Step_3"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>OSLO to ASAP Translation Step 3</title>
+</head>
+<body id="OSLO_to_ASAP_Translation_Step_3"><a name="OSLO_to_ASAP_Translation_Step_3"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>OSLO to ASAP Translation Step 3 </h5></span>
+	
+	
+	<div><p>The final step in the translation process is to choose how the translator deal with
+		refractive indices. (In the following discussion, the term “glass” refers to any refractive
+		material including glass, plastics, crystals, and other refractive materials.) </p>
+
+		<div class="section" id="OSLO_to_ASAP_Translation_Step_3__context_8EF8464BBBF64386AA624C6F14D99AD0"><a name="OSLO_to_ASAP_Translation_Step_3__context_8EF8464BBBF64386AA624C6F14D99AD0"><!-- --></a>In addition to geometrical
+			translation (surfaces shapes and placements), the refractive indices must be translated
+			as well. The translator offers two options: <br/><a name="OSLO_to_ASAP_Translation_Step_3__ol_AA5FF672FC6C4DD589983FE617C903D2"><!-- --></a><ol id="OSLO_to_ASAP_Translation_Step_3__ol_AA5FF672FC6C4DD589983FE617C903D2">
+				<li id="OSLO_to_ASAP_Translation_Step_3__li_A68ED7CEF3264C9A9B302AC19F5A626D"><a name="OSLO_to_ASAP_Translation_Step_3__li_A68ED7CEF3264C9A9B302AC19F5A626D"><!-- --></a>
+					<b>Pass OSLO glass names to ASAP; make no attempt to translate.</b>
+					<p>The translator writes the glass name(s) into the <b>INTERFACE</b> command of
+						each object in the ASAP file. In those cases where you have specified an
+						optical glass from the Schott, Hoya, Ohara, or Corning glass catalogs, ASAP
+						refers to its own database and computes the required refractive indices.
+						Otherwise, you need to edit the translated ASAP file to insert the proper
+						refractive index information. (Default: do not attempt to include refractive
+						index information in ASAP file.) </p>
+</li>
+
+				<li id="OSLO_to_ASAP_Translation_Step_3__li_9276D4ED08C84C6B90F58CEBB2BAE701"><a name="OSLO_to_ASAP_Translation_Step_3__li_9276D4ED08C84C6B90F58CEBB2BAE701"><!-- --></a>
+					<b>Search for OSLO glass catalogs; if available substitute refractive indices.
+					</b>
+					<p>The translator goes to the default OSLO installation directories (<i>c:\oslsix51\bin\glc\ for OSLO SIX, c:\oslpro51\bin\glc\</i> for
+						OSLO PRO, and <i>c:\olight51\bin\glc\</i> for OSLO Light) to
+						try to find the glass catalogs (schott.glc. ohara.glc, hoya.glc,
+						corning.glc, misc.glc, shared.glc, and obsolete.glc). If it is successful,
+						the translator searches the catalogs for each glass found in the OSLO LEN
+						file and computes its refractive indices according to the OSLO database and
+						the currently defined wavelengths. These data are then written to the ASAP
+						file. If the translator cannot locate the glass catalogs within the default
+						installation directories, it displays the following message box asking
+						whether you would like to provide another directory to search: <br/><a name="OSLO_to_ASAP_Translation_Step_3__image"><!-- --></a><img id="OSLO_to_ASAP_Translation_Step_3__image" src="../Graphics/OSLO_ASAP_translation5.jpg" width="386" height="120" longdesc="OSLO translation - step 3 error message"/><br/></p>
+<p>If you
+						respond “Yes”, the translator displays a File Open dialog so you can Browse
+						for the OSLO glass catalogs. Selecting any of the glass catalogs from within
+						this dialog sets the path for the translator. If, on the other hand, you
+						respond “No” to the message box or cancel the File Open dialog, the
+						translator displays another message box informing you that no directory has
+						been specified, and that it not attempt to compute refractive indices for
+						the ASAP file. </p>
+<p><a name="OSLO_to_ASAP_Translation_Step_3__image"><!-- --></a><img id="OSLO_to_ASAP_Translation_Step_3__image" src="../Graphics/OSLO_ASAP_translation6.jpg" width="357" height="120" longdesc="OSLO translation - step 3 error message"/>
+					</p>
+<p>At the completion of this dialog, you have the option to go <b>Back</b> to the first dialog, <b>Finish</b>, or
+							<b>Cancel</b> and terminate the translator. </p>
+</li>
+
+			</ol>
+</div>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/OSLO_to_ASAP_Translation-conc.html#OSLO_to_ASAP_Translation" title="ASAP OPTICAL+ and ASAP ADVANCED include the fully integrated capability of importing OSLO® files. You can open this file type (*.LEN) in ASAP from the Open dialog box on the File menu.">OSLO to ASAP Translation</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Media_Database_Overview-conc.html">Media Database Overview</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/OSLO_to_ASAP_Translation_Step_1-task.html#OSLO_to_ASAP_Translation_Step_1" title="The first step in the OSLO to ASAP translation process involves selecting a *.LEN file produced by OSLO.">OSLO to ASAP Translation Step 1</a></div>
+<div><a href="../Task/OSLO_to_ASAP_Translation_Step_2-task.html#OSLO_to_ASAP_Translation_Step_2" title="The second step in the OSLO to ASAP translation process is to select the ASAP filename, and set several translation options.">OSLO to ASAP Translation Step 2</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/OSLO_Restrictions-ref.html#OSLO_Restrictions" title="This topic describes specific features and limitations of the OSLO to ASAP translator.">OSLO Restrictions</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="SUM (ASAP Command)"/>
+<meta name="abstract" content="Creates a composite scatter model."/>
+<meta name="description" content="Creates a composite scatter model."/>
+<meta name="DC.subject" content="SUM (ASAP Command), scatter model, creating composite, model, creating composite scatter"/>
+<meta name="keywords" content="SUM (ASAP Command), scatter model, creating composite, model, creating composite scatter"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_S-ref.html#Commands_and_Macros_S"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MINMAX_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MODELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/VANES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Scatter_Models-ref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="SUM_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>SUM (ASAP Command)</title>
+</head>
+<body id="SUM_ASAP_Command"><a name="SUM_ASAP_Command"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>SUM (ASAP Command)</h5></span> 
+   
+   
+  <div><p>Creates a composite scatter model. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+SUM [ X ] i i' [ i" ... ] 
+      Y
+      Z
+      :
+      </pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>i i' i" ...</span></td><td><span>previously defined model numbers</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="SUM_ASAP_Command__ul_BB99856387AA4FB6AEA64AC84BA03566"><!-- --></a><ol id="SUM_ASAP_Command__ul_BB99856387AA4FB6AEA64AC84BA03566"> 
+		<li id="SUM_ASAP_Command__li_A917CA663225418092537F85650E4598"><a name="SUM_ASAP_Command__li_A917CA663225418092537F85650E4598"><!-- --></a>Adds the BSDF's of the given
+		  list of previously defined models to form a composite model. 
+		</li>
+ 
+		<li id="SUM_ASAP_Command__li_019AA5667EF949829BF95428A060B5A4"><a name="SUM_ASAP_Command__li_019AA5667EF949829BF95428A060B5A4"><!-- --></a>ASAP does not support other 
+		  <b>VANES</b> and non-<b>VANES</b> models.
+		  However, it is fully recursive so that one 
+		  <b>SUM</b> model can reference another. 
+		</li>
+ 
+		<li id="SUM_ASAP_Command__li_E94A60653D2E4449931EB614370207D3"><a name="SUM_ASAP_Command__li_E94A60653D2E4449931EB614370207D3"><!-- --></a>Only one anisotropy
+		  orientation is used for all the models, either the one specified or the one for
+		  the first anisotropic model listed. 
+		</li>
+ 
+		<li id="SUM_ASAP_Command__li_B254FC526F1C4A3DB0533593B58970D7"><a name="SUM_ASAP_Command__li_B254FC526F1C4A3DB0533593B58970D7"><!-- --></a>The command argument, 
+		  <b>MINMAX</b> may be used to set the minimum and maximum
+		  values of the BSDF for this specific model. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#SUM">SUM
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_S-ref.html#Commands_and_Macros_S" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “S”.">Commands and Macros (S)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Scatter_Models-ref.html" title="ASAP supports the scatter models listed in this topic for wide-angle (far from specular) scatter.">Scatter Models</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/MINMAX_arg_ASAP-cmdref.html" title="Sets BSDF bounding.">MINMAX (ASAP Command Argument)</a></div>
+<div><a href="../Commands/MODELS_ASAP-cmdref.html" title="Creates a scattering model.">MODELS (ASAP Command)</a></div>
+<div><a href="../Commands/VANES_ASAP-cmdref.html" title="Creates an anisotropic scatter model that simulates the scatter from a vane structure.">VANES (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

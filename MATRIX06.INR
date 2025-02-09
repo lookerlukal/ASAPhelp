@@ -1,0 +1,32 @@
+!!++
+!! MATRIX06.INR
+!! Title: MATRIX 'k' Option
+!! Category: Isolated Command
+!! Keywords: MATRIX, Manipulating
+!! Description: Example of using the MATRIX k option to specify 
+!! a previous entities' matrix.
+!! Edit History: (latest first)
+!! 08/22/2007 - cp - creation
+!!--
+
+SYSTEM NEW
+RESET
+
+SURFACE
+  OPTICAL Z 4 35 -2 ELLIPSE 2
+    ROTATE X 45 deg about y 0 z 5
+OBJECT 'ONE'
+
+SURFACE
+  PLANE Z 16 ELLIPSE 5 2 
+OBJECT 'TWO'
+
+
+SURFACE
+  PLANE Z 30 ELLIPSE 7 2
+    MATRIX 1   !! Apply the matrix of entity #1. Use -1 for inverse matrix
+OBJECT 'THREE' 
+
+PLOT FACETS 15 15 0 
+$VIEW
+RETURN

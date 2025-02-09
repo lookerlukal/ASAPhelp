@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="VUFACETS (ASAP Command)"/>
+<meta name="abstract" content="Shortcut for faceting and viewing current objects."/>
+<meta name="description" content="Shortcut for faceting and viewing current objects."/>
+<meta name="DC.subject" content="VUFACETS (ASAP Command), object, faceting and viewing shortcut"/>
+<meta name="keywords" content="VUFACETS (ASAP Command), object, faceting and viewing shortcut"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_V-ref.html#Commands_and_Macros_V"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CONSIDER_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/END_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/IO_macro_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLOT_FACETS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/VIEW_macro_ASAP-cmdref.html#VIEW_ASAP_Macro"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="VUFACETS_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>VUFACETS (ASAP Command)</title>
+</head>
+<body id="VUFACETS_ASAP_Command"><a name="VUFACETS_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>VUFACETS (ASAP Command)</h5></span>
+	
+	
+	<div><p>Shortcut for faceting and viewing current objects. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">VUFACETS [ n n' [ m ] ] [ LIST ]</pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n n'</span></td><td><span>faceting numbers</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>m</span></td><td><span>maximum number of facets per object</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="VUFACETS_ASAP_Command__ul_E30591E4324B4AC2A174E4E01734733F"><!-- --></a><ol id="VUFACETS_ASAP_Command__ul_E30591E4324B4AC2A174E4E01734733F">
+			<li id="VUFACETS_ASAP_Command__li_AA211CA6A1CE4EAD84A6C0D02632EE18"><a name="VUFACETS_ASAP_Command__li_AA211CA6A1CE4EAD84A6C0D02632EE18"><!-- --></a><b>VUFACETS</b> is a shortcut
+				for the <b>$IO VECTOR REWIND</b>, <b>PLOT FACETS</b>
+					[<b> n n'</b> ], and <b>$VIEW</b> command sequence.
+				However, it temporarily suppresses any 2D plotting to minimize computation time and
+				disk space. </li>
+
+			<li id="VUFACETS_ASAP_Command__li_77710FCADD214062A8999569BCFA5E59"><a name="VUFACETS_ASAP_Command__li_77710FCADD214062A8999569BCFA5E59"><!-- --></a>Replots the current accumulated 3D VECTOR
+				graphics taking into account the current <b>CONSIDER</b> settings. </li>
+
+			<li id="VUFACETS_ASAP_Command__li_DEBF526E5E7D4560BBB4853877127A1D"><a name="VUFACETS_ASAP_Command__li_DEBF526E5E7D4560BBB4853877127A1D"><!-- --></a>If possible, the maximum number of total
+				facets on any object is kept below <b>m</b> (the default is 1000; use 0
+				to turn off). </li>
+
+			<li id="VUFACETS_ASAP_Command__li_525F8F40FC7E428F99C4824BC9A95008"><a name="VUFACETS_ASAP_Command__li_525F8F40FC7E428F99C4824BC9A95008"><!-- --></a>Remembers the faceting numbers <b>n
+					n' m"</b> from the previous <b>VUFACETS</b> command (an
+					<b>END</b> command resets them to the default 1). </li>
+
+			<li id="VUFACETS_ASAP_Command__li_13946CAAF5AC4A68AF232572E23D0BE1"><a name="VUFACETS_ASAP_Command__li_13946CAAF5AC4A68AF232572E23D0BE1"><!-- --></a>A <b>$VIEW</b> will list the
+				facets in the Command Output window. </li>
+
+			<li id="VUFACETS_ASAP_Command__li_9DE809D66AFC4159BA10B8EF0A29A00F"><a name="VUFACETS_ASAP_Command__li_9DE809D66AFC4159BA10B8EF0A29A00F"><!-- --></a>The numbers of facets created for each
+				object can also be <b>LISTed</b> (a <b>$VIEW</b> is not
+				automatically issued in this case). </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#VUFACETS">VUFACETS Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_V-ref.html#Commands_and_Macros_V" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “V”.">Commands and Macros (V)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/CONSIDER_ASAP-cmdref.html" title="Selects a set of objects for ray tracing and plotting.">CONSIDER (ASAP Command)</a></div>
+<div><a href="../Commands/END_ASAP-cmdref.html" title="Terminates program processing.">END (ASAP Command)</a></div>
+<div><a href="../Commands/IO_macro_ASAP-cmdref.html" title="Controls I/O redirection.">$IO (ASAP Macro)</a></div>
+<div><a href="../Commands/PLOT_FACETS_ASAP-cmdref.html" title="Plots parametric mesh representation of objects in the currently specified graphics window.">PLOT FACETS (ASAP Command)</a></div>
+<div><a href="../Commands/VIEW_macro_ASAP-cmdref.html#VIEW_ASAP_Macro" title="Immediately processes the system geometry in the current 3D vector file (*.vcr) using the operating system command defined with the VIEWER switch or environment variable.">$VIEW (ASAP Macro)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

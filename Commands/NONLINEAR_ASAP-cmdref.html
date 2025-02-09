@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="NONLINEAR (ASAP Command)"/>
+<meta name="abstract" content="Creates a scatter model based on the combination of the Phong and Harvey models."/>
+<meta name="description" content="Creates a scatter model based on the combination of the Phong and Harvey models."/>
+<meta name="DC.subject" content="NONLINEAR (ASAP Command), scatter model, combing Phong and Harvey, Phong model, create, Harvey model, create"/>
+<meta name="keywords" content="NONLINEAR (ASAP Command), scatter model, combing Phong and Harvey, Phong model, create, Harvey model, create"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_N_O-ref.html#Commands_and_Macros_N_O"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/HARVEY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/LAMBERTIAN_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MINMAX_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MODEL_arg_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MODELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/USERBSDF_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Scatter_Models-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=35"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="NONLINEAR_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>NONLINEAR (ASAP Command)</title>
+</head>
+<body id="NONLINEAR_ASAP_Command"><a name="NONLINEAR_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>NONLINEAR (ASAP Command)</h5></span>
+	
+	
+	<div><p>Creates a scatter model based on the combination of the Phong and Harvey models. </p>
+
+		<p><b>Syntax (isotropic)</b>
+		</p>
+
+		<p><b>Syntax 1 (polynomial coefficients):</b>
+		</p>
+
+		<pre class="codeblock">
+NONLINEAR a1 b1 c1 d1 e1 [ a2' b2' c2' d2' e2' [ a3" b3" c3" d3" e3" ...] ] ] [ PLOT [ a a' ...] ]
+    </pre>
+
+		<p><b>Syntax 2 (anisotropic)</b>
+		</p>
+
+		<pre class="codeblock">
+NONLINEAR X p q a b c d e [ p' q' a' b' c' d' e' ... ] ]
+          Y
+          Z
+          :
+</pre>
+
+		<p><b>Syntax 3 (fitting BSDF values)</b>
+		</p>
+
+		<pre class="codeblock">
+NONLINEAR FIT [ n       ] [ options ]
+          FRAC  e e' ...
+ data…
+  :
+    </pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a b c d e ...</span></td><td><span>BSDF equation coefficients</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>PLOT</span></td><td><span>plots the model in log(b-bo) and angle space</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a a' ...</span></td><td><span>user-defined degree specular angles</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>FIT</span></td><td><span>FIT the BSDF values to the model</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>n (or optionally e e' ...)</span></td><td><span>n is the number of 5-parameter terms (default 5); the <b>e</b>'s are the starting guesses for the exponents of each term</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>FRAC </span></td><td><span>fractional error</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ANGLES</span></td><td><span>specifies spherical angle coordinates</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>LOG</span></td><td><span>specifies common logarithmic BSDF values</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<p>The following remarks apply to both isotropic and anisotropic versions unless otherwise
+			noted. </p>
+
+		<br/><a name="NONLINEAR_ASAP_Command__ul_93EAB3826109446EA278D7BADEF26FF9"><!-- --></a><ol id="NONLINEAR_ASAP_Command__ul_93EAB3826109446EA278D7BADEF26FF9">
+			<li id="NONLINEAR_ASAP_Command__li_16679C10C6C34F619830068932FA74C6"><a name="NONLINEAR_ASAP_Command__li_16679C10C6C34F619830068932FA74C6"><!-- --></a>Generalizes the combination of the Harvey
+				(sharp peak) and Phong (broad peak) models and as such is applicable to both smooth
+				and rough surfaces. </li>
+
+			<li id="NONLINEAR_ASAP_Command__li_C5A0CA1670DE4FE1A323A60D6B79D218"><a name="NONLINEAR_ASAP_Command__li_C5A0CA1670DE4FE1A323A60D6B79D218"><!-- --></a>
+				<b>Isotropic</b>: The command is defined by the following relatively simple formula:
+					<br/><img src="../Equations/NONLINEAR_equation1.gif"/><br/><p>where from the previous definition of the isotropic-surface direction
+					cosine variables: </p>
+<br/><img src="../Equations/NONLINEAR_equation2.gif"/><br/><br/><img src="../Equations/NONLINEAR_equation3.gif"/><br/><br/><img src="../Equations/NONLINEAR_equation4.gif"/><br/><p>where</p>
+<br/><img src="../Equations/NONLINEAR_equation4a.gif"/><br/></li>
+
+			<li id="NONLINEAR_ASAP_Command__li_7E4F9E10F8F14510B48EE93872145A49"><a name="NONLINEAR_ASAP_Command__li_7E4F9E10F8F14510B48EE93872145A49"><!-- --></a><b>Anisotropic</b>: The command assumes the
+				surface anisotropy is aligned with the local Alpha or Beta direction and is defined
+				by the following relatively simple formula: <br/><img src="../Equations/NONLINEAR_equation5.gif"/><br/> where
+				from the previous definition of the anisotropic-surface direction cosine variables:
+					<br/><img src="../Equations/NONLINEAR_equation6.gif"/><br/> where F = Scatter angle from normal<br/><img src="../Equations/NONLINEAR_equation7.gif"/><br/>where
+					<img src="../Equations/NONLINEAR_equation_inline1.gif"/>= Specular
+				from normal</li>
+
+			<li id="NONLINEAR_ASAP_Command__li_DA5F5DEDF31846D7B0545868F8A3DD5F"><a name="NONLINEAR_ASAP_Command__li_DA5F5DEDF31846D7B0545868F8A3DD5F"><!-- --></a>If the quantity in braces {} is less than
+				zero, then the term is set to zero. </li>
+
+			<li id="NONLINEAR_ASAP_Command__li_ABD7AA6A520B4A3BACD04858E90A6BB3"><a name="NONLINEAR_ASAP_Command__li_ABD7AA6A520B4A3BACD04858E90A6BB3"><!-- --></a>The <b>e</b> exponent do not
+				have to be integer or positive. </li>
+
+			<li id="NONLINEAR_ASAP_Command__li_689360B46BE34369AB15336D0FA7B86C"><a name="NONLINEAR_ASAP_Command__li_689360B46BE34369AB15336D0FA7B86C"><!-- --></a>Note that the resulting BSDF is guaranteed
+				to have all the correct positivity, symmetry, and reciprocity properties. </li>
+
+			<li id="NONLINEAR_ASAP_Command__li_E24330415BFB4367A0D723B8282CF5B2"><a name="NONLINEAR_ASAP_Command__li_E24330415BFB4367A0D723B8282CF5B2"><!-- --></a>Scattering from anisotropic surfaces is not
+				rotationally symmetric at normal incidence and not necessarily symmetric about the
+				plane of incidence otherwise. Therefore, the orientation of the model on the surface
+				is important and is generally specified by an axis for the second command entry. For
+				syntax information, see the command argument,<b>MODEL</b>. </li>
+
+			<li id="NONLINEAR_ASAP_Command__li_9BF94592C757427894F54C075A3CEDB5"><a name="NONLINEAR_ASAP_Command__li_9BF94592C757427894F54C075A3CEDB5"><!-- --></a>
+				<b>Isotropic</b>: The total number of parameters must be less than or equal to 285,
+				that is, <b>N</b> less than or equal to 57 quintuples (five or less
+				terms is usually sufficient for most surfaces). The specific cases of this model
+				are: <br/><table border="0"><thead align="left"/><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Forward Harvey</span></td><td><span>a1&gt;&gt;1</span></td><td><span>b1=-2a1</span></td><td><span>c1=0</span></td><td><span>d1&gt;0</span></td><td><span>e1&lt;0</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Retro Harvey</span></td><td><span>a1&gt;&gt;1</span></td><td><span>b1=2a1</span></td><td><span>c1=0</span></td><td><span>d1&gt;&gt;0</span></td><td><span>e1&lt;0</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Lambertian</span></td><td><span>a1=0</span></td><td><span>b1=0</span></td><td><span>c1=0</span></td><td><span>d1&gt;0 </span></td><td><span>e1=1</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Forward Phong</span></td><td><span>a1=0</span></td><td><span>b1=c1</span></td><td><span>c1&gt;0</span></td><td><span>d1=0</span></td><td><span>e1&gt;1</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>Retro Phong</span></td><td><span>a1=0</span></td><td><span>b1= -c1</span></td><td><span>c1&gt;0</span></td><td><span>d1=0</span></td><td><span>e1&gt;1</span></td></tr></tbody></table></li>
+
+			<li id="NONLINEAR_ASAP_Command__li_51FA4501066141DAB2F858680D2C701D"><a name="NONLINEAR_ASAP_Command__li_51FA4501066141DAB2F858680D2C701D"><!-- --></a>
+				<b>Anisotropic</b>: The total number of parameters must be less than or equal to 40
+				terms (five or less terms are usually sufficient for most surfaces). <div class="note"><span class="notetitle">Note:</span> When the
+						<b>ps</b> equal the <b>qs</b> and the as equal the
+						<b>bs</b> for each term, this model reduces to the
+					isotropic-surface version. </div>
+</li>
+
+			<li id="NONLINEAR_ASAP_Command__li_ED71F9737D8040A89E3DD2E3D9F1EAF1"><a name="NONLINEAR_ASAP_Command__li_ED71F9737D8040A89E3DD2E3D9F1EAF1"><!-- --></a>Isotropic: The user can optionally fit BSDF
+				values to the above model by using the <b>NONLINEAR</b>
+				<b>FIT</b> command where n is the number of five-parameter terms
+				(default 3) or optionally the es are the starting guesses for the exponents of each
+				term. </li>
+
+			<li id="NONLINEAR_ASAP_Command__li_58FBB59D2F38407F860F562603EA2DC3"><a name="NONLINEAR_ASAP_Command__li_58FBB59D2F38407F860F562603EA2DC3"><!-- --></a>
+				<b>Anisotropic</b>: The user can optionally fit BSDF values to the above model by
+				entering the data on successive commands:
+				<pre class="codeblock">     
+NONLINEAR FIT [ n ] [ options ... ]
+          FRAC e e' ...
+  data ...
+   :</pre>
+</li>
+
+			<li id="NONLINEAR_ASAP_Command__li_A860BEC158F44DB79A057E517183BE87"><a name="NONLINEAR_ASAP_Command__li_A860BEC158F44DB79A057E517183BE87"><!-- --></a><b>Anisotropic</b>: <b>n</b> is
+				the number of 7-parameter terms (default 5) or optionally the <b>e'</b>s
+				are the starting guesses for the exponents of each term. If the given data does not
+				cover most of the input and output hemispheres, then the fitted model can do
+				unexpected things in the missing regions; for example, have a TIS greater than one. </li>
+
+			<li id="NONLINEAR_ASAP_Command__li_3C8682A22340494C9362AEEB94A4607F"><a name="NONLINEAR_ASAP_Command__li_3C8682A22340494C9362AEEB94A4607F"><!-- --></a>Since the <b>NONLINEAR</b>
+				model is not defined in logarithm space (like the <b>POLYNOMIAL</b>
+				model), the <b>FIT</b> may have a tough time accurately reproducing any BSDF with a
+				high dynamic range. Optionally, the<b> FRAC</b>tional error at each data
+				point can be used instead of the absolute error. This has about the same effect as
+				fitting in logarithm space. In either case, the fit is done using an iterative
+				non-linear damped least-squares algorithm. Therefore, it converges to one of the
+				local minima and not necessarily the best one. An off-line, time-consuming, global
+				optimization technique (for example, simulated annealing) could be used if the data
+				only needs to be fit once. </li>
+
+			<li id="NONLINEAR_ASAP_Command__li_54DBEFF441244ABEAED027EF4571DEF9"><a name="NONLINEAR_ASAP_Command__li_54DBEFF441244ABEAED027EF4571DEF9"><!-- --></a>The <b>PLOT</b> option plots
+				the model (common base 10 logarithm of the BSDF) for up to seven specular angles in
+				ascending order (default 0, 15, 30, 45, 60, 75, 89.9 degrees). The current <b>PIXELS</b>
+				setting controls the resolution of these plots in direction cosine space, and it
+				creates a distribution file name_angle.dis for each of these angles. </li>
+
+			<li id="NONLINEAR_ASAP_Command__li_69443E6585024AAF8681AFF1565BACFC"><a name="NONLINEAR_ASAP_Command__li_69443E6585024AAF8681AFF1565BACFC"><!-- --></a>The command argument, <b>MINMAX</b> may be used to set the minimum and maximum values of the BSDF for
+				this specific model. </li>
+
+		</ol>
+
+		<p>
+			<a href="/example_scripts.html#NONLINEAR">NONLINEAR Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_N_O-ref.html#Commands_and_Macros_N_O" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “N-O”.">Commands and Macros (N-O)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Scatter_Models-ref.html" title="ASAP supports the scatter models listed in this topic for wide-angle (far from specular) scatter.">Scatter Models</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/HARVEY_ASAP-cmdref.html" title="Creates a Harvey (linear shift invariant) scatter model or simple specific model.">HARVEY (ASAP Command)</a></div>
+<div><a href="../Commands/LAMBERTIAN_ASAP-cmdref.html" title="Creates a Lambertian scatter model.">LAMBERTIAN (ASAP Command)</a></div>
+<div><a href="../Commands/MINMAX_arg_ASAP-cmdref.html" title="Sets BSDF bounding.">MINMAX (ASAP Command Argument)</a></div>
+<div><a href="../Commands/MODEL_arg_ASAP-cmdref.html" title="Scattering from anisotropic surfaces (for example, brushed, diamond-turned) is not rotationally symmetric at normal incidence, and not necessarily symmetric about the plane of incidence otherwise.">MODEL (ASAP Command Argument)</a></div>
+<div><a href="../Commands/MODELS_ASAP-cmdref.html" title="Creates a scattering model.">MODELS (ASAP Command)</a></div>
+<div><a href="../Commands/PIXELS_ASAP-cmdref.html" title="Sets the resolution for graphics and calculations.">PIXELS (ASAP Command)</a></div>
+<div><a href="../Commands/POLYNOMIAL_TRINOMIAL_BINOMIAL_ASAP-cmdref.html" title="Creates a scatter model based on user-supplied data or polynomial coefficients.">POLYNOMIAL/TRINOMIAL/BINOMIAL (ASAP Command)</a></div>
+<div><a href="../Commands/USERBSDF_ASAP-cmdref.html" title="Specifies an isotropic or anisotropic scatter model.">USERBSDF (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=35" target="_blank">See the Knowledge Base for the technical publication, Stray Light Analysis</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

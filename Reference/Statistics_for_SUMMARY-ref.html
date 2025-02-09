@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Statistics for SUMMARY"/>
+<meta name="abstract" content="The SUMMARY command, a subcommand of HISTORY, is described in this topic."/>
+<meta name="description" content="The SUMMARY command, a subcommand of HISTORY, is described in this topic."/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_SZ-ref.html#Reference_SZ"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/HISTORY_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MISSED_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Statistics_for_SUMMARY"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Statistics for SUMMARY</title>
+</head>
+<body id="Statistics_for_SUMMARY"><a name="Statistics_for_SUMMARY"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Statistics for SUMMARY</h5></span>
+	
+	<div><p>The <b>SUMMARY</b> command, a subcommand of <b>HISTORY</b>,
+		is described in this topic. </p>
+
+		<div class="section" id="Statistics_for_SUMMARY__section_5B83DC60737A4786AFF0068714601096"><a name="Statistics_for_SUMMARY__section_5B83DC60737A4786AFF0068714601096"><!-- --></a>
+			<p><b>SUMMARY</b> produces output which looks like the following example: </p>
+
+			<pre class="codeblock">
+ Path-Set        :  ACTIVE
+ Paths            :  300
+ Total Flux      :  1.000000
+            AVG                     RMS                      MIN                        MAX
+ Flux :   0.3333335E-02   0.6798726E-03   0.2400000E-02    0.4000000E-02
+ X_f  :   -.1986822E-09   0.2872279           -.4500000            0.4500000
+ Y_f  :   1.540351             0.9933338          -.2500000             2.684211
+ Z_f  :   2.807016             0.8789477          1.736842               4.000000
+ X_i  :   -.1986822E-09   0.2872279           -.4500000             0.4500000
+ Y_i  :   0.1092752E-08   0.2872280           -.4500000             0.4500000
+
+ Z_i  :   0.000000            0.000000             0.000000               0.000000
+</pre>
+
+			<br/><a name="Statistics_for_SUMMARY__ul_CC6B635CF8184D139BE87B81ABAB0664"><!-- --></a><ul id="Statistics_for_SUMMARY__ul_CC6B635CF8184D139BE87B81ABAB0664">
+				<li id="Statistics_for_SUMMARY__li_A1B14E2DFF6C46ECB95173EA2ADA8F18"><a name="Statistics_for_SUMMARY__li_A1B14E2DFF6C46ECB95173EA2ADA8F18"><!-- --></a>Path-Set is the setname given to
+						<b>SUMMARY</b>, or the <b>ACTIVE</b> pathset if no
+					setname is given. Paths is the number of paths in the Path-Set. Total Flux is
+					the total flux delivered by all paths in the Path-Set. </li>
+
+				<li id="Statistics_for_SUMMARY__li_676CE5698FFC47DF9AC2A48685F0AB5C"><a name="Statistics_for_SUMMARY__li_676CE5698FFC47DF9AC2A48685F0AB5C"><!-- --></a>Then we see average (AVG),
+					root-mean-square (RMS) and extreme (<b>MIN</b> and <b>MAX</b>) values for several parameters: </li>
+
+				<li id="Statistics_for_SUMMARY__li_48A5F11AE82446439BEA721A028B51A8"><a name="Statistics_for_SUMMARY__li_48A5F11AE82446439BEA721A028B51A8"><!-- --></a>Flux: the flux delivered by the paths
+					in the Path-Set. </li>
+
+				<li id="Statistics_for_SUMMARY__li_51785645B82A4446B856E19BF58C7F76"><a name="Statistics_for_SUMMARY__li_51785645B82A4446B856E19BF58C7F76"><!-- --></a>X_f, Y_f, Z_f : The final (f)
+					coordinates (X,Y,Z) of the paths in the Path-Set. </li>
+
+				<li id="Statistics_for_SUMMARY__li_6F84420B30B7491DBA7D53A871C0F0B2"><a name="Statistics_for_SUMMARY__li_6F84420B30B7491DBA7D53A871C0F0B2"><!-- --></a>The final location of each path is the
+					location at which ray-tracing stopped. </li>
+
+				<li id="Statistics_for_SUMMARY__li_9E3025C24DC244F490A80ECE797E0919"><a name="Statistics_for_SUMMARY__li_9E3025C24DC244F490A80ECE797E0919"><!-- --></a>Typically this is the last
+					intersection, but for missed rays is extended by the vector defined by the
+					MISSED command. </li>
+
+				<li id="Statistics_for_SUMMARY__li_B99BB3830DA5455F846FD582FA16CDF4"><a name="Statistics_for_SUMMARY__li_B99BB3830DA5455F846FD582FA16CDF4"><!-- --></a>X_i, Y_i, Z_i : The initial (i)
+					coordinates (X,Y,Z) of the paths in the Path-Set. </li>
+
+				<li id="Statistics_for_SUMMARY__li_08799AF51A7644B28EDE76DEC9A0448B"><a name="Statistics_for_SUMMARY__li_08799AF51A7644B28EDE76DEC9A0448B"><!-- --></a>The initial location of each path is
+					the location of it's originating source ray. </li>
+
+			</ul>
+
+		</div>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_SZ-ref.html#Reference_SZ" title="Reference topics in this section begin with the letters &#34;S&#34; to &#34;Z&#34;.">Reference (S-Z)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/HISTORY_ASAP-cmdref.html" title="Recalls ray data from a previously saved binary file for plotting or listing. The first syntax is for compatibility. The second syntax is for the Path Explorer.">HISTORY (ASAP Command)</a></div>
+<div><a href="../Commands/MISSED_ASAP-cmdref.html" title="Sets how a missed ray is plotted.">MISSED (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

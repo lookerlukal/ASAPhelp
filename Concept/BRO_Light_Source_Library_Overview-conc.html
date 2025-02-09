@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="BRO Light Source Library Overview"/>
+<meta name="abstract" content="The BRO Light Source Library is a growing collection of U.S. and European source models that can be imported directly into ASAP projects."/>
+<meta name="description" content="The BRO Light Source Library is a growing collection of U.S. and European source models that can be imported directly into ASAP projects."/>
+<meta name="DC.subject" content="BRO Light Source Library Overview, Light Source Library, source model library, importing, source models"/>
+<meta name="keywords" content="BRO Light Source Library Overview, Light Source Library, source model library, importing, source models"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Importing_Exporting-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/software/asap-lightsourcelib.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/software/asap-lightsourcelib.php"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Features_in_ASAP-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/BRO_Light_Source_Library_Dialog-task.html#BRO_Light_Source_Library_Dialog"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/BRO_Light_Source_Library_Startup-task.html#BRO_Light_Source_Library_Startup"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/BRO_Light_Source_Server_Dialog-task.html#BRO_Light_Source_Server_Dialog"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/COATINGS_PROPERTIES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/UNITS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WAVELENGTHS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/COATINGS_PROPERTIES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EMITTING_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MEDIA_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/UNITS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WAVELENGTHS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="BRO_Light_Source_Library_Overview"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>BRO Light Source Library Overview</title>
+</head>
+<body id="BRO_Light_Source_Library_Overview"><a name="BRO_Light_Source_Library_Overview"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>BRO Light Source Library Overview</h5></span>
+	
+	
+	<div><p>The BRO Light Source Library is a growing collection of U.S. and European source
+		models that can be imported directly into ASAP projects. </p>
+
+		<div class="section" id="BRO_Light_Source_Library_Overview__section_C9CB6601F12B4D0F962AD99C90A9D499"><a name="BRO_Light_Source_Library_Overview__section_C9CB6601F12B4D0F962AD99C90A9D499"><!-- --></a>
+			<p> The library, available to ASAP customers with current software maintenance
+				agreements, includes filament, light-emitting diode (LED), arc, and cold cathode
+				fluorescent (CCF) sources. These sources include detailed geometry and produce near-
+				and far-field patterns that are in agreement with measurements. </p>
+
+			<p>Source model geometry is specified by calling the complete list of sub-assembly
+				macros within the library file. The library file also contains source-specific
+				information such as:<b> EMITTING OBJECT</b> assignments, <b>MEDIA</b>, <b>COATINGS</b>, system <b>UNITS</b>,
+				applicable <b>WAVELENGTHS</b>, spectral information (in the case of
+				multi-spectral sources), object count and individual object scatter properties. </p>
+
+			<p>Light Source Library files are located in your ASAP installation area under the
+				folder, <i>Projects\LightSource</i>. You can also download the entire
+				source library, including updates and new source files, from the secure BRO server
+				if you have a current maintenance agreement. </p>
+
+			<p>The information contained in a BRO source model is extensive. A detailed
+				reconstruction of the light source’s physical geometry is created in a NURBS-based
+				CAD program and then imported into ASAP. Within ASAP, accurate optical properties
+				are applied to the various components of the source model. </p>
+
+			<p>For filament based sources, the filament is turned into an emitting object. The
+				characterization of the emissive behavior of the filament is carefully reproduced in
+				ASAP using a flux weighting technique that uses real, measured data to reproduce the
+				power “ramping” that occurs with filaments. </p>
+
+			<p>For LED sources, native ASAP emitters are used to reproduce the emission of the LED
+				die. Our LED sources add another level of detail by including the power spectrum
+				data of source. This data can be used to perform detailed color analysis using the
+				colorimetry feature in ASAP (8.0 and later). </p>
+
+			<p>Arc sources use a different approach for characterizing the arc emitter. We must
+				first capture an image of the arc using a CCD camera and a zoom lens. This image can
+				be converted into a display file in ASAP and then into a 3D volume emitter by using
+				the Inverse Abel method. The individual ray fluxes are determined by the relative
+				pixel intensities of the CCD image. </p>
+
+		</div>
+
+	</div>
+
+	<div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="../Task/BRO_Light_Source_Library_Dialog-task.html#BRO_Light_Source_Library_Dialog">BRO Light Source Library Dialog</a></strong><br/>
+ASAP includes detailed source models that BRO has created for your convenience.</li>
+<li class="ulchildlink"><strong><a href="../Task/BRO_Light_Source_Library_Startup-task.html#BRO_Light_Source_Library_Startup">BRO Light Source Library Startup</a></strong><br/>
+This topic describes how to access the BRO Light Source Library.</li>
+<li class="ulchildlink"><strong><a href="../Task/BRO_Light_Source_Server_Dialog-task.html#BRO_Light_Source_Server_Dialog">BRO Light Source Server Dialog</a></strong><br/>
+Describes the fields on the Light Source Server dialog.</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/Importing_Exporting-conc.html" title="You can import or export several types of files, either those generated by ASAP or those used as inputs to ASAP.">Importing/Exporting</a></div>
+</div>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Features_in_ASAP-ref.html" title="Topics in this section of the Contents tab include new and existing features in the ASAP user interface.">Features in ASAP</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="http://www.breault.com/software/asap-lightsourcelib.php" target="_blank">ASAP Light Source Library Web page</a></div>
+<div><a href="../Commands/COATINGS_PROPERTIES_ASAP-cmdref.html" title="Creates a coating specified by its transmissive and reflective properties.">COATINGS PROPERTIES (ASAP Command)</a></div>
+<div><a href="../Commands/EMITTING_ASAP-cmdref.html" title="Creates a composite single-source emitter from several EMITTING volume commands.">EMITTING (ASAP Command)</a></div>
+<div><a href="../Commands/MEDIA_ASAP-cmdref.html" title="Creates a single refractive material.">MEDIA (ASAP Command)</a></div>
+<div><a href="../Commands/UNITS_ASAP-cmdref.html" title="Defines the system units.">UNITS (ASAP Command)</a></div>
+<div><a href="../Commands/WAVELENGTHS_ASAP-cmdref.html" title="Defines the wavelength(s) for different MEDIA and COATING definitions.">WAVELENGTH(S) (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, BRO Light Source Library Wizard</a></div>
+<div><a href="http://www.breault.com/k-base.php" target="_blank">Search Knowledge Base for technical publication, BRO Light Source Library, at
+				http://www.breault.com/k-base.php </a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

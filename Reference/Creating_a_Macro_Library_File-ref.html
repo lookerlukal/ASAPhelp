@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Creating a Macro Library File"/>
+<meta name="abstract" content="Multiple macro definitions are stored in a library on logical unit 24 by default. Definitions may be created either directly by an ASCII editor or during the decoding of the input by the program."/>
+<meta name="description" content="Multiple macro definitions are stored in a library on logical unit 24 by default. Definitions may be created either directly by an ASCII editor or during the decoding of the input by the program."/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/ASAP_Macro_Language-conc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Calling_a_Macro-ref.html#Calling_a_Macro"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Defining_a_Macro_from_the_Input_Stream-ref.html#Defining_a_Macro_from_the_Input_Stream"/>
+<meta name="DC.Relation" scheme="URI" content="../Concept/Internally_Defined_Macros-conc.html#Internally_Defined_Macros"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/User_Defined_Macros-ref.html#User_Defined_Macros"/>
+<meta name="DC.Relation" scheme="URI" content="../Task/Increasing_Macro_Command_Execution_Speed-task.html#Increasing_Macro_Command_Execution_Speed"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Sharing_Library_Files-ref.html#Sharing_Library_Files"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Creating_a_Macro_Library_File"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Creating a Macro Library File</title>
+</head>
+<body id="Creating_a_Macro_Library_File"><a name="Creating_a_Macro_Library_File"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Creating a Macro Library File </h5></span>
+	
+	<div><p>Multiple macro definitions are stored in a library on logical unit 24 by default. Definitions may be created either directly by an ASCII editor or during the decoding of the input by the program.</p>
+
+		<div class="section" id="Creating_a_Macro_Library_File__section_5F09E31413464CDE85E070E5D7F249AE"><a name="Creating_a_Macro_Library_File__section_5F09E31413464CDE85E070E5D7F249AE"><!-- --></a>
+			<p>The first record of a macro definition contains the following information: </p>
+
+			<br/><a name="Creating_a_Macro_Library_File__ul_6D859CCE34AA4BAAB99D7FC9B310C3B0"><!-- --></a><ul id="Creating_a_Macro_Library_File__ul_6D859CCE34AA4BAAB99D7FC9B310C3B0">
+				<li id="Creating_a_Macro_Library_File__li_598D8BA8437840E389B14BA01395260E"><a name="Creating_a_Macro_Library_File__li_598D8BA8437840E389B14BA01395260E"><!-- --></a>up to a 32-character name of the macro, </li>
+
+				<li id="Creating_a_Macro_Library_File__li_B9D4CFC4B7E043459D7090569FD0E780"><a name="Creating_a_Macro_Library_File__li_B9D4CFC4B7E043459D7090569FD0E780"><!-- --></a>the number of definition records that follow (or up to an 8-character label that marks the end of the definition records),</li>
+
+				<li id="Creating_a_Macro_Library_File__li_7C6B2CE962224AFD866FC0BCE0AC2925"><a name="Creating_a_Macro_Library_File__li_7C6B2CE962224AFD866FC0BCE0AC2925"><!-- --></a>and possibly the number of argument prompt records after that. </li>
+
+			</ul>
+
+			<p>The record is read in an unformatted manner, with the name starting in column 1 and the numerical entries separated by blanks. Therefore, any characters past the last numerical entry can be used for documentation purposes (that is, a description of the purpose or arguments of the macro). </p>
+
+			<p>The macro name must start with a letter and can be the same as a standard program command without causing conflict (for an exception see section on internal predefined macros). The definition records that follow contain the commands that make up the definition. User macro definitions can reference other user macro commands up to 99 levels deep. The internal predefined macros do not change the level of macro nesting. Up to 99 variables may be used in the definition. These variables are represented by a pound sign "#" followed by a 1- or 2-digit integer between 1 and 99 inclusive. </p>
+
+			<p>When the macro is called during input decoding, the characters of the corresponding argument of the macro command replace these two or three characters. Therefore, macro variables may represent literal and numeric quantities of any length. However, an expanded macro record cannot exceed 344 characters.</p>
+
+			<br/><a name="Creating_a_Macro_Library_File__ul_62F2203C914A47C58160A0F83EAB15B2"><!-- --></a><ul id="Creating_a_Macro_Library_File__ul_62F2203C914A47C58160A0F83EAB15B2">
+				<li id="Creating_a_Macro_Library_File__li_E0B2D6B96EA743BBB5236366A680543F"><a name="Creating_a_Macro_Library_File__li_E0B2D6B96EA743BBB5236366A680543F"><!-- --></a>Default macro library file logical unit: 24</li>
+
+				<li id="Creating_a_Macro_Library_File__li_F68AA1E2F0FF4CAC8A53C4BFE3691864"><a name="Creating_a_Macro_Library_File__li_F68AA1E2F0FF4CAC8A53C4BFE3691864"><!-- --></a><div class="p">Format of macro initialization record:<pre class="pre">name  m  [n]</pre>
+ </div>
+<div class="p"><pre class="pre">label</pre>
+</div>
+
+				<div class="p"><pre class="pre">{</pre>
+</div>
+</li>
+
+				<li id="Creating_a_Macro_Library_File__li_E84A04B05ED34C1683B0D2B7D40F1E9C"><a name="Creating_a_Macro_Library_File__li_E84A04B05ED34C1683B0D2B7D40F1E9C"><!-- --></a>Macro arguments (string substitution): 	#1 through #99</li>
+
+				<li id="Creating_a_Macro_Library_File__li_8AD7E905AC154208B7107018573F56AE"><a name="Creating_a_Macro_Library_File__li_8AD7E905AC154208B7107018573F56AE"><!-- --></a>Number of arguments actually present: 	#0</li>
+
+				<li id="Creating_a_Macro_Library_File__li_5B14A4715D454B6A88D4D72CD9D0CDCA"><a name="Creating_a_Macro_Library_File__li_5B14A4715D454B6A88D4D72CD9D0CDCA"><!-- --></a>Comment (e.g., name) string on call line: 	#00</li>
+
+				<li id="Creating_a_Macro_Library_File__li_CFF3FADC98654FFCA80EA749C48368EA"><a name="Creating_a_Macro_Library_File__li_CFF3FADC98654FFCA80EA749C48368EA"><!-- --></a>Maximum level of macro call nesting: 	99</li>
+
+			</ul>
+
+			<p>An example of a macro definition is:</p>
+
+			<p>NAME 2 1 2 definition + 1 argument prompt records</p>
+
+			<p>SOURCE .01 #1</p>
+
+			<p>H 1.01 C 2.01</p>
+
+			<p>Enter collector object number:</p>
+
+			<p>ANALYZE 10 next definition with no argument prompts</p>
+
+			<p>:</p>
+
+			<p>Any number of blank lines or comment lines (starting with an exclamation point "!" or asterisk "*") may be inserted before the start of each definition to enhance readability of the macro library file.</p>
+
+		</div>
+	
+	</div>
+ 
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Concept/ASAP_Macro_Language-conc.html">ASAP Macro Language</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br/>
+<div><a href="../Concept/Internally_Defined_Macros-conc.html#Internally_Defined_Macros" title="The internally defined macros are contained within the parser (and therefore are always available). These macros give the program looping, input/output redirection, conditional (IF) processing, branching, and other advanced capabilities. Internally defined macros may be used freely in both user-defined macros and general input commands and may appear more than once in a given record.">Internally Defined Macros</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br/>
+<div><a href="../Task/Increasing_Macro_Command_Execution_Speed-task.html#Increasing_Macro_Command_Execution_Speed">Increasing Macro Command Execution Speed</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Calling_a_Macro-ref.html#Calling_a_Macro" title="A macro command is unformatted like all other commands. There can be only one user macro command per input record and it should be the last command on the record. The first entry of a macro command is either a dollar sign &#34;$&#34; or ampersand &#34;&amp;&#34; followed immediately by the macro name. The name can be of any length but only the first 32 characters are significant. The dollar sign &#34;$&#34; causes the program to print the commands in the macro definition after the variables have been replaced by their corresponding arguments. Only the macro command itself is printed when the ampersand &#34;&amp;&#34; is used.">Calling a Macro</a></div>
+<div><a href="../Reference/Defining_a_Macro_from_the_Input_Stream-ref.html#Defining_a_Macro_from_the_Input_Stream" title="Instead of defining macros in the library file, you can create individual macro files directly from the input stream. There are two formats, a short or long, respectively:">Defining a Macro from the Input Stream</a></div>
+<div><a href="../Reference/User_Defined_Macros-ref.html#User_Defined_Macros" title="User-defined macros can be defined and used within an ASAP input file (*.INR) or defined and placed within a macro library for later use. In either case the syntax is the same.">User-Defined Macros</a></div>
+<div><a href="../Reference/Sharing_Library_Files-ref.html#Sharing_Library_Files" title="In environments where multiple engineers work together, you may want to share ASAP library files (*.LIB). If the PC's running ASAP are connected via a LAN, two methods in which LIB files can be shared enable you to modify a LIB file so that other staff can use the information.">Sharing Library Files</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

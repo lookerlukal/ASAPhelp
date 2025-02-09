@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="PLOT (ASAP Command Argument)"/>
+<meta name="abstract" content="Plots current model."/>
+<meta name="description" content="Plots current model."/>
+<meta name="DC.subject" content="PLOT (ASAP Command Argument), model, plotting, command arguments, PLOT"/>
+<meta name="keywords" content="PLOT (ASAP Command Argument), model, plotting, command arguments, PLOT"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_P-ref.html#Commands_and_Macros_P"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/IMMERSE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PIXELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/WAVELENGTHS_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="PLOT_ASAP_Command_Argument"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>PLOT (ASAP Command Argument)</title>
+</head>
+<body id="PLOT_ASAP_Command_Argument"><a name="PLOT_ASAP_Command_Argument"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>PLOT (ASAP Command Argument)</h5></span>
+	
+	
+	<div><p>Plots current model. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">... [ PLOT [ a a' ... ] [ OVERLAY ] ]</pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a a'</span></td><td><span>specular angles</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="PLOT_ASAP_Command_Argument__ul_0FA2ECA86C7741FBB923460FAD1C08DA"><!-- --></a><ol id="PLOT_ASAP_Command_Argument__ul_0FA2ECA86C7741FBB923460FAD1C08DA">
+			<li id="PLOT_ASAP_Command_Argument__li_06215666BBA440EAB6A01823F5E8EDF7"><a name="PLOT_ASAP_Command_Argument__li_06215666BBA440EAB6A01823F5E8EDF7"><!-- --></a>ASAP command arguments are optional and
+				must follow a command. </li>
+
+			<li id="PLOT_ASAP_Command_Argument__li_0B9C18E618BD47AC9704D19E2CFA285E"><a name="PLOT_ASAP_Command_Argument__li_0B9C18E618BD47AC9704D19E2CFA285E"><!-- --></a>Plot the model's BSDF for up to seven
+				specular angles in ascending order (default 0, 15, 30, 45, 60, 75, 89.9 degrees). A
+				unit reflectivity surface in the current <b>IMMERSE</b> medium and at
+				the current <b>WAVELENGTHS </b>is assumed when a model is plotted. </li>
+
+			<li id="PLOT_ASAP_Command_Argument__li_16706BF215DC4CE2AEAD690304564AF5"><a name="PLOT_ASAP_Command_Argument__li_16706BF215DC4CE2AEAD690304564AF5"><!-- --></a>The current <b>PIXELS</b>
+				setting controls the resolution of these plots in direction cosine space. </li>
+
+			<li id="PLOT_ASAP_Command_Argument__li_BFFF0C0242C14EE5B3AF82B6EB655AE5"><a name="PLOT_ASAP_Command_Argument__li_BFFF0C0242C14EE5B3AF82B6EB655AE5"><!-- --></a>For the default angles and a model sharply
+				peaked at specular, the optimum setting for <b>PIXELS</b> is 580. </li>
+
+			<li id="PLOT_ASAP_Command_Argument__li_B0FE515E2B474005922ABFFC20A81A6D"><a name="PLOT_ASAP_Command_Argument__li_B0FE515E2B474005922ABFFC20A81A6D"><!-- --></a>Optionally, the multiple graphs plotted can
+				be <b>OVERLAY</b>ed into separate quadrants. If the angles <b>a
+				a'</b> … are explicitly given, <b>PLOT</b> also creates a
+				full-hemispherical 2D distribution file, "name_angle.DIS", for each of the specular
+				angles. </li>
+
+			<li id="PLOT_ASAP_Command_Argument__li_A6D981A130FB4475AC3E7168C21FA8BB"><a name="PLOT_ASAP_Command_Argument__li_A6D981A130FB4475AC3E7168C21FA8BB"><!-- --></a>Otherwise, the command argument, <b>PLOT</b> creates a 3D distribution file, name.dis, for each of these
+				angles. </li>
+
+			<li id="PLOT_ASAP_Command_Argument__li_A281BCE0A9254BBFBD0AF5DAA28B2A5C"><a name="PLOT_ASAP_Command_Argument__li_A281BCE0A9254BBFBD0AF5DAA28B2A5C"><!-- --></a>Use command argument, <b>OVERLAY</b> to plot multiple graphs into separate quadrants. </li>
+
+			<li id="PLOT_ASAP_Command_Argument__li_BFB6F9840E8B4DEDB2FD476D56C475FE"><a name="PLOT_ASAP_Command_Argument__li_BFB6F9840E8B4DEDB2FD476D56C475FE"><!-- --></a>Assumes a unit reflectivity surface in the
+				current <b>IMMERSE</b> media and at the current <b>WAVELENGTH</b> when a model is plotted. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#PLOT">PLOT Examples</a>
+		</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_P-ref.html#Commands_and_Macros_P" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “P”.">Commands and Macros (P)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/IMMERSE_ASAP-cmdref.html" title="Creates rays in MEDIA in other than zero.">IMMERSE (ASAP Command)</a></div>
+<div><a href="../Commands/PIXELS_ASAP-cmdref.html" title="Sets the resolution for graphics and calculations.">PIXELS (ASAP Command)</a></div>
+<div><a href="../Commands/WAVELENGTHS_ASAP-cmdref.html" title="Defines the wavelength(s) for different MEDIA and COATING definitions.">WAVELENGTH(S) (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

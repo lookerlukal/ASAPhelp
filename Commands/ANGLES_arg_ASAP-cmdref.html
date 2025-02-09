@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="ANGLES (ASAP Command Argument)"/>
+<meta name="abstract" content="Several BSDF models allow fitting to or interpolation from actual data. They all use the following common options and format."/>
+<meta name="description" content="Several BSDF models allow fitting to or interpolation from actual data. They all use the following common options and format."/>
+<meta name="DC.subject" content="ANGLES (ASAP Command Argument), command arguments, ANGLES, BSDF model"/>
+<meta name="keywords" content="ANGLES (ASAP Command Argument), command arguments, ANGLES, BSDF model"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ANGLES_ASAP-cmdref.html#ANGLES_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/BSDFDATA_ASAP-cmdref.html#BSDFDATA_ASAP_Command"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_A-ref.html#Commands_and_Macros_A"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="ANGLES_ASAP_Command_Argument"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>ANGLES (ASAP Command Argument)</title>
+</head>
+<body id="ANGLES_ASAP_Command_Argument"><a name="ANGLES_ASAP_Command_Argument"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>ANGLES (ASAP Command Argument)</h5></span> 
+   
+   
+  <div><p>Several BSDF models allow fitting to or interpolation from actual
+	 data. They all use the following common options and format. 
+  </p>
+ 
+	 <p><b>Syntax</b> 
+	 </p>
+ 
+	 <pre class="codeblock">
+... [ ANGLES ]   [ LOG ]   [ COS ]
+    [ ao bo ]                        !!first specular direction (defaults to output)
+    a b f [ a' b' f' ...]            !!triplets of output direction and BSDF
+    :
+    ao' bo'                          !!second specular direction
+    :                                !!more triplets
+</pre>
+ 
+	 <br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ANGLES</span></td><td><span>specifies spherical angle coordinates in degrees</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>LOG</span></td><td><span>specifies common logarithmic BSDF values</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a a' ...</span></td><td><span>user-defined degree specular angles</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ao bo</span></td><td><span>first specular direction, polar and spherical angle</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>a b [a' b' ...]</span></td><td><span>either direction cosine space coordinates or the spherical 
+			 <b>ANGLES</b> from and around normal,
+			 respectively</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>f [f' ...]</span></td><td><span>either actual BSDF values or the common 
+			 <b>LOG</b> of the BSDF (when specifying the 
+			 <b>LOG</b> option)</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>ao' bo'</span></td><td><span>second specular direction</span></td></tr></tbody></table> 
+	 <p><b>Remarks</b> 
+	 </p>
+ 
+	 <br/><a name="ANGLES_ASAP_Command_Argument__ul_B33ABC23865C4D65AB2D8411359DA59C"><!-- --></a><ol id="ANGLES_ASAP_Command_Argument__ul_B33ABC23865C4D65AB2D8411359DA59C"> 
+		<li id="ANGLES_ASAP_Command_Argument__li_B8B61AC1D1164938ACB995ED73C0E2A7"><a name="ANGLES_ASAP_Command_Argument__li_B8B61AC1D1164938ACB995ED73C0E2A7"><!-- --></a>ASAP command arguments are
+		  optional and must follow a command. 
+		</li>
+ 
+		<li id="ANGLES_ASAP_Command_Argument__li_782A57D21EE14D88B075E79545F237B3"><a name="ANGLES_ASAP_Command_Argument__li_782A57D21EE14D88B075E79545F237B3"><!-- --></a>The 
+		  <b>a's</b> and 
+		  <b>b's</b> are either direction cosine space coordinates or
+		  the spherical 
+		  <b>ANGLES</b> from and around normal, respectively. 
+		</li>
+ 
+		<li id="ANGLES_ASAP_Command_Argument__li_7F9EE08C0C154AED875CFC70AC0B3EC4"><a name="ANGLES_ASAP_Command_Argument__li_7F9EE08C0C154AED875CFC70AC0B3EC4"><!-- --></a>The 
+		  <b>f's</b> are either actual BSDF values or the common
+		  (base 10) LOG of the BSDF (when specifying the LOG option). 
+		</li>
+ 
+		<li id="ANGLES_ASAP_Command_Argument__li_CF0562D01F9645698B74B13A1E5A07EF"><a name="ANGLES_ASAP_Command_Argument__li_CF0562D01F9645698B74B13A1E5A07EF"><!-- --></a>Except for the 
+		  <b>RAWDATA</b> model, BSDF values below 1.E-9 (-9 LOG) are
+		  ignored. 
+		</li>
+ 
+	 </ol>
+ 
+	 <p> 
+		<a href="../example_scripts.html#ANGLES">ANGLES
+		  Examples</a> 
+	 </p>
+ 
+  </div>
+ 
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_A-ref.html#Commands_and_Macros_A" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “A”.">Commands and Macros (A)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/ANGLES_ASAP-cmdref.html#ANGLES_ASAP_Command" title="Converts the current distribution data to an angle space RADIANCE or radiant intensity distribution.">ANGLES (ASAP Command)</a></div>
+<div><a href="../Commands/BSDFDATA_ASAP-cmdref.html#BSDFDATA_ASAP_Command" title="Indirectly or directly interpolates from entered BSDF values.">BSDFDATA (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

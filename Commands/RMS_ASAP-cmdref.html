@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="RMS (ASAP Command)"/>
+<meta name="abstract" content="Scatter model given surface variations for RMS, fall-off, and autocorrelation."/>
+<meta name="description" content="Scatter model given surface variations for RMS, fall-off, and autocorrelation."/>
+<meta name="DC.subject" content="RMS (ASAP Command), scatter model"/>
+<meta name="keywords" content="RMS (ASAP Command), scatter model"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Commands_R-ref.html#Commands_and_Macos_R"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/INTERFACE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/MODELS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ROUGHNESS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Scatter_Models-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.breault.com/k-base.php?kbaseID=24"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="RMS_ASAP_Command"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>RMS (ASAP Command)</title>
+</head>
+<body id="RMS_ASAP_Command"><a name="RMS_ASAP_Command"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>RMS (ASAP Command)</h5></span>
+	
+	
+	<div><p>Scatter model given surface variations for RMS, fall-off, and autocorrelation. </p>
+
+		<p><b>Syntax</b>
+		</p>
+
+		<pre class="codeblock">RMS r l s</pre>
+
+		<br/><table border="0"><thead align="left"><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><th><span>Option</span></th><th><span>Description</span></th></tr></thead><tbody><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>r</span></td><td><span>RMS height variation of the surface in <b>WAVELENGTH</b>
+				units</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>l</span></td><td><span>autocorrelation length of the surface variations in <b>WAVELENGTH</b> units</span></td></tr><tr style="background-color:#e8f0fb;font-family: verdana, geneva, sans-serif;font-size: 11px"><td><span>s</span></td><td><span>asymptotic fall-off with angle from specular (0=Lambertian, otherwise
+					typically between -1 and -2.5)</span></td></tr></tbody></table>
+		<p><b>Remarks</b>
+		</p>
+
+		<br/><a name="RMS_ASAP_Command__ul_E2D9EC8540824462BA44B3FC90A8330E"><!-- --></a><ol id="RMS_ASAP_Command__ul_E2D9EC8540824462BA44B3FC90A8330E">
+			<li id="RMS_ASAP_Command__li_9F168B0F53EE4CE1863471DBDE2C57B2"><a name="RMS_ASAP_Command__li_9F168B0F53EE4CE1863471DBDE2C57B2"><!-- --></a>The B-Bo shoulder point is the ray's
+				wavelength divided by <b>l.</b>
+			</li>
+
+			<li id="RMS_ASAP_Command__li_6BCB2B107837407991F6A730BED27F5E"><a name="RMS_ASAP_Command__li_6BCB2B107837407991F6A730BED27F5E"><!-- --></a>The <b>s</b> is the asymptotic
+				fall-off with angle from specular (0=Lambertian, otherwise typically between -1 and
+				-2.5). This is an approximate (violates reciprocity) theoretical model primarily for
+				smooth surfaces <b>(r</b> much less than a wavelength and <b>l</b> much greater than a wavelength), but it otherwise behaves well
+				(although it may not represent any actual rough surface). </li>
+
+			<li id="RMS_ASAP_Command__li_7702F58FAE884EADACDD02EC05CA4286"><a name="RMS_ASAP_Command__li_7702F58FAE884EADACDD02EC05CA4286"><!-- --></a>The BSDF varies with wavelength, incidence
+				direction, scatter direction, and the specific object's I<b>NTERFACE</b>
+				properties. It also automatically conserves energy (within standard statistical
+				variations) if a <b>ROUGHNESS</b>
+				<b>r l</b> command is also assigned to the object. </li>
+
+		</ol>
+
+		<p>
+			<a href="../example_scripts.html#RMS">RMS Examples</a>
+		</p>
+
+	</div>
+
+	
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Commands_R-ref.html#Commands_and_Macos_R" title="Topics in this section of the Contents tab include ASAP commands and macros that begin with the letter “R”.">Commands and Macros (R)</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br/>
+<div><a href="../Reference/Scatter_Models-ref.html" title="ASAP supports the scatter models listed in this topic for wide-angle (far from specular) scatter.">Scatter Models</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/INTERFACE_ASAP-cmdref.html" title="Assigns a reflective, refractive or diffractive interface to objects.">INTERFACE (ASAP Command)</a></div>
+<div><a href="../Commands/MODELS_ASAP-cmdref.html" title="Creates a scattering model.">MODELS (ASAP Command)</a></div>
+<div><a href="../Commands/ROUGHNESS_ASAP-cmdref.html" title="Assigns a roughness to the entity of an object, and conserves energy between specular and scattered beams.">ROUGHNESS (ASAP Command)</a></div>
+<div><a href="http://www.breault.com/k-base.php?kbaseID=24" target="_blank">See the Knowledge Base for the technical publication, Stray Light Analysis</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Surfaces/Functions"/>
+<meta name="abstract" content="Surfaces/functions are general 10th-order polynomials (286 terms) in the three Cartesian coordinates where the point (x,y,z) is called the reference point and fcn is an optional intrinsic or user-defined, macro wrapping function:"/>
+<meta name="description" content="Surfaces/functions are general 10th-order polynomials (286 terms) in the three Cartesian coordinates where the point (x,y,z) is called the reference point and fcn is an optional intrinsic or user-defined, macro wrapping function:"/>
+<meta name="DC.subject" content="Surfaces/Functions, polynomials, surfaces/functions, functions/surfaces"/>
+<meta name="keywords" content="Surfaces/Functions, polynomials, surfaces/functions, functions/surfaces"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_SZ-ref.html#Reference_SZ"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Surface_Function_Modifiers-ref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Surface_or_Function_Entities-ref.html#Surface_or_Function_Entities"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/AXICONIC_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/CARTOVAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/EDGES_CURVES_ENTITIES_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/ELLIPSOID_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FITTED_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/GENERAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/HORN_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/OPTICAL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PLANE_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TORUS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/TUBE_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Surfaces_Functions"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Surfaces/Functions</title>
+</head>
+<body id="Surfaces_Functions"><a name="Surfaces_Functions"><!-- --></a>
+
+ 
+  <span style="color: #2b6eb5"><h5>Surfaces/Functions</h5></span> 
+   
+  
+  <div><p>Surfaces/functions are general 10th-order polynomials (286 terms)
+	 in the three Cartesian coordinates where the point (x,y,z) is called the
+	 reference point and 
+	 <b>fcn</b> is an optional intrinsic or user-defined, macro wrapping
+	 function: 
+  </p>
+ 
+	 <div class="section" id="Surfaces_Functions__section_862C9B197CF044638F0FE23615CC3FF1"><a name="Surfaces_Functions__section_862C9B197CF044638F0FE23615CC3FF1"><!-- --></a> 
+		<p><br/><a name="Surfaces_Functions__image"><!-- --></a><div class="imagecenter"><img id="Surfaces_Functions__image" src="../Equations/SurfaceFunctions_equation1.gif" width="506" height="66"/></div><br/> 
+		</p>
+ 
+		<p>Optionally, the surface/function may be stored as an order doubled
+		  polynomial where 
+		</p>
+ 
+		<p><br/><a name="Surfaces_Functions__image"><!-- --></a><div class="imagecenter"><img id="Surfaces_Functions__image" src="../Equations/SurfaceFunctions_equation2.gif" width="163" height="36"/></div><br/> 
+		</p>
+ 
+		<p> and others. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Surfaces_Functions__section_218CE42BED4142CD945F4F921EDDA636"><a name="Surfaces_Functions__section_218CE42BED4142CD945F4F921EDDA636"><!-- --></a><span style="color: #2b6eb5"><h5>Reference Point Properties</h5></span> 
+		 
+		<br/><a name="Surfaces_Functions__ul_BEB52B1484DA4086B5F85EA34E99A05A"><!-- --></a><ul id="Surfaces_Functions__ul_BEB52B1484DA4086B5F85EA34E99A05A"> 
+		  <li id="Surfaces_Functions__li_0DF2162F64FA47198CF1CB6EC1A05ABB"><a name="Surfaces_Functions__li_0DF2162F64FA47198CF1CB6EC1A05ABB"><!-- --></a>The surface/function is
+			 defined about the reference point, which is located on the surface only if the
+			 first coefficient, the constant term, is zero. 
+		  </li>
+ 
+		  <li id="Surfaces_Functions__li_42DBF6112616461AA3DE923D52C2352A"><a name="Surfaces_Functions__li_42DBF6112616461AA3DE923D52C2352A"><!-- --></a> 
+			 <p>The reference point locates the surface/function in space. 
+			 </p>
+ 
+			 <p><b>Tip</b>: for most classical optical surfaces, the reference
+				point is the intersection of a coordinate axis with the surface. 
+			 </p>
+ 
+		  </li>
+ 
+		  <li id="Surfaces_Functions__li_EF312BD652B24E97ACA1D2A1C1FDC072"><a name="Surfaces_Functions__li_EF312BD652B24E97ACA1D2A1C1FDC072"><!-- --></a>Simple translations/shifts
+			 of the surface/function are performed on the reference point. 
+		  </li>
+ 
+		</ul>
+ 
+		<p>Typically, polynomial equations describe surfaces infinite in size. A
+		  plane is a perfect example of this. Some polynomials, such as ellipsoids, are
+		  not infinite in size and are autolimited. Since optical elements have finite
+		  size and an aperture semi-diameter, polynomials describing them must also model
+		  this behavior. Therefore, the user restricts the size of the optical element in
+		  three ways: 
+		</p>
+ 
+		<br/><a name="Surfaces_Functions__ul_5742637F37E646058EC16A3B3BF338E4"><!-- --></a><ul id="Surfaces_Functions__ul_5742637F37E646058EC16A3B3BF338E4"> 
+		  <li id="Surfaces_Functions__li_A56DDAA1A13E4CC5A17754016ADAD37F"><a name="Surfaces_Functions__li_A56DDAA1A13E4CC5A17754016ADAD37F"><!-- --></a>Within the syntax of some 
+			 <b>SURFACE 
+			 </b> commands 
+		  </li>
+ 
+		  <li id="Surfaces_Functions__li_3E98C36388C24765B893CEED948269E7"><a name="Surfaces_Functions__li_3E98C36388C24765B893CEED948269E7"><!-- --></a>With a 
+			 <b>LOCAL 
+			 </b> box around the surface or a 
+			 <b>LIMIT 
+			 </b> box around the object 
+		  </li>
+ 
+		  <li id="Surfaces_Functions__li_46F31FFAD64346A7837795E5593EB712"><a name="Surfaces_Functions__li_46F31FFAD64346A7837795E5593EB712"><!-- --></a>Bounding the surface with
+			 other mathematical entities 
+		  </li>
+ 
+		</ul>
+ 
+		<p>ASAP stores the name of the command used to generate the base 
+		  <b>SURFACE/FUNCTION 
+		  </b> shape, but does not store either the arguments of the
+		  command or the individual transformation commands. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="Surfaces_Functions__section_3D4432D229C64B719F08F7F823C59BDB"><a name="Surfaces_Functions__section_3D4432D229C64B719F08F7F823C59BDB"><!-- --></a><span style="color: #2b6eb5"><h5>Predefined Surface/Function Commands</h5></span> 
+		 
+		<p>Since entering even simple surface/functions directly via coefficients
+		  would be tedious, several predefined surface/function type commands are
+		  supplied: 
+		</p>
+ 
+		<p><b>AXICONIC 
+		  </b>
+		</p>
+ 
+		<p><b>CARTOVAL</b> 
+		</p>
+ 
+		<p><b>EDGE/CURVE</b> 
+		</p>
+ 
+		<p><b>ELLIPSOID 
+		  </b>
+		</p>
+ 
+		<p><b>FITTED</b> surface 
+		</p>
+ 
+		<p><b>GENERAL</b> 
+		</p>
+ 
+		<p><b>HORN</b> 
+		</p>
+ 
+		<p><b>OPTICAL</b> 
+		</p>
+ 
+		<p><b>PLANE 
+		  </b>
+		</p>
+ 
+		<p><b>TORUS</b> 
+		</p>
+ 
+		<p><b>TUBE 
+		  </b>
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="../Reference/Surface_Function_Modifiers-ref.html">Surface or Function Modifiers</a></strong><br/>
+Categories of surface/function modifiers are listed in this topic.</li>
+<li class="ulchildlink"><strong><a href="../Reference/Surface_or_Function_Entities-ref.html#Surface_or_Function_Entities">Surface or Function Entities</a></strong><br/>
+ASAP is capable of handling any "implicit" surface that can be represented by an arbitrary function of a general N-th order polynomial in the global coordinates X,Y,Z with arbitrary reference point x,y,z and real coefficients c.</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_SZ-ref.html#Reference_SZ" title="Reference topics in this section begin with the letters &#34;S&#34; to &#34;Z&#34;.">Reference (S-Z)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/AXICONIC_ASAP-cmdref.html" title="Creates a surface by spinning an arbitrarily oriented conic curve.">AXICONIC (ASAP Command)</a></div>
+<div><a href="../Commands/CARTOVAL_ASAP-cmdref.html" title="Creates a Cartesian oval surface.">CARTOVAL (ASAP Command)</a></div>
+<div><a href="../Commands/EDGES_CURVES_ENTITIES_ASAP-cmdref.html" title="Signals ASAP that edge definition commands follow.">EDGES/CURVES/ENTITIES (ASAP Command)</a></div>
+<div><a href="../Commands/ELLIPSOID_ASAP-cmdref.html" title="Creates an ellipsoidal surface.">ELLIPSOID (ASAP Command)</a></div>
+<div><a href="../Commands/FITTED_ASAP-cmdref.html" title="Creates a surface specified by curve fitting an arbitrary set of points.">FITTED (ASAP Command)</a></div>
+<div><a href="../Commands/GENERAL_ASAP-cmdref.html" title="Creates a general surface defined by polynomial coefficients.">GENERAL (ASAP Command)</a></div>
+<div><a href="../Commands/HORN_ASAP-cmdref.html" title="Creates a generalized tube with polynomial profiles and elliptical/rectangular cross-sections.">HORN (ASAP Command)</a></div>
+<div><a href="../Commands/OPTICAL_ASAP-cmdref.html" title="Creates aspheric surfaces normal to the axis of symmetry.">OPTICAL (ASAP Command)</a></div>
+<div><a href="../Commands/PLANE_ASAP-cmdref.html" title="Creates a plane normal to the axis of symmetry, at the value given by the third entry.">PLANE (ASAP Command)</a></div>
+<div><a href="../Commands/TORUS_ASAP-cmdref.html" title="Creates a toroidal or doughnut surface.">TORUS (ASAP Command)</a></div>
+<div><a href="../Commands/TUBE_ASAP-cmdref.html" title="Creates a tube with rectangular/elliptical cross-sections.">TUBE (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head/><body><span style="padding: 0; font-family: verdana, geneva, sans-serif;font-size: 11px; line-height: 1.50em;     color: #333;  background-color: #fff;"/><html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Ghost Image Analysis"/>
+<meta name="abstract" content="Ghost images are produced by inter-reflections of light from optical element surfaces that have nonzero reflection and transmission coefficients. Some of the incident light is transmitted at a surface of the element while some is reflected at the same surface. The reflected light propagates back to another element surface, is reflected there, and eventually propagates to the image plane or detector. The culmination of these reflections results in a ghost image."/>
+<meta name="description" content="Ghost images are produced by inter-reflections of light from optical element surfaces that have nonzero reflection and transmission coefficients. Some of the incident light is transmitted at a surface of the element while some is reflected at the same surface. The reflected light propagates back to another element surface, is reflected there, and eventually propagates to the image plane or detector. The culmination of these reflections results in a ghost image."/>
+<meta name="DC.Relation" scheme="URI" content="../Reference/Reference_GM-ref.html#Reference_G_M"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/FRESNEL_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/PATHS_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SELECT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPLIT_ASAP-cmdref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../Commands/SPREAD_ASAP-cmdref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Ghost_Image_Analysis"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>Ghost Image Analysis</title>
+</head>
+<body id="Ghost_Image_Analysis"><a name="Ghost_Image_Analysis"><!-- --></a>
+
+
+	<span style="color: #2b6eb5"><h5>Ghost Image Analysis</h5></span>
+	
+	<div><p>Ghost images are produced by inter-reflections of light from optical element surfaces
+		that have nonzero reflection and transmission coefficients. Some of the incident light is
+		transmitted at a surface of the element while some is reflected at the same surface. The
+		reflected light propagates back to another element surface, is reflected there, and
+		eventually propagates to the image plane or detector. The culmination of these reflections
+		results in a ghost image.</p>
+
+		<p>Calculating the overall ghost contribution to an image is important in determining system
+			performance. Furthermore, evaluating the contributions of individual components of the
+			ghost images will help identify the major ghost image contributors for corrective
+			action. ASAP has a specific command for such an evaluation.</p>
+
+		<p>In ghost image and scatter analysis, rays can split from many different objects and
+			propagate to the image or detector plane following a particular path. By determining
+			these paths, you can then determine, among other things, major contributors of ghosted
+			or scattered energy. This is accomplished with the <b>PATHS</b> command. The
+				<b>PATHS</b> command prints out a table of ray paths according to the
+			current, previous, and initial objects as a function of either the average or peak
+			irradiances or the total flux or the object flux. In fact, specific paths can be
+			selected with the <b>SELECT</b> command for individual analysis.</p>
+
+		<p>The Example of Ghost Image Analysis demonstrates the calculation of ghost image
+			irradiance levels produced by the uncoated surfaces of an F/6.3 triplet system. In a
+			majority of ghost image analyses, a <b>SPLIT 2</b> is sufficient to simulate
+			the ghost reflections. For simplicity the example was restricted to a single wavelength
+			and a single field point (on axis). The <b>FRESNEL AVE</b> command was used
+			to automatically account for angularly dependent transmission and reflection losses at
+			the interfaces.</p>
+
+		<p>The input signal beam becomes a PSF at the image plane. All of the fundamental Gaussian
+			beams making up the signal beam are coherent with respect to each other. The ghosted
+			beams, for the most part, are incoherent with respect to each other and the input signal
+			beam. When ASAP splits them. it does not alter their coherence, that is, their beam
+			shape. You can account for the difference in image and ghost beam coherency by using the
+			coherence length option on <b>SPREAD NORMAL</b> to treat the ghosted beams
+			incoherently with respect to the signal beam. This method is recommended for calculating
+			ghost contributions. Perform a similar calculation to demonstrate the <b>PATHS</b> command and the <b>SELECT</b> command by isolating
+			everything but the input signal path and changing all of these beam shapes to be
+			incoherent with respect to each other and the input signal beam.</p>
+
+	</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../Reference/Reference_GM-ref.html#Reference_G_M" title="Reference topics in this section begin with the letters &#34;G&#34; to &#34;M&#34;.">Reference (G-M)</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a href="../Commands/FRESNEL_ASAP-cmdref.html" title="Adjusts the reflection/transmission coefficients specified on an interface using Fresnel's formulae during a ray trace.">FRESNEL (ASAP Command)</a></div>
+<div><a href="../Commands/PATHS_ASAP-cmdref.html" title="Produces a table of summarizing propagation paths of currently defined rays.">PATHS (ASAP Command)</a></div>
+<div><a href="../Commands/SELECT_ASAP-cmdref.html" title="Isolates a ray set for further analysis.">SELECT (ASAP Command)</a></div>
+<div><a href="../Commands/SPLIT_ASAP-cmdref.html" title="Controls the number of times a ray may be split into specular components.">SPLIT (ASAP Command)</a></div>
+<div><a href="../Commands/SPREAD_ASAP-cmdref.html" title="Calculates the exact coherent/incoherent energy distribution.">SPREAD (ASAP Command)</a></div>
+</div>
+</div>
+
+</body>
+</html></body></html>
