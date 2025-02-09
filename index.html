@@ -2,113 +2,127 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>网站文件索引</title>
+    <title>ASAP 帮助文档</title>
     <style>
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 20px;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
         }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 0.5em;
+        
+        /* 左侧导航栏样式 */
+        #sidebar {
+            width: 300px;
+            background-color: #f5f6fa;
+            border-right: 1px solid #dcdde1;
+            overflow-y: auto;
+            padding: 20px;
         }
-        ul {
-            list-style-type: none;
+        
+        /* 右侧内容区域 */
+        #content {
+            flex: 1;
+            padding: 20px;
+            background-color: white;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* 文件列表样式优化 */
+        .file-list {
+            list-style: none;
             padding: 0;
         }
-        li {
-            margin: 5px 0;
-            padding: 8px;
-            background-color: #f0f4f8;
+        .file-item {
+            padding: 8px 12px;
+            margin: 4px 0;
+            border-radius: 4px;
+            transition: background 0.3s;
         }
-        a {
-            color: #2980b9;
+        .file-item:hover {
+            background-color: #e6e9ed;
+        }
+        .file-link {
+            color: #2c3e50;
             text-decoration: none;
+            display: block;
         }
-        a:hover {
-            text-decoration: underline;
-        }
-        #fileList {
-            min-height: 100px; /* 确保容器有高度 */
-            overflow: visible !important; /* 覆盖可能存在的溢出隐藏 */
-        }
-        .folder, .subdir {
-            display: none !important;
+        
+        /* 添加响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            #sidebar {
+                width: 100%;
+                height: 40vh;
+                border-right: none;
+                border-bottom: 1px solid #dcdde1;
+            }
+            #content {
+                height: 60vh;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>网站文件目录索引</h1>
-    <div id="fileList"></div>
+    <div id="sidebar">
+        <h1>文档导航</h1>
+        <div id="fileList"></div>
+    </div>
+    <div id="content">
+        <iframe id="contentFrame" name="contentFrame"></iframe>
+    </div>
 
     <script>
         // 动态加载配置文件
         let siteStructure = null;
 
-        async function loadConfig() {
-            try {
-                const response = await fetch('site-config.json');
-                if (!response.ok) throw new Error(`HTTP错误 ${response.status}`);
-                const config = await response.json();
-                return config.siteStructure;
-            } catch (error) {
-                console.error('配置加载失败:', error);
-                return {
-                    name: "根目录",
-                    type: "directory",
-                    children: [{
-                        type: "file",
-                        name: "⚠️ 配置加载失败，请检查site-config.json"
-                    }]
-                };
+        // 临时使用XMLHttpRequest替代fetch
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'site-config.json');
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                const config = JSON.parse(xhr.responseText);
+                console.log('配置结构验证:', {
+                    isValid: !!config?.siteStructure?.children,
+                    childrenCount: config?.siteStructure?.children?.length || 0
+                });
+                siteStructure = config.siteStructure;
+                document.getElementById('fileList').innerHTML = buildFileList(siteStructure);
+                console.log('渲染完成，DOM内容长度:', document.getElementById('fileList').innerHTML.length);
             }
-        }
+        };
+        xhr.send();
 
         function buildFileList(node, path = '') {
-            console.group('构建节点:', node.name);
-            let html = '<ul>';
-            console.log('当前节点子项数量:', node.children.length);
+            let html = '<ul class="file-list">';
             for (const item of node.children) {
-                console.log('正在处理:', item.name, '类型:', item.type);
-                const encodedName = encodeURIComponent(item.name)
-                    .replace(/'/g, "%27")
-                    .replace(/\(/g, "%28")
-                    .replace(/\)/g, "%29");
+                const encodedName = encodeURIComponent(item.name);
                 const currentPath = path ? 
                     `${path}/${encodedName}`.replace(/\/{2,}/g, '/') : 
                     encodedName;
 
                 if (item.type === 'file') {
                     html += `
-                <li>
-                    📄 <a href="${currentPath}" target="_blank">${item.name}</a>
-                </li>
-            `;
+                        <li class="file-item">
+                            <a href="${currentPath}" class="file-link" target="contentFrame">
+                                📄 ${item.name}
+                            </a>
+                        </li>
+                    `;
                 } else if (item.type === 'directory') {
                     html += buildFileList(item, currentPath);
                 }
             }
             html += '</ul>';
-            console.groupEnd();
             return html;
         }
-
-        // 添加初始化完成检查
-        (async function init() {
-            try {
-                const config = await loadConfig();
-                console.log('初始化配置:', config);
-                siteStructure = config;
-                document.getElementById('fileList').innerHTML = buildFileList(siteStructure);
-                console.log('渲染完成，DOM内容长度:', document.getElementById('fileList').innerHTML.length);
-            } catch (error) {
-                console.error('初始化失败:', error);
-            }
-        })();
     </script>
 </body>
 </html>
