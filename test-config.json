@@ -1,0 +1,16 @@
+{
+  "siteStructure": {
+    "name": "测试目录",
+    "type": "directory",
+    "children": [
+      {
+        "name": "TestDir",
+        "type": "directory",
+        "children": [
+          { "name": "test.INR", "type": "file" }
+        ]
+      },
+      { "name": "demo.html", "type": "file" }
+    ]
+  }
+} 

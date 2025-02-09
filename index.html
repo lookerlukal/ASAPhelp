@@ -21,14 +21,9 @@
             padding: 0;
         }
         li {
-            margin: 10px 0;
-            padding: 10px;
-            background-color: #f8f9fa;
-            border-radius: 5px;
-            transition: transform 0.2s;
-        }
-        li:hover {
-            transform: translateX(10px);
+            margin: 5px 0;
+            padding: 8px;
+            background-color: #f0f4f8;
         }
         a {
             color: #2980b9;
@@ -37,9 +32,12 @@
         a:hover {
             text-decoration: underline;
         }
-        .folder {
-            color: #27ae60;
-            font-weight: bold;
+        #fileList {
+            min-height: 100px; /* 确保容器有高度 */
+            overflow: visible !important; /* 覆盖可能存在的溢出隐藏 */
+        }
+        .folder, .subdir {
+            display: none !important;
         }
     </style>
 </head>
@@ -48,52 +46,69 @@
     <div id="fileList"></div>
 
     <script>
-        // 递归获取文件列表
-        async function listFiles(dir = '') {
+        // 动态加载配置文件
+        let siteStructure = null;
+
+        async function loadConfig() {
             try {
-                const response = await fetch(dir + '/?filelist=1');
-                const data = await response.json();
-                
-                let html = '<ul>';
-                for (const item of data) {
-                    if (item.name === 'index.html') continue;
-                    
-                    const path = dir ? `${dir}/${item.name}` : item.name;
-                    
-                    if (item.type === 'directory') {
-                        html += `
-                            <li class="folder">
-                                📁 ${item.name}/
-                                <div class="subdir" id="${path}"></div>
-                            </li>
-                        `;
-                        // 递归加载子目录
-                        listFiles(path).then(content => {
-                            document.getElementById(path).innerHTML = content;
-                        });
-                    } else if (item.name.endsWith('.html')) {
-                        html += `
-                            <li>
-                                📄 <a href="${path}" target="_blank">${item.name}</a>
-                            </li>
-                        `;
-                    }
-                }
-                html += '</ul>';
-                return html;
+                const response = await fetch('site-config.json');
+                if (!response.ok) throw new Error(`HTTP错误 ${response.status}`);
+                const config = await response.json();
+                return config.siteStructure;
             } catch (error) {
-                console.error('无法获取文件列表:', error);
-                return '<p>⚠️ 需要服务器环境才能自动索引文件</p>';
+                console.error('配置加载失败:', error);
+                return {
+                    name: "根目录",
+                    type: "directory",
+                    children: [{
+                        type: "file",
+                        name: "⚠️ 配置加载失败，请检查site-config.json"
+                    }]
+                };
             }
         }
 
-        // 初始化加载文件列表
-        listFiles().then(html => {
-            document.getElementById('fileList').innerHTML = html;
-        });
+        function buildFileList(node, path = '') {
+            console.group('构建节点:', node.name);
+            let html = '<ul>';
+            console.log('当前节点子项数量:', node.children.length);
+            for (const item of node.children) {
+                console.log('正在处理:', item.name, '类型:', item.type);
+                const encodedName = encodeURIComponent(item.name)
+                    .replace(/'/g, "%27")
+                    .replace(/\(/g, "%28")
+                    .replace(/\)/g, "%29");
+                const currentPath = path ? 
+                    `${path}/${encodedName}`.replace(/\/{2,}/g, '/') : 
+                    encodedName;
 
-        // 提示服务器配置（用于本地测试）
-        console.log('提示：如需在本地测试，可以使用 VS Code 的 Live Server 扩展启动');
+                if (item.type === 'file') {
+                    html += `
+                <li>
+                    📄 <a href="${currentPath}" target="_blank">${item.name}</a>
+                </li>
+            `;
+                } else if (item.type === 'directory') {
+                    html += buildFileList(item, currentPath);
+                }
+            }
+            html += '</ul>';
+            console.groupEnd();
+            return html;
+        }
+
+        // 添加初始化完成检查
+        (async function init() {
+            try {
+                const config = await loadConfig();
+                console.log('初始化配置:', config);
+                siteStructure = config;
+                document.getElementById('fileList').innerHTML = buildFileList(siteStructure);
+                console.log('渲染完成，DOM内容长度:', document.getElementById('fileList').innerHTML.length);
+            } catch (error) {
+                console.error('初始化失败:', error);
+            }
+        })();
     </script>
 </body>
-</html> 
+</html>

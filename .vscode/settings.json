@@ -1,0 +1,16 @@
+{
+  // 实时服务器配置 (适用于VS Code的Live Server扩展)
+  "liveServer.settings.mimeTypes": {
+    // 定义文件扩展名与MIME类型的映射关系
+    // 格式：".<扩展名>": "<MIME类型>"
+    
+    // HTML文件的标准MIME类型
+    ".html": "text/html",
+    
+    // INR文件配置为纯文本类型（解决直接打开而非下载的问题）
+    ".INR": "text/plain",  // 大写扩展名版本
+    ".inr": "text/plain"   // 小写扩展名版本
+  },
+  
+
+} 
