@@ -2,6 +2,11 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="ASAP光学软件帮助文档库，包含命令参考和实例分析">
+    <meta name="keywords" content="ASAP, 光学设计, 照明设计, 光线追迹">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ASAP帮助文档中心">
+    <meta property="og:url" content="https://asaphelp.example.com">
     <title>ASAP 帮助文档</title>
     <style>
         body {
@@ -73,6 +78,12 @@
 <body>
     <div id="sidebar">
         <h1>文档导航</h1>
+        <nav aria-label="文档分类导航">
+            <h2>命令参考</h2>
+            <div id="commandsList"></div>
+            <h2>实例分析</h2>
+            <div id="examplesList"></div>
+        </nav>
         <div id="fileList"></div>
     </div>
     <div id="content">
@@ -123,6 +134,24 @@
             html += '</ul>';
             return html;
         }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "ASAP文档库",
+      "description": "包含ASAP软件的所有命令参考和实例分析文档",
+      "hasPart": [
+        // 自动生成文档列表
+        ...siteStructure.children.map(doc => ({
+          "@type": "TechArticle",
+          "name": doc.name,
+          "url": location.href + doc.path,
+          "fileFormat": doc.name.split('.').pop()
+        }))
+      ]
+    }
     </script>
 </body>
 </html>

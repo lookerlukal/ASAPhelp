@@ -30,7 +30,10 @@ const scanDirectory = (dir) => {
             console.log('发现有效文件:', file);
             result.children.push({
                 name: file,
-                type: 'file'
+                type: 'file',
+                category: path.extname(file).slice(1).toUpperCase(),
+                lastModified: fs.statSync(fullPath).mtime.toISOString(),
+                size: fs.statSync(fullPath).size
             });
         }
     });
