@@ -14,58 +14,69 @@
     <style>
         body {
             margin: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        #sidebar {
+            width: 300px;
+            background: #f8f9fa;
             padding: 20px;
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            line-height: 1.6;
+            border-right: 1px solid #dee2e6;
+            overflow-y: auto;
+            position: fixed;
+            height: 100vh;
+            box-sizing: border-box;
         }
         
-        .document-list {
-            max-width: 1200px;
-            margin: 0 auto;
+        #main-content {
+            margin-left: 300px;
+            flex: 1;
+            padding: 40px;
+            max-width: 900px;
         }
         
-        .category {
-            margin-bottom: 2rem;
-        }
-        
-        .category-title {
-            color: #2b6eb5;
-            border-bottom: 2px solid #e9ecef;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .document-item {
-            margin-bottom: 1.5rem;
-            padding: 1rem;
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
-            background: #fff;
-        }
-        
-        .document-title {
-            margin: 0 0 1rem 0;
-        }
-        
-        .document-title a {
-            color: #2b6eb5;
+        .nav-link {
+            display: block;
+            padding: 8px 0;
+            color: #333;
             text-decoration: none;
         }
         
-        .document-title a:hover {
-            text-decoration: underline;
+        .nav-link:hover {
+            color: #0066cc;
         }
         
-        .document-preview {
+        .document-section {
+            margin-bottom: 60px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 40px;
+        }
+        
+        .document-content {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3 {
+            margin-top: 2em;
+            margin-bottom: 1em;
+        }
+        
+        pre {
             background: #f8f9fa;
-            padding: 1rem;
+            padding: 15px;
             border-radius: 4px;
-            font-family: Consolas, monospace;
-            white-space: pre-wrap;
             overflow-x: auto;
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            color: #333;
+            border: 1px solid #e9ecef;
+        }
+        
+        #search {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
         }
     </style>
     <script type="application/ld+json">
@@ -80,137 +91,90 @@
     </script>
 </head>
 <body>
-    <div class="document-list">
-        <h1>ASAP 文档中心</h1>
-        
-        <!-- 命令参考部分 -->
-        <section class="category" id="commands">
-            <h2 class="category-title">命令参考</h2>
-            <div class="documents-container">
-                <!-- Commands目录下的文档 -->
-            </div>
-        </section>
-        
-        <!-- 实例分析部分 -->
-        <section class="category" id="examples">
-            <h2 class="category-title">实例分析</h2>
-            <div class="documents-container">
-                <!-- Examples目录下的文档 -->
-            </div>
-        </section>
-        
-        <!-- 其他文档部分 -->
-        <section class="category" id="others">
-            <h2 class="category-title">其他文档</h2>
-            <div class="documents-container">
-                <!-- 其他目录下的文档 -->
-            </div>
-        </section>
-    </div>
+    <nav id="sidebar">
+        <input type="text" id="search" placeholder="搜索文档...">
+        <div id="nav-content"></div>
+    </nav>
+    
+    <main id="main-content">
+        <!-- 所有文档内容将被直接嵌入这里 -->
+    </main>
 
     <script>
-        // 加载并显示文档列表
-        async function loadDocuments() {
+        async function loadAndDisplayDocuments() {
             try {
                 const response = await fetch('site-config.json');
                 const config = await response.json();
-                
-                // 处理文档结构
-                processStructure(config.siteStructure);
+                await processStructure(config.siteStructure);
+                setupSearch();
             } catch (error) {
                 console.error('加载文档失败:', error);
             }
         }
 
-        function processStructure(node, path = '') {
+        async function processStructure(node, path = '') {
+            const mainContent = document.getElementById('main-content');
+            const navContent = document.getElementById('nav-content');
+            
             for (const item of node.children) {
                 const currentPath = path ? `${path}/${item.name}` : item.name;
                 
                 if (item.type === 'file') {
-                    // 确定文档类别
-                    let category = 'others';
-                    if (currentPath.startsWith('Commands/')) {
-                        category = 'commands';
-                    } else if (currentPath.startsWith('Examples/')) {
-                        category = 'examples';
+                    try {
+                        const response = await fetch(currentPath);
+                        const text = await response.text();
+                        
+                        // 创建导航链接
+                        const link = document.createElement('a');
+                        link.href = `#${currentPath}`;
+                        link.className = 'nav-link';
+                        link.textContent = item.name;
+                        navContent.appendChild(link);
+                        
+                        // 创建文档内容区域
+                        const section = document.createElement('section');
+                        section.id = currentPath;
+                        section.className = 'document-section';
+                        
+                        const title = document.createElement('h2');
+                        title.textContent = item.name;
+                        section.appendChild(title);
+                        
+                        const content = document.createElement('div');
+                        content.className = 'document-content';
+                        content.innerHTML = `<pre>${text}</pre>`;
+                        section.appendChild(content);
+                        
+                        mainContent.appendChild(section);
+                    } catch (error) {
+                        console.error(`加载文件 ${currentPath} 失败:`, error);
                     }
-                    
-                    // 创建文档项
-                    createDocumentItem(item.name, currentPath, category);
                 } else if (item.type === 'directory') {
-                    processStructure(item, currentPath);
+                    // 创建目录标题
+                    const dirTitle = document.createElement('h3');
+                    dirTitle.textContent = item.name;
+                    navContent.appendChild(dirTitle);
+                    
+                    await processStructure(item, currentPath);
                 }
             }
         }
 
-        async function createDocumentItem(name, path, category) {
-            const container = document.querySelector(`#${category} .documents-container`);
+        function setupSearch() {
+            const searchInput = document.getElementById('search');
+            const sections = document.querySelectorAll('.document-section');
             
-            const docItem = document.createElement('article');
-            docItem.className = 'document-item';
-            
-            // 创建文档标题和链接
-            const title = document.createElement('h3');
-            title.className = 'document-title';
-            const link = document.createElement('a');
-            link.href = path;
-            link.textContent = name;
-            title.appendChild(link);
-            
-            // 添加文档预览
-            const preview = document.createElement('div');
-            preview.className = 'document-preview';
-            
-            try {
-                const response = await fetch(path);
-                const text = await response.text();
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase();
                 
-                // 根据文件类型处理预览内容
-                let previewContent = '';
-                if (path.toLowerCase().endsWith('.html')) {
-                    // 对于HTML文件，提取body内容
-                    const tempDiv = document.createElement('div');
-                    tempDiv.innerHTML = text;
-                    const bodyContent = tempDiv.querySelector('body');
-                    if (bodyContent) {
-                        // 移除脚本标签
-                        const scripts = bodyContent.getElementsByTagName('script');
-                        for (let i = scripts.length - 1; i >= 0; i--) {
-                            scripts[i].remove();
-                        }
-                        // 获取纯文本内容
-                        previewContent = bodyContent.textContent.trim();
-                    }
-                } else if (path.toLowerCase().endsWith('.inr')) {
-                    // 对于INR文件，直接显示内容
-                    previewContent = text;
-                } else {
-                    // 移除XML声明等标记
-                    previewContent = text.replace(/<\?xml[^>]*\?>/, '')
-                                       .replace(/<!DOCTYPE[^>]*>/, '')
-                                       .replace(/<\/?[^>]+(>|$)/g, ' ')
-                                       .replace(/\s+/g, ' ')
-                                       .trim();
-                }
-                
-                // 限制预览长度并添加省略号
-                if (previewContent.length > 300) {
-                    previewContent = previewContent.substring(0, 300) + '...';
-                }
-                
-                preview.textContent = previewContent;
-            } catch (error) {
-                preview.textContent = '无法加载预览';
-                console.error(`加载文件 ${path} 失败:`, error);
-            }
-            
-            docItem.appendChild(title);
-            docItem.appendChild(preview);
-            container.appendChild(docItem);
+                sections.forEach(section => {
+                    const content = section.textContent.toLowerCase();
+                    section.style.display = content.includes(query) ? 'block' : 'none';
+                });
+            });
         }
 
-        // 页面加载时初始化
-        document.addEventListener('DOMContentLoaded', loadDocuments);
+        document.addEventListener('DOMContentLoaded', loadAndDisplayDocuments);
     </script>
 
     <script type="application/ld+json">
