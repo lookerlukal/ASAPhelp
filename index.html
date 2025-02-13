@@ -8,6 +8,9 @@
     <meta property="og:title" content="ASAP帮助文档中心">
     <meta property="og:url" content="https://asaphelp.example.com">
     <title>ASAP 帮助文档</title>
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             margin: 0;
@@ -158,6 +161,16 @@
             color: #3498db;
         }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechnicalArticle",
+      "name": "ASAP帮助文档中心",
+      "description": "ASAP光学软件帮助文档库，包含命令参考和实例分析",
+      "articleSection": ["命令参考", "实例分析"],
+      "keywords": "ASAP, 光学设计, 照明设计, 光线追迹"
+    }
+    </script>
 </head>
 <body>
     <div id="sidebar">
@@ -221,10 +234,16 @@
                                data-filepath="${currentPath}">
                                 📄 ${item.name}
                             </a>
+                            <noscript>
+                                <a href="${currentPath}">${item.name}</a>
+                            </noscript>
                         </li>
                     `;
                 } else if (item.type === 'directory') {
+                    html += `<li class="directory" aria-label="目录: ${item.name}">`;
+                    html += `<h3 class="directory-name">${item.name}</h3>`;
                     html += buildFileList(item, currentPath);
+                    html += '</li>';
                 }
             }
             html += '</ul>';
@@ -246,12 +265,16 @@
                 e.preventDefault();
                 const filePath = link.dataset.filepath;
                 
-                // 显示加载状态
                 document.getElementById('loading').style.display = 'block';
                 
                 try {
                     const response = await fetch(filePath);
                     const text = await response.text();
+                    const contentDiv = document.createElement('div');
+                    contentDiv.style.display = 'none';
+                    contentDiv.innerHTML = text;
+                    document.body.appendChild(contentDiv);
+                    
                     document.getElementById('contentFrame').srcdoc = `
                         <pre>${text}</pre>
                         <style>
