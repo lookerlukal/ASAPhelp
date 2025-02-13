@@ -15,69 +15,86 @@
         body {
             margin: 0;
             padding: 0;
-            height: 100vh;
             display: flex;
             font-family: 'Segoe UI', system-ui, sans-serif;
             background: #f8f9fa;
             line-height: 1.6;
         }
         
-        /* 左侧导航栏样式 */
         #sidebar {
             width: 280px;
             background: #2b303b;
-            border-right: 1px solid #dcdde1;
+            position: fixed;
+            height: 100vh;
             overflow-y: auto;
             padding: 20px;
             color: #adb5bd;
         }
         
-        #sidebar h1 {
-            color: #e9ecef;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #4a5568;
-        }
-        
-        /* 右侧内容区域 */
         #content {
-            flex: 1;
+            margin-left: 280px;
             padding: 20px;
+            flex: 1;
             background: #ffffff;
         }
         
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        .search-box {
+            margin-bottom: 1.5rem;
         }
         
-        /* 文件列表样式优化 */
-        .file-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 1rem;
+        #searchInput {
+            width: 100%;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: 1px solid #4a5568;
+            background: #343a46;
+            color: #e9ecef;
         }
-        .file-item {
-            padding: 8px 12px;
-            margin: 4px 0;
-            border-radius: 6px;
-            transition: background 0.3s;
-            background: rgba(255,255,255,0.05);
+        
+        .file-section {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
         }
-        .file-item:hover {
-            background: #4a5568;
+        
+        .file-section h2 {
+            color: #2b6eb5;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 0.5rem;
         }
+        
+        .file-content {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            white-space: pre-wrap;
+            font-family: Consolas, monospace;
+            overflow-x: auto;
+        }
+        
         .file-link {
             color: #e9ecef;
             text-decoration: none;
             display: block;
-            font-size: 0.9rem;
+            padding: 0.5rem;
+            border-radius: 4px;
         }
         
+        .file-link:hover {
+            background: #4a5568;
+        }
+        
+        .directory-name {
+            color: #e9ecef;
+            font-size: 1.1rem;
+            margin: 1rem 0 0.5rem;
+        }
+        
+        .hidden {
+            display: none;
+        }
+
         /* 添加响应式设计 */
         @media (max-width: 768px) {
             body {
@@ -137,21 +154,6 @@
             100% { transform: rotate(360deg); }
         }
 
-        /* 搜索框样式 */
-        .search-box {
-            margin-bottom: 1.5rem;
-        }
-        
-        #searchInput {
-            width: 100%;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            border: 1px solid #4a5568;
-            background: #343a46;
-            color: #e9ecef;
-            outline: none;
-        }
-
         #loading {
             position: fixed;
             top: 50%;
@@ -175,23 +177,15 @@
 <body>
     <div id="sidebar">
         <h1>ASAP 文档中心</h1>
-        <nav aria-label="文档分类导航">
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="搜索文档...">
-            </div>
-            <h2>命令参考</h2>
-            <div id="commandsList"></div>
-            <h2>实例分析</h2>
-            <div id="examplesList"></div>
-        </nav>
-        <div id="fileList"></div>
-    </div>
-    <div id="content">
-        <iframe id="contentFrame" name="contentFrame"></iframe>
-        <div id="staticContent" style="display: none;">
-            <!-- 这里将动态插入所有文档内容 -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="搜索文档...">
         </div>
+        <nav id="fileList"></nav>
     </div>
+    
+    <main id="content">
+        <div id="documentContent"></div>
+    </main>
 
     <div id="loading" style="display:none;">
         <div class="spinner"></div>
@@ -199,136 +193,87 @@
     </div>
 
     <script>
-        let siteStructure = null;
-        
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', 'site-config.json');
-        xhr.onload = async function() {
-            if (xhr.status === 200) {
-                const config = JSON.parse(xhr.responseText);
-                siteStructure = config.siteStructure;
-                document.getElementById('fileList').innerHTML = buildFileList(siteStructure);
-                
-                await loadAllContent(siteStructure);
-            }
-        };
-        xhr.send();
+        // 加载配置文件并初始化页面
+        fetch('site-config.json')
+            .then(response => response.json())
+            .then(config => {
+                initializePage(config.siteStructure);
+            });
 
-        function buildFileList(node, path = '') {
-            let html = '<ul class="file-list">';
-            for (const item of node.children) {
-                const encodedName = encodeURIComponent(item.name);
-                const currentPath = path ? 
-                    `${path}/${encodedName}`.replace(/\/{2,}/g, '/') : 
-                    encodedName;
-
-                if (item.type === 'file') {
-                    const isINR = item.name.toLowerCase().endsWith('.inr');
-                    html += `
-                        <li class="file-item">
-                            <a href="${currentPath}" 
-                               class="file-link ${isINR ? 'inr-file' : ''}" 
-                               target="contentFrame"
-                               data-filepath="${currentPath}">
-                                📄 ${item.name}
-                            </a>
-                            <noscript>
-                                <a href="${currentPath}">${item.name}</a>
-                            </noscript>
-                        </li>
-                    `;
-                } else if (item.type === 'directory') {
-                    html += `<li class="directory" aria-label="目录: ${item.name}">`;
-                    html += `<h3 class="directory-name">${item.name}</h3>`;
-                    html += buildFileList(item, currentPath);
-                    html += '</li>';
+        async function initializePage(structure) {
+            const fileList = document.getElementById('fileList');
+            const documentContent = document.getElementById('documentContent');
+            
+            // 构建导航和加载内容
+            await buildStructure(structure, '', fileList, documentContent);
+            
+            // 处理导航点击
+            fileList.addEventListener('click', (e) => {
+                if (e.target.classList.contains('file-link')) {
+                    e.preventDefault();
+                    const targetId = e.target.getAttribute('href').substring(1);
+                    document.getElementById(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 }
-            }
-            html += '</ul>';
-            return html;
+            });
+            
+            // 搜索功能
+            document.getElementById('searchInput').addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase();
+                const sections = document.querySelectorAll('.file-section');
+                
+                sections.forEach(section => {
+                    const text = section.textContent.toLowerCase();
+                    section.classList.toggle('hidden', !text.includes(query));
+                });
+            });
         }
 
-        async function loadAllContent(node, path = '') {
-            const staticContent = document.getElementById('staticContent');
-            
+        async function buildStructure(node, path, navContainer, contentContainer) {
             for (const item of node.children) {
-                const encodedName = encodeURIComponent(item.name);
-                const currentPath = path ? 
-                    `${path}/${encodedName}`.replace(/\/{2,}/g, '/') : 
-                    encodedName;
-
+                const currentPath = path ? `${path}/${item.name}` : item.name;
+                
                 if (item.type === 'file') {
+                    const fileId = `file-${currentPath.replace(/[^a-zA-Z0-9]/g, '-')}`;
+                    
+                    // 添加导航链接
+                    const link = document.createElement('a');
+                    link.href = `#${fileId}`;
+                    link.className = 'file-link';
+                    link.textContent = `📄 ${item.name}`;
+                    navContainer.appendChild(link);
+                    
+                    // 加载并显示文件内容
                     try {
                         const response = await fetch(currentPath);
                         const text = await response.text();
                         
                         const section = document.createElement('section');
-                        section.setAttribute('data-filepath', currentPath);
+                        section.id = fileId;
+                        section.className = 'file-section';
                         section.innerHTML = `
                             <h2>${item.name}</h2>
-                            <article>
-                                <pre>${text}</pre>
-                            </article>
+                            <div class="file-content">${text}</div>
                         `;
-                        staticContent.appendChild(section);
-                        
+                        contentContainer.appendChild(section);
                     } catch (error) {
                         console.error(`无法加载文件 ${currentPath}:`, error);
                     }
                 } else if (item.type === 'directory') {
-                    const dirSection = document.createElement('section');
-                    dirSection.innerHTML = `<h2>目录: ${item.name}</h2>`;
-                    staticContent.appendChild(dirSection);
+                    const dirHeader = document.createElement('h3');
+                    dirHeader.className = 'directory-name';
+                    dirHeader.textContent = item.name;
+                    navContainer.appendChild(dirHeader);
                     
-                    await loadAllContent(item, currentPath);
+                    const dirNav = document.createElement('div');
+                    dirNav.className = 'directory-content';
+                    navContainer.appendChild(dirNav);
+                    
+                    await buildStructure(item, currentPath, dirNav, contentContainer);
                 }
             }
         }
-
-        document.getElementById('fileList').addEventListener('click', async (e) => {
-            const link = e.target.closest('.inr-file');
-            if (link) {
-                e.preventDefault();
-                const filePath = link.dataset.filepath;
-                
-                const section = document.querySelector(`section[data-filepath="${filePath}"]`);
-                if (section) {
-                    const content = section.querySelector('pre').textContent;
-                    document.getElementById('contentFrame').srcdoc = `
-                        <pre>${content}</pre>
-                        <style>
-                            body {
-                                margin: 0;
-                                padding: 20px;
-                                font-family: Consolas, monospace;
-                                white-space: pre-wrap;
-                                background: #f8f9fa;
-                            }
-                        </style>
-                    `;
-                }
-            }
-        });
-
-        document.getElementById('searchInput').addEventListener('input', function(e) {
-            const query = e.target.value.toLowerCase();
-            
-            document.querySelectorAll('.file-item').forEach(item => {
-                const text = item.textContent.toLowerCase();
-                item.style.display = text.includes(query) ? 'block' : 'none';
-            });
-
-            document.querySelectorAll('#staticContent section').forEach(section => {
-                const content = section.textContent.toLowerCase();
-                if (content.includes(query)) {
-                    const filepath = section.dataset.filepath;
-                    const fileItem = document.querySelector(`.file-link[data-filepath="${filepath}"]`)?.closest('.file-item');
-                    if (fileItem) {
-                        fileItem.style.display = 'block';
-                    }
-                }
-            });
-        });
     </script>
 
     <script type="application/ld+json">
