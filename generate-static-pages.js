@@ -13,22 +13,39 @@ function generateStaticPages(config) {
             
             if (item.type === 'file') {
                 const content = fs.readFileSync(itemPath, 'utf8');
+                const fileName = item.name;
+                const outputPath = path.join(baseDir, `${fileName}.html`);
+                
+                // 使用与file-viewer.php相同的模板
                 const htmlContent = `
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>${item.name} - ASAP帮助文档</title>
-    <meta name="description" content="ASAP文档 - ${item.name}">
+    <title>${fileName} - ASAP文档</title>
+    <meta name="description" content="ASAP文档 - ${fileName}">
+    <meta name="robots" content="index, follow">
+    <style>
+        /* 复制file-viewer.php中的样式 */
+    </style>
 </head>
 <body>
-    <pre>${content}</pre>
+    <div class="content">
+        <a href="/" class="back-link">← 返回文档中心</a>
+        <div class="header">
+            <h1>${fileName}</h1>
+        </div>
+        <pre>${content}</pre>
+    </div>
 </body>
 </html>`;
                 
-                const outputPath = path.join(baseDir, `${item.name}.html`);
                 fs.writeFileSync(outputPath, htmlContent);
             } else if (item.type === 'directory') {
+                const newDir = path.join(baseDir, item.name);
+                if (!fs.existsSync(newDir)){
+                    fs.mkdirSync(newDir);
+                }
                 processNode(item, itemPath);
             }
         }

@@ -235,28 +235,30 @@
                 const currentPath = path ? `${path}/${item.name}` : item.name;
                 
                 if (item.type === 'file') {
-                    const fileId = `file-${currentPath.replace(/[^a-zA-Z0-9]/g, '-')}`;
-                    
-                    // 添加导航链接
+                    // 创建直接链接到文件查看器的链接
                     const link = document.createElement('a');
-                    link.href = `#${fileId}`;
+                    link.href = `/${currentPath}`; // 这将通过.htaccess重定向到file-viewer.php
                     link.className = 'file-link';
                     link.textContent = `📄 ${item.name}`;
                     navContainer.appendChild(link);
                     
-                    // 加载并显示文件内容
+                    // 同时在主页面创建内容预览
+                    const section = document.createElement('section');
+                    section.className = 'file-section';
+                    section.innerHTML = `
+                        <h2><a href="/${currentPath}">${item.name}</a></h2>
+                        <div class="file-content" id="preview-${currentPath}">加载中...</div>
+                    `;
+                    contentContainer.appendChild(section);
+                    
+                    // 异步加载预览内容
                     try {
                         const response = await fetch(currentPath);
                         const text = await response.text();
-                        
-                        const section = document.createElement('section');
-                        section.id = fileId;
-                        section.className = 'file-section';
-                        section.innerHTML = `
-                            <h2>${item.name}</h2>
-                            <div class="file-content">${text}</div>
-                        `;
-                        contentContainer.appendChild(section);
+                        const preview = document.getElementById(`preview-${currentPath}`);
+                        if (preview) {
+                            preview.textContent = text.substring(0, 500) + '...'; // 只显示前500个字符
+                        }
                     } catch (error) {
                         console.error(`无法加载文件 ${currentPath}:`, error);
                     }

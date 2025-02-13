@@ -1,2 +1,12 @@
 AddType text/plain .inr
-AddType text/plain .INR 
+AddType text/plain .INR
+
+RewriteEngine On
+RewriteBase /
+
+# 如果请求的不是实际文件或目录
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# 将请求重定向到文件查看器
+RewriteRule ^(.*)$ file-viewer.php?path=$1 [L,QSA] 
