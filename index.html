@@ -188,6 +188,9 @@
     </div>
     <div id="content">
         <iframe id="contentFrame" name="contentFrame"></iframe>
+        <div id="staticContent" style="display: none;">
+            <!-- 这里将动态插入所有文档内容 -->
+        </div>
     </div>
 
     <div id="loading" style="display:none;">
@@ -196,22 +199,17 @@
     </div>
 
     <script>
-        // 动态加载配置文件
         let siteStructure = null;
-
-        // 临时使用XMLHttpRequest替代fetch
+        
         const xhr = new XMLHttpRequest();
         xhr.open('GET', 'site-config.json');
-        xhr.onload = function() {
+        xhr.onload = async function() {
             if (xhr.status === 200) {
                 const config = JSON.parse(xhr.responseText);
-                console.log('配置结构验证:', {
-                    isValid: !!config?.siteStructure?.children,
-                    childrenCount: config?.siteStructure?.children?.length || 0
-                });
                 siteStructure = config.siteStructure;
                 document.getElementById('fileList').innerHTML = buildFileList(siteStructure);
-                console.log('渲染完成，DOM内容长度:', document.getElementById('fileList').innerHTML.length);
+                
+                await loadAllContent(siteStructure);
             }
         };
         xhr.send();
@@ -250,14 +248,42 @@
             return html;
         }
 
-        // 即时搜索功能
-        document.getElementById('searchInput').addEventListener('input', function(e) {
-            const query = e.target.value.toLowerCase();
-            document.querySelectorAll('.file-item').forEach(item => {
-                const text = item.textContent.toLowerCase();
-                item.style.display = text.includes(query) ? 'block' : 'none';
-            });
-        });
+        async function loadAllContent(node, path = '') {
+            const staticContent = document.getElementById('staticContent');
+            
+            for (const item of node.children) {
+                const encodedName = encodeURIComponent(item.name);
+                const currentPath = path ? 
+                    `${path}/${encodedName}`.replace(/\/{2,}/g, '/') : 
+                    encodedName;
+
+                if (item.type === 'file') {
+                    try {
+                        const response = await fetch(currentPath);
+                        const text = await response.text();
+                        
+                        const section = document.createElement('section');
+                        section.setAttribute('data-filepath', currentPath);
+                        section.innerHTML = `
+                            <h2>${item.name}</h2>
+                            <article>
+                                <pre>${text}</pre>
+                            </article>
+                        `;
+                        staticContent.appendChild(section);
+                        
+                    } catch (error) {
+                        console.error(`无法加载文件 ${currentPath}:`, error);
+                    }
+                } else if (item.type === 'directory') {
+                    const dirSection = document.createElement('section');
+                    dirSection.innerHTML = `<h2>目录: ${item.name}</h2>`;
+                    staticContent.appendChild(dirSection);
+                    
+                    await loadAllContent(item, currentPath);
+                }
+            }
+        }
 
         document.getElementById('fileList').addEventListener('click', async (e) => {
             const link = e.target.closest('.inr-file');
@@ -265,18 +291,11 @@
                 e.preventDefault();
                 const filePath = link.dataset.filepath;
                 
-                document.getElementById('loading').style.display = 'block';
-                
-                try {
-                    const response = await fetch(filePath);
-                    const text = await response.text();
-                    const contentDiv = document.createElement('div');
-                    contentDiv.style.display = 'none';
-                    contentDiv.innerHTML = text;
-                    document.body.appendChild(contentDiv);
-                    
+                const section = document.querySelector(`section[data-filepath="${filePath}"]`);
+                if (section) {
+                    const content = section.querySelector('pre').textContent;
                     document.getElementById('contentFrame').srcdoc = `
-                        <pre>${text}</pre>
+                        <pre>${content}</pre>
                         <style>
                             body {
                                 margin: 0;
@@ -287,25 +306,28 @@
                             }
                         </style>
                     `;
-                } catch (error) {
-                    console.error('文件加载失败:', error);
-                    document.getElementById('contentFrame').srcdoc = `
-                        <div style="color: red; padding: 20px;">
-                            无法加载文件: ${filePath}
-                        </div>
-                    `;
-                } finally {
-                    document.getElementById('loading').style.display = 'none';
                 }
             }
         });
 
-        // 在初始化函数后添加INR文件处理
-        document.getElementById('contentFrame').addEventListener('load', function() {
-            if(this.contentDocument.body.innerText.includes('INR File Content')) {
-                this.contentDocument.body.style.whiteSpace = 'pre-wrap';
-                this.contentDocument.body.style.fontFamily = 'Consolas, monospace';
-            }
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            
+            document.querySelectorAll('.file-item').forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(query) ? 'block' : 'none';
+            });
+
+            document.querySelectorAll('#staticContent section').forEach(section => {
+                const content = section.textContent.toLowerCase();
+                if (content.includes(query)) {
+                    const filepath = section.dataset.filepath;
+                    const fileItem = document.querySelector(`.file-link[data-filepath="${filepath}"]`)?.closest('.file-item');
+                    if (fileItem) {
+                        fileItem.style.display = 'block';
+                    }
+                }
+            });
         });
     </script>
 
